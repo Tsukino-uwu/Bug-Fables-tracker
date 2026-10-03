@@ -299,8 +299,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 541,
-        "y": 99
+        "x": 424,
+        "y": 379
       }
     ],
     "sections": [
@@ -721,8 +721,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 670,
-        "y": 161
+        "x": 295,
+        "y": 316
       }
     ],
     "sections": [
@@ -1100,8 +1100,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 869,
-        "y": 153
+        "x": 96,
+        "y": 325
       }
     ],
     "sections": [
@@ -1191,8 +1191,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 925,
-        "y": 254
+        "x": 40,
+        "y": 223
       }
     ],
     "sections": [
@@ -1237,8 +1237,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 771,
-        "y": 40
+        "x": 194,
+        "y": 438
       }
     ],
     "sections": [
@@ -1283,8 +1283,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 144,
-        "y": 404
+        "x": 820,
+        "y": 74
       }
     ],
     "sections": [
@@ -1329,8 +1329,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 849,
-        "y": 438
+        "x": 116,
+        "y": 40
       }
     ],
     "sections": [
@@ -1375,8 +1375,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 246,
-        "y": 42
+        "x": 719,
+        "y": 436
       }
     ],
     "sections": [
@@ -1421,8 +1421,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 438,
-        "y": 237
+        "x": 526,
+        "y": 241
       }
     ],
     "sections": [
@@ -1467,8 +1467,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 897,
-        "y": 216
+        "x": 68,
+        "y": 261
       }
     ],
     "sections": [

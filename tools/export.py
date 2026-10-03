@@ -186,13 +186,45 @@ def lua(value: Any, indent: str = "") -> str:
 
 # A PNG from rows of RGBA pixels, with the standard library only.
 
-def png(width: int, height: int, pixel) -> bytes:
-    raw = b"".join(b"\x00" + b"".join(bytes(pixel(x, y)) for x in range(width)) for y in range(height))
+def encode_png(width: int, height: int, rows: list[bytes]) -> bytes:
+    raw = b"".join(b"\x00" + row for row in rows)
 
     def chunk(kind: bytes, body: bytes) -> bytes:
         return struct.pack(">I", len(body)) + kind + body + struct.pack(">I", zlib.crc32(kind + body))
     return (b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 6, 0, 0, 0))
             + chunk(b"IDAT", zlib.compress(raw, 9)) + chunk(b"IEND", b""))
+
+
+def png(width: int, height: int, pixel) -> bytes:
+    return encode_png(width, height, [b"".join(bytes(pixel(x, y)) for x in range(width)) for y in range(height)])
+
+
+class Canvas:
+    """RGBA pixels drawn by code."""
+
+    def __init__(self, width: int, height: int, color: tuple[int, int, int, int]) -> None:
+        self.width, self.height = width, height
+        self.pixels = bytearray(bytes(color) * (width * height))
+
+    def disc(self, cx: float, cy: float, radius: float, color: tuple[int, int, int, int], hole: float = -1) -> None:
+        for y in range(int(cy - radius), int(cy + radius) + 2):
+            for x in range(int(cx - radius), int(cx + radius) + 2):
+                d = ((x - cx) ** 2 + (y - cy) ** 2) ** 0.5
+                if hole < d <= radius and 0 <= x < self.width and 0 <= y < self.height:
+                    i = (y * self.width + x) * 4
+                    self.pixels[i:i + 4] = bytes(color)
+
+    def line(self, a: tuple[float, float], b: tuple[float, float], width: float,
+             color: tuple[int, int, int, int]) -> None:
+        steps = max(1, int(max(abs(b[0] - a[0]), abs(b[1] - a[1]))))
+        for n in range(steps + 1):
+            t = n / steps
+            self.disc(a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, width / 2, color)
+
+    def png(self) -> bytes:
+        stride = self.width * 4
+        return encode_png(self.width, self.height,
+                          [bytes(self.pixels[y * stride:(y + 1) * stride]) for y in range(self.height)])
 
 
 def hsv(h: float, s: float, v: float) -> tuple[int, int, int]:
@@ -231,7 +263,8 @@ def main() -> None:
 
     # The world map: an area pin where the game's pause map puts its pip, its checks those of its rooms. Each area
     # with checks also has its own map: a pin per room, for now in a grid.
-    pips = json.loads((PACK / "data/area_pips.json").read_text("utf-8"))["areas"]
+    pip_data = json.loads((PACK / "data/area_pips.json").read_text("utf-8"))
+    pips = pip_data["areas"]
     map_area = json.loads((PACK / "data/map_areas.json").read_text("utf-8"))["maps"]
     rooms: dict[str, list[dict[str, Any]]] = {}
     for loc in sorted(logic["locations"], key=lambda loc: loc["name"]):
@@ -248,18 +281,18 @@ def main() -> None:
     low, high = min(p["z"] for p in pips), max(p["z"] for p in pips)
     world_size = (round((right - left) * WORLD_SCALE) + 2 * WORLD_MARGIN,
                   round((high - low) * WORLD_SCALE) + 2 * WORLD_MARGIN)
-    spots = {p["area"]: (WORLD_MARGIN + round((p["x"] - left) * WORLD_SCALE),
-                         WORLD_MARGIN + round((high - p["z"]) * WORLD_SCALE)) for p in pips}
-
-    def world_pixel(x: int, y: int) -> tuple[int, int, int, int]:
-        for sx, sy in spots.values():
-            if abs(x - sx) <= 10 and abs(y - sy) <= 10 and 7 <= ((x - sx) ** 2 + (y - sy) ** 2) ** 0.5 <= 9:
-                return 90, 96, 110, 255
-        return 30, 34, 44, 255
+    # As the pause map shows them: +x to the left, +z down.
+    spots = {p["area"]: (WORLD_MARGIN + round((right - p["x"]) * WORLD_SCALE),
+                         WORLD_MARGIN + round((p["z"] - low) * WORLD_SCALE)) for p in pips}
+    world = Canvas(*world_size, (30, 34, 44, 255))
+    for a, b in pip_data["lines"]:
+        world.line(spots[a], spots[b], 4, (150, 98, 52, 255))
+    for x, y in spots.values():
+        world.disc(x, y, 9, (110, 116, 130, 255), hole=6)
 
     maps_json = [{"name": WORLD_MAP, "location_size": 30, "location_border_thickness": 2,
                   "img": f"images/maps/{WORLD_MAP}.png"}]
-    write(PACK / f"images/maps/{WORLD_MAP}.png", png(*world_size, world_pixel))
+    write(PACK / f"images/maps/{WORLD_MAP}.png", world.png())
     locations_json = []
     section_paths = {}
     for area, names in areas.items():

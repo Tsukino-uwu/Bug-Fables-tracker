@@ -1,5 +1,15 @@
 {
-  "_about": "The game's pause-menu map: where it puts each area's pip, as (x, z) on the map object, by MainManager.Areas (PauseMenu.MapSetup, read 2026-10-03). Numbers only: the map's art is never used.",
+  "_about": "The game's pause-menu map: where it puts each area's pip, as (x, z) on the map object, by MainManager.Areas (PauseMenu.MapSetup, read 2026-10-03), and the lines it draws between two visited areas (PauseMenu.SetMapLines). On screen +x is to the left and +z down, one scale for both: fitted to the user's screenshot of the pause map, every pip within a few pixels (2026-10-04). Numbers only: the map's art is never used.",
+  "lines": [
+    ["BugariaOutskirts", "Snakemouth"], ["BugariaOutskirts", "BugariaCity"], ["BugariaOutskirts", "Desert"],
+    ["BugariaOutskirts", "BarrenLands"], ["BugariaOutskirts", "MetalLake"], ["BugariaOutskirts", "GoldenWay"],
+    ["Snakemouth", "UpperSnakemouth"], ["BarrenLands", "TermiteCity"], ["RubberPrison", "GiantLair"],
+    ["Beehive", "HoneyFactory"], ["DefiantRoot", "Beehive"], ["GoldenWay", "GoldenSettlement"],
+    ["GoldenWay", "ChomperCaves"], ["GoldenSettlement", "GoldenHills"], ["MetalLake", "MetalIsland"],
+    ["MetalLake", "RubberPrison"], ["FarGrasslands", "WaspKingdom"], ["FarGrasslands", "WildGrasslands"],
+    ["Desert", "SandCastle"], ["Desert", "DefiantRoot"], ["Desert", "FarGrasslands"], ["Desert", "StreamMountain"],
+    ["Desert", "BanditHideout"]
+  ],
   "areas": [
     {"area": "BugariaOutskirts", "x": 0.92, "z": 2.11},
     {"area": "BugariaCity", "x": 2.76, "z": 1.22},
