@@ -373,8 +373,8 @@
     "map_locations": [
       {
         "map": "BugariaCity",
-        "x": 319,
-        "y": 184
+        "x": 368,
+        "y": 63
       }
     ],
     "sections": [
@@ -399,8 +399,8 @@
     "map_locations": [
       {
         "map": "BugariaCity",
-        "x": 148,
-        "y": 751
+        "x": 147,
+        "y": 518
       }
     ],
     "sections": [
@@ -659,8 +659,8 @@
     "map_locations": [
       {
         "map": "BugariaCity",
-        "x": 641,
-        "y": 716
+        "x": 635,
+        "y": 483
       }
     ],
     "sections": [
@@ -1349,8 +1349,8 @@
     "map_locations": [
       {
         "map": "TermiteCity",
-        "x": 313,
-        "y": 420
+        "x": 306,
+        "y": 554
       }
     ],
     "sections": [
@@ -1442,7 +1442,7 @@
       {
         "map": "UpperSnakemouth",
         "x": 1389,
-        "y": 357
+        "y": 190
       }
     ],
     "sections": [

@@ -34,6 +34,9 @@ FREE_STEP = 6.0
 GROUP_GAP = 30.0
 EDGE = 3.0  # a door this far inside its room's extent is inside it, not at its edge
 INSIDE_PX = 24  # an inside room's box on the map
+# Matching ring pairs for doors whose rooms can't sit side by side, told apart by colour.
+WRAP_COLOURS = [(90, 190, 220, 255), (230, 200, 80, 255), (120, 210, 130, 255), (240, 140, 170, 255),
+                (160, 150, 240, 255), (240, 160, 90, 255), (200, 230, 230, 255), (150, 200, 90, 255)]
 PANEL_SHAPE = 16 / 9  # PopTracker's map panel, wide
 
 
@@ -297,21 +300,28 @@ def logic_doors(room_data: dict[str, dict], doors: Any) -> dict[str, dict]:
 
 
 def insides(names: list[str], rooms: dict[str, dict]) -> dict[str, tuple[str, list[float]]]:
-    """Rooms entered through a door inside another room, not at its edge (a house in a town, its cellar), each with
-    the room it hangs off and that door's spot there. Peeled from the ends inwards: a cellar hangs off its house, the
-    house off its town. They're drawn as a small box at the door, since their own frame would sit on the town."""
+    """Side rooms: a room with one way in, entered through a door inside another room (a house in a town, its cellar)
+    or one whose spot by its door would sit on that room (a hall's back-wall doors), each with the room it hangs off
+    and that door's spot there. Peeled from the ends inwards: a cellar hangs off its house, the house off its town.
+    They're drawn as a small box at the door, since their own frame would sit on the room they're entered from."""
     inside = set(names)
     neighbours: dict[str, set[str]] = {n: set() for n in names}
-    door_at: dict[tuple[str, str], list[float]] = {}
+    door_of: dict[tuple[str, str], dict] = {}
     for n in names:
         for d in rooms[n]["doors"]:
             if d["to"] in inside and d["to"] != n and d["kind"] == "two-way":
                 neighbours[n].add(d["to"])
                 neighbours[d["to"]].add(n)
-                door_at.setdefault((n, d["to"]), d["at"])
+                door_of.setdefault((n, d["to"]), d)
 
-    def within(spot: list[float], bounds: list[float]) -> bool:
-        return min(spot[0] - bounds[0], bounds[2] - spot[0], spot[1] - bounds[1], bounds[3] - spot[1]) > EDGE
+    def side_room(parent: str, room: str) -> bool:
+        door, b = door_of[(parent, room)], rooms[parent]["bounds"]
+        spot = door["at"]
+        if min(spot[0] - b[0], b[2] - spot[0], spot[1] - b[1], b[3] - spot[1]) > EDGE:
+            return True
+        r = rooms[room]["bounds"]
+        dx, dz = spot[0] - door["arrive"][0], spot[1] - door["arrive"][1]
+        return overlaps((r[0] + dx, r[1] + dz, r[2] + dx, r[3] + dz), tuple(b), -EDGE)
 
     hanging: dict[str, tuple[str, list[float]]] = {}
     changed = True
@@ -321,13 +331,25 @@ def insides(names: list[str], rooms: dict[str, dict]) -> dict[str, tuple[str, li
             if room in hanging:
                 continue
             rest = [p for p in neighbours[room] if hanging.get(p, ("",))[0] != room]
-            if len(rest) != 1 or (rest[0], room) not in door_at:
+            if len(rest) != 1 or (rest[0], room) not in door_of:
                 continue
             parent = rest[0]
-            if within(door_at[(parent, room)], rooms[parent]["bounds"]):
-                hanging[room] = (parent, door_at[(parent, room)])
+            if side_room(parent, room):
+                hanging[room] = (parent, door_of[(parent, room)]["at"])
                 changed = True
     return hanging
+
+
+def crosses_rooms(a: tuple[float, float], b: tuple[float, float], frames: list[Rect]) -> bool:
+    """Whether a line from door a to door b runs through a room, its ends' own few pixels aside."""
+    steps = max(1, int(math.dist(a, b) / 4))
+    for n in range(steps + 1):
+        x, y = a[0] + (b[0] - a[0]) * n / steps, a[1] + (b[1] - a[1]) * n / steps
+        if min(math.dist((x, y), a), math.dist((x, y), b)) < 12:
+            continue
+        if any(f[0] + 3 < x < f[2] - 3 and f[1] + 3 < y < f[3] - 3 for f in frames):
+            return True
+    return False
 
 
 def free_spot(want: tuple[float, float], taken: list[tuple[float, float]], size: float) -> tuple[float, float]:
@@ -498,6 +520,12 @@ def main() -> None:
         # One line per pair of rooms, from a door to the door that leads back (both ends a dot), where they don't
         # meet already.
         joined: set[frozenset[str]] = set()
+        wraps: list[tuple[tuple[float, float], tuple[float, float], tuple[int, int, int, int]]] = []
+        pixel_frames = []
+        for f in frames.values():
+            x0, y1 = px(f[0], f[1])
+            x1, y0 = px(f[2], f[3])
+            pixel_frames.append((x0, y0, x1, y1))
         for name in frames:
             for door in room_data[name]["doors"]:
                 other = door["to"]
@@ -509,8 +537,18 @@ def main() -> None:
                 back = [d for d in room_data[other]["doors"] if d["to"] == name and d["kind"] == "two-way"]
                 end = (min((door_spot(other, d) for d in back), key=lambda p: math.dist(p, spot)) if back
                        else px(door["arrive"][0] + at[other][0], door["arrive"][1] + at[other][1]))
-                if math.dist(spot, end) > 8:
+                if math.dist(spot, end) <= 8:
+                    continue
+                if crosses_rooms(spot, end, pixel_frames):
+                    # Rooms that can't sit side by side (a ring of rooms, stacked floors): a pair of matching
+                    # rings, one at each door, instead of a line across the map.
+                    colour = WRAP_COLOURS[len(wraps) % len(WRAP_COLOURS)]
+                    wraps.append((spot, end, colour))
+                else:
                     canvas.line(spot, end, 3, (120, 128, 148, 255))
+        for spot, end, colour in wraps:
+            canvas.disc(*spot, 9, colour, hole=5)
+            canvas.disc(*end, 9, colour, hole=5)
         # Doors: grey within the area, orange out of it, a ring for a one-way door (no line: it may loop anywhere).
         for name in frames:
             for door in room_data[name]["doors"]:
