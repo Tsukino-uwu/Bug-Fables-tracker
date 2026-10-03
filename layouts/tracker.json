@@ -16,8 +16,8 @@
           }
         },
         {
-          "type": "map",
-          "maps": ["overview"]
+          "type": "layout",
+          "key": "map_tabs"
         }
       ]
     }

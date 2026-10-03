@@ -1,0 +1,106 @@
+{
+  "map_tabs": {
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "World",
+        "content": {
+          "type": "map",
+          "maps": [
+            "World"
+          ]
+        }
+      },
+      {
+        "title": "Bugaria Outskirts",
+        "content": {
+          "type": "map",
+          "maps": [
+            "BugariaOutskirts"
+          ]
+        }
+      },
+      {
+        "title": "Bugaria City",
+        "content": {
+          "type": "map",
+          "maps": [
+            "BugariaCity"
+          ]
+        }
+      },
+      {
+        "title": "Snakemouth",
+        "content": {
+          "type": "map",
+          "maps": [
+            "Snakemouth"
+          ]
+        }
+      },
+      {
+        "title": "Golden Settlement",
+        "content": {
+          "type": "map",
+          "maps": [
+            "GoldenSettlement"
+          ]
+        }
+      },
+      {
+        "title": "Barren Lands",
+        "content": {
+          "type": "map",
+          "maps": [
+            "BarrenLands"
+          ]
+        }
+      },
+      {
+        "title": "Wild Grasslands",
+        "content": {
+          "type": "map",
+          "maps": [
+            "WildGrasslands"
+          ]
+        }
+      },
+      {
+        "title": "Honey Factory",
+        "content": {
+          "type": "map",
+          "maps": [
+            "HoneyFactory"
+          ]
+        }
+      },
+      {
+        "title": "Termite City",
+        "content": {
+          "type": "map",
+          "maps": [
+            "TermiteCity"
+          ]
+        }
+      },
+      {
+        "title": "Bandit Hideout",
+        "content": {
+          "type": "map",
+          "maps": [
+            "BanditHideout"
+          ]
+        }
+      },
+      {
+        "title": "Upper Snakemouth",
+        "content": {
+          "type": "map",
+          "maps": [
+            "UpperSnakemouth"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -22,10 +22,17 @@ PACK = Path(__file__).resolve().parent.parent
 # Rules the pack's Lua evaluates (scripts/logic.lua): Archipelago's and the apworld's own (its custom_rules.py).
 SUPPORTED_RULES = {"And", "Or", "Has", "HasAllCounts", "True_", "False_", "Filtered",
                    "CanUse", "Member", "MoveItem", "Boat", "WayBack"}
-MAP_NAME = "overview"
-CELL = 40
+WORLD_MAP = "World"
+WORLD_SCALE = 70  # pixels per unit of the pause map's coordinates
+WORLD_MARGIN = 40
+CELL = 64
 PIN = 28
-COLUMNS = 16
+ROOM_COLUMNS = 6
+
+
+def display_name(area: str) -> str:
+    """For now the area's enum name in words; the game's own names (its AreaNames text) are still to be read."""
+    return re.sub(r"(?<=[a-z])(?=[A-Z])", " ", area)
 
 
 def load_world(archipelago: Path) -> dict[str, Any]:
@@ -222,52 +229,74 @@ def main() -> None:
     logic = build(w)
     logic["randomizer_commit"] = randomizer_commit(Path(w["package"].__file__).resolve().parent)
 
-    # The rooms with checks, each a pin: grouped by the logic's areas in story order, a band per area.
-    area_of: dict[str, int] = {}
-    for index, area in enumerate(w["logic"].AREAS):
-        for loc in getattr(area, "LOCATIONS", ()):
-            area_of.setdefault(loc.region, index)
+    # The world map: an area pin where the game's pause map puts its pip, its checks those of its rooms. Each area
+    # with checks also has its own map: a pin per room, for now in a grid.
+    pips = json.loads((PACK / "data/area_pips.json").read_text("utf-8"))["areas"]
+    map_area = json.loads((PACK / "data/map_areas.json").read_text("utf-8"))["maps"]
     rooms: dict[str, list[dict[str, Any]]] = {}
-    for loc in sorted(logic["locations"], key=lambda loc: (area_of[loc["region"]], loc["name"])):
+    for loc in sorted(logic["locations"], key=lambda loc: loc["name"]):
+        if loc["region"] not in map_area:
+            raise SystemExit(f"{loc['name']}: no area for map {loc['region']} (tools/map_areas.py)")
         rooms.setdefault(loc["region"], []).append(loc)
-    places: dict[str, tuple[int, int]] = {}
-    bands: list[tuple[int, int, int]] = []
-    row = 0
-    for index in range(len(w["logic"].AREAS)):
-        names = [room for room in rooms if area_of[room] == index]
-        if not names:
-            continue
-        first = row
-        for n, room in enumerate(names):
-            places[room] = (n % COLUMNS, row + n // COLUMNS)
-        row += (len(names) + COLUMNS - 1) // COLUMNS
-        bands.append((index, first, row))
-    width, height = COLUMNS * CELL, row * CELL
-
-    def map_pixel(x: int, y: int) -> tuple[int, int, int, int]:
-        band = next(b for b in bands if b[1] * CELL <= y < b[2] * CELL)
-        shade = 34 if band[0] % 2 else 46
-        return shade, shade, shade + 8, 255
-
-    locations_json = []
-    section_paths = {}
+    areas = {pip["area"]: [room for room in sorted(rooms) if map_area[room] == pip["area"]] for pip in pips}
+    areas = {area: names for area, names in areas.items() if names}
     for room, locs in rooms.items():
         if "/" in room or any("/" in loc["name"] for loc in locs):
             raise SystemExit(f"{room}: a '/' would break PopTracker's @location/section paths")
-        x, y = places[room]
+
+    left, right = min(p["x"] for p in pips), max(p["x"] for p in pips)
+    low, high = min(p["z"] for p in pips), max(p["z"] for p in pips)
+    world_size = (round((right - left) * WORLD_SCALE) + 2 * WORLD_MARGIN,
+                  round((high - low) * WORLD_SCALE) + 2 * WORLD_MARGIN)
+    spots = {p["area"]: (WORLD_MARGIN + round((p["x"] - left) * WORLD_SCALE),
+                         WORLD_MARGIN + round((high - p["z"]) * WORLD_SCALE)) for p in pips}
+
+    def world_pixel(x: int, y: int) -> tuple[int, int, int, int]:
+        for sx, sy in spots.values():
+            if abs(x - sx) <= 10 and abs(y - sy) <= 10 and 7 <= ((x - sx) ** 2 + (y - sy) ** 2) ** 0.5 <= 9:
+                return 90, 96, 110, 255
+        return 30, 34, 44, 255
+
+    maps_json = [{"name": WORLD_MAP, "location_size": 30, "location_border_thickness": 2,
+                  "img": f"images/maps/{WORLD_MAP}.png"}]
+    write(PACK / f"images/maps/{WORLD_MAP}.png", png(*world_size, world_pixel))
+    locations_json = []
+    section_paths = {}
+    for area, names in areas.items():
+        columns = min(len(names), ROOM_COLUMNS)
+        size = (columns * CELL, (len(names) + columns - 1) // columns * CELL)
+        write(PACK / f"images/maps/{area}.png", png(*size, lambda x, y: (38, 42, 52, 255)))
+        maps_json.append({"name": area, "location_size": PIN, "location_border_thickness": 2,
+                          "img": f"images/maps/{area}.png"})
+        for n, room in enumerate(names):
+            locations_json.append({
+                "name": room,
+                "visibility_rules": [f"$bf_room_in_seed|{room}"],
+                "chest_unopened_img": "images/chest_closed.png",
+                "chest_opened_img": "images/chest_open.png",
+                "map_locations": [{"map": area, "x": n % columns * CELL + CELL // 2,
+                                   "y": n // columns * CELL + CELL // 2}],
+                "sections": [{"name": loc["name"], "access_rules": [f"$bf_location|{loc['id']}"],
+                              "visibility_rules": [f"$bf_in_seed|{loc['id']}"]} for loc in rooms[room]],
+            })
+            for loc in rooms[room]:
+                section_paths[loc["id"]] = f"@{room}/{loc['name']}"
+        x, y = spots[area]
         locations_json.append({
-            "name": room,
-            "visibility_rules": [f"$bf_room_in_seed|{room}"],
+            "name": display_name(area),
+            "visibility_rules": [f"$bf_area_in_seed|{area}"],
             "chest_unopened_img": "images/chest_closed.png",
             "chest_opened_img": "images/chest_open.png",
-            "map_locations": [{"map": MAP_NAME, "x": x * CELL + CELL // 2, "y": y * CELL + CELL // 2}],
-            "sections": [{"name": loc["name"], "access_rules": [f"$bf_location|{loc['id']}"],
-                          "visibility_rules": [f"$bf_in_seed|{loc['id']}"]} for loc in locs],
+            "map_locations": [{"map": WORLD_MAP, "x": x, "y": y}],
+            "sections": [{"ref": f"{room}/{loc['name']}"} for room in names for loc in rooms[room]],
         })
-        for loc in locs:
-            section_paths[loc["id"]] = f"@{room}/{loc['name']}"
     logic["section_paths"] = section_paths
+    logic["room_areas"] = {room: map_area[room] for room in rooms}
     logic["item_codes_by_id"] = {item["id"]: item["code"] for item in logic["items"]}
+    write(PACK / "layouts/maps.json", json.dumps({"map_tabs": {"type": "tabbed", "tabs": [
+        {"title": "World", "content": {"type": "map", "maps": [WORLD_MAP]}},
+        *({"title": display_name(area), "content": {"type": "map", "maps": [area]}} for area in areas),
+    ]}}, indent=2) + "\n")
 
     items_json = []
     for n, item in enumerate(logic["items"]):
@@ -292,14 +321,12 @@ def main() -> None:
           + lua(logic) + "\n")
     write(PACK / "items/items.json", json.dumps(items_json, indent=2) + "\n")
     write(PACK / "locations/locations.json", json.dumps(locations_json, indent=2, ensure_ascii=False) + "\n")
-    write(PACK / "maps/maps.json", json.dumps([{"name": MAP_NAME, "location_size": PIN,
-                                                 "location_border_thickness": 2,
-                                                 "img": "images/map.png"}], indent=2) + "\n")
-    write(PACK / "images/map.png", png(width, height, map_pixel))
+    write(PACK / "maps/maps.json", json.dumps(maps_json, indent=2) + "\n")
     write(PACK / "images/chest_closed.png", square_icon((200, 170, 90), 24))
     write(PACK / "images/chest_open.png", square_icon((120, 120, 120), 24, hollow=True))
     print(f"world {logic['world_version']} at {logic['randomizer_commit']}: {len(logic['entrances'])} entrances, "
-          f"{len(logic['locations'])} locations in {len(rooms)} rooms, {len(logic['events'])} events, "
+          f"{len(logic['locations'])} locations in {len(rooms)} rooms of {len(areas)} areas, "
+          f"{len(logic['events'])} events, "
           f"{len(logic['items'])} items")
 
 

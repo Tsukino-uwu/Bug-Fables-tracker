@@ -1,0 +1,30 @@
+{
+  "_about": "The game's pause-menu map: where it puts each area's pip, as (x, z) on the map object, by MainManager.Areas (PauseMenu.MapSetup, read 2026-10-03). Numbers only: the map's art is never used.",
+  "areas": [
+    {"area": "BugariaOutskirts", "x": 0.92, "z": 2.11},
+    {"area": "BugariaCity", "x": 2.76, "z": 1.22},
+    {"area": "Snakemouth", "x": 5.6, "z": 1.34},
+    {"area": "Desert", "x": 1.4, "z": 0.1},
+    {"area": "GoldenHills", "x": 5.56, "z": -1.23},
+    {"area": "GoldenWay", "x": 4.17, "z": 0.0},
+    {"area": "GoldenSettlement", "x": 6.4, "z": -0.11},
+    {"area": "BarrenLands", "x": 4.2, "z": 2.95},
+    {"area": "FarGrasslands", "x": -0.4, "z": -1.37},
+    {"area": "WildGrasslands", "x": -4.75, "z": -2.25},
+    {"area": "DefiantRoot", "x": 2.77, "z": -0.82},
+    {"area": "SandCastle", "x": -3.1, "z": -0.7},
+    {"area": "Beehive", "x": 3.39, "z": -2.33},
+    {"area": "HoneyFactory", "x": 5.32, "z": -2.73},
+    {"area": "RubberPrison", "x": -4.64, "z": -0.19},
+    {"area": "GiantLair", "x": -6.24, "z": -0.26},
+    {"area": "MetalLake", "x": -2.3, "z": 0.66},
+    {"area": "MetalIsland", "x": -3.27, "z": 1.03},
+    {"area": "TermiteCity", "x": -3.3, "z": 2.92},
+    {"area": "WaspKingdom", "x": -0.33, "z": -2.65},
+    {"area": "BanditHideout", "x": -0.55, "z": 0.14},
+    {"area": "StreamMountain", "x": 0.0, "z": -0.62},
+    {"area": "ChomperCaves", "x": 4.65, "z": -0.5},
+    {"area": "FishingVillage", "x": -5.76, "z": -1.5},
+    {"area": "UpperSnakemouth", "x": 6.0, "z": 0.43}
+  ]
+}

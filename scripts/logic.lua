@@ -238,6 +238,13 @@ function bf_room_in_seed(region)
     return false
 end
 
+function bf_area_in_seed(area)
+    for room, room_area in pairs(DATA.room_areas) do
+        if room_area == area and bf_room_in_seed(room) then return true end
+    end
+    return false
+end
+
 function bf_location(id)
     return bf_state().locations[tonumber(id)] == true
 end

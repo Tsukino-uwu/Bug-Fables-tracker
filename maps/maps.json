@@ -1,8 +1,68 @@
 [
   {
-    "name": "overview",
+    "name": "World",
+    "location_size": 30,
+    "location_border_thickness": 2,
+    "img": "images/maps/World.png"
+  },
+  {
+    "name": "BugariaOutskirts",
     "location_size": 28,
     "location_border_thickness": 2,
-    "img": "images/map.png"
+    "img": "images/maps/BugariaOutskirts.png"
+  },
+  {
+    "name": "BugariaCity",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/BugariaCity.png"
+  },
+  {
+    "name": "Snakemouth",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/Snakemouth.png"
+  },
+  {
+    "name": "GoldenSettlement",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/GoldenSettlement.png"
+  },
+  {
+    "name": "BarrenLands",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/BarrenLands.png"
+  },
+  {
+    "name": "WildGrasslands",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/WildGrasslands.png"
+  },
+  {
+    "name": "HoneyFactory",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/HoneyFactory.png"
+  },
+  {
+    "name": "TermiteCity",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/TermiteCity.png"
+  },
+  {
+    "name": "BanditHideout",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/BanditHideout.png"
+  },
+  {
+    "name": "UpperSnakemouth",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/UpperSnakemouth.png"
   }
 ]
