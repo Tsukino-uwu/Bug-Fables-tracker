@@ -62,7 +62,9 @@ made by the user), never inside the randomizer's repo. Each step is written up a
 - **Room Swap** moves "areas" (a map plus the maps joined to it by fixed doors) into another area's slot, within
   one of the 10 world parts and with the same door count. The slot graph stays vanilla (`entrances.py`).
 - **Coupled/Decoupled** hand all 508 doors to Archipelago's `randomize_entrances`: any door to any door.
-- No coordinates exist for rooms or locations anywhere. The game's pause map is an area map with about 25 areas.
+- No coordinates exist for rooms or locations in the apworld. The game has them: the pause map's 25 area positions
+  (`PauseMenu.MapSetup`), each map's area (`MapControl.areaid`, the mod's map dump), and each door's spot and landing
+  (the mod's entity dump). See the randomizer's `MEASURED.md`.
 
 ## What it contains
 
@@ -73,11 +75,17 @@ made by the user), never inside the randomizer's repo. Each step is written up a
 2. **Lua:** an evaluator for the exported rule trees, and a region sweep (breadth-first from the start region over
    the region graph with `door_targets` applied), rerun when items change.
 3. **Items and locations:** every Archipelago item with its code; one location per room, one section per check.
-4. **The map, drawn by code at build time** (a standard-library PNG writer):
-   - one square per room, grouped by the 10 world parts, positions in a hand-editable layout table;
-   - two images: with door lines (normal and Room Swap seeds) and without (Coupled/Decoupled);
-   - rooms are pins, not drawn into the image, so fog of war can hide them;
-   - Lua picks the right tab from slot_data.
+4. **The map, drawn by code at build time** (a standard-library PNG writer). Built 2026-10-03/04 from the game's own
+   data (the user's pick: game data first, a hand table to nudge later); "good enough until we have checks
+   everywhere" (the user, 2026-10-04):
+   - a World tab like the game's pause map: an area pin where the pause map puts it, its lines between areas
+     (`data/area_pips.json`; +x left, +z down, fitted to the user's screenshot);
+   - a tab per area with checks: every room of the logic, placed where its doors meet (`data/rooms.json` from the
+     mod's entity dump, only `doors.json`'s doors); a side room entered from inside another is a box at its door; a
+     one-way door is a ring; rooms that can't sit side by side (a loop, stacked floors) get matching coloured rings;
+   - night and story versions of a room (their own maps in the logic) get no tab until one holds a check;
+   - still to come: a hand-editable nudge table, room and area names from the game's text, a door-less image for
+     Coupled/Decoupled seeds, Lua picking the tab from slot_data.
 5. **Room Swap:** one pin per slot. Its sections are the checks of every area that can land there (same world part
    and door count), each visible only when the seed put that area there, derived from `door_targets`. If that
    proves unreliable, ask the randomizer for a slot_data key.
@@ -110,7 +118,7 @@ made by the user), never inside the randomizer's repo. Each step is written up a
 
 1. The logic export, the item grid, and the checks as pins on a placeholder map drawn by code (built 2026-10-03:
    `tools/export.py`, `scripts/logic.lua`, `tests/test_parity.py`).
-2. The map, following the player, and hints.
+2. The map (its first version built 2026-10-04, see item 4), following the player, and hints.
 3. Fog of war and doors, once the randomizer writes its data storage keys.
 4. Updates and the pack list, once the user makes the repo.
 
