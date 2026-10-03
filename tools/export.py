@@ -32,6 +32,8 @@ ROOM_PAD = 2.0  # game units around a room's entities
 ROOM_GAP = 3.0
 FREE_STEP = 6.0
 GROUP_GAP = 30.0
+EDGE = 3.0  # a door this far inside its room's extent is inside it, not at its edge
+INSIDE_PX = 24  # an inside room's box on the map
 PANEL_SHAPE = 16 / 9  # PopTracker's map panel, wide
 
 
@@ -268,6 +270,77 @@ def overlaps(a: Rect, b: Rect, gap: float) -> bool:
     return a[0] < b[2] + gap and b[0] < a[2] + gap and a[1] < b[3] + gap and b[1] < a[3] + gap
 
 
+def logic_doors(room_data: dict[str, dict], doors: Any) -> dict[str, dict]:
+    """The dump's rooms with only the logic's doors (the apworld's data/doors.json), each marked two-way or one-way.
+    A fixed link names only its two maps, and the dump also lists story transitions between them (a sign, an NPC), so
+    it keeps the door nearest its room's edge, where load zones sit. Story copies are dropped."""
+    two_way = {(e.map, e.door) for c in doors.connections for e in (c.a, c.b)}
+    one_way = {(w.map, w.door) for w in doors.one_way}
+    fixed = {tuple(f) for f in doors.fixed}
+    out = {}
+    for name, room in room_data.items():
+        b = room["bounds"]
+
+        def edge(door: dict) -> float:
+            return min(door["at"][0] - b[0], b[2] - door["at"][0], door["at"][1] - b[1], b[3] - door["at"][1])
+        kept = []
+        for door in room["doors"]:
+            key = (name, door["name"])
+            if key in two_way:
+                kept.append(door | {"kind": "two-way"})
+            elif key in one_way:
+                kept.append(door | {"kind": "one-way"})
+        for to in sorted({d["to"] for d in room["doors"] if (name, d["to"]) in fixed}):
+            kept.append(min((d for d in room["doors"] if d["to"] == to), key=edge) | {"kind": "two-way"})
+        out[name] = {"bounds": b, "doors": kept}
+    return out
+
+
+def insides(names: list[str], rooms: dict[str, dict]) -> dict[str, tuple[str, list[float]]]:
+    """Rooms entered through a door inside another room, not at its edge (a house in a town, its cellar), each with
+    the room it hangs off and that door's spot there. Peeled from the ends inwards: a cellar hangs off its house, the
+    house off its town. They're drawn as a small box at the door, since their own frame would sit on the town."""
+    inside = set(names)
+    neighbours: dict[str, set[str]] = {n: set() for n in names}
+    door_at: dict[tuple[str, str], list[float]] = {}
+    for n in names:
+        for d in rooms[n]["doors"]:
+            if d["to"] in inside and d["to"] != n and d["kind"] == "two-way":
+                neighbours[n].add(d["to"])
+                neighbours[d["to"]].add(n)
+                door_at.setdefault((n, d["to"]), d["at"])
+
+    def within(spot: list[float], bounds: list[float]) -> bool:
+        return min(spot[0] - bounds[0], bounds[2] - spot[0], spot[1] - bounds[1], bounds[3] - spot[1]) > EDGE
+
+    hanging: dict[str, tuple[str, list[float]]] = {}
+    changed = True
+    while changed:
+        changed = False
+        for room in names:
+            if room in hanging:
+                continue
+            rest = [p for p in neighbours[room] if hanging.get(p, ("",))[0] != room]
+            if len(rest) != 1 or (rest[0], room) not in door_at:
+                continue
+            parent = rest[0]
+            if within(door_at[(parent, room)], rooms[parent]["bounds"]):
+                hanging[room] = (parent, door_at[(parent, room)])
+                changed = True
+    return hanging
+
+
+def free_spot(want: tuple[float, float], taken: list[tuple[float, float]], size: float) -> tuple[float, float]:
+    """The nearest point to want, spiralling out, at least size away from every taken point on both axes."""
+    for ring in range(0, 200):
+        for step in range(max(1, ring * 8)):
+            angle = 2 * math.pi * step / max(1, ring * 8)
+            spot = (want[0] + ring * 4 * math.cos(angle), want[1] + ring * 4 * math.sin(angle))
+            if all(abs(spot[0] - t[0]) >= size or abs(spot[1] - t[1]) >= size for t in taken):
+                return spot
+    raise SystemExit("no free spot for an inside room")
+
+
 def layout_area(names: list[str], rooms: dict[str, dict]) -> dict[str, tuple[float, float]]:
     """Each room's offset in one frame of game units: a neighbour goes where its arrival point meets the door that
     leads there (rooms keep their sides: a door on a room's right leads to a room on its right), or the nearest free
@@ -279,7 +352,8 @@ def layout_area(names: list[str], rooms: dict[str, dict]) -> dict[str, tuple[flo
     links: dict[str, list[tuple[str, tuple[float, float]]]] = {n: [] for n in names}
     for n in names:
         for d in rooms[n]["doors"]:
-            if d["to"] in inside and d["to"] != n:
+            # A one-way door (a fog maze's wrong turn, a drop) can loop back anywhere: it places nothing.
+            if d["to"] in inside and d["to"] != n and d["kind"] == "two-way":
                 delta = (d["at"][0] - d["arrive"][0], d["at"][1] - d["arrive"][1])
                 links[n].append((d["to"], delta))
                 links[d["to"]].append((n, (-delta[0], -delta[1])))
@@ -387,7 +461,7 @@ def main() -> None:
     write(PACK / f"images/maps/{WORLD_MAP}.png", world.png())
     locations_json = []
     section_paths = {}
-    room_data = json.loads((PACK / "data/rooms.json").read_text("utf-8"))["maps"]
+    room_data = logic_doors(json.loads((PACK / "data/rooms.json").read_text("utf-8"))["maps"], w["data"].DOORS)
     logic_maps = set(w["data"].MAPS)
     for area, names in areas.items():
         # Every room of the area is drawn, the rooms with checks also get a pin.
@@ -396,12 +470,13 @@ def main() -> None:
         missing = [room for room in names if room not in every]
         if missing:
             raise SystemExit(f"rooms with checks but no room data (tools/rooms.py): {missing}")
-        at = layout_area(every, room_data)
+        hanging = insides(every, room_data)
+        at = layout_area([n for n in every if n not in hanging], room_data)
 
         def frame(name: str) -> Rect:
             b = room_data[name]["bounds"]
             return b[0] + at[name][0], b[1] + at[name][1], b[2] + at[name][0], b[3] + at[name][1]
-        frames = {name: frame(name) for name in every}
+        frames = {name: frame(name) for name in at}
         left = min(f[0] for f in frames.values()) - 2 * ROOM_PAD
         right = max(f[2] for f in frames.values()) + 2 * ROOM_PAD
         low = min(f[1] for f in frames.values()) - 2 * ROOM_PAD
@@ -417,22 +492,58 @@ def main() -> None:
             x1, y0 = px(f[2] + ROOM_PAD, f[3] + ROOM_PAD)
             canvas.box(x0, y0, x1, y1, (58, 64, 80, 255) if name in rooms else (44, 49, 61, 255),
                        (96, 104, 124, 255))
-        for name in every:
+        def door_spot(room: str, door: dict) -> tuple[float, float]:
+            return px(door["at"][0] + at[room][0], door["at"][1] + at[room][1])
+
+        # One line per pair of rooms, from a door to the door that leads back (both ends a dot), where they don't
+        # meet already.
+        joined: set[frozenset[str]] = set()
+        for name in frames:
             for door in room_data[name]["doors"]:
-                spot = px(door["at"][0] + at[name][0], door["at"][1] + at[name][1])
-                if door["to"] in frames:
-                    land = px(door["arrive"][0] + at[door["to"]][0], door["arrive"][1] + at[door["to"]][1])
-                    if math.dist(spot, land) > 6:
-                        canvas.line(spot, land, 3, (120, 128, 148, 255))
+                other = door["to"]
+                if (door["kind"] != "two-way" or other not in frames or other == name
+                        or frozenset((name, other)) in joined):
+                    continue
+                joined.add(frozenset((name, other)))
+                spot = door_spot(name, door)
+                back = [d for d in room_data[other]["doors"] if d["to"] == name and d["kind"] == "two-way"]
+                end = (min((door_spot(other, d) for d in back), key=lambda p: math.dist(p, spot)) if back
+                       else px(door["arrive"][0] + at[other][0], door["arrive"][1] + at[other][1]))
+                if math.dist(spot, end) > 8:
+                    canvas.line(spot, end, 3, (120, 128, 148, 255))
+        # Doors: grey within the area, orange out of it, a ring for a one-way door (no line: it may loop anywhere).
+        for name in frames:
+            for door in room_data[name]["doors"]:
+                spot = door_spot(name, door)
+                if door["kind"] == "one-way":
+                    canvas.disc(*spot, 7, (170, 120, 200, 255), hole=4)
+                elif door["to"] in frames:
                     canvas.disc(*spot, 4, (170, 176, 190, 255))
-                else:
+                elif map_area.get(door["to"]) != area:
                     canvas.disc(*spot, 6, (200, 130, 60, 255))
+        # Inside rooms: a box at the door they're entered by, parents first; a cellar's box beside its house's.
+        boxes: dict[str, tuple[float, float]] = {}
+
+        def depth(room: str) -> int:
+            return 0 if room not in hanging else 1 + depth(hanging[room][0])
+        for room in sorted(hanging, key=lambda r: (depth(r), r)):
+            parent, spot = hanging[room]
+            want = (px(spot[0] + at[parent][0], spot[1] + at[parent][1]) if parent in frames
+                    else (boxes[parent][0] + INSIDE_PX + 4, boxes[parent][1]))
+            boxes[room] = free_spot(want, list(boxes.values()), INSIDE_PX + 2)
+            x, y = boxes[room]
+            half = INSIDE_PX / 2
+            canvas.box(x - half, y - half, x + half, y + half,
+                       (78, 86, 106, 255) if room in rooms else (58, 64, 80, 255), (150, 158, 178, 255))
         write(PACK / f"images/maps/{area}.png", canvas.png())
         maps_json.append({"name": area, "location_size": PIN, "location_border_thickness": 2,
                           "img": f"images/maps/{area}.png"})
         for room in names:
-            f = frames[room]
-            x, y = px((f[0] + f[2]) / 2, (f[1] + f[3]) / 2)
+            if room in boxes:
+                x, y = boxes[room]
+            else:
+                f = frames[room]
+                x, y = px((f[0] + f[2]) / 2, (f[1] + f[3]) / 2)
             locations_json.append({
                 "name": room,
                 "visibility_rules": [f"$bf_room_in_seed|{room}"],

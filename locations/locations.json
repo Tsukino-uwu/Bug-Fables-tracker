@@ -373,8 +373,8 @@
     "map_locations": [
       {
         "map": "BugariaCity",
-        "x": 300,
-        "y": 173
+        "x": 319,
+        "y": 184
       }
     ],
     "sections": [
@@ -399,8 +399,8 @@
     "map_locations": [
       {
         "map": "BugariaCity",
-        "x": 139,
-        "y": 706
+        "x": 148,
+        "y": 751
       }
     ],
     "sections": [
@@ -659,8 +659,8 @@
     "map_locations": [
       {
         "map": "BugariaCity",
-        "x": 698,
-        "y": 673
+        "x": 641,
+        "y": 716
       }
     ],
     "sections": [
@@ -1211,8 +1211,8 @@
     "map_locations": [
       {
         "map": "BarrenLands",
-        "x": 1087,
-        "y": 423
+        "x": 610,
+        "y": 305
       }
     ],
     "sections": [
@@ -1303,8 +1303,8 @@
     "map_locations": [
       {
         "map": "HoneyFactory",
-        "x": 1175,
-        "y": 493
+        "x": 1191,
+        "y": 529
       }
     ],
     "sections": [
