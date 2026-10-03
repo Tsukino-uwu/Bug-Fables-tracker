@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import re
 import struct
@@ -25,9 +26,13 @@ SUPPORTED_RULES = {"And", "Or", "Has", "HasAllCounts", "True_", "False_", "Filte
 WORLD_MAP = "World"
 WORLD_SCALE = 70  # pixels per unit of the pause map's coordinates
 WORLD_MARGIN = 40
-CELL = 64
 PIN = 28
-ROOM_COLUMNS = 6
+AREA_SIZE = 1600  # an area map's longer side, in pixels
+ROOM_PAD = 2.0  # game units around a room's entities
+ROOM_GAP = 3.0
+FREE_STEP = 6.0
+GROUP_GAP = 30.0
+PANEL_SHAPE = 16 / 9  # PopTracker's map panel, wide
 
 
 def display_name(area: str) -> str:
@@ -221,6 +226,16 @@ class Canvas:
             t = n / steps
             self.disc(a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, width / 2, color)
 
+    def box(self, x0: float, y0: float, x1: float, y1: float, fill: tuple[int, int, int, int],
+            edge: tuple[int, int, int, int]) -> None:
+        left, top = max(0, int(x0)), max(0, int(y0))
+        right, bottom = min(self.width - 1, int(x1)), min(self.height - 1, int(y1))
+        for y in range(top, bottom + 1):
+            row = bytes(edge if y - top < 2 or bottom - y < 2 else fill)
+            for x in range(left, right + 1):
+                i = (y * self.width + x) * 4
+                self.pixels[i:i + 4] = bytes(edge) if x - left < 2 or right - x < 2 else row
+
     def png(self) -> bytes:
         stride = self.width * 4
         return encode_png(self.width, self.height,
@@ -244,6 +259,83 @@ def square_icon(color: tuple[int, int, int], size: int = 32, hollow: bool = Fals
             return (*edge, 255)
         return (0, 0, 0, 0) if hollow else (*color, 255)
     return png(size, size, pixel)
+
+
+Rect = tuple[float, float, float, float]
+
+
+def overlaps(a: Rect, b: Rect, gap: float) -> bool:
+    return a[0] < b[2] + gap and b[0] < a[2] + gap and a[1] < b[3] + gap and b[1] < a[3] + gap
+
+
+def layout_area(names: list[str], rooms: dict[str, dict]) -> dict[str, tuple[float, float]]:
+    """Each room's offset in one frame of game units: a neighbour goes where its arrival point meets the door that
+    leads there (rooms keep their sides: a door on a room's right leads to a room on its right), or the nearest free
+    spot when that one is taken. A door places the rooms at either end, so a room only a one-way door joins still sits
+    by it. Rooms no door of the area joins make a group of their own, packed beside the rest or below, whichever keeps
+    the map nearer the shape of PopTracker's map panel."""
+    inside = set(names)
+    # (neighbour, offset of the neighbour from this room)
+    links: dict[str, list[tuple[str, tuple[float, float]]]] = {n: [] for n in names}
+    for n in names:
+        for d in rooms[n]["doors"]:
+            if d["to"] in inside and d["to"] != n:
+                delta = (d["at"][0] - d["arrive"][0], d["at"][1] - d["arrive"][1])
+                links[n].append((d["to"], delta))
+                links[d["to"]].append((n, (-delta[0], -delta[1])))
+    placed: dict[str, tuple[float, float]] = {}
+    rects: list[Rect] = []
+
+    def rect(name: str, at: tuple[float, float]) -> Rect:
+        b = rooms[name]["bounds"]
+        return b[0] + at[0] - ROOM_PAD, b[1] + at[1] - ROOM_PAD, b[2] + at[0] + ROOM_PAD, b[3] + at[1] + ROOM_PAD
+
+    def free(name: str, want: tuple[float, float], taken: list[Rect]) -> tuple[float, float]:
+        for ring in range(0, 400):
+            for step in range(max(1, ring * 8)):
+                angle = 2 * math.pi * step / max(1, ring * 8)
+                at = (want[0] + ring * FREE_STEP * math.cos(angle), want[1] + ring * FREE_STEP * math.sin(angle))
+                if not any(overlaps(rect(name, at), other, ROOM_GAP) for other in taken):
+                    return at
+        raise SystemExit(f"{name}: no room for it")
+
+    def place_group(root: str) -> dict[str, tuple[float, float]]:
+        group = {root: (0.0, 0.0)}
+        local: list[Rect] = [rect(root, (0.0, 0.0))]
+        queue = [root]
+        while queue:
+            a = queue.pop(0)
+            for b, delta in links[a]:
+                if b in group:
+                    continue
+                group[b] = free(b, (group[a][0] + delta[0], group[a][1] + delta[1]), local)
+                local.append(rect(b, group[b]))
+                queue.append(b)
+        return group
+
+    for root in sorted(names, key=lambda n: (-len(links[n]), n)):
+        if root in placed:
+            continue
+        group = place_group(root)
+        box = (min(rect(n, at)[0] for n, at in group.items()), min(rect(n, at)[1] for n, at in group.items()),
+               max(rect(n, at)[2] for n, at in group.items()), max(rect(n, at)[3] for n, at in group.items()))
+        if not placed:
+            move = (0.0, 0.0)
+        else:
+            whole = (min(r[0] for r in rects), min(r[1] for r in rects), max(r[2] for r in rects),
+                     max(r[3] for r in rects))
+            beside = (whole[2] + GROUP_GAP - box[0], whole[3] - box[3])
+            below = (whole[0] - box[0], whole[1] - GROUP_GAP - box[3])
+
+            def misfit(move: tuple[float, float]) -> float:
+                width = max(whole[2], box[2] + move[0]) - min(whole[0], box[0] + move[0])
+                height = max(whole[3], box[3] + move[1]) - min(whole[1], box[1] + move[1])
+                return abs(math.log(width / height / PANEL_SHAPE))
+            move = min((beside, below), key=misfit)
+        for n, at in group.items():
+            placed[n] = (at[0] + move[0], at[1] + move[1])
+            rects.append(rect(n, placed[n]))
+    return placed
 
 
 def write(path: Path, content: bytes | str) -> None:
@@ -295,20 +387,58 @@ def main() -> None:
     write(PACK / f"images/maps/{WORLD_MAP}.png", world.png())
     locations_json = []
     section_paths = {}
+    room_data = json.loads((PACK / "data/rooms.json").read_text("utf-8"))["maps"]
+    logic_maps = set(w["data"].MAPS)
     for area, names in areas.items():
-        columns = min(len(names), ROOM_COLUMNS)
-        size = (columns * CELL, (len(names) + columns - 1) // columns * CELL)
-        write(PACK / f"images/maps/{area}.png", png(*size, lambda x, y: (38, 42, 52, 255)))
+        # Every room of the area is drawn, the rooms with checks also get a pin.
+        # The logic's maps only: a test or cutscene map that's no region of the apworld is never drawn.
+        every = sorted(m for m, a in map_area.items() if a == area and m in room_data and m in logic_maps)
+        missing = [room for room in names if room not in every]
+        if missing:
+            raise SystemExit(f"rooms with checks but no room data (tools/rooms.py): {missing}")
+        at = layout_area(every, room_data)
+
+        def frame(name: str) -> Rect:
+            b = room_data[name]["bounds"]
+            return b[0] + at[name][0], b[1] + at[name][1], b[2] + at[name][0], b[3] + at[name][1]
+        frames = {name: frame(name) for name in every}
+        left = min(f[0] for f in frames.values()) - 2 * ROOM_PAD
+        right = max(f[2] for f in frames.values()) + 2 * ROOM_PAD
+        low = min(f[1] for f in frames.values()) - 2 * ROOM_PAD
+        high = max(f[3] for f in frames.values()) + 2 * ROOM_PAD
+        scale = AREA_SIZE / max(right - left, high - low)
+
+        def px(x: float, z: float) -> tuple[float, float]:
+            # Game x to the right, z up: as the pause map shows the areas around them.
+            return (x - left) * scale, (high - z) * scale
+        canvas = Canvas(round((right - left) * scale), round((high - low) * scale), (24, 27, 35, 255))
+        for name, f in frames.items():
+            x0, y1 = px(f[0] - ROOM_PAD, f[1] - ROOM_PAD)
+            x1, y0 = px(f[2] + ROOM_PAD, f[3] + ROOM_PAD)
+            canvas.box(x0, y0, x1, y1, (58, 64, 80, 255) if name in rooms else (44, 49, 61, 255),
+                       (96, 104, 124, 255))
+        for name in every:
+            for door in room_data[name]["doors"]:
+                spot = px(door["at"][0] + at[name][0], door["at"][1] + at[name][1])
+                if door["to"] in frames:
+                    land = px(door["arrive"][0] + at[door["to"]][0], door["arrive"][1] + at[door["to"]][1])
+                    if math.dist(spot, land) > 6:
+                        canvas.line(spot, land, 3, (120, 128, 148, 255))
+                    canvas.disc(*spot, 4, (170, 176, 190, 255))
+                else:
+                    canvas.disc(*spot, 6, (200, 130, 60, 255))
+        write(PACK / f"images/maps/{area}.png", canvas.png())
         maps_json.append({"name": area, "location_size": PIN, "location_border_thickness": 2,
                           "img": f"images/maps/{area}.png"})
-        for n, room in enumerate(names):
+        for room in names:
+            f = frames[room]
+            x, y = px((f[0] + f[2]) / 2, (f[1] + f[3]) / 2)
             locations_json.append({
                 "name": room,
                 "visibility_rules": [f"$bf_room_in_seed|{room}"],
                 "chest_unopened_img": "images/chest_closed.png",
                 "chest_opened_img": "images/chest_open.png",
-                "map_locations": [{"map": area, "x": n % columns * CELL + CELL // 2,
-                                   "y": n // columns * CELL + CELL // 2}],
+                "map_locations": [{"map": area, "x": round(x), "y": round(y)}],
                 "sections": [{"name": loc["name"], "access_rules": [f"$bf_location|{loc['id']}"],
                               "visibility_rules": [f"$bf_in_seed|{loc['id']}"]} for loc in rooms[room]],
             })

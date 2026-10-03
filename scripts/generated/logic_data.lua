@@ -13055,7 +13055,7 @@ return {
     ["exclude_locations"] = {},
   },
   ["starting_member_default"] = 3,
-  ["randomizer_commit"] = "4edbac3db92fab38fbd75e9247afe86898c528f3",
+  ["randomizer_commit"] = "a77eeaed3068068b0e75b5a776a418d4669e3491",
   ["section_paths"] = {
     [7720012] = "@BOGoldenPath/Outskirts: Golden Path, Grass",
     [7720069] = "@BOLostSandsEntrance/Lost Sands: Entrance",

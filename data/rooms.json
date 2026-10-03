@@ -1,0 +1,9776 @@
+{
+ "_about": "Each map's extent (the corners of its entities' positions, x and z) and its doors: where each sits, the map it leads to and where it lands there, from the randomizer mod's entity dump; written by tools/rooms.py.",
+ "maps": {
+  "AbandonedCity": {
+   "bounds": [
+    -17.1,
+    -16.0,
+    17.23,
+    22.71
+   ],
+   "doors": [
+    {
+     "index": 20,
+     "name": "loadzone",
+     "to": "BarrenLandsTanks",
+     "at": [
+      15.42,
+      -16.0
+     ],
+     "arrive": [
+      -25.93,
+      4.0
+     ]
+    },
+    {
+     "index": 25,
+     "name": "loadzonetent",
+     "to": "AbandonedCityTent",
+     "at": [
+      -1.0,
+      22.71
+     ],
+     "arrive": [
+      -12.67,
+      0.0
+     ]
+    }
+   ]
+  },
+  "AbandonedCityTent": {
+   "bounds": [
+    -9.83,
+    -1.54,
+    0.66,
+    0.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "AbandonedCity",
+     "at": [
+      -9.83,
+      0.0
+     ],
+     "arrive": [
+      -1.0,
+      23.83
+     ]
+    }
+   ]
+  },
+  "AntBridge": {
+   "bounds": [
+    -10.01,
+    -5.64,
+    7.43,
+    37.19
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneplaza",
+     "to": "BugariaMainPlaza",
+     "at": [
+      0.0,
+      -5.64
+     ],
+     "arrive": [
+      0.0,
+      32.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzonepalace",
+     "to": "AntPalace1",
+     "at": [
+      0.0,
+      37.19
+     ],
+     "arrive": [
+      0.0,
+      -5.8
+     ]
+    }
+   ]
+  },
+  "AntMinesBreakRoom": {
+   "bounds": [
+    -10.03,
+    -3.26,
+    7.31,
+    2.41
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "AntTunnels",
+     "at": [
+      -10.03,
+      0.0
+     ],
+     "arrive": [
+      0.0,
+      17.54
+     ]
+    }
+   ]
+  },
+  "AntPalace1": {
+   "bounds": [
+    -15.0,
+    -3.7,
+    15.0,
+    32.3
+   ],
+   "doors": [
+    {
+     "index": 3,
+     "name": "MineLoadZone",
+     "to": "AntTunnels",
+     "at": [
+      0.0,
+      3.98
+     ],
+     "arrive": [
+      0.0,
+      -18.0
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzone plaza",
+     "to": "AntBridge",
+     "at": [
+      0.0,
+      -3.7
+     ],
+     "arrive": [
+      0.0,
+      39.9
+     ]
+    },
+    {
+     "index": 5,
+     "name": "Loadzonethrone",
+     "to": "AntPalace2",
+     "at": [
+      0.0,
+      32.3
+     ],
+     "arrive": [
+      -18.5,
+      0.0
+     ]
+    },
+    {
+     "index": 9,
+     "name": "Loadzonelibrary",
+     "to": "AntPalaceLibrary",
+     "at": [
+      -12.8,
+      21.3
+     ],
+     "arrive": [
+      -6.0,
+      -6.06
+     ]
+    },
+    {
+     "index": 12,
+     "name": "loadzonewarroom",
+     "to": "AntPalaceWarRoom",
+     "at": [
+      12.8,
+      21.3
+     ],
+     "arrive": [
+      5.98,
+      -5.88
+     ]
+    }
+   ]
+  },
+  "AntPalace2": {
+   "bounds": [
+    -15.64,
+    -3.81,
+    32.89,
+    11.3
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonehall",
+     "to": "AntPalace1",
+     "at": [
+      -15.64,
+      0.0
+     ],
+     "arrive": [
+      0.0,
+      36.5
+     ]
+    }
+   ]
+  },
+  "AntPalaceLibrary": {
+   "bounds": [
+    -12.86,
+    -2.89,
+    10.0,
+    7.66
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "LoadZone",
+     "to": "AntPalace1",
+     "at": [
+      -6.03,
+      -2.89
+     ],
+     "arrive": [
+      -16.1,
+      22.92
+     ]
+    }
+   ]
+  },
+  "AntPalaceWarRoom": {
+   "bounds": [
+    -8.68,
+    -2.89,
+    11.13,
+    15.0
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "LoadZone - Duplicate",
+     "to": "AntPalace1",
+     "at": [
+      6.06,
+      -2.89
+     ],
+     "arrive": [
+      16.1,
+      22.92
+     ]
+    }
+   ]
+  },
+  "AntTunnels": {
+   "bounds": [
+    -17.1,
+    -15.75,
+    17.1,
+    16.78
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "LoadZoneMain",
+     "to": "AntPalace1",
+     "at": [
+      0.0,
+      -15.75
+     ],
+     "arrive": [
+      0.0,
+      7.0
+     ]
+    },
+    {
+     "index": 7,
+     "name": "door break room",
+     "to": "AntMinesBreakRoom",
+     "at": [
+      0.0,
+      16.78
+     ],
+     "arrive": [
+      -12.11,
+      0.0
+     ]
+    }
+   ]
+  },
+  "BOGoldenPath": {
+   "bounds": [
+    -95.3,
+    -3.3,
+    5.11,
+    8.01
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "LoadZoneBugaria",
+     "to": "BugariaOutskirtsOutsideCity",
+     "at": [
+      0.0,
+      7.75
+     ],
+     "arrive": [
+      -7.95,
+      -30.92
+     ]
+    },
+    {
+     "index": 1,
+     "name": "Loadzonetunnel",
+     "to": "GoldenPathTunnel",
+     "at": [
+      -62.87,
+      8.01
+     ],
+     "arrive": [
+      0.0,
+      -13.64
+     ]
+    },
+    {
+     "index": 19,
+     "name": "loadzonecave",
+     "to": "HermitCave",
+     "at": [
+      -95.3,
+      2.77
+     ],
+     "arrive": [
+      11.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  "BOLostSandsEntrance": {
+   "bounds": [
+    -5.44,
+    -11.76,
+    12.04,
+    9.19
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonesouth",
+     "to": "BugariaOutskirtsEast2",
+     "at": [
+      0.0,
+      -11.76
+     ],
+     "arrive": [
+      20.0,
+      34.0
+     ]
+    },
+    {
+     "index": 2,
+     "name": "load zone north",
+     "to": "DesertEntrance",
+     "at": [
+      0.0,
+      9.19
+     ],
+     "arrive": [
+      -0.5,
+      -13.33
+     ]
+    }
+   ]
+  },
+  "BarrenLandsAntTunnel": {
+   "bounds": [
+    -6.28,
+    -7.6,
+    6.45,
+    5.35
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "TermiteOutside",
+     "at": [
+      0.0,
+      -7.6
+     ],
+     "arrive": [
+      -34.0,
+      31.59
+     ]
+    }
+   ]
+  },
+  "BarrenLandsBeefly": {
+   "bounds": [
+    -7.34,
+    -13.77,
+    52.46,
+    16.1
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonecd",
+     "to": "BarrenLandsCD",
+     "at": [
+      -7.34,
+      -6.0
+     ],
+     "arrive": [
+      26.2,
+      -10.0
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzoneminiboss",
+     "to": "BarrenLandsMiniboss",
+     "at": [
+      52.46,
+      -2.0
+     ],
+     "arrive": [
+      -23.35,
+      0.0
+     ]
+    },
+    {
+     "index": 5,
+     "name": "returnloadzone",
+     "to": "BarrenLandsCD",
+     "at": [
+      41.0,
+      16.1
+     ],
+     "arrive": [
+      0.0,
+      -30.7
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzonesouth",
+     "to": "BarrenLandsCloud",
+     "at": [
+      45.0,
+      -13.77
+     ],
+     "arrive": [
+      3.0,
+      28.42
+     ]
+    }
+   ]
+  },
+  "BarrenLandsCD": {
+   "bounds": [
+    -21.23,
+    -27.97,
+    23.46,
+    5.86
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonenorth",
+     "to": "BarrenLandsEntrance",
+     "at": [
+      0.0,
+      5.86
+     ],
+     "arrive": [
+      -2.0,
+      -16.52
+     ]
+    },
+    {
+     "index": 1,
+     "name": "returnloadzoneleft",
+     "to": "BarrenLandsEntrance",
+     "at": [
+      -21.23,
+      -10.0
+     ],
+     "arrive": [
+      22.6,
+      -2.0
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzoneright",
+     "to": "BarrenLandsBeefly",
+     "at": [
+      23.46,
+      -10.0
+     ],
+     "arrive": [
+      -10.32,
+      -6.0
+     ]
+    },
+    {
+     "index": 4,
+     "name": "returnloadzone",
+     "to": "BarrenLandsCD",
+     "at": [
+      0.0,
+      -27.97
+     ],
+     "arrive": [
+      0.0,
+      8.0
+     ]
+    },
+    {
+     "index": 9,
+     "name": "returnloadzoneleft - Duplicate",
+     "to": "BarrenLandsCloud",
+     "at": [
+      -21.23,
+      -10.0
+     ],
+     "arrive": [
+      72.2,
+      1.25
+     ]
+    }
+   ]
+  },
+  "BarrenLandsCloud": {
+   "bounds": [
+    -43.95,
+    -31.23,
+    69.48,
+    25.6
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonenorth",
+     "to": "BarrenLandsBeefly",
+     "at": [
+      3.0,
+      25.6
+     ],
+     "arrive": [
+      45.0,
+      -16.68
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzoneright",
+     "to": "BarrenLandsPumpkins",
+     "at": [
+      69.48,
+      1.25
+     ],
+     "arrive": [
+      -29.63,
+      4.0
+     ]
+    },
+    {
+     "index": 12,
+     "name": "loadzoneleft",
+     "to": "BarrenLandsTanks",
+     "at": [
+      -43.95,
+      0.0
+     ],
+     "arrive": [
+      27.42,
+      4.0
+     ]
+    },
+    {
+     "index": 13,
+     "name": "returnzone",
+     "to": "BarrenLandsCloud",
+     "at": [
+      3.5,
+      -31.23
+     ],
+     "arrive": [
+      3.0,
+      28.54
+     ]
+    }
+   ]
+  },
+  "BarrenLandsEntrance": {
+   "bounds": [
+    -19.78,
+    -13.68,
+    19.66,
+    13.74
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzonecave",
+     "to": "GoldenPathTunnel",
+     "at": [
+      -7.0,
+      13.74
+     ],
+     "arrive": [
+      -40.0,
+      -10.9
+     ]
+    },
+    {
+     "index": 3,
+     "name": "returnloadzoneright",
+     "to": "BarrenLandsEntrance",
+     "at": [
+      19.66,
+      -2.0
+     ],
+     "arrive": [
+      -22.6,
+      2.0
+     ]
+    },
+    {
+     "index": 7,
+     "name": "loadzonesouth",
+     "to": "BarrenLandsCD",
+     "at": [
+      -2.0,
+      -13.68
+     ],
+     "arrive": [
+      0.0,
+      8.3
+     ]
+    },
+    {
+     "index": 11,
+     "name": "loadzoneleft",
+     "to": "BarrenLandsSideGPT",
+     "at": [
+      -19.78,
+      2.0
+     ],
+     "arrive": [
+      26.1,
+      2.0
+     ]
+    }
+   ]
+  },
+  "BarrenLandsMiniboss": {
+   "bounds": [
+    -20.44,
+    -9.93,
+    20.44,
+    0.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneright",
+     "to": "TermiteOutside",
+     "at": [
+      20.44,
+      0.0
+     ],
+     "arrive": [
+      0.0,
+      -8.56
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzoneleft",
+     "to": "BarrenLandsBeefly",
+     "at": [
+      -20.44,
+      0.0
+     ],
+     "arrive": [
+      55.58,
+      -2.0
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzone south",
+     "to": "BarrenLandsRock",
+     "at": [
+      0.0,
+      -9.93
+     ],
+     "arrive": [
+      0.0,
+      16.33
+     ]
+    }
+   ]
+  },
+  "BarrenLandsMushrooms": {
+   "bounds": [
+    -39.73,
+    -9.8,
+    43.95,
+    11.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonepinkspider",
+     "to": "BarrenLandsPinkSpider",
+     "at": [
+      -39.73,
+      0.0
+     ],
+     "arrive": [
+      12.07,
+      6.36
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzonepumpkin",
+     "to": "BarrenLandsPumpkins",
+     "at": [
+      43.95,
+      11.0
+     ],
+     "arrive": [
+      -11.0,
+      -12.6
+     ]
+    }
+   ]
+  },
+  "BarrenLandsPinkSpider": {
+   "bounds": [
+    -21.0,
+    -6.62,
+    8.99,
+    7.6
+   ],
+   "doors": [
+    {
+     "index": 12,
+     "name": "loadzonepumpkin - Duplicate",
+     "to": "BarrenLandsPumpkins",
+     "at": [
+      8.99,
+      6.0
+     ],
+     "arrive": [
+      -11.0,
+      -12.6
+     ]
+    }
+   ]
+  },
+  "BarrenLandsPumpkins": {
+   "bounds": [
+    -26.83,
+    -11.1,
+    35.1,
+    16.22
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonesouth",
+     "to": "BarrenLandsMushrooms",
+     "at": [
+      -11.0,
+      -9.78
+     ],
+     "arrive": [
+      44.94,
+      13.4
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzoneleft",
+     "to": "BarrenLandsCloud",
+     "at": [
+      -26.83,
+      4.0
+     ],
+     "arrive": [
+      72.28,
+      1.25
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzoneright - Duplicate",
+     "to": "BarrenLandsRock",
+     "at": [
+      35.1,
+      -4.0
+     ],
+     "arrive": [
+      -12.48,
+      -4.0
+     ]
+    },
+    {
+     "index": 9,
+     "name": "returnloadzone",
+     "to": "BarrenLandsCloud",
+     "at": [
+      1.0,
+      16.22
+     ],
+     "arrive": [
+      3.5,
+      -34.11
+     ]
+    }
+   ]
+  },
+  "BarrenLandsRock": {
+   "bounds": [
+    -9.63,
+    -9.67,
+    35.74,
+    13.7
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneleft",
+     "to": "BarrenLandsPumpkins",
+     "at": [
+      -9.63,
+      -4.0
+     ],
+     "arrive": [
+      37.99,
+      -4.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone north",
+     "to": "BarrenLandsMiniboss",
+     "at": [
+      0.0,
+      13.7
+     ],
+     "arrive": [
+      0.0,
+      -12.5
+     ]
+    },
+    {
+     "index": 5,
+     "name": "returnzoneright",
+     "to": "BarrenLandsPumpkins",
+     "at": [
+      35.74,
+      -2.0
+     ],
+     "arrive": [
+      -29.49,
+      4.0
+     ]
+    },
+    {
+     "index": 6,
+     "name": "returnzonesouth",
+     "to": "BarrenLandsRock",
+     "at": [
+      26.0,
+      -9.67
+     ],
+     "arrive": [
+      0.0,
+      16.52
+     ]
+    }
+   ]
+  },
+  "BarrenLandsSideGPT": {
+   "bounds": [
+    -22.69,
+    -13.66,
+    23.1,
+    13.4
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone right",
+     "to": "BarrenLandsEntrance",
+     "at": [
+      23.1,
+      2.0
+     ],
+     "arrive": [
+      -22.72,
+      2.0
+     ]
+    },
+    {
+     "index": 2,
+     "name": "returnzone left",
+     "to": "BarrenLandsCD",
+     "at": [
+      -22.69,
+      -2.0
+     ],
+     "arrive": [
+      26.2,
+      -10.0
+     ]
+    },
+    {
+     "index": 3,
+     "name": "returnzone south",
+     "to": "BarrenLandsCD",
+     "at": [
+      0.0,
+      -13.66
+     ],
+     "arrive": [
+      0.0,
+      8.53
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzone cave",
+     "to": "GoldenPathTunnel2",
+     "at": [
+      -12.0,
+      13.4
+     ],
+     "arrive": [
+      -4.0,
+      -16.3
+     ]
+    }
+   ]
+  },
+  "BarrenLandsTanks": {
+   "bounds": [
+    -22.9,
+    -11.5,
+    24.71,
+    15.66
+   ],
+   "doors": [
+    {
+     "index": 17,
+     "name": "loadzonecity",
+     "to": "AbandonedCity",
+     "at": [
+      -22.9,
+      4.0
+     ],
+     "arrive": [
+      18.49,
+      -16.0
+     ]
+    },
+    {
+     "index": 18,
+     "name": "loadzoneright",
+     "to": "BarrenLandsCloud",
+     "at": [
+      24.71,
+      4.0
+     ],
+     "arrive": [
+      -46.7,
+      0.0
+     ]
+    },
+    {
+     "index": 21,
+     "name": "returnloadzone",
+     "to": "BarrenLandsCloud",
+     "at": [
+      -7.0,
+      -11.5
+     ],
+     "arrive": [
+      3.0,
+      28.44
+     ]
+    },
+    {
+     "index": 22,
+     "name": "returnzonenorth",
+     "to": "BarrenLandsCD",
+     "at": [
+      -1.0,
+      15.66
+     ],
+     "arrive": [
+      0.0,
+      -30.3
+     ]
+    }
+   ]
+  },
+  "BeehiveBalcony": {
+   "bounds": [
+    -13.76,
+    -3.74,
+    21.27,
+    3.7
+   ],
+   "doors": [
+    {
+     "index": 4,
+     "name": "laodzone",
+     "to": "BeehiveMainArea",
+     "at": [
+      -13.76,
+      0.0
+     ],
+     "arrive": [
+      28.38,
+      0.0
+     ]
+    }
+   ]
+  },
+  "BeehiveMainArea": {
+   "bounds": [
+    -27.8,
+    -27.69,
+    25.49,
+    21.41
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone throne",
+     "to": "BeehiveThroneRoom",
+     "at": [
+      0.0,
+      -11.87
+     ],
+     "arrive": [
+      0.0,
+      -12.27
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzoneoutside - Duplicate",
+     "to": "BeehiveOutside",
+     "at": [
+      0.0,
+      -27.69
+     ],
+     "arrive": [
+      0.0,
+      12.9
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzoneoutside - Duplicate - Duplicate",
+     "to": "BeehiveOutside",
+     "at": [
+      -27.8,
+      0.0
+     ],
+     "arrive": [
+      -25.1,
+      35.0
+     ]
+    },
+    {
+     "index": 12,
+     "name": "loadzonehb",
+     "to": "HBsLab",
+     "at": [
+      18.58,
+      -18.2
+     ],
+     "arrive": [
+      -14.05,
+      0.0
+     ]
+    },
+    {
+     "index": 20,
+     "name": "loadzone balcony",
+     "to": "BeehiveBalcony",
+     "at": [
+      25.49,
+      0.0
+     ],
+     "arrive": [
+      -15.94,
+      0.0
+     ]
+    },
+    {
+     "index": 22,
+     "name": "loadzonehonyecomb",
+     "to": "HoneycombsLab",
+     "at": [
+      -18.5,
+      18.4
+     ],
+     "arrive": [
+      10.91,
+      4.8
+     ]
+    },
+    {
+     "index": 24,
+     "name": "loadzonejaune",
+     "to": "JaunesGallery",
+     "at": [
+      -18.5,
+      -18.4
+     ],
+     "arrive": [
+      12.2,
+      0.0
+     ]
+    }
+   ]
+  },
+  "BeehiveOutside": {
+   "bounds": [
+    -65.6,
+    0.0,
+    0.0,
+    37.5
+   ],
+   "doors": [
+    {
+     "index": 2,
+     "name": "loadzonecorridor",
+     "to": "BeehiveScannerRoom",
+     "at": [
+      0.0,
+      11.85
+     ],
+     "arrive": [
+      0.0,
+      -13.07
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzone inside factory side",
+     "to": "BeehiveMainArea",
+     "at": [
+      -26.39,
+      35.0
+     ],
+     "arrive": [
+      -30.38,
+      0.0
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzoneinside",
+     "to": "BeehiveMainArea",
+     "at": [
+      0.0,
+      11.85
+     ],
+     "arrive": [
+      0.0,
+      -30.02
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzone factory",
+     "to": "HoneyFactoryEntrance",
+     "at": [
+      -65.6,
+      35.3
+     ],
+     "arrive": [
+      16.9,
+      1.0
+     ]
+    }
+   ]
+  },
+  "BeehiveScannerRoom": {
+   "bounds": [
+    0.0,
+    -9.71,
+    5.86,
+    10.33
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzoneoutside",
+     "to": "BeehiveOutside",
+     "at": [
+      0.0,
+      -9.71
+     ],
+     "arrive": [
+      0.0,
+      12.9
+     ]
+    }
+   ]
+  },
+  "BeehiveThroneRoom": {
+   "bounds": [
+    -4.65,
+    -11.71,
+    4.2,
+    4.68
+   ],
+   "doors": [
+    {
+     "index": 3,
+     "name": "loadzone",
+     "to": "BeehiveMainArea",
+     "at": [
+      0.0,
+      -9.64
+     ],
+     "arrive": [
+      0.0,
+      -9.59
+     ]
+    }
+   ]
+  },
+  "Blank": {
+   "bounds": [
+    -43.12,
+    0.0,
+    -43.12,
+    0.0
+   ],
+   "doors": []
+  },
+  "BroodmotherLair": {
+   "bounds": [
+    -25.0,
+    -4.9,
+    5.58,
+    22.7
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "LoadzoneBack",
+     "to": "PowerPlant",
+     "at": [
+      -6.0,
+      -4.9
+     ],
+     "arrive": [
+      -14.0,
+      24.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzoneFG",
+     "to": "FGCave",
+     "at": [
+      4.0,
+      22.7
+     ],
+     "arrive": [
+      -26.5,
+      -2.0
+     ]
+    }
+   ]
+  },
+  "BugariaAssociationAttack": {
+   "bounds": [
+    -41.97,
+    -14.05,
+    46.1,
+    27.98
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "DoorBugaria - Duplicate",
+     "to": "BugariaPlazaAttack",
+     "at": [
+      3.98,
+      27.98
+     ],
+     "arrive": [
+      0.0,
+      -16.02
+     ]
+    }
+   ]
+  },
+  "BugariaBridgeAttack": {
+   "bounds": [
+    -2.32,
+    -5.64,
+    11.55,
+    37.19
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneplaza",
+     "to": "BugariaPlazaAttack",
+     "at": [
+      0.0,
+      -5.64
+     ],
+     "arrive": [
+      0.0,
+      32.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzonepalace",
+     "to": "BugariaCastleAttack",
+     "at": [
+      0.0,
+      37.19
+     ],
+     "arrive": [
+      0.0,
+      -5.8
+     ]
+    }
+   ]
+  },
+  "BugariaCastleAttack": {
+   "bounds": [
+    -9.72,
+    -3.7,
+    9.14,
+    32.3
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "BugariaBridgeAttack",
+     "at": [
+      0.0,
+      -3.7
+     ],
+     "arrive": [
+      0.0,
+      39.9
+     ]
+    }
+   ]
+  },
+  "BugariaCommercial": {
+   "bounds": [
+    -32.0,
+    -22.8,
+    30.0,
+    20.2
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "LoadingZoneResidential",
+     "to": "BugariaResidential",
+     "at": [
+      -32.0,
+      -1.0
+     ],
+     "arrive": [
+      27.2,
+      1.61
+     ]
+    },
+    {
+     "index": 15,
+     "name": "DoorPlaza",
+     "to": "BugariaMainPlaza",
+     "at": [
+      30.0,
+      -1.0
+     ],
+     "arrive": [
+      -24.5,
+      3.8
+     ]
+    }
+   ]
+  },
+  "BugariaEndBridge": {
+   "bounds": [
+    -11.3,
+    -5.64,
+    7.85,
+    34.7
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzoneplaza - Duplicate",
+     "to": "BugariaEndPlaza",
+     "at": [
+      0.0,
+      -5.64
+     ],
+     "arrive": [
+      0.0,
+      32.0
+     ]
+    }
+   ]
+  },
+  "BugariaEndPlaza": {
+   "bounds": [
+    -20.0,
+    -13.72,
+    20.55,
+    29.0
+   ],
+   "doors": [
+    {
+     "index": 49,
+     "name": "loadzone palace - Duplicate",
+     "to": "BugariaEndBridge",
+     "at": [
+      0.0,
+      29.0
+     ],
+     "arrive": [
+      0.0,
+      -7.5
+     ]
+    }
+   ]
+  },
+  "BugariaEndThrone": {
+   "bounds": [
+    -13.0,
+    -3.0,
+    22.0,
+    4.0
+   ],
+   "doors": []
+  },
+  "BugariaMainPlaza": {
+   "bounds": [
+    -22.0,
+    -14.17,
+    22.0,
+    29.0
+   ],
+   "doors": [
+    {
+     "index": 15,
+     "name": "LoadingZoneCommercial",
+     "to": "BugariaCommercial",
+     "at": [
+      -22.0,
+      3.92
+     ],
+     "arrive": [
+      33.0,
+      -1.15
+     ]
+    },
+    {
+     "index": 17,
+     "name": "loadingzoneexit",
+     "to": "BugariaOutskirtsOutsideCity",
+     "at": [
+      0.0,
+      -13.72
+     ],
+     "arrive": [
+      3.94,
+      31.63
+     ]
+    },
+    {
+     "index": 18,
+     "name": "loadingzone theater",
+     "to": "BugariaTheater",
+     "at": [
+      12.69,
+      10.8
+     ],
+     "arrive": [
+      0.0,
+      -5.88
+     ]
+    },
+    {
+     "index": 21,
+     "name": "LoadingZoneResidential",
+     "to": "BugariaResidential",
+     "at": [
+      22.0,
+      3.92
+     ],
+     "arrive": [
+      -27.1,
+      1.61
+     ]
+    },
+    {
+     "index": 22,
+     "name": "loadzone palace",
+     "to": "AntBridge",
+     "at": [
+      0.0,
+      29.0
+     ],
+     "arrive": [
+      0.0,
+      -7.5
+     ]
+    }
+   ]
+  },
+  "BugariaOutskirtsEast1": {
+   "bounds": [
+    -9.78,
+    -20.5,
+    60.47,
+    33.9
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneback",
+     "to": "BugariaOutskirtsOutsideCity",
+     "at": [
+      -9.78,
+      0.0
+     ],
+     "arrive": [
+      54.2,
+      -10.0
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzone right",
+     "to": "BugariaOutskirtsEast2",
+     "at": [
+      60.47,
+      0.0
+     ],
+     "arrive": [
+      -13.22,
+      0.0
+     ]
+    },
+    {
+     "index": 25,
+     "name": "loadzonecave",
+     "to": "CaveOfTrials",
+     "at": [
+      42.5,
+      -9.68
+     ],
+     "arrive": [
+      0.0,
+      -6.57
+     ]
+    }
+   ]
+  },
+  "BugariaOutskirtsEast2": {
+   "bounds": [
+    -9.6,
+    -12.0,
+    50.0,
+    30.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone left",
+     "to": "BugariaOutskirtsEast1",
+     "at": [
+      -9.6,
+      0.0
+     ],
+     "arrive": [
+      63.06,
+      0.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone right",
+     "to": "BugariaPier",
+     "at": [
+      50.0,
+      -12.0
+     ],
+     "arrive": [
+      -20.97,
+      2.0
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzonenorth",
+     "to": "BOLostSandsEntrance",
+     "at": [
+      20.0,
+      30.0
+     ],
+     "arrive": [
+      0.0,
+      -14.1
+     ]
+    }
+   ]
+  },
+  "BugariaOutskirtsOutsideCity": {
+   "bounds": [
+    -41.5,
+    -27.69,
+    51.79,
+    27.98
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "DoorBugaria",
+     "to": "BugariaMainPlaza",
+     "at": [
+      3.98,
+      27.98
+     ],
+     "arrive": [
+      0.0,
+      -16.02
+     ]
+    },
+    {
+     "index": 3,
+     "name": "DoorSnakemouth",
+     "to": "BugariaOutskitsSnakemouthCorridor1",
+     "at": [
+      -41.5,
+      -10.0
+     ],
+     "arrive": [
+      12.32,
+      0.0
+     ]
+    },
+    {
+     "index": 39,
+     "name": "LoadZoneGoldenPath",
+     "to": "BOGoldenPath",
+     "at": [
+      -7.95,
+      -27.69
+     ],
+     "arrive": [
+      0.0,
+      11.7
+     ]
+    },
+    {
+     "index": 49,
+     "name": "loadzone east",
+     "to": "BugariaOutskirtsEast1",
+     "at": [
+      51.79,
+      -10.0
+     ],
+     "arrive": [
+      -13.3,
+      0.0
+     ]
+    }
+   ]
+  },
+  "BugariaOutskirtsSnakemouthCorridor2": {
+   "bounds": [
+    -39.43,
+    -7.37,
+    9.5,
+    3.2
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "DoorMap1",
+     "to": "NearSnakemouth",
+     "at": [
+      9.5,
+      0.0
+     ],
+     "arrive": [
+      -48.37,
+      19.3
+     ]
+    },
+    {
+     "index": 1,
+     "name": "DoorSnakemouth",
+     "to": "OutsideSnakemouth",
+     "at": [
+      -39.43,
+      0.0
+     ],
+     "arrive": [
+      11.75,
+      -3.64
+     ]
+    }
+   ]
+  },
+  "BugariaOutskitsSnakemouthCorridor1": {
+   "bounds": [
+    -91.7,
+    -7.1,
+    9.8,
+    33.52
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "DoorMainArea",
+     "to": "BugariaOutskirtsOutsideCity",
+     "at": [
+      9.8,
+      0.0
+     ],
+     "arrive": [
+      -46.07,
+      -6.7
+     ]
+    },
+    {
+     "index": 1,
+     "name": "DoorSnakemouth",
+     "to": "NearSnakemouth",
+     "at": [
+      -91.7,
+      14.2
+     ],
+     "arrive": [
+      16.79,
+      -1.3
+     ]
+    },
+    {
+     "index": 14,
+     "name": "loadzonehaven",
+     "to": "SeedlingHaven",
+     "at": [
+      -9.0,
+      33.52
+     ],
+     "arrive": [
+      0.0,
+      -6.56
+     ]
+    }
+   ]
+  },
+  "BugariaPier": {
+   "bounds": [
+    -17.82,
+    -7.3,
+    31.72,
+    8.52
+   ],
+   "doors": [
+    {
+     "index": 8,
+     "name": "loadzone bugaria",
+     "to": "BugariaOutskirtsEast2",
+     "at": [
+      -17.82,
+      2.0
+     ],
+     "arrive": [
+      53.0,
+      -12.0
+     ]
+    }
+   ]
+  },
+  "BugariaPlazaAttack": {
+   "bounds": [
+    -5.58,
+    -13.72,
+    9.5,
+    29.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadingzoneexit",
+     "to": "BugariaAssociationAttack",
+     "at": [
+      0.0,
+      -13.72
+     ],
+     "arrive": [
+      3.94,
+      31.63
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone palace",
+     "to": "BugariaBridgeAttack",
+     "at": [
+      0.0,
+      29.0
+     ],
+     "arrive": [
+      0.0,
+      -7.5
+     ]
+    }
+   ]
+  },
+  "BugariaResidential": {
+   "bounds": [
+    -23.8,
+    -9.17,
+    23.8,
+    28.36
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "LoadingZoneMain",
+     "to": "BugariaMainPlaza",
+     "at": [
+      -23.8,
+      1.8
+     ],
+     "arrive": [
+      25.0,
+      3.92
+     ]
+    },
+    {
+     "index": 1,
+     "name": "LoadingZoneCommercial",
+     "to": "BugariaCommercial",
+     "at": [
+      23.8,
+      1.8
+     ],
+     "arrive": [
+      -34.0,
+      -1.0
+     ]
+    }
+   ]
+  },
+  "BugariaTheater": {
+   "bounds": [
+    -13.07,
+    -3.55,
+    0.0,
+    13.0
+   ],
+   "doors": [
+    {
+     "index": 3,
+     "name": "LoadingZone",
+     "to": "BugariaMainPlaza",
+     "at": [
+      0.0,
+      -3.55
+     ],
+     "arrive": [
+      15.4,
+      12.5
+     ]
+    }
+   ]
+  },
+  "CaveOfTrials": {
+   "bounds": [
+    -11.07,
+    -3.83,
+    10.44,
+    10.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "BugariaOutskirtsEast1",
+     "at": [
+      0.0,
+      -3.83
+     ],
+     "arrive": [
+      42.5,
+      -8.3
+     ]
+    }
+   ]
+  },
+  "ChomperCave1": {
+   "bounds": [
+    -19.53,
+    5.16,
+    19.5,
+    21.83
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone outside",
+     "to": "GoldenHillsPath3",
+     "at": [
+      19.5,
+      6.0
+     ],
+     "arrive": [
+      -41.19,
+      -1.0
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzone low",
+     "to": "ChomperCaves2",
+     "at": [
+      -19.53,
+      6.0
+     ],
+     "arrive": [
+      23.99,
+      2.0
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzone high",
+     "to": "ChomperCaves2",
+     "at": [
+      -19.53,
+      16.0
+     ],
+     "arrive": [
+      22.67,
+      14.0
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadzoneboss",
+     "to": "ChomperCaves3",
+     "at": [
+      10.0,
+      21.83
+     ],
+     "arrive": [
+      0.0,
+      -6.48
+     ]
+    }
+   ]
+  },
+  "ChomperCaves2": {
+   "bounds": [
+    -45.5,
+    0.38,
+    21.79,
+    14.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone low",
+     "to": "ChomperCave1",
+     "at": [
+      21.79,
+      2.0
+     ],
+     "arrive": [
+      -22.6,
+      6.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzonehigh",
+     "to": "ChomperCave1",
+     "at": [
+      19.81,
+      14.0
+     ],
+     "arrive": [
+      -22.6,
+      16.0
+     ]
+    }
+   ]
+  },
+  "ChomperCaves3": {
+   "bounds": [
+    -5.0,
+    -3.72,
+    5.0,
+    20.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "ChomperCave1",
+     "at": [
+      0.0,
+      -3.72
+     ],
+     "arrive": [
+      10.0,
+      24.77
+     ]
+    }
+   ]
+  },
+  "ChucksAbode": {
+   "bounds": [
+    -17.7,
+    -10.06,
+    11.81,
+    8.0
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "Warp",
+     "to": "NearSnakemouth",
+     "at": [
+      11.81,
+      -1.94
+     ],
+     "arrive": [
+      -50.8,
+      -12.9
+     ]
+    }
+   ]
+  },
+  "DefiantRoot1": {
+   "bounds": [
+    -50.8,
+    -5.08,
+    38.84,
+    14.8
+   ],
+   "doors": [
+    {
+     "index": 12,
+     "name": "loadzone well",
+     "to": "DefiantRootWell",
+     "at": [
+      9.18,
+      -2.65
+     ],
+     "arrive": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "index": 13,
+     "name": "loadzoneelevator",
+     "to": "DefiantRoot2",
+     "at": [
+      -50.8,
+      2.0
+     ],
+     "arrive": [
+      19.46,
+      -2.0
+     ]
+    },
+    {
+     "index": 14,
+     "name": "loadzonecommercial",
+     "to": "DefiantRoot3",
+     "at": [
+      -17.0,
+      11.8
+     ],
+     "arrive": [
+      0.0,
+      -8.1
+     ]
+    },
+    {
+     "index": 31,
+     "name": "loadzoneoutside",
+     "to": "DesertDREastEntrance",
+     "at": [
+      38.84,
+      2.0
+     ],
+     "arrive": [
+      -47.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  "DefiantRoot2": {
+   "bounds": [
+    -31.88,
+    -12.0,
+    15.71,
+    8.17
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonemainarea",
+     "to": "DefiantRoot1",
+     "at": [
+      15.71,
+      -2.0
+     ],
+     "arrive": [
+      -55.2,
+      2.0
+     ]
+    },
+    {
+     "index": 10,
+     "name": "loadzoneoutside",
+     "to": "DesertDRSouthEntrance",
+     "at": [
+      -24.0,
+      -12.0
+     ],
+     "arrive": [
+      0.0,
+      7.7
+     ]
+    }
+   ]
+  },
+  "DefiantRoot3": {
+   "bounds": [
+    -14.46,
+    -5.67,
+    34.32,
+    27.93
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "DefiantRoot1",
+     "at": [
+      0.0,
+      -5.67
+     ],
+     "arrive": [
+      -17.0,
+      14.5
+     ]
+    }
+   ]
+  },
+  "DefiantRootWell": {
+   "bounds": [
+    0.0,
+    -1.8,
+    30.0,
+    7.85
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzone",
+     "to": "DefiantRoot1",
+     "at": [
+      0.0,
+      0.0
+     ],
+     "arrive": [
+      9.47,
+      -4.24
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzonehideout",
+     "to": "HideoutGarden",
+     "at": [
+      26.62,
+      7.85
+     ],
+     "arrive": [
+      -50.18,
+      -2.0
+     ]
+    }
+   ]
+  },
+  "DesertBadgeAlcove": {
+   "bounds": [
+    -31.53,
+    -10.96,
+    7.91,
+    9.61
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone north",
+     "to": "DesertDREastEntrance",
+     "at": [
+      -2.0,
+      9.61
+     ],
+     "arrive": [
+      2.0,
+      -12.27
+     ]
+    },
+    {
+     "index": 10,
+     "name": "loadzoneright",
+     "to": "DesertCaravanMap",
+     "at": [
+      7.91,
+      -6.0
+     ],
+     "arrive": [
+      -38.19,
+      2.0
+     ]
+    },
+    {
+     "index": 13,
+     "name": "loadzone left",
+     "to": "DesertJumpPuzzle",
+     "at": [
+      -31.53,
+      -4.0
+     ],
+     "arrive": [
+      33.56,
+      10.0
+     ]
+    }
+   ]
+  },
+  "DesertBadlands": {
+   "bounds": [
+    -11.85,
+    -8.0,
+    19.0,
+    15.81
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "WarpEntrance",
+     "to": "DesertEntrance",
+     "at": [
+      -11.85,
+      4.0
+     ],
+     "arrive": [
+      15.0,
+      3.8
+     ]
+    },
+    {
+     "index": 1,
+     "name": "WarpPuzzle",
+     "to": "DesertRockFormation",
+     "at": [
+      6.0,
+      15.81
+     ],
+     "arrive": [
+      0.0,
+      -17.43
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzone hideout",
+     "to": "HideoutEntrance",
+     "at": [
+      19.0,
+      -5.47
+     ],
+     "arrive": [
+      -10.37,
+      0.0
+     ]
+    }
+   ]
+  },
+  "DesertBeforeGH": {
+   "bounds": [
+    -11.24,
+    -10.0,
+    27.76,
+    11.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonegh",
+     "to": "GoldenSettlementEntrance",
+     "at": [
+      -6.0,
+      -10.0
+     ],
+     "arrive": [
+      13.0,
+      21.97
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone north",
+     "to": "DesertWestDunes",
+     "at": [
+      -6.0,
+      11.5
+     ],
+     "arrive": [
+      0.0,
+      -18.7
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzone side",
+     "to": "DesertSouthern",
+     "at": [
+      27.76,
+      0.0
+     ],
+     "arrive": [
+      -22.11,
+      -2.0
+     ]
+    }
+   ]
+  },
+  "DesertBookArea": {
+   "bounds": [
+    -13.77,
+    -13.68,
+    13.7,
+    13.65
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "WarpEntrance",
+     "to": "DesertEntrance",
+     "at": [
+      0.0,
+      -13.68
+     ],
+     "arrive": [
+      -0.54,
+      19.27
+     ]
+    },
+    {
+     "index": 1,
+     "name": "WarpPuzzle",
+     "to": "DesertRockFormation",
+     "at": [
+      13.7,
+      0.0
+     ],
+     "arrive": [
+      -17.6,
+      0.0
+     ]
+    },
+    {
+     "index": 3,
+     "name": "warp north",
+     "to": "DesertSandPitArea",
+     "at": [
+      0.0,
+      13.65
+     ],
+     "arrive": [
+      3.0,
+      -5.87
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzone left",
+     "to": "DesertTrenchMiddle",
+     "at": [
+      -13.77,
+      0.0
+     ],
+     "arrive": [
+      24.33,
+      5.0
+     ]
+    }
+   ]
+  },
+  "DesertCaravanMap": {
+   "bounds": [
+    -35.6,
+    -10.0,
+    7.48,
+    13.24
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzoneleft",
+     "to": "DesertBadgeAlcove",
+     "at": [
+      -35.6,
+      2.0
+     ],
+     "arrive": [
+      10.33,
+      -6.0
+     ]
+    },
+    {
+     "index": 10,
+     "name": "loadzone south",
+     "to": "DesertSandPitArea",
+     "at": [
+      4.0,
+      -10.0
+     ],
+     "arrive": [
+      -1.8,
+      78.97
+     ]
+    }
+   ]
+  },
+  "DesertDREastEntrance": {
+   "bounds": [
+    -44.83,
+    -9.63,
+    9.72,
+    7.32
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneDR",
+     "to": "DefiantRoot1",
+     "at": [
+      -44.83,
+      0.0
+     ],
+     "arrive": [
+      41.6,
+      2.0
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzoneFG",
+     "to": "DesertFGBorder",
+     "at": [
+      9.72,
+      0.0
+     ],
+     "arrive": [
+      -16.17,
+      0.0
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzone south",
+     "to": "DesertBadgeAlcove",
+     "at": [
+      2.0,
+      -9.63
+     ],
+     "arrive": [
+      -2.0,
+      11.97
+     ]
+    }
+   ]
+  },
+  "DesertDRSouthEntrance": {
+   "bounds": [
+    -6.06,
+    -13.5,
+    25.5,
+    5.53
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone dr",
+     "to": "DefiantRoot2",
+     "at": [
+      0.0,
+      5.53
+     ],
+     "arrive": [
+      -24.0,
+      -14.14
+     ]
+    },
+    {
+     "index": 12,
+     "name": "loadzone south",
+     "to": "DesertOasisEntrance",
+     "at": [
+      2.0,
+      -13.5
+     ],
+     "arrive": [
+      -2.0,
+      12.73
+     ]
+    },
+    {
+     "index": 14,
+     "name": "loadzone side",
+     "to": "DesertJumpPuzzle",
+     "at": [
+      25.5,
+      -2.0
+     ],
+     "arrive": [
+      -12.28,
+      -4.0
+     ]
+    }
+   ]
+  },
+  "DesertEastmost": {
+   "bounds": [
+    -20.25,
+    -7.63,
+    25.74,
+    15.65
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone south",
+     "to": "DesertRockFormation",
+     "at": [
+      -14.0,
+      -7.63
+     ],
+     "arrive": [
+      8.0,
+      18.11
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone side",
+     "to": "DesertSandPitArea",
+     "at": [
+      -20.25,
+      6.0
+     ],
+     "arrive": [
+      44.96,
+      35.0
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzone north",
+     "to": "DesertScorpion",
+     "at": [
+      6.0,
+      15.65
+     ],
+     "arrive": [
+      4.0,
+      -20.5
+     ]
+    }
+   ]
+  },
+  "DesertEntrance": {
+   "bounds": [
+    -14.3,
+    -11.88,
+    13.24,
+    17.42
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "WarpBookZone",
+     "to": "DesertBookArea",
+     "at": [
+      -0.53,
+      17.42
+     ],
+     "arrive": [
+      0.0,
+      -15.4
+     ]
+    },
+    {
+     "index": 1,
+     "name": "WarpHideout",
+     "to": "DesertBadlands",
+     "at": [
+      13.24,
+      3.82
+     ],
+     "arrive": [
+      -13.61,
+      3.89
+     ]
+    },
+    {
+     "index": 2,
+     "name": "WarpTrenchSouth",
+     "to": "DesertTrenchSouth",
+     "at": [
+      -14.3,
+      3.75
+     ],
+     "arrive": [
+      21.4,
+      -2.0
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzone outskirts",
+     "to": "BOLostSandsEntrance",
+     "at": [
+      -0.5,
+      -11.88
+     ],
+     "arrive": [
+      0.0,
+      12.26
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzone mountain",
+     "to": "DesertTrenchMiddle",
+     "at": [
+      -8.85,
+      14.06
+     ],
+     "arrive": [
+      20.44,
+      -13.27
+     ]
+    }
+   ]
+  },
+  "DesertFGBorder": {
+   "bounds": [
+    -13.8,
+    -7.0,
+    19.0,
+    15.63
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone desert",
+     "to": "DesertDREastEntrance",
+     "at": [
+      -13.8,
+      0.0
+     ],
+     "arrive": [
+      12.32,
+      0.0
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzonefg",
+     "to": "FarGrasslands1",
+     "at": [
+      7.0,
+      15.63
+     ],
+     "arrive": [
+      0.0,
+      -12.45
+     ]
+    }
+   ]
+  },
+  "DesertJumpPuzzle": {
+   "bounds": [
+    -9.68,
+    -4.0,
+    30.48,
+    10.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneleft",
+     "to": "DesertDRSouthEntrance",
+     "at": [
+      -9.68,
+      -4.0
+     ],
+     "arrive": [
+      28.83,
+      -2.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone right",
+     "to": "DesertBadgeAlcove",
+     "at": [
+      30.48,
+      10.0
+     ],
+     "arrive": [
+      -34.31,
+      -4.0
+     ]
+    }
+   ]
+  },
+  "DesertMountain": {
+   "bounds": [
+    -25.0,
+    -9.6,
+    9.69,
+    7.28
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone side",
+     "to": "DesertSandPitArea",
+     "at": [
+      9.69,
+      4.0
+     ],
+     "arrive": [
+      -40.71,
+      35.5
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzone south",
+     "to": "DesertTrenchMiddle",
+     "at": [
+      2.0,
+      -9.6
+     ],
+     "arrive": [
+      0.0,
+      19.29
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzonecave",
+     "to": "StreamMountain1",
+     "at": [
+      -25.0,
+      6.0
+     ],
+     "arrive": [
+      6.0,
+      -6.51
+     ]
+    }
+   ]
+  },
+  "DesertOasis": {
+   "bounds": [
+    -15.5,
+    -14.0,
+    29.48,
+    26.39
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzonesouth",
+     "to": "DesertRoachVillage",
+     "at": [
+      0.0,
+      -14.0
+     ],
+     "arrive": [
+      -3.0,
+      19.91
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzoneside",
+     "to": "DesertOasisEntrance",
+     "at": [
+      -15.5,
+      12.0
+     ],
+     "arrive": [
+      46.25,
+      0.0
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzone cave",
+     "to": "StreamMountain3",
+     "at": [
+      29.48,
+      20.0
+     ],
+     "arrive": [
+      -32.2,
+      24.0
+     ]
+    }
+   ]
+  },
+  "DesertOasisEntrance": {
+   "bounds": [
+    -4.67,
+    -19.5,
+    43.63,
+    9.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonenorth",
+     "to": "DesertDRSouthEntrance",
+     "at": [
+      -2.0,
+      9.5
+     ],
+     "arrive": [
+      2.0,
+      -16.55
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzoneside",
+     "to": "DesertOasis",
+     "at": [
+      43.63,
+      0.0
+     ],
+     "arrive": [
+      -18.39,
+      12.0
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzonesouth",
+     "to": "DesertWestDunes",
+     "at": [
+      0.0,
+      -19.5
+     ],
+     "arrive": [
+      0.0,
+      16.4
+     ]
+    }
+   ]
+  },
+  "DesertRoachVillage": {
+   "bounds": [
+    -9.8,
+    -9.63,
+    16.51,
+    18.0
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzonenorth",
+     "to": "DesertOasis",
+     "at": [
+      -3.0,
+      18.0
+     ],
+     "arrive": [
+      0.0,
+      -16.77
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzone side",
+     "to": "DesertTrenchMiddle",
+     "at": [
+      16.51,
+      8.0
+     ],
+     "arrive": [
+      -38.38,
+      5.0
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzone south",
+     "to": "DesertSouthern",
+     "at": [
+      5.0,
+      -9.63
+     ],
+     "arrive": [
+      -6.0,
+      10.95
+     ]
+    }
+   ]
+  },
+  "DesertRockFormation": {
+   "bounds": [
+    -15.7,
+    -15.75,
+    15.63,
+    15.75
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "WarpHideout",
+     "to": "DesertBadlands",
+     "at": [
+      0.0,
+      -15.75
+     ],
+     "arrive": [
+      6.1,
+      17.4
+     ]
+    },
+    {
+     "index": 1,
+     "name": "WarpBook",
+     "to": "DesertBookArea",
+     "at": [
+      -15.7,
+      0.0
+     ],
+     "arrive": [
+      15.4,
+      0.0
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzone north",
+     "to": "DesertEastmost",
+     "at": [
+      8.0,
+      15.75
+     ],
+     "arrive": [
+      -14.0,
+      -10.57
+     ]
+    }
+   ]
+  },
+  "DesertSandCastle": {
+   "bounds": [
+    -4.74,
+    -20.41,
+    0.25,
+    10.49
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "DesertScorpion",
+     "at": [
+      0.25,
+      -20.41
+     ],
+     "arrive": [
+      2.0,
+      16.65
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzone castle",
+     "to": "SandCastleEntrance",
+     "at": [
+      0.0,
+      -3.14
+     ],
+     "arrive": [
+      -9.66,
+      0.0
+     ]
+    }
+   ]
+  },
+  "DesertSandPitArea": {
+   "bounds": [
+    -37.82,
+    -3.0,
+    42.07,
+    76.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone book area",
+     "to": "DesertBookArea",
+     "at": [
+      3.0,
+      -3.0
+     ],
+     "arrive": [
+      0.0,
+      14.7
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone caravan area",
+     "to": "DesertCaravanMap",
+     "at": [
+      -1.8,
+      76.5
+     ],
+     "arrive": [
+      4.0,
+      -12.16
+     ]
+    },
+    {
+     "index": 14,
+     "name": "loadzone mountain",
+     "to": "DesertMountain",
+     "at": [
+      -37.82,
+      35.5
+     ],
+     "arrive": [
+      12.39,
+      4.0
+     ]
+    },
+    {
+     "index": 15,
+     "name": "loadzone scorpion",
+     "to": "DesertScorpion",
+     "at": [
+      27.3,
+      68.36
+     ],
+     "arrive": [
+      -14.5,
+      -14.7
+     ]
+    },
+    {
+     "index": 16,
+     "name": "loadzone right",
+     "to": "DesertEastmost",
+     "at": [
+      42.07,
+      35.0
+     ],
+     "arrive": [
+      -23.16,
+      6.0
+     ]
+    }
+   ]
+  },
+  "DesertScorpion": {
+   "bounds": [
+    -12.5,
+    -17.64,
+    36.1,
+    13.67
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone left",
+     "to": "DesertSandPitArea",
+     "at": [
+      -12.5,
+      -12.44
+     ],
+     "arrive": [
+      28.6,
+      70.5
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone south",
+     "to": "DesertEastmost",
+     "at": [
+      4.0,
+      -17.64
+     ],
+     "arrive": [
+      6.0,
+      18.32
+     ]
+    },
+    {
+     "index": 7,
+     "name": "loadzone castle",
+     "to": "DesertSandCastle",
+     "at": [
+      2.0,
+      13.67
+     ],
+     "arrive": [
+      0.25,
+      -23.38
+     ]
+    }
+   ]
+  },
+  "DesertSouthern": {
+   "bounds": [
+    -19.68,
+    -2.5,
+    23.58,
+    8.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneleft",
+     "to": "DesertBeforeGH",
+     "at": [
+      -19.68,
+      -2.0
+     ],
+     "arrive": [
+      30.65,
+      0.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone right",
+     "to": "DesertTrenchSouth",
+     "at": [
+      23.58,
+      0.0
+     ],
+     "arrive": [
+      -21.0,
+      0.0
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzone north",
+     "to": "DesertRoachVillage",
+     "at": [
+      -6.0,
+      8.5
+     ],
+     "arrive": [
+      5.0,
+      -12.55
+     ]
+    }
+   ]
+  },
+  "DesertTrenchMiddle": {
+   "bounds": [
+    -35.5,
+    -14.9,
+    21.6,
+    16.73
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone south",
+     "to": "DesertTrenchSouth",
+     "at": [
+      0.0,
+      -14.75
+     ],
+     "arrive": [
+      8.0,
+      15.08
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone south2",
+     "to": "DesertTrenchSouth",
+     "at": [
+      -16.0,
+      -14.9
+     ],
+     "arrive": [
+      -10.0,
+      15.2
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzone north",
+     "to": "DesertMountain",
+     "at": [
+      0.0,
+      16.73
+     ],
+     "arrive": [
+      2.0,
+      -12.47
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzone village",
+     "to": "DesertRoachVillage",
+     "at": [
+      -35.5,
+      5.0
+     ],
+     "arrive": [
+      19.19,
+      8.0
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzone book",
+     "to": "DesertBookArea",
+     "at": [
+      21.6,
+      5.0
+     ],
+     "arrive": [
+      -15.12,
+      0.0
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzone entrance",
+     "to": "DesertEntrance",
+     "at": [
+      18.3,
+      -11.42
+     ],
+     "arrive": [
+      -10.1,
+      15.26
+     ]
+    }
+   ]
+  },
+  "DesertTrenchSouth": {
+   "bounds": [
+    -19.62,
+    -5.08,
+    19.5,
+    13.78
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "WarpEntrance",
+     "to": "DesertEntrance",
+     "at": [
+      19.5,
+      -2.0
+     ],
+     "arrive": [
+      -15.4,
+      3.83
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone north1",
+     "to": "DesertTrenchMiddle",
+     "at": [
+      8.0,
+      13.78
+     ],
+     "arrive": [
+      0.0,
+      -17.55
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzone north2",
+     "to": "DesertTrenchMiddle",
+     "at": [
+      -9.97,
+      13.66
+     ],
+     "arrive": [
+      -16.0,
+      -17.55
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzone left",
+     "to": "DesertSouthern",
+     "at": [
+      -19.62,
+      0.0
+     ],
+     "arrive": [
+      26.36,
+      0.0
+     ]
+    }
+   ]
+  },
+  "DesertWestDunes": {
+   "bounds": [
+    -7.0,
+    -15.5,
+    8.51,
+    13.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone north",
+     "to": "DesertOasisEntrance",
+     "at": [
+      0.0,
+      13.5
+     ],
+     "arrive": [
+      0.0,
+      -22.4
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone south",
+     "to": "DesertBeforeGH",
+     "at": [
+      0.0,
+      -15.5
+     ],
+     "arrive": [
+      -6.0,
+      14.7
+     ]
+    }
+   ]
+  },
+  "FGCave": {
+   "bounds": [
+    -23.74,
+    -9.8,
+    23.76,
+    19.98
+   ],
+   "doors": [
+    {
+     "index": 14,
+     "name": "loadzoneoutside",
+     "to": "FarGrasslandsOutsideCave",
+     "at": [
+      0.0,
+      -9.8
+     ],
+     "arrive": [
+      0.0,
+      14.09
+     ]
+    },
+    {
+     "index": 15,
+     "name": "loadzone wasp",
+     "to": "WaspKingdomOutside",
+     "at": [
+      23.76,
+      -2.0
+     ],
+     "arrive": [
+      -28.4,
+      14.15
+     ]
+    },
+    {
+     "index": 16,
+     "name": "loadzonebroodmother",
+     "to": "BroodmotherLair",
+     "at": [
+      -23.74,
+      -2.0
+     ],
+     "arrive": [
+      4.0,
+      24.75
+     ]
+    }
+   ]
+  },
+  "FGClearing": {
+   "bounds": [
+    -2.5,
+    -15.6,
+    12.74,
+    6.48
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "FarGrasslands4",
+     "at": [
+      0.0,
+      -15.6
+     ],
+     "arrive": [
+      -2.0,
+      28.26
+     ]
+    }
+   ]
+  },
+  "FGOutsideSwamplands": {
+   "bounds": [
+    -12.48,
+    -8.48,
+    9.88,
+    75.15
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneswamp1",
+     "to": "SwamplandsEntrance",
+     "at": [
+      9.88,
+      6.0
+     ],
+     "arrive": [
+      -20.6,
+      0.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzoneymap",
+     "to": "FarGrasslandsOutsideVillage",
+     "at": [
+      -12.48,
+      -8.47
+     ],
+     "arrive": [
+      62.28,
+      28.6
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzone wasp",
+     "to": "WaspKingdomOutside",
+     "at": [
+      -11.46,
+      75.15
+     ],
+     "arrive": [
+      17.75,
+      34.3
+     ]
+    },
+    {
+     "index": 7,
+     "name": "loadzoneswamp2",
+     "to": "SwamplandsBoss",
+     "at": [
+      9.1,
+      61.0
+     ],
+     "arrive": [
+      0.0,
+      70.75
+     ]
+    }
+   ]
+  },
+  "FactoryProcessing2": {
+   "bounds": [
+    -33.64,
+    -1.2,
+    5.5,
+    31.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneback",
+     "to": "FactoryProcessingFirstRoom",
+     "at": [
+      5.5,
+      0.0
+     ],
+     "arrive": [
+      -35.57,
+      -2.0
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadzone pump",
+     "to": "FactoryProcessingPump",
+     "at": [
+      -33.64,
+      23.0
+     ],
+     "arrive": [
+      11.32,
+      0.0
+     ]
+    }
+   ]
+  },
+  "FactoryProcessingFirstRoom": {
+   "bounds": [
+    -33.0,
+    -2.0,
+    5.5,
+    4.62
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzonemainarea",
+     "to": "HoneyFactoryEntrance",
+     "at": [
+      5.5,
+      0.0
+     ],
+     "arrive": [
+      -14.96,
+      12.7
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzoneforward",
+     "to": "FactoryProcessing2",
+     "at": [
+      -33.0,
+      -2.0
+     ],
+     "arrive": [
+      8.4,
+      0.0
+     ]
+    }
+   ]
+  },
+  "FactoryProcessingMalbee": {
+   "bounds": [
+    -37.09,
+    -1.93,
+    3.77,
+    5.9
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "FactoryProcessingPump",
+     "at": [
+      3.77,
+      0.0
+     ],
+     "arrive": [
+      -54.06,
+      0.0
+     ]
+    }
+   ]
+  },
+  "FactoryProcessingPump": {
+   "bounds": [
+    -52.1,
+    -19.1,
+    9.66,
+    26.73
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneright",
+     "to": "FactoryProcessing2",
+     "at": [
+      9.66,
+      0.0
+     ],
+     "arrive": [
+      -35.96,
+      23.0
+     ]
+    },
+    {
+     "index": 12,
+     "name": "loadzonepuzzle1",
+     "to": "FactoryProcessingPuzzle1",
+     "at": [
+      -41.0,
+      26.73
+     ],
+     "arrive": [
+      0.0,
+      -6.48
+     ]
+    },
+    {
+     "index": 14,
+     "name": "loadzonepuzzle2",
+     "to": "FactoryProcessingPuzzle2",
+     "at": [
+      -1.25,
+      26.5
+     ],
+     "arrive": [
+      0.0,
+      -6.5
+     ]
+    },
+    {
+     "index": 16,
+     "name": "loadzonepuzzle3",
+     "to": "FactoryProcessingPuzzle3",
+     "at": [
+      -48.9,
+      0.0
+     ],
+     "arrive": [
+      6.3,
+      0.0
+     ]
+    },
+    {
+     "index": 18,
+     "name": "loadzonemalbee",
+     "to": "FactoryProcessingMalbee",
+     "at": [
+      -52.1,
+      0.0
+     ],
+     "arrive": [
+      6.42,
+      0.0
+     ]
+    }
+   ]
+  },
+  "FactoryProcessingPuzzle1": {
+   "bounds": [
+    -47.6,
+    -3.63,
+    1.9,
+    18.33
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "FactoryProcessingPump",
+     "at": [
+      0.0,
+      -3.63
+     ],
+     "arrive": [
+      -41.0,
+      29.07
+     ]
+    }
+   ]
+  },
+  "FactoryProcessingPuzzle2": {
+   "bounds": [
+    -23.3,
+    -3.58,
+    64.9,
+    7.45
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "FactoryProcessingPump",
+     "at": [
+      0.0,
+      -3.58
+     ],
+     "arrive": [
+      -1.25,
+      29.89
+     ]
+    }
+   ]
+  },
+  "FactoryProcessingPuzzle3": {
+   "bounds": [
+    -22.97,
+    -8.0,
+    3.61,
+    11.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "FactoryProcessingPump",
+     "at": [
+      3.61,
+      0.0
+     ],
+     "arrive": [
+      -52.6,
+      0.0
+     ]
+    }
+   ]
+  },
+  "FactoryStorageElevator": {
+   "bounds": [
+    -17.6,
+    0.0,
+    3.63,
+    0.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonetop",
+     "to": "HoneyFactoryEntrance",
+     "at": [
+      3.63,
+      0.0
+     ],
+     "arrive": [
+      -17.24,
+      -7.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzonebottom",
+     "to": "FactoryStorageMaze",
+     "at": [
+      -17.6,
+      0.0
+     ],
+     "arrive": [
+      8.4,
+      0.0
+     ]
+    }
+   ]
+  },
+  "FactoryStorageMaze": {
+   "bounds": [
+    -78.92,
+    -9.7,
+    5.61,
+    10.31
+   ],
+   "doors": [
+    {
+     "index": 8,
+     "name": "loadzoneelevator",
+     "to": "FactoryStorageElevator",
+     "at": [
+      5.61,
+      0.0
+     ],
+     "arrive": [
+      -19.87,
+      0.0
+     ]
+    },
+    {
+     "index": 9,
+     "name": "loadzoneboss",
+     "to": "FactoryStorageMiniboss",
+     "at": [
+      -62.0,
+      -9.7
+     ],
+     "arrive": [
+      10.0,
+      7.84
+     ]
+    },
+    {
+     "index": 10,
+     "name": "loadzoneos",
+     "to": "FactoryStorageOverseer",
+     "at": [
+      -5.0,
+      10.31
+     ],
+     "arrive": [
+      0.0,
+      -6.47
+     ]
+    }
+   ]
+  },
+  "FactoryStorageMiniboss": {
+   "bounds": [
+    -28.1,
+    -3.51,
+    15.0,
+    16.4
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "FactoryStorageMaze",
+     "at": [
+      10.0,
+      5.98
+     ],
+     "arrive": [
+      -62.0,
+      -12.22
+     ]
+    }
+   ]
+  },
+  "FactoryStorageOverseer": {
+   "bounds": [
+    -62.84,
+    -3.58,
+    3.79,
+    20.02
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "FactoryStorageMaze",
+     "at": [
+      0.0,
+      -3.58
+     ],
+     "arrive": [
+      -5.0,
+      13.1
+     ]
+    }
+   ]
+  },
+  "FarGrasslands1": {
+   "bounds": [
+    -24.59,
+    -9.78,
+    22.17,
+    14.62
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonedesert",
+     "to": "DesertFGBorder",
+     "at": [
+      0.0,
+      -9.78
+     ],
+     "arrive": [
+      7.0,
+      18.46
+     ]
+    },
+    {
+     "index": 14,
+     "name": "loadzone left",
+     "to": "FarGrasslands2",
+     "at": [
+      -24.59,
+      0.0
+     ],
+     "arrive": [
+      30.3,
+      0.0
+     ]
+    },
+    {
+     "index": 15,
+     "name": "loadzonelake",
+     "to": "FarGrasslandsLake",
+     "at": [
+      14.0,
+      14.62
+     ],
+     "arrive": [
+      0.0,
+      -8.27
+     ]
+    },
+    {
+     "index": 16,
+     "name": "loadzoneright",
+     "to": "FarGrasslands3",
+     "at": [
+      22.17,
+      -2.0
+     ],
+     "arrive": [
+      -12.56,
+      -2.0
+     ]
+    }
+   ]
+  },
+  "FarGrasslands2": {
+   "bounds": [
+    -14.3,
+    -6.0,
+    27.64,
+    16.56
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone right",
+     "to": "FarGrasslands1",
+     "at": [
+      27.64,
+      0.0
+     ],
+     "arrive": [
+      -27.18,
+      0.0
+     ]
+    },
+    {
+     "index": 13,
+     "name": "loadzone north",
+     "to": "FarGrasslands4",
+     "at": [
+      -6.0,
+      16.56
+     ],
+     "arrive": [
+      0.0,
+      -8.68
+     ]
+    }
+   ]
+  },
+  "FarGrasslands3": {
+   "bounds": [
+    -9.73,
+    -10.3,
+    45.61,
+    7.94
+   ],
+   "doors": [
+    {
+     "index": 19,
+     "name": "loadzoneright",
+     "to": "FarGrasslandsOutsideVillage",
+     "at": [
+      45.61,
+      -2.0
+     ],
+     "arrive": [
+      -14.61,
+      0.0
+     ]
+    },
+    {
+     "index": 20,
+     "name": "loadzoneleft",
+     "to": "FarGrasslands1",
+     "at": [
+      -9.73,
+      -2.0
+     ],
+     "arrive": [
+      24.94,
+      -2.0
+     ]
+    }
+   ]
+  },
+  "FarGrasslands4": {
+   "bounds": [
+    -57.59,
+    -5.72,
+    5.5,
+    25.43
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone south",
+     "to": "FarGrasslands2",
+     "at": [
+      0.0,
+      -5.72
+     ],
+     "arrive": [
+      -6.0,
+      19.43
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzone left",
+     "to": "FarGrasslandsOutsideCave",
+     "at": [
+      -57.59,
+      14.0
+     ],
+     "arrive": [
+      22.47,
+      0.0
+     ]
+    },
+    {
+     "index": 10,
+     "name": "loadzoneclearing",
+     "to": "FGClearing",
+     "at": [
+      -2.0,
+      25.43
+     ],
+     "arrive": [
+      0.0,
+      -18.45
+     ]
+    }
+   ]
+  },
+  "FarGrasslandsLake": {
+   "bounds": [
+    -22.76,
+    -5.86,
+    14.0,
+    55.09
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone south",
+     "to": "FarGrasslands1",
+     "at": [
+      0.0,
+      -5.86
+     ],
+     "arrive": [
+      14.0,
+      17.38
+     ]
+    },
+    {
+     "index": 22,
+     "name": "loadzonewasp",
+     "to": "WaspKingdomOutside",
+     "at": [
+      -3.0,
+      52.4
+     ],
+     "arrive": [
+      0.0,
+      -12.42
+     ]
+    }
+   ]
+  },
+  "FarGrasslandsOutsideCave": {
+   "bounds": [
+    -13.27,
+    -31.77,
+    19.64,
+    11.76
+   ],
+   "doors": [
+    {
+     "index": 2,
+     "name": "loadzonecave",
+     "to": "FGCave",
+     "at": [
+      0.0,
+      11.76
+     ],
+     "arrive": [
+      0.0,
+      -12.37
+     ]
+    },
+    {
+     "index": 15,
+     "name": "loadzonewizard",
+     "to": "FarGrasslandsWizard",
+     "at": [
+      -8.0,
+      -31.77
+     ],
+     "arrive": [
+      0.0,
+      14.52
+     ]
+    },
+    {
+     "index": 16,
+     "name": "loadzone right",
+     "to": "FarGrasslands4",
+     "at": [
+      19.64,
+      0.0
+     ],
+     "arrive": [
+      -60.19,
+      14.0
+     ]
+    }
+   ]
+  },
+  "FarGrasslandsOutsideVillage": {
+   "bounds": [
+    -11.65,
+    -26.4,
+    83.6,
+    32.4
+   ],
+   "doors": [
+    {
+     "index": 4,
+     "name": "loadzoneleft",
+     "to": "FarGrasslands3",
+     "at": [
+      -11.65,
+      0.0
+     ],
+     "arrive": [
+      48.52,
+      -2.0
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzonevillage",
+     "to": "FishingVillage",
+     "at": [
+      83.6,
+      -16.25
+     ],
+     "arrive": [
+      -10.0,
+      16.1
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzoneswamp",
+     "to": "FGOutsideSwamplands",
+     "at": [
+      59.7,
+      28.3
+     ],
+     "arrive": [
+      -14.48,
+      -10.5
+     ]
+    }
+   ]
+  },
+  "FarGrasslandsWizard": {
+   "bounds": [
+    -4.1,
+    -17.05,
+    42.05,
+    11.6
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonecave",
+     "to": "FarGrasslandsOutsideCave",
+     "at": [
+      0.0,
+      11.6
+     ],
+     "arrive": [
+      -8.0,
+      -34.52
+     ]
+    },
+    {
+     "index": 29,
+     "name": "loadzonebasement",
+     "to": "WizardTowerBasement",
+     "at": [
+      25.98,
+      6.1
+     ],
+     "arrive": [
+      -10.0,
+      -1.0
+     ]
+    },
+    {
+     "index": 31,
+     "name": "loadzonetower",
+     "to": "WizardTowerStairs",
+     "at": [
+      37.73,
+      2.16
+     ],
+     "arrive": [
+      0.0,
+      -11.41
+     ]
+    }
+   ]
+  },
+  "FishingVillage": {
+   "bounds": [
+    -15.65,
+    -15.36,
+    16.15,
+    13.67
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "FarGrasslandsOutsideVillage",
+     "at": [
+      -10.0,
+      13.67
+     ],
+     "arrive": [
+      86.62,
+      -16.13
+     ]
+    }
+   ]
+  },
+  "GiantLairBeforeBoss": {
+   "bounds": [
+    -88.4,
+    -17.2,
+    62.34,
+    11.1
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonevillage",
+     "to": "GiantLairRoachVillage",
+     "at": [
+      44.06,
+      0.5
+     ],
+     "arrive": [
+      -66.5,
+      -2.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzonefinal",
+     "to": "GiantLairSaplingPlains",
+     "at": [
+      -88.4,
+      -2.5
+     ],
+     "arrive": [
+      28.5,
+      0.0
+     ]
+    },
+    {
+     "index": 33,
+     "name": "loadzoneup",
+     "to": "GiantLairBeforeBoss2",
+     "at": [
+      -29.53,
+      8.9
+     ],
+     "arrive": [
+      9.54,
+      -3.53
+     ]
+    }
+   ]
+  },
+  "GiantLairBeforeBoss2": {
+   "bounds": [
+    -105.69,
+    -10.9,
+    9.56,
+    7.3
+   ],
+   "doors": [
+    {
+     "index": 3,
+     "name": "loadzoneleft",
+     "to": "GiantLairBeforeBoss",
+     "at": [
+      -105.69,
+      -7.3
+     ],
+     "arrive": [
+      -54.25,
+      5.0
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzoneright",
+     "to": "GiantLairBeforeBoss",
+     "at": [
+      9.56,
+      -2.25
+     ],
+     "arrive": [
+      -27.3,
+      7.35
+     ]
+    }
+   ]
+  },
+  "GiantLairDeadLands1": {
+   "bounds": [
+    -1.65,
+    -11.12,
+    141.62,
+    24.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "GiantLairEntrance",
+     "at": [
+      -1.65,
+      5.03
+     ],
+     "arrive": [
+      62.16,
+      18.0
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzoneforward",
+     "to": "GiantLairDeadLands2",
+     "at": [
+      129.44,
+      24.5
+     ],
+     "arrive": [
+      28.08,
+      12.99
+     ]
+    }
+   ]
+  },
+  "GiantLairDeadLands2": {
+   "bounds": [
+    0.0,
+    -11.63,
+    210.0,
+    33.5
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzoneback",
+     "to": "GiantLairDeadLands1",
+     "at": [
+      29.08,
+      14.41
+     ],
+     "arrive": [
+      130.34,
+      28.7
+     ]
+    },
+    {
+     "index": 7,
+     "name": "loadzonenext",
+     "to": "GiantLairFridgeOutside",
+     "at": [
+      210.0,
+      33.5
+     ],
+     "arrive": [
+      -9.99,
+      -4.0
+     ]
+    }
+   ]
+  },
+  "GiantLairEntrance": {
+   "bounds": [
+    -28.4,
+    1.0,
+    59.12,
+    20.96
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzoneoutside",
+     "to": "RubberPrisonGiantLairBridge",
+     "at": [
+      -28.4,
+      1.0
+     ],
+     "arrive": [
+      60.18,
+      0.0
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzonedl",
+     "to": "GiantLairDeadLands1",
+     "at": [
+      59.12,
+      18.63
+     ],
+     "arrive": [
+      -6.31,
+      5.0
+     ]
+    }
+   ]
+  },
+  "GiantLairFridgeInside": {
+   "bounds": [
+    -16.38,
+    -7.61,
+    16.4,
+    10.01
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "GiantLairFridgeOutside",
+     "at": [
+      -12.0,
+      -7.61
+     ],
+     "arrive": [
+      46.8,
+      20.9
+     ]
+    }
+   ]
+  },
+  "GiantLairFridgeOutside": {
+   "bounds": [
+    -56.6,
+    -17.3,
+    55.58,
+    21.4
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzoneback",
+     "to": "GiantLairDeadLands2",
+     "at": [
+      -7.84,
+      -4.0
+     ],
+     "arrive": [
+      213.27,
+      33.5
+     ]
+    },
+    {
+     "index": 2,
+     "name": "fridgeloadzone",
+     "to": "GiantLairFridgeInside",
+     "at": [
+      45.43,
+      21.4
+     ],
+     "arrive": [
+      -12.0,
+      -10.76
+     ]
+    }
+   ]
+  },
+  "GiantLairRoachVillage": {
+   "bounds": [
+    -65.34,
+    -14.04,
+    7.9,
+    13.93
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneplains",
+     "to": "GiantLairBeforeBoss",
+     "at": [
+      -65.34,
+      -1.2
+     ],
+     "arrive": [
+      47.2,
+      0.0
+     ]
+    }
+   ]
+  },
+  "GiantLairSaplingPlains": {
+   "bounds": [
+    -48.5,
+    -49.5,
+    26.5,
+    4.89
+   ],
+   "doors": [
+    {
+     "index": 3,
+     "name": "loadzonevillage",
+     "to": "GiantLairBeforeBoss",
+     "at": [
+      26.5,
+      0.0
+     ],
+     "arrive": [
+      -91.5,
+      -2.0
+     ]
+    }
+   ]
+  },
+  "GoldenHillsCableCar": {
+   "bounds": [
+    -64.4,
+    -7.4,
+    10.36,
+    8.0
+   ],
+   "doors": [
+    {
+     "index": 18,
+     "name": "loadzonetunnel",
+     "to": "GoldenPathTunnel",
+     "at": [
+      10.36,
+      -1.0
+     ],
+     "arrive": [
+      0.0,
+      34.92
+     ]
+    },
+    {
+     "index": 19,
+     "name": "loadzonepath",
+     "to": "GoldenHillsPath2",
+     "at": [
+      -64.4,
+      7.5
+     ],
+     "arrive": [
+      9.5,
+      0.0
+     ]
+    }
+   ]
+  },
+  "GoldenHillsDungeonBoss": {
+   "bounds": [
+    0.0,
+    -16.0,
+    17.9,
+    11.93
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "GoldenHillsDungeonUpperMain",
+     "at": [
+      0.0,
+      -16.0
+     ],
+     "arrive": [
+      -12.0,
+      25.8
+     ]
+    }
+   ]
+  },
+  "GoldenHillsDungeonCrankLeft": {
+   "bounds": [
+    -22.05,
+    0.0,
+    11.0,
+    27.13
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "GoldenHillsDungeonLeftMain",
+     "at": [
+      9.61,
+      0.0
+     ],
+     "arrive": [
+      -75.04,
+      3.0
+     ]
+    }
+   ]
+  },
+  "GoldenHillsDungeonEntrance": {
+   "bounds": [
+    -21.85,
+    -5.75,
+    26.0,
+    40.9
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzoneoutside",
+     "to": "GoldenSettlement1",
+     "at": [
+      0.0,
+      -5.75
+     ],
+     "arrive": [
+      0.0,
+      34.52
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzone left",
+     "to": "GoldenHillsDungeonLeftMain",
+     "at": [
+      -21.85,
+      10.0
+     ],
+     "arrive": [
+      16.87,
+      0.0
+     ]
+    },
+    {
+     "index": 12,
+     "name": "loadzone topright",
+     "to": "GoldenHillsDungeonRightCrank",
+     "at": [
+      26.0,
+      22.0
+     ],
+     "arrive": [
+      1.5,
+      -11.29
+     ]
+    },
+    {
+     "index": 13,
+     "name": "loadzonelowright",
+     "to": "GoldenHillsLowerRightCrank",
+     "at": [
+      21.8,
+      10.0
+     ],
+     "arrive": [
+      -8.05,
+      0.0
+     ]
+    }
+   ]
+  },
+  "GoldenHillsDungeonLeftCrankHalf": {
+   "bounds": [
+    -64.0,
+    -3.57,
+    3.0,
+    43.7
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "GoldenHillsDungeonLeftMain",
+     "at": [
+      0.0,
+      -3.57
+     ],
+     "arrive": [
+      -68.75,
+      31.2
+     ]
+    }
+   ]
+  },
+  "GoldenHillsDungeonLeftMain": {
+   "bounds": [
+    -72.56,
+    -13.45,
+    13.8,
+    27.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "load zone main room",
+     "to": "GoldenHillsDungeonEntrance",
+     "at": [
+      13.8,
+      0.0
+     ],
+     "arrive": [
+      -24.48,
+      10.0
+     ]
+    },
+    {
+     "index": 16,
+     "name": "loadzonecrankleft",
+     "to": "GoldenHillsDungeonCrankLeft",
+     "at": [
+      -72.56,
+      3.75
+     ],
+     "arrive": [
+      13.4,
+      0.0
+     ]
+    },
+    {
+     "index": 33,
+     "name": "load zone crank half",
+     "to": "GoldenHillsDungeonLeftCrankHalf",
+     "at": [
+      -68.75,
+      27.5
+     ],
+     "arrive": [
+      0.0,
+      -5.9
+     ]
+    }
+   ]
+  },
+  "GoldenHillsDungeonRightCrank": {
+   "bounds": [
+    -1.56,
+    -9.63,
+    75.8,
+    25.76
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "GoldenHillsDungeonEntrance",
+     "at": [
+      1.94,
+      -9.63
+     ],
+     "arrive": [
+      26.0,
+      25.1
+     ]
+    }
+   ]
+  },
+  "GoldenHillsDungeonUpperMain": {
+   "bounds": [
+    -31.33,
+    -2.04,
+    15.67,
+    24.61
+   ],
+   "doors": [
+    {
+     "index": 8,
+     "name": "loadzonelow",
+     "to": "GoldenHillsDungeonUpperSide",
+     "at": [
+      15.67,
+      2.0
+     ],
+     "arrive": [
+      -6.2,
+      0.0
+     ]
+    },
+    {
+     "index": 9,
+     "name": "loadzonehigh",
+     "to": "GoldenHillsDungeonUpperSide",
+     "at": [
+      15.67,
+      12.5
+     ],
+     "arrive": [
+      -6.2,
+      9.0
+     ]
+    },
+    {
+     "index": 23,
+     "name": "loadzoneboss",
+     "to": "GoldenHillsDungeonBoss",
+     "at": [
+      -12.0,
+      23.5
+     ],
+     "arrive": [
+      0.0,
+      -18.3
+     ]
+    }
+   ]
+  },
+  "GoldenHillsDungeonUpperSide": {
+   "bounds": [
+    -3.5,
+    -15.7,
+    57.81,
+    42.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonelow",
+     "to": "GoldenHillsDungeonUpperMain",
+     "at": [
+      -3.5,
+      0.0
+     ],
+     "arrive": [
+      19.79,
+      2.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzonehigh",
+     "to": "GoldenHillsDungeonUpperMain",
+     "at": [
+      -3.5,
+      9.0
+     ],
+     "arrive": [
+      19.79,
+      12.5
+     ]
+    }
+   ]
+  },
+  "GoldenHillsLowerRightCrank": {
+   "bounds": [
+    -5.63,
+    -3.3,
+    37.5,
+    18.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "GoldenHillsDungeonEntrance",
+     "at": [
+      -5.63,
+      0.0
+     ],
+     "arrive": [
+      24.98,
+      10.0
+     ]
+    }
+   ]
+  },
+  "GoldenHillsPath2": {
+   "bounds": [
+    -124.8,
+    -3.1,
+    6.64,
+    24.4
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "LoadZoneCable",
+     "to": "GoldenHillsCableCar",
+     "at": [
+      6.64,
+      0.0
+     ],
+     "arrive": [
+      -67.05,
+      7.5
+     ]
+    },
+    {
+     "index": 11,
+     "name": "loadzonesettlement",
+     "to": "GoldenHillsPath3",
+     "at": [
+      -124.8,
+      10.0
+     ],
+     "arrive": [
+      14.2,
+      0.0
+     ]
+    },
+    {
+     "index": 33,
+     "name": "loadzonepitcherarea",
+     "to": "GoldenPitcher1",
+     "at": [
+      -52.0,
+      24.4
+     ],
+     "arrive": [
+      -4.0,
+      -16.74
+     ]
+    }
+   ]
+  },
+  "GoldenHillsPath3": {
+   "bounds": [
+    -65.5,
+    -9.5,
+    11.69,
+    9.1
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzoneback",
+     "to": "GoldenHillsPath2",
+     "at": [
+      11.69,
+      0.0
+     ],
+     "arrive": [
+      -128.2,
+      10.0
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzonesettlement",
+     "to": "GoldenSettlementEntrance",
+     "at": [
+      -65.5,
+      -2.0
+     ],
+     "arrive": [
+      23.2,
+      0.0
+     ]
+    },
+    {
+     "index": 23,
+     "name": "loadzonechomper",
+     "to": "ChomperCave1",
+     "at": [
+      -40.8,
+      -1.0
+     ],
+     "arrive": [
+      22.15,
+      6.0
+     ]
+    }
+   ]
+  },
+  "GoldenPathTunnel": {
+   "bounds": [
+    -51.6,
+    -9.83,
+    43.8,
+    31.71
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzonefields",
+     "to": "BOGoldenPath",
+     "at": [
+      0.0,
+      -9.83
+     ],
+     "arrive": [
+      -62.79,
+      11.5
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzonegoldenhills",
+     "to": "GoldenHillsCableCar",
+     "at": [
+      0.0,
+      31.71
+     ],
+     "arrive": [
+      12.2,
+      -1.0
+     ]
+    },
+    {
+     "index": 16,
+     "name": "loadzonebarrenlands",
+     "to": "BarrenLandsEntrance",
+     "at": [
+      -40.0,
+      -7.68
+     ],
+     "arrive": [
+      -7.0,
+      17.57
+     ]
+    },
+    {
+     "index": 22,
+     "name": "loadzonegpt2",
+     "to": "GoldenPathTunnel2",
+     "at": [
+      -51.6,
+      6.0
+     ],
+     "arrive": [
+      25.4,
+      5.0
+     ]
+    }
+   ]
+  },
+  "GoldenPathTunnel2": {
+   "bounds": [
+    -14.14,
+    -13.7,
+    25.0,
+    11.0
+   ],
+   "doors": [
+    {
+     "index": 9,
+     "name": "loadzonebarrenlands - Duplicate",
+     "to": "GoldenPathTunnel",
+     "at": [
+      25.0,
+      5.0
+     ],
+     "arrive": [
+      -52.5,
+      6.0
+     ]
+    },
+    {
+     "index": 10,
+     "name": "loadzonebarrenlands - Duplicate",
+     "to": "BarrenLandsSideGPT",
+     "at": [
+      -4.0,
+      -13.7
+     ],
+     "arrive": [
+      -12.0,
+      14.5
+     ]
+    }
+   ]
+  },
+  "GoldenPitcher1": {
+   "bounds": [
+    -16.5,
+    -14.5,
+    22.0,
+    14.8
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "Loadzoneup",
+     "to": "GoldenPitcher2",
+     "at": [
+      10.0,
+      13.7
+     ],
+     "arrive": [
+      -4.0,
+      -16.6
+     ]
+    },
+    {
+     "index": 1,
+     "name": "Loadzonedown",
+     "to": "GoldenHillsPath2",
+     "at": [
+      -4.0,
+      -14.5
+     ],
+     "arrive": [
+      -52.0,
+      26.0
+     ]
+    }
+   ]
+  },
+  "GoldenPitcher2": {
+   "bounds": [
+    -36.2,
+    -13.79,
+    20.5,
+    12.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "Loadzonedown - Duplicate",
+     "to": "GoldenPitcher1",
+     "at": [
+      -4.0,
+      -13.79
+     ],
+     "arrive": [
+      10.0,
+      16.0
+     ]
+    },
+    {
+     "index": 27,
+     "name": "Loadzoneleft",
+     "to": "PitcherPlantArena",
+     "at": [
+      -36.2,
+      8.1
+     ],
+     "arrive": [
+      12.55,
+      0.0
+     ]
+    }
+   ]
+  },
+  "GoldenSMinigame": {
+   "bounds": [
+    -0.96,
+    0.0,
+    14.48,
+    10.29
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "GoldenSettlementEntrance",
+     "at": [
+      14.48,
+      6.82
+     ],
+     "arrive": [
+      -16.24,
+      -12.21
+     ]
+    }
+   ]
+  },
+  "GoldenSettlement1": {
+   "bounds": [
+    -39.0,
+    -15.71,
+    40.12,
+    31.78
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "Loadzonesouth",
+     "to": "GoldenSettlementEntrance",
+     "at": [
+      0.0,
+      -15.71
+     ],
+     "arrive": [
+      -13.95,
+      12.89
+     ]
+    },
+    {
+     "index": 28,
+     "name": "loadzonefarm",
+     "to": "GoldenSettlement2",
+     "at": [
+      -39.0,
+      2.0
+     ],
+     "arrive": [
+      17.5,
+      4.0
+     ]
+    },
+    {
+     "index": 35,
+     "name": "loadzonefarmnight",
+     "to": "GoldenSettlement2Night",
+     "at": [
+      -39.0,
+      2.0
+     ],
+     "arrive": [
+      17.5,
+      4.0
+     ]
+    },
+    {
+     "index": 36,
+     "name": "loadzonefarm - Duplicate",
+     "to": "GoldenSettlement2",
+     "at": [
+      -39.0,
+      2.0
+     ],
+     "arrive": [
+      17.5,
+      4.0
+     ]
+    },
+    {
+     "index": 37,
+     "name": "Loadzonesouth - Duplicate",
+     "to": "GoldenSettlementEntrance",
+     "at": [
+      0.0,
+      -15.71
+     ],
+     "arrive": [
+      -13.95,
+      12.89
+     ]
+    },
+    {
+     "index": 53,
+     "name": "loadzone dungeon",
+     "to": "GoldenHillsDungeonEntrance",
+     "at": [
+      0.0,
+      31.78
+     ],
+     "arrive": [
+      0.0,
+      -7.74
+     ]
+    },
+    {
+     "index": 60,
+     "name": "loadzonehouses1",
+     "to": "GoldenSettlement3",
+     "at": [
+      40.12,
+      2.0
+     ],
+     "arrive": [
+      -13.29,
+      0.0
+     ]
+    },
+    {
+     "index": 61,
+     "name": "loadzonehouses2",
+     "to": "GoldenSettlement3Night",
+     "at": [
+      40.12,
+      2.0
+     ],
+     "arrive": [
+      -13.29,
+      0.0
+     ]
+    },
+    {
+     "index": 62,
+     "name": "loadzonehouses3",
+     "to": "GoldenSettlement3",
+     "at": [
+      40.12,
+      2.0
+     ],
+     "arrive": [
+      -13.29,
+      0.0
+     ]
+    }
+   ]
+  },
+  "GoldenSettlement2": {
+   "bounds": [
+    -53.94,
+    -22.0,
+    14.0,
+    12.8
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneplaza",
+     "to": "GoldenSettlement1",
+     "at": [
+      14.0,
+      4.0
+     ],
+     "arrive": [
+      -42.75,
+      2.0
+     ]
+    },
+    {
+     "index": 13,
+     "name": "sign",
+     "to": "GoldenSettlement1",
+     "at": [
+      -45.3,
+      -9.7
+     ],
+     "arrive": [
+      -42.75,
+      2.0
+     ]
+    },
+    {
+     "index": 16,
+     "name": "farmer ant outside",
+     "to": "GoldenSettlement1",
+     "at": [
+      -18.82,
+      -2.3
+     ],
+     "arrive": [
+      -42.75,
+      2.0
+     ]
+    },
+    {
+     "index": 17,
+     "name": "beeguard",
+     "to": "GoldenSettlement1",
+     "at": [
+      -49.89,
+      -12.3
+     ],
+     "arrive": [
+      -42.75,
+      2.0
+     ]
+    },
+    {
+     "index": 19,
+     "name": "Neo",
+     "to": "GoldenSettlement1",
+     "at": [
+      3.5,
+      6.0
+     ],
+     "arrive": [
+      -42.75,
+      2.0
+     ]
+    },
+    {
+     "index": 20,
+     "name": "loadzoneplazanight",
+     "to": "GoldenSettlement1Night",
+     "at": [
+      14.0,
+      4.0
+     ],
+     "arrive": [
+      -42.75,
+      2.0
+     ]
+    },
+    {
+     "index": 21,
+     "name": "loadzoneplaza - Duplicate",
+     "to": "GoldenSettlement1",
+     "at": [
+      14.0,
+      4.0
+     ],
+     "arrive": [
+      -42.75,
+      2.0
+     ]
+    },
+    {
+     "index": 39,
+     "name": "sign - Duplicate",
+     "to": "GoldenSettlement1",
+     "at": [
+      -28.17,
+      -10.1
+     ],
+     "arrive": [
+      -42.75,
+      2.0
+     ]
+    },
+    {
+     "index": 44,
+     "name": "loadzonepp",
+     "to": "PowerPlant",
+     "at": [
+      -53.94,
+      -15.0
+     ],
+     "arrive": [
+      5.8,
+      0.0
+     ]
+    }
+   ]
+  },
+  "GoldenSettlement3": {
+   "bounds": [
+    -9.63,
+    -5.22,
+    12.44,
+    4.01
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone outside",
+     "to": "GoldenSettlement1",
+     "at": [
+      -9.63,
+      0.0
+     ],
+     "arrive": [
+      42.85,
+      2.0
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzone outside - Duplicate",
+     "to": "GoldenSettlement1Night",
+     "at": [
+      -9.63,
+      0.0
+     ],
+     "arrive": [
+      42.85,
+      2.0
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzone outside - Duplicate - Duplicate",
+     "to": "GoldenSettlement1",
+     "at": [
+      -9.63,
+      0.0
+     ],
+     "arrive": [
+      42.85,
+      2.0
+     ]
+    }
+   ]
+  },
+  "GoldenSettlementEntrance": {
+   "bounds": [
+    -17.09,
+    -10.03,
+    19.66,
+    20.0
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzonepath",
+     "to": "GoldenHillsPath3",
+     "at": [
+      19.66,
+      0.0
+     ],
+     "arrive": [
+      -68.2,
+      -2.0
+     ]
+    },
+    {
+     "index": 9,
+     "name": "LoadZoneSettlement",
+     "to": "GoldenSettlement1",
+     "at": [
+      -12.87,
+      10.0
+     ],
+     "arrive": [
+      0.0,
+      -18.2
+     ]
+    },
+    {
+     "index": 11,
+     "name": "loadzone desert",
+     "to": "DesertBeforeGH",
+     "at": [
+      13.0,
+      20.0
+     ],
+     "arrive": [
+      -6.0,
+      -12.48
+     ]
+    },
+    {
+     "index": 13,
+     "name": "loadzone minigame",
+     "to": "GoldenSMinigame",
+     "at": [
+      -14.72,
+      -9.7
+     ],
+     "arrive": [
+      16.29,
+      8.23
+     ]
+    }
+   ]
+  },
+  "HBsLab": {
+   "bounds": [
+    -11.6,
+    -2.83,
+    7.96,
+    2.32
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "BeehiveMainArea",
+     "at": [
+      -11.6,
+      0.0
+     ],
+     "arrive": [
+      20.42,
+      -20.41
+     ]
+    }
+   ]
+  },
+  "HermitCave": {
+   "bounds": [
+    -2.62,
+    -3.0,
+    8.71,
+    0.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "BOGoldenPath",
+     "at": [
+      8.71,
+      0.0
+     ],
+     "arrive": [
+      -97.0,
+      4.0
+     ]
+    }
+   ]
+  },
+  "HideoutCell": {
+   "bounds": [
+    -13.17,
+    -5.63,
+    9.4,
+    10.64
+   ],
+   "doors": [
+    {
+     "index": 3,
+     "name": "loadzone",
+     "to": "HideoutCentralRoom",
+     "at": [
+      0.0,
+      -5.63
+     ],
+     "arrive": [
+      0.0,
+      6.58
+     ]
+    }
+   ]
+  },
+  "HideoutCentralRoom": {
+   "bounds": [
+    -8.08,
+    -27.7,
+    11.78,
+    3.87
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonecell",
+     "to": "HideoutCell",
+     "at": [
+      0.0,
+      3.87
+     ],
+     "arrive": [
+      0.0,
+      -8.31
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzoneleft",
+     "to": "HideoutLeftA",
+     "at": [
+      -8.08,
+      -4.0
+     ],
+     "arrive": [
+      8.37,
+      0.0
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzonesouth",
+     "to": "HideoutStairsRoom",
+     "at": [
+      -2.0,
+      -27.7
+     ],
+     "arrive": [
+      0.0,
+      14.49
+     ]
+    },
+    {
+     "index": 9,
+     "name": "loadzone right",
+     "to": "HideoutRightA",
+     "at": [
+      11.78,
+      -22.0
+     ],
+     "arrive": [
+      -4.14,
+      -4.0
+     ]
+    }
+   ]
+  },
+  "HideoutEntrance": {
+   "bounds": [
+    -7.5,
+    -1.59,
+    49.24,
+    7.02
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone outside",
+     "to": "DesertBadlands",
+     "at": [
+      -7.5,
+      0.0
+     ],
+     "arrive": [
+      19.0,
+      -4.01
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzone below",
+     "to": "HideoutStairsRoom",
+     "at": [
+      5.0,
+      3.72
+     ],
+     "arrive": [
+      -10.45,
+      -22.0
+     ]
+    }
+   ]
+  },
+  "HideoutGarden": {
+   "bounds": [
+    -47.67,
+    -3.38,
+    7.92,
+    15.88
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone right",
+     "to": "HideoutLeftA",
+     "at": [
+      7.92,
+      -2.0
+     ],
+     "arrive": [
+      -28.2,
+      6.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone well",
+     "to": "DefiantRootWell",
+     "at": [
+      -47.67,
+      -2.0
+     ],
+     "arrive": [
+      26.5,
+      9.24
+     ]
+    },
+    {
+     "index": 9,
+     "name": "loadzonestorage",
+     "to": "HideoutWestStorage",
+     "at": [
+      -40.0,
+      15.88
+     ],
+     "arrive": [
+      2.0,
+      -6.21
+     ]
+    }
+   ]
+  },
+  "HideoutLeftA": {
+   "bounds": [
+    -25.73,
+    -0.8,
+    5.77,
+    8.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone righr",
+     "to": "HideoutCentralRoom",
+     "at": [
+      5.77,
+      0.0
+     ],
+     "arrive": [
+      -10.53,
+      -4.0
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzone garden",
+     "to": "HideoutGarden",
+     "at": [
+      -25.73,
+      6.0
+     ],
+     "arrive": [
+      10.84,
+      -2.0
+     ]
+    }
+   ]
+  },
+  "HideoutRightA": {
+   "bounds": [
+    -1.57,
+    -6.37,
+    37.64,
+    5.6
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "HideoutCentralRoom",
+     "at": [
+      -1.57,
+      -4.0
+     ],
+     "arrive": [
+      14.56,
+      -22.0
+     ]
+    }
+   ]
+  },
+  "HideoutStairsRoom": {
+   "bounds": [
+    -7.8,
+    -22.0,
+    7.48,
+    11.73
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonenorth",
+     "to": "HideoutCentralRoom",
+     "at": [
+      0.0,
+      11.73
+     ],
+     "arrive": [
+      -2.0,
+      -30.2
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzoneup",
+     "to": "HideoutEntrance",
+     "at": [
+      -7.8,
+      -22.0
+     ],
+     "arrive": [
+      5.0,
+      5.89
+     ]
+    }
+   ]
+  },
+  "HideoutWestStorage": {
+   "bounds": [
+    -14.21,
+    -3.7,
+    7.45,
+    11.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "HideoutGarden",
+     "at": [
+      2.0,
+      -3.7
+     ],
+     "arrive": [
+      -40.0,
+      18.09
+     ]
+    }
+   ]
+  },
+  "HoneyFactoryCore": {
+   "bounds": [
+    -5.7,
+    -5.66,
+    2.39,
+    42.9
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "HoneyFactoryEntrance",
+     "at": [
+      0.0,
+      -5.66
+     ],
+     "arrive": [
+      0.0,
+      18.73
+     ]
+    }
+   ]
+  },
+  "HoneyFactoryEntrance": {
+   "bounds": [
+    -16.14,
+    -22.26,
+    15.73,
+    15.92
+   ],
+   "doors": [
+    {
+     "index": 21,
+     "name": "loadzoneoffice",
+     "to": "HoneyFactoryWorkerRooms",
+     "at": [
+      8.17,
+      -22.26
+     ],
+     "arrive": [
+      -10.07,
+      5.12
+     ]
+    },
+    {
+     "index": 22,
+     "name": "loadzonesleep",
+     "to": "HoneyFactoryWorkerRooms",
+     "at": [
+      -8.17,
+      -22.26
+     ],
+     "arrive": [
+      -43.76,
+      4.8
+     ]
+    },
+    {
+     "index": 24,
+     "name": "looadzonecore",
+     "to": "HoneyFactoryCore",
+     "at": [
+      0.0,
+      15.92
+     ],
+     "arrive": [
+      0.0,
+      -8.1
+     ]
+    },
+    {
+     "index": 25,
+     "name": "loadzone processing",
+     "to": "FactoryProcessingFirstRoom",
+     "at": [
+      -12.17,
+      10.5
+     ],
+     "arrive": [
+      8.2,
+      0.0
+     ]
+    },
+    {
+     "index": 26,
+     "name": "loadzoneoutside",
+     "to": "BeehiveOutside",
+     "at": [
+      15.73,
+      1.0
+     ],
+     "arrive": [
+      -66.9,
+      35.02
+     ]
+    },
+    {
+     "index": 28,
+     "name": "loadzonestorage",
+     "to": "FactoryStorageElevator",
+     "at": [
+      -16.14,
+      -7.0
+     ],
+     "arrive": [
+      5.97,
+      0.0
+     ]
+    }
+   ]
+  },
+  "HoneyFactoryWorkerRooms": {
+   "bounds": [
+    -60.91,
+    -3.47,
+    8.52,
+    5.04
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzoneoffice",
+     "to": "HoneyFactoryEntrance",
+     "at": [
+      -8.41,
+      3.51
+     ],
+     "arrive": [
+      10.32,
+      -24.4
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzonebeds",
+     "to": "HoneyFactoryEntrance",
+     "at": [
+      -45.5,
+      3.51
+     ],
+     "arrive": [
+      -10.32,
+      -24.4
+     ]
+    }
+   ]
+  },
+  "HoneycombsLab": {
+   "bounds": [
+    -6.36,
+    -2.25,
+    9.51,
+    4.75
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzone",
+     "to": "BeehiveMainArea",
+     "at": [
+      9.51,
+      3.29
+     ],
+     "arrive": [
+      -20.0,
+      19.8
+     ]
+    }
+   ]
+  },
+  "JaunesGallery": {
+   "bounds": [
+    -8.8,
+    -0.96,
+    9.61,
+    0.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "BeehiveMainArea",
+     "at": [
+      9.61,
+      0.0
+     ],
+     "arrive": [
+      -20.0,
+      -20.2
+     ]
+    }
+   ]
+  },
+  "MetalIsland1": {
+   "bounds": [
+    -25.78,
+    -38.6,
+    29.46,
+    19.49
+   ],
+   "doors": [
+    {
+     "index": 4,
+     "name": "loadzone hotel",
+     "to": "MetalIsland2",
+     "at": [
+      0.0,
+      19.49
+     ],
+     "arrive": [
+      0.0,
+      -6.54
+     ]
+    }
+   ]
+  },
+  "MetalIsland2": {
+   "bounds": [
+    -12.88,
+    -3.67,
+    44.71,
+    9.88
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneoutside",
+     "to": "MetalIsland1",
+     "at": [
+      0.0,
+      -3.55
+     ],
+     "arrive": [
+      0.0,
+      21.6
+     ]
+    },
+    {
+     "index": 12,
+     "name": "loadzone aud",
+     "to": "MetalIslandAuditorium",
+     "at": [
+      -10.0,
+      9.88
+     ],
+     "arrive": [
+      0.0,
+      -10.49
+     ]
+    }
+   ]
+  },
+  "MetalIslandAuditorium": {
+   "bounds": [
+    -11.21,
+    -7.53,
+    17.51,
+    23.12
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "MetalIsland2",
+     "at": [
+      0.0,
+      -7.53
+     ],
+     "arrive": [
+      -10.0,
+      12.45
+     ]
+    }
+   ]
+  },
+  "MetalLake": {
+   "bounds": [
+    -16.65,
+    -15.89,
+    18.2,
+    22.3
+   ],
+   "doors": []
+  },
+  "MysteryIsland": {
+   "bounds": [
+    -30.99,
+    -27.9,
+    24.0,
+    14.0
+   ],
+   "doors": [
+    {
+     "index": 7,
+     "name": "loadzone",
+     "to": "MysteryIslandInside",
+     "at": [
+      -1.0,
+      -6.13
+     ],
+     "arrive": [
+      -2.0,
+      -10.48
+     ]
+    }
+   ]
+  },
+  "MysteryIslandInside": {
+   "bounds": [
+    -2.0,
+    -7.73,
+    13.8,
+    37.69
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "MysteryIsland",
+     "at": [
+      -2.0,
+      -7.73
+     ],
+     "arrive": [
+      -1.0,
+      -4.19
+     ]
+    }
+   ]
+  },
+  "NearSnakemouth": {
+   "bounds": [
+    -49.5,
+    -9.8,
+    14.4,
+    16.45
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadingzonefields",
+     "to": "BugariaOutskitsSnakemouthCorridor1",
+     "at": [
+      14.0,
+      -1.07
+     ],
+     "arrive": [
+      -94.6,
+      15.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loading zone cave",
+     "to": "BugariaOutskirtsSnakemouthCorridor2",
+     "at": [
+      -46.15,
+      16.45
+     ],
+     "arrive": [
+      11.67,
+      0.0
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadingzonechuck",
+     "to": "ChucksAbode",
+     "at": [
+      -47.88,
+      -9.8
+     ],
+     "arrive": [
+      14.33,
+      -2.2
+     ]
+    }
+   ]
+  },
+  "OutsideSnakemouth": {
+   "bounds": [
+    -24.2,
+    -2.84,
+    9.65,
+    13.54
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loading zone outside",
+     "to": "BugariaOutskirtsSnakemouthCorridor2",
+     "at": [
+      9.65,
+      -2.84
+     ],
+     "arrive": [
+      -41.8,
+      0.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "LoadingZoneInside",
+     "to": "SnakemouthBridgeRoom",
+     "at": [
+      -23.75,
+      13.54
+     ],
+     "arrive": [
+      57.5,
+      0.0
+     ]
+    }
+   ]
+  },
+  "PitcherPlantArena": {
+   "bounds": [
+    -6.89,
+    -2.92,
+    9.73,
+    19.04
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "GoldenPitcher2",
+     "at": [
+      9.73,
+      0.0
+     ],
+     "arrive": [
+      -38.36,
+      8.0
+     ]
+    }
+   ]
+  },
+  "PowerPlant": {
+   "bounds": [
+    -29.88,
+    -3.62,
+    3.71,
+    21.7
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneoutside",
+     "to": "GoldenSettlement2",
+     "at": [
+      3.71,
+      0.0
+     ],
+     "arrive": [
+      -56.69,
+      -15.0
+     ]
+    },
+    {
+     "index": 16,
+     "name": "loadzonebroodmother",
+     "to": "BroodmotherLair",
+     "at": [
+      -14.0,
+      21.7
+     ],
+     "arrive": [
+      -6.0,
+      -7.83
+     ]
+    }
+   ]
+  },
+  "RubberPrisonCafeteria": {
+   "bounds": [
+    -35.39,
+    -3.57,
+    9.61,
+    4.9
+   ],
+   "doors": [
+    {
+     "index": 2,
+     "name": "loadzone",
+     "to": "RubberPrisonCells1",
+     "at": [
+      9.61,
+      0.0
+     ],
+     "arrive": [
+      -32.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  "RubberPrisonCells1": {
+   "bounds": [
+    -29.64,
+    -3.78,
+    30.5,
+    15.68
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonesouth",
+     "to": "RubberPrisonSpikeRoom",
+     "at": [
+      0.0,
+      -3.78
+     ],
+     "arrive": [
+      0.0,
+      25.04
+     ]
+    },
+    {
+     "index": 11,
+     "name": "loadzoneright",
+     "to": "RubberPrisonCells2",
+     "at": [
+      30.5,
+      0.0
+     ],
+     "arrive": [
+      -25.0,
+      -2.0
+     ]
+    },
+    {
+     "index": 13,
+     "name": "loadzoneleft",
+     "to": "RubberPrisonCafeteria",
+     "at": [
+      -29.64,
+      0.0
+     ],
+     "arrive": [
+      11.6,
+      0.0
+     ]
+    },
+    {
+     "index": 15,
+     "name": "loadzone3rdfloor",
+     "to": "RubberPrisonThirdFloor",
+     "at": [
+      0.0,
+      15.68
+     ],
+     "arrive": [
+      -30.0,
+      -6.69
+     ]
+    }
+   ]
+  },
+  "RubberPrisonCells2": {
+   "bounds": [
+    -22.81,
+    -2.0,
+    22.74,
+    21.9
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneleft",
+     "to": "RubberPrisonCells1",
+     "at": [
+      -22.81,
+      -2.0
+     ],
+     "arrive": [
+      31.99,
+      0.0
+     ]
+    },
+    {
+     "index": 13,
+     "name": "loadzoneright",
+     "to": "RubberPrisonPier",
+     "at": [
+      22.74,
+      -2.0
+     ],
+     "arrive": [
+      -44.4,
+      10.0
+     ]
+    },
+    {
+     "index": 14,
+     "name": "loadzone3rdfloor",
+     "to": "RubberPrisonThirdFloor",
+     "at": [
+      0.0,
+      18.19
+     ],
+     "arrive": [
+      0.0,
+      -6.63
+     ]
+    }
+   ]
+  },
+  "RubberPrisonCheckpointCorridor": {
+   "bounds": [
+    -28.0,
+    -0.58,
+    9.88,
+    12.4
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneexit",
+     "to": "RubberPrisonPier",
+     "at": [
+      9.88,
+      0.0
+     ],
+     "arrive": [
+      -41.9,
+      10.0
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzoneforward",
+     "to": "RubberPrisonSpikeRoom",
+     "at": [
+      -25.0,
+      12.4
+     ],
+     "arrive": [
+      0.0,
+      -9.11
+     ]
+    }
+   ]
+  },
+  "RubberPrisonGiantLairBridge": {
+   "bounds": [
+    -8.01,
+    -3.1,
+    57.6,
+    9.7
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzoneback",
+     "to": "RubberPrisonPier",
+     "at": [
+      -8.01,
+      0.0
+     ],
+     "arrive": [
+      14.94,
+      10.0
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzoneshortcut",
+     "to": "RubberPrisonPier",
+     "at": [
+      -2.0,
+      5.79
+     ],
+     "arrive": [
+      12.35,
+      10.0
+     ]
+    },
+    {
+     "index": 24,
+     "name": "loadzonegl",
+     "to": "GiantLairEntrance",
+     "at": [
+      57.6,
+      0.0
+     ],
+     "arrive": [
+      -30.59,
+      1.0
+     ]
+    }
+   ]
+  },
+  "RubberPrisonGym": {
+   "bounds": [
+    -43.4,
+    -6.45,
+    3.73,
+    7.12
+   ],
+   "doors": [
+    {
+     "index": 6,
+     "name": "loadzone",
+     "to": "RubberPrisonThirdFloor",
+     "at": [
+      3.73,
+      0.0
+     ],
+     "arrive": [
+      -60.02,
+      5.0
+     ]
+    }
+   ]
+  },
+  "RubberPrisonLibrary": {
+   "bounds": [
+    -12.83,
+    0.74,
+    2.9,
+    12.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "RubberPrisonPier",
+     "at": [
+      -12.83,
+      2.0
+     ],
+     "arrive": [
+      11.86,
+      10.0
+     ]
+    }
+   ]
+  },
+  "RubberPrisonOffice": {
+   "bounds": [
+    -3.86,
+    -3.87,
+    15.93,
+    5.34
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzone",
+     "to": "RubberPrisonPier",
+     "at": [
+      -3.86,
+      0.0
+     ],
+     "arrive": [
+      14.55,
+      10.0
+     ]
+    }
+   ]
+  },
+  "RubberPrisonPier": {
+   "bounds": [
+    -42.48,
+    -2.05,
+    12.94,
+    13.9
+   ],
+   "doors": [
+    {
+     "index": 5,
+     "name": "loadzoneleft",
+     "to": "RubberPrisonCheckpointCorridor",
+     "at": [
+      -39.81,
+      10.0
+     ],
+     "arrive": [
+      12.33,
+      0.0
+     ]
+    },
+    {
+     "index": 9,
+     "name": "loadzonecell2",
+     "to": "RubberPrisonCells2",
+     "at": [
+      -42.48,
+      10.0
+     ],
+     "arrive": [
+      24.51,
+      -2.0
+     ]
+    },
+    {
+     "index": 10,
+     "name": "loadzonesecurity",
+     "to": "RubberPrisonSecurity",
+     "at": [
+      -40.1,
+      10.0
+     ],
+     "arrive": [
+      17.59,
+      10.0
+     ]
+    },
+    {
+     "index": 11,
+     "name": "loadzonelibrary",
+     "to": "RubberPrisonLibrary",
+     "at": [
+      9.7,
+      10.0
+     ],
+     "arrive": [
+      -14.74,
+      2.0
+     ]
+    },
+    {
+     "index": 12,
+     "name": "loadzoneoffice",
+     "to": "RubberPrisonOffice",
+     "at": [
+      12.37,
+      10.0
+     ],
+     "arrive": [
+      -5.5,
+      0.0
+     ]
+    },
+    {
+     "index": 13,
+     "name": "loadzoneboss",
+     "to": "RubberPrisonGiantLairBridge",
+     "at": [
+      12.94,
+      10.0
+     ],
+     "arrive": [
+      -9.79,
+      0.0
+     ]
+    },
+    {
+     "index": 14,
+     "name": "bossshortcut",
+     "to": "RubberPrisonGiantLairBridge",
+     "at": [
+      9.8,
+      10.0
+     ],
+     "arrive": [
+      -2.0,
+      8.7
+     ]
+    },
+    {
+     "index": 15,
+     "name": "loadzone3rdfloor",
+     "to": "RubberPrisonThirdFloor",
+     "at": [
+      -42.04,
+      10.0
+     ],
+     "arrive": [
+      11.8,
+      8.0
+     ]
+    }
+   ]
+  },
+  "RubberPrisonSecurity": {
+   "bounds": [
+    -39.78,
+    -3.81,
+    15.63,
+    17.11
+   ],
+   "doors": [
+    {
+     "index": 2,
+     "name": "loadzoneoutside",
+     "to": "RubberPrisonPier",
+     "at": [
+      15.63,
+      10.0
+     ],
+     "arrive": [
+      -42.38,
+      10.0
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzone3rdfloor",
+     "to": "RubberPrisonThirdFloor",
+     "at": [
+      0.0,
+      -3.81
+     ],
+     "arrive": [
+      -7.0,
+      17.45
+     ]
+    }
+   ]
+  },
+  "RubberPrisonSpikeRoom": {
+   "bounds": [
+    -16.87,
+    -6.15,
+    12.95,
+    23.51
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneback",
+     "to": "RubberPrisonCheckpointCorridor",
+     "at": [
+      0.0,
+      -6.15
+     ],
+     "arrive": [
+      -25.0,
+      14.68
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadzonenorth",
+     "to": "RubberPrisonCells1",
+     "at": [
+      0.0,
+      23.51
+     ],
+     "arrive": [
+      0.0,
+      -6.52
+     ]
+    }
+   ]
+  },
+  "RubberPrisonThirdFloor": {
+   "bounds": [
+    -57.66,
+    -3.61,
+    9.65,
+    15.65
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonecells2",
+     "to": "RubberPrisonCells2",
+     "at": [
+      0.0,
+      -3.61
+     ],
+     "arrive": [
+      0.0,
+      19.85
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzonecells1",
+     "to": "RubberPrisonCells1",
+     "at": [
+      -30.0,
+      -3.61
+     ],
+     "arrive": [
+      0.0,
+      17.79
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzonesecurity",
+     "to": "RubberPrisonSecurity",
+     "at": [
+      -7.0,
+      15.65
+     ],
+     "arrive": [
+      0.0,
+      -6.54
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzonegym",
+     "to": "RubberPrisonGym",
+     "at": [
+      -57.66,
+      5.0
+     ],
+     "arrive": [
+      5.8,
+      0.0
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzonebridge",
+     "to": "RubberPrisonPier",
+     "at": [
+      9.65,
+      8.0
+     ],
+     "arrive": [
+      -44.12,
+      10.0
+     ]
+    }
+   ]
+  },
+  "SandCastleBasement": {
+   "bounds": [
+    -18.3,
+    -8.5,
+    35.95,
+    52.73
+   ],
+   "doors": [
+    {
+     "index": 12,
+     "name": "loadzoneleft",
+     "to": "SandCastleMainRoom",
+     "at": [
+      -10.0,
+      -8.5
+     ],
+     "arrive": [
+      -16.0,
+      9.49
+     ]
+    }
+   ]
+  },
+  "SandCastleBossKeyRoom": {
+   "bounds": [
+    -2.6,
+    -7.19,
+    49.0,
+    7.65
+   ],
+   "doors": [
+    {
+     "index": 5,
+     "name": "loadzone",
+     "to": "SandCastleMainRoom",
+     "at": [
+      -2.6,
+      -6.0
+     ],
+     "arrive": [
+      23.83,
+      6.0
+     ]
+    }
+   ]
+  },
+  "SandCastleBossRoom": {
+   "bounds": [
+    -9.67,
+    0.0,
+    43.75,
+    7.93
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneoutside",
+     "to": "SandCastleRoof",
+     "at": [
+      -9.67,
+      0.0
+     ],
+     "arrive": [
+      0.0,
+      2.14
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzonetreasure",
+     "to": "SandCastleTreasureRoom",
+     "at": [
+      43.75,
+      0.0
+     ],
+     "arrive": [
+      -12.63,
+      0.0
+     ]
+    }
+   ]
+  },
+  "SandCastleEntrance": {
+   "bounds": [
+    -7.67,
+    0.0,
+    38.0,
+    6.12
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone exit",
+     "to": "DesertSandCastle",
+     "at": [
+      -7.67,
+      0.0
+     ],
+     "arrive": [
+      0.0,
+      -1.71
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzone right",
+     "to": "SandCastleMainRoom",
+     "at": [
+      38.0,
+      0.0
+     ],
+     "arrive": [
+      0.0,
+      -6.75
+     ]
+    }
+   ]
+  },
+  "SandCastleMainRoom": {
+   "bounds": [
+    -21.7,
+    -3.5,
+    21.75,
+    15.49
+   ],
+   "doors": [
+    {
+     "index": 6,
+     "name": "loadzoneentrance",
+     "to": "SandCastleEntrance",
+     "at": [
+      0.0,
+      -3.5
+     ],
+     "arrive": [
+      40.17,
+      0.0
+     ]
+    },
+    {
+     "index": 7,
+     "name": "loadzoneslidebelow",
+     "to": "SandCastleSlidePuzzle",
+     "at": [
+      -21.7,
+      0.0
+     ],
+     "arrive": [
+      5.63,
+      -4.0
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadzoneslideup",
+     "to": "SandCastleSlidePuzzle",
+     "at": [
+      -21.7,
+      10.0
+     ],
+     "arrive": [
+      5.63,
+      10.0
+     ]
+    },
+    {
+     "index": 9,
+     "name": "loadzone statue",
+     "to": "SandCastleStatueRoom",
+     "at": [
+      21.75,
+      0.0
+     ],
+     "arrive": [
+      -20.0,
+      -2.0
+     ]
+    },
+    {
+     "index": 10,
+     "name": "loadzone roof left",
+     "to": "SandCastleRoof",
+     "at": [
+      -16.0,
+      13.5
+     ],
+     "arrive": [
+      -22.55,
+      2.0
+     ]
+    },
+    {
+     "index": 11,
+     "name": "loadzone roof right",
+     "to": "SandCastleRoof",
+     "at": [
+      16.0,
+      13.5
+     ],
+     "arrive": [
+      22.55,
+      2.0
+     ]
+    },
+    {
+     "index": 12,
+     "name": "loadzonebasementleft",
+     "to": "SandCastleBasement",
+     "at": [
+      -16.0,
+      7.5
+     ],
+     "arrive": [
+      -10.0,
+      -11.23
+     ]
+    },
+    {
+     "index": 16,
+     "name": "loadzonebosskey",
+     "to": "SandCastleBossKeyRoom",
+     "at": [
+      21.73,
+      6.0
+     ],
+     "arrive": [
+      -4.09,
+      -6.0
+     ]
+    },
+    {
+     "index": 17,
+     "name": "loadzonepressure",
+     "to": "SandCastlePressurePuzzle",
+     "at": [
+      -21.59,
+      6.0
+     ],
+     "arrive": [
+      21.01,
+      8.0
+     ]
+    },
+    {
+     "index": 18,
+     "name": "loadzone rock",
+     "to": "SandCastleRockRoom",
+     "at": [
+      21.56,
+      10.0
+     ],
+     "arrive": [
+      -70.72,
+      1.0
+     ]
+    }
+   ]
+  },
+  "SandCastlePressurePuzzle": {
+   "bounds": [
+    -15.0,
+    -3.62,
+    18.87,
+    18.2
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneslide",
+     "to": "SandCastleSlidePuzzle",
+     "at": [
+      -13.0,
+      -3.62
+     ],
+     "arrive": [
+      -29.0,
+      16.6
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzonemain",
+     "to": "SandCastleMainRoom",
+     "at": [
+      18.87,
+      8.0
+     ],
+     "arrive": [
+      -24.6,
+      6.0
+     ]
+    }
+   ]
+  },
+  "SandCastleRockRoom": {
+   "bounds": [
+    -67.74,
+    -3.65,
+    22.0,
+    45.5
+   ],
+   "doors": [
+    {
+     "index": 5,
+     "name": "loadzone main",
+     "to": "SandCastleMainRoom",
+     "at": [
+      -67.74,
+      1.0
+     ],
+     "arrive": [
+      24.4,
+      10.0
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadzonestatue",
+     "to": "SandCastleStatueRoom",
+     "at": [
+      0.0,
+      -3.65
+     ],
+     "arrive": [
+      20.0,
+      12.18
+     ]
+    }
+   ]
+  },
+  "SandCastleRoof": {
+   "bounds": [
+    -21.16,
+    -3.07,
+    21.16,
+    2.0
+   ],
+   "doors": [
+    {
+     "index": 2,
+     "name": "loadzoneleft",
+     "to": "SandCastleMainRoom",
+     "at": [
+      -21.16,
+      2.0
+     ],
+     "arrive": [
+      -16.0,
+      16.03
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzoneright",
+     "to": "SandCastleMainRoom",
+     "at": [
+      21.16,
+      2.0
+     ],
+     "arrive": [
+      16.0,
+      16.03
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzoneboss",
+     "to": "SandCastleBossRoom",
+     "at": [
+      0.0,
+      0.0
+     ],
+     "arrive": [
+      -12.52,
+      0.0
+     ]
+    }
+   ]
+  },
+  "SandCastleSlidePuzzle": {
+   "bounds": [
+    -32.1,
+    -58.1,
+    3.63,
+    13.94
+   ],
+   "doors": [
+    {
+     "index": 7,
+     "name": "loadzoneleftbelow",
+     "to": "SandCastleMainRoom",
+     "at": [
+      3.63,
+      -4.0
+     ],
+     "arrive": [
+      -24.25,
+      0.0
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadzoneleftup",
+     "to": "SandCastleMainRoom",
+     "at": [
+      3.63,
+      10.0
+     ],
+     "arrive": [
+      -24.25,
+      10.0
+     ]
+    },
+    {
+     "index": 9,
+     "name": "loadzonepressure",
+     "to": "SandCastlePressurePuzzle",
+     "at": [
+      -29.0,
+      13.94
+     ],
+     "arrive": [
+      -13.0,
+      -6.63
+     ]
+    }
+   ]
+  },
+  "SandCastleStatueRoom": {
+   "bounds": [
+    -17.6,
+    -2.0,
+    20.0,
+    9.66
+   ],
+   "doors": [
+    {
+     "index": 4,
+     "name": "loadzoneleft",
+     "to": "SandCastleMainRoom",
+     "at": [
+      -17.6,
+      -2.0
+     ],
+     "arrive": [
+      24.02,
+      0.0
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzonerock",
+     "to": "SandCastleRockRoom",
+     "at": [
+      20.0,
+      9.66
+     ],
+     "arrive": [
+      0.0,
+      -6.7
+     ]
+    }
+   ]
+  },
+  "SandCastleTreasureRoom": {
+   "bounds": [
+    -9.67,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "SandCastleBossRoom",
+     "at": [
+      -9.67,
+      0.0
+     ],
+     "arrive": [
+      47.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  "SeedlingHaven": {
+   "bounds": [
+    -43.51,
+    -5.56,
+    2.58,
+    6.6
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "BugariaOutskitsSnakemouthCorridor1",
+     "at": [
+      0.0,
+      -3.7
+     ],
+     "arrive": [
+      -9.0,
+      36.11
+     ]
+    }
+   ]
+  },
+  "SnakemouthBridgeRoom": {
+   "bounds": [
+    -48.0,
+    -8.5,
+    55.0,
+    13.5
+   ],
+   "doors": [
+    {
+     "index": 2,
+     "name": "DoorOutside",
+     "to": "OutsideSnakemouth",
+     "at": [
+      55.0,
+      0.0
+     ],
+     "arrive": [
+      -25.6,
+      16.03
+     ]
+    },
+    {
+     "index": 9,
+     "name": "LoadingZoneDoorRoom",
+     "to": "SnakemouthDoorRoom",
+     "at": [
+      -48.0,
+      0.0
+     ],
+     "arrive": [
+      12.3,
+      0.0
+     ]
+    }
+   ]
+  },
+  "SnakemouthDoorRoom": {
+   "bounds": [
+    -32.87,
+    -1.5,
+    10.0,
+    17.0
+   ],
+   "doors": [
+    {
+     "index": 2,
+     "name": "LoadingZoneBridge",
+     "to": "SnakemouthBridgeRoom",
+     "at": [
+      10.0,
+      0.0
+     ],
+     "arrive": [
+      -50.5,
+      0.0
+     ]
+    },
+    {
+     "index": 13,
+     "name": "DoorLoadZone",
+     "to": "UpperSnekEntrance",
+     "at": [
+      -23.0,
+      17.0
+     ],
+     "arrive": [
+      0.0,
+      -16.18
+     ]
+    },
+    {
+     "index": 14,
+     "name": "LoadZoneFallRoom",
+     "to": "SnakemouthFallRoom",
+     "at": [
+      -22.99,
+      4.57
+     ],
+     "arrive": [
+      14.8,
+      -3.4
+     ]
+    },
+    {
+     "index": 15,
+     "name": "New Entity16",
+     "to": "SnakemouthTop",
+     "at": [
+      -32.87,
+      10.85
+     ],
+     "arrive": [
+      9.45,
+      -6.0
+     ]
+    }
+   ]
+  },
+  "SnakemouthEmpty": {
+   "bounds": [
+    0.0,
+    -17.8,
+    0.0,
+    -17.8
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "WarpOut",
+     "to": "SnakemouthDoorRoom",
+     "at": [
+      0.0,
+      -17.8
+     ],
+     "arrive": [
+      -23.0,
+      19.5
+     ]
+    }
+   ]
+  },
+  "SnakemouthFallRoom": {
+   "bounds": [
+    -52.0,
+    -2.0,
+    14.61,
+    5.32
+   ],
+   "doors": [
+    {
+     "index": 3,
+     "name": "DoorLakeRoom",
+     "to": "SnakemouthLake",
+     "at": [
+      -52.0,
+      0.0
+     ],
+     "arrive": [
+      12.6,
+      0.0
+     ]
+    },
+    {
+     "index": 5,
+     "name": "LoadingZoneDoorRoom",
+     "to": "SnakemouthDoorRoom",
+     "at": [
+      14.44,
+      0.0
+     ],
+     "arrive": [
+      -23.0,
+      6.03
+     ]
+    }
+   ]
+  },
+  "SnakemouthLake": {
+   "bounds": [
+    -55.0,
+    -4.0,
+    10.0,
+    61.9
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "DoorFallRoom",
+     "to": "SnakemouthFallRoom",
+     "at": [
+      10.0,
+      0.0
+     ],
+     "arrive": [
+      -55.3,
+      0.0
+     ]
+    },
+    {
+     "index": 27,
+     "name": "WarpMap5",
+     "to": "SnakemouthUndergrondDoor",
+     "at": [
+      -49.0,
+      61.9
+     ],
+     "arrive": [
+      0.0,
+      -10.23
+     ]
+    }
+   ]
+  },
+  "SnakemouthMushroomPit": {
+   "bounds": [
+    -13.4,
+    -4.62,
+    19.4,
+    83.0
+   ],
+   "doors": [
+    {
+     "index": 6,
+     "name": "WarpDoorRoom",
+     "to": "SnakemouthUndergrondDoor",
+     "at": [
+      0.0,
+      -4.62
+     ],
+     "arrive": [
+      -24.0,
+      44.8
+     ]
+    },
+    {
+     "index": 8,
+     "name": "LoadingTreasure",
+     "to": "SnakemouthTreasureRoom",
+     "at": [
+      0.0,
+      83.0
+     ],
+     "arrive": [
+      0.0,
+      -16.7
+     ]
+    }
+   ]
+  },
+  "SnakemouthTop": {
+   "bounds": [
+    -9.76,
+    -6.0,
+    7.68,
+    -0.91
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "SnakemouthDoorRoom",
+     "at": [
+      7.68,
+      -6.0
+     ],
+     "arrive": [
+      -34.6,
+      11.39
+     ]
+    }
+   ]
+  },
+  "SnakemouthTreasureRoom": {
+   "bounds": [
+    0.0,
+    -13.5,
+    0.0,
+    25.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "LoadingMushroom",
+     "to": "SnakemouthMushroomPit",
+     "at": [
+      0.0,
+      -13.5
+     ],
+     "arrive": [
+      0.0,
+      86.23
+     ]
+    }
+   ]
+  },
+  "SnakemouthUndergrondDoor": {
+   "bounds": [
+    -49.8,
+    -7.75,
+    4.0,
+    61.3
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "WarpLake",
+     "to": "SnakemouthLake",
+     "at": [
+      0.0,
+      -7.75
+     ],
+     "arrive": [
+      -48.85,
+      65.3
+     ]
+    },
+    {
+     "index": 11,
+     "name": "WarpPit",
+     "to": "SnakemouthMushroomPit",
+     "at": [
+      -24.0,
+      40.88
+     ],
+     "arrive": [
+      0.0,
+      -6.15
+     ]
+    },
+    {
+     "index": 12,
+     "name": "LoadingRightDown",
+     "to": "SnakemouthUndergroundRightA",
+     "at": [
+      3.65,
+      51.43
+     ],
+     "arrive": [
+      -7.9,
+      0.0
+     ]
+    },
+    {
+     "index": 13,
+     "name": "WarpRightUp",
+     "to": "SnakemouthUndergroundRightB",
+     "at": [
+      -5.0,
+      60.5
+     ],
+     "arrive": [
+      -40.9,
+      23.6
+     ]
+    },
+    {
+     "index": 14,
+     "name": "WarpLeft",
+     "to": "SnakemouthUndergroundLeftA",
+     "at": [
+      -49.8,
+      49.5
+     ],
+     "arrive": [
+      8.0,
+      0.0
+     ]
+    },
+    {
+     "index": 15,
+     "name": "WarpLeftUp",
+     "to": "SnakemouthUndergroundLeftB",
+     "at": [
+      -42.6,
+      61.3
+     ],
+     "arrive": [
+      15.0,
+      11.9
+     ]
+    }
+   ]
+  },
+  "SnakemouthUndergroundLeftA": {
+   "bounds": [
+    -35.6,
+    -6.0,
+    5.79,
+    5.27
+   ],
+   "doors": [
+    {
+     "index": 6,
+     "name": "LoadingZoneDoor",
+     "to": "SnakemouthUndergrondDoor",
+     "at": [
+      5.79,
+      0.0
+     ],
+     "arrive": [
+      -53.64,
+      49.6
+     ]
+    },
+    {
+     "index": 7,
+     "name": "LoadingZoneNext",
+     "to": "SnakemouthUndergroundLeftB",
+     "at": [
+      -35.6,
+      0.0
+     ],
+     "arrive": [
+      12.4,
+      0.0
+     ]
+    }
+   ]
+  },
+  "SnakemouthUndergroundLeftB": {
+   "bounds": [
+    -50.0,
+    0.0,
+    99.0,
+    13.25
+   ],
+   "doors": [
+    {
+     "index": 10,
+     "name": "LoadingZoneLow",
+     "to": "SnakemouthUndergroundLeftA",
+     "at": [
+      11.0,
+      0.0
+     ],
+     "arrive": [
+      -38.44,
+      0.0
+     ]
+    },
+    {
+     "index": 11,
+     "name": "LoadingZoneDoor",
+     "to": "SnakemouthUndergrondDoor",
+     "at": [
+      11.9,
+      12.08
+     ],
+     "arrive": [
+      -42.6,
+      64.1
+     ]
+    }
+   ]
+  },
+  "SnakemouthUndergroundRightA": {
+   "bounds": [
+    -5.61,
+    -3.31,
+    103.0,
+    16.16
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "LoadingZoneLeft",
+     "to": "SnakemouthUndergrondDoor",
+     "at": [
+      -5.61,
+      0.0
+     ],
+     "arrive": [
+      7.0,
+      51.5
+     ]
+    },
+    {
+     "index": 12,
+     "name": "WarpNext",
+     "to": "SnakemouthUndergroundRightB",
+     "at": [
+      87.6,
+      16.16
+     ],
+     "arrive": [
+      0.0,
+      -7.3
+     ]
+    }
+   ]
+  },
+  "SnakemouthUndergroundRightB": {
+   "bounds": [
+    -37.37,
+    -5.13,
+    12.1,
+    24.95
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "DoorMapA",
+     "to": "SnakemouthUndergroundRightA",
+     "at": [
+      0.0,
+      -5.13
+     ],
+     "arrive": [
+      87.72,
+      21.1
+     ]
+    },
+    {
+     "index": 1,
+     "name": "DoorMainRoom",
+     "to": "SnakemouthUndergrondDoor",
+     "at": [
+      -37.37,
+      23.7
+     ],
+     "arrive": [
+      -5.0,
+      63.7
+     ]
+    }
+   ]
+  },
+  "StreamMountain1": {
+   "bounds": [
+    -38.14,
+    -3.63,
+    6.0,
+    1.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonedesert",
+     "to": "DesertMountain",
+     "at": [
+      6.0,
+      -3.63
+     ],
+     "arrive": [
+      -25.0,
+      8.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzoneleft",
+     "to": "StreamMountain2",
+     "at": [
+      -38.14,
+      0.0
+     ],
+     "arrive": [
+      6.41,
+      -4.0
+     ]
+    }
+   ]
+  },
+  "StreamMountain2": {
+   "bounds": [
+    -33.7,
+    -4.0,
+    3.77,
+    7.29
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneright",
+     "to": "StreamMountain1",
+     "at": [
+      3.77,
+      -4.0
+     ],
+     "arrive": [
+      -40.69,
+      0.0
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzoneleft",
+     "to": "StreamMountain3",
+     "at": [
+      -33.7,
+      4.0
+     ],
+     "arrive": [
+      12.65,
+      2.0
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzonebottom",
+     "to": "StreamMountain4",
+     "at": [
+      -30.0,
+      1.33
+     ],
+     "arrive": [
+      6.51,
+      -4.0
+     ]
+    }
+   ]
+  },
+  "StreamMountain3": {
+   "bounds": [
+    -29.6,
+    2.0,
+    9.83,
+    30.08
+   ],
+   "doors": [
+    {
+     "index": 5,
+     "name": "loadzone right",
+     "to": "StreamMountain2",
+     "at": [
+      9.83,
+      2.0
+     ],
+     "arrive": [
+      -36.64,
+      4.0
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzone exit",
+     "to": "DesertOasis",
+     "at": [
+      -29.6,
+      24.0
+     ],
+     "arrive": [
+      32.4,
+      20.0
+     ]
+    }
+   ]
+  },
+  "StreamMountain4": {
+   "bounds": [
+    -46.61,
+    -9.1,
+    3.77,
+    7.29
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneright",
+     "to": "StreamMountain2",
+     "at": [
+      3.77,
+      -4.0
+     ],
+     "arrive": [
+      -30.0,
+      3.0
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadzone boss",
+     "to": "StreamMountain5",
+     "at": [
+      -46.61,
+      -2.0
+     ],
+     "arrive": [
+      25.12,
+      0.0
+     ]
+    }
+   ]
+  },
+  "StreamMountain5": {
+   "bounds": [
+    0.0,
+    -4.9,
+    21.91,
+    5.97
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "StreamMountain4",
+     "at": [
+      21.91,
+      0.0
+     ],
+     "arrive": [
+      -49.38,
+      -2.0
+     ]
+    }
+   ]
+  },
+  "Swamplands2": {
+   "bounds": [
+    -40.4,
+    -6.18,
+    11.1,
+    65.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone south",
+     "to": "SwamplandsEntrance",
+     "at": [
+      -4.0,
+      -6.18
+     ],
+     "arrive": [
+      6.0,
+      12.33
+     ]
+    },
+    {
+     "index": 12,
+     "name": "loadzonenorth",
+     "to": "Swamplands3",
+     "at": [
+      1.75,
+      58.59
+     ],
+     "arrive": [
+      -5.97,
+      -10.71
+     ]
+    }
+   ]
+  },
+  "Swamplands3": {
+   "bounds": [
+    -4.3,
+    -8.17,
+    71.5,
+    8.06
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone back",
+     "to": "Swamplands2",
+     "at": [
+      -4.3,
+      -8.17
+     ],
+     "arrive": [
+      1.75,
+      61.3
+     ]
+    },
+    {
+     "index": 7,
+     "name": "loadzoneright",
+     "to": "SwamplandsBridge",
+     "at": [
+      71.5,
+      0.0
+     ],
+     "arrive": [
+      -10.33,
+      0.0
+     ]
+    }
+   ]
+  },
+  "Swamplands4": {
+   "bounds": [
+    -8.42,
+    -11.8,
+    87.4,
+    7.17
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone left",
+     "to": "SwamplandsBridge",
+     "at": [
+      -8.42,
+      2.55
+     ],
+     "arrive": [
+      28.0,
+      -22.56
+     ]
+    },
+    {
+     "index": 19,
+     "name": "loadzoneright",
+     "to": "Swamplands5",
+     "at": [
+      87.4,
+      -2.0
+     ],
+     "arrive": [
+      -20.5,
+      -2.0
+     ]
+    }
+   ]
+  },
+  "Swamplands5": {
+   "bounds": [
+    -31.8,
+    -31.78,
+    48.6,
+    11.6
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneleft",
+     "to": "Swamplands4",
+     "at": [
+      -17.55,
+      -2.0
+     ],
+     "arrive": [
+      90.35,
+      -2.0
+     ]
+    },
+    {
+     "index": 22,
+     "name": "loadzonesouth",
+     "to": "Swamplands6",
+     "at": [
+      40.2,
+      -31.78
+     ],
+     "arrive": [
+      -2.0,
+      14.4
+     ]
+    },
+    {
+     "index": 23,
+     "name": "loadzone north",
+     "to": "Swamplands7",
+     "at": [
+      40.2,
+      11.6
+     ],
+     "arrive": [
+      -2.0,
+      -10.45
+     ]
+    },
+    {
+     "index": 24,
+     "name": "loadzoneright",
+     "to": "Swamplands8",
+     "at": [
+      48.6,
+      0.0
+     ],
+     "arrive": [
+      -6.91,
+      52.0
+     ]
+    }
+   ]
+  },
+  "Swamplands6": {
+   "bounds": [
+    -6.0,
+    -11.0,
+    83.5,
+    11.84
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneright",
+     "to": "Swamplands5",
+     "at": [
+      -2.0,
+      11.84
+     ],
+     "arrive": [
+      40.2,
+      -34.4
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadzone right",
+     "to": "Swamplands8",
+     "at": [
+      79.0,
+      5.39
+     ],
+     "arrive": [
+      -4.0,
+      -10.55
+     ]
+    }
+   ]
+  },
+  "Swamplands7": {
+   "bounds": [
+    -91.67,
+    -7.66,
+    3.63,
+    27.9
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone south",
+     "to": "Swamplands5",
+     "at": [
+      -2.0,
+      -7.66
+     ],
+     "arrive": [
+      40.2,
+      14.55
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzone left",
+     "to": "SwamplandsBridge",
+     "at": [
+      -91.67,
+      14.0
+     ],
+     "arrive": [
+      57.8,
+      0.0
+     ]
+    }
+   ]
+  },
+  "Swamplands8": {
+   "bounds": [
+    -22.6,
+    -7.52,
+    38.29,
+    54.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonesouth",
+     "to": "Swamplands6",
+     "at": [
+      -4.0,
+      -7.52
+     ],
+     "arrive": [
+      79.0,
+      8.01
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzonenorth",
+     "to": "Swamplands5",
+     "at": [
+      -4.0,
+      52.0
+     ],
+     "arrive": [
+      51.25,
+      0.0
+     ]
+    }
+   ]
+  },
+  "SwamplandsBoss": {
+   "bounds": [
+    -12.1,
+    -5.65,
+    50.0,
+    67.7
+   ],
+   "doors": [
+    {
+     "index": 2,
+     "name": "loadzonesouth",
+     "to": "SwamplandsBridge",
+     "at": [
+      0.0,
+      -5.65
+     ],
+     "arrive": [
+      18.8,
+      20.95
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzonenorth",
+     "to": "FGOutsideSwamplands",
+     "at": [
+      0.0,
+      67.7
+     ],
+     "arrive": [
+      11.8,
+      61.0
+     ]
+    }
+   ]
+  },
+  "SwamplandsBridge": {
+   "bounds": [
+    -7.65,
+    -19.56,
+    55.24,
+    18.23
+   ],
+   "doors": [
+    {
+     "index": 2,
+     "name": "loadzoneleft",
+     "to": "Swamplands3",
+     "at": [
+      -7.65,
+      0.0
+     ],
+     "arrive": [
+      73.96,
+      0.0
+     ]
+    },
+    {
+     "index": 13,
+     "name": "loadzone boss",
+     "to": "SwamplandsBoss",
+     "at": [
+      18.8,
+      18.23
+     ],
+     "arrive": [
+      0.0,
+      -8.7
+     ]
+    },
+    {
+     "index": 14,
+     "name": "loadzonesouth",
+     "to": "Swamplands4",
+     "at": [
+      28.0,
+      -19.56
+     ],
+     "arrive": [
+      -10.18,
+      4.5
+     ]
+    },
+    {
+     "index": 15,
+     "name": "loadzone right",
+     "to": "Swamplands7",
+     "at": [
+      55.24,
+      0.0
+     ],
+     "arrive": [
+      -94.24,
+      14.0
+     ]
+    }
+   ]
+  },
+  "SwamplandsEntrance": {
+   "bounds": [
+    -17.81,
+    -5.9,
+    7.61,
+    9.62
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneexit",
+     "to": "FGOutsideSwamplands",
+     "at": [
+      -17.81,
+      0.0
+     ],
+     "arrive": [
+      12.47,
+      6.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzonenorth",
+     "to": "Swamplands2",
+     "at": [
+      6.0,
+      9.62
+     ],
+     "arrive": [
+      -4.0,
+      -8.94
+     ]
+    }
+   ]
+  },
+  "TermiteColiseum1": {
+   "bounds": [
+    -21.95,
+    -9.59,
+    20.99,
+    10.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneoutside",
+     "to": "TermiteIndustrial",
+     "at": [
+      0.0,
+      -9.59
+     ],
+     "arrive": [
+      7.0,
+      82.61
+     ]
+    }
+   ]
+  },
+  "TermiteColiseum2": {
+   "bounds": [
+    -28.47,
+    10.65,
+    31.1,
+    42.66
+   ],
+   "doors": []
+  },
+  "TermiteIndustrial": {
+   "bounds": [
+    -49.7,
+    0.0,
+    45.68,
+    80.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonepier",
+     "to": "TermitePier",
+     "at": [
+      45.68,
+      0.0
+     ],
+     "arrive": [
+      -18.13,
+      -2.0
+     ]
+    },
+    {
+     "index": 17,
+     "name": "loadzonenearcoliseum",
+     "to": "TermiteIndustrial",
+     "at": [
+      7.0,
+      12.6
+     ],
+     "arrive": [
+      7.0,
+      61.36
+     ]
+    },
+    {
+     "index": 18,
+     "name": "NEARloadzoneback",
+     "to": "TermiteIndustrial",
+     "at": [
+      7.0,
+      63.0
+     ],
+     "arrive": [
+      7.0,
+      14.5
+     ]
+    },
+    {
+     "index": 19,
+     "name": "NEARloadzonecoliseum",
+     "to": "TermiteColiseum1",
+     "at": [
+      7.0,
+      80.0
+     ],
+     "arrive": [
+      0.0,
+      -12.5
+     ]
+    },
+    {
+     "index": 30,
+     "name": "loadzoneplaza",
+     "to": "TermiteMainPlaza",
+     "at": [
+      -49.7,
+      0.0
+     ],
+     "arrive": [
+      38.36,
+      -10.0
+     ]
+    },
+    {
+     "index": 57,
+     "name": "NEARloadzoneback",
+     "to": "TermiteIndustrial",
+     "at": [
+      -4.0,
+      63.0
+     ],
+     "arrive": [
+      7.0,
+      14.5
+     ]
+    },
+    {
+     "index": 58,
+     "name": "NEARloadzoneback",
+     "to": "TermiteIndustrial",
+     "at": [
+      16.0,
+      63.0
+     ],
+     "arrive": [
+      7.0,
+      14.5
+     ]
+    }
+   ]
+  },
+  "TermiteMainPlaza": {
+   "bounds": [
+    -45.13,
+    -13.98,
+    35.61,
+    13.87
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzoneright",
+     "to": "TermiteIndustrial",
+     "at": [
+      35.61,
+      -10.0
+     ],
+     "arrive": [
+      -52.2,
+      0.0
+     ]
+    },
+    {
+     "index": 17,
+     "name": "loadzonecastle",
+     "to": "TermiteRoyalChamber",
+     "at": [
+      0.0,
+      13.87
+     ],
+     "arrive": [
+      -20.69,
+      0.0
+     ]
+    }
+   ]
+  },
+  "TermiteOutside": {
+   "bounds": [
+    -34.0,
+    -5.87,
+    7.2,
+    32.3
+   ],
+   "doors": [
+    {
+     "index": 4,
+     "name": "loadzonecave",
+     "to": "BarrenLandsAntTunnel",
+     "at": [
+      -34.0,
+      29.61
+     ],
+     "arrive": [
+      0.0,
+      -10.65
+     ]
+    },
+    {
+     "index": 7,
+     "name": "loadzonesouth",
+     "to": "BarrenLandsMiniboss",
+     "at": [
+      0.0,
+      -5.87
+     ],
+     "arrive": [
+      23.17,
+      0.0
+     ]
+    }
+   ]
+  },
+  "TermitePier": {
+   "bounds": [
+    -15.72,
+    -6.08,
+    39.7,
+    13.2
+   ],
+   "doors": [
+    {
+     "index": 4,
+     "name": "loadzone",
+     "to": "TermiteIndustrial",
+     "at": [
+      -15.72,
+      -2.0
+     ],
+     "arrive": [
+      48.38,
+      0.0
+     ]
+    }
+   ]
+  },
+  "TermiteRoyalChamber": {
+   "bounds": [
+    -17.88,
+    -7.77,
+    49.8,
+    5.98
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "TermiteMainPlaza",
+     "at": [
+      -17.88,
+      0.0
+     ],
+     "arrive": [
+      0.0,
+      16.16
+     ]
+    }
+   ]
+  },
+  "TestRoom": {
+   "bounds": [
+    -23.03,
+    -37.0,
+    67.8,
+    16.3
+   ],
+   "doors": [
+    {
+     "index": 4,
+     "name": "loading zone",
+     "to": "AntTunnels",
+     "at": [
+      -22.21,
+      5.94
+     ],
+     "arrive": [
+      0.0,
+      5.0
+     ]
+    }
+   ]
+  },
+  "UndergroundBar": {
+   "bounds": [
+    -21.61,
+    -6.5,
+    17.18,
+    8.03
+   ],
+   "doors": [
+    {
+     "index": 9,
+     "name": "LoadZone",
+     "to": "BugariaCommercial",
+     "at": [
+      -21.38,
+      3.94
+     ],
+     "arrive": [
+      11.6,
+      10.75
+     ]
+    }
+   ]
+  },
+  "UpperSnekBeforeBoss": {
+   "bounds": [
+    -16.18,
+    -4.02,
+    47.9,
+    15.2
+   ],
+   "doors": [
+    {
+     "index": 6,
+     "name": "loadzoneboss",
+     "to": "UpperSnekBossRoom",
+     "at": [
+      -16.18,
+      0.0
+     ],
+     "arrive": [
+      5.9,
+      0.0
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadzoneback",
+     "to": "UpperSnekMiddleRoom",
+     "at": [
+      21.9,
+      -1.0
+     ],
+     "arrive": [
+      -41.1,
+      3.0
+     ]
+    }
+   ]
+  },
+  "UpperSnekBossRoom": {
+   "bounds": [
+    -45.14,
+    -3.63,
+    3.75,
+    10.5
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "UpperSnekBeforeBoss",
+     "at": [
+      3.75,
+      0.0
+     ],
+     "arrive": [
+      -18.71,
+      0.0
+     ]
+    }
+   ]
+  },
+  "UpperSnekEntrance": {
+   "bounds": [
+    0.0,
+    -13.77,
+    7.24,
+    10.35
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "door south",
+     "to": "SnakemouthDoorRoom",
+     "at": [
+      0.0,
+      -13.77
+     ],
+     "arrive": [
+      -23.0,
+      19.56
+     ]
+    },
+    {
+     "index": 3,
+     "name": "door north",
+     "to": "UpperSnekTransition",
+     "at": [
+      0.0,
+      10.35
+     ],
+     "arrive": [
+      12.52,
+      0.0
+     ]
+    }
+   ]
+  },
+  "UpperSnekGeizerRoom": {
+   "bounds": [
+    -51.71,
+    -4.47,
+    5.61,
+    18.1
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "UpperSnekMiddleRoom",
+     "at": [
+      5.61,
+      0.0
+     ],
+     "arrive": [
+      -31.0,
+      36.51
+     ]
+    }
+   ]
+  },
+  "UpperSnekMiddleRoom": {
+   "bounds": [
+    -38.2,
+    -19.98,
+    36.8,
+    34.2
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneboss",
+     "to": "UpperSnekBeforeBoss",
+     "at": [
+      -38.2,
+      3.0
+     ],
+     "arrive": [
+      24.68,
+      -1.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzoneentrance",
+     "to": "UpperSnekTransition",
+     "at": [
+      36.8,
+      3.0
+     ],
+     "arrive": [
+      -60.81,
+      -1.0
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzonepressure",
+     "to": "UpperSnekPressurePlateRoom",
+     "at": [
+      14.0,
+      29.37
+     ],
+     "arrive": [
+      0.0,
+      -10.61
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzone switch",
+     "to": "UpperSnekSwitchPuzzle",
+     "at": [
+      -16.0,
+      33.37
+     ],
+     "arrive": [
+      9.75,
+      1.0
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzoneplatform",
+     "to": "UpperSnekPlatformRoom",
+     "at": [
+      8.0,
+      -19.98
+     ],
+     "arrive": [
+      20.18,
+      -2.0
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadzoneriverorom",
+     "to": "UpperSnekRiverPuzzle",
+     "at": [
+      -34.0,
+      -19.81
+     ],
+     "arrive": [
+      6.41,
+      0.0
+     ]
+    },
+    {
+     "index": 9,
+     "name": "loadzonegeizer",
+     "to": "UpperSnekGeizerRoom",
+     "at": [
+      -31.0,
+      34.2
+     ],
+     "arrive": [
+      8.36,
+      0.0
+     ]
+    }
+   ]
+  },
+  "UpperSnekPlatformRoom": {
+   "bounds": [
+    -29.0,
+    -2.02,
+    17.73,
+    15.3
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzone",
+     "to": "UpperSnekMiddleRoom",
+     "at": [
+      17.73,
+      -2.0
+     ],
+     "arrive": [
+      8.0,
+      -22.83
+     ]
+    }
+   ]
+  },
+  "UpperSnekPressurePlateRoom": {
+   "bounds": [
+    -17.67,
+    -7.94,
+    13.69,
+    10.0
+   ],
+   "doors": [
+    {
+     "index": 21,
+     "name": "loadzone",
+     "to": "UpperSnekMiddleRoom",
+     "at": [
+      0.0,
+      -7.94
+     ],
+     "arrive": [
+      14.0,
+      31.5
+     ]
+    }
+   ]
+  },
+  "UpperSnekRiverPuzzle": {
+   "bounds": [
+    -24.5,
+    -3.1,
+    3.65,
+    28.87
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "UpperSnekMiddleRoom",
+     "at": [
+      3.65,
+      0.0
+     ],
+     "arrive": [
+      -34.0,
+      -22.57
+     ]
+    }
+   ]
+  },
+  "UpperSnekSwitchPuzzle": {
+   "bounds": [
+    -38.77,
+    -1.8,
+    7.65,
+    5.0
+   ],
+   "doors": [
+    {
+     "index": 10,
+     "name": "loadzone",
+     "to": "UpperSnekMiddleRoom",
+     "at": [
+      7.65,
+      1.0
+     ],
+     "arrive": [
+      -16.0,
+      36.11
+     ]
+    }
+   ]
+  },
+  "UpperSnekTransition": {
+   "bounds": [
+    -58.65,
+    -1.0,
+    9.5,
+    7.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneback",
+     "to": "UpperSnekEntrance",
+     "at": [
+      9.5,
+      0.0
+     ],
+     "arrive": [
+      0.0,
+      12.45
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzoneforward",
+     "to": "UpperSnekMiddleRoom",
+     "at": [
+      -58.65,
+      -1.0
+     ],
+     "arrive": [
+      39.34,
+      3.0
+     ]
+    }
+   ]
+  },
+  "WaspKingdom1": {
+   "bounds": [
+    0.0,
+    -2.37,
+    18.0,
+    11.69
+   ],
+   "doors": [
+    {
+     "index": 2,
+     "name": "loadzone",
+     "to": "WaspKingdom2",
+     "at": [
+      18.0,
+      11.69
+     ],
+     "arrive": [
+      0.0,
+      -6.74
+     ]
+    }
+   ]
+  },
+  "WaspKingdom2": {
+   "bounds": [
+    -16.76,
+    -3.6,
+    15.66,
+    31.3
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonesouth",
+     "to": "WaspKingdom1",
+     "at": [
+      0.0,
+      -3.6
+     ],
+     "arrive": [
+      18.0,
+      14.47
+     ]
+    },
+    {
+     "index": 7,
+     "name": "loadzoneleft",
+     "to": "WaspKingdom3",
+     "at": [
+      -15.7,
+      28.0
+     ],
+     "arrive": [
+      7.7,
+      0.0
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadzoneright",
+     "to": "WaspKingdom4",
+     "at": [
+      15.66,
+      30.0
+     ],
+     "arrive": [
+      -9.86,
+      0.0
+     ]
+    },
+    {
+     "index": 9,
+     "name": "loadzonedrill",
+     "to": "WaspKingdomDrillRoom",
+     "at": [
+      -16.76,
+      12.0
+     ],
+     "arrive": [
+      17.49,
+      2.0
+     ]
+    }
+   ]
+  },
+  "WaspKingdom3": {
+   "bounds": [
+    -33.63,
+    -3.89,
+    5.64,
+    12.64
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "WaspKingdom2",
+     "at": [
+      5.64,
+      0.0
+     ],
+     "arrive": [
+      -18.21,
+      28.0
+     ]
+    }
+   ]
+  },
+  "WaspKingdom4": {
+   "bounds": [
+    -7.8,
+    -3.0,
+    45.73,
+    28.8
+   ],
+   "doors": [
+    {
+     "index": 2,
+     "name": "loadzoneback",
+     "to": "WaspKingdom2",
+     "at": [
+      -7.8,
+      0.0
+     ],
+     "arrive": [
+      18.82,
+      30.0
+     ]
+    },
+    {
+     "index": 10,
+     "name": "loadzonenext",
+     "to": "WaspKingdom5",
+     "at": [
+      45.73,
+      23.0
+     ],
+     "arrive": [
+      -18.9,
+      0.0
+     ]
+    }
+   ]
+  },
+  "WaspKingdom5": {
+   "bounds": [
+    -16.56,
+    -5.46,
+    16.59,
+    13.65
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone left",
+     "to": "WaspKingdom4",
+     "at": [
+      -16.56,
+      0.0
+     ],
+     "arrive": [
+      47.81,
+      23.0
+     ]
+    },
+    {
+     "index": 2,
+     "name": "loadzoneright",
+     "to": "WaspKingdomPrison",
+     "at": [
+      16.59,
+      0.0
+     ],
+     "arrive": [
+      -29.9,
+      0.0
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzone vent",
+     "to": "WaspKingdomMainHall",
+     "at": [
+      7.0,
+      13.65
+     ],
+     "arrive": [
+      -36.1,
+      10.0
+     ]
+    }
+   ]
+  },
+  "WaspKingdomDrillRoom": {
+   "bounds": [
+    -8.09,
+    -3.94,
+    15.73,
+    2.0
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "WaspKingdom2",
+     "at": [
+      15.73,
+      2.0
+     ],
+     "arrive": [
+      -18.7,
+      12.0
+     ]
+    }
+   ]
+  },
+  "WaspKingdomJayde": {
+   "bounds": [
+    -0.96,
+    -7.51,
+    4.67,
+    3.21
+   ],
+   "doors": [
+    {
+     "index": 1,
+     "name": "loadzone",
+     "to": "WaspKingdomPrison",
+     "at": [
+      0.0,
+      -7.51
+     ],
+     "arrive": [
+      12.0,
+      13.83
+     ]
+    }
+   ]
+  },
+  "WaspKingdomMainHall": {
+   "bounds": [
+    -33.3,
+    -10.01,
+    19.6,
+    27.9
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonevent",
+     "to": "WaspKingdom5",
+     "at": [
+      -33.3,
+      10.0
+     ],
+     "arrive": [
+      7.0,
+      15.3
+     ]
+    },
+    {
+     "index": 4,
+     "name": "loadzonethrone",
+     "to": "WaspKingdomThrone",
+     "at": [
+      0.0,
+      27.9
+     ],
+     "arrive": [
+      0.0,
+      -6.3
+     ]
+    },
+    {
+     "index": 5,
+     "name": "loadzoneoutside",
+     "to": "WaspKingdomOutside",
+     "at": [
+      0.0,
+      -10.01
+     ],
+     "arrive": [
+      0.0,
+      15.27
+     ]
+    }
+   ]
+  },
+  "WaspKingdomOutside": {
+   "bounds": [
+    -25.9,
+    -10.0,
+    23.24,
+    31.9
+   ],
+   "doors": [
+    {
+     "index": 7,
+     "name": "loadzone right",
+     "to": "FGOutsideSwamplands",
+     "at": [
+      17.8,
+      31.9
+     ],
+     "arrive": [
+      -13.4,
+      77.34
+     ]
+    },
+    {
+     "index": 8,
+     "name": "loadzonecave",
+     "to": "FGCave",
+     "at": [
+      -25.9,
+      14.15
+     ],
+     "arrive": [
+      26.31,
+      -2.0
+     ]
+    },
+    {
+     "index": 14,
+     "name": "loadzoneinside",
+     "to": "WaspKingdom1",
+     "at": [
+      -11.4,
+      18.5
+     ],
+     "arrive": [
+      -4.45,
+      3.0
+     ]
+    },
+    {
+     "index": 16,
+     "name": "loadzoneinside",
+     "to": "WaspKingdomMainHall",
+     "at": [
+      0.0,
+      12.67
+     ],
+     "arrive": [
+      0.0,
+      -13.75
+     ]
+    },
+    {
+     "index": 17,
+     "name": "loadzonesouth",
+     "to": "FarGrasslandsLake",
+     "at": [
+      0.0,
+      -10.0
+     ],
+     "arrive": [
+      -3.0,
+      53.9
+     ]
+    }
+   ]
+  },
+  "WaspKingdomPrison": {
+   "bounds": [
+    -27.6,
+    -0.54,
+    20.61,
+    11.72
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneleft",
+     "to": "WaspKingdom5",
+     "at": [
+      -27.6,
+      0.0
+     ],
+     "arrive": [
+      18.5,
+      0.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzoneright",
+     "to": "WaspKingdomJayde",
+     "at": [
+      12.0,
+      11.72
+     ],
+     "arrive": [
+      0.0,
+      -10.37
+     ]
+    }
+   ]
+  },
+  "WaspKingdomQueen": {
+   "bounds": [
+    -3.81,
+    0.0,
+    11.3,
+    0.0
+   ],
+   "doors": [
+    {
+     "index": 3,
+     "name": "loadzone",
+     "to": "WaspKingdomThrone",
+     "at": [
+      -3.81,
+      0.0
+     ],
+     "arrive": [
+      0.0,
+      31.01
+     ]
+    }
+   ]
+  },
+  "WaspKingdomThrone": {
+   "bounds": [
+    -8.3,
+    -3.86,
+    19.2,
+    29.7
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzoneback",
+     "to": "WaspKingdomMainHall",
+     "at": [
+      0.0,
+      -3.86
+     ],
+     "arrive": [
+      0.0,
+      29.7
+     ]
+    },
+    {
+     "index": 6,
+     "name": "loadzonequeen",
+     "to": "WaspKingdomQueen",
+     "at": [
+      0.0,
+      29.7
+     ],
+     "arrive": [
+      -5.7,
+      0.0
+     ]
+    }
+   ]
+  },
+  "WizardTowerAttic": {
+   "bounds": [
+    -6.02,
+    -5.07,
+    9.71,
+    2.68
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzone",
+     "to": "WizardTowerStairs",
+     "at": [
+      9.71,
+      0.0
+     ],
+     "arrive": [
+      0.0,
+      -11.5
+     ]
+    }
+   ]
+  },
+  "WizardTowerBasement": {
+   "bounds": [
+    -11.13,
+    -5.3,
+    13.0,
+    7.63
+   ],
+   "doors": [
+    {
+     "index": 2,
+     "name": "loadzone",
+     "to": "WizardTowerStairs",
+     "at": [
+      10.0,
+      7.63
+     ],
+     "arrive": [
+      -11.54,
+      0.0
+     ]
+    }
+   ]
+  },
+  "WizardTowerStairs": {
+   "bounds": [
+    -8.45,
+    -8.56,
+    1.5,
+    5.84
+   ],
+   "doors": [
+    {
+     "index": 0,
+     "name": "loadzonebasement",
+     "to": "WizardTowerBasement",
+     "at": [
+      -8.45,
+      0.0
+     ],
+     "arrive": [
+      10.0,
+      9.9
+     ]
+    },
+    {
+     "index": 1,
+     "name": "loadzoneoutside",
+     "to": "FarGrasslandsWizard",
+     "at": [
+      0.0,
+      -8.5
+     ],
+     "arrive": [
+      37.09,
+      5.1
+     ]
+    },
+    {
+     "index": 3,
+     "name": "loadzoneattic",
+     "to": "WizardTowerAttic",
+     "at": [
+      0.0,
+      -8.56
+     ],
+     "arrive": [
+      12.07,
+      0.0
+     ]
+    }
+   ]
+  }
+ }
+}
