@@ -90,7 +90,9 @@ made by the user), never inside the randomizer's repo. Each step is written up a
 9. **Following the player:** on a current-map change, `ActivateTab` to its world part and `Pan`/`Zoom` to the
    room (Ui Hints, since 0.34.0).
 10. **Hints:** hinted checks highlighted (`Highlight` on sections, since 0.32.0).
-11. **Variants** (manifest `variants`): "Map" and "Compact" (items and checks list, no map).
+11. **Variants** (manifest `variants`): "Map" and "Compact" (items only). PopTracker has no checks-list widget: a
+    layout's types are container, dock, array, tabbed, group, item, itemgrid, map, layout, recentpins, text and
+    canvas (`doc/PACKS.md`, Layouts, 2026-10-03), so checks show only as pins on a map.
 12. **Layouts:** `tracker_default`, `tracker_broadcast` (a stream view), and `settings_popup` holding the fog of
     war toggle.
 13. **Updates:** `versions_url` in the manifest, and a listing in PopTracker's pack list (its `packlist` branch,
@@ -106,7 +108,8 @@ made by the user), never inside the randomizer's repo. Each step is written up a
 
 ## Order
 
-1. The logic export, the item grid and the check list (no map), with the Compact variant.
+1. The logic export, the item grid, and the checks as pins on a placeholder map drawn by code (built 2026-10-03:
+   `tools/export.py`, `scripts/logic.lua`, `tests/test_parity.py`).
 2. The map, following the player, and hints.
 3. Fog of war and doors, once the randomizer writes its data storage keys.
 4. Updates and the pack list, once the user makes the repo.

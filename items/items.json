@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Explorer Permit",
+    "img": "images/items/explorer_permit.png",
+    "codes": "explorer_permit",
+    "type": "toggle"
+  },
+  {
+    "name": "Quest Book",
+    "img": "images/items/quest_book.png",
+    "codes": "quest_book",
+    "type": "toggle"
+  },
+  {
+    "name": "Boat Ticket",
+    "img": "images/items/boat_ticket.png",
+    "codes": "boat_ticket",
+    "type": "toggle"
+  },
+  {
+    "name": "Subaquatic Maritime Neotransport",
+    "img": "images/items/subaquatic_maritime_neotransport.png",
+    "codes": "subaquatic_maritime_neotransport",
+    "type": "toggle"
+  },
+  {
+    "name": "Progressive Boat",
+    "img": "images/items/progressive_boat.png",
+    "codes": "progressive_boat",
+    "type": "consumable",
+    "max_quantity": 2
+  },
+  {
+    "name": "Vi",
+    "img": "images/items/vi.png",
+    "codes": "vi",
+    "type": "toggle"
+  },
+  {
+    "name": "Kabbu",
+    "img": "images/items/kabbu.png",
+    "codes": "kabbu",
+    "type": "toggle"
+  },
+  {
+    "name": "Leif",
+    "img": "images/items/leif.png",
+    "codes": "leif",
+    "type": "toggle"
+  },
+  {
+    "name": "Progressive Beemerang",
+    "img": "images/items/progressive_beemerang.png",
+    "codes": "progressive_beemerang",
+    "type": "consumable",
+    "max_quantity": 2
+  },
+  {
+    "name": "Horn Slash",
+    "img": "images/items/horn_slash.png",
+    "codes": "horn_slash",
+    "type": "toggle"
+  },
+  {
+    "name": "Progressive Freeze",
+    "img": "images/items/progressive_freeze.png",
+    "codes": "progressive_freeze",
+    "type": "consumable",
+    "max_quantity": 2
+  },
+  {
+    "name": "Jump",
+    "img": "images/items/jump.png",
+    "codes": "jump",
+    "type": "toggle"
+  },
+  {
+    "name": "Progressive Dash",
+    "img": "images/items/progressive_dash.png",
+    "codes": "progressive_dash",
+    "type": "consumable",
+    "max_quantity": 2
+  },
+  {
+    "name": "Bee Fly",
+    "img": "images/items/bee_fly.png",
+    "codes": "bee_fly",
+    "type": "toggle"
+  },
+  {
+    "name": "Beetle Dig",
+    "img": "images/items/beetle_dig.png",
+    "codes": "beetle_dig",
+    "type": "toggle"
+  },
+  {
+    "name": "Shield",
+    "img": "images/items/shield.png",
+    "codes": "shield",
+    "type": "toggle"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "item_grid": {
+    "type": "itemgrid",
+    "item_margin": "2,2",
+    "item_size": "32,32",
+    "h_alignment": "left",
+    "rows": [
+      [
+        "explorer_permit",
+        "quest_book",
+        "boat_ticket",
+        "subaquatic_maritime_neotransport",
+        "progressive_boat"
+      ],
+      [
+        "vi",
+        "kabbu",
+        "leif"
+      ],
+      [
+        "progressive_beemerang",
+        "horn_slash",
+        "progressive_freeze",
+        "jump",
+        "progressive_dash",
+        "bee_fly"
+      ],
+      [
+        "beetle_dig",
+        "shield"
+      ]
+    ]
+  }
+}

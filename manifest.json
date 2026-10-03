@@ -1,0 +1,16 @@
+{
+  "name": "Bug Fables Archipelago",
+  "game_name": "Bug Fables",
+  "package_uid": "bug_fables_archipelago",
+  "package_version": "0.1.0",
+  "platform": "pc",
+  "author": "Tsukino",
+  "variants": {
+    "map": {
+      "display_name": "Map",
+      "flags": ["ap"]
+    }
+  },
+  "min_poptracker_version": "0.25.6",
+  "target_poptracker_version": "0.35.4"
+}

@@ -1,0 +1,1085 @@
+[
+  {
+    "name": "BugariaOutskirtsOutsideCity",
+    "visibility_rules": [
+      "$bf_room_in_seed|BugariaOutskirtsOutsideCity"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 20,
+        "y": 20
+      }
+    ],
+    "sections": [
+      {
+        "name": "Outskirts: Artis's Gift",
+        "access_rules": [
+          "$bf_location|7720003"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720003"
+        ]
+      },
+      {
+        "name": "Outskirts: Artis's Prize for Snakemouth Den",
+        "access_rules": [
+          "$bf_location|7720013"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720013"
+        ]
+      },
+      {
+        "name": "Outskirts: Caravan, Item Shop 1",
+        "access_rules": [
+          "$bf_location|7720063"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720063"
+        ]
+      },
+      {
+        "name": "Outskirts: Caravan, Item Shop 2",
+        "access_rules": [
+          "$bf_location|7720064"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720064"
+        ]
+      },
+      {
+        "name": "Outskirts: Caravan, Item Shop 3",
+        "access_rules": [
+          "$bf_location|7720065"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720065"
+        ]
+      },
+      {
+        "name": "Outskirts: Ladybug Siblings' House",
+        "access_rules": [
+          "$bf_location|7720014"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720014"
+        ]
+      },
+      {
+        "name": "Outskirts: Madeleine's House, Table Left",
+        "access_rules": [
+          "$bf_location|7720045"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720045"
+        ]
+      },
+      {
+        "name": "Outskirts: Madeleine's House, Table Right",
+        "access_rules": [
+          "$bf_location|7720044"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720044"
+        ]
+      },
+      {
+        "name": "Outskirts: Maki and Eetl's Gift",
+        "access_rules": [
+          "$bf_location|7720001"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720001"
+        ]
+      },
+      {
+        "name": "Outskirts: Outside the City, Opening",
+        "access_rules": [
+          "$bf_location|7720066"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720066"
+        ]
+      },
+      {
+        "name": "Outskirts: Outside the City, Tutorial Battle",
+        "access_rules": [
+          "$bf_location|7720075"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720075"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BugariaOutskirtsEast1",
+    "visibility_rules": [
+      "$bf_room_in_seed|BugariaOutskirtsEast1"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 60,
+        "y": 20
+      }
+    ],
+    "sections": [
+      {
+        "name": "Outskirts: East Road, Stone",
+        "access_rules": [
+          "$bf_location|7720025"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720025"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BOGoldenPath",
+    "visibility_rules": [
+      "$bf_room_in_seed|BOGoldenPath"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 100,
+        "y": 20
+      }
+    ],
+    "sections": [
+      {
+        "name": "Outskirts: Golden Path, Grass",
+        "access_rules": [
+          "$bf_location|7720012"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720012"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "NearSnakemouth",
+    "visibility_rules": [
+      "$bf_room_in_seed|NearSnakemouth"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 140,
+        "y": 20
+      }
+    ],
+    "sections": [
+      {
+        "name": "Outskirts: Near Snakemouth Den, Reward",
+        "access_rules": [
+          "$bf_location|7720002"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720002"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BugariaPier",
+    "visibility_rules": [
+      "$bf_room_in_seed|BugariaPier"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 180,
+        "y": 20
+      }
+    ],
+    "sections": [
+      {
+        "name": "Outskirts: Pier",
+        "access_rules": [
+          "$bf_location|7720026"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720026"
+        ]
+      },
+      {
+        "name": "Outskirts: Pier, Statue",
+        "access_rules": [
+          "$bf_location|7720027"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720027"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "OutsideSnakemouth",
+    "visibility_rules": [
+      "$bf_room_in_seed|OutsideSnakemouth"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 220,
+        "y": 20
+      }
+    ],
+    "sections": [
+      {
+        "name": "Outskirts: Snakemouth Den Entrance",
+        "access_rules": [
+          "$bf_location|7720019"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720019"
+        ]
+      },
+      {
+        "name": "Outskirts: Snakemouth Den Entrance, Arrival",
+        "access_rules": [
+          "$bf_location|7720028"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720028"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SnakemouthBridgeRoom",
+    "visibility_rules": [
+      "$bf_room_in_seed|SnakemouthBridgeRoom"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 20,
+        "y": 60
+      }
+    ],
+    "sections": [
+      {
+        "name": "Snakemouth Den: Bridge Room, Hidden Spot",
+        "access_rules": [
+          "$bf_location|7720030"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720030"
+        ]
+      },
+      {
+        "name": "Snakemouth Den: Bridge Room, Pillar",
+        "access_rules": [
+          "$bf_location|7720006"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720006"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SnakemouthDoorRoom",
+    "visibility_rules": [
+      "$bf_room_in_seed|SnakemouthDoorRoom"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 60,
+        "y": 60
+      }
+    ],
+    "sections": [
+      {
+        "name": "Snakemouth Den: Door Room, Trapdoor",
+        "access_rules": [
+          "$bf_location|7720011"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720011"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SnakemouthFallRoom",
+    "visibility_rules": [
+      "$bf_room_in_seed|SnakemouthFallRoom"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 100,
+        "y": 60
+      }
+    ],
+    "sections": [
+      {
+        "name": "Snakemouth Den: Fall Room, After the Spider",
+        "access_rules": [
+          "$bf_location|7720067"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720067"
+        ]
+      },
+      {
+        "name": "Snakemouth Den: Fall Room, Spider Fight",
+        "access_rules": [
+          "$bf_location|7720029"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720029"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SnakemouthLake",
+    "visibility_rules": [
+      "$bf_room_in_seed|SnakemouthLake"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 140,
+        "y": 60
+      }
+    ],
+    "sections": [
+      {
+        "name": "Snakemouth Den: Lake, Bush by the Sign",
+        "access_rules": [
+          "$bf_location|7720021"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720021"
+        ]
+      },
+      {
+        "name": "Snakemouth Den: Lake, Ladybug Kid's Reward",
+        "access_rules": [
+          "$bf_location|7720010"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720010"
+        ]
+      },
+      {
+        "name": "Snakemouth Den: Lake, Pillar",
+        "access_rules": [
+          "$bf_location|7720007"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720007"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SnakemouthMushroomPit",
+    "visibility_rules": [
+      "$bf_room_in_seed|SnakemouthMushroomPit"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 180,
+        "y": 60
+      }
+    ],
+    "sections": [
+      {
+        "name": "Snakemouth Den: Mushroom Pit, Droplets",
+        "access_rules": [
+          "$bf_location|7720009"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720009"
+        ]
+      },
+      {
+        "name": "Snakemouth Den: Mushroom Pit, Floor",
+        "access_rules": [
+          "$bf_location|7720008"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720008"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SnakemouthUndergroundRightB",
+    "visibility_rules": [
+      "$bf_room_in_seed|SnakemouthUndergroundRightB"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 220,
+        "y": 60
+      }
+    ],
+    "sections": [
+      {
+        "name": "Snakemouth Den: Underground Bridge Room, Behind Pillar",
+        "access_rules": [
+          "$bf_location|7720024"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720024"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SnakemouthUndergrondDoor",
+    "visibility_rules": [
+      "$bf_room_in_seed|SnakemouthUndergrondDoor"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 260,
+        "y": 60
+      }
+    ],
+    "sections": [
+      {
+        "name": "Snakemouth Den: Underground Door Room",
+        "access_rules": [
+          "$bf_location|7720005"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720005"
+        ]
+      },
+      {
+        "name": "Snakemouth Den: Underground Door Room, Floor 2",
+        "access_rules": [
+          "$bf_location|7720023"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720023"
+        ]
+      },
+      {
+        "name": "Snakemouth Den: Underground Door Room, Grass",
+        "access_rules": [
+          "$bf_location|7720031"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720031"
+        ]
+      },
+      {
+        "name": "Snakemouth Den: Underground Door Room, Pillar",
+        "access_rules": [
+          "$bf_location|7720022"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720022"
+        ]
+      },
+      {
+        "name": "Snakemouth Den: Underground Door Room, Upper Left",
+        "access_rules": [
+          "$bf_location|7720020"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720020"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AntPalaceLibrary",
+    "visibility_rules": [
+      "$bf_room_in_seed|AntPalaceLibrary"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 20,
+        "y": 100
+      }
+    ],
+    "sections": [
+      {
+        "name": "Ant Palace: Library, Bookshelf",
+        "access_rules": [
+          "$bf_location|7720015"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720015"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BugariaCommercial",
+    "visibility_rules": [
+      "$bf_room_in_seed|BugariaCommercial"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 60,
+        "y": 100
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bugaria City: Commercial District, Item Shop 1",
+        "access_rules": [
+          "$bf_location|7720058"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720058"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Item Shop 2",
+        "access_rules": [
+          "$bf_location|7720059"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720059"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Item Shop 3",
+        "access_rules": [
+          "$bf_location|7720060"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720060"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Item Shop 4",
+        "access_rules": [
+          "$bf_location|7720061"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720061"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Item Shop 5",
+        "access_rules": [
+          "$bf_location|7720062"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720062"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 1",
+        "access_rules": [
+          "$bf_location|7720034"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720034"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 10",
+        "access_rules": [
+          "$bf_location|7720043"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720043"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 11",
+        "access_rules": [
+          "$bf_location|7720046"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720046"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 12",
+        "access_rules": [
+          "$bf_location|7720047"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720047"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 13",
+        "access_rules": [
+          "$bf_location|7720048"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720048"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 14",
+        "access_rules": [
+          "$bf_location|7720049"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720049"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 15",
+        "access_rules": [
+          "$bf_location|7720050"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720050"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 16",
+        "access_rules": [
+          "$bf_location|7720051"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720051"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 17",
+        "access_rules": [
+          "$bf_location|7720052"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720052"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 18",
+        "access_rules": [
+          "$bf_location|7720053"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720053"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 19",
+        "access_rules": [
+          "$bf_location|7720054"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720054"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 2",
+        "access_rules": [
+          "$bf_location|7720035"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720035"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 20",
+        "access_rules": [
+          "$bf_location|7720055"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720055"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 21",
+        "access_rules": [
+          "$bf_location|7720056"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720056"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 22",
+        "access_rules": [
+          "$bf_location|7720057"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720057"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 3",
+        "access_rules": [
+          "$bf_location|7720036"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720036"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 4",
+        "access_rules": [
+          "$bf_location|7720037"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720037"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 5",
+        "access_rules": [
+          "$bf_location|7720038"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720038"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 6",
+        "access_rules": [
+          "$bf_location|7720039"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720039"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 7",
+        "access_rules": [
+          "$bf_location|7720040"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720040"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 8",
+        "access_rules": [
+          "$bf_location|7720041"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720041"
+        ]
+      },
+      {
+        "name": "Bugaria City: Commercial District, Medal Shop 9",
+        "access_rules": [
+          "$bf_location|7720042"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720042"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BugariaResidential",
+    "visibility_rules": [
+      "$bf_room_in_seed|BugariaResidential"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 100,
+        "y": 100
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bugaria City: Residential District, Fountain Rooftop",
+        "access_rules": [
+          "$bf_location|7720033"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720033"
+        ]
+      },
+      {
+        "name": "Bugaria City: Residential District, Old Book Delivery Berries",
+        "access_rules": [
+          "$bf_location|7720018"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720018"
+        ]
+      },
+      {
+        "name": "Bugaria City: Residential District, Old Book Delivery Reward",
+        "access_rules": [
+          "$bf_location|7720016"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720016"
+        ]
+      },
+      {
+        "name": "Bugaria City: Residential District, Old Book Delivery Start",
+        "access_rules": [
+          "$bf_location|7720017"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720017"
+        ]
+      },
+      {
+        "name": "Bugaria City: Residential District, Rooftop",
+        "access_rules": [
+          "$bf_location|7720032"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720032"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BarrenLandsBeefly",
+    "visibility_rules": [
+      "$bf_room_in_seed|BarrenLandsBeefly"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 20,
+        "y": 140
+      }
+    ],
+    "sections": [
+      {
+        "name": "Barren Lands: Fly Spot",
+        "access_rules": [
+          "$bf_location|7720073"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720073"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "HideoutCell",
+    "visibility_rules": [
+      "$bf_room_in_seed|HideoutCell"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 60,
+        "y": 140
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bugaria Hideout: Cell",
+        "access_rules": [
+          "$bf_location|7720071"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720071"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GoldenSettlement2",
+    "visibility_rules": [
+      "$bf_room_in_seed|GoldenSettlement2"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 100,
+        "y": 140
+      }
+    ],
+    "sections": [
+      {
+        "name": "Golden Settlement: Festival, Wacka Worm Game",
+        "access_rules": [
+          "$bf_location|7720068"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720068"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "FactoryProcessingFirstRoom",
+    "visibility_rules": [
+      "$bf_room_in_seed|FactoryProcessingFirstRoom"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 140,
+        "y": 140
+      }
+    ],
+    "sections": [
+      {
+        "name": "Honey Factory: First Room, Switch",
+        "access_rules": [
+          "$bf_location|7720070"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720070"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BOLostSandsEntrance",
+    "visibility_rules": [
+      "$bf_room_in_seed|BOLostSandsEntrance"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 180,
+        "y": 140
+      }
+    ],
+    "sections": [
+      {
+        "name": "Lost Sands: Entrance",
+        "access_rules": [
+          "$bf_location|7720069"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720069"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SwamplandsBridge",
+    "visibility_rules": [
+      "$bf_room_in_seed|SwamplandsBridge"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 220,
+        "y": 140
+      }
+    ],
+    "sections": [
+      {
+        "name": "Swamplands: Bridge",
+        "access_rules": [
+          "$bf_location|7720072"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720072"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TermiteRoyalChamber",
+    "visibility_rules": [
+      "$bf_room_in_seed|TermiteRoyalChamber"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 260,
+        "y": 140
+      }
+    ],
+    "sections": [
+      {
+        "name": "Termite Capitol: Throne Room",
+        "access_rules": [
+          "$bf_location|7720076"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720076"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "UpperSnekTransition",
+    "visibility_rules": [
+      "$bf_room_in_seed|UpperSnekTransition"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "overview",
+        "x": 300,
+        "y": 140
+      }
+    ],
+    "sections": [
+      {
+        "name": "Upper Snakemouth: Entrance",
+        "access_rules": [
+          "$bf_location|7720074"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720074"
+        ]
+      }
+    ]
+  }
+]
