@@ -210,6 +210,8 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
         "entrances": entrances,
         "partners": partners,
         "one_way_to": {f"{d.map}|{d.door}": {"region": data.landing_region(d), "map": d.to} for d in data.ONE_WAYS},
+        # The map each part of a map belongs to (a map's own region is its name).
+        "region_maps": {a.region: a.map for a in data.MAP_AREAS},
         # A one-way door's story copies, other doors in the game, are its one entrance in the doors key.
         "one_way_copies": {data.door_name(d.map, copy): data.door_name(d.map, d.door)
                            for d in data.ONE_WAYS for copy in d.copies},
@@ -685,10 +687,15 @@ def main() -> None:
             entry["type"] = "toggle"
         items_json.append(entry)
 
+    # Not an Archipelago item: lit once the server reports the goal (autotracking.lua).
+    write(PACK / "images/items/goal.png", square_icon((240, 220, 120)))
+    items_json.append({"name": "Goal", "img": "images/items/goal.png", "codes": "goal", "type": "toggle"})
+
     rows: list[list[str]] = []
     for kind in sorted({item["kind"] for item in logic["items"]}):
         codes = [item["code"] for item in logic["items"] if item["kind"] == kind]
         rows += [codes[i:i + 6] for i in range(0, len(codes), 6)]
+    rows.append(["goal"])
     write(PACK / "layouts/item_grid.json", json.dumps({"item_grid": {
         "type": "itemgrid", "item_margin": "2,2", "item_size": "32,32", "h_alignment": "left", "rows": rows,
     }}, indent=2) + "\n")

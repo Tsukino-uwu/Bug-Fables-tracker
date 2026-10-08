@@ -5,9 +5,9 @@ is its own repo (a sibling checkout, `../bug_fables_ap`), and its rules carry ov
 
 ## Starting a session
 
-- Read `PLAN.md`, then in the randomizer: build step 42 of `agent_docs/apimplementation.md` (how the pack was built
-  so far, its Status line), the latest entry of `agent_docs/log.md`, and group 12 of its local `TO-CHECK.md` (what
-  the user has seen in PopTracker, what's still to see).
+- Read `PLAN.md`, then in the randomizer: the pack's build steps in `agent_docs/apimplementation.md` (42, and 56 on;
+  how the pack was built so far, each one's Status line), the latest entry of `agent_docs/log.md`, and its local
+  `TO-CHECK.md` (what the user has seen in PopTracker, what's still to see).
 - Work that needs the apworld changed happens in the randomizer's repo, under its own CLAUDE.md and hooks.
 
 ## What never changes

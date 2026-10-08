@@ -291,6 +291,18 @@ function bf_eval(rule)
     return eval(rule)
 end
 
+-- Where a door the player went through led in this seed, by its name in the doors key (a one-way's story copy names
+-- its door): the region, and that region's map. Nil for a name the logic doesn't have.
+function bf_door_led_to(name)
+    name = DATA.one_way_copies[name] or name
+    for _, entrance in ipairs(SEED.entrances) do
+        if entrance.name == name then
+            return entrance.to, DATA.region_maps[entrance.to] or entrance.to
+        end
+    end
+    return nil
+end
+
 -- The regions the sweep reached, and this seed's entrances.
 function bf_reached()
     return bf_state().reached

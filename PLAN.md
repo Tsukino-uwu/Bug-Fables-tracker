@@ -1,8 +1,8 @@
 # Plan: a PopTracker pack for the Bug Fables Archipelago randomizer
 
 Planned 2026-10-01; building since 2026-10-03, in this repo (MIT, like the randomizer; its GitHub repo made by the
-user 2026-10-04, private until released), never inside the randomizer's repo. Each step is written up as a build step in the randomizer's
-`agent_docs/apimplementation.md` (the user, 2026-10-03).
+user 2026-10-04, private until released), never inside the randomizer's repo. Each step is written up as a build
+step in the randomizer's `agent_docs/apimplementation.md` (the user, 2026-10-03).
 
 ## Goal
 
@@ -42,11 +42,13 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
   - `options` (since the randomizer's build step 39, 2026-10-03): the options as the seed applied them, toggles as
     JSON booleans: `shuffle_field_moves`, `shuffle_jump`, `points_of_no_return`, `artifacts_required` (capped),
     `progressive_boat`, the location categories, `entrance_randomizer`, `shop_contents`, `filler_starting_checks`,
-    `exclude_locations`, `extra_roadblocks` (since the randomizer's build step 48; a set, sent as a sorted list). The old top-level `shuffle_moves`, `shuffle_jump`, `points_of_no_return` and
-    `artifacts_required` are gone, and nothing reads older seeds (the user: no support for older versions).
+    `exclude_locations`, `extra_roadblocks` (since the randomizer's build step 48; a set, sent as a sorted list).
+    The old top-level `shuffle_moves`, `shuffle_jump`, `points_of_no_return` and `artifacts_required` are gone, and
+    nothing reads older seeds (the user: no support for older versions).
   - Universal Tracker rebuilds the seed from these same keys (the randomizer's build step 40).
-- **Data storage**, through `SetNotify`. The mod writes none of these yet; they're planned in the randomizer
-  (its `UNIVERSAL-TRACKER-PLAN.md`, Step E). Names and formats are a contract between the two:
+- **Data storage**, through `SetNotify`. The mod writes all three since 2026-10-08: the doors key with the
+  randomizer's build step 55, the other two with its build step 57 (not yet seen in game). Names and formats are a
+  contract between the two:
 
   | Key | Written by the mod | Used here for |
   |---|---|---|
@@ -58,8 +60,8 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
   shuffled doors hidden there until taken), so `door` is the apworld's entrance name for the door walked through.
 
 - **Hints:** Archipelago's `_read_hints_{team}_{slot}` (`docs/network protocol.md`, Get), for highlighting
-  hinted checks. The server answers `SetNotify` on a `_read_` key with `SetReply` (`MultiServer.py`, 0.6.8); whether
-  PopTracker passes one through is still to read in its docs or source.
+  hinted checks. The server answers `SetNotify` on a `_read_` key with `SetReply` (`MultiServer.py`, 0.6.8), and
+  PopTracker passes every key's `Retrieved` and `SetReply` on to the pack (`src/ap/aptracker.h`, `d2af7f1`).
 - **The apworld itself,** for the logic export: from the randomizer's checkout, recording its commit and
   `world_version`, until the next release, then that release pinned (the user, 2026-10-08).
 
@@ -107,11 +109,16 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
    rooms" is on (off by default).
 7. **Doors:** with the door shuffle on, each door taken (the doors key) shows where it led, as far as PopTracker
    can show it: a badge or section on the room's pin, never a drawn line. Find the best fit in the docs then.
+   Built 2026-10-08: the key read (item 21) and each taken door's destination worked out in Lua (`bf_door_led_to`,
+   tested against every door of generated seeds). Still to come: showing it, a pick on screen: sections are fixed
+   in `locations.json`, and a location has no text of its own (`doc/PACKS.md`; items have `BadgeText`).
 8. **Items:** an item grid layout with every item that matters (party, abilities, key items, Artifacts count,
    Progressive Boat stages), auto-tracked from received items.
 9. **Following the player:** on a current-map change, `ActivateTab` to its world part and `Pan`/`Zoom` to the
    room (Ui Hints, since 0.34.0).
-10. **Hints:** hinted checks highlighted (`Highlight` on sections, since 0.32.0).
+10. **Hints:** hinted checks highlighted (`Highlight` on sections, since 0.32.0). Built 2026-10-08: each of this
+    slot's hinted checks takes the `Highlight` of its hint's status (PopTracker's states are Archipelago's
+    `HintStatus`: Unspecified, NoPriority, Avoid, Priority; found is None), read from `_read_hints_{team}_{slot}`.
 11. **Variants** (manifest `variants`): "Map" and "Compact" (items only). PopTracker has no checks-list widget: a
     layout's types are container, dock, array, tabbed, group, item, itemgrid, map, layout, recentpins, text and
     canvas (`doc/PACKS.md`, Layouts, 2026-10-03), so checks show only as pins on a map.
@@ -119,26 +126,35 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
     war toggle.
 13. **Updates:** `versions_url` in the manifest, and a listing in PopTracker's pack list (its `packlist` branch,
     read its rules first).
-14. **Version check:** `min_poptracker_version` and `target_poptracker_version` set to what was tested.
+14. **Version check:** `min_poptracker_version` and `target_poptracker_version` set to what was tested. The minimum
+    is 0.33.0 since 2026-10-08, the newest API the pack uses (`Archipelago.Seed`; its `CHANGELOG.md`).
 
 The rest of PopTracker's Archipelago interface (`doc/AUTOTRACKING.md`, `d2af7f1`), every part of it (the user,
 2026-10-05: "support them all"; added 2026-10-08):
 
 15. **A DeathLink shown:** `Archipelago:AddBouncedHandler`, whose argument is the bounce as a table; one tagged
-    `DeathLink` marks the party in the item grid for a while (the look picked by the user on screen).
+    `DeathLink` marks the party in the item grid for a while (the look picked by the user on screen). Built
+    2026-10-08 with a first look: "DL" in red on the party's items for 10 seconds (`BadgeText`,
+    `ScriptHost:AddOnFrameHandler`).
 16. **The goal shown as done:** Archipelago's read-only `_read_client_status_{team}_{slot}` (`docs/network
-    protocol.md`, Get; 30 is `CLIENT_GOAL`), asked with `Archipelago:Get` from the Clear handler and again as checks
-    come in. Whether `SetNotify` covers a `_read_` key is the same question as the hints' (above).
+    protocol.md`, Get; 30 is `CLIENT_GOAL`). Built 2026-10-08: a Goal item at the end of the grid, lit when the key
+    reads `Archipelago.ClientStatus.GOAL`. `SetNotify` covers a `_read_` key: the server notifies its subscribers
+    (`MultiServer.py`, `on_client_status_change`, 0.6.8) and PopTracker passes every key on (`src/ap/aptracker.h`).
 17. **A new seed starts fresh:** `Archipelago.Seed`, `.TeamNumber` and `.PlayerNumber` against what the pack kept; on a
-    different seed or slot, the pack's own state (fog of war's toggle state, anything stored) is reset.
+    different seed or slot, the pack's own state (fog of war's toggle state, anything stored) is reset. Built
+    2026-10-08, the data storage values read so far being that state for now.
 18. **Checks right at connect:** `Archipelago.CheckedLocations` and `.MissingLocations` read in the Clear handler, so
-    the pins are right before the first Location handler fires.
+    the pins are right before the first Location handler fires. Built 2026-10-03 (`8b40d72`), tested 2026-10-08.
 19. **Hints that say whose item:** `Archipelago:GetPlayerAlias`, `:GetPlayerGame` and `:GetItemName` (since 0.28.1)
-    for each hint of item 10: "whose item, which game".
-20. **The connect replay in one go:** `Tracker.BulkUpdate` (`doc/PACKS.md`, Tracker) around the items replayed on
-    connect, under `pcall` so it is always set back; `Tracker.AllowDeferredLogicUpdate` beside it.
+    for each hint of item 10: "whose item, which game". Not built: a section shows no text of its own, so where to
+    show it is a pick on screen.
+20. **The connect replay in one go:** not needed. PopTracker defers logic updates by itself for packs with the `ap`
+    flag that target 0.31 or later (its `CHANGELOG.md`, v0.31.0, "Default to AllowDeferredLogicUpdate for packs with
+    'ap' flag"; v0.30.2: this "may make any use of BulkUpdate obsolete"), and this pack targets 0.35.4.
 21. **Data storage read at connect:** `Archipelago:Get(keys)` from the Clear handler beside `SetNotify`, with
-    `AddRetrievedHandler`, so fog of war, the map and the doors are right before the first change.
+    `AddRetrievedHandler`, so fog of war, the map and the doors are right before the first change. Built 2026-10-08
+    the way PopTracker's own `examples/ap-storage-example` does it: `SetNotify`, then `Get`, one handler for both
+    answers, each value's type checked.
 
 ## Not applicable (recorded so it's a decision, not a gap)
 
@@ -155,10 +171,10 @@ The rest of PopTracker's Archipelago interface (`doc/AUTOTRACKING.md`, `d2af7f1`
    `tools/export.py`, `scripts/logic.lua`, `tests/test_parity.py`); exported again at world 0.3.0 (2026-10-08: map
    areas, `CanReachRegion`, `ItemOnHand`, the new options; the randomizer's build step 56).
 2. The map (its first version built 2026-10-04, see item 4), following the player, and hints.
-3. Fog of war and doors, once the randomizer writes its data storage keys (its build step 55 starts with the doors
-   key).
-4. Updates and the pack list, once the user makes the repo.
-5. Items 15-21: none waits on the randomizer; 21 comes with the keys of step 3.
+3. Fog of war and doors: the randomizer writes their data storage keys since 2026-10-08 (its build steps 55 and 57).
+4. Updates and the pack list, once the repo goes public with a release.
+5. Items 15-21: built 2026-10-08 (`scripts/autotracking.lua`, `tests/test_autotracking.py`), but 19, which waits
+   for a place on screen, and 20, which PopTracker does itself.
 
 ## Rules carried over from the randomizer
 

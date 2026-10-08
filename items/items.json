@@ -116,5 +116,11 @@
     "img": "images/items/shield.png",
     "codes": "shield",
     "type": "toggle"
+  },
+  {
+    "name": "Goal",
+    "img": "images/items/goal.png",
+    "codes": "goal",
+    "type": "toggle"
   }
 ]

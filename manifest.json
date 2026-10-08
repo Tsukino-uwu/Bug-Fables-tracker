@@ -11,6 +11,6 @@
       "flags": ["ap"]
     }
   },
-  "min_poptracker_version": "0.25.6",
+  "min_poptracker_version": "0.33.0",
   "target_poptracker_version": "0.35.4"
 }

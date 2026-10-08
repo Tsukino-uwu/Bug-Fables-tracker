@@ -33,6 +33,9 @@
       [
         "beetle_dig",
         "shield"
+      ],
+      [
+        "goal"
       ]
     ]
   }
