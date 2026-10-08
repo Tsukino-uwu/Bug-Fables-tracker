@@ -32,18 +32,23 @@ SEEDS = int(os.environ.get("PARITY_SEEDS", "60"))
 STATES_PER_SEED = 12
 # The options that change the logic or the location set, each rolled at random.
 ROLLED = (*WORLD["slot_data"].SLOT_OPTIONS, "starting_party_member", "starting_location")
+OPTIONS = BugFablesWorld.options_dataclass.type_hints
+# Extra Roadblocks has no roadblocks yet and then takes any name: two stand-ins, so its "contains" filters are compared.
+ROADBLOCKS = sorted(OPTIONS["extra_roadblocks"].valid_keys) or ["Test Roadblock A", "Test Roadblock B"]
 
 
 def random_options(rng: random.Random) -> dict:
     options = {}
     for name in ROLLED:
-        option = BugFablesWorld.options_dataclass.type_hints[name]
+        option = OPTIONS[name]
         if issubclass(option, Toggle):
             options[name] = rng.random() < 0.5
         elif issubclass(option, Choice):
             options[name] = rng.choice(sorted(set(option.options.values())))
         elif issubclass(option, Range):
             options[name] = rng.randint(option.range_start, option.range_end)
+        elif name == "extra_roadblocks":
+            options[name] = [block for block in ROADBLOCKS if rng.random() < 0.5]
     return options
 
 
@@ -66,16 +71,30 @@ class Lua:
 
 
 def every_custom_rule() -> list:
-    """Each of the apworld's own rules with each argument it takes, and the rules built from them: the logic may not
-    use one yet (a one-way's way back waits for the rooms to be mapped), so they're compared one by one too."""
-    from rule_builder.rules import Has
+    """Each of the apworld's own rules with each argument it takes, the rules built from them, a region reached, and
+    each kind of option filter: the logic may not use one yet, so they're compared one by one too."""
+    from rule_builder.options import OptionFilter
+    from rule_builder.rules import CanReachRegion, Has
 
     rules = WORLD["custom_rules"]
     abilities = WORLD["abilities"].ABILITIES
+    data = WORLD["data"]
+    shops = {loc.region if loc.area is None else f"{loc.region} ({loc.area})"
+             for loc in data.LOCATIONS if loc.category == "item_shop"}
+    filtered = []
+    for resolution in (False, True):
+        filtered += [Has("Jump", options=[OptionFilter(OPTIONS["extra_roadblocks"], block, "contains")],
+                         filtered_resolution=resolution) for block in ROADBLOCKS]
+        filtered += [Has("Jump", options=[OptionFilter(OPTIONS["entrance_randomizer"], [1, 3], "in")],
+                         filtered_resolution=resolution),
+                     Has("Jump", options=[OptionFilter(OPTIONS["shop_contents"], 1, "ge")],
+                         filtered_resolution=resolution)]
     return [*(rules.CanUse(name) for name in abilities), *(rules.MoveItem(name) for name in abilities),
             *(rules.Member(name) for name in WORLD["items"].MEMBERS), rules.Boat(1), rules.Boat(2),
             rules.WayBack(Has("Jump")), rules.one_way(Has("Explorer Permit"), Has("Jump")),
-            rules.WHOLE_PARTY, rules.ALL_ATTACKS, WORLD["rules"].JUMP]
+            rules.WHOLE_PARTY, rules.ALL_ATTACKS, WORLD["rules"].JUMP, rules.ItemOnHand(),
+            *(CanReachRegion(region) for region in sorted(shops)), CanReachRegion(data.MAP_AREAS[0].region),
+            *filtered]
 
 
 class TestParity(unittest.TestCase):
@@ -93,7 +112,7 @@ class TestParity(unittest.TestCase):
             world = multiworld.worlds[1]
             lua.set_seed({"options": WORLD["slot_data"].options_for_slot(world), "door_targets": [],
                           "starting_member": world.starting_member,
-                          "world_version": WORLD["data"].WORLD_VERSION}, None)
+                          "world_version": BugFablesWorld.world_version.as_simple_string()}, None)
             for k in range(STATES_PER_SEED):
                 held = {name: rng.randint(0, 2) for name in codes if rng.random() < 0.6}
                 state = CollectionState(multiworld)
@@ -102,6 +121,7 @@ class TestParity(unittest.TestCase):
                         state.collect(world.create_item(name), prevent_sweep=True)
                 lua.counts.clear()
                 lua.counts.update({codes[name]: count for name, count in held.items()})
+                lua.g.bf_eval_state()
                 for rule, table in rules:
                     with self.subTest(rule=str(rule), options=options, held=held):
                         self.assertEqual(lua.g.bf_eval(table), rule.resolve(world)(state))
@@ -112,6 +132,8 @@ class TestParity(unittest.TestCase):
         codes = {item["name"]: item["code"] for item in export.build(WORLD)["items"]}
         for n in range(SEEDS):
             options = random_options(rng)
+            # Each door mode as often as the others: off, Coupled, Room Swap, Decoupled.
+            options["entrance_randomizer"] = n % 4
             seed = rng.getrandbits(32)
             with self.subTest(seed=seed, options=options):
                 multiworld = setup_multiworld(BugFablesWorld, steps=(), seed=seed, options=options)
@@ -126,6 +148,12 @@ class TestParity(unittest.TestCase):
                 self.assertEqual({i for i in WORLD["data"].LOCATION_NAME_TO_ID.values() if lua.g.bf_in_seed(i)},
                                  set(ids), "the categories")
                 lua.set_seed(slot_data, ids)
+
+                # Every entrance Archipelago made, door by door, as the pack's Lua has it from door_targets.
+                made = {(e.name, e.parent_region.name, e.connected_region.name)
+                        for e in multiworld.get_entrances(1)}
+                pack = {(e["name"], e["from"], e["to"]) for e in lua.g.bf_entrances().values()}
+                self.assertEqual(sorted(made - pack), [], "entrances the pack's Lua doesn't have")
 
                 pool = [item for item in multiworld.itempool if item.player == 1 and item.advancement]
                 events = [loc for loc in world.get_locations() if loc.address is None]
@@ -147,6 +175,24 @@ class TestParity(unittest.TestCase):
                     names = {loc.address: loc.name for loc in world.get_locations()}
                     self.assertEqual(sorted(names[i] for i in got - expected), [], f"state {k}: Lua only")
                     self.assertEqual(sorted(names[i] for i in expected - got), [], f"state {k}: apworld only")
+                    # The regions reached, a map's parts included.
+                    reached = {name for name, on in lua.g.bf_reached().items() if on}
+                    self.assertEqual(reached, {r.name for r in multiworld.get_regions(1) if r.can_reach(state)},
+                                     f"state {k}: regions")
+
+
+class TestExport(unittest.TestCase):
+    def test_locations(self) -> None:
+        logic = export.build(WORLD)
+        data = WORLD["data"]
+        ids = [loc["id"] for loc in logic["locations"]]
+        self.assertEqual(len(ids), len(set(ids)), "a location exported twice")
+        pending = {data.LOCATION_NAME_TO_ID[loc.name] for loc in data.LOCATIONS if loc.pending}
+        self.assertEqual(set(ids), set(data.LOCATION_NAME_TO_ID.values()) - pending)
+
+    def test_one_way_copies_as_universal_tracker_reads_them(self) -> None:
+        from worlds.bug_fables import universal_tracker
+        self.assertEqual(export.build(WORLD)["one_way_copies"], universal_tracker._COPY_OF)
 
 
 if __name__ == "__main__":

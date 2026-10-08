@@ -6,6 +6,24 @@
     "type": "toggle"
   },
   {
+    "name": "Flower Key",
+    "img": "images/items/flower_key.png",
+    "codes": "flower_key",
+    "type": "toggle"
+  },
+  {
+    "name": "Sun Offering",
+    "img": "images/items/sun_offering.png",
+    "codes": "sun_offering",
+    "type": "toggle"
+  },
+  {
+    "name": "Moon Offering",
+    "img": "images/items/moon_offering.png",
+    "codes": "moon_offering",
+    "type": "toggle"
+  },
+  {
     "name": "Quest Book",
     "img": "images/items/quest_book.png",
     "codes": "quest_book",

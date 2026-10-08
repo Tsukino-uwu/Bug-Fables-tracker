@@ -7,8 +7,13 @@
     "rows": [
       [
         "explorer_permit",
+        "flower_key",
+        "sun_offering",
+        "moon_offering",
         "quest_book",
-        "boat_ticket",
+        "boat_ticket"
+      ],
+      [
         "subaquatic_maritime_neotransport",
         "progressive_boat"
       ],

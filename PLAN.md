@@ -1,7 +1,7 @@
 # Plan: a PopTracker pack for the Bug Fables Archipelago randomizer
 
-Planned 2026-10-01; building since 2026-10-03, in this repo (MIT, like the randomizer; its GitHub repo comes later,
-made by the user), never inside the randomizer's repo. Each step is written up as a build step in the randomizer's
+Planned 2026-10-01; building since 2026-10-03, in this repo (MIT, like the randomizer; its GitHub repo made by the
+user 2026-10-04, private until released), never inside the randomizer's repo. Each step is written up as a build step in the randomizer's
 `agent_docs/apimplementation.md` (the user, 2026-10-03).
 
 ## Goal
@@ -42,7 +42,7 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
   - `options` (since the randomizer's build step 39, 2026-10-03): the options as the seed applied them, toggles as
     JSON booleans: `shuffle_field_moves`, `shuffle_jump`, `points_of_no_return`, `artifacts_required` (capped),
     `progressive_boat`, the location categories, `entrance_randomizer`, `shop_contents`, `filler_starting_checks`,
-    `exclude_locations`. The old top-level `shuffle_moves`, `shuffle_jump`, `points_of_no_return` and
+    `exclude_locations`, `extra_roadblocks` (since the randomizer's build step 48; a set, sent as a sorted list). The old top-level `shuffle_moves`, `shuffle_jump`, `points_of_no_return` and
     `artifacts_required` are gone, and nothing reads older seeds (the user: no support for older versions).
   - Universal Tracker rebuilds the seed from these same keys (the randomizer's build step 40).
 - **Data storage**, through `SetNotify`. The mod writes none of these yet; they're planned in the randomizer
@@ -58,13 +58,16 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
   shuffled doors hidden there until taken), so `door` is the apworld's entrance name for the door walked through.
 
 - **Hints:** Archipelago's `_read_hints_{team}_{slot}` (`docs/network protocol.md`, Get), for highlighting
-  hinted checks. Check whether `SetNotify` covers a `_read_` key, or poll it with `Get`.
-- **The apworld itself,** at a pinned release, for the logic export.
+  hinted checks. The server answers `SetNotify` on a `_read_` key with `SetReply` (`MultiServer.py`, 0.6.8); whether
+  PopTracker passes one through is still to read in its docs or source.
+- **The apworld itself,** for the logic export: from the randomizer's checkout, recording its commit and
+  `world_version`, until the next release, then that release pinned (the user, 2026-10-08).
 
 ## Randomizer facts it builds on (the randomizer's repo, 2026-10-01)
 
 - One region per game map: 243 maps, 508 shuffled doors (`apworld/bug_fables/data/doors.json`), plus fixed links
-  and transfers (boat, elevators, story) that are never shuffled.
+  and transfers (boat, elevators, story) that are never shuffled. Since the randomizer's build step 48 (2026-10-05) a
+  map a roadblock cuts in parts has a region per part ("Map (Area)"), and a door or a location may stand in one.
 - **Room Swap** moves "areas" (a map plus the maps joined to it by fixed doors) into another area's slot, within
   one of the 10 world parts and with the same door count. The slot graph stays vanilla (`entrances.py`).
 - **Coupled/Decoupled** hand all 508 doors to Archipelago's `randomize_entrances`: any door to any door.
@@ -74,13 +77,18 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
 
 ## What it contains
 
-1. **Logic export** (a generator script): imports the pinned apworld and writes the logic data: each region's
-   entrances and each location's rule from Rule Builder `to_dict` (Archipelago 0.6.7 `docs/rule builder.md`,
+1. **Logic export** (a generator script): imports the apworld and writes the logic data: each region's
+   entrances and each location's rule from Rule Builder `to_dict` (Archipelago 0.6.8 `docs/rule builder.md`,
    Serialization: the intended way to a tracker). The custom rules `CanUse`, `Member`, `MoveItem`, `Boat` and
-   `WayBack` are exported by name and evaluated in Lua from the seed's slot_data options.
-2. **Lua:** an evaluator for the exported rule trees, and a region sweep (breadth-first from the start region over
-   the region graph with `door_targets` applied), rerun when items change.
-3. **Items and locations:** every Archipelago item with its code; one location per room, one section per check.
+   `WayBack` are exported by name and evaluated in Lua from the seed's slot_data options; `ItemOnHand` serializes
+   itself as the `Or` of the item shops it stands for (its `to_dict`, "Custom serialization"), so only Archipelago's
+   built-in rules carry it, `CanReachRegion` among them. Option filters: the comparisons, `contains` and `in`, each
+   checked by the export against the kind of option the Lua compares it for.
+2. **Lua:** an evaluator for the exported rule trees, and a region sweep (from the origin over the region graph with
+   `door_targets` applied, a door leading to the region its target's partner stands in, until nothing changes, so a
+   `CanReachRegion` read too early is asked again), rerun when items change.
+3. **Items and locations:** every Archipelago item with its code; one location per room, one section per check (a
+   check in a part of a map is a section of that map's pin).
 4. **The map, drawn by code at build time** (a standard-library PNG writer). Built 2026-10-03/04 from the game's own
    data (the user's pick: game data first, a hand table to nudge later); "good enough until we have checks
    everywhere" (the user, 2026-10-04):
@@ -144,7 +152,8 @@ The rest of PopTracker's Archipelago interface (`doc/AUTOTRACKING.md`, `d2af7f1`
 ## Order
 
 1. The logic export, the item grid, and the checks as pins on a placeholder map drawn by code (built 2026-10-03:
-   `tools/export.py`, `scripts/logic.lua`, `tests/test_parity.py`).
+   `tools/export.py`, `scripts/logic.lua`, `tests/test_parity.py`); exported again at world 0.3.0 (2026-10-08: map
+   areas, `CanReachRegion`, `ItemOnHand`, the new options; the randomizer's build step 56).
 2. The map (its first version built 2026-10-04, see item 4), following the player, and hints.
 3. Fog of war and doors, once the randomizer writes its data storage keys (its build step 55 starts with the doors
    key).
@@ -163,7 +172,8 @@ The rest of PopTracker's Archipelago interface (`doc/AUTOTRACKING.md`, `d2af7f1`
 
 - **The apworld comes from the randomizer's checkout**, imported through your Archipelago checkout (at the tag the
   world targets) where the randomizer's development guide links it in as `worlds/bug_fables`. The export records the
-  randomizer's commit and `world_version`. A release pin waits for a release with slot_data's `options`.
+  randomizer's commit and `world_version`. A release pin waits for the next release (the user, 2026-10-08: v0.3.0
+  has slot_data's `options` but not today's rooms; pinned once the next one is out).
 - **Checks:** PopTracker's own `pack-checker` (its CI action, as the Crystal pack's CI runs it; it validates against
   PopTracker's schemas), plus **lupa parity tests**. Archipelago has no standard for testing a tracker's Lua (its core
   runs no Lua; Rule Builder's Serialization section leaves the export to the world dev), and the Crystal pack has
@@ -174,8 +184,10 @@ The rest of PopTracker's Archipelago interface (`doc/AUTOTRACKING.md`, `d2af7f1`
 
 ## Verification
 
-- Generator tests: every location id appears once, every rule names a real item, the manifest is valid.
-- Logic parity (lupa): the pack's Lua against the apworld's Python logic, over many seeds and item states.
+- Generator tests: every location id appears once (pending ones out), every rule names a real item and a real
+  region, every door of `doors.json` found in the room data, the manifest is valid.
+- Logic parity (lupa): the pack's Lua against the apworld's Python logic, over many seeds and item states: the
+  locations, the regions reached and every entrance Archipelago made, each door mode as often as the others.
 - `pack-checker` on the source folder, and on the release zip before a release.
 - The user loads the pack in PopTracker against a local server (ask before starting either) and confirms on screen:
   the checks, logic colours, the item grid, the map, Room Swap placement, following the player, hints, doors,

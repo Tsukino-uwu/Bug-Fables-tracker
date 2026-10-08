@@ -39,6 +39,33 @@
         }
       },
       {
+        "title": "Desert",
+        "content": {
+          "type": "map",
+          "maps": [
+            "Desert"
+          ]
+        }
+      },
+      {
+        "title": "Golden Hills",
+        "content": {
+          "type": "map",
+          "maps": [
+            "GoldenHills"
+          ]
+        }
+      },
+      {
+        "title": "Golden Way",
+        "content": {
+          "type": "map",
+          "maps": [
+            "GoldenWay"
+          ]
+        }
+      },
+      {
         "title": "Golden Settlement",
         "content": {
           "type": "map",
@@ -57,11 +84,38 @@
         }
       },
       {
+        "title": "Far Grasslands",
+        "content": {
+          "type": "map",
+          "maps": [
+            "FarGrasslands"
+          ]
+        }
+      },
+      {
         "title": "Wild Grasslands",
         "content": {
           "type": "map",
           "maps": [
             "WildGrasslands"
+          ]
+        }
+      },
+      {
+        "title": "Sand Castle",
+        "content": {
+          "type": "map",
+          "maps": [
+            "SandCastle"
+          ]
+        }
+      },
+      {
+        "title": "Beehive",
+        "content": {
+          "type": "map",
+          "maps": [
+            "Beehive"
           ]
         }
       },
@@ -75,6 +129,33 @@
         }
       },
       {
+        "title": "Rubber Prison",
+        "content": {
+          "type": "map",
+          "maps": [
+            "RubberPrison"
+          ]
+        }
+      },
+      {
+        "title": "Giant Lair",
+        "content": {
+          "type": "map",
+          "maps": [
+            "GiantLair"
+          ]
+        }
+      },
+      {
+        "title": "Metal Lake",
+        "content": {
+          "type": "map",
+          "maps": [
+            "MetalLake"
+          ]
+        }
+      },
+      {
         "title": "Termite City",
         "content": {
           "type": "map",
@@ -84,11 +165,38 @@
         }
       },
       {
+        "title": "Wasp Kingdom",
+        "content": {
+          "type": "map",
+          "maps": [
+            "WaspKingdom"
+          ]
+        }
+      },
+      {
         "title": "Bandit Hideout",
         "content": {
           "type": "map",
           "maps": [
             "BanditHideout"
+          ]
+        }
+      },
+      {
+        "title": "Stream Mountain",
+        "content": {
+          "type": "map",
+          "maps": [
+            "StreamMountain"
+          ]
+        }
+      },
+      {
+        "title": "Chomper Caves",
+        "content": {
+          "type": "map",
+          "maps": [
+            "ChomperCaves"
           ]
         }
       },

@@ -1,6 +1,7 @@
 -- The apworld's logic, as tools/export.py writes it (generated/logic_data.lua): each rule as Rule Builder's to_dict
 -- writes it, evaluated against the items PopTracker tracks and the seed's options, over a region sweep as
--- Archipelago's own (regions reached through entrances, story events collected where reached, until nothing changes).
+-- Archipelago's own (regions, a map or a part of one, reached through entrances, story events collected where
+-- reached, until nothing changes).
 
 DATA = require("generated.logic_data")
 
@@ -9,8 +10,11 @@ for _, item in ipairs(DATA.items) do
     ITEM_CODE[item.name] = item.code
 end
 local LOCATION = {}
+local IDS_BY_MAP = {}
 for _, loc in ipairs(DATA.locations) do
     LOCATION[loc.id] = loc
+    IDS_BY_MAP[loc.map] = IDS_BY_MAP[loc.map] or {}
+    table.insert(IDS_BY_MAP[loc.map], loc.id)
 end
 
 -- The seed: its options, starting member and doors (slot_data), and its locations (the server's); the defaults until
@@ -46,7 +50,7 @@ local function category_on(category)
 end
 
 -- Each door's destination in this seed: door_targets sends a door where like_door leads in the game (a two-way door
--- to like_door's partner's map, a one-way to like_door's landing).
+-- to the region like_door's partner stands in, a one-way to the region like_door lands in).
 local function seed_entrances(door_targets)
     local like = {}
     for _, target in ipairs(door_targets or {}) do
@@ -57,12 +61,12 @@ local function seed_entrances(door_targets)
         local to = entrance.to
         if entrance.door then
             local key = entrance.door.map .. "|" .. entrance.door.door
-            to = DATA.partners[like[key] or key]
+            to = DATA.partners[like[key] or key].region
         elseif entrance.one_way then
             local target = like[entrance.one_way.map .. "|" .. entrance.one_way.door]
-            if target then to = DATA.one_way_to[target] end
+            if target then to = DATA.one_way_to[target].region end
         end
-        entrances[#entrances + 1] = { from = entrance.from, to = to, rule = entrance.rule }
+        entrances[#entrances + 1] = { name = entrance.name, from = entrance.from, to = to, rule = entrance.rule }
     end
     return entrances
 end
@@ -117,6 +121,8 @@ local function item_count(ability)
 end
 
 local eval
+-- The regions the sweep running now has reached, for CanReachRegion.
+local reached_now = {}
 
 local RULES = {
     And = function(rule)
@@ -141,6 +147,9 @@ local RULES = {
     True_ = function() return true end,
     False_ = function() return false end,
     Filtered = function(rule) return eval(rule.child) end,
+    -- Read against the regions reached so far: a false answer is asked again on the sweep's next pass, as Archipelago
+    -- rechecks such an entrance when the region is reached.
+    CanReachRegion = function(rule) return reached_now[rule.args.region_name] == true end,
     -- The apworld's own rules (custom_rules.py), each as its _instantiate resolves it.
     CanUse = function(rule)
         local data = DATA.abilities[rule.args.ability]
@@ -163,10 +172,30 @@ local RULES = {
     WayBack = function(rule) return truthy(SEED.options.points_of_no_return) or eval(rule.child) end,
 }
 
+-- As rule_builder/options.py checks a filter: "contains" asks for a name in an option set (a list in slot_data), "in"
+-- for the option's value in the filter's list.
+local function passes_filter(filter)
+    local value = SEED.options[DATA.option_names[filter.option]]
+    local operator = filter.operator or "eq"
+    if operator == "contains" then
+        for _, element in ipairs(value or {}) do
+            if element == filter.value then return true end
+        end
+        return false
+    elseif operator == "in" then
+        for _, element in ipairs(filter.value) do
+            if option_number(element) == option_number(value) then return true end
+        end
+        return false
+    end
+    local compare = OPERATORS[operator]
+    if compare == nil then error("Bug Fables: no option operator " .. tostring(operator)) end
+    return compare(option_number(value), option_number(filter.value))
+end
+
 local function passes_options(rule)
     for _, filter in ipairs(rule.options or {}) do
-        local value = option_number(SEED.options[DATA.option_names[filter.option]])
-        if not OPERATORS[filter.operator](value, option_number(filter.value)) then return false end
+        if not passes_filter(filter) then return false end
     end
     return true
 end
@@ -179,9 +208,10 @@ eval = function(rule)
     return evaluate(rule)
 end
 
-local function sweep()
+local function sweep(without_events)
     events_held = {}
     local reached = { [DATA.origin] = true }
+    reached_now = reached
     local collected = {}
     local changed = true
     while changed do
@@ -192,7 +222,7 @@ local function sweep()
                 changed = true
             end
         end
-        for index, event in ipairs(DATA.events) do
+        for index, event in ipairs(without_events and {} or DATA.events) do
             if not collected[index] and reached[event.region] and category_on(event.category) and eval(event.rule) then
                 collected[index] = true
                 events_held[event.item] = (events_held[event.item] or 0) + 1
@@ -228,12 +258,14 @@ end
 function bf_in_seed(id)
     id = tonumber(id)
     if SEED.locations then return SEED.locations[id] == true end
+    -- A pending location (a quest not yet gone through) is in no seed, so it isn't exported.
+    if LOCATION[id] == nil then return false end
     return category_on(LOCATION[id].category)
 end
 
-function bf_room_in_seed(region)
-    for _, loc in ipairs(DATA.locations) do
-        if loc.region == region and bf_in_seed(loc.id) then return true end
+function bf_room_in_seed(map)
+    for _, id in ipairs(IDS_BY_MAP[map] or {}) do
+        if bf_in_seed(id) then return true end
     end
     return false
 end
@@ -249,10 +281,23 @@ function bf_location(id)
     return bf_state().locations[tonumber(id)] == true
 end
 
--- One rule against the tracked items alone (no events): for the parity tests.
+-- For the parity tests. bf_eval_state, then bf_eval: rules against the tracked items alone, no story events, as a
+-- CollectionState the items were collected into without a sweep.
+function bf_eval_state()
+    sweep(true)
+end
+
 function bf_eval(rule)
-    events_held = {}
     return eval(rule)
+end
+
+-- The regions the sweep reached, and this seed's entrances.
+function bf_reached()
+    return bf_state().reached
+end
+
+function bf_entrances()
+    return SEED.entrances
 end
 
 bf_set_seed(nil, nil)

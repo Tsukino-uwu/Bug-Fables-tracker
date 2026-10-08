@@ -16,13 +16,16 @@ import struct
 import subprocess
 import sys
 import zlib
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
 PACK = Path(__file__).resolve().parent.parent
 # Rules the pack's Lua evaluates (scripts/logic.lua): Archipelago's and the apworld's own (its custom_rules.py).
-SUPPORTED_RULES = {"And", "Or", "Has", "HasAllCounts", "True_", "False_", "Filtered",
+SUPPORTED_RULES = {"And", "Or", "Has", "HasAllCounts", "True_", "False_", "Filtered", "CanReachRegion",
                    "CanUse", "Member", "MoveItem", "Boat", "WayBack"}
+# Option filter operators (rule_builder/options.py), each only on the kind of option the Lua compares it for.
+NUMBER_OPERATORS = {"eq", "ne", "gt", "lt", "ge", "le"}
 WORLD_MAP = "World"
 WORLD_SCALE = 70  # pixels per unit of the pause map's coordinates
 WORLD_MARGIN = 40
@@ -52,9 +55,10 @@ def load_world(archipelago: Path) -> dict[str, Any]:
     sys.path.insert(0, str(archipelago))
     import worlds.bug_fables as package
     from worlds.bug_fables import abilities, custom_rules, data_tables, items, logic, options, regions, rules, slot_data
+    from worlds.bug_fables.world import BugFablesWorld
     return {"package": package, "abilities": abilities, "custom_rules": custom_rules, "data": data_tables,
             "items": items, "logic": logic, "options": options, "regions": regions, "rules": rules,
-            "slot_data": slot_data}
+            "slot_data": slot_data, "world": BugFablesWorld}
 
 
 def randomizer_commit(package_dir: Path) -> str:
@@ -82,12 +86,37 @@ def rule_dict(rule: Any) -> dict[str, Any] | None:
     return None if rule is None else rule.to_dict()
 
 
+def check_filter(where: str, f: dict[str, Any], option: type) -> None:
+    """Only filters the Lua compares as Archipelago does: a number against a toggle, choice or range; a name in an
+    option set ("contains"); the option's number in a list of numbers ("in")."""
+    from Options import NumericOption, OptionSet, TextChoice
+    op, value = f.get("operator", "eq"), f["value"]
+    numeric = issubclass(option, NumericOption) and not issubclass(option, TextChoice)
+    if op in NUMBER_OPERATORS:
+        ok = numeric and isinstance(value, int)
+    elif op == "contains":
+        ok = issubclass(option, OptionSet) and isinstance(value, str)
+    elif op == "in":
+        ok = numeric and isinstance(value, list) and all(isinstance(v, int) for v in value)
+    else:
+        ok = False
+    if not ok:
+        raise SystemExit(f"{where}: an option filter the pack's Lua can't compare: {f}")
+
+
 def build(w: dict[str, Any]) -> dict[str, Any]:
+    from Options import OptionSet, Toggle
     data, regions, rules = w["data"], w["regions"], w["rules"]
     abilities, custom_rules, options = w["abilities"], w["custom_rules"], w["options"]
     option_fields = options.BugFablesOptions.type_hints
     option_names = {f"{cls.__module__}.{cls.__name__}": name for name, cls in option_fields.items()}
     sent = set(w["slot_data"].SLOT_OPTIONS)
+    known_regions = {regions.MENU, *data.REGIONS}
+    area_region = {(a.map, a.name): a.region for a in data.MAP_AREAS}
+
+    def region_of(spot: Any) -> str:
+        """A spot's region: its map's, or its map area's (locations.py places them the same way)."""
+        return spot.region if getattr(spot, "area", None) is None else area_region[(spot.region, spot.area)]
 
     door_of = {data.door_name(end.map, end.door): {"map": end.map, "door": end.door}
                for c in data.DOORS.connections for end in (c.a, c.b)}
@@ -100,18 +129,29 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
         elif e.name in one_way_of:
             entrance["one_way"] = one_way_of[e.name]
         entrances.append(entrance)
+    # Where each door leads in the game, as entrances.py connects it: to the region its partner stands in (a door
+    # given door_targets' like_door leads where like_door leads, arriving at like_door's partner).
     partners = {}
     for c in data.DOORS.connections:
-        partners[f"{c.a.map}|{c.a.door}"] = c.b.map
-        partners[f"{c.b.map}|{c.b.door}"] = c.a.map
+        for end, other in ((c.a, c.b), (c.b, c.a)):
+            partners[f"{end.map}|{end.door}"] = {"region": data.door_region(other.map, other.door),
+                                                 "map": other.map, "door": other.door}
 
-    locations = [{"id": data.LOCATION_NAME_TO_ID[loc.name], "name": loc.name, "region": loc.region,
-                  "category": loc.category, "rule": rule_dict(rules.spot_rule(loc))} for loc in data.LOCATIONS]
-    events = [{"name": e.name, "item": e.item, "region": e.region, "category": e.category,
+    # Pending locations (a quest not yet gone through) are in no seed (world.py).
+    locations = [{"id": data.LOCATION_NAME_TO_ID[loc.name], "name": loc.name, "region": region_of(loc),
+                  "map": loc.region, "category": loc.category, "rule": rule_dict(rules.spot_rule(loc))}
+                 for loc in data.LOCATIONS if not loc.pending]
+    events = [{"name": e.name, "item": e.item, "region": region_of(e), "map": e.region, "category": e.category,
                "rule": rule_dict(rules.spot_rule(e))} for e in data.STORY_EVENTS]
-    events += [{"name": a.name, "item": "Artifact", "region": a.region, "rule": rule_dict(rules.spot_rule(a))}
-               for a in data.ARTIFACTS]
+    events += [{"name": a.name, "item": "Artifact", "region": a.region, "map": a.region,
+                "rule": rule_dict(rules.spot_rule(a))} for a in data.ARTIFACTS]
     event_items = {e["item"] for e in events}
+    for spot in (*locations, *events):
+        if spot["region"] not in known_regions:
+            raise SystemExit(f"{spot['name']}: no region {spot['region']!r}")
+    for e in entrances:
+        if e["from"] not in known_regions or e["to"] not in known_regions:
+            raise SystemExit(f"{e['name']}: a region the world doesn't have")
 
     # Every item a rule can need, and the most copies one asks for.
     needed: dict[str, int] = {}
@@ -120,9 +160,15 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
             if part["rule"] not in SUPPORTED_RULES:
                 raise SystemExit(f"{spot['name']}: the pack's Lua has no rule {part['rule']!r}")
             for f in part.get("options", ()):
-                if option_names.get(f["option"]) not in sent:
+                name = option_names.get(f["option"])
+                if name not in sent:
                     raise SystemExit(f"{spot['name']}: {f['option']} isn't in slot_data's options")
+                check_filter(spot["name"], f, option_fields[name])
             args = part.get("args", {})
+            if any(isinstance(value, dict) and "resolver" in value for value in args.values()):
+                raise SystemExit(f"{spot['name']}: a field resolver the pack's Lua can't evaluate")
+            if part["rule"] == "CanReachRegion" and args["region_name"] not in known_regions:
+                raise SystemExit(f"{spot['name']}: no region {args['region_name']!r}")
             if part["rule"] == "Has":
                 needed[args["item_name"]] = max(needed.get(args["item_name"], 0), args["count"])
             elif part["rule"] == "HasAllCounts":
@@ -152,13 +198,21 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
     for name in w["slot_data"].SLOT_OPTIONS:
         option = option_fields[name]
         default = option.default
-        defaults[name] = bool(default) if issubclass(option, options.Toggle) else default
+        if issubclass(option, Toggle):
+            default = bool(default)
+        elif issubclass(option, OptionSet):
+            # As slot_data sends a set: a sorted list.
+            default = sorted(default)
+        defaults[name] = default
     return {
-        "world_version": data.WORLD_VERSION,
+        "world_version": w["world"].world_version.as_simple_string(),
         "origin": regions.MENU,
         "entrances": entrances,
         "partners": partners,
-        "one_way_to": {f"{d.map}|{d.door}": d.to for d in data.ONE_WAYS},
+        "one_way_to": {f"{d.map}|{d.door}": {"region": data.landing_region(d), "map": d.to} for d in data.ONE_WAYS},
+        # A one-way door's story copies, other doors in the game, are its one entrance in the doors key.
+        "one_way_copies": {data.door_name(d.map, copy): data.door_name(d.map, d.door)
+                           for d in data.ONE_WAYS for copy in d.copies},
         "locations": locations,
         "events": events,
         "items": items,
@@ -281,21 +335,30 @@ def logic_doors(room_data: dict[str, dict], doors: Any) -> dict[str, dict]:
     one_way = {(w.map, w.door) for w in doors.one_way}
     fixed = {tuple(f) for f in doors.fixed}
     out = {}
+    found = set()
     for name, room in room_data.items():
         b = room["bounds"]
 
         def edge(door: dict) -> float:
             return min(door["at"][0] - b[0], b[2] - door["at"][0], door["at"][1] - b[1], b[3] - door["at"][1])
+        # Two doors of one name are told apart by their row, "name#row", as doors.json names them.
+        alike = Counter(d["name"] for d in room["doors"])
         kept = []
         for door in room["doors"]:
-            key = (name, door["name"])
+            key = (name, door["name"] if alike[door["name"]] < 2 else f"{door['name']}#{door['index']}")
             if key in two_way:
                 kept.append(door | {"kind": "two-way"})
             elif key in one_way:
                 kept.append(door | {"kind": "one-way"})
+            else:
+                continue
+            found.add(key)
         for to in sorted({d["to"] for d in room["doors"] if (name, d["to"]) in fixed}):
             kept.append(min((d for d in room["doors"] if d["to"] == to), key=edge) | {"kind": "two-way"})
         out[name] = {"bounds": b, "doors": kept}
+    missing = sorted(key for key in two_way | one_way if key[0] in room_data and key not in found)
+    if missing:
+        raise SystemExit(f"doors.json doors with no door in the room data (tools/rooms.py): {missing}")
     return out
 
 
@@ -450,15 +513,16 @@ def main() -> None:
     logic["randomizer_commit"] = randomizer_commit(Path(w["package"].__file__).resolve().parent)
 
     # The world map: an area pin where the game's pause map puts its pip, its checks those of its rooms. Each area
-    # with checks also has its own map: a pin per room, for now in a grid.
+    # with checks also has its own map: a pin per room where its doors meet, each check a section of its map's pin
+    # (a map's parts, its regions in the logic, share the map's pin).
     pip_data = json.loads((PACK / "data/area_pips.json").read_text("utf-8"))
     pips = pip_data["areas"]
     map_area = json.loads((PACK / "data/map_areas.json").read_text("utf-8"))["maps"]
     rooms: dict[str, list[dict[str, Any]]] = {}
     for loc in sorted(logic["locations"], key=lambda loc: loc["name"]):
-        if loc["region"] not in map_area:
-            raise SystemExit(f"{loc['name']}: no area for map {loc['region']} (tools/map_areas.py)")
-        rooms.setdefault(loc["region"], []).append(loc)
+        if loc["map"] not in map_area:
+            raise SystemExit(f"{loc['name']}: no area for map {loc['map']} (tools/map_areas.py)")
+        rooms.setdefault(loc["map"], []).append(loc)
     areas = {pip["area"]: [room for room in sorted(rooms) if map_area[room] == pip["area"]] for pip in pips}
     areas = {area: names for area, names in areas.items() if names}
     for room, locs in rooms.items():

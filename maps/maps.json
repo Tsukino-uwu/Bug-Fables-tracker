@@ -24,6 +24,24 @@
     "img": "images/maps/Snakemouth.png"
   },
   {
+    "name": "Desert",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/Desert.png"
+  },
+  {
+    "name": "GoldenHills",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/GoldenHills.png"
+  },
+  {
+    "name": "GoldenWay",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/GoldenWay.png"
+  },
+  {
     "name": "GoldenSettlement",
     "location_size": 28,
     "location_border_thickness": 2,
@@ -36,10 +54,28 @@
     "img": "images/maps/BarrenLands.png"
   },
   {
+    "name": "FarGrasslands",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/FarGrasslands.png"
+  },
+  {
     "name": "WildGrasslands",
     "location_size": 28,
     "location_border_thickness": 2,
     "img": "images/maps/WildGrasslands.png"
+  },
+  {
+    "name": "SandCastle",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/SandCastle.png"
+  },
+  {
+    "name": "Beehive",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/Beehive.png"
   },
   {
     "name": "HoneyFactory",
@@ -48,16 +84,52 @@
     "img": "images/maps/HoneyFactory.png"
   },
   {
+    "name": "RubberPrison",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/RubberPrison.png"
+  },
+  {
+    "name": "GiantLair",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/GiantLair.png"
+  },
+  {
+    "name": "MetalLake",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/MetalLake.png"
+  },
+  {
     "name": "TermiteCity",
     "location_size": 28,
     "location_border_thickness": 2,
     "img": "images/maps/TermiteCity.png"
   },
   {
+    "name": "WaspKingdom",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/WaspKingdom.png"
+  },
+  {
     "name": "BanditHideout",
     "location_size": 28,
     "location_border_thickness": 2,
     "img": "images/maps/BanditHideout.png"
+  },
+  {
+    "name": "StreamMountain",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/StreamMountain.png"
+  },
+  {
+    "name": "ChomperCaves",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/ChomperCaves.png"
   },
   {
     "name": "UpperSnakemouth",
