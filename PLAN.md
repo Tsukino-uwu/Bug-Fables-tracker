@@ -16,7 +16,10 @@ made by the user), never inside the randomizer's repo. Each step is written up a
 - **Fog of war:** unvisited rooms hidden by default, with a toggle to show them. Only this pack has it, to keep the
   map's layout unspoiled; Universal Tracker always shows every location in logic (the user, 2026-10-01).
 
-## PopTracker facts it builds on (`doc/PACKS.md`, `doc/AUTOTRACKING.md`, master, read 2026-10-01; re-read 2026-10-03 at `dad3675`, release v0.35.4)
+## PopTracker facts it builds on
+
+From `doc/PACKS.md` and `doc/AUTOTRACKING.md` on master: read 2026-10-01; re-read 2026-10-03 at `dad3675` (release
+v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker section again 2026-10-08 at `d2af7f1`.
 
 - Packs run Lua 5.4 (the `.luarc.json` example beside its LuaLS definition file, `api/lua/definition`).
 - Pack logic can't read a JSON file of its own: data the Lua needs goes in as a generated Lua table (`require`).
@@ -50,6 +53,9 @@ made by the user), never inside the randomizer's repo. Each step is written up a
   | `bug_fables_visited_{team}_{slot}` | each map load: `update` with `[map]` | fog of war |
   | `bug_fables_map_{team}_{slot}` | each map load: `replace` with the map | auto tab, zoom/pan to the room |
   | `bug_fables_doors_{team}_{slot}` | each door taken: `update` with `[door]` | where shuffled doors lead |
+
+  The doors key is also Universal Tracker's for its deferred entrances (the randomizer's build step 55, 2026-10-08:
+  shuffled doors hidden there until taken), so `door` is the apworld's entrance name for the door walked through.
 
 - **Hints:** Archipelago's `_read_hints_{team}_{slot}` (`docs/network protocol.md`, Get), for highlighting
   hinted checks. Check whether `SetNotify` covers a `_read_` key, or poll it with `Get`.
@@ -107,11 +113,32 @@ made by the user), never inside the randomizer's repo. Each step is written up a
     read its rules first).
 14. **Version check:** `min_poptracker_version` and `target_poptracker_version` set to what was tested.
 
+The rest of PopTracker's Archipelago interface (`doc/AUTOTRACKING.md`, `d2af7f1`), every part of it (the user,
+2026-10-05: "support them all"; added 2026-10-08):
+
+15. **A DeathLink shown:** `Archipelago:AddBouncedHandler`, whose argument is the bounce as a table; one tagged
+    `DeathLink` marks the party in the item grid for a while (the look picked by the user on screen).
+16. **The goal shown as done:** Archipelago's read-only `_read_client_status_{team}_{slot}` (`docs/network
+    protocol.md`, Get; 30 is `CLIENT_GOAL`), asked with `Archipelago:Get` from the Clear handler and again as checks
+    come in. Whether `SetNotify` covers a `_read_` key is the same question as the hints' (above).
+17. **A new seed starts fresh:** `Archipelago.Seed`, `.TeamNumber` and `.PlayerNumber` against what the pack kept; on a
+    different seed or slot, the pack's own state (fog of war's toggle state, anything stored) is reset.
+18. **Checks right at connect:** `Archipelago.CheckedLocations` and `.MissingLocations` read in the Clear handler, so
+    the pins are right before the first Location handler fires.
+19. **Hints that say whose item:** `Archipelago:GetPlayerAlias`, `:GetPlayerGame` and `:GetItemName` (since 0.28.1)
+    for each hint of item 10: "whose item, which game".
+20. **The connect replay in one go:** `Tracker.BulkUpdate` (`doc/PACKS.md`, Tracker) around the items replayed on
+    connect, under `pcall` so it is always set back; `Tracker.AllowDeferredLogicUpdate` beside it.
+21. **Data storage read at connect:** `Archipelago:Get(keys)` from the Clear handler beside `SetNotify`, with
+    `AddRetrievedHandler`, so fog of war, the map and the doors are right before the first change.
+
 ## Not applicable (recorded so it's a decision, not a gap)
 
 - `"apmanual"` (the pack sending checks): the mod sends every check itself.
-- `"aphintgame"` (the pack scouting locations): it would reveal items the player hasn't found; only if the user
-  wants that.
+- `"aphintgame"` (the pack scouting locations): it would reveal items the player hasn't found, and it is for hint
+  games (the `HintGame` tag). Decided off (the user, 2026-10-06): seen items are never made hints in the randomizer
+  either; the pack shows the server's hints (`_read_hints`, item 10).
+- The `"tracker_capture_item"` layout: "not supported yet" (`doc/PACKS.md`, 2026-10-08). Until PopTracker has it.
 - Memory and UAT auto-tracking: Archipelago gives everything the pack needs.
 
 ## Order
@@ -119,8 +146,10 @@ made by the user), never inside the randomizer's repo. Each step is written up a
 1. The logic export, the item grid, and the checks as pins on a placeholder map drawn by code (built 2026-10-03:
    `tools/export.py`, `scripts/logic.lua`, `tests/test_parity.py`).
 2. The map (its first version built 2026-10-04, see item 4), following the player, and hints.
-3. Fog of war and doors, once the randomizer writes its data storage keys.
+3. Fog of war and doors, once the randomizer writes its data storage keys (its build step 55 starts with the doors
+   key).
 4. Updates and the pack list, once the user makes the repo.
+5. Items 15-21: none waits on the randomizer; 21 comes with the keys of step 3.
 
 ## Rules carried over from the randomizer
 
