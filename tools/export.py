@@ -141,10 +141,9 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
     locations = [{"id": data.LOCATION_NAME_TO_ID[loc.name], "name": loc.name, "region": region_of(loc),
                   "map": loc.region, "category": loc.category, "rule": rule_dict(rules.spot_rule(loc))}
                  for loc in data.LOCATIONS if not loc.pending]
+    # The artifacts' scenes are ordinary locations since the apworld's build step 86, so in the list above.
     events = [{"name": e.name, "item": e.item, "region": region_of(e), "map": e.region, "category": e.category,
                "rule": rule_dict(rules.spot_rule(e))} for e in data.STORY_EVENTS]
-    events += [{"name": a.name, "item": "Artifact", "region": a.region, "map": a.region,
-                "rule": rule_dict(rules.spot_rule(a))} for a in data.ARTIFACTS]
     event_items = {e["item"] for e in events}
     for spot in (*locations, *events):
         if spot["region"] not in known_regions:
