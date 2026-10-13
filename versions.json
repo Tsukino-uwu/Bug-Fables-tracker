@@ -1,0 +1,12 @@
+{
+  "versions": [
+    {
+      "package_version": "0.4.0",
+      "download_url": "https://github.com/Tsukino-uwu/Bug-Fables-tracker/archive/refs/tags/v0.4.0.zip",
+      "sha256": "7dbd9ea3659ddae76f2ded413b6f5266c5012524efdf7b3c00288befe7e6ffe0",
+      "changelog": [
+        "See the release notes"
+      ]
+    }
+  ]
+}
