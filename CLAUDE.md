@@ -46,6 +46,13 @@ is its own repo (a sibling checkout, `../bug_fables_ap`), and its rules carry ov
 - **Game data:** `tools/rooms.py` and `tools/map_areas.py` read the mod's `bugfablesap-entitydump.tsv` and
   `bugfablesap-mapdump.tsv` from your Bug Fables install's `BepInEx` folder (written by the mod's `EntityDump` and
   `MapDump` debug settings); `tools/rooms.py` also reads map names from the randomizer's gitignored `decompiled/`.
+- **The game's pictures** (the game running the mod's dev build, `DevConsole` and `DevCommandFile` on; ask first):
+  1. a seed's scenery lists: in the randomizer, `python dev-scripts/live-slot-data.py --archipelago <checkout> --yaml
+     <a player file with every option at its default> --out <file>`;
+  2. the dev console's `roomstates <file>`, then `worldmap` and `roomshot all` (written to the `BepInEx` folder; every
+     rule for a room's picture lives in the mod's `Dev/MapShots.cs`, its reasons in the randomizer's
+     `documentation.md` §7);
+  3. `tools/world_map.py <BepInEx folder>` and `tools/room_pictures.py <BepInEx folder>`, then the export.
 - **See it** (ask first): PopTracker's `poptracker.exe --pack-variant map "<this folder>"` loads the pack from here,
   nothing copied. Its reload button doesn't pick up a changed map image: close it and start it again.
 

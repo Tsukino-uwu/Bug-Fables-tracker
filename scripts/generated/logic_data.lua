@@ -72676,7 +72676,7 @@ return {
     ["death_link"] = false,
   },
   ["starting_member_default"] = 3,
-  ["randomizer_commit"] = "455ec9ff921f8602739cf46bc04f66ca3bf95106",
+  ["randomizer_commit"] = "f69b030927416d24517168a5042208a0a11d55f3",
   ["section_paths"] = {
     [7720087] = "@BOGoldenPath/Outskirts: Golden Path, Dig Spot",
     [7721043] = "@BOGoldenPath/Outskirts: Golden Path, Flying Seedling 1",
