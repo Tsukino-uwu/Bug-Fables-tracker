@@ -68,13 +68,30 @@ local function show_hints(hints)
     end
 end
 
+-- Rules run again when an item changes: a switch flipped makes the fog of war follow the visited key.
+local function refresh()
+    local switch = Tracker:FindObjectForCode("bf_refresh")
+    if switch then switch.Active = not switch.Active end
+end
+
+-- With "Follow the player's room" on, the map's area tab, then its room's tab (or the area's overview).
+local function follow(map)
+    local setting = Tracker:FindObjectForCode("auto_tab")
+    local tab = map and DATA.map_tabs[map]
+    if not (setting and setting.Active and tab) then return end
+    Tracker:UiHint("ActivateTab", tab.area)
+    Tracker:UiHint("ActivateTab", tab.room or DATA.overview_tab)
+end
+
 local function on_storage(key, value)
     if key == keys.doors then
         STORAGE.doors = names(value)
     elseif key == keys.visited then
         STORAGE.visited = names(value)
+        refresh()
     elseif key == keys.map then
         STORAGE.map = type(value) == "string" and value or nil
+        follow(STORAGE.map)
     elseif key == keys.goal then
         local goal = Tracker:FindObjectForCode("goal")
         if goal then goal.Active = value == Archipelago.ClientStatus.GOAL end

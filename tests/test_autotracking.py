@@ -47,9 +47,11 @@ class PopTracker:
         self.objects: dict[str, Thing] = {}
         self.handlers: dict[str, object] = {}
         self.asked: dict[str, list] = {"SetNotify": [], "Get": []}
+        self.hints: list[tuple[str, str]] = []
         g.Tracker = self.runtime.table_from({
             "FindObjectForCode": lambda _self, code: self.objects.get(code),
-            "ProviderCountForCode": lambda _self, code: 0,
+            "ProviderCountForCode": lambda _self, code: int(getattr(self.objects.get(code), "Active", False)),
+            "UiHint": lambda _self, name, value: self.hints.append((name, value)),
         })
         g.Highlight = self.runtime.table_from(
             {"Avoid": "Avoid", "None": "None", "NoPriority": "NoPriority", "Unspecified": "Unspecified",
@@ -76,6 +78,10 @@ class PopTracker:
             self.objects[item["code"]] = Thing(Type="toggle" if item["max"] <= 1 else "consumable", Active=False,
                                                AcquiredCount=0, BadgeText="", BadgeTextColor="")
         self.objects["goal"] = Thing(Type="toggle", Active=False)
+        # The settings as a new tracker has them (items.json's initial_active_state).
+        self.objects["auto_tab"] = Thing(Type="toggle", Active=True)
+        self.objects["show_unvisited"] = Thing(Type="toggle", Active=False)
+        self.objects["bf_refresh"] = Thing(Type="toggle", Active=False)
         for path in data["section_paths"].values():
             self.objects[path] = Thing(ChestCount=1, AvailableChestCount=1, Highlight="None")
         self.runtime.execute('require("autotracking")')
@@ -206,6 +212,44 @@ class TestServerState(unittest.TestCase):
         self.assertEqual({pack.objects[c].BadgeText for c in members}, {"DL"})
         pack.handlers["frame"](7.0)
         self.assertEqual({pack.objects[c].BadgeText for c in members}, {""})
+
+
+class TestFollowAndFog(unittest.TestCase):
+    def test_the_room_now_opens_its_tabs(self) -> None:
+        pack = PopTracker()
+        pack.connect({})
+        tabs = pack.g.DATA["map_tabs"]
+        room = next(m for m, t in tabs.items() if t["room"])
+        hallway = next(m for m, t in tabs.items() if not t["room"])
+        pack.answer("bug_fables_map_0_1", room, how="set_reply")
+        self.assertEqual(pack.hints, [("ActivateTab", tabs[room]["area"]), ("ActivateTab", tabs[room]["room"])])
+        # A room without checks: its area's overview.
+        pack.hints.clear()
+        pack.answer("bug_fables_map_0_1", hallway, how="set_reply")
+        self.assertEqual(pack.hints, [("ActivateTab", tabs[hallway]["area"]),
+                                      ("ActivateTab", pack.g.DATA["overview_tab"])])
+        # The setting off: the tabs stay as they are.
+        pack.hints.clear()
+        pack.objects["auto_tab"].Active = False
+        pack.answer("bug_fables_map_0_1", room, how="set_reply")
+        self.assertEqual(pack.hints, [])
+
+    def test_fog_of_war_only_with_the_doors_shuffled(self) -> None:
+        pack = PopTracker()
+        pack.connect({"options": {"entrance_randomizer": 0}})
+        self.assertTrue(pack.g.bf_seen("NearSnakemouth"))
+        pack.connect({"options": {"entrance_randomizer": 1}})
+        self.assertFalse(pack.g.bf_seen("NearSnakemouth"))
+        area = pack.g.DATA["map_tabs"]["NearSnakemouth"]["area_id"]
+        self.assertFalse(pack.g.bf_area_seen(area))
+        before = pack.objects["bf_refresh"].Active
+        pack.answer("bug_fables_visited_0_1", ["NearSnakemouth"], how="set_reply")
+        self.assertNotEqual(pack.objects["bf_refresh"].Active, before, "rules asked to run again")
+        self.assertTrue(pack.g.bf_seen("NearSnakemouth"))
+        self.assertTrue(pack.g.bf_area_seen(area))
+        self.assertFalse(pack.g.bf_seen("BugariaOutskirtsOutsideCity"))
+        pack.objects["show_unvisited"].Active = True
+        self.assertTrue(pack.g.bf_seen("BugariaOutskirtsOutsideCity"))
 
 
 if __name__ == "__main__":

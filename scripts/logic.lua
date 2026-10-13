@@ -311,6 +311,28 @@ function bf_location(id)
     return bf_state().locations[tonumber(id)] == true
 end
 
+function bf_any_in_seed(...)
+    for _, id in ipairs({ ... }) do
+        if bf_in_seed(id) then return true end
+    end
+    return false
+end
+
+-- Fog of war, only with the doors shuffled: a room shows once visited (the mod's visited key, autotracking.lua), or
+-- with "Show unvisited rooms" on.
+function bf_seen(map)
+    if not truthy(SEED.options.entrance_randomizer) then return true end
+    if Tracker:ProviderCountForCode("show_unvisited") > 0 then return true end
+    return STORAGE ~= nil and STORAGE.visited[map] == true
+end
+
+function bf_area_seen(area)
+    for map, tab in pairs(DATA.map_tabs) do
+        if tab.area_id == area and bf_seen(map) then return true end
+    end
+    return false
+end
+
 -- For the parity tests. bf_eval_state, then bf_eval: rules against the tracked items alone, no story events, as a
 -- CollectionState the items were collected into without a sweep.
 function bf_eval_state()

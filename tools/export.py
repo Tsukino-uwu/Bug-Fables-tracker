@@ -32,6 +32,8 @@ NUMBER_OPERATORS = {"eq", "ne", "gt", "lt", "ge", "le"}
 WORLD_MAP = "World"
 WORLD_PIN = 56
 PIN = 28
+ROOM_PIN = 36  # a check's pin on its room's picture
+OVERVIEW = "Overview"  # an area's first tab: its rooms laid out
 AREA_SIZE = 1600  # an area map's longer side, in pixels
 ROOM_PAD = 2.0  # game units around a room's entities
 ROOM_GAP = 3.0
@@ -525,6 +527,40 @@ def layout_area(names: list[str], rooms: dict[str, dict]) -> dict[str, tuple[flo
     return placed
 
 
+def room_title(locs: list[dict[str, Any]]) -> str:
+    """A room's name as the apworld's location names give it ("Area: Room, Spot"): the one most of its checks use."""
+    heads = [loc["name"].partition(", ")[0] for loc in locs if ", " in loc["name"]] or [loc["name"] for loc in locs]
+    return Counter(head.partition(": ")[2] or head for head in heads).most_common(1)[0][0]
+
+
+def spot_name(loc: dict[str, Any]) -> str:
+    """A check's own part of its name: "Area: Room, Spot" gives Spot."""
+    return loc["name"].partition(", ")[2] or loc["name"].partition(": ")[2] or loc["name"]
+
+
+def check_spot(source: Any, room: str, rooms: dict[str, dict]) -> list[float] | None:
+    """Where a check's own entity stands in its room, as the apworld names it (its Source): an enemy by its index, an
+    item on the ground by its activation flag, a respawning pickup by its regional flag, a crystal berry by its number
+    (its pickup's data: type 3, the number last), a shop's goods by their keeper, a character by its name."""
+    def first(test) -> list[float] | None:
+        return next((e["at"] for e in rooms.get(room, {}).get("entities", ()) if test(e)), None)
+    if source.enemy:
+        enemy_map, index = source.enemy.split(":")
+        return first(lambda e: e["index"] == int(index)) if enemy_map == room else None
+    if source.pickup is not None and source.flag is not None:
+        return first(lambda e: e["flag"] == source.flag) if source.pickup.map == room else None
+    if source.regional is not None:
+        return first(lambda e: e["regional"] == source.regional)
+    if source.berry is not None:
+        return first(lambda e: len(e["data"].split()) >= 4 and e["data"].split()[0] == "3"
+                     and e["data"].split()[-1] == str(source.berry))
+    if source.item_shop is not None:
+        return first(lambda e: e["name"] == source.item_shop.keeper) if source.item_shop.map == room else None
+    if source.npc:
+        return first(lambda e: e["name"] == source.npc)
+    return None
+
+
 def write(path: Path, content: bytes | str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if isinstance(content, str):
@@ -565,8 +601,16 @@ def main() -> None:
                   "img": f"images/maps/{WORLD_MAP}.png"}]
     locations_json = []
     section_paths = {}
-    room_data = logic_doors(json.loads((PACK / "data/rooms.json").read_text("utf-8"))["maps"], w["data"].DOORS)
+    raw_rooms = json.loads((PACK / "data/rooms.json").read_text("utf-8"))["maps"]
+    room_data = logic_doors(raw_rooms, w["data"].DOORS)
+    room_pictures = json.loads((PACK / "data/room_pictures.json").read_text("utf-8"))["rooms"]
+    sources = {w["data"].LOCATION_NAME_TO_ID[loc.name]: loc.source for loc in w["data"].LOCATIONS}
     logic_maps = set(w["data"].MAPS)
+    # Each drawn map: its area's tab and map, its own tab (a room with checks) and its spot on its area's map.
+    map_tabs: dict[str, dict[str, Any]] = {}
+    area_tabs = []
+    location_names: set[str] = set()
+    placed = 0
     for area, names in areas.items():
         # Every room of the area is drawn, the rooms with checks also get a pin.
         # The logic's maps only: a test or cutscene map that's no region of the apworld is never drawn.
@@ -663,21 +707,25 @@ def main() -> None:
         write(PACK / f"images/maps/{area}.png", canvas.png())
         maps_json.append({"name": area, "location_size": PIN, "location_border_thickness": 2,
                           "img": f"images/maps/{area}.png"})
-        for room in names:
+        for room in every:
             if room in boxes:
                 x, y = boxes[room]
             else:
                 f = frames[room]
                 x, y = px((f[0] + f[2]) / 2, (f[1] + f[3]) / 2)
+            map_tabs[room] = {"area": display_name(area), "area_id": area, "map": area, "x": round(x), "y": round(y)}
+        for room in names:
             locations_json.append({
                 "name": room,
                 "visibility_rules": [f"$bf_room_in_seed|{room}"],
                 "chest_unopened_img": "images/chest_closed.png",
                 "chest_opened_img": "images/chest_open.png",
-                "map_locations": [{"map": area, "x": round(x), "y": round(y)}],
+                "map_locations": [{"map": area, "x": map_tabs[room]["x"], "y": map_tabs[room]["y"],
+                                   "restrict_visibility_rules": [f"$bf_seen|{room}"]}],
                 "sections": [{"name": loc["name"], "access_rules": [f"$bf_location|{loc['id']}"],
                               "visibility_rules": [f"$bf_in_seed|{loc['id']}"]} for loc in rooms[room]],
             })
+            location_names.add(room)
             for loc in rooms[room]:
                 section_paths[loc["id"]] = f"@{room}/{loc['name']}"
         x, y = spots[area]
@@ -686,15 +734,70 @@ def main() -> None:
             "visibility_rules": [f"$bf_area_in_seed|{area}"],
             "chest_unopened_img": "images/chest_closed.png",
             "chest_opened_img": "images/chest_open.png",
-            "map_locations": [{"map": WORLD_MAP, "x": x, "y": y}],
+            "map_locations": [{"map": WORLD_MAP, "x": x, "y": y,
+                               "restrict_visibility_rules": [f"$bf_area_seen|{area}"]}],
             "sections": [{"ref": f"{room}/{loc['name']}"} for room in names for loc in rooms[room]],
         })
+        location_names.add(display_name(area))
+
+        # Each room with checks has its own tab: the game's picture of it, a pin at each check's own spot (its
+        # entity's, check_spot), the checks with no such spot together in the room's middle.
+        titles: dict[str, str] = {}
+        room_tabs = []
+        for room in names:
+            if room not in room_pictures:
+                continue
+            # A room the apworld names only by its map (an enemy's location), in words.
+            title = base = display_name(room_title(rooms[room]))
+            n = 1
+            while title in titles.values() or title in (OVERVIEW, display_name(area)):
+                n += 1
+                title = f"{base} ({n})"
+            titles[room] = title
+            map_tabs[room]["room"] = title
+            picture = room_pictures[room]
+            room_map = f"room_{room}"
+            maps_json.append({"name": room_map, "location_size": ROOM_PIN, "location_border_thickness": 2,
+                              "img": f"images/rooms/{room}.png"})
+            room_tabs.append({"title": title, "content": {"type": "map", "maps": [room_map]}})
+            groups: dict[tuple[int, int] | None, list[tuple[list[float] | None, dict[str, Any]]]] = {}
+            for loc in rooms[room]:
+                at_spot = check_spot(sources[loc["id"]], room, raw_rooms)
+                groups.setdefault(at_spot and (round(at_spot[0]), round(at_spot[1])), []).append((at_spot, loc))
+            for key, checks in groups.items():
+                if key is None:
+                    x, y = picture["size"][0] / 2, picture["size"][1] / 2
+                    name = base = f"{title}: elsewhere in the room"
+                else:
+                    first = checks[0][0]
+                    x = (first[0] - picture["left"]) * picture["x_scale"]
+                    y = (picture["top"] - first[1]) * picture["z_scale"]
+                    name = base = f"{title}: {spot_name(checks[0][1])}"
+                    placed += len(checks)
+                n = 1
+                while name in location_names:
+                    n += 1
+                    name = f"{base} ({n})"
+                location_names.add(name)
+                ids = "|".join(str(loc["id"]) for _, loc in checks)
+                locations_json.append({
+                    "name": name,
+                    "visibility_rules": [f"$bf_any_in_seed|{ids}"],
+                    "chest_unopened_img": "images/chest_closed.png",
+                    "chest_opened_img": "images/chest_open.png",
+                    "map_locations": [{"map": room_map, "x": round(x), "y": round(y),
+                                       "restrict_visibility_rules": [f"$bf_seen|{room}"]}],
+                    "sections": [{"ref": f"{room}/{loc['name']}"} for _, loc in checks],
+                })
+        area_tabs.append({"title": display_name(area), "content": {"type": "tabbed", "tabs": [
+            {"title": OVERVIEW, "content": {"type": "map", "maps": [area]}}, *room_tabs]}})
     logic["section_paths"] = section_paths
     logic["room_areas"] = {room: map_area[room] for room in rooms}
+    logic["map_tabs"] = map_tabs
+    logic["overview_tab"] = OVERVIEW
     logic["item_codes_by_id"] = {item["id"]: item["code"] for item in logic["items"]}
     write(PACK / "layouts/maps.json", json.dumps({"map_tabs": {"type": "tabbed", "tabs": [
-        {"title": "World", "content": {"type": "map", "maps": [WORLD_MAP]}},
-        *({"title": display_name(area), "content": {"type": "map", "maps": [area]}} for area in areas),
+        {"title": "World", "content": {"type": "map", "maps": [WORLD_MAP]}}, *area_tabs,
     ]}}, indent=2) + "\n")
 
     items_json = []
@@ -711,6 +814,18 @@ def main() -> None:
     # Not an Archipelago item: lit once the server reports the goal (autotracking.lua).
     write(PACK / "images/items/goal.png", square_icon((240, 220, 120)))
     items_json.append({"name": "Goal", "img": "images/items/goal.png", "codes": "goal", "type": "toggle"})
+    # The settings (layouts/settings.json): following the player into their room's tab, on from the start; showing
+    # rooms not yet visited when the doors are shuffled (fog of war). And a switch the Lua flips when data storage
+    # changes what's visible, since rules run again on an item's change.
+    for code, name, colour, on in (("auto_tab", "Follow the player's room", (120, 200, 240), True),
+                                   ("show_unvisited", "Show unvisited rooms (doors shuffled)", (200, 200, 200), False)):
+        write(PACK / f"images/items/{code}.png", square_icon(colour))
+        items_json.append({"name": name, "img": f"images/items/{code}.png", "codes": code, "type": "toggle",
+                           "initial_active_state": on})
+    items_json.append({"name": "Refresh", "img": "images/items/goal.png", "codes": "bf_refresh", "type": "toggle"})
+    write(PACK / "layouts/settings.json", json.dumps({"settings_popup": {
+        "type": "itemgrid", "item_margin": "4,4", "item_size": "32,32", "rows": [["auto_tab", "show_unvisited"]],
+    }}, indent=2) + "\n")
 
     rows: list[list[str]] = []
     for kind in sorted({item["kind"] for item in logic["items"]}):
@@ -729,7 +844,8 @@ def main() -> None:
     write(PACK / "images/chest_closed.png", square_icon((200, 170, 90), 24))
     write(PACK / "images/chest_open.png", square_icon((120, 120, 120), 24, hollow=True))
     print(f"world {logic['world_version']} at {logic['randomizer_commit']}: {len(logic['entrances'])} entrances, "
-          f"{len(logic['locations'])} locations in {len(rooms)} rooms of {len(areas)} areas, "
+          f"{len(logic['locations'])} locations in {len(rooms)} rooms of {len(areas)} areas ({placed} at their own "
+          f"spot), "
           f"{len(logic['events'])} events, "
           f"{len(logic['items'])} items")
 

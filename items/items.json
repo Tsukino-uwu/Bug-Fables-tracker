@@ -242,5 +242,25 @@
     "img": "images/items/goal.png",
     "codes": "goal",
     "type": "toggle"
+  },
+  {
+    "name": "Follow the player's room",
+    "img": "images/items/auto_tab.png",
+    "codes": "auto_tab",
+    "type": "toggle",
+    "initial_active_state": true
+  },
+  {
+    "name": "Show unvisited rooms (doors shuffled)",
+    "img": "images/items/show_unvisited.png",
+    "codes": "show_unvisited",
+    "type": "toggle",
+    "initial_active_state": false
+  },
+  {
+    "name": "Refresh",
+    "img": "images/items/goal.png",
+    "codes": "bf_refresh",
+    "type": "toggle"
   }
 ]
