@@ -1,0 +1,77 @@
+name: Release
+
+# When a release is published on GitHub: its download, GitHub's own source zip of the tag (.gitattributes'
+# export-ignore leaving only the pack), checked, then added on top of versions.json on the versions branch, which the
+# manifest's versions_url points PopTracker at. A pre-release never reaches PopTracker.
+on:
+  release:
+    types: [published]
+
+permissions: {}
+
+# Two releases at once would each push versions.json from the same parent.
+concurrency:
+  group: versions-json
+
+env:
+  # PopTracker's pack schemas, at the commit tools/test.ps1 checks against.
+  SCHEMAS: https://raw.githubusercontent.com/black-sliver/PopTracker/dad367501cc1a8e892305a9779c30431246d9ae4/schema/packs/
+
+jobs:
+  versions:
+    if: ${{ !github.event.release.prerelease }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # Inputs through env:, never ${{ }} in the script, so their text is only ever data.
+    env:
+      TAG: ${{ github.event.release.tag_name }}
+      NOTES: ${{ github.event.release.body }}
+      URL: https://github.com/${{ github.repository }}/archive/refs/tags/${{ github.event.release.tag_name }}.zip
+      RANDOMIZER: https://github.com/${{ github.repository_owner }}/Bug-Fables-Archipelago.git
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.release.tag_name }}
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+
+      - name: Install pack-checker
+        run: python -m pip install pack-checker==1.6.0
+
+      - name: The tag, the manifest and the export agree
+        run: python tools/release.py check "$TAG" --randomizer "$RANDOMIZER"
+
+      - name: The download holds the pack and only the pack
+        run: |
+          set -eu
+          curl -fsSL -o "$RUNNER_TEMP/pack.zip" "$URL"
+          python tools/release.py check-zip "$RUNNER_TEMP/pack.zip"
+          pack-checker -b --strict --schema "$SCHEMAS" "$RUNNER_TEMP/pack.zip"
+
+      - name: Add it to versions.json
+        env:
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          set -eu
+          printf '%s\n' "$NOTES" > "$RUNNER_TEMP/notes.md"
+          # The versions branch holds only versions.json; the first release starts it.
+          parent=
+          if git ls-remote --exit-code --heads origin versions >/dev/null; then
+            git fetch -q --depth=1 origin versions
+            parent=$(git rev-parse FETCH_HEAD)
+            git show "$parent:versions.json" > "$RUNNER_TEMP/versions.json"
+          fi
+          python tools/release.py add "$TAG" --zip "$RUNNER_TEMP/pack.zip" --url "$URL" \
+            --notes "$RUNNER_TEMP/notes.md" --versions "$RUNNER_TEMP/versions.json"
+          # Committed without leaving the tag's checkout, which tools/release.py runs from.
+          blob=$(git hash-object -w "$RUNNER_TEMP/versions.json")
+          tree=$(printf '100644 blob %s\tversions.json\n' "$blob" | git mktree)
+          commit=$(git commit-tree "$tree" ${parent:+-p "$parent"} -m "Add $TAG to versions.json")
+          git push -q origin "$commit:refs/heads/versions"
+          cat "$RUNNER_TEMP/versions.json"

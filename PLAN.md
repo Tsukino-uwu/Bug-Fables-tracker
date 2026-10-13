@@ -153,8 +153,14 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
     canvas (`doc/PACKS.md`, Layouts, 2026-10-03), so checks show only as pins on a map.
 12. **Layouts:** `tracker_default`, `tracker_broadcast` (a stream view), and `settings_popup` holding the fog of
     war and auto tabbing toggles (built 2026-10-13, also in the bottom bar's Settings).
-13. **Updates:** `versions_url` in the manifest, and a listing in PopTracker's pack list (its `packlist` branch,
-    read its rules first).
+13. **Updates:** built 2026-10-13 as crystal-ap-tracker does it (read for it, its row in the randomizer's
+    `licensing.md`). A release's download is GitHub's source zip of its tag, `.gitattributes`' `export-ignore` leaving
+    only the pack (PopTracker opens a zip whose one folder holds the manifest: `src/core/pack.cpp`, `19f0b1f`). The
+    manifest's `versions_url` points at `versions.json` on a `versions` branch, which `.github/workflows/release.yml`
+    starts and adds each published release to (a pre-release never), once `tools/release.py` and `pack-checker` pass on
+    the download. The format: PopTracker's `packlist` branch at `6cd531b` (`README.md`, `versions.schema.json`,
+    `checklist.md`) and its `src/packmanager/packmanager.cpp` at `19f0b1f` (an update is a higher `package_version`;
+    PopTracker asks once before trusting the host). A listing in PopTracker's pack list: not yet (Crystal has none).
 14. **Version check:** `min_poptracker_version` and `target_poptracker_version` set to what was tested. The minimum
     is 0.33.0 since 2026-10-08, the newest API the pack uses (`Archipelago.Seed`; its `CHANGELOG.md`).
 
@@ -215,7 +221,8 @@ Added 2026-10-13, from crystal-ap-tracker's look (the user's asks):
    fight's artifact gate (`HasFromListUnique` with Rule Builder's `FromWorldAttr`, the randomizer's build step 94).
 2. The map (its first version built 2026-10-04, see item 4), following the player, and hints.
 3. Fog of war and doors: the randomizer writes their data storage keys since 2026-10-08 (its build steps 55 and 57).
-4. Updates and the pack list, once the repo goes public with a release.
+4. Updates: built 2026-10-13 (item 13). The first release comes with the randomizer's 0.4.0 (the user, 2026-10-13),
+   the repo public by then (the user's step); the pack list after.
 5. Items 15-21: built 2026-10-08 (`scripts/autotracking.lua`, `tests/test_autotracking.py`), but 19, which waits
    for a place on screen, and 20, which PopTracker does itself.
 
@@ -233,7 +240,8 @@ Added 2026-10-13, from crystal-ap-tracker's look (the user's asks):
 - **The apworld comes from the randomizer's checkout**, imported through your Archipelago checkout (at the tag the
   world targets) where the randomizer's development guide links it in as `worlds/bug_fables`. The export records the
   randomizer's commit and `world_version`. A release pin waits for the next release (the user, 2026-10-08: v0.3.0
-  has slot_data's `options` but not today's rooms; pinned once the next one is out).
+  has slot_data's `options` but not today's rooms; pinned once the next one is out). Since 2026-10-13 a release
+  refuses any other export: `tools/release.py check` wants the randomizer's own tag of the exported `world_version`.
 - **Checks:** PopTracker's own `pack-checker` (its CI action, as the Crystal pack's CI runs it; it validates against
   PopTracker's schemas), plus **lupa parity tests**. Archipelago has no standard for testing a tracker's Lua (its core
   runs no Lua; Rule Builder's Serialization section leaves the export to the world dev), and the Crystal pack has
@@ -250,7 +258,8 @@ Added 2026-10-13, from crystal-ap-tracker's look (the user's asks):
   region, every door of `doors.json` found in the room data, the manifest is valid.
 - Logic parity (lupa): the pack's Lua against the apworld's Python logic, over many seeds and item states: the
   locations, the regions reached and every entrance Archipelago made, each door mode as often as the others.
-- `pack-checker` on the source folder, and on the release zip before a release.
+- `pack-checker` on the source folder, and on the release zip: `tools/test.ps1` on the zip a release would ship
+  (`git archive`), the release workflow on GitHub's own download.
 - The user loads the pack in PopTracker against a local server (ask before starting either) and confirms on screen:
   the checks, logic colours, the item grid, the map, Room Swap placement, following the player, hints, doors,
   fog of war, both variants and the broadcast view.

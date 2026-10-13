@@ -1,5 +1,7 @@
 # The pack's checks (tools/test.ps1) and tools; nothing here ships with the pack.
 lupa==2.8
 pack-checker==1.6.0
+# PopTracker's versions.json schema in tests/test_release.py (also a pack-checker dependency).
+jsonschema==4.26.0
 # The game's pictures: tools/world_map.py, and the room pictures.
 pillow==12.3.0

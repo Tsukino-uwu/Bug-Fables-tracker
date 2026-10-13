@@ -53,6 +53,10 @@ is its own repo (a sibling checkout, `../bug_fables_ap`), and its rules carry ov
      rule for a room's picture lives in the mod's `Dev/MapShots.cs`, its reasons in the randomizer's
      `documentation.md` §7);
   3. `tools/world_map.py <BepInEx folder>` and `tools/room_pictures.py <BepInEx folder>`, then the export.
+- **Release** (with the randomizer's release of the same world version): `package_version` bumped, the export run
+  against that release's tag, the tests, `python tools/release.py check vX.Y.Z --randomizer ../bug_fables_ap`, pushed;
+  then a release tagged `vX.Y.Z` published on GitHub, highlights as bullets. `.github/workflows/release.yml` checks
+  its zip and adds it to `versions.json` on the `versions` branch, where PopTracker looks for updates.
 - **See it** (ask first): PopTracker's `poptracker.exe --pack-variant map "<this folder>"` loads the pack from here,
   nothing copied. Its reload button doesn't pick up a changed map image: close it and start it again.
 
