@@ -404,16 +404,19 @@ def main() -> None:
         if loc["map"] not in map_area:
             raise SystemExit(f"{loc['name']}: no area for map {loc['map']} (tools/map_areas.py)")
         rooms.setdefault(loc["map"], []).append(loc)
-    # In the order the game's pause menu lists them (story order); an area it leaves out goes after the one its doors
-    # lead to most.
+    # In the order the game's pause menu lists them (story order); an area it leaves out (Upper Snakemouth, the
+    # Fishing Village) joins the tab of the one its doors lead to most, after that area's own rooms.
     order = list(pip_data["list_order"])
+    tab_area = {area: area for area in order}
     raw_rooms = json.loads((PACK / "data/rooms.json").read_text("utf-8"))["maps"]
     for pip in pips:
         if pip["area"] in order:
             continue
         leads = Counter(map_area.get(d["to"]) for m, r in raw_rooms.items() if map_area.get(m) == pip["area"]
-                        for d in r["doors"] if map_area.get(d["to"]) in order)
-        order.insert(order.index(leads.most_common(1)[0][0]) + 1 if leads else len(order), pip["area"])
+                        for d in r["doors"] if map_area.get(d["to"]) in pip_data["list_order"])
+        parent = leads.most_common(1)[0][0] if leads else pip["area"]
+        tab_area[pip["area"]] = parent
+        order.insert(order.index(parent) + 1 if leads else len(order), pip["area"])
     areas = {area: [room for room in sorted(rooms) if map_area[room] == area] for area in order}
     for room, locs in rooms.items():
         if "/" in room or any("/" in loc["name"] for loc in locs):
@@ -434,7 +437,8 @@ def main() -> None:
     logic_maps = set(w["data"].MAPS)
     # Each room with a tab: its area's tab and its own.
     map_tabs: dict[str, dict[str, Any]] = {}
-    area_tabs = []
+    tab_titles: dict[str, dict[str, str]] = {}  # each area tab's rooms' titles
+    tab_rooms: dict[str, list[dict[str, Any]]] = {}  # each area tab's room tabs, in order
     location_names: set[str] = set()
     walked: dict[str, int] = {}  # each room of the areas before, by its place in the walking order
     placed = 0
@@ -484,17 +488,18 @@ def main() -> None:
 
         # Each room has its own tab, as crystal-ap-tracker's rooms: the game's picture of it, a pin at each check's
         # own spot (its entity's, check_spot), the checks with no such spot together in the room's middle.
-        titles: dict[str, str] = {}
-        room_tabs = []
+        tab = tab_area[area]
+        titles = tab_titles.setdefault(tab, {})
+        room_tabs = tab_rooms.setdefault(tab, [])
         for room in every:
             # A room the apworld names only by its map (an enemy's location), or not at all, in words.
             title = base = display_name(room_title(rooms[room]) if room in rooms else room)
             n = 1
-            while title in titles.values() or title == display_name(area):
+            while title in titles.values() or title == display_name(tab):
                 n += 1
                 title = f"{base} ({n})"
             titles[room] = title
-            map_tabs[room] = {"area": display_name(area), "area_id": area, "room": title}
+            map_tabs[room] = {"area": display_name(tab), "area_id": area, "room": title}
             picture = room_pictures[room]
             room_map = f"room_{room}"
             maps_json.append({"name": room_map, "location_size": ROOM_PIN, "location_border_thickness": 2,
@@ -529,7 +534,8 @@ def main() -> None:
                                        "restrict_visibility_rules": [f"$bf_seen|{room}"]}],
                     "sections": [{"ref": f"{room}/{loc['name']}"} for _, loc in checks],
                 })
-        area_tabs.append({"title": display_name(area), "content": {"type": "tabbed", "tabs": room_tabs}})
+    area_tabs = [{"title": display_name(tab), "content": {"type": "tabbed", "tabs": tabs}}
+                 for tab, tabs in tab_rooms.items()]
     logic["section_paths"] = section_paths
     logic["room_areas"] = {room: map_area[room] for room in rooms}
     logic["map_tabs"] = map_tabs
