@@ -659,9 +659,10 @@ def main() -> None:
                     "sections": [{"name": f"Needs {rule_text(rule)}", "access_rules": [access]}],
                 })
                 blocker_count += 1
+    # An area of one room shows it straight away, as crystal-ap-tracker's Power Plant: no row of one tab.
     area_tabs = [{"title": region, "content": {"type": "tabbed", "tabs": [
-        {"title": area, "content": {"type": "tabbed", "tabs": tabs}} for area, tabs in region_areas.items()]}}
-        for region, region_areas in tab_rooms.items()]
+        {"title": area, "content": tabs[0]["content"] if len(tabs) == 1 else {"type": "tabbed", "tabs": tabs}}
+        for area, tabs in region_areas.items()]}} for region, region_areas in tab_rooms.items()]
     logic["section_paths"] = section_paths
     logic["room_areas"] = {room: map_area[room] for room in rooms}
     logic["map_tabs"] = map_tabs

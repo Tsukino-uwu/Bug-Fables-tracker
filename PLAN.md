@@ -107,31 +107,39 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
    - night and story versions of a room (their own maps in the logic) get no tab until one holds a check;
    - still to come: a hand-editable nudge table, room and area names from the game's text, a door-less image for
      Coupled/Decoupled seeds, Lua picking the tab from slot_data.
-   - **2026-10-13, the game's own pictures** (the user's ask): the World tab is the pause map's art, opened and
-     rendered from above by the mod's dev command `worldmap`, each area pin where the game puts its pip
-     (`tools/world_map.py`, `data/world_map.json`; the lines aren't drawn on it). Every room is rendered from above by
-     `roomshot all` (245 rooms), each with where the game's (x, z) land in it, so checks can sit at their own spots.
-     Indoors and caves show their ceilings from above: the view is to be cut above the highest spot the party
-     stands. Then: the tabs as World, then each area (its layout with the room pictures in it), then each of its
-     rooms, a pin per check at its entity's spot (the user, 2026-10-13, like Crystal's tracker; nested tabs and
-     `ActivateTab` read in PopTracker's `src/ui/trackerview.cpp` and `src/uilib/tabs.cpp` at `19f0b1f`: every tab set
-     switches only if it has a tab of that name). Auto tabbing a setting: off stays on World, on opens the room's tab
-     (the user, 2026-10-13). Images are fixed per map, so door-shuffled seeds want plain overviews, a variant.
-5. **Room Swap:** one pin per slot. Its sections are the checks of every area that can land there (same world part
-   and door count), each visible only when the seed put that area there, derived from `door_targets`. If that
-   proves unreliable, ask the randomizer for a slot_data key.
+   - **Superseded 2026-10-13 by the game's own pictures** (the user's ask), laid out as crystal-ap-tracker lays out
+     its rooms (the user's pick; that tracker read for it, its row in the randomizer's `licensing.md`):
+     - the World tab is the pause map's art, opened and rendered from above by the mod's dev command `worldmap`, each
+       area pin where the game puts its pip (`tools/world_map.py`, `data/world_map.json`; no lines drawn);
+     - then eight regions grouping the game's areas as the world map's picture does, in story order, then each area
+       by its game name, then a tab for every room, checks or not (`data/area_pips.json`'s `regions` and `names`;
+       Crystal gives every room its own tab too). Rooms in walking order from the game's start or from where an
+       earlier area leads in. The area overviews and their door lines are gone;
+     - each room's tab is the room seen from above as a seed shows it (`roomshot all`, its scenery as a new file has
+       it with a seed's `scenery_hidden` and `scenery_present` on top; ceilings and outline shells left out; water in
+       its own colour; `tools/room_pictures.py`), a pin at each check's own entity (508 of 614) and the rest in the
+       room's middle. Nested tabs and `ActivateTab` read in PopTracker's `src/ui/trackerview.cpp` and
+       `src/uilib/tabs.cpp` at `19f0b1f`: every tab set switches only if it has a tab of that name;
+     - still to come: Metal Lake's lake and a few stray white blocks in the pictures; room names for the rooms only
+       Enemysanity names (the apworld's to give, the user's yes for each).
+     Pictures are fixed per map; with the doors shuffled the rooms stay at home and their doors tell where they lead
+     (item 7), as Crystal does.
+5. **Room Swap:** superseded 2026-10-13: with a tab and a picture per room, each room keeps its own checks wherever
+   it was swapped to, and its doors say where they lead (item 7), as for every door shuffle.
 6. **Fog of war:** a pin shows only when its room is in the visited list, unless the toggle item "Show unvisited
    rooms" is on (off by default). Only with the doors shuffled (the user, 2026-10-13): with the game's own doors
    every room shows.
 7. **Doors:** with the door shuffle on, each door taken (the doors key) shows where it led, as far as PopTracker
    can show it: a badge or section on the room's pin, never a drawn line. Find the best fit in the docs then.
    Built 2026-10-08: the key read (item 21) and each taken door's destination worked out in Lua (`bf_door_led_to`,
-   tested against every door of generated seeds). Still to come: showing it, a pick on screen: sections are fixed
-   in `locations.json`, and a location has no text of its own (`doc/PACKS.md`; items have `BadgeText`).
-8. **Items:** an item grid layout with every item that matters (party, abilities, key items, Artifacts count,
-   Progressive Boat stages), auto-tracked from received items.
-9. **Following the player:** on a current-map change, `ActivateTab` to its world part and `Pan`/`Zoom` to the
-   room (Ui Hints, since 0.34.0).
+   tested against every door of generated seeds). Still to come: showing it as Crystal does (the user, 2026-10-13):
+   a pin on each door of its room's tab, the door taken badged with where it led, a click jumping to that room's
+   tab; later a route between two doors.
+8. **Items:** built 2026-10-13 with the game's own icons (`tools/item_icons.py`, the looks the mod gives them), one
+   grid in rows: the party and Jump, the abilities (their member's face with the ability's word), the artifacts, the
+   keys and passes with the other items after them, the gears and the boats (the user's pick).
+9. **Following the player:** built 2026-10-13: on a current-map change, `ActivateTab` to the room's region, area
+   and room; a setting, on by default (off stays where you are).
 10. **Hints:** hinted checks highlighted (`Highlight` on sections, since 0.32.0). Built 2026-10-08: each of this
     slot's hinted checks takes the `Highlight` of its hint's status (PopTracker's states are Archipelago's
     `HintStatus`: Unspecified, NoPriority, Avoid, Priority; found is None), read from `_read_hints_{team}_{slot}`.
@@ -139,7 +147,7 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
     layout's types are container, dock, array, tabbed, group, item, itemgrid, map, layout, recentpins, text and
     canvas (`doc/PACKS.md`, Layouts, 2026-10-03), so checks show only as pins on a map.
 12. **Layouts:** `tracker_default`, `tracker_broadcast` (a stream view), and `settings_popup` holding the fog of
-    war toggle.
+    war and auto tabbing toggles (built 2026-10-13, also in the bottom bar's Settings).
 13. **Updates:** `versions_url` in the manifest, and a listing in PopTracker's pack list (its `packlist` branch,
     read its rules first).
 14. **Version check:** `min_poptracker_version` and `target_poptracker_version` set to what was tested. The minimum
@@ -171,6 +179,18 @@ The rest of PopTracker's Archipelago interface (`doc/AUTOTRACKING.md`, `d2af7f1`
     `AddRetrievedHandler`, so fog of war, the map and the doors are right before the first change. Built 2026-10-08
     the way PopTracker's own `examples/ap-storage-example` does it: `SetNotify`, then `Get`, one handler for both
     answers, each value's type checked.
+
+Added 2026-10-13, from crystal-ap-tracker's look (the user's asks):
+
+22. **What blocks the way:** a pin on each gated door and on each part of a room on a way onward that a key item, a
+    story step or one clearing ability opens (77), saying what it needs from the apworld's own rule; terrain left
+    out (the user: like Crystal's Sudowoodo, not every ledge).
+23. **The bottom bar:** the map at full width, and along the bottom Items, the Goal on its own (its badge the
+    artifacts received against `artifacts_required`), Events (the story's milestones among the logic's events,
+    marked by hand; each counts for the logic) and Settings.
+24. **Still to come:** a Bosses tab beside Items (bosses, mini-bosses and bounties, beaten or not), an Enemies tab
+    like Crystal's Pokédex for Enemysanity, and events marked by the mod through a data storage key (a randomizer
+    change, after 0.4.0).
 
 ## Not applicable (recorded so it's a decision, not a gap)
 

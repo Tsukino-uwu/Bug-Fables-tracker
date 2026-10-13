@@ -1806,17 +1806,9 @@
             {
               "title": "Fishing Village",
               "content": {
-                "type": "tabbed",
-                "tabs": [
-                  {
-                    "title": "Behind the Plant",
-                    "content": {
-                      "type": "map",
-                      "maps": [
-                        "room_FishingVillage"
-                      ]
-                    }
-                  }
+                "type": "map",
+                "maps": [
+                  "room_FishingVillage"
                 ]
               }
             },
