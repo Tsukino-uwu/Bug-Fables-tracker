@@ -1058,6 +1058,29 @@
     ]
   },
   {
+    "name": "Outside the City: Past the Gate",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_BugariaOutskirtsOutsideCity",
+        "x": 24,
+        "y": 480,
+        "restrict_visibility_rules": [
+          "$bf_seen|BugariaOutskirtsOutsideCity"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Explorer Permit",
+        "access_rules": [
+          "$bf_region|BugariaOutskirtsOutsideCity (Past the Gate)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Bugaria Outskits Snakemouth Corridor1: Flying Seedling 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721019"
@@ -1399,6 +1422,29 @@
     "sections": [
       {
         "ref": "BugariaOutskirtsEast1/Outskirts: East Road, Underling 2"
+      }
+    ]
+  },
+  {
+    "name": "East Road: Cave Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_BugariaOutskirtsEast1",
+        "x": 651,
+        "y": 547,
+        "restrict_visibility_rules": [
+          "$bf_seen|BugariaOutskirtsEast1"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Horn Slash",
+        "access_rules": [
+          "$bf_region|BugariaOutskirtsEast1 (Cave Door)"
+        ]
       }
     ]
   },
@@ -1748,6 +1794,29 @@
     ]
   },
   {
+    "name": "Golden Path Tunnel: Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_GoldenPathTunnel",
+        "x": 163,
+        "y": 497,
+        "restrict_visibility_rules": [
+          "$bf_seen|GoldenPathTunnel"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Horn Dash",
+        "access_rules": [
+          "$bf_region|GoldenPathTunnel (Left)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "East Road to the Pier: Dig Spot",
     "visibility_rules": [
       "$bf_any_in_seed|7720090"
@@ -1859,6 +1928,29 @@
     "sections": [
       {
         "ref": "BugariaOutskirtsSnakemouthCorridor2/Outskirts: Snakemouth Den Path, Seedling 1"
+      }
+    ]
+  },
+  {
+    "name": "Snakemouth Den Path: Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_BugariaOutskirtsSnakemouthCorridor2",
+        "x": 24,
+        "y": 62,
+        "restrict_visibility_rules": [
+          "$bf_seen|BugariaOutskirtsSnakemouthCorridor2"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Horn Slash",
+        "access_rules": [
+          "$bf_region|BugariaOutskirtsSnakemouthCorridor2 (Left)"
+        ]
       }
     ]
   },
@@ -2066,6 +2158,29 @@
     "sections": [
       {
         "ref": "OutsideSnakemouth/Outskirts: Snakemouth Den Entrance, by the Cave"
+      }
+    ]
+  },
+  {
+    "name": "Snakemouth Den Entrance: Corridor Side",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_OutsideSnakemouth",
+        "x": 430,
+        "y": 221,
+        "restrict_visibility_rules": [
+          "$bf_seen|OutsideSnakemouth"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Horn Slash",
+        "access_rules": [
+          "$bf_region|OutsideSnakemouth (Corridor Side)"
+        ]
       }
     ]
   },
@@ -4208,6 +4323,29 @@
     ]
   },
   {
+    "name": "Bridge Room: Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SnakemouthBridgeRoom",
+        "x": 24,
+        "y": 186,
+        "restrict_visibility_rules": [
+          "$bf_seen|SnakemouthBridgeRoom"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Jump and Snakemouth Bridge Lowered",
+        "access_rules": [
+          "$bf_region|SnakemouthBridgeRoom (Left)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Door Room: Flying Seedling 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721011"
@@ -4250,6 +4388,52 @@
     "sections": [
       {
         "ref": "SnakemouthDoorRoom/Snakemouth Den: Door Room, Trapdoor"
+      }
+    ]
+  },
+  {
+    "name": "Door Room: Trapdoor",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SnakemouthDoorRoom",
+        "x": 143,
+        "y": 173,
+        "restrict_visibility_rules": [
+          "$bf_seen|SnakemouthDoorRoom"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Snakemouth Trapdoor Opened",
+        "access_rules": [
+          "$bf_region|SnakemouthDoorRoom (Trapdoor)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Upper Snek Entrance: Top Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_UpperSnekEntrance",
+        "x": 24,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|UpperSnekEntrance"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Snakemouth Gem Placed",
+        "access_rules": [
+          "$bf_region|UpperSnekEntrance (Top Door)"
+        ]
       }
     ]
   },
@@ -4648,6 +4832,29 @@
     ]
   },
   {
+    "name": "Underground Door Room: Pit Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SnakemouthUndergrondDoor",
+        "x": 334,
+        "y": 269,
+        "restrict_visibility_rules": [
+          "$bf_seen|SnakemouthUndergrondDoor"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Snakemouth Big Door Opened",
+        "access_rules": [
+          "$bf_region|SnakemouthUndergrondDoor (Pit Door)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Mushroom Pit: Inichas 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721028"
@@ -4878,6 +5085,29 @@
     ]
   },
   {
+    "name": "Underground Bridge Room: High Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SnakemouthUndergroundRightB",
+        "x": 24,
+        "y": 39,
+        "restrict_visibility_rules": [
+          "$bf_seen|SnakemouthUndergroundRightB"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Snakemouth Right Switch",
+        "access_rules": [
+          "$bf_region|SnakemouthUndergroundRightB (High Door)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Snakemouth Underground Left A: Zombiant 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721033"
@@ -4943,6 +5173,29 @@
     "sections": [
       {
         "ref": "SnakemouthUndergroundLeftB/Bugaria City: SnakemouthUndergroundLeftB, Zombiant 2"
+      }
+    ]
+  },
+  {
+    "name": "Snakemouth Underground Left B: High Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SnakemouthUndergroundLeftB",
+        "x": 767,
+        "y": 38,
+        "restrict_visibility_rules": [
+          "$bf_seen|SnakemouthUndergroundLeftB"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Snakemouth Left Switch",
+        "access_rules": [
+          "$bf_region|SnakemouthUndergroundLeftB (High Door)"
+        ]
       }
     ]
   },
@@ -5497,6 +5750,52 @@
     ]
   },
   {
+    "name": "Flooded Hall: Upper Top Left Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_UpperSnekMiddleRoom",
+        "x": 110,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|UpperSnekMiddleRoom"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Lab Card",
+        "access_rules": [
+          "$bf_region|UpperSnekMiddleRoom (Upper Top Left Door)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Flooded Hall: Upper Top Right Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_UpperSnekMiddleRoom",
+        "x": 650,
+        "y": 82,
+        "restrict_visibility_rules": [
+          "$bf_seen|UpperSnekMiddleRoom"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Lab Card",
+        "access_rules": [
+          "$bf_region|UpperSnekMiddleRoom (Upper Top Right Door)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Gear Machine: Bloatshroom 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721266"
@@ -5539,6 +5838,29 @@
     "sections": [
       {
         "ref": "UpperSnekBeforeBoss/Upper Snakemouth: Gear Machine, On Top of the Machine"
+      }
+    ]
+  },
+  {
+    "name": "Gear Machine: Left Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_UpperSnekBeforeBoss",
+        "x": 24,
+        "y": 206,
+        "restrict_visibility_rules": [
+          "$bf_seen|UpperSnekBeforeBoss"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Small Gear and Medium Gear and Big Gear",
+        "access_rules": [
+          "$bf_region|UpperSnekBeforeBoss (Left Door)"
+        ]
       }
     ]
   },
@@ -6632,6 +6954,52 @@
     ]
   },
   {
+    "name": "Settlement Entrance: Minigame Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_GoldenSettlementEntrance",
+        "x": 52,
+        "y": 380,
+        "restrict_visibility_rules": [
+          "$bf_seen|GoldenSettlementEntrance"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Chapter 2 Started and Explorer Permit and the boat (1) and Snakemouth Den Cleared and Vi and Kabbu and Leif and Beemerang Toss and Horn Slash and Freeze",
+        "access_rules": [
+          "$bf_region|GoldenSettlementEntrance (Minigame Door)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Settlement Entrance: Desert Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_GoldenSettlementEntrance",
+        "x": 385,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|GoldenSettlementEntrance"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Settlement Desert Gate Open",
+        "access_rules": [
+          "$bf_region|GoldenSettlementEntrance (Desert Door)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Whack Farms: elsewhere in the room",
     "visibility_rules": [
       "$bf_any_in_seed|7720143"
@@ -7101,6 +7469,29 @@
     "sections": [
       {
         "ref": "PowerPlant/Golden Settlement: Power Plant, Energy Converter"
+      }
+    ]
+  },
+  {
+    "name": "Power Plant: Top",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_PowerPlant",
+        "x": 215,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|PowerPlant"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Power Plant Door Open",
+        "access_rules": [
+          "$bf_region|PowerPlant (Top)"
+        ]
       }
     ]
   },
@@ -7840,6 +8231,29 @@
     ]
   },
   {
+    "name": "Golden Hills Dungeon Entrance: Top Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_GoldenHillsDungeonEntrance",
+        "x": 598,
+        "y": 251,
+        "restrict_visibility_rules": [
+          "$bf_seen|GoldenHillsDungeonEntrance"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Chapter 2 Started and Explorer Permit and the boat (1) and Snakemouth Den Cleared and Vi and Kabbu and Leif and Beemerang Toss and Horn Slash and Freeze and Beemerang Halt",
+        "access_rules": [
+          "$bf_region|GoldenHillsDungeonEntrance (Top Right)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Left Hall: Chomper 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721054"
@@ -7905,6 +8319,29 @@
     "sections": [
       {
         "ref": "GoldenHillsDungeonLeftMain/Golden Hills: Left Hall, above the Flytraps"
+      }
+    ]
+  },
+  {
+    "name": "Left Hall: Top Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_GoldenHillsDungeonLeftMain",
+        "x": 70,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|GoldenHillsDungeonLeftMain"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Chapter 2 Started and Explorer Permit and the boat (1) and Snakemouth Den Cleared and Vi and Kabbu and Leif and Beemerang Toss and Horn Slash and Freeze and Beemerang Halt",
+        "access_rules": [
+          "$bf_region|GoldenHillsDungeonLeftMain (Top Left)"
+        ]
       }
     ]
   },
@@ -8254,6 +8691,52 @@
     ]
   },
   {
+    "name": "Golden Hills Dungeon Upper Main: Upper Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_GoldenHillsDungeonUpperMain",
+        "x": 588,
+        "y": 169,
+        "restrict_visibility_rules": [
+          "$bf_seen|GoldenHillsDungeonUpperMain"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Upper Hall Lever Hit and Jump",
+        "access_rules": [
+          "$bf_region|GoldenHillsDungeonUpperMain (Upper Right)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Golden Hills Dungeon Upper Main: Boss Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_GoldenHillsDungeonUpperMain",
+        "x": 256,
+        "y": 37,
+        "restrict_visibility_rules": [
+          "$bf_seen|GoldenHillsDungeonUpperMain"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Upper Hall Sun Shrine Fed and Upper Hall Moon Shrine Fed",
+        "access_rules": [
+          "$bf_region|GoldenHillsDungeonUpperMain (Boss Door)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Golden Hills Dungeon Upper Side: Acornling 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721065"
@@ -8296,6 +8779,29 @@
     "sections": [
       {
         "ref": "GoldenHillsDungeonUpperSide/Golden Hills: GoldenHillsDungeonUpperSide, Venus' Bud 1"
+      }
+    ]
+  },
+  {
+    "name": "Golden Hills Dungeon Upper Side: Upper Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_GoldenHillsDungeonUpperSide",
+        "x": 24,
+        "y": 420,
+        "restrict_visibility_rules": [
+          "$bf_seen|GoldenHillsDungeonUpperSide"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Chapter 2 Started and Explorer Permit and the boat (1) and Snakemouth Den Cleared and Vi and Kabbu and Leif and Beemerang Toss and Horn Slash and Freeze and Jump and Beemerang Halt",
+        "access_rules": [
+          "$bf_region|GoldenHillsDungeonUpperSide (Upper Door)"
+        ]
       }
     ]
   },
@@ -9660,6 +10166,29 @@
     ]
   },
   {
+    "name": "Badlands: Hideout Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertBadlands",
+        "x": 327,
+        "y": 232,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertBadlands"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Jump and Chapter 2 Started and Explorer Permit and the boat (1) and Snakemouth Den Cleared and Vi and Kabbu and Leif and Beemerang Toss and Horn Slash and Freeze",
+        "access_rules": [
+          "$bf_region|DesertBadlands (Hideout Door)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "South Trench: Cactiling 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721007"
@@ -9729,6 +10258,29 @@
     ]
   },
   {
+    "name": "South Trench: Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertTrenchSouth",
+        "x": 24,
+        "y": 189,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertTrenchSouth"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Bee Fly or South Trench Bridge Down",
+        "access_rules": [
+          "$bf_region|DesertTrenchSouth (Left)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Desert Trench Middle: Bandit 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721130"
@@ -9794,6 +10346,29 @@
     "sections": [
       {
         "ref": "DesertTrenchMiddle/Lost Sands: DesertTrenchMiddle, Underling 1"
+      }
+    ]
+  },
+  {
+    "name": "Desert Trench Middle: Top",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertTrenchMiddle",
+        "x": 450,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertTrenchMiddle"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Beetle Dig",
+        "access_rules": [
+          "$bf_region|DesertTrenchMiddle (Top)"
+        ]
       }
     ]
   },
@@ -9955,6 +10530,121 @@
     "sections": [
       {
         "ref": "DesertSandPitArea/Lost Sands: DesertSandPitArea, Thief 1"
+      }
+    ]
+  },
+  {
+    "name": "Desert Sand Pit Area: Bottom",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertSandPitArea",
+        "x": 514,
+        "y": 978,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertSandPitArea"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Bee Fly or Sand Pit Bottom Bridge Down",
+        "access_rules": [
+          "$bf_region|DesertSandPitArea (Bottom)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Desert Sand Pit Area: Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertSandPitArea",
+        "x": 24,
+        "y": 516,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertSandPitArea"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Bee Fly or (Sand Pit Left Bridges Down and (Jump or Sand Pit Middle Bridges Down))",
+        "access_rules": [
+          "$bf_region|DesertSandPitArea (Left)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Desert Sand Pit Area: Top Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertSandPitArea",
+        "x": 456,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertSandPitArea"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Bee Fly or (Sand Pit Middle Bridges Down and Jump)",
+        "access_rules": [
+          "$bf_region|DesertSandPitArea (Top Left)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Desert Sand Pit Area: Top Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertSandPitArea",
+        "x": 805,
+        "y": 122,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertSandPitArea"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Bee Fly or (Sand Pit Middle Bridges Down and Jump)",
+        "access_rules": [
+          "$bf_region|DesertSandPitArea (Top Right)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Desert Sand Pit Area: Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertSandPitArea",
+        "x": 982,
+        "y": 522,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertSandPitArea"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Bee Fly or (Sand Pit Right Bridge Down and Sand Pit Top Right Bridge Down)",
+        "access_rules": [
+          "$bf_region|DesertSandPitArea (Right)"
+        ]
       }
     ]
   },
@@ -10238,6 +10928,52 @@
     ]
   },
   {
+    "name": "Oasis: Bottom",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertOasis",
+        "x": 210,
+        "y": 509,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertOasis"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Beetle Dig",
+        "access_rules": [
+          "$bf_region|DesertOasis (Bottom)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Oasis: Top Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertOasis",
+        "x": 519,
+        "y": 122,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertOasis"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Oasis Platform Running and Jump",
+        "access_rules": [
+          "$bf_region|DesertOasis (Top Right)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Badge Alcove: Arrow Worm 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721074"
@@ -10303,6 +11039,29 @@
     "sections": [
       {
         "ref": "DesertBadgeAlcove/Lost Sands: Badge Alcove, Platform on the Upper Left"
+      }
+    ]
+  },
+  {
+    "name": "Desert Sand Castle: loadzone castle",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertSandCastle",
+        "x": 81,
+        "y": 188,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertSandCastle"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Sand Castle Key and Jump",
+        "access_rules": [
+          "$bf_entrance_open|DesertSandCastle: loadzone castle"
+        ]
       }
     ]
   },
@@ -10514,6 +11273,29 @@
     ]
   },
   {
+    "name": "Defiant Root Entrance: Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertDREastEntrance",
+        "x": 66,
+        "y": 68,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertDREastEntrance"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Bee Fly",
+        "access_rules": [
+          "$bf_region|DesertDREastEntrance (Left)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Desert Jump Puzzle: Bandit 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721131"
@@ -10556,6 +11338,29 @@
     "sections": [
       {
         "ref": "DesertJumpPuzzle/Lost Sands: DesertJumpPuzzle, Burglar 1"
+      }
+    ]
+  },
+  {
+    "name": "Desert Jump Puzzle: Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertJumpPuzzle",
+        "x": 506,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertJumpPuzzle"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Jump and (Shield or Thorn Field Bridge Down)",
+        "access_rules": [
+          "$bf_region|DesertJumpPuzzle (Right)"
+        ]
       }
     ]
   },
@@ -10792,6 +11597,98 @@
     ]
   },
   {
+    "name": "Sand Castle Main Room: Middle Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SandCastleMainRoom",
+        "x": 543,
+        "y": 90,
+        "restrict_visibility_rules": [
+          "$bf_seen|SandCastleMainRoom"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs (Sand Castle Lower Lift Running or Sand Castle Upper Lift Running) and Jump",
+        "access_rules": [
+          "$bf_region|SandCastleMainRoom (Middle Right)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sand Castle Main Room: Top Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SandCastleMainRoom",
+        "x": 511,
+        "y": 93,
+        "restrict_visibility_rules": [
+          "$bf_seen|SandCastleMainRoom"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Sand Castle Upper Lift Running and Jump",
+        "access_rules": [
+          "$bf_region|SandCastleMainRoom (Top Right)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sand Castle Main Room: loadzone statue",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SandCastleMainRoom",
+        "x": 545,
+        "y": 210,
+        "restrict_visibility_rules": [
+          "$bf_seen|SandCastleMainRoom"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Small Ancient Key",
+        "access_rules": [
+          "$bf_entrance_open|SandCastleMainRoom: loadzone statue"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sand Castle Main Room: loadzonebosskey",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SandCastleMainRoom",
+        "x": 545,
+        "y": 138,
+        "restrict_visibility_rules": [
+          "$bf_seen|SandCastleMainRoom"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Small Ancient Key",
+        "access_rules": [
+          "$bf_entrance_open|SandCastleMainRoom: loadzonebosskey"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Slide Puzzle: Behind the Cracked Wall",
     "visibility_rules": [
       "$bf_any_in_seed|7720198"
@@ -10815,6 +11712,52 @@
     ]
   },
   {
+    "name": "Slide Puzzle: Upper Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SandCastleSlidePuzzle",
+        "x": 61,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|SandCastleSlidePuzzle"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Sand Castle Slide Puzzle Solved or Bee Fly",
+        "access_rules": [
+          "$bf_region|SandCastleSlidePuzzle (Upper Left)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Slide Puzzle: loadzonepressure",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SandCastleSlidePuzzle",
+        "x": 61,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|SandCastleSlidePuzzle"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Sand Castle Slide Puzzle Solved",
+        "access_rules": [
+          "$bf_entrance_open|SandCastleSlidePuzzle: loadzonepressure"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Roof: Behind the Left Statue",
     "visibility_rules": [
       "$bf_any_in_seed|7720202"
@@ -10834,6 +11777,29 @@
     "sections": [
       {
         "ref": "SandCastleRoof/Ancient Castle: Roof, Behind the Left Statue"
+      }
+    ]
+  },
+  {
+    "name": "Roof: loadzoneboss",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SandCastleRoof",
+        "x": 278,
+        "y": 48,
+        "restrict_visibility_rules": [
+          "$bf_seen|SandCastleRoof"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Big Ancient Key",
+        "access_rules": [
+          "$bf_entrance_open|SandCastleRoof: loadzoneboss"
+        ]
       }
     ]
   },
@@ -10976,6 +11942,29 @@
     ]
   },
   {
+    "name": "Pressure Puzzle: loadzonemain",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SandCastlePressurePuzzle",
+        "x": 430,
+        "y": 146,
+        "restrict_visibility_rules": [
+          "$bf_seen|SandCastlePressurePuzzle"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Sand Castle Pressure Puzzle Door Open",
+        "access_rules": [
+          "$bf_entrance_open|SandCastlePressurePuzzle: loadzonemain"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Rock Room: Alcove between the Rocks",
     "visibility_rules": [
       "$bf_any_in_seed|7720206"
@@ -10995,6 +11984,29 @@
     "sections": [
       {
         "ref": "SandCastleRockRoom/Ancient Castle: Rock Room, Alcove between the Rocks"
+      }
+    ]
+  },
+  {
+    "name": "Rock Room: Bottom Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SandCastleRockRoom",
+        "x": 837,
+        "y": 614,
+        "restrict_visibility_rules": [
+          "$bf_seen|SandCastleRockRoom"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Sand Castle Rock Room Platform Running",
+        "access_rules": [
+          "$bf_region|SandCastleRockRoom (Bottom Right)"
+        ]
       }
     ]
   },
@@ -11348,6 +12360,29 @@
     "sections": [
       {
         "ref": "HideoutGarden/Bandit Hideout: Garden, By the Box"
+      }
+    ]
+  },
+  {
+    "name": "Garden: Bottom Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_HideoutGarden",
+        "x": 24,
+        "y": 238,
+        "restrict_visibility_rules": [
+          "$bf_seen|HideoutGarden"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Beetle Dig",
+        "access_rules": [
+          "$bf_region|HideoutGarden (Bottom Left)"
+        ]
       }
     ]
   },
@@ -12264,6 +13299,29 @@
     "sections": [
       {
         "ref": "DefiantRootWell/Defiant Root: Well, By the Boxes"
+      }
+    ]
+  },
+  {
+    "name": "Well: Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DefiantRootWell",
+        "x": 364,
+        "y": 82,
+        "restrict_visibility_rules": [
+          "$bf_seen|DefiantRootWell"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Beetle Dig",
+        "access_rules": [
+          "$bf_region|DefiantRootWell (Right)"
+        ]
       }
     ]
   },
@@ -13354,6 +14412,29 @@
     ]
   },
   {
+    "name": "Lobby: Processing Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_HoneyFactoryEntrance",
+        "x": 72,
+        "y": 89,
+        "restrict_visibility_rules": [
+          "$bf_seen|HoneyFactoryEntrance"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Factory Pass",
+        "access_rules": [
+          "$bf_region|HoneyFactoryEntrance (Processing Door)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Worker Rooms: On Top of the Bookshelf",
     "visibility_rules": [
       "$bf_any_in_seed|7720235"
@@ -13511,6 +14592,29 @@
     "sections": [
       {
         "ref": "FactoryProcessingFirstRoom/Honey Factory: First Room, Switch"
+      }
+    ]
+  },
+  {
+    "name": "First Room: Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_FactoryProcessingFirstRoom",
+        "x": 24,
+        "y": 103,
+        "restrict_visibility_rules": [
+          "$bf_seen|FactoryProcessingFirstRoom"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs First Room Platforms Running and Shield",
+        "access_rules": [
+          "$bf_region|FactoryProcessingFirstRoom (Left)"
+        ]
       }
     ]
   },
@@ -13676,6 +14780,29 @@
     ]
   },
   {
+    "name": "Storage Maze: Overseer Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_FactoryStorageMaze",
+        "x": 911,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|FactoryStorageMaze"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Factory Pass",
+        "access_rules": [
+          "$bf_region|FactoryStorageMaze (Overseer Door)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Pump Room: Bee-Boop 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721090"
@@ -13764,6 +14891,29 @@
     "sections": [
       {
         "ref": "FactoryProcessingPump/Honey Factory: Pump Room, Security Turret 1"
+      }
+    ]
+  },
+  {
+    "name": "Pump Room: loadzonemalbee",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_FactoryProcessingPump",
+        "x": 24,
+        "y": 345,
+        "restrict_visibility_rules": [
+          "$bf_seen|FactoryProcessingPump"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Factory Pass",
+        "access_rules": [
+          "$bf_entrance_open|FactoryProcessingPump: loadzonemalbee"
+        ]
       }
     ]
   },
@@ -14810,6 +15960,52 @@
     ]
   },
   {
+    "name": "FGCave: Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_FGCave",
+        "x": 24,
+        "y": 288,
+        "restrict_visibility_rules": [
+          "$bf_seen|FGCave"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Border Cave Left Gate Open",
+        "access_rules": [
+          "$bf_region|FGCave (Left)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "FGCave: Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_FGCave",
+        "x": 594,
+        "y": 288,
+        "restrict_visibility_rules": [
+          "$bf_seen|FGCave"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Border Cave Right Gate Open",
+        "access_rules": [
+          "$bf_region|FGCave (Right)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Far Grasslands Outside Cave: Jumping Spider 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721171"
@@ -14856,6 +16052,52 @@
     ]
   },
   {
+    "name": "Far Grasslands Outside Cave: Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_FarGrasslandsOutsideCave",
+        "x": 419,
+        "y": 165,
+        "restrict_visibility_rules": [
+          "$bf_seen|FarGrasslandsOutsideCave"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Horn Dash",
+        "access_rules": [
+          "$bf_region|FarGrasslandsOutsideCave (Right)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Far Grasslands Outside Cave: Bottom Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_FarGrasslandsOutsideCave",
+        "x": 87,
+        "y": 546,
+        "restrict_visibility_rules": [
+          "$bf_seen|FarGrasslandsOutsideCave"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Beetle Dig",
+        "access_rules": [
+          "$bf_region|FarGrasslandsOutsideCave (Bottom Left)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Wizard's Tower: elsewhere in the room",
     "visibility_rules": [
       "$bf_any_in_seed|7720171"
@@ -14875,6 +16117,29 @@
     "sections": [
       {
         "ref": "FarGrasslandsWizard/Far Grasslands: Wizard's Tower, Lookout Rock"
+      }
+    ]
+  },
+  {
+    "name": "Wizard's Tower: loadzonebasement",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_FarGrasslandsWizard",
+        "x": 385,
+        "y": 90,
+        "restrict_visibility_rules": [
+          "$bf_seen|FarGrasslandsWizard"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Horn Slash",
+        "access_rules": [
+          "$bf_entrance_open|FarGrasslandsWizard: loadzonebasement"
+        ]
       }
     ]
   },
@@ -14944,6 +16209,29 @@
     "sections": [
       {
         "ref": "FarGrasslands4/Far Grasslands: FarGrasslands4, Wild Chomper 1"
+      }
+    ]
+  },
+  {
+    "name": "Far Grasslands4: Clearing Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_FarGrasslands4",
+        "x": 691,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|FarGrasslands4"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Horn Dash",
+        "access_rules": [
+          "$bf_region|FarGrasslands4 (Clearing Door)"
+        ]
       }
     ]
   },
@@ -16041,6 +17329,29 @@
     ]
   },
   {
+    "name": "Bridge: Top",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_SwamplandsBridge",
+        "x": 341,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|SwamplandsBridge"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Bee Fly or (Swamp Lower Bridge Knocked Down and Jump)",
+        "access_rules": [
+          "$bf_region|SwamplandsBridge (Top)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Swamplands3: Leafbug Clubber 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721192"
@@ -16083,6 +17394,29 @@
     "sections": [
       {
         "ref": "Swamplands3/Wild Swamplands: Swamplands3, Leafbug Ninja 1"
+      }
+    ]
+  },
+  {
+    "name": "Swamplands3: Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_Swamplands3",
+        "x": 934,
+        "y": 121,
+        "restrict_visibility_rules": [
+          "$bf_seen|Swamplands3"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Swamp Tree Knocked Down and (Jump or Bee Fly)",
+        "access_rules": [
+          "$bf_region|Swamplands3 (Right)"
+        ]
       }
     ]
   },
@@ -16152,6 +17486,29 @@
     "sections": [
       {
         "ref": "Swamplands4/Wild Swamplands: Swamplands4, Leafbug Ninja 1"
+      }
+    ]
+  },
+  {
+    "name": "Swamplands4: Left Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_Swamplands4",
+        "x": 24,
+        "y": 79,
+        "restrict_visibility_rules": [
+          "$bf_seen|Swamplands4"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Horn Dash",
+        "access_rules": [
+          "$bf_region|Swamplands4 (Left Door)"
+        ]
       }
     ]
   },
@@ -16543,6 +17900,29 @@
     "sections": [
       {
         "ref": "Swamplands5/Wild Swamplands: Junction, Wild Chomper 2"
+      }
+    ]
+  },
+  {
+    "name": "Junction: Top Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_Swamplands5",
+        "x": 938,
+        "y": 94,
+        "restrict_visibility_rules": [
+          "$bf_seen|Swamplands5"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Swamp Lift Running and Jump",
+        "access_rules": [
+          "$bf_region|Swamplands5 (Top Right)"
+        ]
       }
     ]
   },
@@ -17051,6 +18431,75 @@
       },
       {
         "ref": "WaspKingdomPrison/Wasp Kingdom Hive: Prison, Wasp Trooper 1"
+      }
+    ]
+  },
+  {
+    "name": "Wasp Kingdom Outside: Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_WaspKingdomOutside",
+        "x": 24,
+        "y": 237,
+        "restrict_visibility_rules": [
+          "$bf_seen|WaspKingdomOutside"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Horn Dash",
+        "access_rules": [
+          "$bf_region|WaspKingdomOutside (Left)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wasp Kingdom Outside: Grass Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_WaspKingdomOutside",
+        "x": 198,
+        "y": 185,
+        "restrict_visibility_rules": [
+          "$bf_seen|WaspKingdomOutside"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Horn Slash",
+        "access_rules": [
+          "$bf_region|WaspKingdomOutside (Grass Door)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wasp Kingdom2: Right Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_WaspKingdom2",
+        "x": 413,
+        "y": 40,
+        "restrict_visibility_rules": [
+          "$bf_seen|WaspKingdom2"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Wasp Key",
+        "access_rules": [
+          "$bf_region|WaspKingdom2 (Right Door)"
+        ]
       }
     ]
   },
@@ -17900,6 +19349,52 @@
     ]
   },
   {
+    "name": "Barren Lands Beefly: Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_BarrenLandsBeefly",
+        "x": 24,
+        "y": 289,
+        "restrict_visibility_rules": [
+          "$bf_seen|BarrenLandsBeefly"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Bee Fly",
+        "access_rules": [
+          "$bf_region|BarrenLandsBeefly (Left)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Barren Lands Beefly: Upper Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_BarrenLandsBeefly",
+        "x": 742,
+        "y": 241,
+        "restrict_visibility_rules": [
+          "$bf_seen|BarrenLandsBeefly"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Broken Bridge Ruler Down",
+        "access_rules": [
+          "$bf_region|BarrenLandsBeefly (Upper Right)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Wind Pipes: Ironnail 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721246"
@@ -18176,6 +19671,29 @@
     ]
   },
   {
+    "name": "Termite Outside: Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_TermiteOutside",
+        "x": 21,
+        "y": 49,
+        "restrict_visibility_rules": [
+          "$bf_seen|TermiteOutside"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Horn Dash",
+        "access_rules": [
+          "$bf_region|TermiteOutside (Left)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Dome Overlook: Grass by the Log",
     "visibility_rules": [
       "$bf_any_in_seed|7720166"
@@ -18264,6 +19782,29 @@
     "sections": [
       {
         "ref": "BarrenLandsRock/Forsaken Lands: Dome Overlook, Vista"
+      }
+    ]
+  },
+  {
+    "name": "Barren Lands Mushrooms: Left",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_BarrenLandsMushrooms",
+        "x": 24,
+        "y": 156,
+        "restrict_visibility_rules": [
+          "$bf_seen|BarrenLandsMushrooms"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Beetle Dig",
+        "access_rules": [
+          "$bf_region|BarrenLandsMushrooms (Left)"
+        ]
       }
     ]
   },
@@ -20081,6 +21622,75 @@
     ]
   },
   {
+    "name": "Rubber Prison Cells1: Top Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_RubberPrisonCells1",
+        "x": 380,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|RubberPrisonCells1"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Crossroads Barrier Lowered",
+        "access_rules": [
+          "$bf_region|RubberPrisonCells1 (Top Door)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rubber Prison Cells1: Left Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_RubberPrisonCells1",
+        "x": 24,
+        "y": 212,
+        "restrict_visibility_rules": [
+          "$bf_seen|RubberPrisonCells1"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Prison Key",
+        "access_rules": [
+          "$bf_region|RubberPrisonCells1 (Left Door)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rubber Prison Cells1: Right Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_RubberPrisonCells1",
+        "x": 746,
+        "y": 212,
+        "restrict_visibility_rules": [
+          "$bf_seen|RubberPrisonCells1"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Crossroads Right Gate Open",
+        "access_rules": [
+          "$bf_region|RubberPrisonCells1 (Right Door)"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Spike Room: In the Cage",
     "visibility_rules": [
       "$bf_any_in_seed|7720241"
@@ -20123,6 +21733,29 @@
     "sections": [
       {
         "ref": "RubberPrisonSpikeRoom/Rubber Prison: Spike Room, Wasp Bomber 1"
+      }
+    ]
+  },
+  {
+    "name": "Spike Room: Top Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_RubberPrisonSpikeRoom",
+        "x": 226,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|RubberPrisonSpikeRoom"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Prison Key",
+        "access_rules": [
+          "$bf_region|RubberPrisonSpikeRoom (Top Door)"
+        ]
       }
     ]
   },
@@ -20192,6 +21825,29 @@
     "sections": [
       {
         "ref": "RubberPrisonCells2/Rubber Prison: Electric Cells, Ruffian 1"
+      }
+    ]
+  },
+  {
+    "name": "Electric Cells: Top Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_RubberPrisonCells2",
+        "x": 298,
+        "y": 69,
+        "restrict_visibility_rules": [
+          "$bf_seen|RubberPrisonCells2"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Prison Key",
+        "access_rules": [
+          "$bf_region|RubberPrisonCells2 (Top Door)"
+        ]
       }
     ]
   },
@@ -20284,6 +21940,29 @@
     "sections": [
       {
         "ref": "RubberPrisonCheckpointCorridor/Rubber Prison: RubberPrisonCheckpointCorridor, Wasp Driller 1"
+      }
+    ]
+  },
+  {
+    "name": "Rubber Prison Checkpoint Corridor: Top Left Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_RubberPrisonCheckpointCorridor",
+        "x": 60,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|RubberPrisonCheckpointCorridor"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Explorer Permit",
+        "access_rules": [
+          "$bf_region|RubberPrisonCheckpointCorridor (Top Left Door)"
+        ]
       }
     ]
   },
@@ -20402,6 +22081,52 @@
     "sections": [
       {
         "ref": "RubberPrisonPier/Rubber Prison: Pier, Wasp Trooper 1"
+      }
+    ]
+  },
+  {
+    "name": "Pier: Second Floor Right Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_RubberPrisonPier",
+        "x": 570,
+        "y": 59,
+        "restrict_visibility_rules": [
+          "$bf_seen|RubberPrisonPier"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Warden's Office Crank Turned",
+        "access_rules": [
+          "$bf_region|RubberPrisonPier (Second Floor Right Door)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pier: Shortcut Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_RubberPrisonPier",
+        "x": 539,
+        "y": 59,
+        "restrict_visibility_rules": [
+          "$bf_seen|RubberPrisonPier"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Giant's Lair Bridge Shortcut Open",
+        "access_rules": [
+          "$bf_region|RubberPrisonPier (Shortcut Door)"
+        ]
       }
     ]
   },
@@ -20586,6 +22311,29 @@
     "sections": [
       {
         "ref": "RubberPrisonGiantLairBridge/Rubber Prison: Giant's Lair Bridge, Queen's Gift"
+      }
+    ]
+  },
+  {
+    "name": "Giant's Lair Bridge: Top Left Door",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_RubberPrisonGiantLairBridge",
+        "x": 66,
+        "y": 48,
+        "restrict_visibility_rules": [
+          "$bf_seen|RubberPrisonGiantLairBridge"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Giant's Lair Bridge Shortcut Open",
+        "access_rules": [
+          "$bf_region|RubberPrisonGiantLairBridge (Top Left Door)"
+        ]
       }
     ]
   },
@@ -21337,6 +23085,29 @@
     "sections": [
       {
         "ref": "GiantLairDeadLands2/Giant's Lair: Crane Crossing, Ledge by the Crossing"
+      }
+    ]
+  },
+  {
+    "name": "Giant Lair Fridge Outside: Right",
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_GiantLairFridgeOutside",
+        "x": 1071,
+        "y": 21,
+        "restrict_visibility_rules": [
+          "$bf_seen|GiantLairFridgeOutside"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Needs Outside the Fridge Fight Won",
+        "access_rules": [
+          "$bf_region|GiantLairFridgeOutside (Right)"
+        ]
       }
     ]
   },

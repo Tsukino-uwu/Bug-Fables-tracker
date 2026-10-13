@@ -311,6 +311,19 @@ function bf_location(id)
     return bf_state().locations[tonumber(id)] == true
 end
 
+-- A blocker's pin (export.py): lit once the logic reaches the part of the room behind it, or can go through its door.
+function bf_region(region)
+    return bf_state().reached[region] == true
+end
+
+function bf_entrance_open(name)
+    local state = bf_state()
+    for _, entrance in ipairs(SEED.entrances) do
+        if entrance.name == name then return state.reached[entrance.from] == true and eval(entrance.rule) end
+    end
+    return false
+end
+
 function bf_any_in_seed(...)
     for _, id in ipairs({ ... }) do
         if bf_in_seed(id) then return true end

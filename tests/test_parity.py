@@ -179,6 +179,14 @@ class TestParity(unittest.TestCase):
                     reached = {name for name, on in lua.g.bf_reached().items() if on}
                     self.assertEqual(reached, {r.name for r in multiworld.get_regions(1) if r.can_reach(state)},
                                      f"state {k}: regions")
+                    # The gates' pins: going through each door that is a gate, as Archipelago answers it.
+                    entrances = {e.name for e in multiworld.get_entrances(1)}
+                    for gate in WORLD["data"].DOOR_RULES:
+                        if WORLD["data"].door_name(gate.map, gate.door) not in entrances:
+                            continue  # a door kept shut for good isn't one of the logic's
+                        entrance = multiworld.get_entrance(WORLD["data"].door_name(gate.map, gate.door), 1)
+                        self.assertEqual(bool(lua.g.bf_entrance_open(entrance.name)), entrance.can_reach(state),
+                                         f"state {k}: {entrance.name}")
 
 
 class TestExport(unittest.TestCase):

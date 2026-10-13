@@ -323,6 +323,45 @@ def logic_doors(room_data: dict[str, dict], doors: Any) -> dict[str, dict]:
     return out
 
 
+def rule_text(rule: dict[str, Any] | None) -> str:
+    """What a rule asks, in words: its items, abilities and members, "or" between ways and "and" within one."""
+    if rule is None:
+        return "nothing"
+    kind, args = rule["rule"], rule.get("args", {})
+    if kind == "Has":
+        return args["item_name"] + (f" x{args['count']}" if args.get("count", 1) > 1 else "")
+    if kind == "HasAllCounts":
+        return " and ".join(f"{name} x{n}" if n > 1 else name for name, n in args["item_counts"].items())
+    if kind == "HasFromListUnique":
+        count = args["count"]
+        return f"{'the set number of' if isinstance(count, dict) else count} of {', '.join(args['item_names'])}"
+    if kind in ("CanUse", "MoveItem"):
+        return args["ability"]
+    if kind == "Member":
+        return args["name"]
+    if kind == "Boat":
+        return f"the boat ({args['level']})"
+    if kind == "CanReachRegion":
+        return f"reaching {args['region_name']}"
+    if kind in ("Filtered", "WayBack"):
+        return rule_text(rule["child"])
+    if kind == "True_":
+        return "nothing"
+    if kind == "False_":
+        return "no way"
+    parts = list(dict.fromkeys(rule_text(child) for child in rule["children"]))
+    if kind == "And":
+        return " and ".join(f"({part})" if " or " in part else part for part in parts)
+    return " or ".join(f"({part})" if " and " in part else part for part in parts)
+
+
+def door_spot(rooms: dict[str, dict], room: str, door: str) -> list[float] | None:
+    """A door's spot in its room, by its name as doors.json gives it ("name#row" for one of two alike)."""
+    name, _, row = door.partition("#")
+    return next((d["at"] for d in rooms.get(room, {}).get("doors", ())
+                 if d["name"] == name and (not row or d["index"] == int(row))), None)
+
+
 def walking_order(every: list[str], starts: list[str], rooms: dict[str, dict]) -> list[str]:
     """An area's rooms in walking order: from its first start, through the doors, nearest first (a door's row order);
     the rooms no door of the area reaches after, each from itself."""
@@ -436,6 +475,26 @@ def main() -> None:
     tab_rooms: dict[str, dict[str, list[dict[str, Any]]]] = {}
     location_names: set[str] = set()
     walked: dict[str, int] = {}  # each room of the areas before, by its place in the walking order
+    parts_of: dict[str, list[Any]] = {}  # each room's parts a roadblock cuts off (MAP_AREAS)
+    for part in w["data"].MAP_AREAS:
+        parts_of.setdefault(part.map, []).append(part)
+    gates_of: dict[str, list[Any]] = {}  # each room's doors that are gates (DOOR_RULES)
+    for gate in w["data"].DOOR_RULES:
+        gates_of.setdefault(gate.map, []).append(gate)
+    entrance_names = {e["name"] for e in logic["entrances"]}
+    door_parts = {e["from"] for e in logic["entrances"] if "door" in e or "one_way" in e}  # parts on a way onward
+    ability_items = {a["item"] for a in logic["abilities"].values()} | set(logic["members"]) | {"Jump"}
+
+    def road_block(rule: dict[str, Any] | None) -> bool:
+        """Something in the road, as crystal-ap-tracker's Sudowoodo: a key item or a story step (a guard, a lock, a
+        bridge), or one ability that breaks or clears it (a boulder, a mound); not the terrain, a ledge to jump."""
+        if rule is not None and rule["rule"] == "CanUse":
+            return rule["args"]["ability"] != "Jump"
+        needs = {part["args"]["item_name"] for part in walk(rule) if part["rule"] == "Has"} if rule else set()
+        needs |= {name for part in walk(rule) if part["rule"] == "HasAllCounts"
+                  for name in part["args"]["item_counts"]} if rule else set()
+        return bool(needs - ability_items) or any(part["rule"] == "Boat" for part in walk(rule)) if rule else False
+    blocker_count = 0
     placed = 0
     for area, names in areas.items():
         # Every room of the area has a tab, the logic's maps only: a test or cutscene map that's no region of the
@@ -530,6 +589,46 @@ def main() -> None:
                                        "restrict_visibility_rules": [f"$bf_seen|{room}"]}],
                     "sections": [{"ref": f"{room}/{loc['name']}"} for _, loc in checks],
                 })
+
+            # What blocks the way, as crystal-ap-tracker shows its blockers: each part of the room a roadblock cuts off
+            # (where its doors and checks are) and each door that is a gate (on the door), saying what it needs, lit
+            # once the logic gets there.
+            blockers = []
+            for part in parts_of.get(room, ()):
+                if part.region not in door_parts or not road_block(rule_dict(part.rule)):
+                    continue
+                found = [door_spot(raw_rooms, room, e[kind]["door"]) for e in logic["entrances"]
+                         if e["from"] == part.region for kind in ("door", "one_way") if kind in e]
+                found += [check_spot(sources[loc["id"]], room, raw_rooms) for loc in rooms.get(room, ())
+                          if loc["region"] == part.region]
+                found = [s for s in found if s]
+                at = [sum(s[0] for s in found) / len(found), sum(s[1] for s in found) / len(found)] if found else None
+                blockers.append((part.name, rule_dict(part.rule), f"$bf_region|{part.region}", at))
+            for gate in gates_of.get(room, ()):
+                # A door kept shut for good isn't a door of the logic: nothing to show.
+                if w["data"].door_name(gate.map, gate.door) not in entrance_names:
+                    continue
+                blockers.append((gate.door.partition("#")[0], rule_dict(gate.rule),
+                                 f"$bf_entrance_open|{w['data'].door_name(gate.map, gate.door)}",
+                                 door_spot(raw_rooms, room, gate.door)))
+            for what, rule, access, at in blockers:
+                x, y = ((at[0] - picture["left"]) * picture["x_scale"], (picture["top"] - at[1]) * picture["z_scale"]) \
+                    if at else (picture["size"][0] / 2, picture["size"][1] / 2)
+                name = base = f"{title}: {what}"
+                n = 1
+                while name in location_names:
+                    n += 1
+                    name = f"{base} ({n})"
+                location_names.add(name)
+                locations_json.append({
+                    "name": name,
+                    "chest_unopened_img": "images/chest_closed.png",
+                    "chest_opened_img": "images/chest_open.png",
+                    "map_locations": [{"map": room_map, "x": round(x), "y": round(y),
+                                       "restrict_visibility_rules": [f"$bf_seen|{room}"]}],
+                    "sections": [{"name": f"Needs {rule_text(rule)}", "access_rules": [access]}],
+                })
+                blocker_count += 1
     area_tabs = [{"title": region, "content": {"type": "tabbed", "tabs": [
         {"title": area, "content": {"type": "tabbed", "tabs": tabs}} for area, tabs in region_areas.items()]}}
         for region, region_areas in tab_rooms.items()]
@@ -586,7 +685,8 @@ def main() -> None:
     write(PACK / "images/chest_open.png", square_icon((120, 120, 120), 24, hollow=True))
     print(f"world {logic['world_version']} at {logic['randomizer_commit']}: {len(logic['entrances'])} entrances, "
           f"{len(logic['locations'])} locations in {len(rooms)} rooms ({placed} at their own spot), "
-          f"{len(map_tabs)} room tabs in {len(area_tabs)} regions, {len(logic['events'])} events, "
+          f"{len(map_tabs)} room tabs in {len(area_tabs)} regions, {blocker_count} blockers, "
+          f"{len(logic['events'])} events, "
           f"{len(logic['items'])} items")
 
 
