@@ -1,84 +1,62 @@
 {
   "item_grid": {
-    "type": "array",
-    "orientation": "vertical",
-    "content": [
-      {
-        "type": "itemgrid",
-        "item_margin": "3,3",
-        "item_size": "40,40",
-        "h_alignment": "left",
-        "rows": [
-          [
-            "vi",
-            "kabbu",
-            "leif",
-            "jump"
-          ],
-          [
-            "progressive_beemerang",
-            "horn_slash",
-            "progressive_freeze",
-            "progressive_dash",
-            "bee_fly",
-            "beetle_dig",
-            "shield"
-          ],
-          [
-            "ancient_mask",
-            "ancient_tablet",
-            "ancient_key",
-            "ancient_half",
-            "queen_s_mask",
-            "flame_brooch",
-            "wasp_king_s_crown"
-          ],
-          [
-            "explorer_permit",
-            "flower_key",
-            "factory_pass",
-            "sand_castle_key",
-            "small_ancient_key",
-            "big_ancient_key",
-            "peculiar_gem",
-            "wasp_key"
-          ],
-          [
-            "lab_card",
-            "prison_key"
-          ],
-          [
-            "small_gear",
-            "medium_gear",
-            "big_gear",
-            "boat_ticket",
-            "subaquatic_maritime_neotransport",
-            "progressive_boat"
-          ],
-          [
-            "goal"
-          ]
-        ]
-      },
-      {
-        "type": "group",
-        "header": "Other",
-        "content": {
-          "type": "itemgrid",
-          "item_margin": "3,3",
-          "item_size": "28,28",
-          "h_alignment": "left",
-          "rows": [
-            [
-              "g_bug_ranger_plushie",
-              "quest_book",
-              "sun_offering",
-              "moon_offering",
-              "extra_freeze"
-            ]
-          ]
-        }
-      }
+    "type": "itemgrid",
+    "item_margin": "3,3",
+    "item_size": "40,40",
+    "h_alignment": "left",
+    "rows": [
+      [
+        "vi",
+        "kabbu",
+        "leif",
+        "jump"
+      ],
+      [
+        "progressive_beemerang",
+        "horn_slash",
+        "progressive_freeze",
+        "progressive_dash",
+        "bee_fly",
+        "beetle_dig",
+        "shield"
+      ],
+      [
+        "ancient_mask",
+        "ancient_tablet",
+        "ancient_key",
+        "ancient_half",
+        "queen_s_mask",
+        "flame_brooch",
+        "wasp_king_s_crown",
+        "goal"
+      ],
+      [
+        "explorer_permit",
+        "flower_key",
+        "factory_pass",
+        "sand_castle_key",
+        "small_ancient_key",
+        "big_ancient_key",
+        "peculiar_gem",
+        "wasp_key"
+      ],
+      [
+        "lab_card",
+        "prison_key",
+        "g_bug_ranger_plushie",
+        "quest_book",
+        "sun_offering",
+        "moon_offering",
+        "extra_freeze"
+      ],
+      [
+        "small_gear",
+        "medium_gear",
+        "big_gear",
+        "boat_ticket",
+        "subaquatic_maritime_neotransport",
+        "progressive_boat"
+      ]
     ]
   }
 }
