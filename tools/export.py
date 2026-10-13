@@ -35,6 +35,12 @@ ROOM_PIN = 36  # a check's pin on its room's picture
 # own.
 OTHER_ITEMS = ("G-Bug Ranger Plushie", "Quest Book", "Sun Offering", "Moon Offering", "Extra Freeze")
 GOAL_LOOK = "Wasp King's Crown"
+# The Events group (the user's pick, 2026-10-13): the story's milestones among the logic's events, each the game's own
+# flag, marked by hand for now; with a short word for its drawn icon.
+EVENT_ITEMS = {"Snakemouth Den Cleared": "Boss 1", "Chapter 2 Started": "Ch. 2", "Mothiva's Show Seen": "Mothiva",
+               "B.O.S.S. Unlocked": "B.O.S.S.", "Malbee's Fight Done": "Malbee",
+               "Giant's Lair Bridge Fight Won": "Bridge", "Outside the Fridge Fight Won": "Fridge",
+               "Roach Village Scene Seen": "Roaches"}
 WAY_ITEMS = ("Small Gear", "Medium Gear", "Big Gear", "Boat Ticket", "Subaquatic Maritime Neotransport",
              "Progressive Boat")
 
@@ -281,6 +287,24 @@ def hsv(h: float, s: float, v: float) -> tuple[int, int, int]:
     p, q, t = v * (1 - s), v * (1 - f * s), v * (1 - (1 - f) * s)
     r, g, b = [(v, t, p), (q, v, p), (p, v, t), (p, q, v), (t, p, v), (v, p, q)][i]
     return int(r * 255), int(g * 255), int(b * 255)
+
+
+def labelled_icon(color: tuple[int, int, int], word: str, size: int = 64) -> bytes:
+    """A drawn round icon with a word on it, for what the game has no picture of (an event)."""
+    from PIL import Image, ImageDraw, ImageFont
+    import io
+    image = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(image)
+    draw.ellipse((2, 2, size - 3, size - 3), fill=(*color, 255), outline=(20, 20, 20, 255), width=3)
+    points = 16
+    while points > 8 and draw.textlength(word, font=ImageFont.load_default(size=points)) > size - 10:
+        points -= 1
+    font = ImageFont.load_default(size=points)
+    draw.text(((size - draw.textlength(word, font=font)) / 2, size / 2 - points * 0.6), word, font=font,
+              fill=(255, 255, 255, 255), stroke_width=2, stroke_fill=(0, 0, 0, 255))
+    out = io.BytesIO()
+    image.save(out, "PNG", optimize=True)
+    return out.getvalue()
 
 
 def square_icon(color: tuple[int, int, int], size: int = 32, hollow: bool = False) -> bytes:
@@ -676,10 +700,29 @@ def main() -> None:
         write(PACK / f"images/items/{code}.png", square_icon(colour))
         items_json.append({"name": name, "img": f"images/items/{code}.png", "codes": code, "type": "toggle",
                            "initial_active_state": on})
-    items_json.append({"name": "Refresh", "img": "images/items/goal.png", "codes": "bf_refresh", "type": "toggle"})
-    write(PACK / "layouts/settings.json", json.dumps({"settings_popup": {
-        "type": "itemgrid", "item_margin": "4,4", "item_size": "32,32", "rows": [["auto_tab", "show_unvisited"]],
-    }}, indent=2) + "\n")
+    items_json.append({"name": "Refresh", "img": "images/items/settings_refresh.png", "codes": "bf_refresh",
+                       "type": "toggle"})
+    write(PACK / "images/items/settings_refresh.png", square_icon((90, 90, 90)))
+    settings = {"type": "itemgrid", "item_margin": "4,4", "item_size": "32,32", "rows": [["auto_tab", "show_unvisited"]]}
+    write(PACK / "layouts/settings.json", json.dumps({"settings_popup": settings, "settings_grid": settings},
+                                                     indent=2) + "\n")
+    # The Events group: the milestones as toggles, marked by hand; each counts for the logic as the event does.
+    event_codes = {}
+    for name, word in EVENT_ITEMS.items():
+        if name not in {e["item"] for e in logic["events"]}:
+            raise SystemExit(f"{name}: not one of the logic's story events")
+        code = "event_" + code_of(name)
+        image = f"images/items/{code}.png"
+        write(PACK / image, labelled_icon((200, 170, 90), word))
+        items_json.append({"name": name, "img": image, "codes": code, "type": "toggle"})
+        event_codes[name] = code
+    logic["event_codes"] = event_codes
+    logic["artifact_codes"] = [item["code"] for item in logic["items"] if item["kind"] == w["data"].ARTIFACT_KIND]
+    write(PACK / "layouts/event_grid.json", json.dumps({"event_grid": {
+        "type": "itemgrid", "item_margin": "3,3", "item_size": "40,40", "h_alignment": "left",
+        "rows": [list(event_codes.values())[i:i + 4] for i in range(0, len(event_codes), 4)],
+    }, "goal_grid": {"type": "itemgrid", "item_margin": "3,3", "item_size": "48,48", "rows": [["goal"]]}},
+        indent=2) + "\n")
 
     # The grid, each lit once received: the party and Jump, the abilities, the artifacts and the Goal, the keys,
     # passes and the like with the other items after them, the gears and the boats.
@@ -690,7 +733,7 @@ def main() -> None:
     ways = [code_of_name[name] for name in WAY_ITEMS if name in code_of_name]
     moves = by_kind.get(w["data"].MOVE_KIND, [])
     groups = [[*by_kind.get(w["data"].MEMBER_KIND, []), *(code for code in moves if code == "jump")],
-              [code for code in moves if code != "jump"], [*by_kind.get(w["data"].ARTIFACT_KIND, []), "goal"],
+              [code for code in moves if code != "jump"], by_kind.get(w["data"].ARTIFACT_KIND, []),
               [*(code for code in by_kind.get(w["data"].KEY_ITEM_KIND, []) if code not in ways), *other], ways]
     shown = {code for group in groups for code in group}
     groups.append([item["code"] for item in logic["items"] if item["code"] not in shown])

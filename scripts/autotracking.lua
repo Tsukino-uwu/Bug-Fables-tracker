@@ -101,9 +101,22 @@ local function on_storage(key, value)
     end
 end
 
+-- The Goal's badge: the artifacts received against the seed's count (slot_data's artifacts_required).
+local function show_goal_count()
+    local goal = Tracker:FindObjectForCode("goal")
+    local required = SEED.options.artifacts_required
+    if goal == nil or type(required) ~= "number" or required <= 0 then return end
+    local held = 0
+    for _, code in ipairs(DATA.artifact_codes) do
+        if Tracker:ProviderCountForCode(code) > 0 then held = held + 1 end
+    end
+    goal.BadgeText = math.min(held, required) .. "/" .. required
+end
+
 local function on_clear(slot_data)
     last_index = -1
     for _, item in ipairs(DATA.items) do reset_item(item.code) end
+    for _, code in pairs(DATA.event_codes) do reset_item(code) end
     reset_item("goal")
     for _, path in pairs(DATA.section_paths) do
         local section = Tracker:FindObjectForCode(path)
@@ -137,6 +150,7 @@ local function on_clear(slot_data)
     local list = { keys.doors, keys.visited, keys.map, keys.goal, keys.hints }
     Archipelago:SetNotify(list)
     Archipelago:Get(list)
+    show_goal_count()
 end
 
 local function on_item(index, item_id, item_name, player_number)
@@ -151,6 +165,7 @@ local function on_item(index, item_id, item_name, player_number)
     else
         item.AcquiredCount = item.AcquiredCount + 1
     end
+    show_goal_count()
 end
 
 local function on_location(location_id, location_name)

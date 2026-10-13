@@ -1,0 +1,32 @@
+{
+  "event_grid": {
+    "type": "itemgrid",
+    "item_margin": "3,3",
+    "item_size": "40,40",
+    "h_alignment": "left",
+    "rows": [
+      [
+        "event_snakemouth_den_cleared",
+        "event_chapter_2_started",
+        "event_mothiva_s_show_seen",
+        "event_b_o_s_s_unlocked"
+      ],
+      [
+        "event_malbee_s_fight_done",
+        "event_giant_s_lair_bridge_fight_won",
+        "event_outside_the_fridge_fight_won",
+        "event_roach_village_scene_seen"
+      ]
+    ]
+  },
+  "goal_grid": {
+    "type": "itemgrid",
+    "item_margin": "3,3",
+    "item_size": "48,48",
+    "rows": [
+      [
+        "goal"
+      ]
+    ]
+  }
+}

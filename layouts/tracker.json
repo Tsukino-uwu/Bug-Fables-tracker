@@ -6,14 +6,44 @@
       "dropshadow": true,
       "content": [
         {
-          "type": "group",
-          "header": "Items",
-          "dock": "left",
+          "type": "array",
+          "dock": "bottom",
+          "orientation": "horizontal",
           "margin": "5,5",
-          "content": {
-            "type": "layout",
-            "key": "item_grid"
-          }
+          "content": [
+            {
+              "type": "group",
+              "header": "Items",
+              "content": {
+                "type": "layout",
+                "key": "item_grid"
+              }
+            },
+            {
+              "type": "group",
+              "header": "Goal",
+              "content": {
+                "type": "layout",
+                "key": "goal_grid"
+              }
+            },
+            {
+              "type": "group",
+              "header": "Events",
+              "content": {
+                "type": "layout",
+                "key": "event_grid"
+              }
+            },
+            {
+              "type": "group",
+              "header": "Settings",
+              "content": {
+                "type": "layout",
+                "key": "settings_grid"
+              }
+            }
+          ]
         },
         {
           "type": "layout",

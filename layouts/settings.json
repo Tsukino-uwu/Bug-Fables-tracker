@@ -9,5 +9,16 @@
         "show_unvisited"
       ]
     ]
+  },
+  "settings_grid": {
+    "type": "itemgrid",
+    "item_margin": "4,4",
+    "item_size": "32,32",
+    "rows": [
+      [
+        "auto_tab",
+        "show_unvisited"
+      ]
+    ]
   }
 }

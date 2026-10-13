@@ -123,6 +123,9 @@ local function count(name)
     local held = events_held[name] or 0
     local code = ITEM_CODE[name]
     if code then held = held + Tracker:ProviderCountForCode(code) end
+    -- An event marked by hand (the Events group) is held as the event is.
+    local event = DATA.event_codes[name]
+    if event then held = math.max(held, Tracker:ProviderCountForCode(event)) end
     return math.max(held, SEED.precollected[name] or 0)
 end
 
@@ -271,6 +274,9 @@ local function state_key()
     local parts = { seed_version }
     for _, item in ipairs(DATA.items) do
         parts[#parts + 1] = Tracker:ProviderCountForCode(item.code)
+    end
+    for _, code in pairs(DATA.event_codes) do
+        parts[#parts + 1] = Tracker:ProviderCountForCode(code)
     end
     return table.concat(parts, ",")
 end

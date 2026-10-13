@@ -74960,4 +74960,23 @@ return {
     [7717006] = "flame_brooch",
     [7717007] = "wasp_king_s_crown",
   },
+  ["event_codes"] = {
+    ["Snakemouth Den Cleared"] = "event_snakemouth_den_cleared",
+    ["Chapter 2 Started"] = "event_chapter_2_started",
+    ["Mothiva's Show Seen"] = "event_mothiva_s_show_seen",
+    ["B.O.S.S. Unlocked"] = "event_b_o_s_s_unlocked",
+    ["Malbee's Fight Done"] = "event_malbee_s_fight_done",
+    ["Giant's Lair Bridge Fight Won"] = "event_giant_s_lair_bridge_fight_won",
+    ["Outside the Fridge Fight Won"] = "event_outside_the_fridge_fight_won",
+    ["Roach Village Scene Seen"] = "event_roach_village_scene_seen",
+  },
+  ["artifact_codes"] = {
+    "ancient_mask",
+    "ancient_tablet",
+    "ancient_key",
+    "ancient_half",
+    "queen_s_mask",
+    "flame_brooch",
+    "wasp_king_s_crown",
+  },
 }

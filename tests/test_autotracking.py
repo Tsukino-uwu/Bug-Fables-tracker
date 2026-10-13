@@ -77,7 +77,9 @@ class PopTracker:
         for item in data["items"].values():
             self.objects[item["code"]] = Thing(Type="toggle" if item["max"] <= 1 else "consumable", Active=False,
                                                AcquiredCount=0, BadgeText="", BadgeTextColor="")
-        self.objects["goal"] = Thing(Type="toggle", Active=False)
+        self.objects["goal"] = Thing(Type="toggle", Active=False, BadgeText="")
+        for code in data["event_codes"].values():
+            self.objects[code] = Thing(Type="toggle", Active=False)
         # The settings as a new tracker has them (items.json's initial_active_state).
         self.objects["auto_tab"] = Thing(Type="toggle", Active=True)
         self.objects["show_unvisited"] = Thing(Type="toggle", Active=False)
@@ -212,6 +214,27 @@ class TestServerState(unittest.TestCase):
         self.assertEqual({pack.objects[c].BadgeText for c in members}, {"DL"})
         pack.handlers["frame"](7.0)
         self.assertEqual({pack.objects[c].BadgeText for c in members}, {""})
+
+
+class TestGoalAndEvents(unittest.TestCase):
+    def test_the_goal_counts_the_artifacts(self) -> None:
+        pack = PopTracker()
+        pack.connect({"options": {"artifacts_required": 2}})
+        self.assertEqual(pack.objects["goal"].BadgeText, "0/2")
+        artifact = next(i for i in pack.g.DATA["items"].values() if i["code"] == pack.g.DATA["artifact_codes"][1])
+        pack.handlers["item"](0, artifact["id"], artifact["name"], 1)
+        self.assertEqual(pack.objects["goal"].BadgeText, "1/2")
+
+    def test_an_event_marked_counts_as_held(self) -> None:
+        pack = PopTracker()
+        pack.connect({})
+        name, code = next(iter(pack.g.DATA["event_codes"].items()))
+        rule = pack.runtime.table_from({"rule": "Has", "args": {"item_name": name, "count": 1}}, recursive=True)
+        pack.g.bf_eval_state()
+        self.assertFalse(pack.g.bf_eval(rule))
+        pack.objects[code].Active = True
+        pack.g.bf_eval_state()
+        self.assertTrue(pack.g.bf_eval(rule))
 
 
 class TestFollowAndFog(unittest.TestCase):

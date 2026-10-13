@@ -259,8 +259,56 @@
   },
   {
     "name": "Refresh",
-    "img": "images/items/goal.png",
+    "img": "images/items/settings_refresh.png",
     "codes": "bf_refresh",
+    "type": "toggle"
+  },
+  {
+    "name": "Snakemouth Den Cleared",
+    "img": "images/items/event_snakemouth_den_cleared.png",
+    "codes": "event_snakemouth_den_cleared",
+    "type": "toggle"
+  },
+  {
+    "name": "Chapter 2 Started",
+    "img": "images/items/event_chapter_2_started.png",
+    "codes": "event_chapter_2_started",
+    "type": "toggle"
+  },
+  {
+    "name": "Mothiva's Show Seen",
+    "img": "images/items/event_mothiva_s_show_seen.png",
+    "codes": "event_mothiva_s_show_seen",
+    "type": "toggle"
+  },
+  {
+    "name": "B.O.S.S. Unlocked",
+    "img": "images/items/event_b_o_s_s_unlocked.png",
+    "codes": "event_b_o_s_s_unlocked",
+    "type": "toggle"
+  },
+  {
+    "name": "Malbee's Fight Done",
+    "img": "images/items/event_malbee_s_fight_done.png",
+    "codes": "event_malbee_s_fight_done",
+    "type": "toggle"
+  },
+  {
+    "name": "Giant's Lair Bridge Fight Won",
+    "img": "images/items/event_giant_s_lair_bridge_fight_won.png",
+    "codes": "event_giant_s_lair_bridge_fight_won",
+    "type": "toggle"
+  },
+  {
+    "name": "Outside the Fridge Fight Won",
+    "img": "images/items/event_outside_the_fridge_fight_won.png",
+    "codes": "event_outside_the_fridge_fight_won",
+    "type": "toggle"
+  },
+  {
+    "name": "Roach Village Scene Seen",
+    "img": "images/items/event_roach_village_scene_seen.png",
+    "codes": "event_roach_village_scene_seen",
     "type": "toggle"
   }
 ]
