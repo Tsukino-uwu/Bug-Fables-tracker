@@ -74,13 +74,13 @@ local function refresh()
     if switch then switch.Active = not switch.Active end
 end
 
--- With "Follow the player's room" on, the map's area tab, then its room's tab (or the area's overview).
+-- With "Follow the player's room" on, the map's area tab, then its room's tab.
 local function follow(map)
     local setting = Tracker:FindObjectForCode("auto_tab")
     local tab = map and DATA.map_tabs[map]
     if not (setting and setting.Active and tab) then return end
     Tracker:UiHint("ActivateTab", tab.area)
-    Tracker:UiHint("ActivateTab", tab.room or DATA.overview_tab)
+    Tracker:UiHint("ActivateTab", tab.room)
 end
 
 local function on_storage(key, value)

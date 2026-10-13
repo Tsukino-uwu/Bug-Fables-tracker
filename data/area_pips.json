@@ -1,5 +1,9 @@
 {
-  "_about": "The game's pause-menu map: where it puts each area's pip, as (x, z) on the map object, by MainManager.Areas (PauseMenu.MapSetup, read 2026-10-03), and the lines it draws between two visited areas (PauseMenu.SetMapLines). On screen +x is to the left and +z down; where each lands on the map's picture is measured in data/world_map.json (2026-10-13; x and z have scales of their own there). The lines aren't drawn on the World tab: its map is the game's own art.",
+  "_about": "The game's pause-menu map: where it puts each area's pip, as (x, z) on the map object, by MainManager.Areas (PauseMenu.MapSetup, read 2026-10-03), and the lines it draws between two visited areas (PauseMenu.SetMapLines). On screen +x is to the left and +z down; where each lands on the map's picture is measured in data/world_map.json (2026-10-13). The lines aren't drawn on the World tab: its map is the game's own art. list_order: the order the pause menu lists the areas in (PauseMenu.MapSetup's OrganizeArrayInt, read 2026-10-13), story order; FishingVillage and UpperSnakemouth aren't in it.",
+  "list_order": ["BugariaOutskirts", "BugariaCity", "Snakemouth", "GoldenWay", "GoldenSettlement", "GoldenHills", "Desert",
+                 "SandCastle", "DefiantRoot", "Beehive", "HoneyFactory", "FarGrasslands", "WildGrasslands", "WaspKingdom",
+                 "BarrenLands", "TermiteCity", "MetalLake", "MetalIsland", "RubberPrison", "GiantLair", "ChomperCaves",
+                 "BanditHideout", "StreamMountain"],
   "lines": [
     ["BugariaOutskirts", "Snakemouth"], ["BugariaOutskirts", "BugariaCity"], ["BugariaOutskirts", "Desert"],
     ["BugariaOutskirts", "BarrenLands"], ["BugariaOutskirts", "MetalLake"], ["BugariaOutskirts", "GoldenWay"],

@@ -219,15 +219,19 @@ class TestFollowAndFog(unittest.TestCase):
         pack = PopTracker()
         pack.connect({})
         tabs = pack.g.DATA["map_tabs"]
-        room = next(m for m, t in tabs.items() if t["room"])
-        hallway = next(m for m, t in tabs.items() if not t["room"])
+        with_checks = set(pack.g.DATA["room_areas"].keys())
+        room = next(m for m in tabs.keys() if m in with_checks)
+        hallway = next(m for m in tabs.keys() if m not in with_checks)
         pack.answer("bug_fables_map_0_1", room, how="set_reply")
         self.assertEqual(pack.hints, [("ActivateTab", tabs[room]["area"]), ("ActivateTab", tabs[room]["room"])])
-        # A room without checks: its area's overview.
+        # A room without checks has its own tab too.
         pack.hints.clear()
         pack.answer("bug_fables_map_0_1", hallway, how="set_reply")
-        self.assertEqual(pack.hints, [("ActivateTab", tabs[hallway]["area"]),
-                                      ("ActivateTab", pack.g.DATA["overview_tab"])])
+        self.assertEqual(pack.hints, [("ActivateTab", tabs[hallway]["area"]), ("ActivateTab", tabs[hallway]["room"])])
+        # A map with no tab (a test map): the tabs stay as they are.
+        pack.hints.clear()
+        pack.answer("bug_fables_map_0_1", "TestRoom", how="set_reply")
+        self.assertEqual(pack.hints, [])
         # The setting off: the tabs stay as they are.
         pack.hints.clear()
         pack.objects["auto_tab"].Active = False
