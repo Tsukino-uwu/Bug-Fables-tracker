@@ -41,8 +41,13 @@ def main() -> None:
             x, y, z = point(row["position"])
             if y >= PARKED:
                 continue
-            room = rooms.setdefault(row["map"], {"points": [], "doors": []})
+            room = rooms.setdefault(row["map"], {"points": [], "doors": [], "entities": []})
             room["points"].append((x, z))
+            # Each entity's spot and what a check can be known by: its index, name and flags.
+            room["entities"].append({"index": int(row["index"]), "name": row["name"], "type": row["objecttype"],
+                                     "flag": int(row["activationflag"] or -1),
+                                     "regional": int(row["regionalflag"] or -1), "data": row["data"],
+                                     "at": [round(x, 2), round(z, 2)]})
             data = row["data"].split()
             vectors = (row["vectordata"] or "").split()
             if row["objecttype"] == "DoorOtherMap" and data and len(vectors) >= 2:
@@ -52,15 +57,16 @@ def main() -> None:
                                       "to": names[target] if 0 <= target < len(names) else None,
                                       "at": [round(x, 2), round(z, 2)], "arrive": [round(arrive[0], 2),
                                                                                    round(arrive[2], 2)]})
-    out = {"_about": "Each map's extent (the corners of its entities' positions, x and z) and its doors: where each "
-                     "sits, the map it leads to and where it lands there, from the randomizer mod's entity dump; "
-                     "written by tools/rooms.py.",
+    out = {"_about": "Each map's extent (the corners of its entities' positions, x and z), its doors (where each "
+                     "sits, the map it leads to and where it lands there) and its entities (where each stands, and "
+                     "what a check can be known by), from the randomizer mod's entity dump; written by "
+                     "tools/rooms.py.",
            "maps": {}}
     for name in sorted(rooms):
         xs = [p[0] for p in rooms[name]["points"]]
         zs = [p[1] for p in rooms[name]["points"]]
         out["maps"][name] = {"bounds": [round(min(xs), 2), round(min(zs), 2), round(max(xs), 2), round(max(zs), 2)],
-                             "doors": rooms[name]["doors"]}
+                             "doors": rooms[name]["doors"], "entities": rooms[name]["entities"]}
     (PACK / "data/rooms.json").write_text(json.dumps(out, indent=1) + "\n", "utf-8")
     doors = sum(len(r["doors"]) for r in out["maps"].values())
     print(f"{len(out['maps'])} maps, {doors} doors")

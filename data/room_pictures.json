@@ -1,0 +1,2425 @@
+{
+ "_about": "Each room's picture in images/rooms: the game's room seen from above (the randomizer mod's dev command roomshot), cut to data/rooms.json's extent and ROOM_PAD; a game point (x, z) lands at ((x - left) * x_scale, (top - z) * z_scale). Written by tools/room_pictures.py.",
+ "rooms": {
+  "AbandonedCity": {
+   "left": -19.1,
+   "top": 24.71,
+   "x_scale": 12.0,
+   "z_scale": 11.995,
+   "size": [
+    460,
+    512
+   ]
+  },
+  "AbandonedCityTent": {
+   "left": -11.83,
+   "top": 2.0,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    174,
+    66
+   ]
+  },
+  "AntBridge": {
+   "left": -12.01,
+   "top": 39.19,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    257,
+    562
+   ]
+  },
+  "AntMinesBreakRoom": {
+   "left": -12.03,
+   "top": 4.41,
+   "x_scale": 11.999,
+   "z_scale": 12.01,
+   "size": [
+    257,
+    117
+   ]
+  },
+  "AntPalace1": {
+   "left": -17.0,
+   "top": 34.3,
+   "x_scale": 12.007,
+   "z_scale": 12.007,
+   "size": [
+    409,
+    481
+   ]
+  },
+  "AntPalace2": {
+   "left": -17.64,
+   "top": 13.3,
+   "x_scale": 11.998,
+   "z_scale": 12.008,
+   "size": [
+    631,
+    229
+   ]
+  },
+  "AntPalaceLibrary": {
+   "left": -14.86,
+   "top": 9.66,
+   "x_scale": 12.0,
+   "z_scale": 12.007,
+   "size": [
+    322,
+    175
+   ]
+  },
+  "AntPalaceWarRoom": {
+   "left": -10.68,
+   "top": 17.0,
+   "x_scale": 12.009,
+   "z_scale": 12.018,
+   "size": [
+    286,
+    263
+   ]
+  },
+  "AntTunnels": {
+   "left": -19.1,
+   "top": 18.78,
+   "x_scale": 12.003,
+   "z_scale": 12.006,
+   "size": [
+    458,
+    439
+   ]
+  },
+  "BOGoldenPath": {
+   "left": -97.3,
+   "top": 10.01,
+   "x_scale": 11.999,
+   "z_scale": 12.0,
+   "size": [
+    1252,
+    184
+   ]
+  },
+  "BOLostSandsEntrance": {
+   "left": -7.44,
+   "top": 11.19,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    257,
+    299
+   ]
+  },
+  "BarrenLandsAntTunnel": {
+   "left": -8.280000000000001,
+   "top": 7.35,
+   "x_scale": 12.002,
+   "z_scale": 12.018,
+   "size": [
+    201,
+    204
+   ]
+  },
+  "BarrenLandsBeefly": {
+   "left": -9.34,
+   "top": 18.1,
+   "x_scale": 11.999,
+   "z_scale": 11.998,
+   "size": [
+    765,
+    407
+   ]
+  },
+  "BarrenLandsCD": {
+   "left": -23.23,
+   "top": 7.86,
+   "x_scale": 11.997,
+   "z_scale": 11.993,
+   "size": [
+    584,
+    454
+   ]
+  },
+  "BarrenLandsCloud": {
+   "left": -45.95,
+   "top": 27.6,
+   "x_scale": 7.204,
+   "z_scale": 7.203,
+   "size": [
+    846,
+    438
+   ]
+  },
+  "BarrenLandsEntrance": {
+   "left": -21.78,
+   "top": 15.74,
+   "x_scale": 11.993,
+   "z_scale": 11.994,
+   "size": [
+    521,
+    377
+   ]
+  },
+  "BarrenLandsMiniboss": {
+   "left": -22.44,
+   "top": 2.0,
+   "x_scale": 11.999,
+   "z_scale": 12.011,
+   "size": [
+    538,
+    167
+   ]
+  },
+  "BarrenLandsMushrooms": {
+   "left": -41.73,
+   "top": 13.0,
+   "x_scale": 11.999,
+   "z_scale": 12.001,
+   "size": [
+    1052,
+    297
+   ]
+  },
+  "BarrenLandsPinkSpider": {
+   "left": -23.0,
+   "top": 9.6,
+   "x_scale": 12.007,
+   "z_scale": 12.008,
+   "size": [
+    409,
+    219
+   ]
+  },
+  "BarrenLandsPumpkins": {
+   "left": -28.83,
+   "top": 18.22,
+   "x_scale": 11.996,
+   "z_scale": 12.004,
+   "size": [
+    791,
+    376
+   ]
+  },
+  "BarrenLandsRock": {
+   "left": -11.63,
+   "top": 15.7,
+   "x_scale": 12.003,
+   "z_scale": 11.998,
+   "size": [
+    592,
+    328
+   ]
+  },
+  "BarrenLandsSideGPT": {
+   "left": -24.69,
+   "top": 15.4,
+   "x_scale": 11.996,
+   "z_scale": 12.002,
+   "size": [
+    597,
+    373
+   ]
+  },
+  "BarrenLandsTanks": {
+   "left": -24.9,
+   "top": 17.66,
+   "x_scale": 12.002,
+   "z_scale": 11.995,
+   "size": [
+    619,
+    374
+   ]
+  },
+  "BeehiveBalcony": {
+   "left": -15.76,
+   "top": 5.7,
+   "x_scale": 12.002,
+   "z_scale": 12.001,
+   "size": [
+    469,
+    137
+   ]
+  },
+  "BeehiveMainArea": {
+   "left": -29.8,
+   "top": 23.41,
+   "x_scale": 12.0,
+   "z_scale": 12.007,
+   "size": [
+    688,
+    638
+   ]
+  },
+  "BeehiveOutside": {
+   "left": -67.6,
+   "top": 39.5,
+   "x_scale": 9.477,
+   "z_scale": 9.476,
+   "size": [
+    659,
+    393
+   ]
+  },
+  "BeehiveScannerRoom": {
+   "left": -2.0,
+   "top": 12.33,
+   "x_scale": 12.003,
+   "z_scale": 12.0,
+   "size": [
+    118,
+    289
+   ]
+  },
+  "BeehiveThroneRoom": {
+   "left": -6.65,
+   "top": 6.68,
+   "x_scale": 11.997,
+   "z_scale": 11.999,
+   "size": [
+    154,
+    245
+   ]
+  },
+  "BroodmotherLair": {
+   "left": -27.0,
+   "top": 24.7,
+   "x_scale": 11.997,
+   "z_scale": 12.0,
+   "size": [
+    415,
+    379
+   ]
+  },
+  "BugariaAssociationAttack": {
+   "left": -43.97,
+   "top": 29.98,
+   "x_scale": 12.004,
+   "z_scale": 11.996,
+   "size": [
+    1105,
+    552
+   ]
+  },
+  "BugariaBridgeAttack": {
+   "left": -4.32,
+   "top": 39.19,
+   "x_scale": 11.999,
+   "z_scale": 12.004,
+   "size": [
+    214,
+    562
+   ]
+  },
+  "BugariaCastleAttack": {
+   "left": -11.72,
+   "top": 34.3,
+   "x_scale": 12.007,
+   "z_scale": 12.007,
+   "size": [
+    274,
+    481
+   ]
+  },
+  "BugariaCommercial": {
+   "left": -34.0,
+   "top": 22.2,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    792,
+    564
+   ]
+  },
+  "BugariaEndBridge": {
+   "left": -13.3,
+   "top": 36.7,
+   "x_scale": 11.999,
+   "z_scale": 12.004,
+   "size": [
+    278,
+    532
+   ]
+  },
+  "BugariaEndPlaza": {
+   "left": -22.0,
+   "top": 31.0,
+   "x_scale": 12.001,
+   "z_scale": 12.001,
+   "size": [
+    535,
+    560
+   ]
+  },
+  "BugariaEndThrone": {
+   "left": -15.0,
+   "top": 6.0,
+   "x_scale": 11.998,
+   "z_scale": 12.013,
+   "size": [
+    468,
+    133
+   ]
+  },
+  "BugariaMainPlaza": {
+   "left": -24.0,
+   "top": 31.0,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    576,
+    566
+   ]
+  },
+  "BugariaOutskirtsEast1": {
+   "left": -11.78,
+   "top": 35.9,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    891,
+    701
+   ]
+  },
+  "BugariaOutskirtsEast2": {
+   "left": -11.6,
+   "top": 32.0,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    763,
+    552
+   ]
+  },
+  "BugariaOutskirtsOutsideCity": {
+   "left": -43.5,
+   "top": 29.98,
+   "x_scale": 12.004,
+   "z_scale": 11.996,
+   "size": [
+    1168,
+    716
+   ]
+  },
+  "BugariaOutskirtsSnakemouthCorridor2": {
+   "left": -41.43,
+   "top": 5.2,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    635,
+    174
+   ]
+  },
+  "BugariaOutskitsSnakemouthCorridor1": {
+   "left": -93.7,
+   "top": 35.52,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    1266,
+    535
+   ]
+  },
+  "BugariaPier": {
+   "left": -19.82,
+   "top": 10.52,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    643,
+    238
+   ]
+  },
+  "BugariaPlazaAttack": {
+   "left": -7.58,
+   "top": 31.0,
+   "x_scale": 12.001,
+   "z_scale": 12.001,
+   "size": [
+    229,
+    560
+   ]
+  },
+  "BugariaResidential": {
+   "left": -25.8,
+   "top": 30.36,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    620,
+    498
+   ]
+  },
+  "BugariaTheater": {
+   "left": -15.07,
+   "top": 15.0,
+   "x_scale": 12.0,
+   "z_scale": 11.991,
+   "size": [
+    205,
+    247
+   ]
+  },
+  "CaveOfTrials": {
+   "left": -13.07,
+   "top": 12.5,
+   "x_scale": 11.994,
+   "z_scale": 11.998,
+   "size": [
+    306,
+    220
+   ]
+  },
+  "ChomperCave1": {
+   "left": -21.53,
+   "top": 23.83,
+   "x_scale": 11.998,
+   "z_scale": 12.017,
+   "size": [
+    516,
+    248
+   ]
+  },
+  "ChomperCaves2": {
+   "left": -47.5,
+   "top": 16.0,
+   "x_scale": 12.003,
+   "z_scale": 12.0,
+   "size": [
+    855,
+    211
+   ]
+  },
+  "ChomperCaves3": {
+   "left": -7.0,
+   "top": 22.0,
+   "x_scale": 12.001,
+   "z_scale": 12.01,
+   "size": [
+    168,
+    333
+   ]
+  },
+  "ChucksAbode": {
+   "left": -19.7,
+   "top": 10.0,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    402,
+    265
+   ]
+  },
+  "DefiantRoot1": {
+   "left": -52.8,
+   "top": 16.8,
+   "x_scale": 11.998,
+   "z_scale": 11.995,
+   "size": [
+    1124,
+    287
+   ]
+  },
+  "DefiantRoot2": {
+   "left": -33.879999999999995,
+   "top": 10.17,
+   "x_scale": 12.0,
+   "z_scale": 11.999,
+   "size": [
+    619,
+    290
+   ]
+  },
+  "DefiantRoot3": {
+   "left": -16.46,
+   "top": 29.93,
+   "x_scale": 11.999,
+   "z_scale": 12.0,
+   "size": [
+    633,
+    452
+   ]
+  },
+  "DefiantRootWell": {
+   "left": -2.0,
+   "top": 9.85,
+   "x_scale": 12.003,
+   "z_scale": 12.006,
+   "size": [
+    408,
+    164
+   ]
+  },
+  "DesertBadgeAlcove": {
+   "left": -33.53,
+   "top": 11.61,
+   "x_scale": 12.0,
+   "z_scale": 12.002,
+   "size": [
+    521,
+    295
+   ]
+  },
+  "DesertBadlands": {
+   "left": -13.85,
+   "top": 17.810000000000002,
+   "x_scale": 9.956,
+   "z_scale": 9.949,
+   "size": [
+    347,
+    276
+   ]
+  },
+  "DesertBeforeGH": {
+   "left": -13.24,
+   "top": 13.5,
+   "x_scale": 9.953,
+   "z_scale": 9.949,
+   "size": [
+    428,
+    253
+   ]
+  },
+  "DesertBookArea": {
+   "left": -15.77,
+   "top": 15.65,
+   "x_scale": 12.002,
+   "z_scale": 12.014,
+   "size": [
+    378,
+    376
+   ]
+  },
+  "DesertCaravanMap": {
+   "left": -37.6,
+   "top": 15.24,
+   "x_scale": 11.993,
+   "z_scale": 12.002,
+   "size": [
+    564,
+    327
+   ]
+  },
+  "DesertDREastEntrance": {
+   "left": -46.83,
+   "top": 9.32,
+   "x_scale": 11.999,
+   "z_scale": 11.993,
+   "size": [
+    702,
+    252
+   ]
+  },
+  "DesertDRSouthEntrance": {
+   "left": -8.059999999999999,
+   "top": 7.53,
+   "x_scale": 10.833,
+   "z_scale": 10.832,
+   "size": [
+    385,
+    249
+   ]
+  },
+  "DesertEastmost": {
+   "left": -22.25,
+   "top": 17.65,
+   "x_scale": 9.951,
+   "z_scale": 9.949,
+   "size": [
+    497,
+    272
+   ]
+  },
+  "DesertEntrance": {
+   "left": -16.3,
+   "top": 19.42,
+   "x_scale": 12.01,
+   "z_scale": 12.01,
+   "size": [
+    379,
+    400
+   ]
+  },
+  "DesertFGBorder": {
+   "left": -15.8,
+   "top": 17.630000000000003,
+   "x_scale": 11.999,
+   "z_scale": 12.01,
+   "size": [
+    442,
+    320
+   ]
+  },
+  "DesertJumpPuzzle": {
+   "left": -11.68,
+   "top": 12.0,
+   "x_scale": 12.004,
+   "z_scale": 12.002,
+   "size": [
+    530,
+    216
+   ]
+  },
+  "DesertMountain": {
+   "left": -27.0,
+   "top": 9.280000000000001,
+   "x_scale": 12.001,
+   "z_scale": 12.0,
+   "size": [
+    464,
+    250
+   ]
+  },
+  "DesertOasis": {
+   "left": -17.5,
+   "top": 28.39,
+   "x_scale": 12.008,
+   "z_scale": 12.007,
+   "size": [
+    588,
+    533
+   ]
+  },
+  "DesertOasisEntrance": {
+   "left": -6.67,
+   "top": 11.5,
+   "x_scale": 9.949,
+   "z_scale": 9.949,
+   "size": [
+    520,
+    328
+   ]
+  },
+  "DesertRoachVillage": {
+   "left": -11.8,
+   "top": 20.0,
+   "x_scale": 12.008,
+   "z_scale": 11.989,
+   "size": [
+    363,
+    380
+   ]
+  },
+  "DesertRockFormation": {
+   "left": -17.7,
+   "top": 17.75,
+   "x_scale": 9.949,
+   "z_scale": 9.949,
+   "size": [
+    351,
+    354
+   ]
+  },
+  "DesertSandCastle": {
+   "left": -6.74,
+   "top": 12.49,
+   "x_scale": 12.0,
+   "z_scale": 12.003,
+   "size": [
+    108,
+    419
+   ]
+  },
+  "DesertSandPitArea": {
+   "left": -39.82,
+   "top": 78.5,
+   "x_scale": 11.995,
+   "z_scale": 12.0,
+   "size": [
+    1006,
+    1002
+   ]
+  },
+  "DesertScorpion": {
+   "left": -14.5,
+   "top": 15.67,
+   "x_scale": 9.941,
+   "z_scale": 9.949,
+   "size": [
+    523,
+    351
+   ]
+  },
+  "DesertSouthern": {
+   "left": -21.68,
+   "top": 10.5,
+   "x_scale": 12.0,
+   "z_scale": 12.004,
+   "size": [
+    567,
+    180
+   ]
+  },
+  "DesertTrenchMiddle": {
+   "left": -37.5,
+   "top": 18.73,
+   "x_scale": 12.004,
+   "z_scale": 12.009,
+   "size": [
+    733,
+    428
+   ]
+  },
+  "DesertTrenchSouth": {
+   "left": -21.62,
+   "top": 15.78,
+   "x_scale": 11.996,
+   "z_scale": 11.994,
+   "size": [
+    517,
+    274
+   ]
+  },
+  "DesertWestDunes": {
+   "left": -9.0,
+   "top": 15.5,
+   "x_scale": 9.955,
+   "z_scale": 9.949,
+   "size": [
+    194,
+    328
+   ]
+  },
+  "FGCave": {
+   "left": -25.74,
+   "top": 21.98,
+   "x_scale": 11.999,
+   "z_scale": 12.006,
+   "size": [
+    618,
+    406
+   ]
+  },
+  "FGClearing": {
+   "left": -4.5,
+   "top": 8.48,
+   "x_scale": 12.004,
+   "z_scale": 12.002,
+   "size": [
+    231,
+    313
+   ]
+  },
+  "FGOutsideSwamplands": {
+   "left": -14.48,
+   "top": 77.15,
+   "x_scale": 12.0,
+   "z_scale": 12.001,
+   "size": [
+    317,
+    1051
+   ]
+  },
+  "FactoryProcessing2": {
+   "left": -35.64,
+   "top": 33.5,
+   "x_scale": 12.0,
+   "z_scale": 12.006,
+   "size": [
+    518,
+    440
+   ]
+  },
+  "FactoryProcessingFirstRoom": {
+   "left": -35.0,
+   "top": 6.62,
+   "x_scale": 12.0,
+   "z_scale": 11.996,
+   "size": [
+    510,
+    127
+   ]
+  },
+  "FactoryProcessingMalbee": {
+   "left": -39.09,
+   "top": 7.9,
+   "x_scale": 11.999,
+   "z_scale": 12.005,
+   "size": [
+    538,
+    142
+   ]
+  },
+  "FactoryProcessingPump": {
+   "left": -54.1,
+   "top": 28.73,
+   "x_scale": 11.995,
+   "z_scale": 12.0,
+   "size": [
+    789,
+    598
+   ]
+  },
+  "FactoryProcessingPuzzle1": {
+   "left": -49.6,
+   "top": 20.33,
+   "x_scale": 12.0,
+   "z_scale": 12.009,
+   "size": [
+    642,
+    312
+   ]
+  },
+  "FactoryProcessingPuzzle2": {
+   "left": -25.3,
+   "top": 9.45,
+   "x_scale": 12.0,
+   "z_scale": 11.996,
+   "size": [
+    1107,
+    180
+   ]
+  },
+  "FactoryProcessingPuzzle3": {
+   "left": -24.97,
+   "top": 13.5,
+   "x_scale": 11.999,
+   "z_scale": 11.989,
+   "size": [
+    367,
+    282
+   ]
+  },
+  "FactoryStorageElevator": {
+   "left": -19.6,
+   "top": 2.0,
+   "x_scale": 12.007,
+   "z_scale": 12.0,
+   "size": [
+    302,
+    48
+   ]
+  },
+  "FactoryStorageMaze": {
+   "left": -80.92,
+   "top": 12.31,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    1062,
+    288
+   ]
+  },
+  "FactoryStorageMiniboss": {
+   "left": -30.1,
+   "top": 18.4,
+   "x_scale": 11.996,
+   "z_scale": 12.004,
+   "size": [
+    565,
+    287
+   ]
+  },
+  "FactoryStorageOverseer": {
+   "left": -64.84,
+   "top": 22.02,
+   "x_scale": 12.002,
+   "z_scale": 12.012,
+   "size": [
+    847,
+    332
+   ]
+  },
+  "FarGrasslands1": {
+   "left": -26.59,
+   "top": 16.619999999999997,
+   "x_scale": 11.998,
+   "z_scale": 12.007,
+   "size": [
+    609,
+    341
+   ]
+  },
+  "FarGrasslands2": {
+   "left": -16.3,
+   "top": 18.56,
+   "x_scale": 11.997,
+   "z_scale": 11.992,
+   "size": [
+    551,
+    319
+   ]
+  },
+  "FarGrasslands3": {
+   "left": -11.73,
+   "top": 9.940000000000001,
+   "x_scale": 11.998,
+   "z_scale": 11.996,
+   "size": [
+    712,
+    267
+   ]
+  },
+  "FarGrasslands4": {
+   "left": -59.59,
+   "top": 27.43,
+   "x_scale": 11.998,
+   "z_scale": 12.003,
+   "size": [
+    805,
+    422
+   ]
+  },
+  "FarGrasslandsLake": {
+   "left": -24.76,
+   "top": 57.09,
+   "x_scale": 12.001,
+   "z_scale": 12.003,
+   "size": [
+    489,
+    780
+   ]
+  },
+  "FarGrasslandsOutsideCave": {
+   "left": -15.27,
+   "top": 13.76,
+   "x_scale": 12.005,
+   "z_scale": 11.999,
+   "size": [
+    443,
+    571
+   ]
+  },
+  "FarGrasslandsOutsideVillage": {
+   "left": -13.65,
+   "top": 34.4,
+   "x_scale": 11.996,
+   "z_scale": 11.997,
+   "size": [
+    1190,
+    753
+   ]
+  },
+  "FarGrasslandsWizard": {
+   "left": -6.1,
+   "top": 13.6,
+   "x_scale": 12.001,
+   "z_scale": 11.998,
+   "size": [
+    602,
+    392
+   ]
+  },
+  "FishingVillage": {
+   "left": -17.65,
+   "top": 15.67,
+   "x_scale": 12.0,
+   "z_scale": 11.996,
+   "size": [
+    430,
+    396
+   ]
+  },
+  "GiantLairBeforeBoss": {
+   "left": -90.4,
+   "top": 13.1,
+   "x_scale": 11.998,
+   "z_scale": 12.001,
+   "size": [
+    1856,
+    387
+   ]
+  },
+  "GiantLairBeforeBoss2": {
+   "left": -107.69,
+   "top": 9.3,
+   "x_scale": 12.002,
+   "z_scale": 11.995,
+   "size": [
+    1432,
+    266
+   ]
+  },
+  "GiantLairDeadLands1": {
+   "left": -3.65,
+   "top": 26.5,
+   "x_scale": 11.999,
+   "z_scale": 11.999,
+   "size": [
+    1768,
+    475
+   ]
+  },
+  "GiantLairDeadLands2": {
+   "left": -2.0,
+   "top": 35.5,
+   "x_scale": 11.998,
+   "z_scale": 11.996,
+   "size": [
+    2568,
+    590
+   ]
+  },
+  "GiantLairEntrance": {
+   "left": -30.4,
+   "top": 22.96,
+   "x_scale": 11.999,
+   "z_scale": 11.998,
+   "size": [
+    1098,
+    288
+   ]
+  },
+  "GiantLairFridgeInside": {
+   "left": -18.38,
+   "top": 12.01,
+   "x_scale": 12.0,
+   "z_scale": 12.016,
+   "size": [
+    442,
+    260
+   ]
+  },
+  "GiantLairFridgeOutside": {
+   "left": -58.6,
+   "top": 23.4,
+   "x_scale": 10.292,
+   "z_scale": 10.293,
+   "size": [
+    1196,
+    439
+   ]
+  },
+  "GiantLairRoachVillage": {
+   "left": -67.34,
+   "top": 15.93,
+   "x_scale": 12.0,
+   "z_scale": 11.998,
+   "size": [
+    926,
+    384
+   ]
+  },
+  "GiantLairSaplingPlains": {
+   "left": -50.5,
+   "top": 6.89,
+   "x_scale": 11.636,
+   "z_scale": 11.64,
+   "size": [
+    919,
+    680
+   ]
+  },
+  "GoldenHillsCableCar": {
+   "left": -66.4,
+   "top": 10.0,
+   "x_scale": 12.003,
+   "z_scale": 11.992,
+   "size": [
+    946,
+    233
+   ]
+  },
+  "GoldenHillsDungeonBoss": {
+   "left": -2.0,
+   "top": 13.93,
+   "x_scale": 11.998,
+   "z_scale": 12.003,
+   "size": [
+    262,
+    384
+   ]
+  },
+  "GoldenHillsDungeonCrankLeft": {
+   "left": -24.05,
+   "top": 29.13,
+   "x_scale": 11.991,
+   "z_scale": 11.997,
+   "size": [
+    444,
+    374
+   ]
+  },
+  "GoldenHillsDungeonEntrance": {
+   "left": -23.85,
+   "top": 42.9,
+   "x_scale": 11.994,
+   "z_scale": 11.994,
+   "size": [
+    622,
+    608
+   ]
+  },
+  "GoldenHillsDungeonLeftCrankHalf": {
+   "left": -66.0,
+   "top": 45.7,
+   "x_scale": 12.006,
+   "z_scale": 11.993,
+   "size": [
+    853,
+    614
+   ]
+  },
+  "GoldenHillsDungeonLeftMain": {
+   "left": -74.56,
+   "top": 29.5,
+   "x_scale": 12.001,
+   "z_scale": 12.003,
+   "size": [
+    1084,
+    540
+   ]
+  },
+  "GoldenHillsDungeonRightCrank": {
+   "left": -3.56,
+   "top": 27.76,
+   "x_scale": 12.0,
+   "z_scale": 12.004,
+   "size": [
+    976,
+    473
+   ]
+  },
+  "GoldenHillsDungeonUpperMain": {
+   "left": -33.33,
+   "top": 26.61,
+   "x_scale": 12.003,
+   "z_scale": 11.991,
+   "size": [
+    612,
+    368
+   ]
+  },
+  "GoldenHillsDungeonUpperSide": {
+   "left": -5.5,
+   "top": 44.0,
+   "x_scale": 11.998,
+   "z_scale": 11.995,
+   "size": [
+    784,
+    740
+   ]
+  },
+  "GoldenHillsLowerRightCrank": {
+   "left": -7.63,
+   "top": 20.0,
+   "x_scale": 11.997,
+   "z_scale": 11.996,
+   "size": [
+    565,
+    303
+   ]
+  },
+  "GoldenHillsPath2": {
+   "left": -126.8,
+   "top": 26.4,
+   "x_scale": 12.0,
+   "z_scale": 11.994,
+   "size": [
+    1625,
+    378
+   ]
+  },
+  "GoldenHillsPath3": {
+   "left": -67.5,
+   "top": 11.1,
+   "x_scale": 12.002,
+   "z_scale": 11.996,
+   "size": [
+    974,
+    271
+   ]
+  },
+  "GoldenPathTunnel": {
+   "left": -53.6,
+   "top": 33.71,
+   "x_scale": 11.999,
+   "z_scale": 12.006,
+   "size": [
+    1193,
+    547
+   ]
+  },
+  "GoldenPathTunnel2": {
+   "left": -16.14,
+   "top": 13.0,
+   "x_scale": 11.999,
+   "z_scale": 12.006,
+   "size": [
+    518,
+    345
+   ]
+  },
+  "GoldenPitcher1": {
+   "left": -18.5,
+   "top": 16.8,
+   "x_scale": 11.994,
+   "z_scale": 11.995,
+   "size": [
+    510,
+    399
+   ]
+  },
+  "GoldenPitcher2": {
+   "left": -38.2,
+   "top": 14.0,
+   "x_scale": 12.003,
+   "z_scale": 11.998,
+   "size": [
+    728,
+    357
+   ]
+  },
+  "GoldenSMinigame": {
+   "left": -2.96,
+   "top": 12.29,
+   "x_scale": 11.996,
+   "z_scale": 12.009,
+   "size": [
+    234,
+    172
+   ]
+  },
+  "GoldenSettlement1": {
+   "left": -41.0,
+   "top": 33.78,
+   "x_scale": 12.002,
+   "z_scale": 11.997,
+   "size": [
+    998,
+    618
+   ]
+  },
+  "GoldenSettlement2": {
+   "left": -55.94,
+   "top": 14.8,
+   "x_scale": 12.0,
+   "z_scale": 12.001,
+   "size": [
+    863,
+    466
+   ]
+  },
+  "GoldenSettlement3": {
+   "left": -11.63,
+   "top": 6.01,
+   "x_scale": 12.011,
+   "z_scale": 12.006,
+   "size": [
+    313,
+    159
+   ]
+  },
+  "GoldenSettlementEntrance": {
+   "left": -19.09,
+   "top": 22.0,
+   "x_scale": 11.994,
+   "z_scale": 11.999,
+   "size": [
+    488,
+    409
+   ]
+  },
+  "HBsLab": {
+   "left": -13.6,
+   "top": 4.32,
+   "x_scale": 12.004,
+   "z_scale": 12.0,
+   "size": [
+    283,
+    110
+   ]
+  },
+  "HermitCave": {
+   "left": -4.62,
+   "top": 2.0,
+   "x_scale": 11.997,
+   "z_scale": 12.0,
+   "size": [
+    184,
+    84
+   ]
+  },
+  "HideoutCell": {
+   "left": -15.17,
+   "top": 12.64,
+   "x_scale": 11.996,
+   "z_scale": 11.995,
+   "size": [
+    318,
+    244
+   ]
+  },
+  "HideoutCentralRoom": {
+   "left": -10.08,
+   "top": 5.87,
+   "x_scale": 12.008,
+   "z_scale": 12.0,
+   "size": [
+    286,
+    426
+   ]
+  },
+  "HideoutEntrance": {
+   "left": -9.5,
+   "top": 9.02,
+   "x_scale": 11.998,
+   "z_scale": 12.005,
+   "size": [
+    729,
+    151
+   ]
+  },
+  "HideoutGarden": {
+   "left": -49.67,
+   "top": 17.880000000000003,
+   "x_scale": 12.003,
+   "z_scale": 11.989,
+   "size": [
+    715,
+    279
+   ]
+  },
+  "HideoutLeftA": {
+   "left": -27.73,
+   "top": 10.0,
+   "x_scale": 12.0,
+   "z_scale": 12.009,
+   "size": [
+    426,
+    153
+   ]
+  },
+  "HideoutRightA": {
+   "left": -3.5700000000000003,
+   "top": 7.6,
+   "x_scale": 12.0,
+   "z_scale": 11.968,
+   "size": [
+    519,
+    191
+   ]
+  },
+  "HideoutStairsRoom": {
+   "left": -9.8,
+   "top": 13.73,
+   "x_scale": 11.995,
+   "z_scale": 12.0,
+   "size": [
+    231,
+    453
+   ]
+  },
+  "HideoutWestStorage": {
+   "left": -16.21,
+   "top": 13.5,
+   "x_scale": 12.0,
+   "z_scale": 12.004,
+   "size": [
+    308,
+    230
+   ]
+  },
+  "HoneyFactoryCore": {
+   "left": -7.7,
+   "top": 44.9,
+   "x_scale": 12.001,
+   "z_scale": 12.002,
+   "size": [
+    145,
+    631
+   ]
+  },
+  "HoneyFactoryEntrance": {
+   "left": -18.14,
+   "top": 17.92,
+   "x_scale": 12.001,
+   "z_scale": 12.0,
+   "size": [
+    430,
+    506
+   ]
+  },
+  "HoneyFactoryWorkerRooms": {
+   "left": -62.91,
+   "top": 7.04,
+   "x_scale": 12.003,
+   "z_scale": 12.035,
+   "size": [
+    881,
+    151
+   ]
+  },
+  "HoneycombsLab": {
+   "left": -8.36,
+   "top": 6.75,
+   "x_scale": 11.995,
+   "z_scale": 12.026,
+   "size": [
+    238,
+    132
+   ]
+  },
+  "JaunesGallery": {
+   "left": -10.8,
+   "top": 2.0,
+   "x_scale": 12.004,
+   "z_scale": 12.037,
+   "size": [
+    269,
+    60
+   ]
+  },
+  "MetalIsland1": {
+   "left": -27.78,
+   "top": 21.49,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    711,
+    745
+   ]
+  },
+  "MetalIsland2": {
+   "left": -14.88,
+   "top": 11.88,
+   "x_scale": 12.002,
+   "z_scale": 12.0,
+   "size": [
+    739,
+    211
+   ]
+  },
+  "MetalIslandAuditorium": {
+   "left": -13.21,
+   "top": 25.12,
+   "x_scale": 11.998,
+   "z_scale": 12.002,
+   "size": [
+    393,
+    416
+   ]
+  },
+  "MetalLake": {
+   "left": -18.65,
+   "top": 24.3,
+   "x_scale": 12.003,
+   "z_scale": 11.998,
+   "size": [
+    466,
+    506
+   ]
+  },
+  "MysteryIsland": {
+   "left": -32.989999999999995,
+   "top": 16.0,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    708,
+    551
+   ]
+  },
+  "MysteryIslandInside": {
+   "left": -4.0,
+   "top": 39.69,
+   "x_scale": 12.001,
+   "z_scale": 12.004,
+   "size": [
+    238,
+    593
+   ]
+  },
+  "NearSnakemouth": {
+   "left": -51.5,
+   "top": 18.45,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    815,
+    363
+   ]
+  },
+  "OutsideSnakemouth": {
+   "left": -26.2,
+   "top": 15.54,
+   "x_scale": 11.999,
+   "z_scale": 12.001,
+   "size": [
+    454,
+    245
+   ]
+  },
+  "PitcherPlantArena": {
+   "left": -8.89,
+   "top": 21.04,
+   "x_scale": 12.005,
+   "z_scale": 12.007,
+   "size": [
+    248,
+    312
+   ]
+  },
+  "PowerPlant": {
+   "left": -31.88,
+   "top": 23.7,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    452,
+    351
+   ]
+  },
+  "RubberPrisonCafeteria": {
+   "left": -37.39,
+   "top": 6.9,
+   "x_scale": 12.003,
+   "z_scale": 12.004,
+   "size": [
+    588,
+    149
+   ]
+  },
+  "RubberPrisonCells1": {
+   "left": -31.64,
+   "top": 17.68,
+   "x_scale": 12.0,
+   "z_scale": 11.995,
+   "size": [
+    770,
+    281
+   ]
+  },
+  "RubberPrisonCells2": {
+   "left": -24.81,
+   "top": 23.9,
+   "x_scale": 12.0,
+   "z_scale": 12.001,
+   "size": [
+    595,
+    335
+   ]
+  },
+  "RubberPrisonCheckpointCorridor": {
+   "left": -30.0,
+   "top": 14.4,
+   "x_scale": 11.998,
+   "z_scale": 12.0,
+   "size": [
+    502,
+    204
+   ]
+  },
+  "RubberPrisonGiantLairBridge": {
+   "left": -10.01,
+   "top": 11.7,
+   "x_scale": 8.192,
+   "z_scale": 8.192,
+   "size": [
+    570,
+    138
+   ]
+  },
+  "RubberPrisonGym": {
+   "left": -45.4,
+   "top": 9.120000000000001,
+   "x_scale": 11.998,
+   "z_scale": 12.002,
+   "size": [
+    614,
+    211
+   ]
+  },
+  "RubberPrisonLibrary": {
+   "left": -14.83,
+   "top": 14.5,
+   "x_scale": 12.0,
+   "z_scale": 11.993,
+   "size": [
+    237,
+    189
+   ]
+  },
+  "RubberPrisonOffice": {
+   "left": -5.859999999999999,
+   "top": 7.34,
+   "x_scale": 12.005,
+   "z_scale": 12.0,
+   "size": [
+    286,
+    158
+   ]
+  },
+  "RubberPrisonPier": {
+   "left": -44.48,
+   "top": 15.9,
+   "x_scale": 9.932,
+   "z_scale": 9.932,
+   "size": [
+    591,
+    199
+   ]
+  },
+  "RubberPrisonSecurity": {
+   "left": -41.78,
+   "top": 19.11,
+   "x_scale": 11.995,
+   "z_scale": 11.996,
+   "size": [
+    712,
+    299
+   ]
+  },
+  "RubberPrisonSpikeRoom": {
+   "left": -18.87,
+   "top": 25.51,
+   "x_scale": 11.997,
+   "z_scale": 11.996,
+   "size": [
+    406,
+    404
+   ]
+  },
+  "RubberPrisonThirdFloor": {
+   "left": -59.66,
+   "top": 17.65,
+   "x_scale": 11.996,
+   "z_scale": 12.0,
+   "size": [
+    855,
+    279
+   ]
+  },
+  "SandCastleBasement": {
+   "left": -20.3,
+   "top": 54.73,
+   "x_scale": 12.001,
+   "z_scale": 11.996,
+   "size": [
+    699,
+    783
+   ]
+  },
+  "SandCastleBossKeyRoom": {
+   "left": -4.6,
+   "top": 9.65,
+   "x_scale": 12.0,
+   "z_scale": 11.988,
+   "size": [
+    667,
+    226
+   ]
+  },
+  "SandCastleBossRoom": {
+   "left": -11.67,
+   "top": 9.93,
+   "x_scale": 12.0,
+   "z_scale": 11.98,
+   "size": [
+    689,
+    143
+   ]
+  },
+  "SandCastleEntrance": {
+   "left": -9.67,
+   "top": 8.120000000000001,
+   "x_scale": 11.999,
+   "z_scale": 11.964,
+   "size": [
+    596,
+    121
+   ]
+  },
+  "SandCastleMainRoom": {
+   "left": -23.7,
+   "top": 17.490000000000002,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    569,
+    276
+   ]
+  },
+  "SandCastlePressurePuzzle": {
+   "left": -17.0,
+   "top": 20.2,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    454,
+    309
+   ]
+  },
+  "SandCastleRockRoom": {
+   "left": -69.74,
+   "top": 47.5,
+   "x_scale": 12.003,
+   "z_scale": 12.0,
+   "size": [
+    1125,
+    638
+   ]
+  },
+  "SandCastleRoof": {
+   "left": -23.16,
+   "top": 4.0,
+   "x_scale": 11.998,
+   "z_scale": 12.0,
+   "size": [
+    556,
+    109
+   ]
+  },
+  "SandCastleSlidePuzzle": {
+   "left": -34.1,
+   "top": 15.94,
+   "x_scale": 12.005,
+   "z_scale": 12.0,
+   "size": [
+    477,
+    912
+   ]
+  },
+  "SandCastleStatueRoom": {
+   "left": -19.6,
+   "top": 11.66,
+   "x_scale": 12.0,
+   "z_scale": 12.013,
+   "size": [
+    499,
+    188
+   ]
+  },
+  "SandCastleTreasureRoom": {
+   "left": -11.67,
+   "top": 2.0,
+   "x_scale": 11.99,
+   "z_scale": 12.0,
+   "size": [
+    163,
+    48
+   ]
+  },
+  "SeedlingHaven": {
+   "left": -45.51,
+   "top": 8.6,
+   "x_scale": 11.999,
+   "z_scale": 12.01,
+   "size": [
+    601,
+    194
+   ]
+  },
+  "SnakemouthBridgeRoom": {
+   "left": -50.0,
+   "top": 15.5,
+   "x_scale": 12.0,
+   "z_scale": 12.002,
+   "size": [
+    1284,
+    312
+   ]
+  },
+  "SnakemouthDoorRoom": {
+   "left": -34.87,
+   "top": 19.0,
+   "x_scale": 12.001,
+   "z_scale": 12.007,
+   "size": [
+    563,
+    270
+   ]
+  },
+  "SnakemouthEmpty": {
+   "left": -2.0,
+   "top": -15.8,
+   "x_scale": 12.0,
+   "z_scale": 12.005,
+   "size": [
+    48,
+    48
+   ]
+  },
+  "SnakemouthFallRoom": {
+   "left": -54.0,
+   "top": 7.32,
+   "x_scale": 11.999,
+   "z_scale": 11.98,
+   "size": [
+    848,
+    136
+   ]
+  },
+  "SnakemouthLake": {
+   "left": -57.0,
+   "top": 63.9,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    828,
+    839
+   ]
+  },
+  "SnakemouthMushroomPit": {
+   "left": -15.4,
+   "top": 85.0,
+   "x_scale": 12.003,
+   "z_scale": 12.003,
+   "size": [
+    441,
+    1100
+   ]
+  },
+  "SnakemouthTop": {
+   "left": -11.76,
+   "top": 1.0899999999999999,
+   "x_scale": 11.999,
+   "z_scale": 11.994,
+   "size": [
+    257,
+    109
+   ]
+  },
+  "SnakemouthTreasureRoom": {
+   "left": -2.0,
+   "top": 27.0,
+   "x_scale": 12.003,
+   "z_scale": 12.004,
+   "size": [
+    48,
+    510
+   ]
+  },
+  "SnakemouthUndergrondDoor": {
+   "left": -51.8,
+   "top": 63.3,
+   "x_scale": 11.999,
+   "z_scale": 12.003,
+   "size": [
+    694,
+    877
+   ]
+  },
+  "SnakemouthUndergroundLeftA": {
+   "left": -37.6,
+   "top": 7.27,
+   "x_scale": 12.003,
+   "z_scale": 12.011,
+   "size": [
+    545,
+    184
+   ]
+  },
+  "SnakemouthUndergroundLeftB": {
+   "left": -52.0,
+   "top": 15.25,
+   "x_scale": 12.0,
+   "z_scale": 11.999,
+   "size": [
+    1836,
+    207
+   ]
+  },
+  "SnakemouthUndergroundRightA": {
+   "left": -7.61,
+   "top": 18.16,
+   "x_scale": 11.999,
+   "z_scale": 11.986,
+   "size": [
+    1351,
+    282
+   ]
+  },
+  "SnakemouthUndergroundRightB": {
+   "left": -39.37,
+   "top": 26.95,
+   "x_scale": 11.998,
+   "z_scale": 12.005,
+   "size": [
+    642,
+    409
+   ]
+  },
+  "StreamMountain1": {
+   "left": -40.14,
+   "top": 3.0,
+   "x_scale": 12.0,
+   "z_scale": 11.995,
+   "size": [
+    578,
+    104
+   ]
+  },
+  "StreamMountain2": {
+   "left": -35.7,
+   "top": 9.29,
+   "x_scale": 12.0,
+   "z_scale": 11.997,
+   "size": [
+    497,
+    183
+   ]
+  },
+  "StreamMountain3": {
+   "left": -31.6,
+   "top": 32.08,
+   "x_scale": 12.0,
+   "z_scale": 11.987,
+   "size": [
+    521,
+    385
+   ]
+  },
+  "StreamMountain4": {
+   "left": -48.61,
+   "top": 9.29,
+   "x_scale": 12.002,
+   "z_scale": 12.001,
+   "size": [
+    653,
+    244
+   ]
+  },
+  "StreamMountain5": {
+   "left": -2.0,
+   "top": 7.97,
+   "x_scale": 11.995,
+   "z_scale": 11.985,
+   "size": [
+    311,
+    178
+   ]
+  },
+  "Swamplands2": {
+   "left": -42.4,
+   "top": 67.0,
+   "x_scale": 11.998,
+   "z_scale": 12.002,
+   "size": [
+    666,
+    902
+   ]
+  },
+  "Swamplands3": {
+   "left": -6.3,
+   "top": 10.06,
+   "x_scale": 12.001,
+   "z_scale": 11.998,
+   "size": [
+    958,
+    243
+   ]
+  },
+  "Swamplands4": {
+   "left": -10.42,
+   "top": 9.17,
+   "x_scale": 12.003,
+   "z_scale": 11.992,
+   "size": [
+    1198,
+    276
+   ]
+  },
+  "Swamplands5": {
+   "left": -33.8,
+   "top": 13.6,
+   "x_scale": 12.001,
+   "z_scale": 11.999,
+   "size": [
+    1012,
+    569
+   ]
+  },
+  "Swamplands6": {
+   "left": -8.0,
+   "top": 13.84,
+   "x_scale": 12.003,
+   "z_scale": 11.996,
+   "size": [
+    1122,
+    322
+   ]
+  },
+  "Swamplands7": {
+   "left": -93.67,
+   "top": 29.9,
+   "x_scale": 12.003,
+   "z_scale": 11.999,
+   "size": [
+    1192,
+    474
+   ]
+  },
+  "Swamplands8": {
+   "left": -24.6,
+   "top": 56.0,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    779,
+    787
+   ]
+  },
+  "SwamplandsBoss": {
+   "left": -14.1,
+   "top": 69.7,
+   "x_scale": 12.0,
+   "z_scale": 11.999,
+   "size": [
+    794,
+    928
+   ]
+  },
+  "SwamplandsBridge": {
+   "left": -9.65,
+   "top": 20.23,
+   "x_scale": 12.002,
+   "z_scale": 12.0,
+   "size": [
+    803,
+    501
+   ]
+  },
+  "SwamplandsEntrance": {
+   "left": -19.81,
+   "top": 11.62,
+   "x_scale": 11.996,
+   "z_scale": 12.009,
+   "size": [
+    353,
+    234
+   ]
+  },
+  "TermiteColiseum1": {
+   "left": -23.95,
+   "top": 12.5,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    563,
+    289
+   ]
+  },
+  "TermiteColiseum2": {
+   "left": -30.47,
+   "top": 44.66,
+   "x_scale": 11.998,
+   "z_scale": 11.997,
+   "size": [
+    762,
+    432
+   ]
+  },
+  "TermiteIndustrial": {
+   "left": -51.7,
+   "top": 82.0,
+   "x_scale": 12.0,
+   "z_scale": 11.998,
+   "size": [
+    1193,
+    1008
+   ]
+  },
+  "TermiteMainPlaza": {
+   "left": -47.13,
+   "top": 15.87,
+   "x_scale": 12.0,
+   "z_scale": 11.998,
+   "size": [
+    1017,
+    383
+   ]
+  },
+  "TermiteOutside": {
+   "left": -36.0,
+   "top": 34.3,
+   "x_scale": 10.485,
+   "z_scale": 10.486,
+   "size": [
+    474,
+    442
+   ]
+  },
+  "TermitePier": {
+   "left": -17.72,
+   "top": 15.2,
+   "x_scale": 8.434,
+   "z_scale": 8.434,
+   "size": [
+    501,
+    196
+   ]
+  },
+  "TermiteRoyalChamber": {
+   "left": -19.88,
+   "top": 7.98,
+   "x_scale": 12.002,
+   "z_scale": 11.992,
+   "size": [
+    860,
+    213
+   ]
+  },
+  "TestRoom": {
+   "left": -25.03,
+   "top": 18.3,
+   "x_scale": 12.0,
+   "z_scale": 11.999,
+   "size": [
+    1138,
+    688
+   ]
+  },
+  "UndergroundBar": {
+   "left": -23.61,
+   "top": 10.03,
+   "x_scale": 12.002,
+   "z_scale": 11.985,
+   "size": [
+    514,
+    222
+   ]
+  },
+  "UpperSnekBeforeBoss": {
+   "left": -18.18,
+   "top": 17.2,
+   "x_scale": 11.999,
+   "z_scale": 12.005,
+   "size": [
+    817,
+    279
+   ]
+  },
+  "UpperSnekBossRoom": {
+   "left": -47.14,
+   "top": 12.5,
+   "x_scale": 12.003,
+   "z_scale": 12.008,
+   "size": [
+    635,
+    218
+   ]
+  },
+  "UpperSnekEntrance": {
+   "left": -2.0,
+   "top": 12.35,
+   "x_scale": 11.996,
+   "z_scale": 12.0,
+   "size": [
+    135,
+    337
+   ]
+  },
+  "UpperSnekGeizerRoom": {
+   "left": -53.71,
+   "top": 20.1,
+   "x_scale": 11.999,
+   "z_scale": 11.995,
+   "size": [
+    736,
+    318
+   ]
+  },
+  "UpperSnekMiddleRoom": {
+   "left": -40.2,
+   "top": 36.2,
+   "x_scale": 12.001,
+   "z_scale": 12.003,
+   "size": [
+    948,
+    699
+   ]
+  },
+  "UpperSnekPlatformRoom": {
+   "left": -31.0,
+   "top": 17.3,
+   "x_scale": 12.0,
+   "z_scale": 11.993,
+   "size": [
+    609,
+    256
+   ]
+  },
+  "UpperSnekPressurePlateRoom": {
+   "left": -19.67,
+   "top": 12.0,
+   "x_scale": 12.0,
+   "z_scale": 12.016,
+   "size": [
+    424,
+    263
+   ]
+  },
+  "UpperSnekRiverPuzzle": {
+   "left": -26.5,
+   "top": 30.87,
+   "x_scale": 12.0,
+   "z_scale": 12.008,
+   "size": [
+    386,
+    432
+   ]
+  },
+  "UpperSnekSwitchPuzzle": {
+   "left": -40.77,
+   "top": 7.0,
+   "x_scale": 12.0,
+   "z_scale": 12.013,
+   "size": [
+    605,
+    129
+   ]
+  },
+  "UpperSnekTransition": {
+   "left": -60.65,
+   "top": 9.0,
+   "x_scale": 11.997,
+   "z_scale": 12.007,
+   "size": [
+    866,
+    145
+   ]
+  },
+  "WaspKingdom1": {
+   "left": -2.0,
+   "top": 13.69,
+   "x_scale": 12.0,
+   "z_scale": 12.016,
+   "size": [
+    264,
+    217
+   ]
+  },
+  "WaspKingdom2": {
+   "left": -18.76,
+   "top": 33.3,
+   "x_scale": 11.999,
+   "z_scale": 12.0,
+   "size": [
+    437,
+    467
+   ]
+  },
+  "WaspKingdom3": {
+   "left": -35.63,
+   "top": 14.64,
+   "x_scale": 12.0,
+   "z_scale": 12.006,
+   "size": [
+    520,
+    247
+   ]
+  },
+  "WaspKingdom4": {
+   "left": -9.8,
+   "top": 30.8,
+   "x_scale": 12.0,
+   "z_scale": 12.007,
+   "size": [
+    691,
+    430
+   ]
+  },
+  "WaspKingdom5": {
+   "left": -18.56,
+   "top": 15.65,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    446,
+    278
+   ]
+  },
+  "WaspKingdomDrillRoom": {
+   "left": -10.09,
+   "top": 4.0,
+   "x_scale": 12.001,
+   "z_scale": 11.984,
+   "size": [
+    334,
+    119
+   ]
+  },
+  "WaspKingdomJayde": {
+   "left": -2.96,
+   "top": 5.21,
+   "x_scale": 12.0,
+   "z_scale": 11.993,
+   "size": [
+    116,
+    176
+   ]
+  },
+  "WaspKingdomMainHall": {
+   "left": -35.3,
+   "top": 29.9,
+   "x_scale": 12.002,
+   "z_scale": 12.001,
+   "size": [
+    683,
+    503
+   ]
+  },
+  "WaspKingdomOutside": {
+   "left": -27.9,
+   "top": 33.9,
+   "x_scale": 12.002,
+   "z_scale": 12.005,
+   "size": [
+    637,
+    551
+   ]
+  },
+  "WaspKingdomPrison": {
+   "left": -29.6,
+   "top": 13.72,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    626,
+    195
+   ]
+  },
+  "WaspKingdomQueen": {
+   "left": -5.8100000000000005,
+   "top": 2.0,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    230,
+    48
+   ]
+  },
+  "WaspKingdomThrone": {
+   "left": -10.3,
+   "top": 31.7,
+   "x_scale": 12.0,
+   "z_scale": 12.0,
+   "size": [
+    378,
+    450
+   ]
+  },
+  "WizardTowerAttic": {
+   "left": -8.02,
+   "top": 4.68,
+   "x_scale": 12.0,
+   "z_scale": 12.017,
+   "size": [
+    237,
+    141
+   ]
+  },
+  "WizardTowerBasement": {
+   "left": -13.13,
+   "top": 9.629999999999999,
+   "x_scale": 11.997,
+   "z_scale": 12.0,
+   "size": [
+    338,
+    204
+   ]
+  },
+  "WizardTowerStairs": {
+   "left": -10.45,
+   "top": 7.84,
+   "x_scale": 12.002,
+   "z_scale": 11.992,
+   "size": [
+    167,
+    221
+   ]
+  }
+ }
+}

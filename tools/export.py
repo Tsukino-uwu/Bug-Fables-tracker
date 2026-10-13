@@ -313,6 +313,16 @@ class Canvas:
                 i = (y * self.width + x) * 4
                 self.pixels[i:i + 4] = bytes(edge) if x - left < 2 or right - x < 2 else row
 
+    def paste(self, pictures: list[tuple[Path, tuple[float, float, float, float]]]) -> None:
+        """Pictures laid over the canvas, each scaled to its box (left, top, right, bottom)."""
+        from PIL import Image
+        image = Image.frombytes("RGBA", (self.width, self.height), bytes(self.pixels))
+        for path, (x0, y0, x1, y1) in pictures:
+            size = (max(1, round(x1) - round(x0)), max(1, round(y1) - round(y0)))
+            image.alpha_composite(Image.open(path).convert("RGBA").resize(size, Image.LANCZOS),
+                                  (round(x0), round(y0)))
+        self.pixels = bytearray(image.tobytes())
+
     def png(self) -> bytes:
         stride = self.width * 4
         return encode_png(self.width, self.height,
@@ -581,11 +591,16 @@ def main() -> None:
             # Game x to the right, z up: as the pause map shows the areas around them.
             return (x - left) * scale, (high - z) * scale
         canvas = Canvas(round((right - left) * scale), round((high - low) * scale), (24, 27, 35, 255))
+        # Each room's box, the game's own picture of the room in it (tools/room_pictures.py) where there is one.
+        pictures = []
         for name, f in frames.items():
             x0, y1 = px(f[0] - ROOM_PAD, f[1] - ROOM_PAD)
             x1, y0 = px(f[2] + ROOM_PAD, f[3] + ROOM_PAD)
             canvas.box(x0, y0, x1, y1, (58, 64, 80, 255) if name in rooms else (44, 49, 61, 255),
                        (96, 104, 124, 255))
+            if (PACK / f"images/rooms/{name}.png").exists():
+                pictures.append((PACK / f"images/rooms/{name}.png", (x0, y0, x1, y1)))
+        canvas.paste(pictures)
         def door_spot(room: str, door: dict) -> tuple[float, float]:
             return px(door["at"][0] + at[room][0], door["at"][1] + at[room][1])
 
