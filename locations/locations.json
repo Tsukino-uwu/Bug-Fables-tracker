@@ -11120,7 +11120,7 @@
       {
         "name": "Needs Sand Castle Key and Jump",
         "access_rules": [
-          "$bf_entrance_open|DesertSandCastle: loadzone castle"
+          "$bf_entrance_open|DesertSandCastle|loadzone castle"
         ]
       }
     ]
@@ -11720,7 +11720,7 @@
       {
         "name": "Needs Small Ancient Key",
         "access_rules": [
-          "$bf_entrance_open|SandCastleMainRoom: loadzone statue"
+          "$bf_entrance_open|SandCastleMainRoom|loadzone statue"
         ]
       }
     ]
@@ -11743,7 +11743,7 @@
       {
         "name": "Needs Small Ancient Key",
         "access_rules": [
-          "$bf_entrance_open|SandCastleMainRoom: loadzonebosskey"
+          "$bf_entrance_open|SandCastleMainRoom|loadzonebosskey"
         ]
       }
     ]
@@ -11812,7 +11812,7 @@
       {
         "name": "Needs Sand Castle Slide Puzzle Solved",
         "access_rules": [
-          "$bf_entrance_open|SandCastleSlidePuzzle: loadzonepressure"
+          "$bf_entrance_open|SandCastleSlidePuzzle|loadzonepressure"
         ]
       }
     ]
@@ -11858,7 +11858,7 @@
       {
         "name": "Needs Big Ancient Key",
         "access_rules": [
-          "$bf_entrance_open|SandCastleRoof: loadzoneboss"
+          "$bf_entrance_open|SandCastleRoof|loadzoneboss"
         ]
       }
     ]
@@ -12019,7 +12019,7 @@
       {
         "name": "Needs Sand Castle Pressure Puzzle Door Open",
         "access_rules": [
-          "$bf_entrance_open|SandCastlePressurePuzzle: loadzonemain"
+          "$bf_entrance_open|SandCastlePressurePuzzle|loadzonemain"
         ]
       }
     ]
@@ -14972,7 +14972,7 @@
       {
         "name": "Needs Factory Pass",
         "access_rules": [
-          "$bf_entrance_open|FactoryProcessingPump: loadzonemalbee"
+          "$bf_entrance_open|FactoryProcessingPump|loadzonemalbee"
         ]
       }
     ]
@@ -16198,7 +16198,7 @@
       {
         "name": "Needs Horn Slash",
         "access_rules": [
-          "$bf_entrance_open|FarGrasslandsWizard: loadzonebasement"
+          "$bf_entrance_open|FarGrasslandsWizard|loadzonebasement"
         ]
       }
     ]

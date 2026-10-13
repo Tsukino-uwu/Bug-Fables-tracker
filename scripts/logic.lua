@@ -18,8 +18,12 @@ for _, loc in ipairs(DATA.locations) do
 end
 
 -- The seed: its options, starting member and doors (slot_data), and its locations (the server's); the defaults until
--- a seed is connected.
+-- a seed is connected, the location categories then from their toggles in Settings.
 SEED = {}
+
+-- Each location category's option has a toggle of its name in Settings (tools/export.py).
+local OPTION_TOGGLES = {}
+for _, option in pairs(DATA.category_options) do OPTION_TOGGLES[option] = true end
 
 local function truthy(value)
     return value == true or (type(value) == "number" and value ~= 0)
@@ -40,10 +44,16 @@ local OPERATORS = {
     le = function(a, b) return a <= b end,
 }
 
+-- An option's value: a connected seed's own, else a category's toggle.
+local function option_value(name)
+    if not SEED.connected and OPTION_TOGGLES[name] then return Tracker:ProviderCountForCode(name) > 0 end
+    return SEED.options[name]
+end
+
 local function category_on(category)
     if category == nil then return true end
     local option = DATA.category_options[category]
-    if option then return truthy(SEED.options[option]) end
+    if option then return truthy(option_value(option)) end
     if category == "party_member" then return SEED.starting_member >= 0 end
     if category == "story_party" then return SEED.starting_member < 0 end
     return true
@@ -85,6 +95,7 @@ function bf_set_seed(slot_data, location_ids)
     SEED.starting_member = DATA.starting_member_default
     SEED.door_targets = {}
     SEED.start_region = nil
+    SEED.connected = slot_data ~= nil or location_ids ~= nil
     if slot_data then
         for name, value in pairs(slot_data.options or {}) do SEED.options[name] = value end
         if slot_data.starting_member ~= nil then SEED.starting_member = slot_data.starting_member end
@@ -206,7 +217,7 @@ local RULES = {
 -- As rule_builder/options.py checks a filter: "contains" asks for a name in an option set (a list in slot_data), "in"
 -- for the option's value in the filter's list.
 local function passes_filter(filter)
-    local value = SEED.options[DATA.option_names[filter.option]]
+    local value = option_value(DATA.option_names[filter.option])
     local operator = filter.operator or "eq"
     if operator == "contains" then
         for _, element in ipairs(value or {}) do
@@ -278,6 +289,9 @@ local function state_key()
     for _, code in pairs(DATA.event_codes) do
         parts[#parts + 1] = Tracker:ProviderCountForCode(code)
     end
+    for option in pairs(OPTION_TOGGLES) do
+        parts[#parts + 1] = Tracker:ProviderCountForCode(option)
+    end
     return table.concat(parts, ",")
 end
 
@@ -322,7 +336,9 @@ function bf_region(region)
     return bf_state().reached[region] == true
 end
 
-function bf_entrance_open(name)
+-- A gate by its map and its door in the game: an entrance's name holds a ':', which a rule reads as a count.
+function bf_entrance_open(map, door)
+    local name = DATA.door_entrances[map .. ": " .. door]
     local state = bf_state()
     for _, entrance in ipairs(SEED.entrances) do
         if entrance.name == name then return state.reached[entrance.from] == true and eval(entrance.rule) end
@@ -362,10 +378,11 @@ function bf_eval(rule)
     return eval(rule)
 end
 
--- Where a door the player went through led in this seed, by its name in the doors key (a one-way's story copy names
--- its door): the region, and that region's map. Nil for a name the logic doesn't have.
+-- Where a door the player went through led in this seed, by its name in the doors key (the game's "<map>: <door>", a
+-- one-way's story copy for its door), or by its entrance's: the region, and that region's map. Nil for a name the
+-- logic doesn't have.
 function bf_door_led_to(name)
-    name = DATA.one_way_copies[name] or name
+    name = DATA.door_entrances[name] or name
     for _, entrance in ipairs(SEED.entrances) do
         if entrance.name == name then
             return entrance.to, DATA.region_maps[entrance.to] or entrance.to

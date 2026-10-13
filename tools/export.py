@@ -197,7 +197,8 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
         needed[name] = max(needed.get(name, 0), 1)
     # A story event's item may also be a real item (a member who joins in the story, or arrives as an item).
     tracked = {name: count for name, count in needed.items() if name in data.ITEM_NAME_TO_ID}
-    unknown = sorted(set(needed) - set(tracked) - event_items)
+    # Universal Tracker's glitched logic: an item no seed holds, so never held here either (logic.lua's count).
+    unknown = sorted(set(needed) - set(tracked) - event_items - {custom_rules.GLITCHES_ITEM})
     if unknown:
         raise SystemExit(f"rules name items the world doesn't have: {unknown}")
     kinds = {item.name: item.kind for item in data.ITEMS}
@@ -227,9 +228,11 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
         "one_way_to": {f"{d.map}|{d.door}": {"region": data.landing_region(d), "map": d.to} for d in data.ONE_WAYS},
         # The map each part of a map belongs to (a map's own region is its name).
         "region_maps": {a.region: a.map for a in data.MAP_AREAS},
-        # A one-way door's story copies, other doors in the game, are its one entrance in the doors key.
-        "one_way_copies": {data.door_name(d.map, copy): data.door_name(d.map, d.door)
-                           for d in data.ONE_WAYS for copy in d.copies},
+        # The doors key names a door as the game does (the mod's "<map>: <door>"), a one-way door's story copies as
+        # other doors: each to its entrance, as universal_tracker.py reads them.
+        "door_entrances": {**{data.game_door_name(*door): name for door, name in data.DOOR_LABELS.items()},
+                           **{data.game_door_name(d.map, copy): data.door_name(d.map, d.door)
+                              for d in data.ONE_WAYS for copy in d.copies}},
         "locations": locations,
         "events": events,
         "items": items,
@@ -353,6 +356,19 @@ def logic_doors(room_data: dict[str, dict], doors: Any) -> dict[str, dict]:
     return out
 
 
+def logic_only(rule: dict[str, Any] | None, glitches: str) -> dict[str, Any] | None:
+    """A rule without Universal Tracker's glitched ways (an Or's Has of its item): what the logic itself asks."""
+    if rule is None:
+        return None
+    def glitched(child: dict[str, Any]) -> bool:
+        return rule["rule"] == "Or" and child["rule"] == "Has" and child["args"]["item_name"] == glitches
+    if "children" in rule:
+        rule = rule | {"children": [logic_only(child, glitches) for child in rule["children"] if not glitched(child)]}
+    if "child" in rule:
+        rule = rule | {"child": logic_only(rule["child"], glitches)}
+    return rule
+
+
 def rule_text(rule: dict[str, Any] | None) -> str:
     """What a rule asks, in words: its items, abilities and members, "or" between ways and "and" within one."""
     if rule is None:
@@ -473,11 +489,28 @@ def write(path: Path, content: bytes | str) -> None:
     path.write_bytes(content)
 
 
+def rules_of(location: dict[str, Any]):
+    """Every rule string a location holds: its own, its sections' and its map pins'."""
+    for holder in (location, *location.get("sections", ()), *location.get("map_locations", ())):
+        for key in ("access_rules", "visibility_rules", "restrict_visibility_rules", "force_invisibility_rules"):
+            yield from holder.get(key, ())
+
+
+def check_rules(locations_json: list[dict[str, Any]]) -> None:
+    """PopTracker splits a rule string at each ',' and reads what follows a ':' as a count (its src/core/jsonutil.h
+    and src/core/tracker.cpp, 19f0b1f): neither may stand in a function's arguments."""
+    for location in locations_json:
+        for rule in rules_of(location):
+            if "," in rule or ":" in rule:
+                raise SystemExit(f"{location['name']}: a rule PopTracker would cut at ',' or ':': {rule}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--archipelago", required=True, type=Path, help="your Archipelago checkout")
     args = parser.parse_args()
     w = load_world(args.archipelago.resolve())
+    from Options import Toggle
     logic = build(w)
     logic["randomizer_commit"] = randomizer_commit(Path(w["package"].__file__).resolve().parent)
 
@@ -533,6 +566,7 @@ def main() -> None:
     entrance_names = {e["name"] for e in logic["entrances"]}
     door_parts = {e["from"] for e in logic["entrances"] if "door" in e or "one_way" in e}  # parts on a way onward
     ability_items = {a["item"] for a in logic["abilities"].values()} | set(logic["members"]) | {"Jump"}
+    glitches = w["custom_rules"].GLITCHES_ITEM
 
     def road_block(rule: dict[str, Any] | None) -> bool:
         """Something in the road, as crystal-ap-tracker's Sudowoodo: a key item or a story step (a guard, a lock, a
@@ -641,7 +675,8 @@ def main() -> None:
             # once the logic gets there.
             blockers = []
             for part in parts_of.get(room, ()):
-                if part.region not in door_parts or not road_block(rule_dict(part.rule)):
+                rule = logic_only(rule_dict(part.rule), glitches)
+                if part.region not in door_parts or not road_block(rule):
                     continue
                 found = [door_spot(raw_rooms, room, e[kind]["door"]) for e in logic["entrances"]
                          if e["from"] == part.region for kind in ("door", "one_way") if kind in e]
@@ -649,14 +684,13 @@ def main() -> None:
                           if loc["region"] == part.region]
                 found = [s for s in found if s]
                 at = [sum(s[i] for s in found) / len(found) for i in range(3)] if found else None
-                blockers.append((part.name, rule_dict(part.rule), f"$bf_region|{part.region}", at))
+                blockers.append((part.name, rule, f"$bf_region|{part.region}", at))
             for gate in gates_of.get(room, ()):
                 # A door kept shut for good isn't a door of the logic: nothing to show.
-                if w["data"].door_name(gate.map, gate.door) not in entrance_names:
+                if w["data"].DOOR_LABELS.get((gate.map, gate.door)) not in entrance_names:
                     continue
-                blockers.append((gate.door.partition("#")[0], rule_dict(gate.rule),
-                                 f"$bf_entrance_open|{w['data'].door_name(gate.map, gate.door)}",
-                                 door_spot(raw_rooms, room, gate.door)))
+                blockers.append((gate.door.partition("#")[0], logic_only(rule_dict(gate.rule), glitches),
+                                 f"$bf_entrance_open|{gate.map}|{gate.door}", door_spot(raw_rooms, room, gate.door)))
             for what, rule, access, at in blockers:
                 x, y = pixel(picture, at or room_middle(raw_rooms[room]))
                 name = base = f"{title}: {what}"
@@ -719,7 +753,20 @@ def main() -> None:
     items_json.append({"name": "Refresh", "img": "images/items/settings_refresh.png", "codes": "bf_refresh",
                        "type": "toggle"})
     write(PACK / "images/items/settings_refresh.png", square_icon((90, 90, 90)))
-    settings = {"type": "itemgrid", "item_margin": "4,4", "item_size": "32,32", "rows": [["auto_tab", "show_unvisited"]]}
+    # With no seed connected, each location category's option as a toggle, its code the option's name, on as the
+    # apworld's default is (scripts/logic.lua; a connected seed's own options win).
+    option_fields = w["options"].BugFablesOptions.type_hints
+    toggles = list(dict.fromkeys(logic["category_options"].values()))
+    for n, name in enumerate(toggles):
+        option = option_fields[name]
+        if not issubclass(option, Toggle):
+            raise SystemExit(f"{name}: a location category's option that isn't a toggle")
+        image = f"images/items/{name}.png"
+        write(PACK / image, square_icon(hsv(n / len(toggles), 0.45, 0.8)))
+        items_json.append({"name": option.display_name, "img": image, "codes": name, "type": "toggle",
+                           "initial_active_state": bool(option.default)})
+    settings = {"type": "itemgrid", "item_margin": "4,4", "item_size": "32,32",
+                "rows": [["auto_tab", "show_unvisited"], *(toggles[i:i + 3] for i in range(0, len(toggles), 3))]}
     write(PACK / "layouts/settings.json", json.dumps({"settings_popup": settings, "settings_grid": settings},
                                                      indent=2) + "\n")
     # The Events group: the milestones as toggles, marked by hand; each counts for the logic as the event does.
@@ -757,6 +804,10 @@ def main() -> None:
     write(PACK / "layouts/item_grid.json", json.dumps({"item_grid": {
         "type": "itemgrid", "item_margin": "3,3", "item_size": "40,40", "h_alignment": "left", "rows": rows,
     }}, indent=2) + "\n")
+    codes = Counter(entry["codes"] for entry in items_json)
+    if max(codes.values()) > 1:
+        raise SystemExit(f"items sharing a code: {sorted(code for code, n in codes.items() if n > 1)}")
+    check_rules(locations_json)
     write(PACK / "scripts/generated/logic_data.lua",
           "-- Generated by tools/export.py from the Bug Fables apworld: never edit by hand.\nreturn "
           + lua(logic) + "\n")

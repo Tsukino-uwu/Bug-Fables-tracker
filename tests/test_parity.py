@@ -6,6 +6,7 @@ which of the seed's locations can be reached with these items.
 """
 from __future__ import annotations
 
+import json
 import os
 import random
 import sys
@@ -35,6 +36,19 @@ ROLLED = (*WORLD["slot_data"].SLOT_OPTIONS, "starting_party_member", "starting_l
 OPTIONS = BugFablesWorld.options_dataclass.type_hints
 # Extra Roadblocks has no roadblocks yet and then takes any name: two stand-ins, so its "contains" filters are compared.
 ROADBLOCKS = sorted(OPTIONS["extra_roadblocks"].valid_keys) or ["Test Roadblock A", "Test Roadblock B"]
+DOOR_MODES = sorted(set(OPTIONS["entrance_randomizer"].options.values()))
+LOCATIONS_JSON = json.loads((PACK / "locations/locations.json").read_text("utf-8"))
+# The gates' pins (export.py's blockers), each a rule naming its door's map and the door in the game.
+GATE_RULES = [rule for loc in LOCATIONS_JSON for rule in export.rules_of(loc) if rule.startswith("$bf_entrance_open|")]
+
+
+def call_rule(lua: Lua, rule: str):
+    """A '$' rule as PopTracker calls it (src/core/tracker.cpp, 19f0b1f): the function, then each '|' argument as a
+    string; a ',' would have split the rule and a ':' cut it to a count."""
+    if "," in rule or ":" in rule:
+        raise AssertionError(f"a rule PopTracker would cut: {rule}")
+    name, *args = rule[1:].split("|")
+    return lua.g[name](*args)
 
 
 def random_options(rng: random.Random) -> dict:
@@ -132,8 +146,8 @@ class TestParity(unittest.TestCase):
         codes = {item["name"]: item["code"] for item in export.build(WORLD)["items"]}
         for n in range(SEEDS):
             options = random_options(rng)
-            # Each door mode as often as the others: off, Coupled, Room Swap, Decoupled.
-            options["entrance_randomizer"] = n % 4
+            # Each door mode as often as the others.
+            options["entrance_randomizer"] = DOOR_MODES[n % len(DOOR_MODES)]
             seed = rng.getrandbits(32)
             with self.subTest(seed=seed, options=options):
                 multiworld = setup_multiworld(BugFablesWorld, steps=(), seed=seed, options=options)
@@ -179,14 +193,16 @@ class TestParity(unittest.TestCase):
                     reached = {name for name, on in lua.g.bf_reached().items() if on}
                     self.assertEqual(reached, {r.name for r in multiworld.get_regions(1) if r.can_reach(state)},
                                      f"state {k}: regions")
-                    # The gates' pins: going through each door that is a gate, as Archipelago answers it.
+                    # The gates' pins, their rules called as PopTracker calls them: going through each door that is a
+                    # gate, as Archipelago answers it.
                     entrances = {e.name for e in multiworld.get_entrances(1)}
-                    for gate in WORLD["data"].DOOR_RULES:
-                        if WORLD["data"].door_name(gate.map, gate.door) not in entrances:
+                    self.assertTrue(GATE_RULES)
+                    for rule in GATE_RULES:
+                        name = WORLD["data"].door_name(*rule.split("|")[1:])
+                        if name not in entrances:
                             continue  # a door kept shut for good isn't one of the logic's
-                        entrance = multiworld.get_entrance(WORLD["data"].door_name(gate.map, gate.door), 1)
-                        self.assertEqual(bool(lua.g.bf_entrance_open(entrance.name)), entrance.can_reach(state),
-                                         f"state {k}: {entrance.name}")
+                        entrance = multiworld.get_entrance(name, 1)
+                        self.assertEqual(bool(call_rule(lua, rule)), entrance.can_reach(state), f"state {k}: {name}")
 
 
 class TestExport(unittest.TestCase):
@@ -198,9 +214,21 @@ class TestExport(unittest.TestCase):
         pending = {data.LOCATION_NAME_TO_ID[loc.name] for loc in data.LOCATIONS if loc.pending}
         self.assertEqual(set(ids), set(data.LOCATION_NAME_TO_ID.values()) - pending)
 
-    def test_one_way_copies_as_universal_tracker_reads_them(self) -> None:
+    def test_the_doors_key_read_as_universal_tracker_reads_it(self) -> None:
         from worlds.bug_fables import universal_tracker
-        self.assertEqual(export.build(WORLD)["one_way_copies"], universal_tracker._COPY_OF)
+        self.assertEqual(export.build(WORLD)["door_entrances"], universal_tracker._TAKEN)
+
+    def test_every_rule_calls_the_packs_lua_whole(self) -> None:
+        # Each rule as PopTracker reads it: one part (no ','), no count (no ':'), a function the Lua has.
+        lua = Lua()
+        rules = [rule for loc in LOCATIONS_JSON for rule in export.rules_of(loc)]
+        self.assertTrue(rules)
+        for rule in rules:
+            with self.subTest(rule=rule):
+                self.assertNotIn(",", rule)
+                self.assertNotIn(":", rule)
+                self.assertTrue(rule.startswith("$"))
+                self.assertIsNotNone(lua.g[rule[1:].split("|")[0]])
 
 
 if __name__ == "__main__":

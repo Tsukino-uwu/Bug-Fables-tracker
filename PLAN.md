@@ -62,7 +62,9 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
   | `bug_fables_doors_{team}_{slot}` | each door taken: `update` with `[door]` | where shuffled doors lead |
 
   The doors key is also Universal Tracker's for its deferred entrances (the randomizer's build step 55, 2026-10-08:
-  shuffled doors hidden there until taken), so `door` is the apworld's entrance name for the door walked through.
+  shuffled doors hidden there until taken). `door` is the game's name for the door walked through, `<map>: <door>`:
+  since the randomizer's build step 105 the entrances are named where they are, and both trackers translate the
+  game's name (the export's `door_entrances`, as its `universal_tracker.py` reads it).
 
 - **Hints:** Archipelago's `_read_hints_{team}_{slot}` (`docs/network protocol.md`, Get), for highlighting
   hinted checks. The server answers `SetNotify` on a `_read_` key with `SetReply` (`MultiServer.py`, 0.6.8), and
@@ -132,8 +134,8 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
 5. **Room Swap:** superseded 2026-10-13: with a tab and a picture per room, each room keeps its own checks wherever
    it was swapped to, and its doors say where they lead (item 7), as for every door shuffle.
 6. **Fog of war:** a pin shows only when its room is in the visited list, unless the toggle item "Show unvisited
-   rooms" is on (off by default). Only with the doors shuffled (the user, 2026-10-13): with the game's own doors
-   every room shows.
+   rooms" is on (off by default). Only with the doors shuffled (the user, 2026-10-13), by any Entrance Randomizer
+   value but Off, Map Shuffle included: with the game's own doors every room shows.
 7. **Doors:** with the door shuffle on, each door taken (the doors key) shows where it led, as far as PopTracker
    can show it: a badge or section on the room's pin, never a drawn line. Find the best fit in the docs then.
    Built 2026-10-08: the key read (item 21) and each taken door's destination worked out in Lua (`bf_door_led_to`,
@@ -152,7 +154,10 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
     layout's types are container, dock, array, tabbed, group, item, itemgrid, map, layout, recentpins, text and
     canvas (`doc/PACKS.md`, Layouts, 2026-10-03), so checks show only as pins on a map.
 12. **Layouts:** `tracker_default`, `tracker_broadcast` (a stream view), and `settings_popup` holding the fog of
-    war and auto tabbing toggles (built 2026-10-13, also in the bottom bar's Settings).
+    war and auto tabbing toggles (built 2026-10-13, also in the bottom bar's Settings). With them, a toggle for each
+    location category's option (decided 2026-10-13: "Toggles in Settings"; built the same day), named as the option,
+    on as its default: with no seed connected they decide which checks show, so a category off by default can be
+    seen; a connected seed's own options and location list always decide (`scripts/logic.lua`, `option_value`).
 13. **Updates:** built 2026-10-13 as crystal-ap-tracker does it (read for it, its row in the randomizer's
     `licensing.md`). A release's download is GitHub's source zip of its tag, `.gitattributes`' `export-ignore` leaving
     only the pack (PopTracker opens a zip whose one folder holds the manifest: `src/core/pack.cpp`, `19f0b1f`). The
@@ -201,8 +206,9 @@ Added 2026-10-13, from crystal-ap-tracker's look (the user's asks):
     artifacts received against `artifacts_required`), Events (the story's milestones among the logic's events,
     marked by hand; each counts for the logic) and Settings.
 24. **Still to come:** a Bosses tab beside Items (bosses, mini-bosses and bounties, beaten or not), an Enemies tab
-    like Crystal's Pokédex for Enemysanity, and events marked by the mod through a data storage key (a randomizer
-    change, after 0.4.0).
+    like Crystal's Pokédex for Enemysanity, events marked by the mod through a data storage key (a randomizer
+    change, after 0.4.0), and Universal Tracker's glitched ways (the randomizer's build step 104) as PopTracker's
+    sequence breaks (`[rule]`, yellow; `doc/PACKS.md`, Rules), never held for now.
 
 ## Not applicable (recorded so it's a decision, not a gap)
 
@@ -220,12 +226,18 @@ Added 2026-10-13, from crystal-ap-tracker's look (the user's asks):
    areas, `CanReachRegion`, `ItemOnHand`, the new options; the randomizer's build step 56). Exported again
    2026-10-13 with every room mapped: 614 locations in 182 rooms of 25 areas; the start from slot_data; the last
    fight's artifact gate (`HasFromListUnique` with Rule Builder's `FromWorldAttr`, the randomizer's build step 94).
+   Exported again 2026-10-13 at the randomizer's build step 107 (its build step 108): the entrances named where they
+   are (its build step 105), so the doors key's game names translated (`door_entrances`) and each gate's pin named by
+   its map and door, as a ':' in a rule is a count to PopTracker; Map Shuffle, a door shuffle like the others;
+   Universal Tracker's glitched ways (its build step 104) never held, left out of the blockers' text.
 2. The map (its first version built 2026-10-04, see item 4), following the player, and hints.
 3. Fog of war and doors: the randomizer writes their data storage keys since 2026-10-08 (its build steps 55 and 57).
 4. Updates: built 2026-10-13 (item 13). The first release comes with the randomizer's 0.4.0 (the user, 2026-10-13),
    the repo public by then (the user's step); the pack list after.
 5. Items 15-21: built 2026-10-08 (`scripts/autotracking.lua`, `tests/test_autotracking.py`), but 19, which waits
    for a place on screen, and 20, which PopTracker does itself.
+6. The location categories' toggles for use with no seed connected (item 12): built 2026-10-13, before the 0.4.0
+   release (the randomizer's build step 108).
 
 ## Rules carried over from the randomizer
 

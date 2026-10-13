@@ -7,6 +7,21 @@
       [
         "auto_tab",
         "show_unvisited"
+      ],
+      [
+        "shuffle_quests",
+        "shuffle_crystal_berries",
+        "shuffle_discoveries"
+      ],
+      [
+        "shuffle_hidden_items",
+        "shuffle_dig_spots",
+        "enemy_sanity"
+      ],
+      [
+        "shuffle_medal_shops",
+        "shuffle_item_shops",
+        "shuffle_termacade"
       ]
     ]
   },
@@ -18,6 +33,21 @@
       [
         "auto_tab",
         "show_unvisited"
+      ],
+      [
+        "shuffle_quests",
+        "shuffle_crystal_berries",
+        "shuffle_discoveries"
+      ],
+      [
+        "shuffle_hidden_items",
+        "shuffle_dig_spots",
+        "enemy_sanity"
+      ],
+      [
+        "shuffle_medal_shops",
+        "shuffle_item_shops",
+        "shuffle_termacade"
       ]
     ]
   }

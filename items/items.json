@@ -264,6 +264,69 @@
     "type": "toggle"
   },
   {
+    "name": "Shuffle Quests",
+    "img": "images/items/shuffle_quests.png",
+    "codes": "shuffle_quests",
+    "type": "toggle",
+    "initial_active_state": true
+  },
+  {
+    "name": "Shuffle Crystal Berries",
+    "img": "images/items/shuffle_crystal_berries.png",
+    "codes": "shuffle_crystal_berries",
+    "type": "toggle",
+    "initial_active_state": true
+  },
+  {
+    "name": "Shuffle Discoveries",
+    "img": "images/items/shuffle_discoveries.png",
+    "codes": "shuffle_discoveries",
+    "type": "toggle",
+    "initial_active_state": false
+  },
+  {
+    "name": "Shuffle Hidden Items",
+    "img": "images/items/shuffle_hidden_items.png",
+    "codes": "shuffle_hidden_items",
+    "type": "toggle",
+    "initial_active_state": false
+  },
+  {
+    "name": "Shuffle Dig Spots",
+    "img": "images/items/shuffle_dig_spots.png",
+    "codes": "shuffle_dig_spots",
+    "type": "toggle",
+    "initial_active_state": false
+  },
+  {
+    "name": "Enemysanity",
+    "img": "images/items/enemy_sanity.png",
+    "codes": "enemy_sanity",
+    "type": "toggle",
+    "initial_active_state": false
+  },
+  {
+    "name": "Shuffle Medal Shops",
+    "img": "images/items/shuffle_medal_shops.png",
+    "codes": "shuffle_medal_shops",
+    "type": "toggle",
+    "initial_active_state": true
+  },
+  {
+    "name": "Shuffle Item Shops",
+    "img": "images/items/shuffle_item_shops.png",
+    "codes": "shuffle_item_shops",
+    "type": "toggle",
+    "initial_active_state": true
+  },
+  {
+    "name": "Shuffle Termacade",
+    "img": "images/items/shuffle_termacade.png",
+    "codes": "shuffle_termacade",
+    "type": "toggle",
+    "initial_active_state": true
+  },
+  {
     "name": "Snakemouth Den Cleared",
     "img": "images/items/event_snakemouth_den_cleared.png",
     "codes": "event_snakemouth_den_cleared",

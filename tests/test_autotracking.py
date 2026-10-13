@@ -6,6 +6,7 @@ d2af7f1): what it asks the server on connect, and what each answer changes.
 """
 from __future__ import annotations
 
+import json
 import os
 import sys
 import unittest
@@ -27,6 +28,8 @@ STEPS = ("generate_early", "create_regions", "create_items", "set_rules", "conne
          "pre_fill")
 # Archipelago's ClientStatus (docs/network protocol.md), which PopTracker's enum carries to the server.
 GOAL = 30
+# Each of the Entrance Randomizer's door shuffles.
+SHUFFLED_MODES = sorted(set(BugFablesWorld.options_dataclass.type_hints["entrance_randomizer"].options.values()) - {0})
 
 
 class Thing:
@@ -81,9 +84,10 @@ class PopTracker:
         for code in data["event_codes"].values():
             self.objects[code] = Thing(Type="toggle", Active=False)
         # The settings as a new tracker has them (items.json's initial_active_state).
-        self.objects["auto_tab"] = Thing(Type="toggle", Active=True)
-        self.objects["show_unvisited"] = Thing(Type="toggle", Active=False)
-        self.objects["bf_refresh"] = Thing(Type="toggle", Active=False)
+        for entry in json.loads((PACK / "items/items.json").read_text("utf-8")):
+            if entry["codes"] not in self.objects:
+                self.objects[entry["codes"]] = Thing(Type=entry["type"],
+                                                     Active=entry.get("initial_active_state", False))
         for path in data["section_paths"].values():
             self.objects[path] = Thing(ChestCount=1, AvailableChestCount=1, Highlight="None")
         self.runtime.execute('require("autotracking")')
@@ -103,9 +107,9 @@ class PopTracker:
         return self.objects[self.g.DATA["section_paths"][location_id]]
 
 
-def seed(entrance_randomizer: int) -> tuple:
+def seed(entrance_randomizer: int, **options) -> tuple:
     multiworld = setup_multiworld(BugFablesWorld, steps=(), seed=20261008,
-                                  options={"entrance_randomizer": entrance_randomizer})
+                                  options={"entrance_randomizer": entrance_randomizer, **options})
     for step in STEPS:
         call_all(multiworld, step)
     world = multiworld.worlds[1]
@@ -156,23 +160,28 @@ class TestStorage(unittest.TestCase):
         self.assertEqual(list(pack.g.STORAGE.visited.keys()), [], "another seed starts afresh")
 
     def test_where_each_door_taken_led(self) -> None:
-        # Every door Archipelago connected leads, in the pack, where the seed sent it; a story copy names its door.
-        for mode in (1, 2, 3):
+        # Every door Archipelago connected leads, in the pack, where the seed sent it, by the name the mod writes in the
+        # doors key (the game's "<map>: <door>") or its entrance's; a story copy names its door.
+        data = WORLD["data"]
+        for mode in SHUFFLED_MODES:
             multiworld, world, slot_data = seed(mode)
             pack = PopTracker()
             pack.connect(slot_data)
-            doors = {name for name in WORLD["data"].DOOR_NAMES} | {
-                WORLD["data"].door_name(w.map, w.door) for w in WORLD["data"].ONE_WAYS}
-            made = [e for e in multiworld.get_entrances(1) if e.name in doors]
-            self.assertTrue(made)
-            for entrance in made:
-                with self.subTest(mode=mode, door=entrance.name):
-                    region, _map = pack.g.bf_door_led_to(entrance.name)
-                    self.assertEqual(region, entrance.connected_region.name)
-            for copy, door in pack.g.DATA["one_way_copies"].items():
-                self.assertEqual(pack.g.bf_door_led_to(copy)[0], pack.g.bf_door_led_to(door)[0])
-            pack.answer("bug_fables_doors_0_1", [made[0].name])
-            self.assertEqual(list(pack.g.STORAGE.doors.keys()), [made[0].name])
+            made = {e.name: e for e in multiworld.get_entrances(1)}
+            doors = [(data.game_door_name(*door), made[name])
+                     for door, name in data.DOOR_LABELS.items() if name in made]
+            self.assertTrue(doors)
+            for written, entrance in doors:
+                with self.subTest(mode=mode, door=written):
+                    self.assertEqual(pack.g.bf_door_led_to(written)[0], entrance.connected_region.name)
+                    self.assertEqual(pack.g.bf_door_led_to(entrance.name)[0], entrance.connected_region.name)
+            copies = [(data.game_door_name(w.map, copy), data.door_name(w.map, w.door))
+                      for w in data.ONE_WAYS for copy in w.copies]
+            self.assertTrue(copies)
+            for copy, door in copies:
+                self.assertEqual(pack.g.bf_door_led_to(copy)[0], made[door].connected_region.name)
+            pack.answer("bug_fables_doors_0_1", [doors[0][0]])
+            self.assertEqual(list(pack.g.STORAGE.doors.keys()), [doors[0][0]])
 
 
 class TestServerState(unittest.TestCase):
@@ -267,8 +276,9 @@ class TestFollowAndFog(unittest.TestCase):
         pack = PopTracker()
         pack.connect({"options": {"entrance_randomizer": 0}})
         self.assertTrue(pack.g.bf_seen("NearSnakemouth"))
-        pack.connect({"options": {"entrance_randomizer": 1}})
-        self.assertFalse(pack.g.bf_seen("NearSnakemouth"))
+        for mode in SHUFFLED_MODES:
+            pack.connect({"options": {"entrance_randomizer": mode}})
+            self.assertFalse(pack.g.bf_seen("NearSnakemouth"), f"door shuffle {mode}")
         area = pack.g.DATA["map_tabs"]["NearSnakemouth"]["area_id"]
         self.assertFalse(pack.g.bf_area_seen(area))
         before = pack.objects["bf_refresh"].Active
@@ -279,6 +289,68 @@ class TestFollowAndFog(unittest.TestCase):
         self.assertFalse(pack.g.bf_seen("BugariaOutskirtsOutsideCity"))
         pack.objects["show_unvisited"].Active = True
         self.assertTrue(pack.g.bf_seen("BugariaOutskirtsOutsideCity"))
+
+
+class TestOfflineOptions(unittest.TestCase):
+    """With no seed connected, each location category's toggle in Settings decides its locations; once connected, the
+    seed's own options and location list do."""
+    GRASS = "Golden Settlement: Square, Grass by the Lever"
+    REWARD = "Bugaria City: Residential District, Old Book Delivery Reward 1"
+
+    def setUp(self) -> None:
+        data = WORLD["data"]
+        self.grass = data.LOCATION_NAME_TO_ID[self.GRASS]
+        spot = next(loc for loc in data.LOCATIONS if loc.name == self.GRASS)
+        self.assertEqual(WORLD["options"].CATEGORY_OPTIONS[spot.category], "shuffle_hidden_items")
+        self.reward = data.LOCATION_NAME_TO_ID[self.REWARD]
+
+    def test_each_toggle_starts_as_its_options_default(self) -> None:
+        pack = PopTracker()
+        fields = BugFablesWorld.options_dataclass.type_hints
+        for option in set(WORLD["options"].CATEGORY_OPTIONS.values()):
+            self.assertEqual(pack.objects[option].Active, bool(fields[option].default), option)
+
+    def test_a_category_toggled_on_offline(self) -> None:
+        pack = PopTracker()
+        room, name = pack.g.DATA["section_paths"][self.grass][1:].split("/", 1)
+        location = next(loc for loc in json.loads((PACK / "locations/locations.json").read_text("utf-8"))
+                        if loc["name"] == room)
+        section = next(s for s in location["sections"] if s.get("name") == name)
+        self.assertEqual(section["visibility_rules"], [f"$bf_in_seed|{self.grass}"])
+        self.assertFalse(pack.g.bf_in_seed(self.grass), "Shuffle Hidden Items is off by default")
+        pack.objects["shuffle_hidden_items"].Active = True
+        self.assertTrue(pack.g.bf_in_seed(self.grass))
+        self.assertTrue(pack.g.bf_room_in_seed(room))
+
+    def test_a_category_toggled_off_offline_reruns_the_logic(self) -> None:
+        # The quest's own step is a story event of its category: with the category off, it is in no seed.
+        pack = PopTracker()
+        for item in pack.g.DATA["items"].values():
+            pack.objects[item["code"]].Active = True
+        self.assertTrue(pack.g.bf_in_seed(self.reward))
+        self.assertTrue(pack.g.bf_location(self.reward))
+        pack.objects["shuffle_quests"].Active = False
+        self.assertFalse(pack.g.bf_in_seed(self.reward))
+        self.assertFalse(pack.g.bf_location(self.reward))
+
+    def test_a_connected_seed_ignores_the_toggles(self) -> None:
+        multiworld, world, slot_data = seed(0, shuffle_hidden_items=False, shuffle_quests=True)
+        ids = [loc.address for loc in world.get_locations() if loc.address is not None]
+        pack = PopTracker()
+        pack.objects["shuffle_hidden_items"].Active = True
+        pack.objects["shuffle_quests"].Active = False
+        pack.connect(slot_data, missing=ids)
+        # Every item received (the Clear handler resets them).
+        for item in pack.g.DATA["items"].values():
+            pack.objects[item["code"]].Active = True
+        self.assertFalse(pack.g.bf_in_seed(self.grass))
+        self.assertTrue(pack.g.bf_in_seed(self.reward))
+        self.assertTrue(pack.g.bf_location(self.reward))
+        # slot_data's options alone, with no location list.
+        pack.g.bf_set_seed(pack.runtime.table_from(slot_data, recursive=True), None)
+        self.assertFalse(pack.g.bf_in_seed(self.grass))
+        self.assertTrue(pack.g.bf_in_seed(self.reward))
+        self.assertTrue(pack.g.bf_location(self.reward))
 
 
 if __name__ == "__main__":
