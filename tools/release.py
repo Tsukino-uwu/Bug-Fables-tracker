@@ -50,6 +50,12 @@ def tag_commit(randomizer: str, tag: str) -> str | None:
     return refs.get(f"refs/tags/{tag}^{{}}") or refs.get(f"refs/tags/{tag}")
 
 
+def check_same_version(version: str, world_version: str) -> None:
+    """The pack is released with the randomizer, under its version."""
+    if version != world_version:
+        raise ValueError(f"package_version {version} must be the randomizer's version, {world_version}")
+
+
 def check_pinned(world_version: str, commit: str, released: str | None) -> None:
     """The logic is the randomizer's release of that world_version, so a seed's world_version check means it."""
     tag = f"v{world_version}"
@@ -92,7 +98,7 @@ def add_version(versions: dict, version: str, url: str, sha256: str, changes: li
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = parser.add_subparsers(dest="command", required=True)
-    check = sub.add_parser("check", help="the tag, the manifest and the export agree")
+    check = sub.add_parser("check", help="the tag, the manifest and the export agree, one version")
     check.add_argument("tag")
     check.add_argument("--randomizer", required=True, help="the randomizer's checkout or git URL")
     zip_check = sub.add_parser("check-zip", help="the zip holds the pack and only the pack")
@@ -108,8 +114,9 @@ def main() -> None:
     manifest = json.loads((PACK / "manifest.json").read_text(encoding="utf-8"))
     try:
         if args.command == "check":
-            pack_version(args.tag, manifest)
+            version = pack_version(args.tag, manifest)
             world, commit = export_pin((PACK / "scripts/generated/logic_data.lua").read_text(encoding="utf-8"))
+            check_same_version(version, world)
             check_pinned(world, commit, tag_commit(args.randomizer, f"v{world}"))
             print(f"{args.tag}: the manifest agrees, the logic is the randomizer's v{world}")
         elif args.command == "check-zip":

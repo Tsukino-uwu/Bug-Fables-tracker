@@ -160,7 +160,8 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
     starts and adds each published release to (a pre-release never), once `tools/release.py` and `pack-checker` pass on
     the download. The format: PopTracker's `packlist` branch at `6cd531b` (`README.md`, `versions.schema.json`,
     `checklist.md`) and its `src/packmanager/packmanager.cpp` at `19f0b1f` (an update is a higher `package_version`;
-    PopTracker asks once before trusting the host). A listing in PopTracker's pack list: not yet (Crystal has none).
+    PopTracker asks once before trusting the host). The pack is released with the randomizer, under its version (the
+    user, 2026-10-13; `release.py` refuses another). A listing in PopTracker's pack list: not yet (Crystal has none).
 14. **Version check:** `min_poptracker_version` and `target_poptracker_version` set to what was tested. The minimum
     is 0.33.0 since 2026-10-08, the newest API the pack uses (`Archipelago.Seed`; its `CHANGELOG.md`).
 

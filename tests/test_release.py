@@ -34,6 +34,11 @@ class Versions(unittest.TestCase):
             with self.assertRaises(ValueError, msg=tag):
                 release.pack_version(tag, {"package_version": "0.4.0"})
 
+    def test_the_pack_has_the_randomizers_version(self):
+        release.check_same_version("0.4.0", "0.4.0")
+        with self.assertRaises(ValueError):
+            release.check_same_version("0.1.0", "0.4.0")
+
     def test_the_export_records_its_world_and_commit(self):
         world, commit = release.export_pin((PACK / "scripts/generated/logic_data.lua").read_text(encoding="utf-8"))
         self.assertRegex(world, r"^\d+\.\d+\.\d+$")
