@@ -2729,7 +2729,7 @@
     ]
   },
   {
-    "name": "Bugaria City",
+    "name": "Ant Kingdom City",
     "visibility_rules": [
       "$bf_area_in_seed|BugariaCity"
     ],
@@ -3956,7 +3956,7 @@
     ]
   },
   {
-    "name": "Snakemouth",
+    "name": "Snakemouth Den",
     "visibility_rules": [
       "$bf_area_in_seed|Snakemouth"
     ],
@@ -6181,7 +6181,7 @@
     ]
   },
   {
-    "name": "Golden Way",
+    "name": "Golden Path",
     "visibility_rules": [
       "$bf_area_in_seed|GoldenWay"
     ],
@@ -8300,6 +8300,406 @@
     ]
   },
   {
+    "name": "ChomperCave1",
+    "visibility_rules": [
+      "$bf_room_in_seed|ChomperCave1"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Chomper Caves: ChomperCave1, Chomper 1",
+        "access_rules": [
+          "$bf_location|7721198"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721198"
+        ]
+      },
+      {
+        "name": "Chomper Caves: ChomperCave1, Chomper 2",
+        "access_rules": [
+          "$bf_location|7721199"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721199"
+        ]
+      },
+      {
+        "name": "Chomper Caves: ChomperCave1, Chomper Brute 1",
+        "access_rules": [
+          "$bf_location|7721197"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721197"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ChomperCaves2",
+    "visibility_rules": [
+      "$bf_room_in_seed|ChomperCaves2"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Chomper Caves: Droplet Room, Behind the Crack",
+        "access_rules": [
+          "$bf_location|7720302"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720302"
+        ]
+      },
+      {
+        "name": "Chomper Caves: Droplet Room, Chomper 1",
+        "access_rules": [
+          "$bf_location|7721200"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721200"
+        ]
+      },
+      {
+        "name": "Chomper Caves: Droplet Room, Chomper 2",
+        "access_rules": [
+          "$bf_location|7721202"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721202"
+        ]
+      },
+      {
+        "name": "Chomper Caves: Droplet Room, Chomper 3",
+        "access_rules": [
+          "$bf_location|7721203"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721203"
+        ]
+      },
+      {
+        "name": "Chomper Caves: Droplet Room, Chomper 4",
+        "access_rules": [
+          "$bf_location|7721204"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721204"
+        ]
+      },
+      {
+        "name": "Chomper Caves: Droplet Room, Chomper Brute 1",
+        "access_rules": [
+          "$bf_location|7721201"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721201"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ChomperCaves3",
+    "visibility_rules": [
+      "$bf_room_in_seed|ChomperCaves3"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Chomper Caves: Chomper Nest, Fight",
+        "access_rules": [
+          "$bf_location|7720303"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720303"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chomper Caves",
+    "visibility_rules": [
+      "$bf_area_in_seed|ChomperCaves"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "World",
+        "x": 357,
+        "y": 464,
+        "restrict_visibility_rules": [
+          "$bf_area_seen|ChomperCaves"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper 1"
+      },
+      {
+        "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper 2"
+      },
+      {
+        "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper Brute 1"
+      },
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Behind the Crack"
+      },
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 1"
+      },
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 2"
+      },
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 3"
+      },
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 4"
+      },
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper Brute 1"
+      },
+      {
+        "ref": "ChomperCaves3/Chomper Caves: Chomper Nest, Fight"
+      }
+    ]
+  },
+  {
+    "name": "Chomper Cave1: Chomper 1",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721198"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_ChomperCave1",
+        "x": 294,
+        "y": 147,
+        "restrict_visibility_rules": [
+          "$bf_seen|ChomperCave1"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper 1"
+      }
+    ]
+  },
+  {
+    "name": "Chomper Cave1: Chomper 2",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721199"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_ChomperCave1",
+        "x": 137,
+        "y": 224,
+        "restrict_visibility_rules": [
+          "$bf_seen|ChomperCave1"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper 2"
+      }
+    ]
+  },
+  {
+    "name": "Chomper Cave1: Chomper Brute 1",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721197"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_ChomperCave1",
+        "x": 137,
+        "y": 72,
+        "restrict_visibility_rules": [
+          "$bf_seen|ChomperCave1"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper Brute 1"
+      }
+    ]
+  },
+  {
+    "name": "Droplet Room: Behind the Crack",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720302"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_ChomperCaves2",
+        "x": 24,
+        "y": 26,
+        "restrict_visibility_rules": [
+          "$bf_seen|ChomperCaves2"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Behind the Crack"
+      }
+    ]
+  },
+  {
+    "name": "Droplet Room: Chomper 1",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721200"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_ChomperCaves2",
+        "x": 660,
+        "y": 144,
+        "restrict_visibility_rules": [
+          "$bf_seen|ChomperCaves2"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 1"
+      }
+    ]
+  },
+  {
+    "name": "Droplet Room: Chomper 2",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721202"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_ChomperCaves2",
+        "x": 332,
+        "y": 140,
+        "restrict_visibility_rules": [
+          "$bf_seen|ChomperCaves2"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 2"
+      }
+    ]
+  },
+  {
+    "name": "Droplet Room: Chomper 3",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721203"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_ChomperCaves2",
+        "x": 439,
+        "y": 59,
+        "restrict_visibility_rules": [
+          "$bf_seen|ChomperCaves2"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 3"
+      }
+    ]
+  },
+  {
+    "name": "Droplet Room: Chomper 4",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721204"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_ChomperCaves2",
+        "x": 505,
+        "y": 187,
+        "restrict_visibility_rules": [
+          "$bf_seen|ChomperCaves2"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 4"
+      }
+    ]
+  },
+  {
+    "name": "Droplet Room: Chomper Brute 1",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721201"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_ChomperCaves2",
+        "x": 646,
+        "y": 25,
+        "restrict_visibility_rules": [
+          "$bf_seen|ChomperCaves2"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper Brute 1"
+      }
+    ]
+  },
+  {
+    "name": "Chomper Nest: Fight",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720303"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_ChomperCaves3",
+        "x": 84,
+        "y": 71,
+        "restrict_visibility_rules": [
+          "$bf_seen|ChomperCaves3"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "ChomperCaves3/Chomper Caves: Chomper Nest, Fight"
+      }
+    ]
+  },
+  {
     "name": "DesertBadgeAlcove",
     "visibility_rules": [
       "$bf_room_in_seed|DesertBadgeAlcove"
@@ -8912,7 +9312,7 @@
     ]
   },
   {
-    "name": "Desert",
+    "name": "Lost Sands",
     "visibility_rules": [
       "$bf_area_in_seed|Desert"
     ],
@@ -10339,7 +10739,7 @@
     ]
   },
   {
-    "name": "Sand Castle",
+    "name": "Ancient Castle",
     "visibility_rules": [
       "$bf_area_in_seed|SandCastle"
     ],
@@ -10641,6 +11041,826 @@
     "sections": [
       {
         "ref": "SandCastleTreasureRoom/Ancient Castle: Treasure Room, Treasure Pedestal"
+      }
+    ]
+  },
+  {
+    "name": "HideoutCell",
+    "visibility_rules": [
+      "$bf_room_in_seed|HideoutCell"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Bandit Hideout: Cell, Dig Spot",
+        "access_rules": [
+          "$bf_location|7720293"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720293"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "HideoutEntrance",
+    "visibility_rules": [
+      "$bf_room_in_seed|HideoutEntrance"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Bandit Hideout: Entrance, Altar",
+        "access_rules": [
+          "$bf_location|7720071"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720071"
+        ]
+      },
+      {
+        "name": "Bandit Hideout: Entrance, Astotheles' Fight",
+        "access_rules": [
+          "$bf_location|7720317"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720317"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "HideoutGarden",
+    "visibility_rules": [
+      "$bf_room_in_seed|HideoutGarden"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Bandit Hideout: Garden, By the Box",
+        "access_rules": [
+          "$bf_location|7720294"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720294"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "HideoutRightA",
+    "visibility_rules": [
+      "$bf_room_in_seed|HideoutRightA"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Bandit Hideout: Dining Hall, By the Cauldron",
+        "access_rules": [
+          "$bf_location|7720297"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720297"
+        ]
+      },
+      {
+        "name": "Bandit Hideout: Dining Hall, Dig Spot",
+        "access_rules": [
+          "$bf_location|7720296"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720296"
+        ]
+      },
+      {
+        "name": "Bandit Hideout: Dining Hall, On Top of the Table",
+        "access_rules": [
+          "$bf_location|7720298"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720298"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "HideoutWestStorage",
+    "visibility_rules": [
+      "$bf_room_in_seed|HideoutWestStorage"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Bandit Hideout: Treasury, By the Chest",
+        "access_rules": [
+          "$bf_location|7720295"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720295"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bandit Hideout",
+    "visibility_rules": [
+      "$bf_area_in_seed|BanditHideout"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "World",
+        "x": 1086,
+        "y": 554,
+        "restrict_visibility_rules": [
+          "$bf_area_seen|BanditHideout"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "HideoutCell/Bandit Hideout: Cell, Dig Spot"
+      },
+      {
+        "ref": "HideoutEntrance/Bandit Hideout: Entrance, Altar"
+      },
+      {
+        "ref": "HideoutEntrance/Bandit Hideout: Entrance, Astotheles' Fight"
+      },
+      {
+        "ref": "HideoutGarden/Bandit Hideout: Garden, By the Box"
+      },
+      {
+        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, By the Cauldron"
+      },
+      {
+        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, Dig Spot"
+      },
+      {
+        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, On Top of the Table"
+      },
+      {
+        "ref": "HideoutWestStorage/Bandit Hideout: Treasury, By the Chest"
+      }
+    ]
+  },
+  {
+    "name": "Entrance: elsewhere in the room (2)",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720071|7720317"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_HideoutEntrance",
+        "x": 364,
+        "y": 76,
+        "restrict_visibility_rules": [
+          "$bf_seen|HideoutEntrance"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "HideoutEntrance/Bandit Hideout: Entrance, Altar"
+      },
+      {
+        "ref": "HideoutEntrance/Bandit Hideout: Entrance, Astotheles' Fight"
+      }
+    ]
+  },
+  {
+    "name": "Cell: elsewhere in the room",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720293"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_HideoutCell",
+        "x": 159,
+        "y": 122,
+        "restrict_visibility_rules": [
+          "$bf_seen|HideoutCell"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "HideoutCell/Bandit Hideout: Cell, Dig Spot"
+      }
+    ]
+  },
+  {
+    "name": "Dining Hall: By the Cauldron",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720297"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_HideoutRightA",
+        "x": 437,
+        "y": 167,
+        "restrict_visibility_rules": [
+          "$bf_seen|HideoutRightA"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, By the Cauldron"
+      }
+    ]
+  },
+  {
+    "name": "Dining Hall: elsewhere in the room",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720296"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_HideoutRightA",
+        "x": 260,
+        "y": 96,
+        "restrict_visibility_rules": [
+          "$bf_seen|HideoutRightA"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, Dig Spot"
+      }
+    ]
+  },
+  {
+    "name": "Dining Hall: On Top of the Table",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720298"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_HideoutRightA",
+        "x": 289,
+        "y": 62,
+        "restrict_visibility_rules": [
+          "$bf_seen|HideoutRightA"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, On Top of the Table"
+      }
+    ]
+  },
+  {
+    "name": "Garden: By the Box",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720294"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_HideoutGarden",
+        "x": 634,
+        "y": 61,
+        "restrict_visibility_rules": [
+          "$bf_seen|HideoutGarden"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "HideoutGarden/Bandit Hideout: Garden, By the Box"
+      }
+    ]
+  },
+  {
+    "name": "Treasury: By the Chest",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720295"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_HideoutWestStorage",
+        "x": 24,
+        "y": 118,
+        "restrict_visibility_rules": [
+          "$bf_seen|HideoutWestStorage"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "HideoutWestStorage/Bandit Hideout: Treasury, By the Chest"
+      }
+    ]
+  },
+  {
+    "name": "StreamMountain1",
+    "visibility_rules": [
+      "$bf_room_in_seed|StreamMountain1"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Stream Mountain: StreamMountain1, Belostoss 1",
+        "access_rules": [
+          "$bf_location|7721160"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721160"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "StreamMountain2",
+    "visibility_rules": [
+      "$bf_room_in_seed|StreamMountain2"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Stream Mountain: StreamMountain2, Diving Spider 1",
+        "access_rules": [
+          "$bf_location|7721162"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721162"
+        ]
+      },
+      {
+        "name": "Stream Mountain: StreamMountain2, Water Strider 1",
+        "access_rules": [
+          "$bf_location|7721161"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721161"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "StreamMountain3",
+    "visibility_rules": [
+      "$bf_room_in_seed|StreamMountain3"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Stream Mountain: Climb, Above the Geysers",
+        "access_rules": [
+          "$bf_location|7720299"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720299"
+        ]
+      },
+      {
+        "name": "Stream Mountain: Climb, Belostoss 1",
+        "access_rules": [
+          "$bf_location|7721164"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721164"
+        ]
+      },
+      {
+        "name": "Stream Mountain: Climb, Diving Spider 1",
+        "access_rules": [
+          "$bf_location|7721165"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721165"
+        ]
+      },
+      {
+        "name": "Stream Mountain: Climb, Water Strider 1",
+        "access_rules": [
+          "$bf_location|7721163"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721163"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "StreamMountain4",
+    "visibility_rules": [
+      "$bf_room_in_seed|StreamMountain4"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Stream Mountain: Bridge Puzzle, Among the Logs",
+        "access_rules": [
+          "$bf_location|7720300"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720300"
+        ]
+      },
+      {
+        "name": "Stream Mountain: Bridge Puzzle, Psicorp 1",
+        "access_rules": [
+          "$bf_location|7721252"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721252"
+        ]
+      },
+      {
+        "name": "Stream Mountain: Bridge Puzzle, Water Strider 1",
+        "access_rules": [
+          "$bf_location|7721253"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721253"
+        ]
+      },
+      {
+        "name": "Stream Mountain: Bridge Puzzle, Water Strider 2",
+        "access_rules": [
+          "$bf_location|7721254"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7721254"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "StreamMountain5",
+    "visibility_rules": [
+      "$bf_room_in_seed|StreamMountain5"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Stream Mountain: Wyrm's Den, Bounty Fight",
+        "access_rules": [
+          "$bf_location|7720301"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720301"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Stream Mountain",
+    "visibility_rules": [
+      "$bf_area_in_seed|StreamMountain"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "World",
+        "x": 1009,
+        "y": 448,
+        "restrict_visibility_rules": [
+          "$bf_area_seen|StreamMountain"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain1/Stream Mountain: StreamMountain1, Belostoss 1"
+      },
+      {
+        "ref": "StreamMountain2/Stream Mountain: StreamMountain2, Diving Spider 1"
+      },
+      {
+        "ref": "StreamMountain2/Stream Mountain: StreamMountain2, Water Strider 1"
+      },
+      {
+        "ref": "StreamMountain3/Stream Mountain: Climb, Above the Geysers"
+      },
+      {
+        "ref": "StreamMountain3/Stream Mountain: Climb, Belostoss 1"
+      },
+      {
+        "ref": "StreamMountain3/Stream Mountain: Climb, Diving Spider 1"
+      },
+      {
+        "ref": "StreamMountain3/Stream Mountain: Climb, Water Strider 1"
+      },
+      {
+        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Among the Logs"
+      },
+      {
+        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Psicorp 1"
+      },
+      {
+        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Water Strider 1"
+      },
+      {
+        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Water Strider 2"
+      },
+      {
+        "ref": "StreamMountain5/Stream Mountain: Wyrm's Den, Bounty Fight"
+      }
+    ]
+  },
+  {
+    "name": "Stream Mountain1: Belostoss 1",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721160"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_StreamMountain1",
+        "x": 122,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|StreamMountain1"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain1/Stream Mountain: StreamMountain1, Belostoss 1"
+      }
+    ]
+  },
+  {
+    "name": "Stream Mountain2: Diving Spider 1",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721162"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_StreamMountain2",
+        "x": 104,
+        "y": 39,
+        "restrict_visibility_rules": [
+          "$bf_seen|StreamMountain2"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain2/Stream Mountain: StreamMountain2, Diving Spider 1"
+      }
+    ]
+  },
+  {
+    "name": "Stream Mountain2: Water Strider 1",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721161"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_StreamMountain2",
+        "x": 308,
+        "y": 75,
+        "restrict_visibility_rules": [
+          "$bf_seen|StreamMountain2"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain2/Stream Mountain: StreamMountain2, Water Strider 1"
+      }
+    ]
+  },
+  {
+    "name": "Climb: Above the Geysers",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720299"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_StreamMountain3",
+        "x": 328,
+        "y": 24,
+        "restrict_visibility_rules": [
+          "$bf_seen|StreamMountain3"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain3/Stream Mountain: Climb, Above the Geysers"
+      }
+    ]
+  },
+  {
+    "name": "Climb: Belostoss 1",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721164"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_StreamMountain3",
+        "x": 337,
+        "y": 313,
+        "restrict_visibility_rules": [
+          "$bf_seen|StreamMountain3"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain3/Stream Mountain: Climb, Belostoss 1"
+      }
+    ]
+  },
+  {
+    "name": "Climb: Diving Spider 1",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721165"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_StreamMountain3",
+        "x": 379,
+        "y": 289,
+        "restrict_visibility_rules": [
+          "$bf_seen|StreamMountain3"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain3/Stream Mountain: Climb, Diving Spider 1"
+      }
+    ]
+  },
+  {
+    "name": "Climb: Water Strider 1",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721163"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_StreamMountain3",
+        "x": 242,
+        "y": 152,
+        "restrict_visibility_rules": [
+          "$bf_seen|StreamMountain3"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain3/Stream Mountain: Climb, Water Strider 1"
+      }
+    ]
+  },
+  {
+    "name": "Bridge Puzzle: Among the Logs",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720300"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_StreamMountain4",
+        "x": 81,
+        "y": 38,
+        "restrict_visibility_rules": [
+          "$bf_seen|StreamMountain4"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Among the Logs"
+      }
+    ]
+  },
+  {
+    "name": "Bridge Puzzle: Psicorp 1",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721252"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_StreamMountain4",
+        "x": 577,
+        "y": 87,
+        "restrict_visibility_rules": [
+          "$bf_seen|StreamMountain4"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Psicorp 1"
+      }
+    ]
+  },
+  {
+    "name": "Bridge Puzzle: Water Strider 1",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721253"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_StreamMountain4",
+        "x": 375,
+        "y": 221,
+        "restrict_visibility_rules": [
+          "$bf_seen|StreamMountain4"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Water Strider 1"
+      }
+    ]
+  },
+  {
+    "name": "Bridge Puzzle: Water Strider 2",
+    "visibility_rules": [
+      "$bf_any_in_seed|7721254"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_StreamMountain4",
+        "x": 111,
+        "y": 27,
+        "restrict_visibility_rules": [
+          "$bf_seen|StreamMountain4"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Water Strider 2"
+      }
+    ]
+  },
+  {
+    "name": "Wyrm's Den: elsewhere in the room",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720301"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_StreamMountain5",
+        "x": 156,
+        "y": 89,
+        "restrict_visibility_rules": [
+          "$bf_seen|StreamMountain5"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "StreamMountain5/Stream Mountain: Wyrm's Den, Bounty Fight"
       }
     ]
   },
@@ -11275,7 +12495,7 @@
     ]
   },
   {
-    "name": "Beehive",
+    "name": "Bee Kingdom Hive",
     "visibility_rules": [
       "$bf_area_in_seed|Beehive"
     ],
@@ -14280,71 +15500,6 @@
     ]
   },
   {
-    "name": "FishingVillage",
-    "visibility_rules": [
-      "$bf_room_in_seed|FishingVillage"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Fishing Village: Behind the Plant",
-        "access_rules": [
-          "$bf_location|7720304"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720304"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Fishing Village",
-    "visibility_rules": [
-      "$bf_area_in_seed|FishingVillage"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "World",
-        "x": 1816,
-        "y": 324,
-        "restrict_visibility_rules": [
-          "$bf_area_seen|FishingVillage"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "FishingVillage/Fishing Village: Behind the Plant"
-      }
-    ]
-  },
-  {
-    "name": "Behind the Plant: Behind the Plant",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720304"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_FishingVillage",
-        "x": 24,
-        "y": 139,
-        "restrict_visibility_rules": [
-          "$bf_seen|FishingVillage"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "FishingVillage/Fishing Village: Behind the Plant"
-      }
-    ]
-  },
-  {
     "name": "Swamplands2",
     "visibility_rules": [
       "$bf_room_in_seed|Swamplands2"
@@ -14741,7 +15896,7 @@
     ]
   },
   {
-    "name": "Wild Grasslands",
+    "name": "Wild Swamplands",
     "visibility_rules": [
       "$bf_area_in_seed|WildGrasslands"
     ],
@@ -15645,6 +16800,71 @@
     ]
   },
   {
+    "name": "FishingVillage",
+    "visibility_rules": [
+      "$bf_room_in_seed|FishingVillage"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "sections": [
+      {
+        "name": "Fishing Village: Behind the Plant",
+        "access_rules": [
+          "$bf_location|7720304"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720304"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fishing Village",
+    "visibility_rules": [
+      "$bf_area_in_seed|FishingVillage"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "World",
+        "x": 1816,
+        "y": 324,
+        "restrict_visibility_rules": [
+          "$bf_area_seen|FishingVillage"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "FishingVillage/Fishing Village: Behind the Plant"
+      }
+    ]
+  },
+  {
+    "name": "Behind the Plant: Behind the Plant",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720304"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_FishingVillage",
+        "x": 24,
+        "y": 139,
+        "restrict_visibility_rules": [
+          "$bf_seen|FishingVillage"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "FishingVillage/Fishing Village: Behind the Plant"
+      }
+    ]
+  },
+  {
     "name": "WaspKingdom3",
     "visibility_rules": [
       "$bf_room_in_seed|WaspKingdom3"
@@ -15785,7 +17005,7 @@
     ]
   },
   {
-    "name": "Wasp Kingdom",
+    "name": "Wasp Kingdom Hive",
     "visibility_rules": [
       "$bf_area_in_seed|WaspKingdom"
     ],
@@ -16386,7 +17606,7 @@
     ]
   },
   {
-    "name": "Barren Lands",
+    "name": "Forsaken Lands",
     "visibility_rules": [
       "$bf_area_in_seed|BarrenLands"
     ],
@@ -17415,7 +18635,7 @@
     ]
   },
   {
-    "name": "Termite City",
+    "name": "Termite Capitol",
     "visibility_rules": [
       "$bf_area_in_seed|TermiteCity"
     ],
@@ -19746,7 +20966,7 @@
     ]
   },
   {
-    "name": "Giant Lair",
+    "name": "Giant's Lair",
     "visibility_rules": [
       "$bf_area_in_seed|GiantLair"
     ],
@@ -20586,1226 +21806,6 @@
     "sections": [
       {
         "ref": "GiantLairBeforeBoss2/Giant's Lair: GiantLairBeforeBoss2, Warden 2"
-      }
-    ]
-  },
-  {
-    "name": "ChomperCave1",
-    "visibility_rules": [
-      "$bf_room_in_seed|ChomperCave1"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Chomper Caves: ChomperCave1, Chomper 1",
-        "access_rules": [
-          "$bf_location|7721198"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721198"
-        ]
-      },
-      {
-        "name": "Chomper Caves: ChomperCave1, Chomper 2",
-        "access_rules": [
-          "$bf_location|7721199"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721199"
-        ]
-      },
-      {
-        "name": "Chomper Caves: ChomperCave1, Chomper Brute 1",
-        "access_rules": [
-          "$bf_location|7721197"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721197"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ChomperCaves2",
-    "visibility_rules": [
-      "$bf_room_in_seed|ChomperCaves2"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Chomper Caves: Droplet Room, Behind the Crack",
-        "access_rules": [
-          "$bf_location|7720302"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720302"
-        ]
-      },
-      {
-        "name": "Chomper Caves: Droplet Room, Chomper 1",
-        "access_rules": [
-          "$bf_location|7721200"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721200"
-        ]
-      },
-      {
-        "name": "Chomper Caves: Droplet Room, Chomper 2",
-        "access_rules": [
-          "$bf_location|7721202"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721202"
-        ]
-      },
-      {
-        "name": "Chomper Caves: Droplet Room, Chomper 3",
-        "access_rules": [
-          "$bf_location|7721203"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721203"
-        ]
-      },
-      {
-        "name": "Chomper Caves: Droplet Room, Chomper 4",
-        "access_rules": [
-          "$bf_location|7721204"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721204"
-        ]
-      },
-      {
-        "name": "Chomper Caves: Droplet Room, Chomper Brute 1",
-        "access_rules": [
-          "$bf_location|7721201"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721201"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ChomperCaves3",
-    "visibility_rules": [
-      "$bf_room_in_seed|ChomperCaves3"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Chomper Caves: Chomper Nest, Fight",
-        "access_rules": [
-          "$bf_location|7720303"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720303"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Chomper Caves",
-    "visibility_rules": [
-      "$bf_area_in_seed|ChomperCaves"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "World",
-        "x": 357,
-        "y": 464,
-        "restrict_visibility_rules": [
-          "$bf_area_seen|ChomperCaves"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper 1"
-      },
-      {
-        "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper 2"
-      },
-      {
-        "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper Brute 1"
-      },
-      {
-        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Behind the Crack"
-      },
-      {
-        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 1"
-      },
-      {
-        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 2"
-      },
-      {
-        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 3"
-      },
-      {
-        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 4"
-      },
-      {
-        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper Brute 1"
-      },
-      {
-        "ref": "ChomperCaves3/Chomper Caves: Chomper Nest, Fight"
-      }
-    ]
-  },
-  {
-    "name": "Chomper Cave1: Chomper 1",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721198"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_ChomperCave1",
-        "x": 294,
-        "y": 147,
-        "restrict_visibility_rules": [
-          "$bf_seen|ChomperCave1"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper 1"
-      }
-    ]
-  },
-  {
-    "name": "Chomper Cave1: Chomper 2",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721199"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_ChomperCave1",
-        "x": 137,
-        "y": 224,
-        "restrict_visibility_rules": [
-          "$bf_seen|ChomperCave1"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper 2"
-      }
-    ]
-  },
-  {
-    "name": "Chomper Cave1: Chomper Brute 1",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721197"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_ChomperCave1",
-        "x": 137,
-        "y": 72,
-        "restrict_visibility_rules": [
-          "$bf_seen|ChomperCave1"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper Brute 1"
-      }
-    ]
-  },
-  {
-    "name": "Droplet Room: Behind the Crack",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720302"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_ChomperCaves2",
-        "x": 24,
-        "y": 26,
-        "restrict_visibility_rules": [
-          "$bf_seen|ChomperCaves2"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Behind the Crack"
-      }
-    ]
-  },
-  {
-    "name": "Droplet Room: Chomper 1",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721200"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_ChomperCaves2",
-        "x": 660,
-        "y": 144,
-        "restrict_visibility_rules": [
-          "$bf_seen|ChomperCaves2"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 1"
-      }
-    ]
-  },
-  {
-    "name": "Droplet Room: Chomper 2",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721202"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_ChomperCaves2",
-        "x": 332,
-        "y": 140,
-        "restrict_visibility_rules": [
-          "$bf_seen|ChomperCaves2"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 2"
-      }
-    ]
-  },
-  {
-    "name": "Droplet Room: Chomper 3",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721203"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_ChomperCaves2",
-        "x": 439,
-        "y": 59,
-        "restrict_visibility_rules": [
-          "$bf_seen|ChomperCaves2"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 3"
-      }
-    ]
-  },
-  {
-    "name": "Droplet Room: Chomper 4",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721204"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_ChomperCaves2",
-        "x": 505,
-        "y": 187,
-        "restrict_visibility_rules": [
-          "$bf_seen|ChomperCaves2"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 4"
-      }
-    ]
-  },
-  {
-    "name": "Droplet Room: Chomper Brute 1",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721201"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_ChomperCaves2",
-        "x": 646,
-        "y": 25,
-        "restrict_visibility_rules": [
-          "$bf_seen|ChomperCaves2"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper Brute 1"
-      }
-    ]
-  },
-  {
-    "name": "Chomper Nest: Fight",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720303"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_ChomperCaves3",
-        "x": 84,
-        "y": 71,
-        "restrict_visibility_rules": [
-          "$bf_seen|ChomperCaves3"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "ChomperCaves3/Chomper Caves: Chomper Nest, Fight"
-      }
-    ]
-  },
-  {
-    "name": "HideoutCell",
-    "visibility_rules": [
-      "$bf_room_in_seed|HideoutCell"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Bandit Hideout: Cell, Dig Spot",
-        "access_rules": [
-          "$bf_location|7720293"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720293"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "HideoutEntrance",
-    "visibility_rules": [
-      "$bf_room_in_seed|HideoutEntrance"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Bandit Hideout: Entrance, Altar",
-        "access_rules": [
-          "$bf_location|7720071"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720071"
-        ]
-      },
-      {
-        "name": "Bandit Hideout: Entrance, Astotheles' Fight",
-        "access_rules": [
-          "$bf_location|7720317"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720317"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "HideoutGarden",
-    "visibility_rules": [
-      "$bf_room_in_seed|HideoutGarden"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Bandit Hideout: Garden, By the Box",
-        "access_rules": [
-          "$bf_location|7720294"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720294"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "HideoutRightA",
-    "visibility_rules": [
-      "$bf_room_in_seed|HideoutRightA"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Bandit Hideout: Dining Hall, By the Cauldron",
-        "access_rules": [
-          "$bf_location|7720297"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720297"
-        ]
-      },
-      {
-        "name": "Bandit Hideout: Dining Hall, Dig Spot",
-        "access_rules": [
-          "$bf_location|7720296"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720296"
-        ]
-      },
-      {
-        "name": "Bandit Hideout: Dining Hall, On Top of the Table",
-        "access_rules": [
-          "$bf_location|7720298"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720298"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "HideoutWestStorage",
-    "visibility_rules": [
-      "$bf_room_in_seed|HideoutWestStorage"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Bandit Hideout: Treasury, By the Chest",
-        "access_rules": [
-          "$bf_location|7720295"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720295"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Bandit Hideout",
-    "visibility_rules": [
-      "$bf_area_in_seed|BanditHideout"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "World",
-        "x": 1086,
-        "y": 554,
-        "restrict_visibility_rules": [
-          "$bf_area_seen|BanditHideout"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "HideoutCell/Bandit Hideout: Cell, Dig Spot"
-      },
-      {
-        "ref": "HideoutEntrance/Bandit Hideout: Entrance, Altar"
-      },
-      {
-        "ref": "HideoutEntrance/Bandit Hideout: Entrance, Astotheles' Fight"
-      },
-      {
-        "ref": "HideoutGarden/Bandit Hideout: Garden, By the Box"
-      },
-      {
-        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, By the Cauldron"
-      },
-      {
-        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, Dig Spot"
-      },
-      {
-        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, On Top of the Table"
-      },
-      {
-        "ref": "HideoutWestStorage/Bandit Hideout: Treasury, By the Chest"
-      }
-    ]
-  },
-  {
-    "name": "Entrance: elsewhere in the room (2)",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720071|7720317"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_HideoutEntrance",
-        "x": 364,
-        "y": 76,
-        "restrict_visibility_rules": [
-          "$bf_seen|HideoutEntrance"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "HideoutEntrance/Bandit Hideout: Entrance, Altar"
-      },
-      {
-        "ref": "HideoutEntrance/Bandit Hideout: Entrance, Astotheles' Fight"
-      }
-    ]
-  },
-  {
-    "name": "Cell: elsewhere in the room",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720293"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_HideoutCell",
-        "x": 159,
-        "y": 122,
-        "restrict_visibility_rules": [
-          "$bf_seen|HideoutCell"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "HideoutCell/Bandit Hideout: Cell, Dig Spot"
-      }
-    ]
-  },
-  {
-    "name": "Dining Hall: By the Cauldron",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720297"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_HideoutRightA",
-        "x": 437,
-        "y": 167,
-        "restrict_visibility_rules": [
-          "$bf_seen|HideoutRightA"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, By the Cauldron"
-      }
-    ]
-  },
-  {
-    "name": "Dining Hall: elsewhere in the room",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720296"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_HideoutRightA",
-        "x": 260,
-        "y": 96,
-        "restrict_visibility_rules": [
-          "$bf_seen|HideoutRightA"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, Dig Spot"
-      }
-    ]
-  },
-  {
-    "name": "Dining Hall: On Top of the Table",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720298"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_HideoutRightA",
-        "x": 289,
-        "y": 62,
-        "restrict_visibility_rules": [
-          "$bf_seen|HideoutRightA"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, On Top of the Table"
-      }
-    ]
-  },
-  {
-    "name": "Garden: By the Box",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720294"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_HideoutGarden",
-        "x": 634,
-        "y": 61,
-        "restrict_visibility_rules": [
-          "$bf_seen|HideoutGarden"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "HideoutGarden/Bandit Hideout: Garden, By the Box"
-      }
-    ]
-  },
-  {
-    "name": "Treasury: By the Chest",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720295"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_HideoutWestStorage",
-        "x": 24,
-        "y": 118,
-        "restrict_visibility_rules": [
-          "$bf_seen|HideoutWestStorage"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "HideoutWestStorage/Bandit Hideout: Treasury, By the Chest"
-      }
-    ]
-  },
-  {
-    "name": "StreamMountain1",
-    "visibility_rules": [
-      "$bf_room_in_seed|StreamMountain1"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Stream Mountain: StreamMountain1, Belostoss 1",
-        "access_rules": [
-          "$bf_location|7721160"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721160"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "StreamMountain2",
-    "visibility_rules": [
-      "$bf_room_in_seed|StreamMountain2"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Stream Mountain: StreamMountain2, Diving Spider 1",
-        "access_rules": [
-          "$bf_location|7721162"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721162"
-        ]
-      },
-      {
-        "name": "Stream Mountain: StreamMountain2, Water Strider 1",
-        "access_rules": [
-          "$bf_location|7721161"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721161"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "StreamMountain3",
-    "visibility_rules": [
-      "$bf_room_in_seed|StreamMountain3"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Stream Mountain: Climb, Above the Geysers",
-        "access_rules": [
-          "$bf_location|7720299"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720299"
-        ]
-      },
-      {
-        "name": "Stream Mountain: Climb, Belostoss 1",
-        "access_rules": [
-          "$bf_location|7721164"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721164"
-        ]
-      },
-      {
-        "name": "Stream Mountain: Climb, Diving Spider 1",
-        "access_rules": [
-          "$bf_location|7721165"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721165"
-        ]
-      },
-      {
-        "name": "Stream Mountain: Climb, Water Strider 1",
-        "access_rules": [
-          "$bf_location|7721163"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721163"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "StreamMountain4",
-    "visibility_rules": [
-      "$bf_room_in_seed|StreamMountain4"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Stream Mountain: Bridge Puzzle, Among the Logs",
-        "access_rules": [
-          "$bf_location|7720300"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720300"
-        ]
-      },
-      {
-        "name": "Stream Mountain: Bridge Puzzle, Psicorp 1",
-        "access_rules": [
-          "$bf_location|7721252"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721252"
-        ]
-      },
-      {
-        "name": "Stream Mountain: Bridge Puzzle, Water Strider 1",
-        "access_rules": [
-          "$bf_location|7721253"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721253"
-        ]
-      },
-      {
-        "name": "Stream Mountain: Bridge Puzzle, Water Strider 2",
-        "access_rules": [
-          "$bf_location|7721254"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721254"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "StreamMountain5",
-    "visibility_rules": [
-      "$bf_room_in_seed|StreamMountain5"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "sections": [
-      {
-        "name": "Stream Mountain: Wyrm's Den, Bounty Fight",
-        "access_rules": [
-          "$bf_location|7720301"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720301"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Stream Mountain",
-    "visibility_rules": [
-      "$bf_area_in_seed|StreamMountain"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "World",
-        "x": 1009,
-        "y": 448,
-        "restrict_visibility_rules": [
-          "$bf_area_seen|StreamMountain"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain1/Stream Mountain: StreamMountain1, Belostoss 1"
-      },
-      {
-        "ref": "StreamMountain2/Stream Mountain: StreamMountain2, Diving Spider 1"
-      },
-      {
-        "ref": "StreamMountain2/Stream Mountain: StreamMountain2, Water Strider 1"
-      },
-      {
-        "ref": "StreamMountain3/Stream Mountain: Climb, Above the Geysers"
-      },
-      {
-        "ref": "StreamMountain3/Stream Mountain: Climb, Belostoss 1"
-      },
-      {
-        "ref": "StreamMountain3/Stream Mountain: Climb, Diving Spider 1"
-      },
-      {
-        "ref": "StreamMountain3/Stream Mountain: Climb, Water Strider 1"
-      },
-      {
-        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Among the Logs"
-      },
-      {
-        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Psicorp 1"
-      },
-      {
-        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Water Strider 1"
-      },
-      {
-        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Water Strider 2"
-      },
-      {
-        "ref": "StreamMountain5/Stream Mountain: Wyrm's Den, Bounty Fight"
-      }
-    ]
-  },
-  {
-    "name": "Stream Mountain1: Belostoss 1",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721160"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_StreamMountain1",
-        "x": 122,
-        "y": 24,
-        "restrict_visibility_rules": [
-          "$bf_seen|StreamMountain1"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain1/Stream Mountain: StreamMountain1, Belostoss 1"
-      }
-    ]
-  },
-  {
-    "name": "Stream Mountain2: Diving Spider 1",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721162"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_StreamMountain2",
-        "x": 104,
-        "y": 39,
-        "restrict_visibility_rules": [
-          "$bf_seen|StreamMountain2"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain2/Stream Mountain: StreamMountain2, Diving Spider 1"
-      }
-    ]
-  },
-  {
-    "name": "Stream Mountain2: Water Strider 1",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721161"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_StreamMountain2",
-        "x": 308,
-        "y": 75,
-        "restrict_visibility_rules": [
-          "$bf_seen|StreamMountain2"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain2/Stream Mountain: StreamMountain2, Water Strider 1"
-      }
-    ]
-  },
-  {
-    "name": "Climb: Above the Geysers",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720299"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_StreamMountain3",
-        "x": 328,
-        "y": 24,
-        "restrict_visibility_rules": [
-          "$bf_seen|StreamMountain3"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain3/Stream Mountain: Climb, Above the Geysers"
-      }
-    ]
-  },
-  {
-    "name": "Climb: Belostoss 1",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721164"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_StreamMountain3",
-        "x": 337,
-        "y": 313,
-        "restrict_visibility_rules": [
-          "$bf_seen|StreamMountain3"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain3/Stream Mountain: Climb, Belostoss 1"
-      }
-    ]
-  },
-  {
-    "name": "Climb: Diving Spider 1",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721165"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_StreamMountain3",
-        "x": 379,
-        "y": 289,
-        "restrict_visibility_rules": [
-          "$bf_seen|StreamMountain3"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain3/Stream Mountain: Climb, Diving Spider 1"
-      }
-    ]
-  },
-  {
-    "name": "Climb: Water Strider 1",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721163"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_StreamMountain3",
-        "x": 242,
-        "y": 152,
-        "restrict_visibility_rules": [
-          "$bf_seen|StreamMountain3"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain3/Stream Mountain: Climb, Water Strider 1"
-      }
-    ]
-  },
-  {
-    "name": "Bridge Puzzle: Among the Logs",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720300"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_StreamMountain4",
-        "x": 81,
-        "y": 38,
-        "restrict_visibility_rules": [
-          "$bf_seen|StreamMountain4"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Among the Logs"
-      }
-    ]
-  },
-  {
-    "name": "Bridge Puzzle: Psicorp 1",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721252"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_StreamMountain4",
-        "x": 577,
-        "y": 87,
-        "restrict_visibility_rules": [
-          "$bf_seen|StreamMountain4"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Psicorp 1"
-      }
-    ]
-  },
-  {
-    "name": "Bridge Puzzle: Water Strider 1",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721253"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_StreamMountain4",
-        "x": 375,
-        "y": 221,
-        "restrict_visibility_rules": [
-          "$bf_seen|StreamMountain4"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Water Strider 1"
-      }
-    ]
-  },
-  {
-    "name": "Bridge Puzzle: Water Strider 2",
-    "visibility_rules": [
-      "$bf_any_in_seed|7721254"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_StreamMountain4",
-        "x": 111,
-        "y": 27,
-        "restrict_visibility_rules": [
-          "$bf_seen|StreamMountain4"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Water Strider 2"
-      }
-    ]
-  },
-  {
-    "name": "Wyrm's Den: elsewhere in the room",
-    "visibility_rules": [
-      "$bf_any_in_seed|7720301"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_StreamMountain5",
-        "x": 156,
-        "y": 89,
-        "restrict_visibility_rules": [
-          "$bf_seen|StreamMountain5"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "ref": "StreamMountain5/Stream Mountain: Wyrm's Den, Bounty Fight"
       }
     ]
   }

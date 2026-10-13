@@ -474,6 +474,24 @@
     "img": "images/rooms/GoldenHillsDungeonUpperSide.png"
   },
   {
+    "name": "room_ChomperCave1",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/ChomperCave1.png"
+  },
+  {
+    "name": "room_ChomperCaves2",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/ChomperCaves2.png"
+  },
+  {
+    "name": "room_ChomperCaves3",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/ChomperCaves3.png"
+  },
+  {
     "name": "room_DesertEntrance",
     "location_size": 36,
     "location_border_thickness": 2,
@@ -676,6 +694,84 @@
     "location_size": 36,
     "location_border_thickness": 2,
     "img": "images/rooms/SandCastleTreasureRoom.png"
+  },
+  {
+    "name": "room_HideoutEntrance",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/HideoutEntrance.png"
+  },
+  {
+    "name": "room_HideoutStairsRoom",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/HideoutStairsRoom.png"
+  },
+  {
+    "name": "room_HideoutCentralRoom",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/HideoutCentralRoom.png"
+  },
+  {
+    "name": "room_HideoutCell",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/HideoutCell.png"
+  },
+  {
+    "name": "room_HideoutLeftA",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/HideoutLeftA.png"
+  },
+  {
+    "name": "room_HideoutRightA",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/HideoutRightA.png"
+  },
+  {
+    "name": "room_HideoutGarden",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/HideoutGarden.png"
+  },
+  {
+    "name": "room_HideoutWestStorage",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/HideoutWestStorage.png"
+  },
+  {
+    "name": "room_StreamMountain1",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/StreamMountain1.png"
+  },
+  {
+    "name": "room_StreamMountain2",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/StreamMountain2.png"
+  },
+  {
+    "name": "room_StreamMountain3",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/StreamMountain3.png"
+  },
+  {
+    "name": "room_StreamMountain4",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/StreamMountain4.png"
+  },
+  {
+    "name": "room_StreamMountain5",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/StreamMountain5.png"
   },
   {
     "name": "room_DefiantRoot1",
@@ -924,12 +1020,6 @@
     "img": "images/rooms/FGOutsideSwamplands.png"
   },
   {
-    "name": "room_FishingVillage",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/FishingVillage.png"
-  },
-  {
     "name": "room_SwamplandsBoss",
     "location_size": 36,
     "location_border_thickness": 2,
@@ -988,6 +1078,12 @@
     "location_size": 36,
     "location_border_thickness": 2,
     "img": "images/rooms/Swamplands8.png"
+  },
+  {
+    "name": "room_FishingVillage",
+    "location_size": 36,
+    "location_border_thickness": 2,
+    "img": "images/rooms/FishingVillage.png"
   },
   {
     "name": "room_WaspKingdomOutside",
@@ -1348,101 +1444,5 @@
     "location_size": 36,
     "location_border_thickness": 2,
     "img": "images/rooms/GiantLairBeforeBoss2.png"
-  },
-  {
-    "name": "room_ChomperCave1",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/ChomperCave1.png"
-  },
-  {
-    "name": "room_ChomperCaves2",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/ChomperCaves2.png"
-  },
-  {
-    "name": "room_ChomperCaves3",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/ChomperCaves3.png"
-  },
-  {
-    "name": "room_HideoutEntrance",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/HideoutEntrance.png"
-  },
-  {
-    "name": "room_HideoutStairsRoom",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/HideoutStairsRoom.png"
-  },
-  {
-    "name": "room_HideoutCentralRoom",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/HideoutCentralRoom.png"
-  },
-  {
-    "name": "room_HideoutCell",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/HideoutCell.png"
-  },
-  {
-    "name": "room_HideoutLeftA",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/HideoutLeftA.png"
-  },
-  {
-    "name": "room_HideoutRightA",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/HideoutRightA.png"
-  },
-  {
-    "name": "room_HideoutGarden",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/HideoutGarden.png"
-  },
-  {
-    "name": "room_HideoutWestStorage",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/HideoutWestStorage.png"
-  },
-  {
-    "name": "room_StreamMountain1",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/StreamMountain1.png"
-  },
-  {
-    "name": "room_StreamMountain2",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/StreamMountain2.png"
-  },
-  {
-    "name": "room_StreamMountain3",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/StreamMountain3.png"
-  },
-  {
-    "name": "room_StreamMountain4",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/StreamMountain4.png"
-  },
-  {
-    "name": "room_StreamMountain5",
-    "location_size": 36,
-    "location_border_thickness": 2,
-    "img": "images/rooms/StreamMountain5.png"
   }
 ]

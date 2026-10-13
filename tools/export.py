@@ -404,19 +404,14 @@ def main() -> None:
         if loc["map"] not in map_area:
             raise SystemExit(f"{loc['name']}: no area for map {loc['map']} (tools/map_areas.py)")
         rooms.setdefault(loc["map"], []).append(loc)
-    # In the order the game's pause menu lists them (story order); an area it leaves out (Upper Snakemouth, the
-    # Fishing Village) joins the tab of the one its doors lead to most, after that area's own rooms.
-    order = list(pip_data["list_order"])
-    tab_area = {area: area for area in order}
+    # A tab per region: areas grouped as the world map's picture groups them, in story order (data/area_pips.json),
+    # each area's own name the game's.
+    area_names = pip_data["names"]
+    tab_area = {area: region["name"] for region in pip_data["regions"] for area in region["areas"]}
+    if sorted(tab_area) != sorted(p["area"] for p in pips) or sorted(area_names) != sorted(tab_area):
+        raise SystemExit("data/area_pips.json: each area needs its name and exactly one region")
+    order = [area for region in pip_data["regions"] for area in region["areas"]]
     raw_rooms = json.loads((PACK / "data/rooms.json").read_text("utf-8"))["maps"]
-    for pip in pips:
-        if pip["area"] in order:
-            continue
-        leads = Counter(map_area.get(d["to"]) for m, r in raw_rooms.items() if map_area.get(m) == pip["area"]
-                        for d in r["doors"] if map_area.get(d["to"]) in pip_data["list_order"])
-        parent = leads.most_common(1)[0][0] if leads else pip["area"]
-        tab_area[pip["area"]] = parent
-        order.insert(order.index(parent) + 1 if leads else len(order), pip["area"])
     areas = {area: [room for room in sorted(rooms) if map_area[room] == area] for area in order}
     for room, locs in rooms.items():
         if "/" in room or any("/" in loc["name"] for loc in locs):
@@ -437,8 +432,8 @@ def main() -> None:
     logic_maps = set(w["data"].MAPS)
     # Each room with a tab: its area's tab and its own.
     map_tabs: dict[str, dict[str, Any]] = {}
-    tab_titles: dict[str, dict[str, str]] = {}  # each area tab's rooms' titles
-    tab_rooms: dict[str, list[dict[str, Any]]] = {}  # each area tab's room tabs, in order
+    # Each region's area tabs, each with its room tabs, in order.
+    tab_rooms: dict[str, dict[str, list[dict[str, Any]]]] = {}
     location_names: set[str] = set()
     walked: dict[str, int] = {}  # each room of the areas before, by its place in the walking order
     placed = 0
@@ -476,7 +471,7 @@ def main() -> None:
         if names:
             x, y = spots[area]
             locations_json.append({
-                "name": display_name(area),
+                "name": area_names[area],
                 "visibility_rules": [f"$bf_area_in_seed|{area}"],
                 "chest_unopened_img": "images/chest_closed.png",
                 "chest_opened_img": "images/chest_open.png",
@@ -484,22 +479,23 @@ def main() -> None:
                                    "restrict_visibility_rules": [f"$bf_area_seen|{area}"]}],
                 "sections": [{"ref": f"{room}/{loc['name']}"} for room in names for loc in rooms[room]],
             })
-            location_names.add(display_name(area))
+            location_names.add(area_names[area])
 
         # Each room has its own tab, as crystal-ap-tracker's rooms: the game's picture of it, a pin at each check's
-        # own spot (its entity's, check_spot), the checks with no such spot together in the room's middle.
-        tab = tab_area[area]
-        titles = tab_titles.setdefault(tab, {})
-        room_tabs = tab_rooms.setdefault(tab, [])
+        # own spot (its entity's, check_spot), the checks with no such spot together in the room's middle. Room tabs
+        # sit in their area's tab, in its region's.
+        region = tab_area[area]
+        titles: dict[str, str] = {}
+        room_tabs = tab_rooms.setdefault(region, {}).setdefault(area_names[area], [])
         for room in every:
             # A room the apworld names only by its map (an enemy's location), or not at all, in words.
             title = base = display_name(room_title(rooms[room]) if room in rooms else room)
             n = 1
-            while title in titles.values() or title == display_name(tab):
+            while title in titles.values() or title in (region, area_names[area]):
                 n += 1
                 title = f"{base} ({n})"
             titles[room] = title
-            map_tabs[room] = {"area": display_name(tab), "area_id": area, "room": title}
+            map_tabs[room] = {"region": region, "area": area_names[area], "area_id": area, "room": title}
             picture = room_pictures[room]
             room_map = f"room_{room}"
             maps_json.append({"name": room_map, "location_size": ROOM_PIN, "location_border_thickness": 2,
@@ -534,8 +530,9 @@ def main() -> None:
                                        "restrict_visibility_rules": [f"$bf_seen|{room}"]}],
                     "sections": [{"ref": f"{room}/{loc['name']}"} for _, loc in checks],
                 })
-    area_tabs = [{"title": display_name(tab), "content": {"type": "tabbed", "tabs": tabs}}
-                 for tab, tabs in tab_rooms.items()]
+    area_tabs = [{"title": region, "content": {"type": "tabbed", "tabs": [
+        {"title": area, "content": {"type": "tabbed", "tabs": tabs}} for area, tabs in region_areas.items()]}}
+        for region, region_areas in tab_rooms.items()]
     logic["section_paths"] = section_paths
     logic["room_areas"] = {room: map_area[room] for room in rooms}
     logic["map_tabs"] = map_tabs
@@ -589,7 +586,7 @@ def main() -> None:
     write(PACK / "images/chest_open.png", square_icon((120, 120, 120), 24, hollow=True))
     print(f"world {logic['world_version']} at {logic['randomizer_commit']}: {len(logic['entrances'])} entrances, "
           f"{len(logic['locations'])} locations in {len(rooms)} rooms ({placed} at their own spot), "
-          f"{len(map_tabs)} room tabs in {len(area_tabs)} areas, {len(logic['events'])} events, "
+          f"{len(map_tabs)} room tabs in {len(area_tabs)} regions, {len(logic['events'])} events, "
           f"{len(logic['items'])} items")
 
 

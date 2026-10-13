@@ -222,12 +222,14 @@ class TestFollowAndFog(unittest.TestCase):
         with_checks = set(pack.g.DATA["room_areas"].keys())
         room = next(m for m in tabs.keys() if m in with_checks)
         hallway = next(m for m in tabs.keys() if m not in with_checks)
+        def opened(map_name: str) -> list[tuple[str, str]]:
+            return [("ActivateTab", tabs[map_name][level]) for level in ("region", "area", "room")]
         pack.answer("bug_fables_map_0_1", room, how="set_reply")
-        self.assertEqual(pack.hints, [("ActivateTab", tabs[room]["area"]), ("ActivateTab", tabs[room]["room"])])
+        self.assertEqual(pack.hints, opened(room))
         # A room without checks has its own tab too.
         pack.hints.clear()
         pack.answer("bug_fables_map_0_1", hallway, how="set_reply")
-        self.assertEqual(pack.hints, [("ActivateTab", tabs[hallway]["area"]), ("ActivateTab", tabs[hallway]["room"])])
+        self.assertEqual(pack.hints, opened(hallway))
         # A map with no tab (a test map): the tabs stay as they are.
         pack.hints.clear()
         pack.answer("bug_fables_map_0_1", "TestRoom", how="set_reply")
