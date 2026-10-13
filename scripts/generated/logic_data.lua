@@ -5504,6 +5504,116 @@ return {
             },
           },
           {
+            ["rule"] = "CanReachRegion",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["region_name"] = "GoldenHillsDungeonRightCrank",
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "And",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Shield",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Freeze",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Horn Slash",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Jump",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beemerang Toss",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beemerang Halt",
+                    },
+                  },
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanReachRegion",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["region_name"] = "GoldenHillsDungeonLeftCrankHalf",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Halt",
+            },
+          },
+          {
+            ["rule"] = "Member",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["name"] = "Vi",
+            },
+          },
+          {
             ["rule"] = "CanUse",
             ["options"] = {},
             ["filtered_resolution"] = false,
@@ -5634,6 +5744,116 @@ return {
                   ["filtered_resolution"] = false,
                   ["args"] = {
                     ["ability"] = "Freeze",
+                  },
+                },
+                {
+                  ["rule"] = "CanReachRegion",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["region_name"] = "GoldenHillsDungeonRightCrank",
+                  },
+                },
+                {
+                  ["rule"] = "Or",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["children"] = {
+                    {
+                      ["rule"] = "And",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["children"] = {
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Shield",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Freeze",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Horn Slash",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Jump",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Beemerang Toss",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Beemerang Halt",
+                          },
+                        },
+                      },
+                    },
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Bee Fly",
+                      },
+                    },
+                  },
+                },
+                {
+                  ["rule"] = "CanReachRegion",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["region_name"] = "GoldenHillsDungeonLeftCrankHalf",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Beemerang Halt",
+                  },
+                },
+                {
+                  ["rule"] = "Member",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["name"] = "Vi",
                   },
                 },
                 {
@@ -9486,86 +9706,11 @@ return {
             },
           },
           {
-            ["rule"] = "Has",
+            ["rule"] = "CanReachRegion",
             ["options"] = {},
             ["filtered_resolution"] = false,
             ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
+              ["region_name"] = "DefiantRootWell",
             },
           },
         },
@@ -9593,86 +9738,11 @@ return {
               },
             },
             {
-              ["rule"] = "Has",
+              ["rule"] = "CanReachRegion",
               ["options"] = {},
               ["filtered_resolution"] = false,
               ["args"] = {
-                ["item_name"] = "Chapter 2 Started",
-                ["count"] = 1,
-              },
-            },
-            {
-              ["rule"] = "Has",
-              ["options"] = {},
-              ["filtered_resolution"] = false,
-              ["args"] = {
-                ["item_name"] = "Explorer Permit",
-                ["count"] = 1,
-              },
-            },
-            {
-              ["rule"] = "Boat",
-              ["options"] = {},
-              ["filtered_resolution"] = false,
-              ["args"] = {
-                ["level"] = 1,
-              },
-            },
-            {
-              ["rule"] = "Has",
-              ["options"] = {},
-              ["filtered_resolution"] = false,
-              ["args"] = {
-                ["item_name"] = "Snakemouth Den Cleared",
-                ["count"] = 1,
-              },
-            },
-            {
-              ["rule"] = "Member",
-              ["options"] = {},
-              ["filtered_resolution"] = false,
-              ["args"] = {
-                ["name"] = "Vi",
-              },
-            },
-            {
-              ["rule"] = "Member",
-              ["options"] = {},
-              ["filtered_resolution"] = false,
-              ["args"] = {
-                ["name"] = "Kabbu",
-              },
-            },
-            {
-              ["rule"] = "Member",
-              ["options"] = {},
-              ["filtered_resolution"] = false,
-              ["args"] = {
-                ["name"] = "Leif",
-              },
-            },
-            {
-              ["rule"] = "MoveItem",
-              ["options"] = {},
-              ["filtered_resolution"] = false,
-              ["args"] = {
-                ["ability"] = "Beemerang Toss",
-              },
-            },
-            {
-              ["rule"] = "MoveItem",
-              ["options"] = {},
-              ["filtered_resolution"] = false,
-              ["args"] = {
-                ["ability"] = "Horn Slash",
-              },
-            },
-            {
-              ["rule"] = "MoveItem",
-              ["options"] = {},
-              ["filtered_resolution"] = false,
-              ["args"] = {
-                ["ability"] = "Freeze",
+                ["region_name"] = "DefiantRootWell",
               },
             },
           },
@@ -73252,7 +73322,7 @@ return {
     ["death_link"] = false,
   },
   ["starting_member_default"] = 3,
-  ["randomizer_commit"] = "5cf883d29b832b1ee8142d645dcb32ebed0900c9",
+  ["randomizer_commit"] = "db4fdaae358c7ddca380641e5ed6e17d862c0231",
   ["section_paths"] = {
     [7720087] = "@BOGoldenPath/Outskirts: Golden Path, Dig Spot",
     [7721043] = "@BOGoldenPath/Outskirts: Golden Path, Flying Seedling 1",

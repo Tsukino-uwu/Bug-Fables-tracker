@@ -10206,29 +10206,6 @@
     ]
   },
   {
-    "name": "Badlands: Hideout Door",
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "room_DesertBadlands",
-        "x": 396,
-        "y": 264,
-        "restrict_visibility_rules": [
-          "$bf_seen|DesertBadlands"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "name": "Needs Jump and Chapter 2 Started and Explorer Permit and the boat (1) and Snakemouth Den Cleared and Vi and Kabbu and Leif and Beemerang Toss and Horn Slash and Freeze",
-        "access_rules": [
-          "$bf_region|DesertBadlands (Hideout Door)"
-        ]
-      }
-    ]
-  },
-  {
     "name": "South Trench: Cactiling 1",
     "visibility_rules": [
       "$bf_any_in_seed|7721007"
