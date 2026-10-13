@@ -1,0 +1,19 @@
+{
+  "_about": "Where the pause map's (x, z) land in images/maps/World.png's pixels, from its top left: origin plus x times x_step plus z times z_step. Measured by the randomizer mod's dev command worldmap (the map opened and seen from above); written by tools/world_map.py.",
+  "size": [
+    2033,
+    1061
+  ],
+  "origin": [
+    1009.0,
+    534.5
+  ],
+  "x_step": [
+    -140.171,
+    0.0
+  ],
+  "z_step": [
+    0.0,
+    140.213
+  ]
+}

@@ -1,5 +1,6 @@
 """Writes the pack's generated files from the Bug Fables apworld: its logic as Rule Builder's to_dict writes each rule
-(scripts/generated/logic_data.lua), the items, the locations, and the placeholder map and icons, drawn by code.
+(scripts/generated/logic_data.lua), the items, the locations, each area's map drawn by code, and placeholder icons.
+The World tab's map is the game's own (tools/world_map.py).
 
     python tools/export.py --archipelago <your Archipelago checkout>
 
@@ -22,13 +23,14 @@ from typing import Any
 
 PACK = Path(__file__).resolve().parent.parent
 # Rules the pack's Lua evaluates (scripts/logic.lua): Archipelago's and the apworld's own (its custom_rules.py).
-SUPPORTED_RULES = {"And", "Or", "Has", "HasAllCounts", "True_", "False_", "Filtered", "CanReachRegion",
-                   "CanUse", "Member", "MoveItem", "Boat", "WayBack"}
+SUPPORTED_RULES = {"And", "Or", "Has", "HasAllCounts", "HasFromListUnique", "True_", "False_", "Filtered",
+                   "CanReachRegion", "CanUse", "Member", "MoveItem", "Boat", "WayBack"}
+# World attributes a FromWorldAttr resolver may name, each the slot_data option sending its value (slot_data.py).
+WORLD_ATTRS = {"artifacts_required": "artifacts_required"}
 # Option filter operators (rule_builder/options.py), each only on the kind of option the Lua compares it for.
 NUMBER_OPERATORS = {"eq", "ne", "gt", "lt", "ge", "le"}
 WORLD_MAP = "World"
-WORLD_SCALE = 70  # pixels per unit of the pause map's coordinates
-WORLD_MARGIN = 40
+WORLD_PIN = 56
 PIN = 28
 AREA_SIZE = 1600  # an area map's longer side, in pixels
 ROOM_PAD = 2.0  # game units around a room's entities
@@ -124,7 +126,10 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
     entrances = []
     for e in regions.logic_entrances():
         entrance = {"name": e.name, "from": e.from_map, "to": e.to_map, "rule": rule_dict(e.rule)}
-        if e.name in door_of:
+        if e.from_map == regions.MENU:
+            # A seed's own start replaces it (regions.py, create_and_connect_regions).
+            entrance["start"] = True
+        elif e.name in door_of:
             entrance["door"] = door_of[e.name]
         elif e.name in one_way_of:
             entrance["one_way"] = one_way_of[e.name]
@@ -138,8 +143,10 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
                                                  "map": other.map, "door": other.door}
 
     # Pending locations (a quest not yet gone through) are in no seed (world.py).
+    # A quiet location (the opening's) sits in Menu when the seed has its own start (locations.py).
     locations = [{"id": data.LOCATION_NAME_TO_ID[loc.name], "name": loc.name, "region": region_of(loc),
-                  "map": loc.region, "category": loc.category, "rule": rule_dict(rules.spot_rule(loc))}
+                  "map": loc.region, "category": loc.category, "quiet": loc.quiet or None,
+                  "rule": rule_dict(rules.spot_rule(loc))}
                  for loc in data.LOCATIONS if not loc.pending]
     # The artifacts' scenes are ordinary locations since the apworld's build step 86, so in the list above.
     events = [{"name": e.name, "item": e.item, "region": region_of(e), "map": e.region, "category": e.category,
@@ -164,8 +171,11 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
                     raise SystemExit(f"{spot['name']}: {f['option']} isn't in slot_data's options")
                 check_filter(spot["name"], f, option_fields[name])
             args = part.get("args", {})
-            if any(isinstance(value, dict) and "resolver" in value for value in args.values()):
-                raise SystemExit(f"{spot['name']}: a field resolver the pack's Lua can't evaluate")
+            for key, value in args.items():
+                if isinstance(value, dict) and "resolver" in value and not (
+                        part["rule"] == "HasFromListUnique" and key == "count"
+                        and value["resolver"] == "FromWorldAttr" and value.get("name") in WORLD_ATTRS):
+                    raise SystemExit(f"{spot['name']}: a field resolver the pack's Lua can't evaluate: {value}")
             if part["rule"] == "CanReachRegion" and args["region_name"] not in known_regions:
                 raise SystemExit(f"{spot['name']}: no region {args['region_name']!r}")
             if part["rule"] == "Has":
@@ -173,6 +183,9 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
             elif part["rule"] == "HasAllCounts":
                 for name, count in args["item_counts"].items():
                     needed[name] = max(needed.get(name, 0), count)
+            elif part["rule"] == "HasFromListUnique":
+                for name in args["item_names"]:
+                    needed[name] = max(needed.get(name, 0), 1)
     for name, ability in abilities.ABILITIES.items():
         needed[ability.item] = max(needed.get(ability.item, 0), ability.level)
         if ability.holder:
@@ -207,6 +220,9 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
         "world_version": w["world"].world_version.as_simple_string(),
         "origin": regions.MENU,
         "entrances": entrances,
+        # slot_data's start ("map|from|door") and the region it begins in; its entrance's name.
+        "start_entrance": regions.START_ENTRANCE,
+        "start_regions": {f"{s.map}|{s.from_map}|{s.door}": data.start_region(s.to_slot()) for s in data.ROOM_STARTS},
         "partners": partners,
         "one_way_to": {f"{d.map}|{d.door}": {"region": data.landing_region(d), "map": d.to} for d in data.ONE_WAYS},
         # The map each part of a map belongs to (a map's own region is its name).
@@ -224,6 +240,7 @@ def build(w: dict[str, Any]) -> dict[str, Any]:
                       for name, a in abilities.ABILITIES.items()},
         "category_options": dict(options.CATEGORY_OPTIONS),
         "option_names": option_names,
+        "world_attrs": WORLD_ATTRS,
         "option_defaults": defaults,
         "starting_member_default": default_member,
     }
@@ -530,22 +547,12 @@ def main() -> None:
         if "/" in room or any("/" in loc["name"] for loc in locs):
             raise SystemExit(f"{room}: a '/' would break PopTracker's @location/section paths")
 
-    left, right = min(p["x"] for p in pips), max(p["x"] for p in pips)
-    low, high = min(p["z"] for p in pips), max(p["z"] for p in pips)
-    world_size = (round((right - left) * WORLD_SCALE) + 2 * WORLD_MARGIN,
-                  round((high - low) * WORLD_SCALE) + 2 * WORLD_MARGIN)
-    # As the pause map shows them: +x to the left, +z down.
-    spots = {p["area"]: (WORLD_MARGIN + round((right - p["x"]) * WORLD_SCALE),
-                         WORLD_MARGIN + round((p["z"] - low) * WORLD_SCALE)) for p in pips}
-    world = Canvas(*world_size, (30, 34, 44, 255))
-    for a, b in pip_data["lines"]:
-        world.line(spots[a], spots[b], 4, (150, 98, 52, 255))
-    for x, y in spots.values():
-        world.disc(x, y, 9, (110, 116, 130, 255), hole=6)
-
-    maps_json = [{"name": WORLD_MAP, "location_size": 30, "location_border_thickness": 2,
+    # The game's own pause map (tools/world_map.py), each pip where the game puts it.
+    world_map = json.loads((PACK / "data/world_map.json").read_text("utf-8"))
+    spots = {p["area"]: tuple(round(world_map["origin"][i] + p["x"] * world_map["x_step"][i]
+                                    + p["z"] * world_map["z_step"][i]) for i in (0, 1)) for p in pips}
+    maps_json = [{"name": WORLD_MAP, "location_size": WORLD_PIN, "location_border_thickness": 3,
                   "img": f"images/maps/{WORLD_MAP}.png"}]
-    write(PACK / f"images/maps/{WORLD_MAP}.png", world.png())
     locations_json = []
     section_paths = {}
     room_data = logic_doors(json.loads((PACK / "data/rooms.json").read_text("utf-8"))["maps"], w["data"].DOORS)

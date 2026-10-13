@@ -6,16 +6,35 @@
     "h_alignment": "left",
     "rows": [
       [
+        "g_bug_ranger_plushie",
         "explorer_permit",
         "flower_key",
         "sun_offering",
         "moon_offering",
-        "quest_book",
+        "quest_book"
+      ],
+      [
+        "factory_pass",
+        "sand_castle_key",
+        "small_ancient_key",
+        "big_ancient_key",
+        "peculiar_gem",
+        "wasp_key"
+      ],
+      [
+        "small_gear",
+        "medium_gear",
+        "big_gear",
+        "lab_card",
+        "prison_key",
         "boat_ticket"
       ],
       [
         "subaquatic_maritime_neotransport",
         "progressive_boat"
+      ],
+      [
+        "extra_freeze"
       ],
       [
         "vi",
@@ -33,6 +52,17 @@
       [
         "beetle_dig",
         "shield"
+      ],
+      [
+        "ancient_mask",
+        "ancient_tablet",
+        "ancient_key",
+        "ancient_half",
+        "queen_s_mask",
+        "flame_brooch"
+      ],
+      [
+        "wasp_king_s_crown"
       ],
       [
         "goal"

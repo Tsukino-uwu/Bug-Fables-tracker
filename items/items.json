@@ -1,5 +1,11 @@
 [
   {
+    "name": "G-Bug Ranger Plushie",
+    "img": "images/items/g_bug_ranger_plushie.png",
+    "codes": "g_bug_ranger_plushie",
+    "type": "toggle"
+  },
+  {
     "name": "Explorer Permit",
     "img": "images/items/explorer_permit.png",
     "codes": "explorer_permit",
@@ -30,6 +36,72 @@
     "type": "toggle"
   },
   {
+    "name": "Factory Pass",
+    "img": "images/items/factory_pass.png",
+    "codes": "factory_pass",
+    "type": "toggle"
+  },
+  {
+    "name": "Sand Castle Key",
+    "img": "images/items/sand_castle_key.png",
+    "codes": "sand_castle_key",
+    "type": "toggle"
+  },
+  {
+    "name": "Small Ancient Key",
+    "img": "images/items/small_ancient_key.png",
+    "codes": "small_ancient_key",
+    "type": "toggle"
+  },
+  {
+    "name": "Big Ancient Key",
+    "img": "images/items/big_ancient_key.png",
+    "codes": "big_ancient_key",
+    "type": "toggle"
+  },
+  {
+    "name": "Peculiar Gem",
+    "img": "images/items/peculiar_gem.png",
+    "codes": "peculiar_gem",
+    "type": "toggle"
+  },
+  {
+    "name": "Wasp Key",
+    "img": "images/items/wasp_key.png",
+    "codes": "wasp_key",
+    "type": "toggle"
+  },
+  {
+    "name": "Small Gear",
+    "img": "images/items/small_gear.png",
+    "codes": "small_gear",
+    "type": "toggle"
+  },
+  {
+    "name": "Medium Gear",
+    "img": "images/items/medium_gear.png",
+    "codes": "medium_gear",
+    "type": "toggle"
+  },
+  {
+    "name": "Big Gear",
+    "img": "images/items/big_gear.png",
+    "codes": "big_gear",
+    "type": "toggle"
+  },
+  {
+    "name": "Lab Card",
+    "img": "images/items/lab_card.png",
+    "codes": "lab_card",
+    "type": "toggle"
+  },
+  {
+    "name": "Prison Key",
+    "img": "images/items/prison_key.png",
+    "codes": "prison_key",
+    "type": "toggle"
+  },
+  {
     "name": "Boat Ticket",
     "img": "images/items/boat_ticket.png",
     "codes": "boat_ticket",
@@ -47,6 +119,12 @@
     "codes": "progressive_boat",
     "type": "consumable",
     "max_quantity": 2
+  },
+  {
+    "name": "Extra Freeze",
+    "img": "images/items/extra_freeze.png",
+    "codes": "extra_freeze",
+    "type": "toggle"
   },
   {
     "name": "Vi",
@@ -115,6 +193,48 @@
     "name": "Shield",
     "img": "images/items/shield.png",
     "codes": "shield",
+    "type": "toggle"
+  },
+  {
+    "name": "Ancient Mask",
+    "img": "images/items/ancient_mask.png",
+    "codes": "ancient_mask",
+    "type": "toggle"
+  },
+  {
+    "name": "Ancient Tablet",
+    "img": "images/items/ancient_tablet.png",
+    "codes": "ancient_tablet",
+    "type": "toggle"
+  },
+  {
+    "name": "Ancient Key",
+    "img": "images/items/ancient_key.png",
+    "codes": "ancient_key",
+    "type": "toggle"
+  },
+  {
+    "name": "Ancient Half",
+    "img": "images/items/ancient_half.png",
+    "codes": "ancient_half",
+    "type": "toggle"
+  },
+  {
+    "name": "Queen's Mask",
+    "img": "images/items/queen_s_mask.png",
+    "codes": "queen_s_mask",
+    "type": "toggle"
+  },
+  {
+    "name": "Flame Brooch",
+    "img": "images/items/flame_brooch.png",
+    "codes": "flame_brooch",
+    "type": "toggle"
+  },
+  {
+    "name": "Wasp King's Crown",
+    "img": "images/items/wasp_king_s_crown.png",
+    "codes": "wasp_king_s_crown",
     "type": "toggle"
   },
   {

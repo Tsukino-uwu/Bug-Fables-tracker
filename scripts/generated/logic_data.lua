@@ -7,6 +7,7 @@ return {
       ["name"] = "Menu -> BugariaOutskirtsOutsideCity",
       ["from"] = "Menu",
       ["to"] = "BugariaOutskirtsOutsideCity",
+      ["start"] = true,
     },
     {
       ["name"] = "NearSnakemouth: loadingzonefields",
@@ -1432,8 +1433,8 @@ return {
     },
     {
       ["name"] = "DefiantRootWell: loadzonehideout",
-      ["from"] = "DefiantRootWell",
-      ["to"] = "HideoutGarden",
+      ["from"] = "DefiantRootWell (Right)",
+      ["to"] = "HideoutGarden (Bottom Left)",
       ["door"] = {
         ["map"] = "DefiantRootWell",
         ["door"] = "loadzonehideout",
@@ -1441,8 +1442,8 @@ return {
     },
     {
       ["name"] = "HideoutGarden: loadzone well",
-      ["from"] = "HideoutGarden",
-      ["to"] = "DefiantRootWell",
+      ["from"] = "HideoutGarden (Bottom Left)",
+      ["to"] = "DefiantRootWell (Right)",
       ["door"] = {
         ["map"] = "HideoutGarden",
         ["door"] = "loadzone well",
@@ -1468,7 +1469,7 @@ return {
     },
     {
       ["name"] = "BeehiveOutside: loadzone inside factory side",
-      ["from"] = "BeehiveOutside",
+      ["from"] = "BeehiveOutside (Left)",
       ["to"] = "BeehiveMainArea",
       ["door"] = {
         ["map"] = "BeehiveOutside",
@@ -1478,7 +1479,7 @@ return {
     {
       ["name"] = "BeehiveMainArea: loadzoneoutside - Duplicate - Duplicate",
       ["from"] = "BeehiveMainArea",
-      ["to"] = "BeehiveOutside",
+      ["to"] = "BeehiveOutside (Left)",
       ["door"] = {
         ["map"] = "BeehiveMainArea",
         ["door"] = "loadzoneoutside - Duplicate - Duplicate",
@@ -1486,7 +1487,7 @@ return {
     },
     {
       ["name"] = "BeehiveOutside: loadzone factory",
-      ["from"] = "BeehiveOutside",
+      ["from"] = "BeehiveOutside (Left)",
       ["to"] = "HoneyFactoryEntrance",
       ["door"] = {
         ["map"] = "BeehiveOutside",
@@ -1496,7 +1497,7 @@ return {
     {
       ["name"] = "HoneyFactoryEntrance: loadzoneoutside",
       ["from"] = "HoneyFactoryEntrance",
-      ["to"] = "BeehiveOutside",
+      ["to"] = "BeehiveOutside (Left)",
       ["door"] = {
         ["map"] = "HoneyFactoryEntrance",
         ["door"] = "loadzoneoutside",
@@ -1594,7 +1595,7 @@ return {
     },
     {
       ["name"] = "HoneyFactoryEntrance: loadzoneoffice",
-      ["from"] = "HoneyFactoryEntrance",
+      ["from"] = "HoneyFactoryEntrance (Bottom)",
       ["to"] = "HoneyFactoryWorkerRooms",
       ["door"] = {
         ["map"] = "HoneyFactoryEntrance",
@@ -1604,7 +1605,7 @@ return {
     {
       ["name"] = "HoneyFactoryWorkerRooms: loadzoneoffice",
       ["from"] = "HoneyFactoryWorkerRooms",
-      ["to"] = "HoneyFactoryEntrance",
+      ["to"] = "HoneyFactoryEntrance (Bottom)",
       ["door"] = {
         ["map"] = "HoneyFactoryWorkerRooms",
         ["door"] = "loadzoneoffice",
@@ -1612,8 +1613,8 @@ return {
     },
     {
       ["name"] = "HoneyFactoryEntrance: loadzonesleep",
-      ["from"] = "HoneyFactoryEntrance",
-      ["to"] = "HoneyFactoryWorkerRooms",
+      ["from"] = "HoneyFactoryEntrance (Bottom)",
+      ["to"] = "HoneyFactoryWorkerRooms (Sleeping Quarters)",
       ["door"] = {
         ["map"] = "HoneyFactoryEntrance",
         ["door"] = "loadzonesleep",
@@ -1621,8 +1622,8 @@ return {
     },
     {
       ["name"] = "HoneyFactoryWorkerRooms: loadzonebeds",
-      ["from"] = "HoneyFactoryWorkerRooms",
-      ["to"] = "HoneyFactoryEntrance",
+      ["from"] = "HoneyFactoryWorkerRooms (Sleeping Quarters)",
+      ["to"] = "HoneyFactoryEntrance (Bottom)",
       ["door"] = {
         ["map"] = "HoneyFactoryWorkerRooms",
         ["door"] = "loadzonebeds",
@@ -1648,7 +1649,7 @@ return {
     },
     {
       ["name"] = "HoneyFactoryEntrance: loadzone processing",
-      ["from"] = "HoneyFactoryEntrance",
+      ["from"] = "HoneyFactoryEntrance (Processing Door)",
       ["to"] = "FactoryProcessingFirstRoom",
       ["door"] = {
         ["map"] = "HoneyFactoryEntrance",
@@ -1658,7 +1659,7 @@ return {
     {
       ["name"] = "FactoryProcessingFirstRoom: loadzonemainarea",
       ["from"] = "FactoryProcessingFirstRoom",
-      ["to"] = "HoneyFactoryEntrance",
+      ["to"] = "HoneyFactoryEntrance (Processing Door)",
       ["door"] = {
         ["map"] = "FactoryProcessingFirstRoom",
         ["door"] = "loadzonemainarea",
@@ -1918,7 +1919,7 @@ return {
     },
     {
       ["name"] = "FactoryProcessingFirstRoom: loadzoneforward",
-      ["from"] = "FactoryProcessingFirstRoom",
+      ["from"] = "FactoryProcessingFirstRoom (Left)",
       ["to"] = "FactoryProcessing2",
       ["door"] = {
         ["map"] = "FactoryProcessingFirstRoom",
@@ -1928,7 +1929,7 @@ return {
     {
       ["name"] = "FactoryProcessing2: loadzoneback",
       ["from"] = "FactoryProcessing2",
-      ["to"] = "FactoryProcessingFirstRoom",
+      ["to"] = "FactoryProcessingFirstRoom (Left)",
       ["door"] = {
         ["map"] = "FactoryProcessing2",
         ["door"] = "loadzoneback",
@@ -1936,7 +1937,7 @@ return {
     },
     {
       ["name"] = "FactoryProcessing2: loadzone pump",
-      ["from"] = "FactoryProcessing2",
+      ["from"] = "FactoryProcessing2 (Top Left)",
       ["to"] = "FactoryProcessingPump",
       ["door"] = {
         ["map"] = "FactoryProcessing2",
@@ -1946,7 +1947,7 @@ return {
     {
       ["name"] = "FactoryProcessingPump: loadzoneright",
       ["from"] = "FactoryProcessingPump",
-      ["to"] = "FactoryProcessing2",
+      ["to"] = "FactoryProcessing2 (Top Left)",
       ["door"] = {
         ["map"] = "FactoryProcessingPump",
         ["door"] = "loadzoneright",
@@ -1954,7 +1955,7 @@ return {
     },
     {
       ["name"] = "FactoryProcessingPump: loadzonepuzzle1",
-      ["from"] = "FactoryProcessingPump",
+      ["from"] = "FactoryProcessingPump (Bottom Top Left)",
       ["to"] = "FactoryProcessingPuzzle1",
       ["door"] = {
         ["map"] = "FactoryProcessingPump",
@@ -1964,7 +1965,7 @@ return {
     {
       ["name"] = "FactoryProcessingPuzzle1: loadzone",
       ["from"] = "FactoryProcessingPuzzle1",
-      ["to"] = "FactoryProcessingPump",
+      ["to"] = "FactoryProcessingPump (Bottom Top Left)",
       ["door"] = {
         ["map"] = "FactoryProcessingPuzzle1",
         ["door"] = "loadzone",
@@ -1972,7 +1973,7 @@ return {
     },
     {
       ["name"] = "FactoryProcessingPump: loadzonepuzzle2",
-      ["from"] = "FactoryProcessingPump",
+      ["from"] = "FactoryProcessingPump (Upper Right)",
       ["to"] = "FactoryProcessingPuzzle2",
       ["door"] = {
         ["map"] = "FactoryProcessingPump",
@@ -1982,7 +1983,7 @@ return {
     {
       ["name"] = "FactoryProcessingPuzzle2: loadzone",
       ["from"] = "FactoryProcessingPuzzle2",
-      ["to"] = "FactoryProcessingPump",
+      ["to"] = "FactoryProcessingPump (Upper Right)",
       ["door"] = {
         ["map"] = "FactoryProcessingPuzzle2",
         ["door"] = "loadzone",
@@ -1990,7 +1991,7 @@ return {
     },
     {
       ["name"] = "FactoryProcessingPump: loadzonepuzzle3",
-      ["from"] = "FactoryProcessingPump",
+      ["from"] = "FactoryProcessingPump (Upper Left)",
       ["to"] = "FactoryProcessingPuzzle3",
       ["door"] = {
         ["map"] = "FactoryProcessingPump",
@@ -2000,7 +2001,7 @@ return {
     {
       ["name"] = "FactoryProcessingPuzzle3: loadzone",
       ["from"] = "FactoryProcessingPuzzle3",
-      ["to"] = "FactoryProcessingPump",
+      ["to"] = "FactoryProcessingPump (Upper Left)",
       ["door"] = {
         ["map"] = "FactoryProcessingPuzzle3",
         ["door"] = "loadzone",
@@ -2010,6 +2011,15 @@ return {
       ["name"] = "FactoryProcessingPump: loadzonemalbee",
       ["from"] = "FactoryProcessingPump",
       ["to"] = "FactoryProcessingMalbee",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Factory Pass",
+          ["count"] = 1,
+        },
+      },
       ["door"] = {
         ["map"] = "FactoryProcessingPump",
         ["door"] = "loadzonemalbee",
@@ -2027,7 +2037,7 @@ return {
     {
       ["name"] = "FactoryStorageMaze: loadzoneelevator",
       ["from"] = "FactoryStorageMaze",
-      ["to"] = "FactoryStorageElevator",
+      ["to"] = "FactoryStorageElevator (Bottom)",
       ["door"] = {
         ["map"] = "FactoryStorageMaze",
         ["door"] = "loadzoneelevator",
@@ -2035,7 +2045,7 @@ return {
     },
     {
       ["name"] = "FactoryStorageElevator: loadzonebottom",
-      ["from"] = "FactoryStorageElevator",
+      ["from"] = "FactoryStorageElevator (Bottom)",
       ["to"] = "FactoryStorageMaze",
       ["door"] = {
         ["map"] = "FactoryStorageElevator",
@@ -2044,7 +2054,7 @@ return {
     },
     {
       ["name"] = "FactoryStorageMaze: loadzoneboss",
-      ["from"] = "FactoryStorageMaze",
+      ["from"] = "FactoryStorageMaze (Bottom Left)",
       ["to"] = "FactoryStorageMiniboss",
       ["door"] = {
         ["map"] = "FactoryStorageMaze",
@@ -2054,7 +2064,7 @@ return {
     {
       ["name"] = "FactoryStorageMiniboss: loadzone",
       ["from"] = "FactoryStorageMiniboss",
-      ["to"] = "FactoryStorageMaze",
+      ["to"] = "FactoryStorageMaze (Bottom Left)",
       ["door"] = {
         ["map"] = "FactoryStorageMiniboss",
         ["door"] = "loadzone",
@@ -2062,7 +2072,7 @@ return {
     },
     {
       ["name"] = "FactoryStorageMaze: loadzoneos",
-      ["from"] = "FactoryStorageMaze",
+      ["from"] = "FactoryStorageMaze (Overseer Door)",
       ["to"] = "FactoryStorageOverseer",
       ["door"] = {
         ["map"] = "FactoryStorageMaze",
@@ -2072,7 +2082,7 @@ return {
     {
       ["name"] = "FactoryStorageOverseer: loadzone",
       ["from"] = "FactoryStorageOverseer",
-      ["to"] = "FactoryStorageMaze",
+      ["to"] = "FactoryStorageMaze (Overseer Door)",
       ["door"] = {
         ["map"] = "FactoryStorageOverseer",
         ["door"] = "loadzone",
@@ -2171,7 +2181,7 @@ return {
     {
       ["name"] = "DesertOasis: loadzone cave",
       ["from"] = "DesertOasis (Top Right)",
-      ["to"] = "StreamMountain3",
+      ["to"] = "StreamMountain3 (Upper)",
       ["door"] = {
         ["map"] = "DesertOasis",
         ["door"] = "loadzone cave",
@@ -2179,7 +2189,7 @@ return {
     },
     {
       ["name"] = "StreamMountain3: loadzone exit",
-      ["from"] = "StreamMountain3",
+      ["from"] = "StreamMountain3 (Upper)",
       ["to"] = "DesertOasis (Top Right)",
       ["door"] = {
         ["map"] = "StreamMountain3",
@@ -2207,7 +2217,7 @@ return {
     {
       ["name"] = "HideoutEntrance: loadzone below",
       ["from"] = "HideoutEntrance",
-      ["to"] = "HideoutStairsRoom",
+      ["to"] = "HideoutStairsRoom (Bottom)",
       ["door"] = {
         ["map"] = "HideoutEntrance",
         ["door"] = "loadzone below",
@@ -2215,7 +2225,7 @@ return {
     },
     {
       ["name"] = "HideoutStairsRoom: loadzoneup",
-      ["from"] = "HideoutStairsRoom",
+      ["from"] = "HideoutStairsRoom (Bottom)",
       ["to"] = "HideoutEntrance",
       ["door"] = {
         ["map"] = "HideoutStairsRoom",
@@ -2296,7 +2306,7 @@ return {
     },
     {
       ["name"] = "HideoutLeftA: loadzone garden",
-      ["from"] = "HideoutLeftA",
+      ["from"] = "HideoutLeftA (Upper Left)",
       ["to"] = "HideoutGarden",
       ["door"] = {
         ["map"] = "HideoutLeftA",
@@ -2306,7 +2316,7 @@ return {
     {
       ["name"] = "HideoutGarden: loadzone right",
       ["from"] = "HideoutGarden",
-      ["to"] = "HideoutLeftA",
+      ["to"] = "HideoutLeftA (Upper Left)",
       ["door"] = {
         ["map"] = "HideoutGarden",
         ["door"] = "loadzone right",
@@ -2314,7 +2324,7 @@ return {
     },
     {
       ["name"] = "HideoutGarden: loadzonestorage",
-      ["from"] = "HideoutGarden",
+      ["from"] = "HideoutGarden (Upper)",
       ["to"] = "HideoutWestStorage",
       ["door"] = {
         ["map"] = "HideoutGarden",
@@ -2324,7 +2334,7 @@ return {
     {
       ["name"] = "HideoutWestStorage: loadzone",
       ["from"] = "HideoutWestStorage",
-      ["to"] = "HideoutGarden",
+      ["to"] = "HideoutGarden (Upper)",
       ["door"] = {
         ["map"] = "HideoutWestStorage",
         ["door"] = "loadzone",
@@ -2362,82 +2372,8 @@ return {
             ["options"] = {},
             ["filtered_resolution"] = false,
             ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
+              ["item_name"] = "Sand Castle Key",
               ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
             },
           },
           {
@@ -2520,7 +2456,7 @@ return {
     },
     {
       ["name"] = "SandCastleEntrance: loadzone right",
-      ["from"] = "SandCastleEntrance",
+      ["from"] = "SandCastleEntrance (Right)",
       ["to"] = "SandCastleMainRoom",
       ["door"] = {
         ["map"] = "SandCastleEntrance",
@@ -2530,7 +2466,7 @@ return {
     {
       ["name"] = "SandCastleMainRoom: loadzoneentrance",
       ["from"] = "SandCastleMainRoom",
-      ["to"] = "SandCastleEntrance",
+      ["to"] = "SandCastleEntrance (Right)",
       ["door"] = {
         ["map"] = "SandCastleMainRoom",
         ["door"] = "loadzoneentrance",
@@ -2556,8 +2492,8 @@ return {
     },
     {
       ["name"] = "SandCastleSlidePuzzle: loadzoneleftup",
-      ["from"] = "SandCastleSlidePuzzle",
-      ["to"] = "SandCastleMainRoom",
+      ["from"] = "SandCastleSlidePuzzle (Upper Right)",
+      ["to"] = "SandCastleMainRoom (Middle Left)",
       ["door"] = {
         ["map"] = "SandCastleSlidePuzzle",
         ["door"] = "loadzoneleftup",
@@ -2565,8 +2501,8 @@ return {
     },
     {
       ["name"] = "SandCastleMainRoom: loadzoneslideup",
-      ["from"] = "SandCastleMainRoom",
-      ["to"] = "SandCastleSlidePuzzle",
+      ["from"] = "SandCastleMainRoom (Middle Left)",
+      ["to"] = "SandCastleSlidePuzzle (Upper Right)",
       ["door"] = {
         ["map"] = "SandCastleMainRoom",
         ["door"] = "loadzoneslideup",
@@ -2574,8 +2510,17 @@ return {
     },
     {
       ["name"] = "SandCastleSlidePuzzle: loadzonepressure",
-      ["from"] = "SandCastleSlidePuzzle",
+      ["from"] = "SandCastleSlidePuzzle (Upper Left)",
       ["to"] = "SandCastlePressurePuzzle",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Sand Castle Slide Puzzle Solved",
+          ["count"] = 1,
+        },
+      },
       ["door"] = {
         ["map"] = "SandCastleSlidePuzzle",
         ["door"] = "loadzonepressure",
@@ -2584,7 +2529,7 @@ return {
     {
       ["name"] = "SandCastlePressurePuzzle: loadzoneslide",
       ["from"] = "SandCastlePressurePuzzle",
-      ["to"] = "SandCastleSlidePuzzle",
+      ["to"] = "SandCastleSlidePuzzle (Upper Left)",
       ["door"] = {
         ["map"] = "SandCastlePressurePuzzle",
         ["door"] = "loadzoneslide",
@@ -2603,6 +2548,15 @@ return {
       ["name"] = "SandCastleMainRoom: loadzone statue",
       ["from"] = "SandCastleMainRoom",
       ["to"] = "SandCastleStatueRoom",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Small Ancient Key",
+          ["count"] = 1,
+        },
+      },
       ["door"] = {
         ["map"] = "SandCastleMainRoom",
         ["door"] = "loadzone statue",
@@ -2610,8 +2564,8 @@ return {
     },
     {
       ["name"] = "SandCastleStatueRoom: loadzonerock",
-      ["from"] = "SandCastleStatueRoom",
-      ["to"] = "SandCastleRockRoom",
+      ["from"] = "SandCastleStatueRoom (Right)",
+      ["to"] = "SandCastleRockRoom (Bottom Right)",
       ["door"] = {
         ["map"] = "SandCastleStatueRoom",
         ["door"] = "loadzonerock",
@@ -2619,8 +2573,8 @@ return {
     },
     {
       ["name"] = "SandCastleRockRoom: loadzonestatue",
-      ["from"] = "SandCastleRockRoom",
-      ["to"] = "SandCastleStatueRoom",
+      ["from"] = "SandCastleRockRoom (Bottom Right)",
+      ["to"] = "SandCastleStatueRoom (Right)",
       ["door"] = {
         ["map"] = "SandCastleRockRoom",
         ["door"] = "loadzonestatue",
@@ -2647,7 +2601,7 @@ return {
     {
       ["name"] = "SandCastleRoof: loadzoneleft",
       ["from"] = "SandCastleRoof",
-      ["to"] = "SandCastleMainRoom",
+      ["to"] = "SandCastleMainRoom (Top Left)",
       ["door"] = {
         ["map"] = "SandCastleRoof",
         ["door"] = "loadzoneleft",
@@ -2655,7 +2609,7 @@ return {
     },
     {
       ["name"] = "SandCastleMainRoom: loadzone roof left",
-      ["from"] = "SandCastleMainRoom",
+      ["from"] = "SandCastleMainRoom (Top Left)",
       ["to"] = "SandCastleRoof",
       ["door"] = {
         ["map"] = "SandCastleMainRoom",
@@ -2665,7 +2619,7 @@ return {
     {
       ["name"] = "SandCastleRoof: loadzoneright",
       ["from"] = "SandCastleRoof",
-      ["to"] = "SandCastleMainRoom",
+      ["to"] = "SandCastleMainRoom (Top Right)",
       ["door"] = {
         ["map"] = "SandCastleRoof",
         ["door"] = "loadzoneright",
@@ -2673,7 +2627,7 @@ return {
     },
     {
       ["name"] = "SandCastleMainRoom: loadzone roof right",
-      ["from"] = "SandCastleMainRoom",
+      ["from"] = "SandCastleMainRoom (Top Right)",
       ["to"] = "SandCastleRoof",
       ["door"] = {
         ["map"] = "SandCastleMainRoom",
@@ -2684,6 +2638,15 @@ return {
       ["name"] = "SandCastleRoof: loadzoneboss",
       ["from"] = "SandCastleRoof",
       ["to"] = "SandCastleBossRoom",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Big Ancient Key",
+          ["count"] = 1,
+        },
+      },
       ["door"] = {
         ["map"] = "SandCastleRoof",
         ["door"] = "loadzoneboss",
@@ -2700,8 +2663,17 @@ return {
     },
     {
       ["name"] = "SandCastleMainRoom: loadzonebosskey",
-      ["from"] = "SandCastleMainRoom",
+      ["from"] = "SandCastleMainRoom (Top Right)",
       ["to"] = "SandCastleBossKeyRoom",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Small Ancient Key",
+          ["count"] = 1,
+        },
+      },
       ["door"] = {
         ["map"] = "SandCastleMainRoom",
         ["door"] = "loadzonebosskey",
@@ -2710,7 +2682,7 @@ return {
     {
       ["name"] = "SandCastleBossKeyRoom: loadzone",
       ["from"] = "SandCastleBossKeyRoom",
-      ["to"] = "SandCastleMainRoom",
+      ["to"] = "SandCastleMainRoom (Top Right)",
       ["door"] = {
         ["map"] = "SandCastleBossKeyRoom",
         ["door"] = "loadzone",
@@ -2718,7 +2690,7 @@ return {
     },
     {
       ["name"] = "SandCastleMainRoom: loadzonepressure",
-      ["from"] = "SandCastleMainRoom",
+      ["from"] = "SandCastleMainRoom (Top Left)",
       ["to"] = "SandCastlePressurePuzzle",
       ["door"] = {
         ["map"] = "SandCastleMainRoom",
@@ -2728,7 +2700,16 @@ return {
     {
       ["name"] = "SandCastlePressurePuzzle: loadzonemain",
       ["from"] = "SandCastlePressurePuzzle",
-      ["to"] = "SandCastleMainRoom",
+      ["to"] = "SandCastleMainRoom (Top Left)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Sand Castle Pressure Puzzle Door Open",
+          ["count"] = 1,
+        },
+      },
       ["door"] = {
         ["map"] = "SandCastlePressurePuzzle",
         ["door"] = "loadzonemain",
@@ -2736,7 +2717,7 @@ return {
     },
     {
       ["name"] = "SandCastleMainRoom: loadzone rock",
-      ["from"] = "SandCastleMainRoom",
+      ["from"] = "SandCastleMainRoom (Middle Right)",
       ["to"] = "SandCastleRockRoom",
       ["door"] = {
         ["map"] = "SandCastleMainRoom",
@@ -2746,7 +2727,7 @@ return {
     {
       ["name"] = "SandCastleRockRoom: loadzone main",
       ["from"] = "SandCastleRockRoom",
-      ["to"] = "SandCastleMainRoom",
+      ["to"] = "SandCastleMainRoom (Middle Right)",
       ["door"] = {
         ["map"] = "SandCastleRockRoom",
         ["door"] = "loadzone main",
@@ -2790,7 +2771,7 @@ return {
     },
     {
       ["name"] = "StreamMountain1: loadzoneleft",
-      ["from"] = "StreamMountain1",
+      ["from"] = "StreamMountain1 (Left)",
       ["to"] = "StreamMountain2",
       ["door"] = {
         ["map"] = "StreamMountain1",
@@ -2800,7 +2781,7 @@ return {
     {
       ["name"] = "StreamMountain2: loadzoneright",
       ["from"] = "StreamMountain2",
-      ["to"] = "StreamMountain1",
+      ["to"] = "StreamMountain1 (Left)",
       ["door"] = {
         ["map"] = "StreamMountain2",
         ["door"] = "loadzoneright",
@@ -2808,7 +2789,7 @@ return {
     },
     {
       ["name"] = "StreamMountain2: loadzoneleft",
-      ["from"] = "StreamMountain2",
+      ["from"] = "StreamMountain2 (Upper Left)",
       ["to"] = "StreamMountain3",
       ["door"] = {
         ["map"] = "StreamMountain2",
@@ -2818,7 +2799,7 @@ return {
     {
       ["name"] = "StreamMountain3: loadzone right",
       ["from"] = "StreamMountain3",
-      ["to"] = "StreamMountain2",
+      ["to"] = "StreamMountain2 (Upper Left)",
       ["door"] = {
         ["map"] = "StreamMountain3",
         ["door"] = "loadzone right",
@@ -2826,7 +2807,7 @@ return {
     },
     {
       ["name"] = "StreamMountain2: loadzonebottom",
-      ["from"] = "StreamMountain2",
+      ["from"] = "StreamMountain2 (Bottom)",
       ["to"] = "StreamMountain4",
       ["door"] = {
         ["map"] = "StreamMountain2",
@@ -2836,7 +2817,7 @@ return {
     {
       ["name"] = "StreamMountain4: loadzoneright",
       ["from"] = "StreamMountain4",
-      ["to"] = "StreamMountain2",
+      ["to"] = "StreamMountain2 (Bottom)",
       ["door"] = {
         ["map"] = "StreamMountain4",
         ["door"] = "loadzoneright",
@@ -2863,7 +2844,7 @@ return {
     {
       ["name"] = "FGCave: loadzone wasp",
       ["from"] = "FGCave (Right)",
-      ["to"] = "WaspKingdomOutside",
+      ["to"] = "WaspKingdomOutside (Left)",
       ["door"] = {
         ["map"] = "FGCave",
         ["door"] = "loadzone wasp",
@@ -2871,7 +2852,7 @@ return {
     },
     {
       ["name"] = "WaspKingdomOutside: loadzonecave",
-      ["from"] = "WaspKingdomOutside",
+      ["from"] = "WaspKingdomOutside (Left)",
       ["to"] = "FGCave (Right)",
       ["door"] = {
         ["map"] = "WaspKingdomOutside",
@@ -2971,7 +2952,7 @@ return {
     {
       ["name"] = "FarGrasslandsOutsideCave: loadzone right",
       ["from"] = "FarGrasslandsOutsideCave (Right)",
-      ["to"] = "FarGrasslands4",
+      ["to"] = "FarGrasslands4 (Left)",
       ["door"] = {
         ["map"] = "FarGrasslandsOutsideCave",
         ["door"] = "loadzone right",
@@ -2979,7 +2960,7 @@ return {
     },
     {
       ["name"] = "FarGrasslands4: loadzone left",
-      ["from"] = "FarGrasslands4",
+      ["from"] = "FarGrasslands4 (Left)",
       ["to"] = "FarGrasslandsOutsideCave (Right)",
       ["door"] = {
         ["map"] = "FarGrasslands4",
@@ -2990,15 +2971,6 @@ return {
       ["name"] = "FarGrasslandsWizard: loadzonetower",
       ["from"] = "FarGrasslandsWizard (Tower)",
       ["to"] = "WizardTowerStairs",
-      ["rule"] = {
-        ["rule"] = "Has",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["args"] = {
-          ["item_name"] = "Wizard Tower Door Unlocked",
-          ["count"] = 1,
-        },
-      },
       ["door"] = {
         ["map"] = "FarGrasslandsWizard",
         ["door"] = "loadzonetower",
@@ -3008,15 +2980,6 @@ return {
       ["name"] = "WizardTowerStairs: loadzoneoutside",
       ["from"] = "WizardTowerStairs",
       ["to"] = "FarGrasslandsWizard (Tower)",
-      ["rule"] = {
-        ["rule"] = "Has",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["args"] = {
-          ["item_name"] = "Wizard Tower Door Unlocked",
-          ["count"] = 1,
-        },
-      },
       ["door"] = {
         ["map"] = "WizardTowerStairs",
         ["door"] = "loadzoneoutside",
@@ -3168,8 +3131,8 @@ return {
     },
     {
       ["name"] = "WaspKingdomOutside: loadzoneinside#16",
-      ["from"] = "WaspKingdomOutside",
-      ["to"] = "WaspKingdomMainHall",
+      ["from"] = "WaspKingdomOutside (Hive Door)",
+      ["to"] = "WaspKingdomMainHall (Front Door)",
       ["door"] = {
         ["map"] = "WaspKingdomOutside",
         ["door"] = "loadzoneinside#16",
@@ -3177,8 +3140,8 @@ return {
     },
     {
       ["name"] = "WaspKingdomMainHall: loadzoneoutside",
-      ["from"] = "WaspKingdomMainHall",
-      ["to"] = "WaspKingdomOutside",
+      ["from"] = "WaspKingdomMainHall (Front Door)",
+      ["to"] = "WaspKingdomOutside (Hive Door)",
       ["door"] = {
         ["map"] = "WaspKingdomMainHall",
         ["door"] = "loadzoneoutside",
@@ -3186,8 +3149,8 @@ return {
     },
     {
       ["name"] = "Swamplands2: loadzonenorth",
-      ["from"] = "Swamplands2",
-      ["to"] = "Swamplands3",
+      ["from"] = "Swamplands2 (Top)",
+      ["to"] = "Swamplands3 (Bottom)",
       ["door"] = {
         ["map"] = "Swamplands2",
         ["door"] = "loadzonenorth",
@@ -3195,8 +3158,8 @@ return {
     },
     {
       ["name"] = "Swamplands3: loadzone back",
-      ["from"] = "Swamplands3",
-      ["to"] = "Swamplands2",
+      ["from"] = "Swamplands3 (Bottom)",
+      ["to"] = "Swamplands2 (Top)",
       ["door"] = {
         ["map"] = "Swamplands3",
         ["door"] = "loadzone back",
@@ -3258,7 +3221,7 @@ return {
     },
     {
       ["name"] = "Swamplands3: loadzoneright",
-      ["from"] = "Swamplands3",
+      ["from"] = "Swamplands3 (Right)",
       ["to"] = "SwamplandsBridge",
       ["door"] = {
         ["map"] = "Swamplands3",
@@ -3268,7 +3231,7 @@ return {
     {
       ["name"] = "SwamplandsBridge: loadzoneleft",
       ["from"] = "SwamplandsBridge",
-      ["to"] = "Swamplands3",
+      ["to"] = "Swamplands3 (Right)",
       ["door"] = {
         ["map"] = "SwamplandsBridge",
         ["door"] = "loadzoneleft",
@@ -3276,7 +3239,7 @@ return {
     },
     {
       ["name"] = "SwamplandsBridge: loadzone boss",
-      ["from"] = "SwamplandsBridge",
+      ["from"] = "SwamplandsBridge (Top)",
       ["to"] = "SwamplandsBoss",
       ["door"] = {
         ["map"] = "SwamplandsBridge",
@@ -3286,7 +3249,7 @@ return {
     {
       ["name"] = "SwamplandsBoss: loadzonesouth",
       ["from"] = "SwamplandsBoss",
-      ["to"] = "SwamplandsBridge",
+      ["to"] = "SwamplandsBridge (Top)",
       ["door"] = {
         ["map"] = "SwamplandsBoss",
         ["door"] = "loadzonesouth",
@@ -3294,8 +3257,8 @@ return {
     },
     {
       ["name"] = "SwamplandsBridge: loadzonesouth",
-      ["from"] = "SwamplandsBridge",
-      ["to"] = "Swamplands4",
+      ["from"] = "SwamplandsBridge (Bottom)",
+      ["to"] = "Swamplands4 (Left Door)",
       ["door"] = {
         ["map"] = "SwamplandsBridge",
         ["door"] = "loadzonesouth",
@@ -3303,8 +3266,8 @@ return {
     },
     {
       ["name"] = "Swamplands4: loadzone left",
-      ["from"] = "Swamplands4",
-      ["to"] = "SwamplandsBridge",
+      ["from"] = "Swamplands4 (Left Door)",
+      ["to"] = "SwamplandsBridge (Bottom)",
       ["door"] = {
         ["map"] = "Swamplands4",
         ["door"] = "loadzone left",
@@ -3313,7 +3276,7 @@ return {
     {
       ["name"] = "SwamplandsBridge: loadzone right",
       ["from"] = "SwamplandsBridge",
-      ["to"] = "Swamplands7",
+      ["to"] = "Swamplands7 (Left)",
       ["door"] = {
         ["map"] = "SwamplandsBridge",
         ["door"] = "loadzone right",
@@ -3321,7 +3284,7 @@ return {
     },
     {
       ["name"] = "Swamplands7: loadzone left",
-      ["from"] = "Swamplands7",
+      ["from"] = "Swamplands7 (Left)",
       ["to"] = "SwamplandsBridge",
       ["door"] = {
         ["map"] = "Swamplands7",
@@ -3330,7 +3293,7 @@ return {
     },
     {
       ["name"] = "FarGrasslands4: loadzoneclearing",
-      ["from"] = "FarGrasslands4",
+      ["from"] = "FarGrasslands4 (Clearing Door)",
       ["to"] = "FGClearing",
       ["door"] = {
         ["map"] = "FarGrasslands4",
@@ -3340,7 +3303,7 @@ return {
     {
       ["name"] = "FGClearing: loadzone",
       ["from"] = "FGClearing",
-      ["to"] = "FarGrasslands4",
+      ["to"] = "FarGrasslands4 (Clearing Door)",
       ["door"] = {
         ["map"] = "FGClearing",
         ["door"] = "loadzone",
@@ -3366,8 +3329,8 @@ return {
     },
     {
       ["name"] = "ChomperCave1: loadzone high",
-      ["from"] = "ChomperCave1",
-      ["to"] = "ChomperCaves2",
+      ["from"] = "ChomperCave1 (Upper)",
+      ["to"] = "ChomperCaves2 (Upper)",
       ["door"] = {
         ["map"] = "ChomperCave1",
         ["door"] = "loadzone high",
@@ -3375,8 +3338,8 @@ return {
     },
     {
       ["name"] = "ChomperCaves2: loadzonehigh",
-      ["from"] = "ChomperCaves2",
-      ["to"] = "ChomperCave1",
+      ["from"] = "ChomperCaves2 (Upper)",
+      ["to"] = "ChomperCave1 (Upper)",
       ["door"] = {
         ["map"] = "ChomperCaves2",
         ["door"] = "loadzonehigh",
@@ -3384,7 +3347,7 @@ return {
     },
     {
       ["name"] = "ChomperCave1: loadzoneboss",
-      ["from"] = "ChomperCave1",
+      ["from"] = "ChomperCave1 (Upper)",
       ["to"] = "ChomperCaves3",
       ["door"] = {
         ["map"] = "ChomperCave1",
@@ -3394,7 +3357,7 @@ return {
     {
       ["name"] = "ChomperCaves3: loadzone",
       ["from"] = "ChomperCaves3",
-      ["to"] = "ChomperCave1",
+      ["to"] = "ChomperCave1 (Upper)",
       ["door"] = {
         ["map"] = "ChomperCaves3",
         ["door"] = "loadzone",
@@ -3402,8 +3365,8 @@ return {
     },
     {
       ["name"] = "Swamplands4: loadzoneright",
-      ["from"] = "Swamplands4",
-      ["to"] = "Swamplands5",
+      ["from"] = "Swamplands4 (Right Door)",
+      ["to"] = "Swamplands5 (Left)",
       ["door"] = {
         ["map"] = "Swamplands4",
         ["door"] = "loadzoneright",
@@ -3411,8 +3374,8 @@ return {
     },
     {
       ["name"] = "Swamplands5: loadzoneleft",
-      ["from"] = "Swamplands5",
-      ["to"] = "Swamplands4",
+      ["from"] = "Swamplands5 (Left)",
+      ["to"] = "Swamplands4 (Right Door)",
       ["door"] = {
         ["map"] = "Swamplands5",
         ["door"] = "loadzoneleft",
@@ -3438,8 +3401,8 @@ return {
     },
     {
       ["name"] = "Swamplands5: loadzone north",
-      ["from"] = "Swamplands5",
-      ["to"] = "Swamplands7",
+      ["from"] = "Swamplands5 (Top Right)",
+      ["to"] = "Swamplands7 (Bottom Right)",
       ["door"] = {
         ["map"] = "Swamplands5",
         ["door"] = "loadzone north",
@@ -3447,8 +3410,8 @@ return {
     },
     {
       ["name"] = "Swamplands7: loadzone south",
-      ["from"] = "Swamplands7",
-      ["to"] = "Swamplands5",
+      ["from"] = "Swamplands7 (Bottom Right)",
+      ["to"] = "Swamplands5 (Top Right)",
       ["door"] = {
         ["map"] = "Swamplands7",
         ["door"] = "loadzone south",
@@ -3456,8 +3419,8 @@ return {
     },
     {
       ["name"] = "Swamplands5: loadzoneright",
-      ["from"] = "Swamplands5",
-      ["to"] = "Swamplands8",
+      ["from"] = "Swamplands5 (Top Right)",
+      ["to"] = "Swamplands8 (Top)",
       ["door"] = {
         ["map"] = "Swamplands5",
         ["door"] = "loadzoneright",
@@ -3465,8 +3428,8 @@ return {
     },
     {
       ["name"] = "Swamplands8: loadzonenorth",
-      ["from"] = "Swamplands8",
-      ["to"] = "Swamplands5",
+      ["from"] = "Swamplands8 (Top)",
+      ["to"] = "Swamplands5 (Top Right)",
       ["door"] = {
         ["map"] = "Swamplands8",
         ["door"] = "loadzonenorth",
@@ -3474,8 +3437,8 @@ return {
     },
     {
       ["name"] = "Swamplands6: loadzone right",
-      ["from"] = "Swamplands6",
-      ["to"] = "Swamplands8",
+      ["from"] = "Swamplands6 (Upper Right)",
+      ["to"] = "Swamplands8 (Bottom)",
       ["door"] = {
         ["map"] = "Swamplands6",
         ["door"] = "loadzone right",
@@ -3483,8 +3446,8 @@ return {
     },
     {
       ["name"] = "Swamplands8: loadzonesouth",
-      ["from"] = "Swamplands8",
-      ["to"] = "Swamplands6",
+      ["from"] = "Swamplands8 (Bottom)",
+      ["to"] = "Swamplands6 (Upper Right)",
       ["door"] = {
         ["map"] = "Swamplands8",
         ["door"] = "loadzonesouth",
@@ -3510,7 +3473,7 @@ return {
     },
     {
       ["name"] = "WaspKingdom2: loadzoneleft",
-      ["from"] = "WaspKingdom2",
+      ["from"] = "WaspKingdom2 (Top)",
       ["to"] = "WaspKingdom3",
       ["door"] = {
         ["map"] = "WaspKingdom2",
@@ -3520,7 +3483,7 @@ return {
     {
       ["name"] = "WaspKingdom3: loadzone",
       ["from"] = "WaspKingdom3",
-      ["to"] = "WaspKingdom2",
+      ["to"] = "WaspKingdom2 (Top)",
       ["door"] = {
         ["map"] = "WaspKingdom3",
         ["door"] = "loadzone",
@@ -3528,7 +3491,7 @@ return {
     },
     {
       ["name"] = "WaspKingdom2: loadzoneright",
-      ["from"] = "WaspKingdom2",
+      ["from"] = "WaspKingdom2 (Right Door)",
       ["to"] = "WaspKingdom4",
       ["door"] = {
         ["map"] = "WaspKingdom2",
@@ -3538,7 +3501,7 @@ return {
     {
       ["name"] = "WaspKingdom4: loadzoneback",
       ["from"] = "WaspKingdom4",
-      ["to"] = "WaspKingdom2",
+      ["to"] = "WaspKingdom2 (Right Door)",
       ["door"] = {
         ["map"] = "WaspKingdom4",
         ["door"] = "loadzoneback",
@@ -3564,7 +3527,7 @@ return {
     },
     {
       ["name"] = "WaspKingdom4: loadzonenext",
-      ["from"] = "WaspKingdom4",
+      ["from"] = "WaspKingdom4 (Right)",
       ["to"] = "WaspKingdom5",
       ["door"] = {
         ["map"] = "WaspKingdom4",
@@ -3574,7 +3537,7 @@ return {
     {
       ["name"] = "WaspKingdom5: loadzone left",
       ["from"] = "WaspKingdom5",
-      ["to"] = "WaspKingdom4",
+      ["to"] = "WaspKingdom4 (Right)",
       ["door"] = {
         ["map"] = "WaspKingdom5",
         ["door"] = "loadzone left",
@@ -3600,8 +3563,8 @@ return {
     },
     {
       ["name"] = "WaspKingdom5: loadzone vent",
-      ["from"] = "WaspKingdom5",
-      ["to"] = "WaspKingdomMainHall",
+      ["from"] = "WaspKingdom5 (Vent)",
+      ["to"] = "WaspKingdomMainHall (Vent)",
       ["door"] = {
         ["map"] = "WaspKingdom5",
         ["door"] = "loadzone vent",
@@ -3609,8 +3572,8 @@ return {
     },
     {
       ["name"] = "WaspKingdomMainHall: loadzonevent",
-      ["from"] = "WaspKingdomMainHall",
-      ["to"] = "WaspKingdom5",
+      ["from"] = "WaspKingdomMainHall (Vent)",
+      ["to"] = "WaspKingdom5 (Vent)",
       ["door"] = {
         ["map"] = "WaspKingdomMainHall",
         ["door"] = "loadzonevent",
@@ -3636,7 +3599,7 @@ return {
     },
     {
       ["name"] = "WaspKingdomMainHall: loadzonethrone",
-      ["from"] = "WaspKingdomMainHall",
+      ["from"] = "WaspKingdomMainHall (Top)",
       ["to"] = "WaspKingdomThrone",
       ["door"] = {
         ["map"] = "WaspKingdomMainHall",
@@ -3646,7 +3609,7 @@ return {
     {
       ["name"] = "WaspKingdomThrone: loadzoneback",
       ["from"] = "WaspKingdomThrone",
-      ["to"] = "WaspKingdomMainHall",
+      ["to"] = "WaspKingdomMainHall (Top)",
       ["door"] = {
         ["map"] = "WaspKingdomThrone",
         ["door"] = "loadzoneback",
@@ -3654,7 +3617,7 @@ return {
     },
     {
       ["name"] = "WaspKingdomThrone: loadzonequeen",
-      ["from"] = "WaspKingdomThrone",
+      ["from"] = "WaspKingdomThrone (Top)",
       ["to"] = "WaspKingdomQueen",
       ["door"] = {
         ["map"] = "WaspKingdomThrone",
@@ -3664,7 +3627,7 @@ return {
     {
       ["name"] = "WaspKingdomQueen: loadzone",
       ["from"] = "WaspKingdomQueen",
-      ["to"] = "WaspKingdomThrone",
+      ["to"] = "WaspKingdomThrone (Top)",
       ["door"] = {
         ["map"] = "WaspKingdomQueen",
         ["door"] = "loadzone",
@@ -3762,7 +3725,7 @@ return {
     },
     {
       ["name"] = "TermiteIndustrial: NEARloadzonecoliseum",
-      ["from"] = "TermiteIndustrial",
+      ["from"] = "TermiteIndustrial (Outside the Colosseum)",
       ["to"] = "TermiteColiseum1",
       ["door"] = {
         ["map"] = "TermiteIndustrial",
@@ -3772,7 +3735,7 @@ return {
     {
       ["name"] = "TermiteColiseum1: loadzoneoutside",
       ["from"] = "TermiteColiseum1",
-      ["to"] = "TermiteIndustrial",
+      ["to"] = "TermiteIndustrial (Outside the Colosseum)",
       ["door"] = {
         ["map"] = "TermiteColiseum1",
         ["door"] = "loadzoneoutside",
@@ -3834,7 +3797,7 @@ return {
     },
     {
       ["name"] = "WizardTowerBasement: loadzone",
-      ["from"] = "WizardTowerBasement",
+      ["from"] = "WizardTowerBasement (Top Right)",
       ["to"] = "WizardTowerStairs",
       ["door"] = {
         ["map"] = "WizardTowerBasement",
@@ -3844,7 +3807,7 @@ return {
     {
       ["name"] = "WizardTowerStairs: loadzonebasement",
       ["from"] = "WizardTowerStairs",
-      ["to"] = "WizardTowerBasement",
+      ["to"] = "WizardTowerBasement (Top Right)",
       ["door"] = {
         ["map"] = "WizardTowerStairs",
         ["door"] = "loadzonebasement",
@@ -3852,7 +3815,7 @@ return {
     },
     {
       ["name"] = "WizardTowerStairs: loadzoneattic",
-      ["from"] = "WizardTowerStairs",
+      ["from"] = "WizardTowerStairs (Top)",
       ["to"] = "WizardTowerAttic",
       ["door"] = {
         ["map"] = "WizardTowerStairs",
@@ -3862,7 +3825,7 @@ return {
     {
       ["name"] = "WizardTowerAttic: loadzone",
       ["from"] = "WizardTowerAttic",
-      ["to"] = "WizardTowerStairs",
+      ["to"] = "WizardTowerStairs (Top)",
       ["door"] = {
         ["map"] = "WizardTowerAttic",
         ["door"] = "loadzone",
@@ -4014,7 +3977,7 @@ return {
     },
     {
       ["name"] = "StreamMountain4: loadzone boss",
-      ["from"] = "StreamMountain4",
+      ["from"] = "StreamMountain4 (Left)",
       ["to"] = "StreamMountain5",
       ["door"] = {
         ["map"] = "StreamMountain4",
@@ -4024,7 +3987,7 @@ return {
     {
       ["name"] = "StreamMountain5: loadzone",
       ["from"] = "StreamMountain5",
-      ["to"] = "StreamMountain4",
+      ["to"] = "StreamMountain4 (Left)",
       ["door"] = {
         ["map"] = "StreamMountain5",
         ["door"] = "loadzone",
@@ -4068,7 +4031,7 @@ return {
     },
     {
       ["name"] = "MysteryIsland: loadzone",
-      ["from"] = "MysteryIsland",
+      ["from"] = "MysteryIsland (Door)",
       ["to"] = "MysteryIslandInside",
       ["door"] = {
         ["map"] = "MysteryIsland",
@@ -4078,7 +4041,7 @@ return {
     {
       ["name"] = "MysteryIslandInside: loadzone",
       ["from"] = "MysteryIslandInside",
-      ["to"] = "MysteryIsland",
+      ["to"] = "MysteryIsland (Door)",
       ["door"] = {
         ["map"] = "MysteryIslandInside",
         ["door"] = "loadzone",
@@ -4104,8 +4067,8 @@ return {
     },
     {
       ["name"] = "UpperSnekTransition: loadzoneforward",
-      ["from"] = "UpperSnekTransition",
-      ["to"] = "UpperSnekMiddleRoom",
+      ["from"] = "UpperSnekTransition (Left Door)",
+      ["to"] = "UpperSnekMiddleRoom (Right)",
       ["door"] = {
         ["map"] = "UpperSnekTransition",
         ["door"] = "loadzoneforward",
@@ -4113,8 +4076,8 @@ return {
     },
     {
       ["name"] = "UpperSnekMiddleRoom: loadzoneentrance",
-      ["from"] = "UpperSnekMiddleRoom",
-      ["to"] = "UpperSnekTransition",
+      ["from"] = "UpperSnekMiddleRoom (Right)",
+      ["to"] = "UpperSnekTransition (Left Door)",
       ["door"] = {
         ["map"] = "UpperSnekMiddleRoom",
         ["door"] = "loadzoneentrance",
@@ -4123,7 +4086,7 @@ return {
     {
       ["name"] = "UpperSnekSwitchPuzzle: loadzone",
       ["from"] = "UpperSnekSwitchPuzzle",
-      ["to"] = "UpperSnekMiddleRoom",
+      ["to"] = "UpperSnekMiddleRoom (Lower Top Left)",
       ["door"] = {
         ["map"] = "UpperSnekSwitchPuzzle",
         ["door"] = "loadzone",
@@ -4131,7 +4094,7 @@ return {
     },
     {
       ["name"] = "UpperSnekMiddleRoom: loadzone switch",
-      ["from"] = "UpperSnekMiddleRoom",
+      ["from"] = "UpperSnekMiddleRoom (Lower Top Left)",
       ["to"] = "UpperSnekSwitchPuzzle",
       ["door"] = {
         ["map"] = "UpperSnekMiddleRoom",
@@ -4140,7 +4103,7 @@ return {
     },
     {
       ["name"] = "UpperSnekBeforeBoss: loadzoneboss",
-      ["from"] = "UpperSnekBeforeBoss",
+      ["from"] = "UpperSnekBeforeBoss (Left Door)",
       ["to"] = "UpperSnekBossRoom",
       ["door"] = {
         ["map"] = "UpperSnekBeforeBoss",
@@ -4150,7 +4113,7 @@ return {
     {
       ["name"] = "UpperSnekBossRoom: loadzone",
       ["from"] = "UpperSnekBossRoom",
-      ["to"] = "UpperSnekBeforeBoss",
+      ["to"] = "UpperSnekBeforeBoss (Left Door)",
       ["door"] = {
         ["map"] = "UpperSnekBossRoom",
         ["door"] = "loadzone",
@@ -4159,7 +4122,7 @@ return {
     {
       ["name"] = "UpperSnekBeforeBoss: loadzoneback",
       ["from"] = "UpperSnekBeforeBoss",
-      ["to"] = "UpperSnekMiddleRoom",
+      ["to"] = "UpperSnekMiddleRoom (Left)",
       ["door"] = {
         ["map"] = "UpperSnekBeforeBoss",
         ["door"] = "loadzoneback",
@@ -4167,7 +4130,7 @@ return {
     },
     {
       ["name"] = "UpperSnekMiddleRoom: loadzoneboss",
-      ["from"] = "UpperSnekMiddleRoom",
+      ["from"] = "UpperSnekMiddleRoom (Left)",
       ["to"] = "UpperSnekBeforeBoss",
       ["door"] = {
         ["map"] = "UpperSnekMiddleRoom",
@@ -4177,7 +4140,7 @@ return {
     {
       ["name"] = "UpperSnekPressurePlateRoom: loadzone",
       ["from"] = "UpperSnekPressurePlateRoom",
-      ["to"] = "UpperSnekMiddleRoom",
+      ["to"] = "UpperSnekMiddleRoom (Upper Top Right Door)",
       ["door"] = {
         ["map"] = "UpperSnekPressurePlateRoom",
         ["door"] = "loadzone",
@@ -4185,7 +4148,7 @@ return {
     },
     {
       ["name"] = "UpperSnekMiddleRoom: loadzonepressure",
-      ["from"] = "UpperSnekMiddleRoom",
+      ["from"] = "UpperSnekMiddleRoom (Upper Top Right Door)",
       ["to"] = "UpperSnekPressurePlateRoom",
       ["door"] = {
         ["map"] = "UpperSnekMiddleRoom",
@@ -4212,7 +4175,7 @@ return {
     },
     {
       ["name"] = "UpperSnekMiddleRoom: loadzoneriverorom",
-      ["from"] = "UpperSnekMiddleRoom",
+      ["from"] = "UpperSnekMiddleRoom (Bottom Left)",
       ["to"] = "UpperSnekRiverPuzzle",
       ["door"] = {
         ["map"] = "UpperSnekMiddleRoom",
@@ -4222,7 +4185,7 @@ return {
     {
       ["name"] = "UpperSnekRiverPuzzle: loadzone",
       ["from"] = "UpperSnekRiverPuzzle",
-      ["to"] = "UpperSnekMiddleRoom",
+      ["to"] = "UpperSnekMiddleRoom (Bottom Left)",
       ["door"] = {
         ["map"] = "UpperSnekRiverPuzzle",
         ["door"] = "loadzone",
@@ -4230,7 +4193,7 @@ return {
     },
     {
       ["name"] = "UpperSnekMiddleRoom: loadzonegeizer",
-      ["from"] = "UpperSnekMiddleRoom",
+      ["from"] = "UpperSnekMiddleRoom (Upper Top Left Door)",
       ["to"] = "UpperSnekGeizerRoom",
       ["door"] = {
         ["map"] = "UpperSnekMiddleRoom",
@@ -4240,7 +4203,7 @@ return {
     {
       ["name"] = "UpperSnekGeizerRoom: loadzone",
       ["from"] = "UpperSnekGeizerRoom",
-      ["to"] = "UpperSnekMiddleRoom",
+      ["to"] = "UpperSnekMiddleRoom (Upper Top Left Door)",
       ["door"] = {
         ["map"] = "UpperSnekGeizerRoom",
         ["door"] = "loadzone",
@@ -4248,8 +4211,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonPier: loadzoneleft",
-      ["from"] = "RubberPrisonPier",
-      ["to"] = "RubberPrisonCheckpointCorridor",
+      ["from"] = "RubberPrisonPier (Ground Upper Left)",
+      ["to"] = "RubberPrisonCheckpointCorridor (Right)",
       ["door"] = {
         ["map"] = "RubberPrisonPier",
         ["door"] = "loadzoneleft",
@@ -4257,39 +4220,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonCheckpointCorridor: loadzoneexit",
-      ["from"] = "RubberPrisonCheckpointCorridor",
-      ["to"] = "RubberPrisonPier",
-      ["rule"] = {
-        ["rule"] = "Or",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "CanUse",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "CanUse",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "CanUse",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-        },
-      },
+      ["from"] = "RubberPrisonCheckpointCorridor (Right)",
+      ["to"] = "RubberPrisonPier (Ground Upper Left)",
       ["door"] = {
         ["map"] = "RubberPrisonCheckpointCorridor",
         ["door"] = "loadzoneexit",
@@ -4297,8 +4229,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonPier: loadzonecell2",
-      ["from"] = "RubberPrisonPier",
-      ["to"] = "RubberPrisonCells2",
+      ["from"] = "RubberPrisonPier (Second Floor)",
+      ["to"] = "RubberPrisonCells2 (Right Door)",
       ["door"] = {
         ["map"] = "RubberPrisonPier",
         ["door"] = "loadzonecell2",
@@ -4306,8 +4238,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonCells2: loadzoneright",
-      ["from"] = "RubberPrisonCells2",
-      ["to"] = "RubberPrisonPier",
+      ["from"] = "RubberPrisonCells2 (Right Door)",
+      ["to"] = "RubberPrisonPier (Second Floor)",
       ["door"] = {
         ["map"] = "RubberPrisonCells2",
         ["door"] = "loadzoneright",
@@ -4315,7 +4247,7 @@ return {
     },
     {
       ["name"] = "RubberPrisonPier: loadzonesecurity",
-      ["from"] = "RubberPrisonPier",
+      ["from"] = "RubberPrisonPier (Top Floor)",
       ["to"] = "RubberPrisonSecurity",
       ["door"] = {
         ["map"] = "RubberPrisonPier",
@@ -4325,7 +4257,7 @@ return {
     {
       ["name"] = "RubberPrisonSecurity: loadzoneoutside",
       ["from"] = "RubberPrisonSecurity",
-      ["to"] = "RubberPrisonPier",
+      ["to"] = "RubberPrisonPier (Top Floor)",
       ["door"] = {
         ["map"] = "RubberPrisonSecurity",
         ["door"] = "loadzoneoutside",
@@ -4333,7 +4265,7 @@ return {
     },
     {
       ["name"] = "RubberPrisonPier: loadzonelibrary",
-      ["from"] = "RubberPrisonPier",
+      ["from"] = "RubberPrisonPier (Top Floor)",
       ["to"] = "RubberPrisonLibrary",
       ["door"] = {
         ["map"] = "RubberPrisonPier",
@@ -4343,7 +4275,7 @@ return {
     {
       ["name"] = "RubberPrisonLibrary: loadzone",
       ["from"] = "RubberPrisonLibrary",
-      ["to"] = "RubberPrisonPier",
+      ["to"] = "RubberPrisonPier (Top Floor)",
       ["door"] = {
         ["map"] = "RubberPrisonLibrary",
         ["door"] = "loadzone",
@@ -4351,7 +4283,7 @@ return {
     },
     {
       ["name"] = "RubberPrisonPier: loadzoneoffice",
-      ["from"] = "RubberPrisonPier",
+      ["from"] = "RubberPrisonPier (Third Floor)",
       ["to"] = "RubberPrisonOffice",
       ["door"] = {
         ["map"] = "RubberPrisonPier",
@@ -4361,7 +4293,7 @@ return {
     {
       ["name"] = "RubberPrisonOffice: loadzone",
       ["from"] = "RubberPrisonOffice",
-      ["to"] = "RubberPrisonPier",
+      ["to"] = "RubberPrisonPier (Third Floor)",
       ["door"] = {
         ["map"] = "RubberPrisonOffice",
         ["door"] = "loadzone",
@@ -4369,7 +4301,7 @@ return {
     },
     {
       ["name"] = "RubberPrisonPier: loadzoneboss",
-      ["from"] = "RubberPrisonPier",
+      ["from"] = "RubberPrisonPier (Second Floor Right Door)",
       ["to"] = "RubberPrisonGiantLairBridge",
       ["door"] = {
         ["map"] = "RubberPrisonPier",
@@ -4379,7 +4311,7 @@ return {
     {
       ["name"] = "RubberPrisonGiantLairBridge: loadzoneback",
       ["from"] = "RubberPrisonGiantLairBridge",
-      ["to"] = "RubberPrisonPier",
+      ["to"] = "RubberPrisonPier (Second Floor Right Door)",
       ["door"] = {
         ["map"] = "RubberPrisonGiantLairBridge",
         ["door"] = "loadzoneback",
@@ -4387,8 +4319,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonPier: bossshortcut",
-      ["from"] = "RubberPrisonPier",
-      ["to"] = "RubberPrisonGiantLairBridge",
+      ["from"] = "RubberPrisonPier (Shortcut Door)",
+      ["to"] = "RubberPrisonGiantLairBridge (Top Left Door)",
       ["door"] = {
         ["map"] = "RubberPrisonPier",
         ["door"] = "bossshortcut",
@@ -4396,8 +4328,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonGiantLairBridge: loadzoneshortcut",
-      ["from"] = "RubberPrisonGiantLairBridge",
-      ["to"] = "RubberPrisonPier",
+      ["from"] = "RubberPrisonGiantLairBridge (Top Left Door)",
+      ["to"] = "RubberPrisonPier (Shortcut Door)",
       ["door"] = {
         ["map"] = "RubberPrisonGiantLairBridge",
         ["door"] = "loadzoneshortcut",
@@ -4405,7 +4337,7 @@ return {
     },
     {
       ["name"] = "RubberPrisonPier: loadzone3rdfloor",
-      ["from"] = "RubberPrisonPier",
+      ["from"] = "RubberPrisonPier (Third Floor)",
       ["to"] = "RubberPrisonThirdFloor",
       ["door"] = {
         ["map"] = "RubberPrisonPier",
@@ -4415,7 +4347,7 @@ return {
     {
       ["name"] = "RubberPrisonThirdFloor: loadzonebridge",
       ["from"] = "RubberPrisonThirdFloor",
-      ["to"] = "RubberPrisonPier",
+      ["to"] = "RubberPrisonPier (Third Floor)",
       ["door"] = {
         ["map"] = "RubberPrisonThirdFloor",
         ["door"] = "loadzonebridge",
@@ -4423,17 +4355,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonCheckpointCorridor: loadzoneforward",
-      ["from"] = "RubberPrisonCheckpointCorridor",
+      ["from"] = "RubberPrisonCheckpointCorridor (Top Left Door)",
       ["to"] = "RubberPrisonSpikeRoom",
-      ["rule"] = {
-        ["rule"] = "Has",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["args"] = {
-          ["item_name"] = "Explorer Permit",
-          ["count"] = 1,
-        },
-      },
       ["door"] = {
         ["map"] = "RubberPrisonCheckpointCorridor",
         ["door"] = "loadzoneforward",
@@ -4442,7 +4365,7 @@ return {
     {
       ["name"] = "RubberPrisonSpikeRoom: loadzoneback",
       ["from"] = "RubberPrisonSpikeRoom",
-      ["to"] = "RubberPrisonCheckpointCorridor",
+      ["to"] = "RubberPrisonCheckpointCorridor (Top Left Door)",
       ["door"] = {
         ["map"] = "RubberPrisonSpikeRoom",
         ["door"] = "loadzoneback",
@@ -4450,7 +4373,7 @@ return {
     },
     {
       ["name"] = "RubberPrisonSpikeRoom: loadzonenorth",
-      ["from"] = "RubberPrisonSpikeRoom",
+      ["from"] = "RubberPrisonSpikeRoom (Top Door)",
       ["to"] = "RubberPrisonCells1",
       ["door"] = {
         ["map"] = "RubberPrisonSpikeRoom",
@@ -4460,7 +4383,7 @@ return {
     {
       ["name"] = "RubberPrisonCells1: loadzonesouth",
       ["from"] = "RubberPrisonCells1",
-      ["to"] = "RubberPrisonSpikeRoom",
+      ["to"] = "RubberPrisonSpikeRoom (Top Door)",
       ["door"] = {
         ["map"] = "RubberPrisonCells1",
         ["door"] = "loadzonesouth",
@@ -4468,8 +4391,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonCells1: loadzoneright",
-      ["from"] = "RubberPrisonCells1",
-      ["to"] = "RubberPrisonCells2",
+      ["from"] = "RubberPrisonCells1 (Right Door)",
+      ["to"] = "RubberPrisonCells2 (Left Door)",
       ["door"] = {
         ["map"] = "RubberPrisonCells1",
         ["door"] = "loadzoneright",
@@ -4477,8 +4400,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonCells2: loadzoneleft",
-      ["from"] = "RubberPrisonCells2",
-      ["to"] = "RubberPrisonCells1",
+      ["from"] = "RubberPrisonCells2 (Left Door)",
+      ["to"] = "RubberPrisonCells1 (Right Door)",
       ["door"] = {
         ["map"] = "RubberPrisonCells2",
         ["door"] = "loadzoneleft",
@@ -4486,7 +4409,7 @@ return {
     },
     {
       ["name"] = "RubberPrisonCells1: loadzoneleft",
-      ["from"] = "RubberPrisonCells1",
+      ["from"] = "RubberPrisonCells1 (Left Door)",
       ["to"] = "RubberPrisonCafeteria",
       ["door"] = {
         ["map"] = "RubberPrisonCells1",
@@ -4496,7 +4419,7 @@ return {
     {
       ["name"] = "RubberPrisonCafeteria: loadzone",
       ["from"] = "RubberPrisonCafeteria",
-      ["to"] = "RubberPrisonCells1",
+      ["to"] = "RubberPrisonCells1 (Left Door)",
       ["door"] = {
         ["map"] = "RubberPrisonCafeteria",
         ["door"] = "loadzone",
@@ -4504,8 +4427,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonCells1: loadzone3rdfloor",
-      ["from"] = "RubberPrisonCells1",
-      ["to"] = "RubberPrisonThirdFloor",
+      ["from"] = "RubberPrisonCells1 (Top Door)",
+      ["to"] = "RubberPrisonThirdFloor (Bottom Left)",
       ["door"] = {
         ["map"] = "RubberPrisonCells1",
         ["door"] = "loadzone3rdfloor",
@@ -4513,8 +4436,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonThirdFloor: loadzonecells1",
-      ["from"] = "RubberPrisonThirdFloor",
-      ["to"] = "RubberPrisonCells1",
+      ["from"] = "RubberPrisonThirdFloor (Bottom Left)",
+      ["to"] = "RubberPrisonCells1 (Top Door)",
       ["door"] = {
         ["map"] = "RubberPrisonThirdFloor",
         ["door"] = "loadzonecells1",
@@ -4522,7 +4445,7 @@ return {
     },
     {
       ["name"] = "RubberPrisonCells2: loadzone3rdfloor",
-      ["from"] = "RubberPrisonCells2",
+      ["from"] = "RubberPrisonCells2 (Top Door)",
       ["to"] = "RubberPrisonThirdFloor",
       ["door"] = {
         ["map"] = "RubberPrisonCells2",
@@ -4532,7 +4455,7 @@ return {
     {
       ["name"] = "RubberPrisonThirdFloor: loadzonecells2",
       ["from"] = "RubberPrisonThirdFloor",
-      ["to"] = "RubberPrisonCells2",
+      ["to"] = "RubberPrisonCells2 (Top Door)",
       ["door"] = {
         ["map"] = "RubberPrisonThirdFloor",
         ["door"] = "loadzonecells2",
@@ -4541,7 +4464,7 @@ return {
     {
       ["name"] = "RubberPrisonGym: loadzone",
       ["from"] = "RubberPrisonGym",
-      ["to"] = "RubberPrisonThirdFloor",
+      ["to"] = "RubberPrisonThirdFloor (Gym Door)",
       ["door"] = {
         ["map"] = "RubberPrisonGym",
         ["door"] = "loadzone",
@@ -4549,7 +4472,7 @@ return {
     },
     {
       ["name"] = "RubberPrisonThirdFloor: loadzonegym",
-      ["from"] = "RubberPrisonThirdFloor",
+      ["from"] = "RubberPrisonThirdFloor (Gym Door)",
       ["to"] = "RubberPrisonGym",
       ["door"] = {
         ["map"] = "RubberPrisonThirdFloor",
@@ -4558,8 +4481,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonSecurity: loadzone3rdfloor",
-      ["from"] = "RubberPrisonSecurity",
-      ["to"] = "RubberPrisonThirdFloor",
+      ["from"] = "RubberPrisonSecurity (Bottom Right)",
+      ["to"] = "RubberPrisonThirdFloor (Upper Right)",
       ["door"] = {
         ["map"] = "RubberPrisonSecurity",
         ["door"] = "loadzone3rdfloor",
@@ -4567,8 +4490,8 @@ return {
     },
     {
       ["name"] = "RubberPrisonThirdFloor: loadzonesecurity",
-      ["from"] = "RubberPrisonThirdFloor",
-      ["to"] = "RubberPrisonSecurity",
+      ["from"] = "RubberPrisonThirdFloor (Upper Right)",
+      ["to"] = "RubberPrisonSecurity (Bottom Right)",
       ["door"] = {
         ["map"] = "RubberPrisonThirdFloor",
         ["door"] = "loadzonesecurity",
@@ -4576,7 +4499,7 @@ return {
     },
     {
       ["name"] = "RubberPrisonGiantLairBridge: loadzonegl",
-      ["from"] = "RubberPrisonGiantLairBridge",
+      ["from"] = "RubberPrisonGiantLairBridge (Right)",
       ["to"] = "GiantLairEntrance",
       ["door"] = {
         ["map"] = "RubberPrisonGiantLairBridge",
@@ -4586,7 +4509,7 @@ return {
     {
       ["name"] = "GiantLairEntrance: loadzoneoutside",
       ["from"] = "GiantLairEntrance",
-      ["to"] = "RubberPrisonGiantLairBridge",
+      ["to"] = "RubberPrisonGiantLairBridge (Right)",
       ["door"] = {
         ["map"] = "GiantLairEntrance",
         ["door"] = "loadzoneoutside",
@@ -4612,7 +4535,7 @@ return {
     },
     {
       ["name"] = "GiantLairDeadLands1: loadzoneforward",
-      ["from"] = "GiantLairDeadLands1",
+      ["from"] = "GiantLairDeadLands1 (Right Door)",
       ["to"] = "GiantLairDeadLands2",
       ["door"] = {
         ["map"] = "GiantLairDeadLands1",
@@ -4622,7 +4545,7 @@ return {
     {
       ["name"] = "GiantLairDeadLands2: loadzoneback",
       ["from"] = "GiantLairDeadLands2",
-      ["to"] = "GiantLairDeadLands1",
+      ["to"] = "GiantLairDeadLands1 (Right Door)",
       ["door"] = {
         ["map"] = "GiantLairDeadLands2",
         ["door"] = "loadzoneback",
@@ -4630,7 +4553,7 @@ return {
     },
     {
       ["name"] = "GiantLairDeadLands2: loadzonenext",
-      ["from"] = "GiantLairDeadLands2",
+      ["from"] = "GiantLairDeadLands2 (Right)",
       ["to"] = "GiantLairFridgeOutside",
       ["door"] = {
         ["map"] = "GiantLairDeadLands2",
@@ -4640,7 +4563,7 @@ return {
     {
       ["name"] = "GiantLairFridgeOutside: loadzoneback",
       ["from"] = "GiantLairFridgeOutside",
-      ["to"] = "GiantLairDeadLands2",
+      ["to"] = "GiantLairDeadLands2 (Right)",
       ["door"] = {
         ["map"] = "GiantLairFridgeOutside",
         ["door"] = "loadzoneback",
@@ -4648,7 +4571,7 @@ return {
     },
     {
       ["name"] = "GiantLairFridgeOutside: fridgeloadzone",
-      ["from"] = "GiantLairFridgeOutside",
+      ["from"] = "GiantLairFridgeOutside (Right)",
       ["to"] = "GiantLairFridgeInside",
       ["door"] = {
         ["map"] = "GiantLairFridgeOutside",
@@ -4658,7 +4581,7 @@ return {
     {
       ["name"] = "GiantLairFridgeInside: loadzone",
       ["from"] = "GiantLairFridgeInside",
-      ["to"] = "GiantLairFridgeOutside",
+      ["to"] = "GiantLairFridgeOutside (Right)",
       ["door"] = {
         ["map"] = "GiantLairFridgeInside",
         ["door"] = "loadzone",
@@ -4666,7 +4589,7 @@ return {
     },
     {
       ["name"] = "GiantLairRoachVillage: loadzoneplains",
-      ["from"] = "GiantLairRoachVillage",
+      ["from"] = "GiantLairRoachVillage (Left Door)",
       ["to"] = "GiantLairBeforeBoss",
       ["door"] = {
         ["map"] = "GiantLairRoachVillage",
@@ -4676,7 +4599,7 @@ return {
     {
       ["name"] = "GiantLairBeforeBoss: loadzonevillage",
       ["from"] = "GiantLairBeforeBoss",
-      ["to"] = "GiantLairRoachVillage",
+      ["to"] = "GiantLairRoachVillage (Left Door)",
       ["door"] = {
         ["map"] = "GiantLairBeforeBoss",
         ["door"] = "loadzonevillage",
@@ -4685,7 +4608,7 @@ return {
     {
       ["name"] = "GiantLairSaplingPlains: loadzonevillage",
       ["from"] = "GiantLairSaplingPlains",
-      ["to"] = "GiantLairBeforeBoss",
+      ["to"] = "GiantLairBeforeBoss (Left)",
       ["door"] = {
         ["map"] = "GiantLairSaplingPlains",
         ["door"] = "loadzonevillage",
@@ -4693,7 +4616,7 @@ return {
     },
     {
       ["name"] = "GiantLairBeforeBoss: loadzonefinal",
-      ["from"] = "GiantLairBeforeBoss",
+      ["from"] = "GiantLairBeforeBoss (Left)",
       ["to"] = "GiantLairSaplingPlains",
       ["door"] = {
         ["map"] = "GiantLairBeforeBoss",
@@ -4701,26 +4624,8 @@ return {
       },
     },
     {
-      ["name"] = "BugariaEndPlaza: loadzone palace - Duplicate",
-      ["from"] = "BugariaEndPlaza",
-      ["to"] = "BugariaEndBridge",
-      ["door"] = {
-        ["map"] = "BugariaEndPlaza",
-        ["door"] = "loadzone palace - Duplicate",
-      },
-    },
-    {
-      ["name"] = "BugariaEndBridge: loadzoneplaza - Duplicate",
-      ["from"] = "BugariaEndBridge",
-      ["to"] = "BugariaEndPlaza",
-      ["door"] = {
-        ["map"] = "BugariaEndBridge",
-        ["door"] = "loadzoneplaza - Duplicate",
-      },
-    },
-    {
       ["name"] = "GiantLairBeforeBoss: loadzoneup",
-      ["from"] = "GiantLairBeforeBoss",
+      ["from"] = "GiantLairBeforeBoss (Upper)",
       ["to"] = "GiantLairBeforeBoss2",
       ["door"] = {
         ["map"] = "GiantLairBeforeBoss",
@@ -4730,7 +4635,7 @@ return {
     {
       ["name"] = "GiantLairBeforeBoss2: loadzoneright",
       ["from"] = "GiantLairBeforeBoss2",
-      ["to"] = "GiantLairBeforeBoss",
+      ["to"] = "GiantLairBeforeBoss (Upper)",
       ["door"] = {
         ["map"] = "GiantLairBeforeBoss2",
         ["door"] = "loadzoneright",
@@ -4764,8 +4669,8 @@ return {
     },
     {
       ["name"] = "WaspKingdomOutside: loadzoneinside#14",
-      ["from"] = "WaspKingdomOutside",
-      ["to"] = "WaspKingdom1",
+      ["from"] = "WaspKingdomOutside (Grass Door)",
+      ["to"] = "WaspKingdom1 (Bottom)",
       ["one_way"] = {
         ["map"] = "WaspKingdomOutside",
         ["door"] = "loadzoneinside#14",
@@ -4899,8 +4804,8 @@ return {
     },
     {
       ["name"] = "GiantLairBeforeBoss2: loadzoneleft",
-      ["from"] = "GiantLairBeforeBoss2",
-      ["to"] = "GiantLairBeforeBoss",
+      ["from"] = "GiantLairBeforeBoss2 (Left Left)",
+      ["to"] = "GiantLairBeforeBoss (Middle Left)",
       ["one_way"] = {
         ["map"] = "GiantLairBeforeBoss2",
         ["door"] = "loadzoneleft",
@@ -5007,9 +4912,19 @@ return {
       ["to"] = "BugariaBridgeAttack",
     },
     {
-      ["name"] = "BugariaPier (Dock) to MetalIsland1 (boat)",
+      ["name"] = "BugariaEndPlaza to BugariaEndBridge",
+      ["from"] = "BugariaEndPlaza",
+      ["to"] = "BugariaEndBridge",
+    },
+    {
+      ["name"] = "BugariaEndBridge to BugariaEndPlaza",
+      ["from"] = "BugariaEndBridge",
+      ["to"] = "BugariaEndPlaza",
+    },
+    {
+      ["name"] = "BugariaPier (Dock) to MetalIsland1 (Dock) (boat)",
       ["from"] = "BugariaPier (Dock)",
-      ["to"] = "MetalIsland1",
+      ["to"] = "MetalIsland1 (Dock)",
       ["rule"] = {
         ["rule"] = "Boat",
         ["options"] = {},
@@ -5020,8 +4935,8 @@ return {
       },
     },
     {
-      ["name"] = "MetalIsland1 to BugariaPier (Dock) (boat)",
-      ["from"] = "MetalIsland1",
+      ["name"] = "MetalIsland1 (Dock) to BugariaPier (Dock) (boat)",
+      ["from"] = "MetalIsland1 (Dock)",
       ["to"] = "BugariaPier (Dock)",
       ["rule"] = {
         ["rule"] = "Boat",
@@ -5037,101 +4952,11 @@ return {
       ["from"] = "BugariaPier",
       ["to"] = "MetalLake",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Boat",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
-            },
-          },
+        ["args"] = {
+          ["level"] = 2,
         },
       },
     },
@@ -5140,101 +4965,11 @@ return {
       ["from"] = "MetalLake",
       ["to"] = "BugariaPier",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Boat",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
-            },
-          },
+        ["args"] = {
+          ["level"] = 2,
         },
       },
     },
@@ -5244,404 +4979,41 @@ return {
       ["to"] = "UndergroundBar",
     },
     {
-      ["name"] = "AntTunnels to RubberPrisonGiantLairBridge (ant tunnel)",
+      ["name"] = "AntTunnels to RubberPrisonGiantLairBridge (Middle) (ant tunnel)",
       ["from"] = "AntTunnels",
-      ["to"] = "RubberPrisonGiantLairBridge",
+      ["to"] = "RubberPrisonGiantLairBridge (Middle)",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Has",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
-            },
-          },
+        ["args"] = {
+          ["item_name"] = "Giant's Lair Bridge Fight Won",
+          ["count"] = 1,
         },
       },
     },
     {
-      ["name"] = "RubberPrisonGiantLairBridge to AntTunnels (ant tunnel)",
-      ["from"] = "RubberPrisonGiantLairBridge",
+      ["name"] = "RubberPrisonGiantLairBridge (Middle) to AntTunnels (ant tunnel)",
+      ["from"] = "RubberPrisonGiantLairBridge (Middle)",
       ["to"] = "AntTunnels",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Has",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["name"] = "AntTunnels to MetalIsland2 (ant tunnel)",
-      ["from"] = "AntTunnels",
-      ["to"] = "MetalIsland2",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-        },
-      },
-    },
-    {
-      ["name"] = "MetalIsland2 to AntTunnels (ant tunnel)",
-      ["from"] = "MetalIsland2",
-      ["to"] = "AntTunnels",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
+        ["args"] = {
+          ["item_name"] = "Giant's Lair Bridge Fight Won",
+          ["count"] = 1,
         },
       },
     },
     {
       ["name"] = "GoldenSettlementEntrance to AntTunnels (ant tunnel)",
       ["from"] = "GoldenSettlementEntrance",
+      ["to"] = "AntTunnels",
+    },
+    {
+      ["name"] = "MetalIsland2 to AntTunnels (ant tunnel)",
+      ["from"] = "MetalIsland2",
       ["to"] = "AntTunnels",
     },
     {
@@ -6569,8 +5941,284 @@ return {
       },
     },
     {
-      ["name"] = "DefiantRoot2 to BeehiveOutside (elevator)",
-      ["from"] = "DefiantRoot2",
+      ["name"] = "FarGrasslands4 (Top Right) to FarGrasslands4 (thorns)",
+      ["from"] = "FarGrasslands4 (Top Right)",
+      ["to"] = "FarGrasslands4",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FarGrasslands4 to FarGrasslands4 (Top Right) (thorns)",
+      ["from"] = "FarGrasslands4",
+      ["to"] = "FarGrasslands4 (Top Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands3 (Right) to Swamplands3 (drop)",
+      ["from"] = "Swamplands3 (Right)",
+      ["to"] = "Swamplands3",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+            {
+              ["rule"] = "Or",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Bee Fly",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SwamplandsBridge (Top) to SwamplandsBridge (Red Bounce Pad) (drop)",
+      ["from"] = "SwamplandsBridge (Top)",
+      ["to"] = "SwamplandsBridge (Red Bounce Pad)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SwamplandsBridge (Red Bounce Pad) to SwamplandsBridge (Top) (ledge)",
+      ["from"] = "SwamplandsBridge (Red Bounce Pad)",
+      ["to"] = "SwamplandsBridge (Top)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Jump",
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands6 (Lower Right) to Swamplands6 (lily pad)",
+      ["from"] = "Swamplands6 (Lower Right)",
+      ["to"] = "Swamplands6",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Horn Slash",
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands7 (Upper Left) to Swamplands7 (Left) (drop)",
+      ["from"] = "Swamplands7 (Upper Left)",
+      ["to"] = "Swamplands7 (Left)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Dash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Freeze",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands7 (Left) to Swamplands7 (Bottom Right) (ledges)",
+      ["from"] = "Swamplands7 (Left)",
+      ["to"] = "Swamplands7 (Bottom Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "WayBack",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["child"] = {
+              ["rule"] = "And",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Horn Dash",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Freeze",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Horn Slash",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "DefiantRoot2 (Elevator) to BeehiveOutside (elevator)",
+      ["from"] = "DefiantRoot2 (Elevator)",
       ["to"] = "BeehiveOutside",
       ["rule"] = {
         ["rule"] = "And",
@@ -6664,9 +6312,146 @@ return {
       },
     },
     {
-      ["name"] = "BeehiveOutside to DefiantRoot2 (elevator)",
-      ["from"] = "BeehiveOutside",
-      ["to"] = "DefiantRoot2",
+      ["name"] = "SandCastleSlidePuzzle (Upper Left) to SandCastleSlidePuzzle (Bottom) (drop)",
+      ["from"] = "SandCastleSlidePuzzle (Upper Left)",
+      ["to"] = "SandCastleSlidePuzzle (Bottom)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleSlidePuzzle (Upper Right) to SandCastleSlidePuzzle (Bottom) (drop)",
+      ["from"] = "SandCastleSlidePuzzle (Upper Right)",
+      ["to"] = "SandCastleSlidePuzzle (Bottom)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleMainRoom (Middle Right) to SandCastleMainRoom (Middle Left) (ledge outside)",
+      ["from"] = "SandCastleMainRoom (Middle Right)",
+      ["to"] = "SandCastleMainRoom (Middle Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleMainRoom (Middle Left) to SandCastleMainRoom (Middle Right) (ledge outside)",
+      ["from"] = "SandCastleMainRoom (Middle Left)",
+      ["to"] = "SandCastleMainRoom (Middle Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleMainRoom (Top Right) to SandCastleMainRoom (Top Left) (ledge)",
+      ["from"] = "SandCastleMainRoom (Top Right)",
+      ["to"] = "SandCastleMainRoom (Top Left)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "WayBack",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["child"] = {
+              ["rule"] = "And",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "Has",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["item_name"] = "Sand Castle Upper Lift Running",
+                    ["count"] = 1,
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleMainRoom (Top Right) to SandCastleMainRoom (Middle Right) (lift)",
+      ["from"] = "SandCastleMainRoom (Top Right)",
+      ["to"] = "SandCastleMainRoom (Middle Right)",
       ["rule"] = {
         ["rule"] = "And",
         ["options"] = {},
@@ -6677,676 +6462,727 @@ return {
             ["options"] = {},
             ["filtered_resolution"] = false,
             ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
+              ["item_name"] = "Sand Castle Upper Lift Running",
               ["count"] = 1,
             },
           },
           {
-            ["rule"] = "Has",
+            ["rule"] = "WayBack",
             ["options"] = {},
             ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
+            ["child"] = {
+              ["rule"] = "And",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "Has",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["item_name"] = "Sand Castle Upper Lift Running",
+                    ["count"] = 1,
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+              },
             },
           },
         },
       },
     },
     {
-      ["name"] = "RubberPrisonPier to MetalLake (submarine)",
-      ["from"] = "RubberPrisonPier",
+      ["name"] = "SandCastleRockRoom (Top Right) to SandCastleRockRoom (Top Left) (ledge)",
+      ["from"] = "SandCastleRockRoom (Top Right)",
+      ["to"] = "SandCastleRockRoom (Top Left)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Sand Castle Rock Room Boulder Broken",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "And",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beemerang Toss",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Jump",
+                    },
+                  },
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleRockRoom (Top Left) to SandCastleRockRoom (Top Right) (flight)",
+      ["from"] = "SandCastleRockRoom (Top Left)",
+      ["to"] = "SandCastleRockRoom (Top Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Sand Castle Rock Room Boulder Broken",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "BeehiveOutside to DefiantRoot2 (Elevator) (elevator)",
+      ["from"] = "BeehiveOutside",
+      ["to"] = "DefiantRoot2 (Elevator)",
+    },
+    {
+      ["name"] = "FactoryProcessingFirstRoom to FactoryProcessingMalbee (Tram) (tram)",
+      ["from"] = "FactoryProcessingFirstRoom",
+      ["to"] = "FactoryProcessingMalbee (Tram)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Malbee's Fight Done",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingMalbee (Tram) to FactoryProcessingFirstRoom (tram)",
+      ["from"] = "FactoryProcessingMalbee (Tram)",
+      ["to"] = "FactoryProcessingFirstRoom",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Malbee's Fight Done",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingPump (Upper Left) to FactoryProcessingPump (Upper Right) (platforms)",
+      ["from"] = "FactoryProcessingPump (Upper Left)",
+      ["to"] = "FactoryProcessingPump (Upper Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingPump (Upper Right) to FactoryProcessingPump (Upper Left) (platforms)",
+      ["from"] = "FactoryProcessingPump (Upper Right)",
+      ["to"] = "FactoryProcessingPump (Upper Left)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingFirstRoom (Left) to FactoryProcessingFirstRoom (Bottom) (drop)",
+      ["from"] = "FactoryProcessingFirstRoom (Left)",
+      ["to"] = "FactoryProcessingFirstRoom (Bottom)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "Or",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Bee Fly",
+                  },
+                },
+              },
+            },
+            {
+              ["rule"] = "Has",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["item_name"] = "First Room Platforms Running",
+                ["count"] = 1,
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Shield",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Ground Lower Right) to MetalLake (submarine)",
+      ["from"] = "RubberPrisonPier (Ground Lower Right)",
       ["to"] = "MetalLake",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Boat",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["level"] = 2,
+        },
+      },
+    },
+    {
+      ["name"] = "MetalLake to RubberPrisonPier (Ground Lower Right) (submarine)",
+      ["from"] = "MetalLake",
+      ["to"] = "RubberPrisonPier (Ground Lower Right)",
+      ["rule"] = {
+        ["rule"] = "Boat",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["level"] = 2,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Ground Lower Left) to RubberPrisonPier (Ground Lower Right) (platforms)",
+      ["from"] = "RubberPrisonPier (Ground Lower Left)",
+      ["to"] = "RubberPrisonPier (Ground Lower Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
         ["options"] = {},
         ["filtered_resolution"] = false,
         ["children"] = {
           {
-            ["rule"] = "Has",
+            ["rule"] = "CanUse",
             ["options"] = {},
             ["filtered_resolution"] = false,
             ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
+              ["ability"] = "Jump",
             },
           },
           {
-            ["rule"] = "Has",
+            ["rule"] = "CanUse",
             ["options"] = {},
             ["filtered_resolution"] = false,
             ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
+              ["ability"] = "Bee Fly",
             },
           },
         },
       },
     },
     {
-      ["name"] = "MetalLake to RubberPrisonPier (submarine)",
-      ["from"] = "MetalLake",
+      ["name"] = "RubberPrisonPier (Ground Lower Right) to RubberPrisonPier (Ground Lower Left) (platforms)",
+      ["from"] = "RubberPrisonPier (Ground Lower Right)",
+      ["to"] = "RubberPrisonPier (Ground Lower Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Top Floor) to RubberPrisonPier (Third Floor) (drop)",
+      ["from"] = "RubberPrisonPier (Top Floor)",
+      ["to"] = "RubberPrisonPier (Third Floor)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Top Floor) to RubberPrisonPier (Second Floor) (drop)",
+      ["from"] = "RubberPrisonPier (Top Floor)",
+      ["to"] = "RubberPrisonPier (Second Floor)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Top Floor) to RubberPrisonPier (Ground Upper Left) (drop)",
+      ["from"] = "RubberPrisonPier (Top Floor)",
+      ["to"] = "RubberPrisonPier (Ground Upper Left)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Top Floor) to RubberPrisonPier (drop)",
+      ["from"] = "RubberPrisonPier (Top Floor)",
       ["to"] = "RubberPrisonPier",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "WayBack",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Top Floor) to RubberPrisonPier (Ground Lower Left) (drop)",
+      ["from"] = "RubberPrisonPier (Top Floor)",
+      ["to"] = "RubberPrisonPier (Ground Lower Left)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Top Floor) to RubberPrisonPier (Ground Lower Right) (drop)",
+      ["from"] = "RubberPrisonPier (Top Floor)",
+      ["to"] = "RubberPrisonPier (Ground Lower Right)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Third Floor) to RubberPrisonPier (Second Floor) (drop)",
+      ["from"] = "RubberPrisonPier (Third Floor)",
+      ["to"] = "RubberPrisonPier (Second Floor)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Third Floor) to RubberPrisonPier (Ground Upper Left) (drop)",
+      ["from"] = "RubberPrisonPier (Third Floor)",
+      ["to"] = "RubberPrisonPier (Ground Upper Left)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Third Floor) to RubberPrisonPier (drop)",
+      ["from"] = "RubberPrisonPier (Third Floor)",
+      ["to"] = "RubberPrisonPier",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Third Floor) to RubberPrisonPier (Ground Lower Left) (drop)",
+      ["from"] = "RubberPrisonPier (Third Floor)",
+      ["to"] = "RubberPrisonPier (Ground Lower Left)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Third Floor) to RubberPrisonPier (Ground Lower Right) (drop)",
+      ["from"] = "RubberPrisonPier (Third Floor)",
+      ["to"] = "RubberPrisonPier (Ground Lower Right)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Second Floor) to RubberPrisonPier (Ground Upper Left) (drop)",
+      ["from"] = "RubberPrisonPier (Second Floor)",
+      ["to"] = "RubberPrisonPier (Ground Upper Left)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Second Floor) to RubberPrisonPier (drop)",
+      ["from"] = "RubberPrisonPier (Second Floor)",
+      ["to"] = "RubberPrisonPier",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Second Floor) to RubberPrisonPier (Ground Lower Left) (drop)",
+      ["from"] = "RubberPrisonPier (Second Floor)",
+      ["to"] = "RubberPrisonPier (Ground Lower Left)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Second Floor) to RubberPrisonPier (Ground Lower Right) (drop)",
+      ["from"] = "RubberPrisonPier (Second Floor)",
+      ["to"] = "RubberPrisonPier (Ground Lower Right)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells2 (Upper) to RubberPrisonCells2 (Middle) (drop)",
+      ["from"] = "RubberPrisonCells2 (Upper)",
+      ["to"] = "RubberPrisonCells2 (Middle)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "CanUse",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["ability"] = "Shield",
           },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonThirdFloor (Upper Right) to RubberPrisonThirdFloor (drop)",
+      ["from"] = "RubberPrisonThirdFloor (Upper Right)",
+      ["to"] = "RubberPrisonThirdFloor",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Shield",
+              },
             },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
+            {
+              ["rule"] = "Or",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Beemerang Toss",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Horn Slash",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Freeze",
+                  },
+                },
+              },
             },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
+            {
+              ["rule"] = "Or",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Bee Fly",
+                  },
+                },
+              },
             },
           },
         },
       },
     },
     {
-      ["name"] = "GiantLairFridgeInside to GiantLairRoachVillage (lift)",
-      ["from"] = "GiantLairFridgeInside",
-      ["to"] = "GiantLairRoachVillage",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-        },
-      },
+      ["name"] = "GiantLairFridgeInside (Lift) to GiantLairRoachVillage (Fridge Lift) (lift)",
+      ["from"] = "GiantLairFridgeInside (Lift)",
+      ["to"] = "GiantLairRoachVillage (Fridge Lift)",
     },
     {
-      ["name"] = "GiantLairRoachVillage to GiantLairFridgeInside (lift)",
-      ["from"] = "GiantLairRoachVillage",
-      ["to"] = "GiantLairFridgeInside",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-        },
-      },
+      ["name"] = "GiantLairRoachVillage (Fridge Lift) to GiantLairFridgeInside (Lift) (lift)",
+      ["from"] = "GiantLairRoachVillage (Fridge Lift)",
+      ["to"] = "GiantLairFridgeInside (Lift)",
     },
     {
       ["name"] = "GiantLairRoachVillage to GiantLairEntrance (lift)",
       ["from"] = "GiantLairRoachVillage",
       ["to"] = "GiantLairEntrance",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-        },
-      },
     },
     {
       ["name"] = "GiantLairEntrance to GiantLairRoachVillage (lift)",
       ["from"] = "GiantLairEntrance",
       ["to"] = "GiantLairRoachVillage",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Has",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
+        ["args"] = {
+          ["item_name"] = "Roach Village Scene Seen",
+          ["count"] = 1,
         },
       },
     },
     {
-      ["name"] = "GiantLairSaplingPlains to BugariaEndPlaza (story)",
-      ["from"] = "GiantLairSaplingPlains",
+      ["name"] = "GiantLairSaplingPlains (Last Fight) to BugariaEndPlaza (story)",
+      ["from"] = "GiantLairSaplingPlains (Last Fight)",
       ["to"] = "BugariaEndPlaza",
       ["rule"] = {
         ["rule"] = "And",
@@ -7444,101 +7280,11 @@ return {
       ["from"] = "MysteryIsland",
       ["to"] = "MetalLake",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Boat",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
-            },
-          },
+        ["args"] = {
+          ["level"] = 2,
         },
       },
     },
@@ -7547,513 +7293,76 @@ return {
       ["from"] = "MetalLake",
       ["to"] = "MysteryIsland",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Boat",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
-            },
-          },
+        ["args"] = {
+          ["level"] = 2,
         },
       },
     },
     {
-      ["name"] = "MetalIsland1 to MetalLake (submarine)",
-      ["from"] = "MetalIsland1",
+      ["name"] = "MetalIsland1 (Dock) to MetalLake (submarine)",
+      ["from"] = "MetalIsland1 (Dock)",
       ["to"] = "MetalLake",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Boat",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
-            },
-          },
+        ["args"] = {
+          ["level"] = 2,
         },
       },
     },
     {
-      ["name"] = "MetalLake to MetalIsland1 (submarine)",
+      ["name"] = "MetalLake to MetalIsland1 (Dock) (submarine)",
       ["from"] = "MetalLake",
-      ["to"] = "MetalIsland1",
+      ["to"] = "MetalIsland1 (Dock)",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Boat",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
-            },
-          },
+        ["args"] = {
+          ["level"] = 2,
         },
       },
     },
     {
-      ["name"] = "TermitePier to MetalLake (submarine)",
-      ["from"] = "TermitePier",
+      ["name"] = "MetalIslandAuditorium (Top) to MetalIsland2 (dig)",
+      ["from"] = "MetalIslandAuditorium (Top)",
+      ["to"] = "MetalIsland2",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["name"] = "TermitePier (Dock) to MetalLake (submarine)",
+      ["from"] = "TermitePier (Dock)",
       ["to"] = "MetalLake",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Boat",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
-            },
-          },
+        ["args"] = {
+          ["level"] = 2,
         },
       },
     },
     {
-      ["name"] = "MetalLake to TermitePier (submarine)",
+      ["name"] = "MetalLake to TermitePier (Dock) (submarine)",
       ["from"] = "MetalLake",
-      ["to"] = "TermitePier",
+      ["to"] = "TermitePier (Dock)",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Boat",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
-            },
-          },
+        ["args"] = {
+          ["level"] = 2,
         },
       },
     },
@@ -8067,41 +7376,6 @@ return {
         ["filtered_resolution"] = false,
         ["children"] = {
           {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
             ["rule"] = "Member",
             ["options"] = {},
             ["filtered_resolution"] = false,
@@ -8126,27 +7400,11 @@ return {
             },
           },
           {
-            ["rule"] = "MoveItem",
+            ["rule"] = "CanReachRegion",
             ["options"] = {},
             ["filtered_resolution"] = false,
             ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
+              ["region_name"] = "TermiteRoyalChamber",
             },
           },
         },
@@ -8162,41 +7420,6 @@ return {
         ["filtered_resolution"] = false,
         ["children"] = {
           {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
             ["rule"] = "Member",
             ["options"] = {},
             ["filtered_resolution"] = false,
@@ -8221,27 +7444,64 @@ return {
             },
           },
           {
-            ["rule"] = "MoveItem",
+            ["rule"] = "CanReachRegion",
             ["options"] = {},
             ["filtered_resolution"] = false,
             ["args"] = {
-              ["ability"] = "Beemerang Toss",
+              ["region_name"] = "TermiteRoyalChamber",
             },
           },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdomQueen to BugariaMainPlaza (scene)",
+      ["from"] = "WaspKingdomQueen",
+      ["to"] = "BugariaMainPlaza",
+    },
+    {
+      ["name"] = "HideoutGarden (Upper) to HideoutGarden (drop)",
+      ["from"] = "HideoutGarden (Upper)",
+      ["to"] = "HideoutGarden",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Beetle Dig",
+              },
             },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
+            {
+              ["rule"] = "Or",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Bee Fly",
+                  },
+                },
+              },
             },
           },
         },
@@ -8252,101 +7512,11 @@ return {
       ["from"] = "FishingVillage",
       ["to"] = "MetalLake",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Boat",
         ["options"] = {},
         ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
-            },
-          },
+        ["args"] = {
+          ["level"] = 2,
         },
       },
     },
@@ -8355,99 +7525,100 @@ return {
       ["from"] = "MetalLake",
       ["to"] = "FishingVillage",
       ["rule"] = {
+        ["rule"] = "Boat",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["level"] = 2,
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Upper Top Right) to UpperSnekMiddleRoom (hanging bridge)",
+      ["from"] = "UpperSnekMiddleRoom (Upper Top Right)",
+      ["to"] = "UpperSnekMiddleRoom",
+      ["rule"] = {
         ["rule"] = "And",
         ["options"] = {},
         ["filtered_resolution"] = false,
         ["children"] = {
           {
-            ["rule"] = "Has",
+            ["rule"] = "True_",
             ["options"] = {},
             ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Chapter 2 Started",
-              ["count"] = 1,
-            },
+            ["args"] = {},
           },
           {
-            ["rule"] = "Has",
+            ["rule"] = "WayBack",
             ["options"] = {},
             ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Explorer Permit",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["item_name"] = "Snakemouth Den Cleared",
-              ["count"] = 1,
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Vi",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Kabbu",
-            },
-          },
-          {
-            ["rule"] = "Member",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["name"] = "Leif",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Beemerang Toss",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Horn Slash",
-            },
-          },
-          {
-            ["rule"] = "MoveItem",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["ability"] = "Freeze",
-            },
-          },
-          {
-            ["rule"] = "Boat",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["args"] = {
-              ["level"] = 2,
+            ["child"] = {
+              ["rule"] = "And",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "Or",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["children"] = {
+                    {
+                      ["rule"] = "And",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["children"] = {
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Icicle",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Jump",
+                          },
+                        },
+                      },
+                    },
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Bee Fly",
+                      },
+                    },
+                  },
+                },
+                {
+                  ["rule"] = "Or",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["children"] = {
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Jump",
+                      },
+                    },
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Bee Fly",
+                      },
+                    },
+                  },
+                },
+              },
             },
           },
         },
@@ -14232,6 +13403,261 @@ return {
       },
     },
     {
+      ["name"] = "FarGrasslands4 to FarGrasslands4 (Left)",
+      ["from"] = "FarGrasslands4",
+      ["to"] = "FarGrasslands4 (Left)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FarGrasslands4 (Left) to FarGrasslands4",
+      ["from"] = "FarGrasslands4 (Left)",
+      ["to"] = "FarGrasslands4",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Shield",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "WayBack",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["child"] = {
+              ["rule"] = "And",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+                {
+                  ["rule"] = "Or",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["children"] = {
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Bee Fly",
+                      },
+                    },
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Horn Dash",
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FarGrasslands4 (Left) to FarGrasslands4 (Top Right)",
+      ["from"] = "FarGrasslands4 (Left)",
+      ["to"] = "FarGrasslands4 (Top Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Dash",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FarGrasslands4 (Top Right) to FarGrasslands4 (Left)",
+      ["from"] = "FarGrasslands4 (Top Right)",
+      ["to"] = "FarGrasslands4 (Left)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Dash",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FarGrasslands4 (Top Right) to FarGrasslands4 (Clearing Door)",
+      ["from"] = "FarGrasslands4 (Top Right)",
+      ["to"] = "FarGrasslands4 (Clearing Door)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Horn Dash",
+        },
+      },
+    },
+    {
+      ["name"] = "FarGrasslands4 (Clearing Door) to FarGrasslands4 (Top Right)",
+      ["from"] = "FarGrasslands4 (Clearing Door)",
+      ["to"] = "FarGrasslands4 (Top Right)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "CanUse",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["ability"] = "Horn Dash",
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "WizardTowerBasement to WizardTowerBasement (Top Right)",
+      ["from"] = "WizardTowerBasement",
+      ["to"] = "WizardTowerBasement (Top Right)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Jump",
+        },
+      },
+    },
+    {
+      ["name"] = "WizardTowerBasement (Top Right) to WizardTowerBasement",
+      ["from"] = "WizardTowerBasement (Top Right)",
+      ["to"] = "WizardTowerBasement",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "CanUse",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["ability"] = "Jump",
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "WizardTowerStairs to WizardTowerStairs (Top)",
+      ["from"] = "WizardTowerStairs",
+      ["to"] = "WizardTowerStairs (Top)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Jump",
+        },
+      },
+    },
+    {
+      ["name"] = "WizardTowerStairs (Top) to WizardTowerStairs",
+      ["from"] = "WizardTowerStairs (Top)",
+      ["to"] = "WizardTowerStairs",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "CanUse",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["ability"] = "Jump",
+          },
+        },
+      },
+    },
+    {
       ["name"] = "SwamplandsBoss to SwamplandsBoss (Top)",
       ["from"] = "SwamplandsBoss",
       ["to"] = "SwamplandsBoss (Top)",
@@ -14287,6 +13713,10220 @@ return {
         },
       },
     },
+    {
+      ["name"] = "Swamplands2 to Swamplands2 (Top)",
+      ["from"] = "Swamplands2",
+      ["to"] = "Swamplands2 (Top)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands2 (Top) to Swamplands2",
+      ["from"] = "Swamplands2 (Top)",
+      ["to"] = "Swamplands2",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands3 to Swamplands3 (Bottom)",
+      ["from"] = "Swamplands3",
+      ["to"] = "Swamplands3 (Bottom)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands3 (Bottom) to Swamplands3",
+      ["from"] = "Swamplands3 (Bottom)",
+      ["to"] = "Swamplands3",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands3 to Swamplands3 (Right)",
+      ["from"] = "Swamplands3",
+      ["to"] = "Swamplands3 (Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Swamp Tree Knocked Down",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands3 (Right) to Swamplands3",
+      ["from"] = "Swamplands3 (Right)",
+      ["to"] = "Swamplands3",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Swamp Tree Knocked Down",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SwamplandsBridge to SwamplandsBridge (Top Right)",
+      ["from"] = "SwamplandsBridge",
+      ["to"] = "SwamplandsBridge (Top Right)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SwamplandsBridge (Top Right) to SwamplandsBridge",
+      ["from"] = "SwamplandsBridge (Top Right)",
+      ["to"] = "SwamplandsBridge",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Jump",
+        },
+      },
+    },
+    {
+      ["name"] = "SwamplandsBridge (Top Right) to SwamplandsBridge (Top)",
+      ["from"] = "SwamplandsBridge (Top Right)",
+      ["to"] = "SwamplandsBridge (Top)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "Has",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["item_name"] = "Swamp Lower Bridge Knocked Down",
+                  ["count"] = 1,
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SwamplandsBridge (Top) to SwamplandsBridge (Top Right)",
+      ["from"] = "SwamplandsBridge (Top)",
+      ["to"] = "SwamplandsBridge (Top Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Swamp Lower Bridge Knocked Down",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SwamplandsBridge to SwamplandsBridge (Red Bounce Pad)",
+      ["from"] = "SwamplandsBridge",
+      ["to"] = "SwamplandsBridge (Red Bounce Pad)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Horn Dash",
+        },
+      },
+    },
+    {
+      ["name"] = "SwamplandsBridge (Red Bounce Pad) to SwamplandsBridge",
+      ["from"] = "SwamplandsBridge (Red Bounce Pad)",
+      ["to"] = "SwamplandsBridge",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "SwamplandsBridge to SwamplandsBridge (Bottom)",
+      ["from"] = "SwamplandsBridge",
+      ["to"] = "SwamplandsBridge (Bottom)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "SwamplandsBridge (Bottom) to SwamplandsBridge",
+      ["from"] = "SwamplandsBridge (Bottom)",
+      ["to"] = "SwamplandsBridge",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "Swamplands4 to Swamplands4 (West)",
+      ["from"] = "Swamplands4",
+      ["to"] = "Swamplands4 (West)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "WayBack",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["child"] = {
+                  ["rule"] = "Or",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["children"] = {
+                    {
+                      ["rule"] = "And",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["children"] = {
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Jump",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Freeze",
+                          },
+                        },
+                      },
+                    },
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Bee Fly",
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands4 (West) to Swamplands4",
+      ["from"] = "Swamplands4 (West)",
+      ["to"] = "Swamplands4",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands4 (West) to Swamplands4 (Left Door)",
+      ["from"] = "Swamplands4 (West)",
+      ["to"] = "Swamplands4 (Left Door)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Horn Dash",
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands4 (Left Door) to Swamplands4 (West)",
+      ["from"] = "Swamplands4 (Left Door)",
+      ["to"] = "Swamplands4 (West)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Horn Dash",
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands4 to Swamplands4 (Right)",
+      ["from"] = "Swamplands4",
+      ["to"] = "Swamplands4 (Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "And",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Horn Slash",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Horn Dash",
+                    },
+                  },
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands4 (Right) to Swamplands4",
+      ["from"] = "Swamplands4 (Right)",
+      ["to"] = "Swamplands4",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "And",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Horn Slash",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Horn Dash",
+                    },
+                  },
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands4 (Right) to Swamplands4 (Right Door)",
+      ["from"] = "Swamplands4 (Right)",
+      ["to"] = "Swamplands4 (Right Door)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Dash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands4 (Right Door) to Swamplands4 (Right)",
+      ["from"] = "Swamplands4 (Right Door)",
+      ["to"] = "Swamplands4 (Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Dash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands5 to Swamplands5 (Left)",
+      ["from"] = "Swamplands5",
+      ["to"] = "Swamplands5 (Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "Or",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beemerang Toss",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Horn Slash",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Freeze",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Shield",
+                },
+              },
+              {
+                ["rule"] = "WayBack",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["child"] = {
+                  ["rule"] = "Or",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["children"] = {
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Bee Fly",
+                      },
+                    },
+                    {
+                      ["rule"] = "And",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["children"] = {
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Jump",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Horn Dash",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Beemerang Toss",
+                          },
+                        },
+                        {
+                          ["rule"] = "Or",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["children"] = {
+                            {
+                              ["rule"] = "CanUse",
+                              ["options"] = {},
+                              ["filtered_resolution"] = false,
+                              ["args"] = {
+                                ["ability"] = "Beemerang Toss",
+                              },
+                            },
+                            {
+                              ["rule"] = "CanUse",
+                              ["options"] = {},
+                              ["filtered_resolution"] = false,
+                              ["args"] = {
+                                ["ability"] = "Horn Slash",
+                              },
+                            },
+                            {
+                              ["rule"] = "CanUse",
+                              ["options"] = {},
+                              ["filtered_resolution"] = false,
+                              ["args"] = {
+                                ["ability"] = "Freeze",
+                              },
+                            },
+                          },
+                        },
+                        {
+                          ["rule"] = "Or",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["children"] = {
+                            {
+                              ["rule"] = "CanUse",
+                              ["options"] = {},
+                              ["filtered_resolution"] = false,
+                              ["args"] = {
+                                ["ability"] = "Shield",
+                              },
+                            },
+                            {
+                              ["rule"] = "CanUse",
+                              ["options"] = {},
+                              ["filtered_resolution"] = false,
+                              ["args"] = {
+                                ["ability"] = "Bee Fly",
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands5 (Left) to Swamplands5",
+      ["from"] = "Swamplands5 (Left)",
+      ["to"] = "Swamplands5",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Dash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "Or",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beemerang Toss",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Horn Slash",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Freeze",
+                    },
+                  },
+                },
+              },
+              {
+                ["rule"] = "Or",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Shield",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Bee Fly",
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands5 to Swamplands5 (Top Right)",
+      ["from"] = "Swamplands5",
+      ["to"] = "Swamplands5 (Top Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Swamp Lift Running",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands5 (Top Right) to Swamplands5",
+      ["from"] = "Swamplands5 (Top Right)",
+      ["to"] = "Swamplands5",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "Has",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["item_name"] = "Swamp Lift Running",
+                ["count"] = 1,
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands6 to Swamplands6 (Middle)",
+      ["from"] = "Swamplands6",
+      ["to"] = "Swamplands6 (Middle)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands6 (Middle) to Swamplands6",
+      ["from"] = "Swamplands6 (Middle)",
+      ["to"] = "Swamplands6",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands6 (Middle) to Swamplands6 (Lower Right)",
+      ["from"] = "Swamplands6 (Middle)",
+      ["to"] = "Swamplands6 (Lower Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Halt",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands6 (Lower Right) to Swamplands6 (Middle)",
+      ["from"] = "Swamplands6 (Lower Right)",
+      ["to"] = "Swamplands6 (Middle)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands6 (Lower Right) to Swamplands6 (Upper Right)",
+      ["from"] = "Swamplands6 (Lower Right)",
+      ["to"] = "Swamplands6 (Upper Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Dash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Halt",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands6 (Upper Right) to Swamplands6 (Lower Right)",
+      ["from"] = "Swamplands6 (Upper Right)",
+      ["to"] = "Swamplands6 (Lower Right)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Dash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Beemerang Halt",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands7 to Swamplands7 (Bottom Middle)",
+      ["from"] = "Swamplands7",
+      ["to"] = "Swamplands7 (Bottom Middle)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Dash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Freeze",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands7 (Bottom Middle) to Swamplands7",
+      ["from"] = "Swamplands7 (Bottom Middle)",
+      ["to"] = "Swamplands7",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Dash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands7 (Bottom Middle) to Swamplands7 (Bottom Right)",
+      ["from"] = "Swamplands7 (Bottom Middle)",
+      ["to"] = "Swamplands7 (Bottom Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands7 (Bottom Right) to Swamplands7 (Bottom Middle)",
+      ["from"] = "Swamplands7 (Bottom Right)",
+      ["to"] = "Swamplands7 (Bottom Middle)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands7 to Swamplands7 (Upper Middle)",
+      ["from"] = "Swamplands7",
+      ["to"] = "Swamplands7 (Upper Middle)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Dash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands7 (Upper Middle) to Swamplands7",
+      ["from"] = "Swamplands7 (Upper Middle)",
+      ["to"] = "Swamplands7",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Dash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Freeze",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands7 (Upper Middle) to Swamplands7 (Upper Left)",
+      ["from"] = "Swamplands7 (Upper Middle)",
+      ["to"] = "Swamplands7 (Upper Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "WayBack",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["child"] = {
+                  ["rule"] = "Or",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["children"] = {
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Bee Fly",
+                      },
+                    },
+                    {
+                      ["rule"] = "And",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["children"] = {
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Horn Dash",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Freeze",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Horn Slash",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Jump",
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands7 (Upper Left) to Swamplands7 (Upper Middle)",
+      ["from"] = "Swamplands7 (Upper Left)",
+      ["to"] = "Swamplands7 (Upper Middle)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Bee Fly",
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands7 to Swamplands7 (Left)",
+      ["from"] = "Swamplands7",
+      ["to"] = "Swamplands7 (Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Dash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands7 (Left) to Swamplands7",
+      ["from"] = "Swamplands7 (Left)",
+      ["to"] = "Swamplands7",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+            {
+              ["rule"] = "And",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Horn Dash",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Freeze",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Horn Slash",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands8 to Swamplands8 (Bottom)",
+      ["from"] = "Swamplands8",
+      ["to"] = "Swamplands8 (Bottom)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands8 (Bottom) to Swamplands8",
+      ["from"] = "Swamplands8 (Bottom)",
+      ["to"] = "Swamplands8",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands8 to Swamplands8 (Upper Middle)",
+      ["from"] = "Swamplands8",
+      ["to"] = "Swamplands8 (Upper Middle)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Dash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands8 (Upper Middle) to Swamplands8",
+      ["from"] = "Swamplands8 (Upper Middle)",
+      ["to"] = "Swamplands8",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "And",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Horn Dash",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Horn Slash",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+              },
+            },
+            {
+              ["rule"] = "And",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Bee Fly",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands8 to Swamplands8 (Right)",
+      ["from"] = "Swamplands8",
+      ["to"] = "Swamplands8 (Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "Has",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["item_name"] = "Swamp Fence Down",
+                  ["count"] = 1,
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands8 (Right) to Swamplands8",
+      ["from"] = "Swamplands8 (Right)",
+      ["to"] = "Swamplands8",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "Has",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["item_name"] = "Swamp Fence Down",
+                  ["count"] = 1,
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands8 (Right) to Swamplands8 (Top)",
+      ["from"] = "Swamplands8 (Right)",
+      ["to"] = "Swamplands8 (Top)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Swamplands8 (Top) to Swamplands8 (Right)",
+      ["from"] = "Swamplands8 (Top)",
+      ["to"] = "Swamplands8 (Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "DefiantRoot1 to DefiantRoot1 (Rooftops)",
+      ["from"] = "DefiantRoot1",
+      ["to"] = "DefiantRoot1 (Rooftops)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Jump",
+        },
+      },
+    },
+    {
+      ["name"] = "DefiantRoot1 (Rooftops) to DefiantRoot1",
+      ["from"] = "DefiantRoot1 (Rooftops)",
+      ["to"] = "DefiantRoot1",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "CanUse",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["ability"] = "Jump",
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "DefiantRootWell to DefiantRootWell (Right)",
+      ["from"] = "DefiantRootWell",
+      ["to"] = "DefiantRootWell (Right)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["name"] = "DefiantRootWell (Right) to DefiantRootWell",
+      ["from"] = "DefiantRootWell (Right)",
+      ["to"] = "DefiantRootWell",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["name"] = "DefiantRoot2 to DefiantRoot2 (Elevator)",
+      ["from"] = "DefiantRoot2",
+      ["to"] = "DefiantRoot2 (Elevator)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "DefiantRoot2 (Elevator) to DefiantRoot2",
+      ["from"] = "DefiantRoot2 (Elevator)",
+      ["to"] = "DefiantRoot2",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "DefiantRoot2 to DefiantRoot2 (Upstairs)",
+      ["from"] = "DefiantRoot2",
+      ["to"] = "DefiantRoot2 (Upstairs)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "DefiantRoot2 (Upstairs) to DefiantRoot2",
+      ["from"] = "DefiantRoot2 (Upstairs)",
+      ["to"] = "DefiantRoot2",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleEntrance to SandCastleEntrance (Right)",
+      ["from"] = "SandCastleEntrance",
+      ["to"] = "SandCastleEntrance (Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleEntrance (Right) to SandCastleEntrance",
+      ["from"] = "SandCastleEntrance (Right)",
+      ["to"] = "SandCastleEntrance",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleSlidePuzzle to SandCastleSlidePuzzle (Bottom)",
+      ["from"] = "SandCastleSlidePuzzle",
+      ["to"] = "SandCastleSlidePuzzle (Bottom)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleSlidePuzzle (Bottom) to SandCastleSlidePuzzle",
+      ["from"] = "SandCastleSlidePuzzle (Bottom)",
+      ["to"] = "SandCastleSlidePuzzle",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleSlidePuzzle to SandCastleSlidePuzzle (Upper Right)",
+      ["from"] = "SandCastleSlidePuzzle",
+      ["to"] = "SandCastleSlidePuzzle (Upper Right)",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "SandCastleSlidePuzzle (Upper Right) to SandCastleSlidePuzzle",
+      ["from"] = "SandCastleSlidePuzzle (Upper Right)",
+      ["to"] = "SandCastleSlidePuzzle",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "SandCastleSlidePuzzle (Upper Right) to SandCastleSlidePuzzle (Upper Left)",
+      ["from"] = "SandCastleSlidePuzzle (Upper Right)",
+      ["to"] = "SandCastleSlidePuzzle (Upper Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Sand Castle Slide Puzzle Solved",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleSlidePuzzle (Upper Left) to SandCastleSlidePuzzle (Upper Right)",
+      ["from"] = "SandCastleSlidePuzzle (Upper Left)",
+      ["to"] = "SandCastleSlidePuzzle (Upper Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Sand Castle Slide Puzzle Solved",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleStatueRoom to SandCastleStatueRoom (Right)",
+      ["from"] = "SandCastleStatueRoom",
+      ["to"] = "SandCastleStatueRoom (Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleStatueRoom (Right) to SandCastleStatueRoom",
+      ["from"] = "SandCastleStatueRoom (Right)",
+      ["to"] = "SandCastleStatueRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleBasement to SandCastleBasement (Middle)",
+      ["from"] = "SandCastleBasement",
+      ["to"] = "SandCastleBasement (Middle)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleBasement (Middle) to SandCastleBasement",
+      ["from"] = "SandCastleBasement (Middle)",
+      ["to"] = "SandCastleBasement",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleMainRoom to SandCastleMainRoom (Middle Left)",
+      ["from"] = "SandCastleMainRoom",
+      ["to"] = "SandCastleMainRoom (Middle Left)",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "SandCastleMainRoom (Middle Left) to SandCastleMainRoom",
+      ["from"] = "SandCastleMainRoom (Middle Left)",
+      ["to"] = "SandCastleMainRoom",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "False_",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {},
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleMainRoom to SandCastleMainRoom (Middle Right)",
+      ["from"] = "SandCastleMainRoom",
+      ["to"] = "SandCastleMainRoom (Middle Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "Has",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["item_name"] = "Sand Castle Lower Lift Running",
+                  ["count"] = 1,
+                },
+              },
+              {
+                ["rule"] = "Has",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["item_name"] = "Sand Castle Upper Lift Running",
+                  ["count"] = 1,
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleMainRoom (Middle Right) to SandCastleMainRoom",
+      ["from"] = "SandCastleMainRoom (Middle Right)",
+      ["to"] = "SandCastleMainRoom",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "Or",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "Has",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["item_name"] = "Sand Castle Lower Lift Running",
+                    ["count"] = 1,
+                  },
+                },
+                {
+                  ["rule"] = "Has",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["item_name"] = "Sand Castle Upper Lift Running",
+                    ["count"] = 1,
+                  },
+                },
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleMainRoom to SandCastleMainRoom (Top Right)",
+      ["from"] = "SandCastleMainRoom",
+      ["to"] = "SandCastleMainRoom (Top Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Sand Castle Upper Lift Running",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleMainRoom (Top Right) to SandCastleMainRoom",
+      ["from"] = "SandCastleMainRoom (Top Right)",
+      ["to"] = "SandCastleMainRoom",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "Has",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["item_name"] = "Sand Castle Upper Lift Running",
+                ["count"] = 1,
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleMainRoom to SandCastleMainRoom (Top Left)",
+      ["from"] = "SandCastleMainRoom",
+      ["to"] = "SandCastleMainRoom (Top Left)",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "SandCastleMainRoom (Top Left) to SandCastleMainRoom",
+      ["from"] = "SandCastleMainRoom (Top Left)",
+      ["to"] = "SandCastleMainRoom",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "WayBack",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["child"] = {
+              ["rule"] = "And",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "Has",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["item_name"] = "Sand Castle Upper Lift Running",
+                    ["count"] = 1,
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleBossKeyRoom to SandCastleBossKeyRoom (Right)",
+      ["from"] = "SandCastleBossKeyRoom",
+      ["to"] = "SandCastleBossKeyRoom (Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleBossKeyRoom (Right) to SandCastleBossKeyRoom",
+      ["from"] = "SandCastleBossKeyRoom (Right)",
+      ["to"] = "SandCastleBossKeyRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleRockRoom to SandCastleRockRoom (Bottom Right)",
+      ["from"] = "SandCastleRockRoom",
+      ["to"] = "SandCastleRockRoom (Bottom Right)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Sand Castle Rock Room Platform Running",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleRockRoom (Bottom Right) to SandCastleRockRoom",
+      ["from"] = "SandCastleRockRoom (Bottom Right)",
+      ["to"] = "SandCastleRockRoom",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Sand Castle Rock Room Platform Running",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleRockRoom to SandCastleRockRoom (Top Left)",
+      ["from"] = "SandCastleRockRoom",
+      ["to"] = "SandCastleRockRoom (Top Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleRockRoom (Top Left) to SandCastleRockRoom",
+      ["from"] = "SandCastleRockRoom (Top Left)",
+      ["to"] = "SandCastleRockRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleRockRoom (Bottom Right) to SandCastleRockRoom (Top Right)",
+      ["from"] = "SandCastleRockRoom (Bottom Right)",
+      ["to"] = "SandCastleRockRoom (Top Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "Or",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beetle Dig",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Dash",
+                    },
+                  },
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Shield",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "SandCastleRockRoom (Top Right) to SandCastleRockRoom (Bottom Right)",
+      ["from"] = "SandCastleRockRoom (Top Right)",
+      ["to"] = "SandCastleRockRoom (Bottom Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "BeehiveOutside to BeehiveOutside (Left)",
+      ["from"] = "BeehiveOutside",
+      ["to"] = "BeehiveOutside (Left)",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "BeehiveOutside (Left) to BeehiveOutside",
+      ["from"] = "BeehiveOutside (Left)",
+      ["to"] = "BeehiveOutside",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "HoneyFactoryEntrance to HoneyFactoryEntrance (Bottom)",
+      ["from"] = "HoneyFactoryEntrance",
+      ["to"] = "HoneyFactoryEntrance (Bottom)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "HoneyFactoryEntrance (Bottom) to HoneyFactoryEntrance",
+      ["from"] = "HoneyFactoryEntrance (Bottom)",
+      ["to"] = "HoneyFactoryEntrance",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "HoneyFactoryEntrance to HoneyFactoryEntrance (Processing Door)",
+      ["from"] = "HoneyFactoryEntrance",
+      ["to"] = "HoneyFactoryEntrance (Processing Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Factory Pass",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "HoneyFactoryEntrance (Processing Door) to HoneyFactoryEntrance",
+      ["from"] = "HoneyFactoryEntrance (Processing Door)",
+      ["to"] = "HoneyFactoryEntrance",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Has",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["item_name"] = "Factory Pass",
+            ["count"] = 1,
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "HoneyFactoryWorkerRooms to HoneyFactoryWorkerRooms (Sleeping Quarters)",
+      ["from"] = "HoneyFactoryWorkerRooms",
+      ["to"] = "HoneyFactoryWorkerRooms (Sleeping Quarters)",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "HoneyFactoryWorkerRooms (Sleeping Quarters) to HoneyFactoryWorkerRooms",
+      ["from"] = "HoneyFactoryWorkerRooms (Sleeping Quarters)",
+      ["to"] = "HoneyFactoryWorkerRooms",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingFirstRoom to FactoryProcessingFirstRoom (Left)",
+      ["from"] = "FactoryProcessingFirstRoom",
+      ["to"] = "FactoryProcessingFirstRoom (Left)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "First Room Platforms Running",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingFirstRoom (Left) to FactoryProcessingFirstRoom",
+      ["from"] = "FactoryProcessingFirstRoom (Left)",
+      ["to"] = "FactoryProcessingFirstRoom",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "First Room Platforms Running",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingFirstRoom to FactoryProcessingFirstRoom (Bottom)",
+      ["from"] = "FactoryProcessingFirstRoom",
+      ["to"] = "FactoryProcessingFirstRoom (Bottom)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingFirstRoom (Bottom) to FactoryProcessingFirstRoom",
+      ["from"] = "FactoryProcessingFirstRoom (Bottom)",
+      ["to"] = "FactoryProcessingFirstRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessing2 to FactoryProcessing2 (Top Left)",
+      ["from"] = "FactoryProcessing2",
+      ["to"] = "FactoryProcessing2 (Top Left)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Halt",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessing2 (Top Left) to FactoryProcessing2",
+      ["from"] = "FactoryProcessing2 (Top Left)",
+      ["to"] = "FactoryProcessing2",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "Or",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Bee Fly",
+                  },
+                },
+              },
+            },
+            {
+              ["rule"] = "Or",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Beemerang Toss",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Horn Slash",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Freeze",
+                  },
+                },
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Shield",
+              },
+            },
+            {
+              ["rule"] = "Or",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Beemerang Halt",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Bee Fly",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingPump to FactoryProcessingPump (Bottom Top Left)",
+      ["from"] = "FactoryProcessingPump",
+      ["to"] = "FactoryProcessingPump (Bottom Top Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingPump (Bottom Top Left) to FactoryProcessingPump",
+      ["from"] = "FactoryProcessingPump (Bottom Top Left)",
+      ["to"] = "FactoryProcessingPump",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingPump to FactoryProcessingPump (Upper Left)",
+      ["from"] = "FactoryProcessingPump",
+      ["to"] = "FactoryProcessingPump (Upper Left)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Halt",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingPump (Upper Left) to FactoryProcessingPump",
+      ["from"] = "FactoryProcessingPump (Upper Left)",
+      ["to"] = "FactoryProcessingPump",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Beemerang Halt",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Shield",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingPump to FactoryProcessingPump (Upper Right)",
+      ["from"] = "FactoryProcessingPump",
+      ["to"] = "FactoryProcessingPump (Upper Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Halt",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingPump (Upper Right) to FactoryProcessingPump",
+      ["from"] = "FactoryProcessingPump (Upper Right)",
+      ["to"] = "FactoryProcessingPump",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "WayBack",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["child"] = {
+              ["rule"] = "And",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Beemerang Halt",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Shield",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingMalbee to FactoryProcessingMalbee (Tram)",
+      ["from"] = "FactoryProcessingMalbee",
+      ["to"] = "FactoryProcessingMalbee (Tram)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryProcessingMalbee (Tram) to FactoryProcessingMalbee",
+      ["from"] = "FactoryProcessingMalbee (Tram)",
+      ["to"] = "FactoryProcessingMalbee",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryStorageElevator to FactoryStorageElevator (Bottom)",
+      ["from"] = "FactoryStorageElevator",
+      ["to"] = "FactoryStorageElevator (Bottom)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryStorageElevator (Bottom) to FactoryStorageElevator",
+      ["from"] = "FactoryStorageElevator (Bottom)",
+      ["to"] = "FactoryStorageElevator",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryStorageMaze to FactoryStorageMaze (Upper Middle)",
+      ["from"] = "FactoryStorageMaze",
+      ["to"] = "FactoryStorageMaze (Upper Middle)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryStorageMaze (Upper Middle) to FactoryStorageMaze",
+      ["from"] = "FactoryStorageMaze (Upper Middle)",
+      ["to"] = "FactoryStorageMaze",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryStorageMaze (Upper Middle) to FactoryStorageMaze (Bottom Left)",
+      ["from"] = "FactoryStorageMaze (Upper Middle)",
+      ["to"] = "FactoryStorageMaze (Bottom Left)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "FactoryStorageMaze (Bottom Left) to FactoryStorageMaze (Upper Middle)",
+      ["from"] = "FactoryStorageMaze (Bottom Left)",
+      ["to"] = "FactoryStorageMaze (Upper Middle)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "FactoryStorageMaze to FactoryStorageMaze (Overseer Door)",
+      ["from"] = "FactoryStorageMaze",
+      ["to"] = "FactoryStorageMaze (Overseer Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Factory Pass",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "FactoryStorageMaze (Overseer Door) to FactoryStorageMaze",
+      ["from"] = "FactoryStorageMaze (Overseer Door)",
+      ["to"] = "FactoryStorageMaze",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Has",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["item_name"] = "Factory Pass",
+            ["count"] = 1,
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier to RubberPrisonPier (Ground Upper Left)",
+      ["from"] = "RubberPrisonPier",
+      ["to"] = "RubberPrisonPier (Ground Upper Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Ground Upper Left) to RubberPrisonPier",
+      ["from"] = "RubberPrisonPier (Ground Upper Left)",
+      ["to"] = "RubberPrisonPier",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Ground Upper Left) to RubberPrisonPier (Ground Lower Left)",
+      ["from"] = "RubberPrisonPier (Ground Upper Left)",
+      ["to"] = "RubberPrisonPier (Ground Lower Left)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Ground Lower Left) to RubberPrisonPier (Ground Upper Left)",
+      ["from"] = "RubberPrisonPier (Ground Lower Left)",
+      ["to"] = "RubberPrisonPier (Ground Upper Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier to RubberPrisonPier (Ground Lower Right)",
+      ["from"] = "RubberPrisonPier",
+      ["to"] = "RubberPrisonPier (Ground Lower Right)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Ground Lower Right) to RubberPrisonPier",
+      ["from"] = "RubberPrisonPier (Ground Lower Right)",
+      ["to"] = "RubberPrisonPier",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Pier Lift Running",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier to RubberPrisonPier (Top Floor)",
+      ["from"] = "RubberPrisonPier",
+      ["to"] = "RubberPrisonPier (Top Floor)",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Top Floor) to RubberPrisonPier",
+      ["from"] = "RubberPrisonPier (Top Floor)",
+      ["to"] = "RubberPrisonPier",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier to RubberPrisonPier (Third Floor)",
+      ["from"] = "RubberPrisonPier",
+      ["to"] = "RubberPrisonPier (Third Floor)",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Third Floor) to RubberPrisonPier",
+      ["from"] = "RubberPrisonPier (Third Floor)",
+      ["to"] = "RubberPrisonPier",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier to RubberPrisonPier (Second Floor)",
+      ["from"] = "RubberPrisonPier",
+      ["to"] = "RubberPrisonPier (Second Floor)",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Second Floor) to RubberPrisonPier",
+      ["from"] = "RubberPrisonPier (Second Floor)",
+      ["to"] = "RubberPrisonPier",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Second Floor) to RubberPrisonPier (Second Floor Right Door)",
+      ["from"] = "RubberPrisonPier (Second Floor)",
+      ["to"] = "RubberPrisonPier (Second Floor Right Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Warden's Office Crank Turned",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Second Floor Right Door) to RubberPrisonPier (Second Floor)",
+      ["from"] = "RubberPrisonPier (Second Floor Right Door)",
+      ["to"] = "RubberPrisonPier (Second Floor)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Has",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["item_name"] = "Warden's Office Crank Turned",
+            ["count"] = 1,
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier to RubberPrisonPier (Shortcut Door)",
+      ["from"] = "RubberPrisonPier",
+      ["to"] = "RubberPrisonPier (Shortcut Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Giant's Lair Bridge Shortcut Open",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonPier (Shortcut Door) to RubberPrisonPier",
+      ["from"] = "RubberPrisonPier (Shortcut Door)",
+      ["to"] = "RubberPrisonPier",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Has",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["item_name"] = "Giant's Lair Bridge Shortcut Open",
+            ["count"] = 1,
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCheckpointCorridor to RubberPrisonCheckpointCorridor (Right)",
+      ["from"] = "RubberPrisonCheckpointCorridor",
+      ["to"] = "RubberPrisonCheckpointCorridor (Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCheckpointCorridor (Right) to RubberPrisonCheckpointCorridor",
+      ["from"] = "RubberPrisonCheckpointCorridor (Right)",
+      ["to"] = "RubberPrisonCheckpointCorridor",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCheckpointCorridor to RubberPrisonCheckpointCorridor (Top Left Door)",
+      ["from"] = "RubberPrisonCheckpointCorridor",
+      ["to"] = "RubberPrisonCheckpointCorridor (Top Left Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Explorer Permit",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCheckpointCorridor (Top Left Door) to RubberPrisonCheckpointCorridor",
+      ["from"] = "RubberPrisonCheckpointCorridor (Top Left Door)",
+      ["to"] = "RubberPrisonCheckpointCorridor",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Has",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["item_name"] = "Explorer Permit",
+            ["count"] = 1,
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonSpikeRoom to RubberPrisonSpikeRoom (Top)",
+      ["from"] = "RubberPrisonSpikeRoom",
+      ["to"] = "RubberPrisonSpikeRoom (Top)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonSpikeRoom (Top) to RubberPrisonSpikeRoom",
+      ["from"] = "RubberPrisonSpikeRoom (Top)",
+      ["to"] = "RubberPrisonSpikeRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonSpikeRoom (Top) to RubberPrisonSpikeRoom (Top Door)",
+      ["from"] = "RubberPrisonSpikeRoom (Top)",
+      ["to"] = "RubberPrisonSpikeRoom (Top Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Prison Key",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonSpikeRoom (Top Door) to RubberPrisonSpikeRoom (Top)",
+      ["from"] = "RubberPrisonSpikeRoom (Top Door)",
+      ["to"] = "RubberPrisonSpikeRoom (Top)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Has",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["item_name"] = "Prison Key",
+            ["count"] = 1,
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells1 to RubberPrisonCells1 (Upper)",
+      ["from"] = "RubberPrisonCells1",
+      ["to"] = "RubberPrisonCells1 (Upper)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "And",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beetle Dig",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Horn Slash",
+                    },
+                  },
+                  {
+                    ["rule"] = "Or",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["children"] = {
+                      {
+                        ["rule"] = "CanUse",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["args"] = {
+                          ["ability"] = "Beemerang Toss",
+                        },
+                      },
+                      {
+                        ["rule"] = "CanUse",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["args"] = {
+                          ["ability"] = "Horn Slash",
+                        },
+                      },
+                      {
+                        ["rule"] = "CanUse",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["args"] = {
+                          ["ability"] = "Freeze",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+              {
+                ["rule"] = "Has",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["item_name"] = "Crossroads Right Gate Open",
+                  ["count"] = 1,
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells1 (Upper) to RubberPrisonCells1",
+      ["from"] = "RubberPrisonCells1 (Upper)",
+      ["to"] = "RubberPrisonCells1",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "Or",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "And",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["children"] = {
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Beetle Dig",
+                      },
+                    },
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Horn Slash",
+                      },
+                    },
+                    {
+                      ["rule"] = "Or",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["children"] = {
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Beemerang Toss",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Horn Slash",
+                          },
+                        },
+                        {
+                          ["rule"] = "CanUse",
+                          ["options"] = {},
+                          ["filtered_resolution"] = false,
+                          ["args"] = {
+                            ["ability"] = "Freeze",
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+                {
+                  ["rule"] = "Has",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["item_name"] = "Crossroads Right Gate Open",
+                    ["count"] = 1,
+                  },
+                },
+              },
+            },
+            {
+              ["rule"] = "Or",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Jump",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Bee Fly",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells1 (Upper) to RubberPrisonCells1 (Top Door)",
+      ["from"] = "RubberPrisonCells1 (Upper)",
+      ["to"] = "RubberPrisonCells1 (Top Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Crossroads Barrier Lowered",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells1 (Top Door) to RubberPrisonCells1 (Upper)",
+      ["from"] = "RubberPrisonCells1 (Top Door)",
+      ["to"] = "RubberPrisonCells1 (Upper)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells1 to RubberPrisonCells1 (Left Door)",
+      ["from"] = "RubberPrisonCells1",
+      ["to"] = "RubberPrisonCells1 (Left Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Prison Key",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells1 (Left Door) to RubberPrisonCells1",
+      ["from"] = "RubberPrisonCells1 (Left Door)",
+      ["to"] = "RubberPrisonCells1",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Has",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["item_name"] = "Prison Key",
+            ["count"] = 1,
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells1 to RubberPrisonCells1 (Right Door)",
+      ["from"] = "RubberPrisonCells1",
+      ["to"] = "RubberPrisonCells1 (Right Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Crossroads Right Gate Open",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells1 (Right Door) to RubberPrisonCells1",
+      ["from"] = "RubberPrisonCells1 (Right Door)",
+      ["to"] = "RubberPrisonCells1",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Has",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["item_name"] = "Crossroads Right Gate Open",
+            ["count"] = 1,
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells2 to RubberPrisonCells2 (Left Door)",
+      ["from"] = "RubberPrisonCells2",
+      ["to"] = "RubberPrisonCells2 (Left Door)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells2 (Left Door) to RubberPrisonCells2",
+      ["from"] = "RubberPrisonCells2 (Left Door)",
+      ["to"] = "RubberPrisonCells2",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells2 to RubberPrisonCells2 (Right Door)",
+      ["from"] = "RubberPrisonCells2",
+      ["to"] = "RubberPrisonCells2 (Right Door)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells2 (Right Door) to RubberPrisonCells2",
+      ["from"] = "RubberPrisonCells2 (Right Door)",
+      ["to"] = "RubberPrisonCells2",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells2 to RubberPrisonCells2 (Middle)",
+      ["from"] = "RubberPrisonCells2",
+      ["to"] = "RubberPrisonCells2 (Middle)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Shield",
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells2 (Middle) to RubberPrisonCells2",
+      ["from"] = "RubberPrisonCells2 (Middle)",
+      ["to"] = "RubberPrisonCells2",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "CanUse",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["ability"] = "Shield",
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells2 to RubberPrisonCells2 (Upper)",
+      ["from"] = "RubberPrisonCells2",
+      ["to"] = "RubberPrisonCells2 (Upper)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Shield",
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells2 (Upper) to RubberPrisonCells2",
+      ["from"] = "RubberPrisonCells2 (Upper)",
+      ["to"] = "RubberPrisonCells2",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "CanUse",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["ability"] = "Shield",
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells2 (Upper) to RubberPrisonCells2 (Top Door)",
+      ["from"] = "RubberPrisonCells2 (Upper)",
+      ["to"] = "RubberPrisonCells2 (Top Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Prison Key",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCells2 (Top Door) to RubberPrisonCells2 (Upper)",
+      ["from"] = "RubberPrisonCells2 (Top Door)",
+      ["to"] = "RubberPrisonCells2 (Upper)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Has",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["item_name"] = "Prison Key",
+            ["count"] = 1,
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonLibrary to RubberPrisonLibrary (Upper)",
+      ["from"] = "RubberPrisonLibrary",
+      ["to"] = "RubberPrisonLibrary (Upper)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonLibrary (Upper) to RubberPrisonLibrary",
+      ["from"] = "RubberPrisonLibrary (Upper)",
+      ["to"] = "RubberPrisonLibrary",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCafeteria to RubberPrisonCafeteria (Left)",
+      ["from"] = "RubberPrisonCafeteria",
+      ["to"] = "RubberPrisonCafeteria (Left)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonCafeteria (Left) to RubberPrisonCafeteria",
+      ["from"] = "RubberPrisonCafeteria (Left)",
+      ["to"] = "RubberPrisonCafeteria",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonGym to RubberPrisonGym (Top Left)",
+      ["from"] = "RubberPrisonGym",
+      ["to"] = "RubberPrisonGym (Top Left)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beemerang Halt",
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonGym (Top Left) to RubberPrisonGym",
+      ["from"] = "RubberPrisonGym (Top Left)",
+      ["to"] = "RubberPrisonGym",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "CanUse",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["ability"] = "Beemerang Halt",
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonSecurity to RubberPrisonSecurity (Left)",
+      ["from"] = "RubberPrisonSecurity",
+      ["to"] = "RubberPrisonSecurity (Left)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonSecurity (Left) to RubberPrisonSecurity",
+      ["from"] = "RubberPrisonSecurity (Left)",
+      ["to"] = "RubberPrisonSecurity",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonSecurity to RubberPrisonSecurity (Bottom Right)",
+      ["from"] = "RubberPrisonSecurity",
+      ["to"] = "RubberPrisonSecurity (Bottom Right)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonSecurity (Bottom Right) to RubberPrisonSecurity",
+      ["from"] = "RubberPrisonSecurity (Bottom Right)",
+      ["to"] = "RubberPrisonSecurity",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonThirdFloor to RubberPrisonThirdFloor (Pocket)",
+      ["from"] = "RubberPrisonThirdFloor",
+      ["to"] = "RubberPrisonThirdFloor (Pocket)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Shield",
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonThirdFloor (Pocket) to RubberPrisonThirdFloor",
+      ["from"] = "RubberPrisonThirdFloor (Pocket)",
+      ["to"] = "RubberPrisonThirdFloor",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Shield",
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonThirdFloor (Pocket) to RubberPrisonThirdFloor (Middle Left)",
+      ["from"] = "RubberPrisonThirdFloor (Pocket)",
+      ["to"] = "RubberPrisonThirdFloor (Middle Left)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "RubberPrisonThirdFloor (Middle Left) to RubberPrisonThirdFloor (Pocket)",
+      ["from"] = "RubberPrisonThirdFloor (Middle Left)",
+      ["to"] = "RubberPrisonThirdFloor (Pocket)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "RubberPrisonThirdFloor (Middle Left) to RubberPrisonThirdFloor (Bottom Left)",
+      ["from"] = "RubberPrisonThirdFloor (Middle Left)",
+      ["to"] = "RubberPrisonThirdFloor (Bottom Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonThirdFloor (Bottom Left) to RubberPrisonThirdFloor (Middle Left)",
+      ["from"] = "RubberPrisonThirdFloor (Bottom Left)",
+      ["to"] = "RubberPrisonThirdFloor (Middle Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonThirdFloor (Middle Left) to RubberPrisonThirdFloor (Gym Door)",
+      ["from"] = "RubberPrisonThirdFloor (Middle Left)",
+      ["to"] = "RubberPrisonThirdFloor (Gym Door)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonThirdFloor (Gym Door) to RubberPrisonThirdFloor (Middle Left)",
+      ["from"] = "RubberPrisonThirdFloor (Gym Door)",
+      ["to"] = "RubberPrisonThirdFloor (Middle Left)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Beemerang Toss",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Freeze",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonThirdFloor (Middle Left) to RubberPrisonThirdFloor (Upper Right)",
+      ["from"] = "RubberPrisonThirdFloor (Middle Left)",
+      ["to"] = "RubberPrisonThirdFloor (Upper Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "WayBack",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["child"] = {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Shield",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonThirdFloor (Upper Right) to RubberPrisonThirdFloor (Middle Left)",
+      ["from"] = "RubberPrisonThirdFloor (Upper Right)",
+      ["to"] = "RubberPrisonThirdFloor (Middle Left)",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "RubberPrisonGiantLairBridge to RubberPrisonGiantLairBridge (Top Left Door)",
+      ["from"] = "RubberPrisonGiantLairBridge",
+      ["to"] = "RubberPrisonGiantLairBridge (Top Left Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Giant's Lair Bridge Shortcut Open",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonGiantLairBridge (Top Left Door) to RubberPrisonGiantLairBridge",
+      ["from"] = "RubberPrisonGiantLairBridge (Top Left Door)",
+      ["to"] = "RubberPrisonGiantLairBridge",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Has",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["item_name"] = "Giant's Lair Bridge Shortcut Open",
+            ["count"] = 1,
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonGiantLairBridge to RubberPrisonGiantLairBridge (Middle)",
+      ["from"] = "RubberPrisonGiantLairBridge",
+      ["to"] = "RubberPrisonGiantLairBridge (Middle)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Giant's Lair Bridge Fight Won",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonGiantLairBridge (Middle) to RubberPrisonGiantLairBridge",
+      ["from"] = "RubberPrisonGiantLairBridge (Middle)",
+      ["to"] = "RubberPrisonGiantLairBridge",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Giant's Lair Bridge Fight Won",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "RubberPrisonGiantLairBridge (Middle) to RubberPrisonGiantLairBridge (Right)",
+      ["from"] = "RubberPrisonGiantLairBridge (Middle)",
+      ["to"] = "RubberPrisonGiantLairBridge (Right)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "RubberPrisonGiantLairBridge (Right) to RubberPrisonGiantLairBridge (Middle)",
+      ["from"] = "RubberPrisonGiantLairBridge (Right)",
+      ["to"] = "RubberPrisonGiantLairBridge (Middle)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "GiantLairDeadLands1 to GiantLairDeadLands1 (Right)",
+      ["from"] = "GiantLairDeadLands1",
+      ["to"] = "GiantLairDeadLands1 (Right)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Bee Fly",
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairDeadLands1 (Right) to GiantLairDeadLands1",
+      ["from"] = "GiantLairDeadLands1 (Right)",
+      ["to"] = "GiantLairDeadLands1",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Bee Fly",
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairDeadLands1 (Right) to GiantLairDeadLands1 (Right Door)",
+      ["from"] = "GiantLairDeadLands1 (Right)",
+      ["to"] = "GiantLairDeadLands1 (Right Door)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairDeadLands1 (Right Door) to GiantLairDeadLands1 (Right)",
+      ["from"] = "GiantLairDeadLands1 (Right Door)",
+      ["to"] = "GiantLairDeadLands1 (Right)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairDeadLands2 to GiantLairDeadLands2 (Silver Coins)",
+      ["from"] = "GiantLairDeadLands2",
+      ["to"] = "GiantLairDeadLands2 (Silver Coins)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairDeadLands2 (Silver Coins) to GiantLairDeadLands2",
+      ["from"] = "GiantLairDeadLands2 (Silver Coins)",
+      ["to"] = "GiantLairDeadLands2",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Freeze",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairDeadLands2 (Silver Coins) to GiantLairDeadLands2 (Middle Right)",
+      ["from"] = "GiantLairDeadLands2 (Silver Coins)",
+      ["to"] = "GiantLairDeadLands2 (Middle Right)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "CanUse",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["args"] = {
+            ["ability"] = "Jump",
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairDeadLands2 (Middle Right) to GiantLairDeadLands2 (Silver Coins)",
+      ["from"] = "GiantLairDeadLands2 (Middle Right)",
+      ["to"] = "GiantLairDeadLands2 (Silver Coins)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Jump",
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairDeadLands2 (Middle Right) to GiantLairDeadLands2 (Right)",
+      ["from"] = "GiantLairDeadLands2 (Middle Right)",
+      ["to"] = "GiantLairDeadLands2 (Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairDeadLands2 (Right) to GiantLairDeadLands2 (Middle Right)",
+      ["from"] = "GiantLairDeadLands2 (Right)",
+      ["to"] = "GiantLairDeadLands2 (Middle Right)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+            {
+              ["rule"] = "Or",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Beemerang Toss",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Horn Slash",
+                  },
+                },
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Freeze",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairFridgeOutside to GiantLairFridgeOutside (Right)",
+      ["from"] = "GiantLairFridgeOutside",
+      ["to"] = "GiantLairFridgeOutside (Right)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Outside the Fridge Fight Won",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairFridgeOutside (Right) to GiantLairFridgeOutside",
+      ["from"] = "GiantLairFridgeOutside (Right)",
+      ["to"] = "GiantLairFridgeOutside",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Outside the Fridge Fight Won",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairFridgeInside to GiantLairFridgeInside (Second Floor)",
+      ["from"] = "GiantLairFridgeInside",
+      ["to"] = "GiantLairFridgeInside (Second Floor)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairFridgeInside (Second Floor) to GiantLairFridgeInside",
+      ["from"] = "GiantLairFridgeInside (Second Floor)",
+      ["to"] = "GiantLairFridgeInside",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Freeze",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairFridgeInside (Second Floor) to GiantLairFridgeInside (Top Floor)",
+      ["from"] = "GiantLairFridgeInside (Second Floor)",
+      ["to"] = "GiantLairFridgeInside (Top Floor)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairFridgeInside (Top Floor) to GiantLairFridgeInside (Second Floor)",
+      ["from"] = "GiantLairFridgeInside (Top Floor)",
+      ["to"] = "GiantLairFridgeInside (Second Floor)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Freeze",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairFridgeInside (Top Floor) to GiantLairFridgeInside (Lift)",
+      ["from"] = "GiantLairFridgeInside (Top Floor)",
+      ["to"] = "GiantLairFridgeInside (Lift)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairFridgeInside (Lift) to GiantLairFridgeInside (Top Floor)",
+      ["from"] = "GiantLairFridgeInside (Lift)",
+      ["to"] = "GiantLairFridgeInside (Top Floor)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Freeze",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairRoachVillage to GiantLairRoachVillage (Left Door)",
+      ["from"] = "GiantLairRoachVillage",
+      ["to"] = "GiantLairRoachVillage (Left Door)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairRoachVillage (Left Door) to GiantLairRoachVillage",
+      ["from"] = "GiantLairRoachVillage (Left Door)",
+      ["to"] = "GiantLairRoachVillage",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairRoachVillage to GiantLairRoachVillage (Fridge Lift)",
+      ["from"] = "GiantLairRoachVillage",
+      ["to"] = "GiantLairRoachVillage (Fridge Lift)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairRoachVillage (Fridge Lift) to GiantLairRoachVillage",
+      ["from"] = "GiantLairRoachVillage (Fridge Lift)",
+      ["to"] = "GiantLairRoachVillage",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairSaplingPlains to GiantLairSaplingPlains (Last Fight)",
+      ["from"] = "GiantLairSaplingPlains",
+      ["to"] = "GiantLairSaplingPlains (Last Fight)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairSaplingPlains (Last Fight) to GiantLairSaplingPlains",
+      ["from"] = "GiantLairSaplingPlains (Last Fight)",
+      ["to"] = "GiantLairSaplingPlains",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairBeforeBoss to GiantLairBeforeBoss (Middle Right)",
+      ["from"] = "GiantLairBeforeBoss",
+      ["to"] = "GiantLairBeforeBoss (Middle Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairBeforeBoss (Middle Right) to GiantLairBeforeBoss",
+      ["from"] = "GiantLairBeforeBoss (Middle Right)",
+      ["to"] = "GiantLairBeforeBoss",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairBeforeBoss (Middle Right) to GiantLairBeforeBoss (Middle Left)",
+      ["from"] = "GiantLairBeforeBoss (Middle Right)",
+      ["to"] = "GiantLairBeforeBoss (Middle Left)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Kitchen Stove Levers Hit",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairBeforeBoss (Middle Left) to GiantLairBeforeBoss (Middle Right)",
+      ["from"] = "GiantLairBeforeBoss (Middle Left)",
+      ["to"] = "GiantLairBeforeBoss (Middle Right)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Kitchen Stove Levers Hit",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairBeforeBoss (Middle Left) to GiantLairBeforeBoss (Left)",
+      ["from"] = "GiantLairBeforeBoss (Middle Left)",
+      ["to"] = "GiantLairBeforeBoss (Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairBeforeBoss (Left) to GiantLairBeforeBoss (Middle Left)",
+      ["from"] = "GiantLairBeforeBoss (Left)",
+      ["to"] = "GiantLairBeforeBoss (Middle Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairBeforeBoss to GiantLairBeforeBoss (Upper)",
+      ["from"] = "GiantLairBeforeBoss",
+      ["to"] = "GiantLairBeforeBoss (Upper)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Dash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairBeforeBoss (Upper) to GiantLairBeforeBoss",
+      ["from"] = "GiantLairBeforeBoss (Upper)",
+      ["to"] = "GiantLairBeforeBoss",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Dash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairBeforeBoss2 to GiantLairBeforeBoss2 (Left Right)",
+      ["from"] = "GiantLairBeforeBoss2",
+      ["to"] = "GiantLairBeforeBoss2 (Left Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairBeforeBoss2 (Left Right) to GiantLairBeforeBoss2",
+      ["from"] = "GiantLairBeforeBoss2 (Left Right)",
+      ["to"] = "GiantLairBeforeBoss2",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairBeforeBoss2 (Left Right) to GiantLairBeforeBoss2 (Left Left)",
+      ["from"] = "GiantLairBeforeBoss2 (Left Right)",
+      ["to"] = "GiantLairBeforeBoss2 (Left Left)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "GiantLairBeforeBoss2 (Left Left) to GiantLairBeforeBoss2 (Left Right)",
+      ["from"] = "GiantLairBeforeBoss2 (Left Left)",
+      ["to"] = "GiantLairBeforeBoss2 (Left Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MysteryIsland to MysteryIsland (Door)",
+      ["from"] = "MysteryIsland",
+      ["to"] = "MysteryIsland (Door)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MysteryIsland (Door) to MysteryIsland",
+      ["from"] = "MysteryIsland (Door)",
+      ["to"] = "MysteryIsland",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MysteryIsland to MysteryIsland (Venus)",
+      ["from"] = "MysteryIsland",
+      ["to"] = "MysteryIsland (Venus)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MysteryIsland (Venus) to MysteryIsland",
+      ["from"] = "MysteryIsland (Venus)",
+      ["to"] = "MysteryIsland",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MysteryIsland to MysteryIsland (Back)",
+      ["from"] = "MysteryIsland",
+      ["to"] = "MysteryIsland (Back)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Icicle",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MysteryIsland (Back) to MysteryIsland",
+      ["from"] = "MysteryIsland (Back)",
+      ["to"] = "MysteryIsland",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Icicle",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MysteryIslandInside to MysteryIslandInside (Top)",
+      ["from"] = "MysteryIslandInside",
+      ["to"] = "MysteryIslandInside (Top)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Icicle",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MysteryIslandInside (Top) to MysteryIslandInside",
+      ["from"] = "MysteryIslandInside (Top)",
+      ["to"] = "MysteryIslandInside",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Icicle",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MetalIsland1 to MetalIsland1 (Dock)",
+      ["from"] = "MetalIsland1",
+      ["to"] = "MetalIsland1 (Dock)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MetalIsland1 (Dock) to MetalIsland1",
+      ["from"] = "MetalIsland1 (Dock)",
+      ["to"] = "MetalIsland1",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MetalIsland1 to MetalIsland1 (Chef's House)",
+      ["from"] = "MetalIsland1",
+      ["to"] = "MetalIsland1 (Chef's House)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MetalIsland1 (Chef's House) to MetalIsland1",
+      ["from"] = "MetalIsland1 (Chef's House)",
+      ["to"] = "MetalIsland1",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MetalIslandAuditorium to MetalIslandAuditorium (Top)",
+      ["from"] = "MetalIslandAuditorium",
+      ["to"] = "MetalIslandAuditorium (Top)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "MetalIslandAuditorium (Top) to MetalIslandAuditorium",
+      ["from"] = "MetalIslandAuditorium (Top)",
+      ["to"] = "MetalIslandAuditorium",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "TermiteIndustrial to TermiteIndustrial (Outside the Colosseum)",
+      ["from"] = "TermiteIndustrial",
+      ["to"] = "TermiteIndustrial (Outside the Colosseum)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "TermiteIndustrial (Outside the Colosseum) to TermiteIndustrial",
+      ["from"] = "TermiteIndustrial (Outside the Colosseum)",
+      ["to"] = "TermiteIndustrial",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "TermitePier to TermitePier (Dock)",
+      ["from"] = "TermitePier",
+      ["to"] = "TermitePier (Dock)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "TermitePier (Dock) to TermitePier",
+      ["from"] = "TermitePier (Dock)",
+      ["to"] = "TermitePier",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdomOutside to WaspKingdomOutside (Left)",
+      ["from"] = "WaspKingdomOutside",
+      ["to"] = "WaspKingdomOutside (Left)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Horn Dash",
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdomOutside (Left) to WaspKingdomOutside",
+      ["from"] = "WaspKingdomOutside (Left)",
+      ["to"] = "WaspKingdomOutside",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "WaspKingdomOutside to WaspKingdomOutside (Hive Door)",
+      ["from"] = "WaspKingdomOutside",
+      ["to"] = "WaspKingdomOutside (Hive Door)",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "WaspKingdomOutside (Hive Door) to WaspKingdomOutside",
+      ["from"] = "WaspKingdomOutside (Hive Door)",
+      ["to"] = "WaspKingdomOutside",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "WaspKingdomOutside to WaspKingdomOutside (Grass Door)",
+      ["from"] = "WaspKingdomOutside",
+      ["to"] = "WaspKingdomOutside (Grass Door)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Horn Slash",
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdomOutside (Grass Door) to WaspKingdomOutside",
+      ["from"] = "WaspKingdomOutside (Grass Door)",
+      ["to"] = "WaspKingdomOutside",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Horn Slash",
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdom1 to WaspKingdom1 (Bottom)",
+      ["from"] = "WaspKingdom1",
+      ["to"] = "WaspKingdom1 (Bottom)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "WaspKingdom1 (Bottom) to WaspKingdom1",
+      ["from"] = "WaspKingdom1 (Bottom)",
+      ["to"] = "WaspKingdom1",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdom2 to WaspKingdom2 (Top)",
+      ["from"] = "WaspKingdom2",
+      ["to"] = "WaspKingdom2 (Top)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdom2 (Top) to WaspKingdom2",
+      ["from"] = "WaspKingdom2 (Top)",
+      ["to"] = "WaspKingdom2",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "WaspKingdom4 to WaspKingdom4 (Top)",
+      ["from"] = "WaspKingdom4",
+      ["to"] = "WaspKingdom4 (Top)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdom4 (Top) to WaspKingdom4",
+      ["from"] = "WaspKingdom4 (Top)",
+      ["to"] = "WaspKingdom4",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdom4 (Top) to WaspKingdom4 (Right)",
+      ["from"] = "WaspKingdom4 (Top)",
+      ["to"] = "WaspKingdom4 (Right)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdom4 (Right) to WaspKingdom4 (Top)",
+      ["from"] = "WaspKingdom4 (Right)",
+      ["to"] = "WaspKingdom4 (Top)",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "WaspKingdom5 to WaspKingdom5 (Top)",
+      ["from"] = "WaspKingdom5",
+      ["to"] = "WaspKingdom5 (Top)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Wasp Key",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdom5 (Top) to WaspKingdom5",
+      ["from"] = "WaspKingdom5 (Top)",
+      ["to"] = "WaspKingdom5",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Wasp Key",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdom5 (Top) to WaspKingdom5 (Vent)",
+      ["from"] = "WaspKingdom5 (Top)",
+      ["to"] = "WaspKingdom5 (Vent)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Jump",
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdom5 (Vent) to WaspKingdom5 (Top)",
+      ["from"] = "WaspKingdom5 (Vent)",
+      ["to"] = "WaspKingdom5 (Top)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "WaspKingdomMainHall to WaspKingdomMainHall (Vent)",
+      ["from"] = "WaspKingdomMainHall",
+      ["to"] = "WaspKingdomMainHall (Vent)",
+      ["rule"] = {
+        ["rule"] = "False_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "WaspKingdomMainHall (Vent) to WaspKingdomMainHall",
+      ["from"] = "WaspKingdomMainHall (Vent)",
+      ["to"] = "WaspKingdomMainHall",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "WaspKingdomMainHall to WaspKingdomMainHall (Front Door)",
+      ["from"] = "WaspKingdomMainHall",
+      ["to"] = "WaspKingdomMainHall (Front Door)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "WaspKingdomMainHall (Front Door) to WaspKingdomMainHall",
+      ["from"] = "WaspKingdomMainHall (Front Door)",
+      ["to"] = "WaspKingdomMainHall",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "WaspKingdomMainHall to WaspKingdomMainHall (Top)",
+      ["from"] = "WaspKingdomMainHall",
+      ["to"] = "WaspKingdomMainHall (Top)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdomMainHall (Top) to WaspKingdomMainHall",
+      ["from"] = "WaspKingdomMainHall (Top)",
+      ["to"] = "WaspKingdomMainHall",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "WaspKingdomThrone to WaspKingdomThrone (Top)",
+      ["from"] = "WaspKingdomThrone",
+      ["to"] = "WaspKingdomThrone (Top)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Member",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["name"] = "Kabbu",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdomThrone (Top) to WaspKingdomThrone",
+      ["from"] = "WaspKingdomThrone (Top)",
+      ["to"] = "WaspKingdomThrone",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Member",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["name"] = "Kabbu",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdom2 (Top) to WaspKingdom2 (Right Door)",
+      ["from"] = "WaspKingdom2 (Top)",
+      ["to"] = "WaspKingdom2 (Right Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Wasp Key",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "WaspKingdom2 (Right Door) to WaspKingdom2 (Top)",
+      ["from"] = "WaspKingdom2 (Right Door)",
+      ["to"] = "WaspKingdom2 (Top)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "HideoutLeftA to HideoutLeftA (Upper Left)",
+      ["from"] = "HideoutLeftA",
+      ["to"] = "HideoutLeftA (Upper Left)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "HideoutLeftA (Upper Left) to HideoutLeftA",
+      ["from"] = "HideoutLeftA (Upper Left)",
+      ["to"] = "HideoutLeftA",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "HideoutStairsRoom to HideoutStairsRoom (Bottom)",
+      ["from"] = "HideoutStairsRoom",
+      ["to"] = "HideoutStairsRoom (Bottom)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Halt",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "HideoutStairsRoom (Bottom) to HideoutStairsRoom",
+      ["from"] = "HideoutStairsRoom (Bottom)",
+      ["to"] = "HideoutStairsRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Halt",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "HideoutRightA to HideoutRightA (Kitchen)",
+      ["from"] = "HideoutRightA",
+      ["to"] = "HideoutRightA (Kitchen)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "HideoutRightA (Kitchen) to HideoutRightA",
+      ["from"] = "HideoutRightA (Kitchen)",
+      ["to"] = "HideoutRightA",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "HideoutGarden to HideoutGarden (Bottom Left)",
+      ["from"] = "HideoutGarden",
+      ["to"] = "HideoutGarden (Bottom Left)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["name"] = "HideoutGarden (Bottom Left) to HideoutGarden",
+      ["from"] = "HideoutGarden (Bottom Left)",
+      ["to"] = "HideoutGarden",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["name"] = "HideoutGarden (Bottom Left) to HideoutGarden (Upper)",
+      ["from"] = "HideoutGarden (Bottom Left)",
+      ["to"] = "HideoutGarden (Upper)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "HideoutGarden (Upper) to HideoutGarden (Bottom Left)",
+      ["from"] = "HideoutGarden (Upper)",
+      ["to"] = "HideoutGarden (Bottom Left)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "StreamMountain1 to StreamMountain1 (Left)",
+      ["from"] = "StreamMountain1",
+      ["to"] = "StreamMountain1 (Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "StreamMountain1 (Left) to StreamMountain1",
+      ["from"] = "StreamMountain1 (Left)",
+      ["to"] = "StreamMountain1",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "StreamMountain3 to StreamMountain3 (Upper)",
+      ["from"] = "StreamMountain3",
+      ["to"] = "StreamMountain3 (Upper)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "StreamMountain3 (Upper) to StreamMountain3",
+      ["from"] = "StreamMountain3 (Upper)",
+      ["to"] = "StreamMountain3",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Bee Fly",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "StreamMountain4 to StreamMountain4 (Middle)",
+      ["from"] = "StreamMountain4",
+      ["to"] = "StreamMountain4 (Middle)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "StreamMountain4 (Middle) to StreamMountain4",
+      ["from"] = "StreamMountain4 (Middle)",
+      ["to"] = "StreamMountain4",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Beemerang Toss",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Freeze",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "StreamMountain4 (Middle) to StreamMountain4 (Left)",
+      ["from"] = "StreamMountain4 (Middle)",
+      ["to"] = "StreamMountain4 (Left)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Halt",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "StreamMountain4 (Left) to StreamMountain4 (Middle)",
+      ["from"] = "StreamMountain4 (Left)",
+      ["to"] = "StreamMountain4 (Middle)",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Beemerang Halt",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "StreamMountain2 to StreamMountain2 (Bottom)",
+      ["from"] = "StreamMountain2",
+      ["to"] = "StreamMountain2 (Bottom)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+              {
+                ["rule"] = "Or",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beemerang Toss",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Horn Slash",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Freeze",
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "StreamMountain2 (Bottom) to StreamMountain2",
+      ["from"] = "StreamMountain2 (Bottom)",
+      ["to"] = "StreamMountain2",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "Or",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Beemerang Toss",
+              },
+            },
+            {
+              ["rule"] = "And",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["children"] = {
+                {
+                  ["rule"] = "CanUse",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["args"] = {
+                    ["ability"] = "Bee Fly",
+                  },
+                },
+                {
+                  ["rule"] = "Or",
+                  ["options"] = {},
+                  ["filtered_resolution"] = false,
+                  ["children"] = {
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Beemerang Toss",
+                      },
+                    },
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Horn Slash",
+                      },
+                    },
+                    {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Freeze",
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "StreamMountain2 to StreamMountain2 (Upper Left)",
+      ["from"] = "StreamMountain2",
+      ["to"] = "StreamMountain2 (Upper Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "Or",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beemerang Toss",
+                    },
+                  },
+                  {
+                    ["rule"] = "And",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["children"] = {
+                      {
+                        ["rule"] = "CanUse",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["args"] = {
+                          ["ability"] = "Bee Fly",
+                        },
+                      },
+                      {
+                        ["rule"] = "Or",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["children"] = {
+                          {
+                            ["rule"] = "CanUse",
+                            ["options"] = {},
+                            ["filtered_resolution"] = false,
+                            ["args"] = {
+                              ["ability"] = "Beemerang Toss",
+                            },
+                          },
+                          {
+                            ["rule"] = "CanUse",
+                            ["options"] = {},
+                            ["filtered_resolution"] = false,
+                            ["args"] = {
+                              ["ability"] = "Horn Slash",
+                            },
+                          },
+                          {
+                            ["rule"] = "CanUse",
+                            ["options"] = {},
+                            ["filtered_resolution"] = false,
+                            ["args"] = {
+                              ["ability"] = "Freeze",
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "StreamMountain2 (Upper Left) to StreamMountain2",
+      ["from"] = "StreamMountain2 (Upper Left)",
+      ["to"] = "StreamMountain2",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "ChomperCave1 to ChomperCave1 (Upper)",
+      ["from"] = "ChomperCave1",
+      ["to"] = "ChomperCave1 (Upper)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanReachRegion",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["region_name"] = "ChomperCave1 (Upper)",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "ChomperCave1 (Upper) to ChomperCave1",
+      ["from"] = "ChomperCave1 (Upper)",
+      ["to"] = "ChomperCave1",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanReachRegion",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["region_name"] = "ChomperCave1 (Upper)",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "ChomperCaves2 to ChomperCaves2 (Upper)",
+      ["from"] = "ChomperCaves2",
+      ["to"] = "ChomperCaves2 (Upper)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "ChomperCaves2 (Upper) to ChomperCaves2",
+      ["from"] = "ChomperCaves2 (Upper)",
+      ["to"] = "ChomperCaves2",
+      ["rule"] = {
+        ["rule"] = "WayBack",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["child"] = {
+          ["rule"] = "And",
+          ["options"] = {},
+          ["filtered_resolution"] = false,
+          ["children"] = {
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Freeze",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Horn Slash",
+              },
+            },
+            {
+              ["rule"] = "CanUse",
+              ["options"] = {},
+              ["filtered_resolution"] = false,
+              ["args"] = {
+                ["ability"] = "Jump",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekTransition to UpperSnekTransition (Left Platform)",
+      ["from"] = "UpperSnekTransition",
+      ["to"] = "UpperSnekTransition (Left Platform)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Icicle",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekTransition (Left Platform) to UpperSnekTransition",
+      ["from"] = "UpperSnekTransition (Left Platform)",
+      ["to"] = "UpperSnekTransition",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Icicle",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekTransition (Left Platform) to UpperSnekTransition (Left)",
+      ["from"] = "UpperSnekTransition (Left Platform)",
+      ["to"] = "UpperSnekTransition (Left)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekTransition (Left) to UpperSnekTransition (Left Platform)",
+      ["from"] = "UpperSnekTransition (Left)",
+      ["to"] = "UpperSnekTransition (Left Platform)",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekTransition (Left) to UpperSnekTransition (Left Door)",
+      ["from"] = "UpperSnekTransition (Left)",
+      ["to"] = "UpperSnekTransition (Left Door)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Icicle",
+            },
+          },
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+              {
+                ["rule"] = "Or",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beemerang Toss",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Horn Slash",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Freeze",
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekTransition (Left Door) to UpperSnekTransition (Left)",
+      ["from"] = "UpperSnekTransition (Left Door)",
+      ["to"] = "UpperSnekTransition (Left)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom to UpperSnekMiddleRoom (Right)",
+      ["from"] = "UpperSnekMiddleRoom",
+      ["to"] = "UpperSnekMiddleRoom (Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Right) to UpperSnekMiddleRoom",
+      ["from"] = "UpperSnekMiddleRoom (Right)",
+      ["to"] = "UpperSnekMiddleRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom to UpperSnekMiddleRoom (Bottom Left)",
+      ["from"] = "UpperSnekMiddleRoom",
+      ["to"] = "UpperSnekMiddleRoom (Bottom Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Bottom Left) to UpperSnekMiddleRoom",
+      ["from"] = "UpperSnekMiddleRoom (Bottom Left)",
+      ["to"] = "UpperSnekMiddleRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom to UpperSnekMiddleRoom (Left)",
+      ["from"] = "UpperSnekMiddleRoom",
+      ["to"] = "UpperSnekMiddleRoom (Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Left) to UpperSnekMiddleRoom",
+      ["from"] = "UpperSnekMiddleRoom (Left)",
+      ["to"] = "UpperSnekMiddleRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom to UpperSnekMiddleRoom (Lower Top Left)",
+      ["from"] = "UpperSnekMiddleRoom",
+      ["to"] = "UpperSnekMiddleRoom (Lower Top Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Lower Top Left) to UpperSnekMiddleRoom",
+      ["from"] = "UpperSnekMiddleRoom (Lower Top Left)",
+      ["to"] = "UpperSnekMiddleRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Lower Top Left) to UpperSnekMiddleRoom (Upper Top Left)",
+      ["from"] = "UpperSnekMiddleRoom (Lower Top Left)",
+      ["to"] = "UpperSnekMiddleRoom (Upper Top Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Upper Top Left) to UpperSnekMiddleRoom (Lower Top Left)",
+      ["from"] = "UpperSnekMiddleRoom (Upper Top Left)",
+      ["to"] = "UpperSnekMiddleRoom (Lower Top Left)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Upper Top Left) to UpperSnekMiddleRoom (Upper Top Left Door)",
+      ["from"] = "UpperSnekMiddleRoom (Upper Top Left)",
+      ["to"] = "UpperSnekMiddleRoom (Upper Top Left Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Lab Card",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Upper Top Left Door) to UpperSnekMiddleRoom (Upper Top Left)",
+      ["from"] = "UpperSnekMiddleRoom (Upper Top Left Door)",
+      ["to"] = "UpperSnekMiddleRoom (Upper Top Left)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Lower Top Left) to UpperSnekMiddleRoom (Upper Top Right)",
+      ["from"] = "UpperSnekMiddleRoom (Lower Top Left)",
+      ["to"] = "UpperSnekMiddleRoom (Upper Top Right)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Upper Top Right) to UpperSnekMiddleRoom (Lower Top Left)",
+      ["from"] = "UpperSnekMiddleRoom (Upper Top Right)",
+      ["to"] = "UpperSnekMiddleRoom (Lower Top Left)",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Upper Top Right) to UpperSnekMiddleRoom (Upper Top Right Door)",
+      ["from"] = "UpperSnekMiddleRoom (Upper Top Right)",
+      ["to"] = "UpperSnekMiddleRoom (Upper Top Right Door)",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Lab Card",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekMiddleRoom (Upper Top Right Door) to UpperSnekMiddleRoom (Upper Top Right)",
+      ["from"] = "UpperSnekMiddleRoom (Upper Top Right Door)",
+      ["to"] = "UpperSnekMiddleRoom (Upper Top Right)",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+    {
+      ["name"] = "UpperSnekBeforeBoss to UpperSnekBeforeBoss (Left Door)",
+      ["from"] = "UpperSnekBeforeBoss",
+      ["to"] = "UpperSnekBeforeBoss (Left Door)",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Small Gear",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Medium Gear",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Big Gear",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "UpperSnekBeforeBoss (Left Door) to UpperSnekBeforeBoss",
+      ["from"] = "UpperSnekBeforeBoss (Left Door)",
+      ["to"] = "UpperSnekBeforeBoss",
+      ["rule"] = {
+        ["rule"] = "True_",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {},
+      },
+    },
+  },
+  ["start_entrance"] = "Menu -> Starting Location",
+  ["start_regions"] = {
+    ["AbandonedCity|AbandonedCityTent|loadzone"] = "AbandonedCity (Top)",
+    ["AbandonedCity|BarrenLandsTanks|loadzonecity"] = "AbandonedCity",
+    ["AbandonedCityTent|AbandonedCity|loadzonetent"] = "AbandonedCityTent",
+    ["AntBridge|AntPalace1|loadzone plaza"] = "AntBridge",
+    ["AntBridge|BugariaMainPlaza|loadzone palace"] = "AntBridge",
+    ["AntMinesBreakRoom|AntTunnels|door break room"] = "AntMinesBreakRoom",
+    ["AntPalace1|AntBridge|loadzonepalace"] = "AntPalace1",
+    ["AntPalace1|AntPalace2|loadzonehall"] = "AntPalace1",
+    ["AntPalace1|AntPalaceLibrary|LoadZone"] = "AntPalace1",
+    ["AntPalace1|AntPalaceWarRoom|LoadZone - Duplicate"] = "AntPalace1",
+    ["AntPalace1|AntTunnels|LoadZoneMain"] = "AntPalace1",
+    ["AntPalace2|AntPalace1|Loadzonethrone"] = "AntPalace2",
+    ["AntPalaceLibrary|AntPalace1|Loadzonelibrary"] = "AntPalaceLibrary",
+    ["AntPalaceWarRoom|AntPalace1|loadzonewarroom"] = "AntPalaceWarRoom",
+    ["AntTunnels|AntMinesBreakRoom|loadzone"] = "AntTunnels",
+    ["AntTunnels|AntPalace1|MineLoadZone"] = "AntTunnels",
+    ["BOGoldenPath|BugariaOutskirtsOutsideCity|LoadZoneGoldenPath"] = "BOGoldenPath (Right)",
+    ["BOGoldenPath|GoldenPathTunnel|loadzonefields"] = "BOGoldenPath",
+    ["BOGoldenPath|HermitCave|loadzone"] = "BOGoldenPath (Left)",
+    ["BOLostSandsEntrance|BugariaOutskirtsEast2|loadzonenorth"] = "BOLostSandsEntrance",
+    ["BOLostSandsEntrance|DesertEntrance|loadzone outskirts"] = "BOLostSandsEntrance",
+    ["BarrenLandsAntTunnel|TermiteOutside|loadzonecave"] = "BarrenLandsAntTunnel",
+    ["BarrenLandsBeefly|BarrenLandsCD|loadzoneright"] = "BarrenLandsBeefly (Left)",
+    ["BarrenLandsBeefly|BarrenLandsCloud|loadzonenorth"] = "BarrenLandsBeefly (Bottom)",
+    ["BarrenLandsBeefly|BarrenLandsMiniboss|loadzoneleft"] = "BarrenLandsBeefly (Upper Right)",
+    ["BarrenLandsCD|BarrenLandsBeefly|loadzonecd"] = "BarrenLandsCD (Upper)",
+    ["BarrenLandsCD|BarrenLandsEntrance|loadzonesouth"] = "BarrenLandsCD",
+    ["BarrenLandsCloud|BarrenLandsBeefly|loadzonesouth"] = "BarrenLandsCloud (Top)",
+    ["BarrenLandsCloud|BarrenLandsPumpkins|loadzoneleft"] = "BarrenLandsCloud",
+    ["BarrenLandsCloud|BarrenLandsTanks|loadzoneright"] = "BarrenLandsCloud (Left)",
+    ["BarrenLandsEntrance|BarrenLandsCD|loadzonenorth"] = "BarrenLandsEntrance",
+    ["BarrenLandsEntrance|BarrenLandsSideGPT|loadzone right"] = "BarrenLandsEntrance",
+    ["BarrenLandsEntrance|GoldenPathTunnel|loadzonebarrenlands"] = "BarrenLandsEntrance",
+    ["BarrenLandsMiniboss|BarrenLandsBeefly|loadzoneminiboss"] = "BarrenLandsMiniboss",
+    ["BarrenLandsMiniboss|BarrenLandsRock|loadzone north"] = "BarrenLandsMiniboss",
+    ["BarrenLandsMiniboss|TermiteOutside|loadzonesouth"] = "BarrenLandsMiniboss",
+    ["BarrenLandsMushrooms|BarrenLandsPumpkins|loadzonesouth"] = "BarrenLandsMushrooms",
+    ["BarrenLandsPumpkins|BarrenLandsCloud|loadzoneright"] = "BarrenLandsPumpkins",
+    ["BarrenLandsPumpkins|BarrenLandsMushrooms|loadzonepumpkin"] = "BarrenLandsPumpkins",
+    ["BarrenLandsPumpkins|BarrenLandsRock|loadzoneleft"] = "BarrenLandsPumpkins (Right Door)",
+    ["BarrenLandsRock|BarrenLandsMiniboss|loadzone south"] = "BarrenLandsRock",
+    ["BarrenLandsRock|BarrenLandsPumpkins|loadzoneright - Duplicate"] = "BarrenLandsRock",
+    ["BarrenLandsSideGPT|BarrenLandsEntrance|loadzoneleft"] = "BarrenLandsSideGPT",
+    ["BarrenLandsSideGPT|GoldenPathTunnel2|loadzonebarrenlands - Duplicate#10"] = "BarrenLandsSideGPT (Top)",
+    ["BarrenLandsTanks|AbandonedCity|loadzone"] = "BarrenLandsTanks",
+    ["BarrenLandsTanks|BarrenLandsCloud|loadzoneleft"] = "BarrenLandsTanks",
+    ["BeehiveBalcony|BeehiveMainArea|loadzone balcony"] = "BeehiveBalcony",
+    ["BeehiveMainArea|BeehiveBalcony|laodzone"] = "BeehiveMainArea",
+    ["BeehiveMainArea|BeehiveOutside|loadzone inside factory side"] = "BeehiveMainArea",
+    ["BeehiveMainArea|BeehiveThroneRoom|loadzone"] = "BeehiveMainArea",
+    ["BeehiveMainArea|HBsLab|loadzone"] = "BeehiveMainArea",
+    ["BeehiveMainArea|HoneycombsLab|loadzone"] = "BeehiveMainArea",
+    ["BeehiveMainArea|JaunesGallery|loadzone"] = "BeehiveMainArea",
+    ["BeehiveOutside|BeehiveMainArea|loadzoneoutside - Duplicate - Duplicate"] = "BeehiveOutside (Left)",
+    ["BeehiveOutside|HoneyFactoryEntrance|loadzoneoutside"] = "BeehiveOutside (Left)",
+    ["BeehiveThroneRoom|BeehiveMainArea|loadzone throne"] = "BeehiveThroneRoom",
+    ["BroodmotherLair|FGCave|loadzonebroodmother"] = "BroodmotherLair",
+    ["BroodmotherLair|PowerPlant|loadzonebroodmother"] = "BroodmotherLair",
+    ["BugariaCommercial|BugariaMainPlaza|LoadingZoneCommercial"] = "BugariaCommercial",
+    ["BugariaCommercial|BugariaResidential|LoadingZoneCommercial"] = "BugariaCommercial",
+    ["BugariaMainPlaza|AntBridge|loadzoneplaza"] = "BugariaMainPlaza",
+    ["BugariaMainPlaza|BugariaCommercial|DoorPlaza"] = "BugariaMainPlaza",
+    ["BugariaMainPlaza|BugariaOutskirtsOutsideCity|DoorBugaria"] = "BugariaMainPlaza",
+    ["BugariaMainPlaza|BugariaResidential|LoadingZoneMain"] = "BugariaMainPlaza",
+    ["BugariaMainPlaza|BugariaTheater|LoadingZone"] = "BugariaMainPlaza",
+    ["BugariaOutskirtsEast1|BugariaOutskirtsEast2|loadzone left"] = "BugariaOutskirtsEast1 (Right)",
+    ["BugariaOutskirtsEast1|BugariaOutskirtsOutsideCity|loadzone east"] = "BugariaOutskirtsEast1",
+    ["BugariaOutskirtsEast1|CaveOfTrials|loadzone"] = "BugariaOutskirtsEast1 (Cave Door)",
+    ["BugariaOutskirtsEast2|BOLostSandsEntrance|loadzonesouth"] = "BugariaOutskirtsEast2 (Top)",
+    ["BugariaOutskirtsEast2|BugariaOutskirtsEast1|loadzone right"] = "BugariaOutskirtsEast2",
+    ["BugariaOutskirtsEast2|BugariaPier|loadzone bugaria"] = "BugariaOutskirtsEast2",
+    ["BugariaOutskirtsOutsideCity|BOGoldenPath|LoadZoneBugaria"] = "BugariaOutskirtsOutsideCity",
+    ["BugariaOutskirtsOutsideCity|BugariaMainPlaza|loadingzoneexit"] = "BugariaOutskirtsOutsideCity",
+    ["BugariaOutskirtsOutsideCity|BugariaOutskirtsEast1|loadzoneback"] = "BugariaOutskirtsOutsideCity",
+    ["BugariaOutskirtsOutsideCity|BugariaOutskitsSnakemouthCorridor1|DoorMainArea"] = "BugariaOutskirtsOutsideCity (Past the Gate)",
+    ["BugariaOutskirtsSnakemouthCorridor2|NearSnakemouth|loading zone cave"] = "BugariaOutskirtsSnakemouthCorridor2",
+    ["BugariaOutskirtsSnakemouthCorridor2|OutsideSnakemouth|loading zone outside"] = "BugariaOutskirtsSnakemouthCorridor2 (Left)",
+    ["BugariaOutskitsSnakemouthCorridor1|BugariaOutskirtsOutsideCity|DoorSnakemouth"] = "BugariaOutskitsSnakemouthCorridor1",
+    ["BugariaOutskitsSnakemouthCorridor1|NearSnakemouth|loadingzonefields"] = "BugariaOutskitsSnakemouthCorridor1 (Left)",
+    ["BugariaOutskitsSnakemouthCorridor1|SeedlingHaven|loadzone"] = "BugariaOutskitsSnakemouthCorridor1 (Haven Door)",
+    ["BugariaPier|BugariaOutskirtsEast2|loadzone right"] = "BugariaPier",
+    ["BugariaResidential|BugariaCommercial|LoadingZoneResidential"] = "BugariaResidential",
+    ["BugariaResidential|BugariaMainPlaza|LoadingZoneResidential"] = "BugariaResidential",
+    ["BugariaTheater|BugariaMainPlaza|loadingzone theater"] = "BugariaTheater",
+    ["CaveOfTrials|BugariaOutskirtsEast1|loadzonecave"] = "CaveOfTrials",
+    ["ChomperCave1|ChomperCaves2|loadzone low"] = "ChomperCave1",
+    ["ChomperCave1|ChomperCaves2|loadzonehigh"] = "ChomperCave1 (Upper)",
+    ["ChomperCave1|ChomperCaves3|loadzone"] = "ChomperCave1 (Upper)",
+    ["ChomperCave1|GoldenHillsPath3|loadzonechomper"] = "ChomperCave1",
+    ["ChomperCaves2|ChomperCave1|loadzone high"] = "ChomperCaves2 (Upper)",
+    ["ChomperCaves2|ChomperCave1|loadzone low"] = "ChomperCaves2",
+    ["ChomperCaves3|ChomperCave1|loadzoneboss"] = "ChomperCaves3",
+    ["ChucksAbode|NearSnakemouth|loadingzonechuck"] = "ChucksAbode",
+    ["DefiantRoot1|DefiantRoot2|loadzonemainarea"] = "DefiantRoot1",
+    ["DefiantRoot1|DefiantRoot3|loadzone"] = "DefiantRoot1",
+    ["DefiantRoot1|DefiantRootWell|loadzone"] = "DefiantRoot1",
+    ["DefiantRoot1|DesertDREastEntrance|loadzoneDR"] = "DefiantRoot1",
+    ["DefiantRoot2|DefiantRoot1|loadzoneelevator"] = "DefiantRoot2",
+    ["DefiantRoot2|DesertDRSouthEntrance|loadzone dr"] = "DefiantRoot2",
+    ["DefiantRoot3|DefiantRoot1|loadzonecommercial"] = "DefiantRoot3",
+    ["DefiantRootWell|DefiantRoot1|loadzone well"] = "DefiantRootWell",
+    ["DefiantRootWell|HideoutGarden|loadzone well"] = "DefiantRootWell (Right)",
+    ["DesertBadgeAlcove|DesertCaravanMap|loadzoneleft"] = "DesertBadgeAlcove",
+    ["DesertBadgeAlcove|DesertDREastEntrance|loadzone south"] = "DesertBadgeAlcove",
+    ["DesertBadgeAlcove|DesertJumpPuzzle|loadzone right"] = "DesertBadgeAlcove (Ledge)",
+    ["DesertBadlands|DesertEntrance|WarpHideout"] = "DesertBadlands",
+    ["DesertBadlands|DesertRockFormation|WarpHideout"] = "DesertBadlands",
+    ["DesertBeforeGH|DesertSouthern|loadzoneleft"] = "DesertBeforeGH",
+    ["DesertBeforeGH|DesertWestDunes|loadzone south"] = "DesertBeforeGH",
+    ["DesertBeforeGH|GoldenSettlementEntrance|loadzone desert"] = "DesertBeforeGH",
+    ["DesertBookArea|DesertEntrance|WarpBookZone"] = "DesertBookArea",
+    ["DesertBookArea|DesertRockFormation|WarpBook"] = "DesertBookArea (North)",
+    ["DesertBookArea|DesertSandPitArea|loadzone book area"] = "DesertBookArea (North)",
+    ["DesertBookArea|DesertTrenchMiddle|loadzone book"] = "DesertBookArea",
+    ["DesertCaravanMap|DesertBadgeAlcove|loadzoneright"] = "DesertCaravanMap",
+    ["DesertCaravanMap|DesertSandPitArea|loadzone caravan area"] = "DesertCaravanMap",
+    ["DesertDREastEntrance|DefiantRoot1|loadzoneoutside"] = "DesertDREastEntrance (Left)",
+    ["DesertDREastEntrance|DesertBadgeAlcove|loadzone north"] = "DesertDREastEntrance",
+    ["DesertDREastEntrance|DesertFGBorder|loadzone desert"] = "DesertDREastEntrance",
+    ["DesertDRSouthEntrance|DefiantRoot2|loadzoneoutside"] = "DesertDRSouthEntrance",
+    ["DesertDRSouthEntrance|DesertJumpPuzzle|loadzoneleft"] = "DesertDRSouthEntrance",
+    ["DesertDRSouthEntrance|DesertOasisEntrance|loadzonenorth"] = "DesertDRSouthEntrance",
+    ["DesertEastmost|DesertRockFormation|loadzone north"] = "DesertEastmost",
+    ["DesertEastmost|DesertSandPitArea|loadzone right"] = "DesertEastmost",
+    ["DesertEastmost|DesertScorpion|loadzone south"] = "DesertEastmost",
+    ["DesertEntrance|BOLostSandsEntrance|load zone north"] = "DesertEntrance",
+    ["DesertEntrance|DesertBadlands|WarpEntrance"] = "DesertEntrance",
+    ["DesertEntrance|DesertBookArea|WarpEntrance"] = "DesertEntrance (Ledge)",
+    ["DesertEntrance|DesertTrenchMiddle|loadzone entrance"] = "DesertEntrance",
+    ["DesertEntrance|DesertTrenchSouth|WarpEntrance"] = "DesertEntrance",
+    ["DesertFGBorder|DesertDREastEntrance|loadzoneFG"] = "DesertFGBorder",
+    ["DesertFGBorder|FarGrasslands1|loadzonedesert"] = "DesertFGBorder",
+    ["DesertJumpPuzzle|DesertBadgeAlcove|loadzone left"] = "DesertJumpPuzzle (Right)",
+    ["DesertJumpPuzzle|DesertDRSouthEntrance|loadzone side"] = "DesertJumpPuzzle",
+    ["DesertMountain|DesertSandPitArea|loadzone mountain"] = "DesertMountain",
+    ["DesertMountain|DesertTrenchMiddle|loadzone north"] = "DesertMountain",
+    ["DesertMountain|StreamMountain1|loadzonedesert"] = "DesertMountain",
+    ["DesertOasis|DesertOasisEntrance|loadzoneside"] = "DesertOasis",
+    ["DesertOasis|DesertRoachVillage|loadzonenorth"] = "DesertOasis (Bottom)",
+    ["DesertOasis|StreamMountain3|loadzone exit"] = "DesertOasis (Top Right)",
+    ["DesertOasisEntrance|DesertDRSouthEntrance|loadzone south"] = "DesertOasisEntrance",
+    ["DesertOasisEntrance|DesertOasis|loadzoneside"] = "DesertOasisEntrance (Right)",
+    ["DesertOasisEntrance|DesertWestDunes|loadzone north"] = "DesertOasisEntrance",
+    ["DesertRoachVillage|DesertOasis|loadzonesouth"] = "DesertRoachVillage",
+    ["DesertRoachVillage|DesertSouthern|loadzone north"] = "DesertRoachVillage",
+    ["DesertRoachVillage|DesertTrenchMiddle|loadzone village"] = "DesertRoachVillage",
+    ["DesertRockFormation|DesertBadlands|WarpPuzzle"] = "DesertRockFormation",
+    ["DesertRockFormation|DesertBookArea|WarpPuzzle"] = "DesertRockFormation",
+    ["DesertRockFormation|DesertEastmost|loadzone south"] = "DesertRockFormation",
+    ["DesertSandCastle|DesertScorpion|loadzone castle"] = "DesertSandCastle",
+    ["DesertSandPitArea|DesertBookArea|warp north"] = "DesertSandPitArea (Bottom)",
+    ["DesertSandPitArea|DesertCaravanMap|loadzone south"] = "DesertSandPitArea (Top Left)",
+    ["DesertSandPitArea|DesertEastmost|loadzone side"] = "DesertSandPitArea (Right)",
+    ["DesertSandPitArea|DesertMountain|loadzone side"] = "DesertSandPitArea (Left)",
+    ["DesertSandPitArea|DesertScorpion|loadzone left"] = "DesertSandPitArea (Top Right)",
+    ["DesertScorpion|DesertEastmost|loadzone north"] = "DesertScorpion",
+    ["DesertScorpion|DesertSandCastle|loadzone"] = "DesertScorpion",
+    ["DesertScorpion|DesertSandPitArea|loadzone scorpion"] = "DesertScorpion",
+    ["DesertSouthern|DesertBeforeGH|loadzone side"] = "DesertSouthern",
+    ["DesertSouthern|DesertRoachVillage|loadzone south"] = "DesertSouthern (Ledge)",
+    ["DesertSouthern|DesertTrenchSouth|loadzone left"] = "DesertSouthern (Right)",
+    ["DesertTrenchMiddle|DesertBookArea|loadzone left"] = "DesertTrenchMiddle",
+    ["DesertTrenchMiddle|DesertEntrance|loadzone mountain"] = "DesertTrenchMiddle",
+    ["DesertTrenchMiddle|DesertMountain|loadzone south"] = "DesertTrenchMiddle (Top)",
+    ["DesertTrenchMiddle|DesertRoachVillage|loadzone side"] = "DesertTrenchMiddle (Left)",
+    ["DesertTrenchMiddle|DesertTrenchSouth|loadzone north1"] = "DesertTrenchMiddle",
+    ["DesertTrenchMiddle|DesertTrenchSouth|loadzone north2"] = "DesertTrenchMiddle (Middle)",
+    ["DesertTrenchSouth|DesertEntrance|WarpTrenchSouth"] = "DesertTrenchSouth",
+    ["DesertTrenchSouth|DesertSouthern|loadzone right"] = "DesertTrenchSouth (Left)",
+    ["DesertTrenchSouth|DesertTrenchMiddle|loadzone south"] = "DesertTrenchSouth",
+    ["DesertTrenchSouth|DesertTrenchMiddle|loadzone south2"] = "DesertTrenchSouth (Ledge)",
+    ["DesertWestDunes|DesertBeforeGH|loadzone north"] = "DesertWestDunes",
+    ["DesertWestDunes|DesertOasisEntrance|loadzonesouth"] = "DesertWestDunes",
+    ["FGCave|BroodmotherLair|loadzoneFG"] = "FGCave (Left)",
+    ["FGCave|FarGrasslandsOutsideCave|loadzonecave"] = "FGCave",
+    ["FGCave|WaspKingdomOutside|loadzonecave"] = "FGCave (Right)",
+    ["FGClearing|FarGrasslands4|loadzoneclearing"] = "FGClearing",
+    ["FGOutsideSwamplands|FarGrasslandsOutsideVillage|loadzoneswamp"] = "FGOutsideSwamplands",
+    ["FGOutsideSwamplands|SwamplandsBoss|loadzonenorth"] = "FGOutsideSwamplands (Top)",
+    ["FGOutsideSwamplands|SwamplandsEntrance|loadzoneexit"] = "FGOutsideSwamplands",
+    ["FGOutsideSwamplands|WaspKingdomOutside|loadzone right"] = "FGOutsideSwamplands (Top)",
+    ["FactoryProcessing2|FactoryProcessingFirstRoom|loadzoneforward"] = "FactoryProcessing2",
+    ["FactoryProcessing2|FactoryProcessingPump|loadzoneright"] = "FactoryProcessing2 (Top Left)",
+    ["FactoryProcessingFirstRoom|FactoryProcessing2|loadzoneback"] = "FactoryProcessingFirstRoom (Left)",
+    ["FactoryProcessingFirstRoom|HoneyFactoryEntrance|loadzone processing"] = "FactoryProcessingFirstRoom",
+    ["FactoryProcessingMalbee|FactoryProcessingPump|loadzonemalbee"] = "FactoryProcessingMalbee",
+    ["FactoryProcessingPump|FactoryProcessing2|loadzone pump"] = "FactoryProcessingPump",
+    ["FactoryProcessingPump|FactoryProcessingMalbee|loadzone"] = "FactoryProcessingPump",
+    ["FactoryProcessingPump|FactoryProcessingPuzzle1|loadzone"] = "FactoryProcessingPump (Bottom Top Left)",
+    ["FactoryProcessingPump|FactoryProcessingPuzzle2|loadzone"] = "FactoryProcessingPump (Upper Right)",
+    ["FactoryProcessingPump|FactoryProcessingPuzzle3|loadzone"] = "FactoryProcessingPump (Upper Left)",
+    ["FactoryProcessingPuzzle1|FactoryProcessingPump|loadzonepuzzle1"] = "FactoryProcessingPuzzle1",
+    ["FactoryProcessingPuzzle2|FactoryProcessingPump|loadzonepuzzle2"] = "FactoryProcessingPuzzle2",
+    ["FactoryProcessingPuzzle3|FactoryProcessingPump|loadzonepuzzle3"] = "FactoryProcessingPuzzle3",
+    ["FactoryStorageElevator|FactoryStorageMaze|loadzoneelevator"] = "FactoryStorageElevator (Bottom)",
+    ["FactoryStorageElevator|HoneyFactoryEntrance|loadzonestorage"] = "FactoryStorageElevator",
+    ["FactoryStorageMaze|FactoryStorageElevator|loadzonebottom"] = "FactoryStorageMaze",
+    ["FactoryStorageMaze|FactoryStorageMiniboss|loadzone"] = "FactoryStorageMaze (Bottom Left)",
+    ["FactoryStorageMaze|FactoryStorageOverseer|loadzone"] = "FactoryStorageMaze (Overseer Door)",
+    ["FactoryStorageMiniboss|FactoryStorageMaze|loadzoneboss"] = "FactoryStorageMiniboss",
+    ["FactoryStorageOverseer|FactoryStorageMaze|loadzoneos"] = "FactoryStorageOverseer",
+    ["FarGrasslands1|DesertFGBorder|loadzonefg"] = "FarGrasslands1",
+    ["FarGrasslands1|FarGrasslands2|loadzone right"] = "FarGrasslands1",
+    ["FarGrasslands1|FarGrasslands3|loadzoneleft"] = "FarGrasslands1",
+    ["FarGrasslands1|FarGrasslandsLake|loadzone south"] = "FarGrasslands1",
+    ["FarGrasslands2|FarGrasslands1|loadzone left"] = "FarGrasslands2",
+    ["FarGrasslands2|FarGrasslands4|loadzone south"] = "FarGrasslands2 (Top)",
+    ["FarGrasslands3|FarGrasslands1|loadzoneright"] = "FarGrasslands3",
+    ["FarGrasslands3|FarGrasslandsOutsideVillage|loadzoneleft"] = "FarGrasslands3 (Right)",
+    ["FarGrasslands4|FGClearing|loadzone"] = "FarGrasslands4 (Clearing Door)",
+    ["FarGrasslands4|FarGrasslands2|loadzone north"] = "FarGrasslands4",
+    ["FarGrasslands4|FarGrasslandsOutsideCave|loadzone right"] = "FarGrasslands4 (Left)",
+    ["FarGrasslandsLake|FarGrasslands1|loadzonelake"] = "FarGrasslandsLake",
+    ["FarGrasslandsOutsideCave|FGCave|loadzoneoutside"] = "FarGrasslandsOutsideCave",
+    ["FarGrasslandsOutsideCave|FarGrasslands4|loadzone left"] = "FarGrasslandsOutsideCave (Right)",
+    ["FarGrasslandsOutsideCave|FarGrasslandsWizard|loadzonecave"] = "FarGrasslandsOutsideCave (Bottom Left)",
+    ["FarGrasslandsOutsideVillage|FGOutsideSwamplands|loadzoneymap"] = "FarGrasslandsOutsideVillage",
+    ["FarGrasslandsOutsideVillage|FarGrasslands3|loadzoneright"] = "FarGrasslandsOutsideVillage",
+    ["FarGrasslandsOutsideVillage|FishingVillage|loadzone"] = "FarGrasslandsOutsideVillage (Village Door)",
+    ["FarGrasslandsWizard|FarGrasslandsOutsideCave|loadzonewizard"] = "FarGrasslandsWizard",
+    ["FarGrasslandsWizard|WizardTowerStairs|loadzoneoutside"] = "FarGrasslandsWizard (Tower)",
+    ["FishingVillage|FarGrasslandsOutsideVillage|loadzonevillage"] = "FishingVillage",
+    ["GiantLairBeforeBoss|GiantLairBeforeBoss2|loadzoneright"] = "GiantLairBeforeBoss (Upper)",
+    ["GiantLairBeforeBoss|GiantLairRoachVillage|loadzoneplains"] = "GiantLairBeforeBoss",
+    ["GiantLairBeforeBoss|GiantLairSaplingPlains|loadzonevillage"] = "GiantLairBeforeBoss (Left)",
+    ["GiantLairBeforeBoss2|GiantLairBeforeBoss|loadzoneup"] = "GiantLairBeforeBoss2",
+    ["GiantLairDeadLands1|GiantLairDeadLands2|loadzoneback"] = "GiantLairDeadLands1 (Right Door)",
+    ["GiantLairDeadLands1|GiantLairEntrance|loadzonedl"] = "GiantLairDeadLands1",
+    ["GiantLairDeadLands2|GiantLairDeadLands1|loadzoneforward"] = "GiantLairDeadLands2",
+    ["GiantLairDeadLands2|GiantLairFridgeOutside|loadzoneback"] = "GiantLairDeadLands2 (Right)",
+    ["GiantLairEntrance|GiantLairDeadLands1|loadzone"] = "GiantLairEntrance",
+    ["GiantLairEntrance|RubberPrisonGiantLairBridge|loadzonegl"] = "GiantLairEntrance",
+    ["GiantLairFridgeInside|GiantLairFridgeOutside|fridgeloadzone"] = "GiantLairFridgeInside",
+    ["GiantLairFridgeOutside|GiantLairDeadLands2|loadzonenext"] = "GiantLairFridgeOutside",
+    ["GiantLairFridgeOutside|GiantLairFridgeInside|loadzone"] = "GiantLairFridgeOutside (Right)",
+    ["GiantLairRoachVillage|GiantLairBeforeBoss|loadzonevillage"] = "GiantLairRoachVillage (Left Door)",
+    ["GiantLairSaplingPlains|GiantLairBeforeBoss|loadzonefinal"] = "GiantLairSaplingPlains",
+    ["GoldenHillsCableCar|GoldenHillsPath2|LoadZoneCable"] = "GoldenHillsCableCar (Left)",
+    ["GoldenHillsCableCar|GoldenPathTunnel|loadzonegoldenhills"] = "GoldenHillsCableCar (Right Door)",
+    ["GoldenHillsDungeonBoss|GoldenHillsDungeonUpperMain|loadzoneboss"] = "GoldenHillsDungeonBoss",
+    ["GoldenHillsDungeonCrankLeft|GoldenHillsDungeonLeftMain|loadzonecrankleft"] = "GoldenHillsDungeonCrankLeft",
+    ["GoldenHillsDungeonEntrance|GoldenHillsDungeonLeftMain|load zone main room"] = "GoldenHillsDungeonEntrance",
+    ["GoldenHillsDungeonEntrance|GoldenHillsDungeonRightCrank|loadzone"] = "GoldenHillsDungeonEntrance (Top Right)",
+    ["GoldenHillsDungeonEntrance|GoldenHillsLowerRightCrank|loadzone"] = "GoldenHillsDungeonEntrance",
+    ["GoldenHillsDungeonEntrance|GoldenSettlement1|loadzone dungeon"] = "GoldenHillsDungeonEntrance",
+    ["GoldenHillsDungeonLeftCrankHalf|GoldenHillsDungeonLeftMain|load zone crank half"] = "GoldenHillsDungeonLeftCrankHalf",
+    ["GoldenHillsDungeonLeftMain|GoldenHillsDungeonCrankLeft|loadzone"] = "GoldenHillsDungeonLeftMain (Left)",
+    ["GoldenHillsDungeonLeftMain|GoldenHillsDungeonEntrance|loadzone left"] = "GoldenHillsDungeonLeftMain",
+    ["GoldenHillsDungeonLeftMain|GoldenHillsDungeonLeftCrankHalf|loadzone"] = "GoldenHillsDungeonLeftMain (Top Left)",
+    ["GoldenHillsDungeonRightCrank|GoldenHillsDungeonEntrance|loadzone topright"] = "GoldenHillsDungeonRightCrank",
+    ["GoldenHillsDungeonUpperMain|GoldenHillsDungeonBoss|loadzone"] = "GoldenHillsDungeonUpperMain (Boss Door)",
+    ["GoldenHillsDungeonUpperMain|GoldenHillsDungeonUpperSide|loadzonehigh"] = "GoldenHillsDungeonUpperMain (Upper Right)",
+    ["GoldenHillsDungeonUpperMain|GoldenHillsDungeonUpperSide|loadzonelow"] = "GoldenHillsDungeonUpperMain",
+    ["GoldenHillsDungeonUpperSide|GoldenHillsDungeonUpperMain|loadzonehigh"] = "GoldenHillsDungeonUpperSide (Upper Door)",
+    ["GoldenHillsDungeonUpperSide|GoldenHillsDungeonUpperMain|loadzonelow"] = "GoldenHillsDungeonUpperSide",
+    ["GoldenHillsLowerRightCrank|GoldenHillsDungeonEntrance|loadzonelowright"] = "GoldenHillsLowerRightCrank",
+    ["GoldenHillsPath2|GoldenHillsCableCar|loadzonepath"] = "GoldenHillsPath2",
+    ["GoldenHillsPath2|GoldenHillsPath3|loadzoneback"] = "GoldenHillsPath2 (Left)",
+    ["GoldenHillsPath2|GoldenPitcher1|Loadzonedown"] = "GoldenHillsPath2 (Top Middle)",
+    ["GoldenHillsPath3|ChomperCave1|loadzone outside"] = "GoldenHillsPath3",
+    ["GoldenHillsPath3|GoldenHillsPath2|loadzonesettlement"] = "GoldenHillsPath3 (Right)",
+    ["GoldenHillsPath3|GoldenSettlementEntrance|loadzonepath"] = "GoldenHillsPath3 (Left)",
+    ["GoldenPathTunnel|BOGoldenPath|Loadzonetunnel"] = "GoldenPathTunnel",
+    ["GoldenPathTunnel|BarrenLandsEntrance|loadzonecave"] = "GoldenPathTunnel (Left)",
+    ["GoldenPathTunnel|GoldenHillsCableCar|loadzonetunnel"] = "GoldenPathTunnel (Top Right)",
+    ["GoldenPathTunnel|GoldenPathTunnel2|loadzonebarrenlands - Duplicate#9"] = "GoldenPathTunnel (Upper Left)",
+    ["GoldenPathTunnel2|BarrenLandsSideGPT|loadzone cave"] = "GoldenPathTunnel2",
+    ["GoldenPathTunnel2|GoldenPathTunnel|loadzonegpt2"] = "GoldenPathTunnel2 (Top)",
+    ["GoldenPitcher1|GoldenHillsPath2|loadzonepitcherarea"] = "GoldenPitcher1",
+    ["GoldenPitcher1|GoldenPitcher2|Loadzonedown - Duplicate"] = "GoldenPitcher1 (Top Right)",
+    ["GoldenPitcher2|GoldenPitcher1|Loadzoneup"] = "GoldenPitcher2",
+    ["GoldenPitcher2|PitcherPlantArena|loadzone"] = "GoldenPitcher2 (Top Left)",
+    ["GoldenSMinigame|GoldenSettlementEntrance|loadzone minigame"] = "GoldenSMinigame",
+    ["GoldenSettlement1|GoldenHillsDungeonEntrance|loadzoneoutside"] = "GoldenSettlement1",
+    ["GoldenSettlement2|PowerPlant|loadzoneoutside"] = "GoldenSettlement2",
+    ["GoldenSettlementEntrance|DesertBeforeGH|loadzonegh"] = "GoldenSettlementEntrance (Desert Door)",
+    ["GoldenSettlementEntrance|GoldenHillsPath3|loadzonesettlement"] = "GoldenSettlementEntrance",
+    ["GoldenSettlementEntrance|GoldenSMinigame|loadzone"] = "GoldenSettlementEntrance (Minigame Door)",
+    ["HBsLab|BeehiveMainArea|loadzonehb"] = "HBsLab",
+    ["HermitCave|BOGoldenPath|loadzonecave"] = "HermitCave",
+    ["HideoutCell|HideoutCentralRoom|loadzonecell"] = "HideoutCell",
+    ["HideoutCentralRoom|HideoutCell|loadzone"] = "HideoutCentralRoom",
+    ["HideoutCentralRoom|HideoutLeftA|loadzone righr"] = "HideoutCentralRoom",
+    ["HideoutCentralRoom|HideoutRightA|loadzone"] = "HideoutCentralRoom",
+    ["HideoutCentralRoom|HideoutStairsRoom|loadzonenorth"] = "HideoutCentralRoom",
+    ["HideoutEntrance|DesertBadlands|loadzone hideout"] = "HideoutEntrance",
+    ["HideoutGarden|HideoutLeftA|loadzone garden"] = "HideoutGarden",
+    ["HideoutGarden|HideoutWestStorage|loadzone"] = "HideoutGarden (Upper)",
+    ["HideoutLeftA|HideoutCentralRoom|loadzoneleft"] = "HideoutLeftA",
+    ["HideoutLeftA|HideoutGarden|loadzone right"] = "HideoutLeftA (Upper Left)",
+    ["HideoutRightA|HideoutCentralRoom|loadzone right"] = "HideoutRightA",
+    ["HideoutStairsRoom|HideoutCentralRoom|loadzonesouth"] = "HideoutStairsRoom",
+    ["HideoutWestStorage|HideoutGarden|loadzonestorage"] = "HideoutWestStorage",
+    ["HoneyFactoryCore|HoneyFactoryEntrance|looadzonecore"] = "HoneyFactoryCore",
+    ["HoneyFactoryEntrance|BeehiveOutside|loadzone factory"] = "HoneyFactoryEntrance",
+    ["HoneyFactoryEntrance|FactoryProcessingFirstRoom|loadzonemainarea"] = "HoneyFactoryEntrance (Processing Door)",
+    ["HoneyFactoryEntrance|FactoryStorageElevator|loadzonetop"] = "HoneyFactoryEntrance",
+    ["HoneyFactoryEntrance|HoneyFactoryCore|loadzone"] = "HoneyFactoryEntrance",
+    ["HoneyFactoryEntrance|HoneyFactoryWorkerRooms|loadzonebeds"] = "HoneyFactoryEntrance (Bottom)",
+    ["HoneyFactoryEntrance|HoneyFactoryWorkerRooms|loadzoneoffice"] = "HoneyFactoryEntrance (Bottom)",
+    ["HoneyFactoryWorkerRooms|HoneyFactoryEntrance|loadzoneoffice"] = "HoneyFactoryWorkerRooms",
+    ["HoneyFactoryWorkerRooms|HoneyFactoryEntrance|loadzonesleep"] = "HoneyFactoryWorkerRooms (Sleeping Quarters)",
+    ["HoneycombsLab|BeehiveMainArea|loadzonehonyecomb"] = "HoneycombsLab",
+    ["JaunesGallery|BeehiveMainArea|loadzonejaune"] = "JaunesGallery",
+    ["MetalIsland1|MetalIsland2|loadzoneoutside"] = "MetalIsland1",
+    ["MetalIsland2|MetalIsland1|loadzone hotel"] = "MetalIsland2",
+    ["MetalIsland2|MetalIslandAuditorium|loadzone"] = "MetalIsland2",
+    ["MetalIslandAuditorium|MetalIsland2|loadzone aud"] = "MetalIslandAuditorium",
+    ["MysteryIsland|MysteryIslandInside|loadzone"] = "MysteryIsland (Door)",
+    ["MysteryIslandInside|MysteryIsland|loadzone"] = "MysteryIslandInside",
+    ["NearSnakemouth|BugariaOutskirtsSnakemouthCorridor2|DoorMap1"] = "NearSnakemouth",
+    ["NearSnakemouth|BugariaOutskitsSnakemouthCorridor1|DoorSnakemouth"] = "NearSnakemouth",
+    ["NearSnakemouth|ChucksAbode|Warp"] = "NearSnakemouth",
+    ["OutsideSnakemouth|BugariaOutskirtsSnakemouthCorridor2|DoorSnakemouth"] = "OutsideSnakemouth (Corridor Side)",
+    ["OutsideSnakemouth|SnakemouthBridgeRoom|DoorOutside"] = "OutsideSnakemouth (Cave Ledge)",
+    ["PitcherPlantArena|GoldenPitcher2|Loadzoneleft"] = "PitcherPlantArena",
+    ["PowerPlant|BroodmotherLair|LoadzoneBack"] = "PowerPlant (Top)",
+    ["PowerPlant|GoldenSettlement2|loadzonepp"] = "PowerPlant",
+    ["RubberPrisonCafeteria|RubberPrisonCells1|loadzoneleft"] = "RubberPrisonCafeteria",
+    ["RubberPrisonCells1|RubberPrisonCafeteria|loadzone"] = "RubberPrisonCells1 (Left Door)",
+    ["RubberPrisonCells1|RubberPrisonCells2|loadzoneleft"] = "RubberPrisonCells1 (Right Door)",
+    ["RubberPrisonCells1|RubberPrisonSpikeRoom|loadzonenorth"] = "RubberPrisonCells1",
+    ["RubberPrisonCells1|RubberPrisonThirdFloor|loadzonecells1"] = "RubberPrisonCells1 (Top Door)",
+    ["RubberPrisonCells2|RubberPrisonCells1|loadzoneright"] = "RubberPrisonCells2 (Left Door)",
+    ["RubberPrisonCells2|RubberPrisonPier|loadzonecell2"] = "RubberPrisonCells2 (Right Door)",
+    ["RubberPrisonCells2|RubberPrisonThirdFloor|loadzonecells2"] = "RubberPrisonCells2 (Top Door)",
+    ["RubberPrisonCheckpointCorridor|RubberPrisonPier|loadzoneleft"] = "RubberPrisonCheckpointCorridor (Right)",
+    ["RubberPrisonCheckpointCorridor|RubberPrisonSpikeRoom|loadzoneback"] = "RubberPrisonCheckpointCorridor (Top Left Door)",
+    ["RubberPrisonGiantLairBridge|GiantLairEntrance|loadzoneoutside"] = "RubberPrisonGiantLairBridge (Right)",
+    ["RubberPrisonGiantLairBridge|RubberPrisonPier|bossshortcut"] = "RubberPrisonGiantLairBridge (Top Left Door)",
+    ["RubberPrisonGiantLairBridge|RubberPrisonPier|loadzoneboss"] = "RubberPrisonGiantLairBridge",
+    ["RubberPrisonGym|RubberPrisonThirdFloor|loadzonegym"] = "RubberPrisonGym",
+    ["RubberPrisonLibrary|RubberPrisonPier|loadzonelibrary"] = "RubberPrisonLibrary",
+    ["RubberPrisonOffice|RubberPrisonPier|loadzoneoffice"] = "RubberPrisonOffice",
+    ["RubberPrisonPier|RubberPrisonCells2|loadzoneright"] = "RubberPrisonPier (Second Floor)",
+    ["RubberPrisonPier|RubberPrisonCheckpointCorridor|loadzoneexit"] = "RubberPrisonPier (Ground Upper Left)",
+    ["RubberPrisonPier|RubberPrisonGiantLairBridge|loadzoneback"] = "RubberPrisonPier (Second Floor Right Door)",
+    ["RubberPrisonPier|RubberPrisonGiantLairBridge|loadzoneshortcut"] = "RubberPrisonPier (Shortcut Door)",
+    ["RubberPrisonPier|RubberPrisonLibrary|loadzone"] = "RubberPrisonPier (Top Floor)",
+    ["RubberPrisonPier|RubberPrisonOffice|loadzone"] = "RubberPrisonPier (Third Floor)",
+    ["RubberPrisonPier|RubberPrisonSecurity|loadzoneoutside"] = "RubberPrisonPier (Top Floor)",
+    ["RubberPrisonPier|RubberPrisonThirdFloor|loadzonebridge"] = "RubberPrisonPier (Third Floor)",
+    ["RubberPrisonSecurity|RubberPrisonPier|loadzonesecurity"] = "RubberPrisonSecurity",
+    ["RubberPrisonSecurity|RubberPrisonThirdFloor|loadzonesecurity"] = "RubberPrisonSecurity (Bottom Right)",
+    ["RubberPrisonSpikeRoom|RubberPrisonCells1|loadzonesouth"] = "RubberPrisonSpikeRoom (Top Door)",
+    ["RubberPrisonSpikeRoom|RubberPrisonCheckpointCorridor|loadzoneforward"] = "RubberPrisonSpikeRoom",
+    ["RubberPrisonThirdFloor|RubberPrisonCells1|loadzone3rdfloor"] = "RubberPrisonThirdFloor (Bottom Left)",
+    ["RubberPrisonThirdFloor|RubberPrisonCells2|loadzone3rdfloor"] = "RubberPrisonThirdFloor",
+    ["RubberPrisonThirdFloor|RubberPrisonGym|loadzone"] = "RubberPrisonThirdFloor (Gym Door)",
+    ["RubberPrisonThirdFloor|RubberPrisonPier|loadzone3rdfloor"] = "RubberPrisonThirdFloor",
+    ["RubberPrisonThirdFloor|RubberPrisonSecurity|loadzone3rdfloor"] = "RubberPrisonThirdFloor (Upper Right)",
+    ["SandCastleBasement|SandCastleMainRoom|loadzonebasementleft"] = "SandCastleBasement",
+    ["SandCastleBossKeyRoom|SandCastleMainRoom|loadzonebosskey"] = "SandCastleBossKeyRoom",
+    ["SandCastleBossRoom|SandCastleRoof|loadzoneboss"] = "SandCastleBossRoom",
+    ["SandCastleBossRoom|SandCastleTreasureRoom|loadzone"] = "SandCastleBossRoom",
+    ["SandCastleEntrance|DesertSandCastle|loadzone castle"] = "SandCastleEntrance",
+    ["SandCastleEntrance|SandCastleMainRoom|loadzoneentrance"] = "SandCastleEntrance (Right)",
+    ["SandCastleMainRoom|SandCastleBasement|loadzoneleft"] = "SandCastleMainRoom",
+    ["SandCastleMainRoom|SandCastleBossKeyRoom|loadzone"] = "SandCastleMainRoom (Top Right)",
+    ["SandCastleMainRoom|SandCastleEntrance|loadzone right"] = "SandCastleMainRoom",
+    ["SandCastleMainRoom|SandCastlePressurePuzzle|loadzonemain"] = "SandCastleMainRoom (Top Left)",
+    ["SandCastleMainRoom|SandCastleRockRoom|loadzone main"] = "SandCastleMainRoom (Middle Right)",
+    ["SandCastleMainRoom|SandCastleRoof|loadzoneleft"] = "SandCastleMainRoom (Top Left)",
+    ["SandCastleMainRoom|SandCastleRoof|loadzoneright"] = "SandCastleMainRoom (Top Right)",
+    ["SandCastleMainRoom|SandCastleSlidePuzzle|loadzoneleftbelow"] = "SandCastleMainRoom",
+    ["SandCastleMainRoom|SandCastleSlidePuzzle|loadzoneleftup"] = "SandCastleMainRoom (Middle Left)",
+    ["SandCastleMainRoom|SandCastleStatueRoom|loadzoneleft"] = "SandCastleMainRoom",
+    ["SandCastlePressurePuzzle|SandCastleMainRoom|loadzonepressure"] = "SandCastlePressurePuzzle",
+    ["SandCastlePressurePuzzle|SandCastleSlidePuzzle|loadzonepressure"] = "SandCastlePressurePuzzle",
+    ["SandCastleRockRoom|SandCastleMainRoom|loadzone rock"] = "SandCastleRockRoom",
+    ["SandCastleRockRoom|SandCastleStatueRoom|loadzonerock"] = "SandCastleRockRoom (Bottom Right)",
+    ["SandCastleRoof|SandCastleBossRoom|loadzoneoutside"] = "SandCastleRoof",
+    ["SandCastleRoof|SandCastleMainRoom|loadzone roof left"] = "SandCastleRoof",
+    ["SandCastleRoof|SandCastleMainRoom|loadzone roof right"] = "SandCastleRoof",
+    ["SandCastleSlidePuzzle|SandCastleMainRoom|loadzoneslidebelow"] = "SandCastleSlidePuzzle",
+    ["SandCastleSlidePuzzle|SandCastleMainRoom|loadzoneslideup"] = "SandCastleSlidePuzzle (Upper Right)",
+    ["SandCastleSlidePuzzle|SandCastlePressurePuzzle|loadzoneslide"] = "SandCastleSlidePuzzle (Upper Left)",
+    ["SandCastleStatueRoom|SandCastleMainRoom|loadzone statue"] = "SandCastleStatueRoom",
+    ["SandCastleStatueRoom|SandCastleRockRoom|loadzonestatue"] = "SandCastleStatueRoom (Right)",
+    ["SandCastleTreasureRoom|SandCastleBossRoom|loadzonetreasure"] = "SandCastleTreasureRoom",
+    ["SeedlingHaven|BugariaOutskitsSnakemouthCorridor1|loadzonehaven"] = "SeedlingHaven",
+    ["SnakemouthBridgeRoom|OutsideSnakemouth|LoadingZoneInside"] = "SnakemouthBridgeRoom",
+    ["SnakemouthBridgeRoom|SnakemouthDoorRoom|LoadingZoneBridge"] = "SnakemouthBridgeRoom (Left)",
+    ["SnakemouthDoorRoom|SnakemouthBridgeRoom|LoadingZoneDoorRoom"] = "SnakemouthDoorRoom",
+    ["SnakemouthDoorRoom|SnakemouthTop|loadzone"] = "SnakemouthDoorRoom (High Door)",
+    ["SnakemouthDoorRoom|UpperSnekEntrance|door south"] = "SnakemouthDoorRoom",
+    ["SnakemouthFallRoom|SnakemouthDoorRoom|LoadZoneFallRoom"] = "SnakemouthFallRoom (Mushroom Ledge)",
+    ["SnakemouthFallRoom|SnakemouthLake|DoorFallRoom"] = "SnakemouthFallRoom",
+    ["SnakemouthLake|SnakemouthFallRoom|DoorLakeRoom"] = "SnakemouthLake",
+    ["SnakemouthLake|SnakemouthUndergrondDoor|WarpLake"] = "SnakemouthLake (Top)",
+    ["SnakemouthMushroomPit|SnakemouthTreasureRoom|LoadingMushroom"] = "SnakemouthMushroomPit",
+    ["SnakemouthMushroomPit|SnakemouthUndergrondDoor|WarpPit"] = "SnakemouthMushroomPit (Bottom)",
+    ["SnakemouthTop|SnakemouthDoorRoom|New Entity16"] = "SnakemouthTop",
+    ["SnakemouthTreasureRoom|SnakemouthMushroomPit|LoadingTreasure"] = "SnakemouthTreasureRoom",
+    ["SnakemouthUndergrondDoor|SnakemouthLake|WarpMap5"] = "SnakemouthUndergrondDoor",
+    ["SnakemouthUndergrondDoor|SnakemouthMushroomPit|WarpDoorRoom"] = "SnakemouthUndergrondDoor (Pit Door)",
+    ["SnakemouthUndergrondDoor|SnakemouthUndergroundLeftA|LoadingZoneDoor"] = "SnakemouthUndergrondDoor (Left)",
+    ["SnakemouthUndergrondDoor|SnakemouthUndergroundLeftB|LoadingZoneDoor"] = "SnakemouthUndergrondDoor (Top Left)",
+    ["SnakemouthUndergrondDoor|SnakemouthUndergroundRightA|LoadingZoneLeft"] = "SnakemouthUndergrondDoor (Middle)",
+    ["SnakemouthUndergrondDoor|SnakemouthUndergroundRightB|DoorMainRoom"] = "SnakemouthUndergrondDoor (Top Right)",
+    ["SnakemouthUndergroundLeftA|SnakemouthUndergrondDoor|WarpLeft"] = "SnakemouthUndergroundLeftA",
+    ["SnakemouthUndergroundLeftA|SnakemouthUndergroundLeftB|LoadingZoneLow"] = "SnakemouthUndergroundLeftA (Left)",
+    ["SnakemouthUndergroundLeftB|SnakemouthUndergrondDoor|WarpLeftUp"] = "SnakemouthUndergroundLeftB (High Door)",
+    ["SnakemouthUndergroundLeftB|SnakemouthUndergroundLeftA|LoadingZoneNext"] = "SnakemouthUndergroundLeftB",
+    ["SnakemouthUndergroundRightA|SnakemouthUndergrondDoor|LoadingRightDown"] = "SnakemouthUndergroundRightA",
+    ["SnakemouthUndergroundRightA|SnakemouthUndergroundRightB|DoorMapA"] = "SnakemouthUndergroundRightA (Right)",
+    ["SnakemouthUndergroundRightB|SnakemouthUndergrondDoor|WarpRightUp"] = "SnakemouthUndergroundRightB (High Door)",
+    ["SnakemouthUndergroundRightB|SnakemouthUndergroundRightA|WarpNext"] = "SnakemouthUndergroundRightB",
+    ["StreamMountain1|DesertMountain|loadzonecave"] = "StreamMountain1",
+    ["StreamMountain1|StreamMountain2|loadzoneright"] = "StreamMountain1 (Left)",
+    ["StreamMountain2|StreamMountain1|loadzoneleft"] = "StreamMountain2",
+    ["StreamMountain2|StreamMountain3|loadzone right"] = "StreamMountain2 (Upper Left)",
+    ["StreamMountain2|StreamMountain4|loadzoneright"] = "StreamMountain2 (Bottom)",
+    ["StreamMountain3|DesertOasis|loadzone cave"] = "StreamMountain3 (Upper)",
+    ["StreamMountain3|StreamMountain2|loadzoneleft"] = "StreamMountain3",
+    ["StreamMountain4|StreamMountain2|loadzonebottom"] = "StreamMountain4",
+    ["StreamMountain4|StreamMountain5|loadzone"] = "StreamMountain4 (Left)",
+    ["StreamMountain5|StreamMountain4|loadzone boss"] = "StreamMountain5",
+    ["Swamplands2|Swamplands3|loadzone back"] = "Swamplands2 (Top)",
+    ["Swamplands2|SwamplandsEntrance|loadzonenorth"] = "Swamplands2",
+    ["Swamplands3|Swamplands2|loadzonenorth"] = "Swamplands3 (Bottom)",
+    ["Swamplands3|SwamplandsBridge|loadzoneleft"] = "Swamplands3 (Right)",
+    ["Swamplands4|Swamplands5|loadzoneleft"] = "Swamplands4 (Right Door)",
+    ["Swamplands4|SwamplandsBridge|loadzonesouth"] = "Swamplands4 (Left Door)",
+    ["Swamplands5|Swamplands4|loadzoneright"] = "Swamplands5 (Left)",
+    ["Swamplands5|Swamplands6|loadzoneright"] = "Swamplands5",
+    ["Swamplands5|Swamplands7|loadzone south"] = "Swamplands5 (Top Right)",
+    ["Swamplands5|Swamplands8|loadzonenorth"] = "Swamplands5 (Top Right)",
+    ["Swamplands6|Swamplands5|loadzonesouth"] = "Swamplands6",
+    ["Swamplands6|Swamplands8|loadzonesouth"] = "Swamplands6 (Upper Right)",
+    ["Swamplands7|Swamplands5|loadzone north"] = "Swamplands7 (Bottom Right)",
+    ["Swamplands7|SwamplandsBridge|loadzone right"] = "Swamplands7 (Left)",
+    ["Swamplands8|Swamplands5|loadzoneright"] = "Swamplands8 (Top)",
+    ["Swamplands8|Swamplands6|loadzone right"] = "Swamplands8 (Bottom)",
+    ["SwamplandsBoss|FGOutsideSwamplands|loadzoneswamp2"] = "SwamplandsBoss (Top)",
+    ["SwamplandsBoss|SwamplandsBridge|loadzone boss"] = "SwamplandsBoss",
+    ["SwamplandsBridge|Swamplands3|loadzoneright"] = "SwamplandsBridge",
+    ["SwamplandsBridge|Swamplands4|loadzone left"] = "SwamplandsBridge (Bottom)",
+    ["SwamplandsBridge|Swamplands7|loadzone left"] = "SwamplandsBridge",
+    ["SwamplandsBridge|SwamplandsBoss|loadzonesouth"] = "SwamplandsBridge (Top)",
+    ["SwamplandsEntrance|FGOutsideSwamplands|loadzoneswamp1"] = "SwamplandsEntrance",
+    ["SwamplandsEntrance|Swamplands2|loadzone south"] = "SwamplandsEntrance",
+    ["TermiteColiseum1|TermiteIndustrial|NEARloadzonecoliseum"] = "TermiteColiseum1",
+    ["TermiteIndustrial|TermiteColiseum1|loadzoneoutside"] = "TermiteIndustrial (Outside the Colosseum)",
+    ["TermiteIndustrial|TermiteMainPlaza|loadzoneright"] = "TermiteIndustrial",
+    ["TermiteIndustrial|TermitePier|loadzone"] = "TermiteIndustrial",
+    ["TermiteMainPlaza|TermiteIndustrial|loadzoneplaza"] = "TermiteMainPlaza",
+    ["TermiteMainPlaza|TermiteRoyalChamber|loadzone"] = "TermiteMainPlaza",
+    ["TermiteOutside|BarrenLandsAntTunnel|loadzone"] = "TermiteOutside (Left)",
+    ["TermiteOutside|BarrenLandsMiniboss|loadzoneright"] = "TermiteOutside",
+    ["TermitePier|TermiteIndustrial|loadzonepier"] = "TermitePier",
+    ["TermiteRoyalChamber|TermiteMainPlaza|loadzonecastle"] = "TermiteRoyalChamber",
+    ["UpperSnekBeforeBoss|UpperSnekBossRoom|loadzone"] = "UpperSnekBeforeBoss (Left Door)",
+    ["UpperSnekBeforeBoss|UpperSnekMiddleRoom|loadzoneboss"] = "UpperSnekBeforeBoss",
+    ["UpperSnekBossRoom|UpperSnekBeforeBoss|loadzoneboss"] = "UpperSnekBossRoom",
+    ["UpperSnekEntrance|SnakemouthDoorRoom|DoorLoadZone"] = "UpperSnekEntrance",
+    ["UpperSnekEntrance|UpperSnekTransition|loadzoneback"] = "UpperSnekEntrance (Top Door)",
+    ["UpperSnekGeizerRoom|UpperSnekMiddleRoom|loadzonegeizer"] = "UpperSnekGeizerRoom",
+    ["UpperSnekMiddleRoom|UpperSnekBeforeBoss|loadzoneback"] = "UpperSnekMiddleRoom (Left)",
+    ["UpperSnekMiddleRoom|UpperSnekGeizerRoom|loadzone"] = "UpperSnekMiddleRoom (Upper Top Left Door)",
+    ["UpperSnekMiddleRoom|UpperSnekPlatformRoom|loadzone"] = "UpperSnekMiddleRoom",
+    ["UpperSnekMiddleRoom|UpperSnekPressurePlateRoom|loadzone"] = "UpperSnekMiddleRoom (Upper Top Right Door)",
+    ["UpperSnekMiddleRoom|UpperSnekRiverPuzzle|loadzone"] = "UpperSnekMiddleRoom (Bottom Left)",
+    ["UpperSnekMiddleRoom|UpperSnekSwitchPuzzle|loadzone"] = "UpperSnekMiddleRoom (Lower Top Left)",
+    ["UpperSnekMiddleRoom|UpperSnekTransition|loadzoneforward"] = "UpperSnekMiddleRoom (Right)",
+    ["UpperSnekPlatformRoom|UpperSnekMiddleRoom|loadzoneplatform"] = "UpperSnekPlatformRoom",
+    ["UpperSnekPressurePlateRoom|UpperSnekMiddleRoom|loadzonepressure"] = "UpperSnekPressurePlateRoom",
+    ["UpperSnekRiverPuzzle|UpperSnekMiddleRoom|loadzoneriverorom"] = "UpperSnekRiverPuzzle",
+    ["UpperSnekSwitchPuzzle|UpperSnekMiddleRoom|loadzone switch"] = "UpperSnekSwitchPuzzle",
+    ["UpperSnekTransition|UpperSnekEntrance|door north"] = "UpperSnekTransition",
+    ["UpperSnekTransition|UpperSnekMiddleRoom|loadzoneentrance"] = "UpperSnekTransition (Left Door)",
+    ["WaspKingdom1|WaspKingdom2|loadzonesouth"] = "WaspKingdom1",
+    ["WaspKingdom2|WaspKingdom1|loadzone"] = "WaspKingdom2",
+    ["WaspKingdom2|WaspKingdom3|loadzone"] = "WaspKingdom2 (Top)",
+    ["WaspKingdom2|WaspKingdom4|loadzoneback"] = "WaspKingdom2 (Right Door)",
+    ["WaspKingdom2|WaspKingdomDrillRoom|loadzone"] = "WaspKingdom2",
+    ["WaspKingdom3|WaspKingdom2|loadzoneleft"] = "WaspKingdom3",
+    ["WaspKingdom4|WaspKingdom2|loadzoneright"] = "WaspKingdom4",
+    ["WaspKingdom4|WaspKingdom5|loadzone left"] = "WaspKingdom4 (Right)",
+    ["WaspKingdom5|WaspKingdom4|loadzonenext"] = "WaspKingdom5",
+    ["WaspKingdom5|WaspKingdomMainHall|loadzonevent"] = "WaspKingdom5 (Vent)",
+    ["WaspKingdom5|WaspKingdomPrison|loadzoneleft"] = "WaspKingdom5",
+    ["WaspKingdomDrillRoom|WaspKingdom2|loadzonedrill"] = "WaspKingdomDrillRoom",
+    ["WaspKingdomJayde|WaspKingdomPrison|loadzoneright"] = "WaspKingdomJayde",
+    ["WaspKingdomMainHall|WaspKingdom5|loadzone vent"] = "WaspKingdomMainHall (Vent)",
+    ["WaspKingdomMainHall|WaspKingdomOutside|loadzoneinside#16"] = "WaspKingdomMainHall (Front Door)",
+    ["WaspKingdomMainHall|WaspKingdomThrone|loadzoneback"] = "WaspKingdomMainHall (Top)",
+    ["WaspKingdomOutside|FGCave|loadzone wasp"] = "WaspKingdomOutside (Left)",
+    ["WaspKingdomOutside|FGOutsideSwamplands|loadzone wasp"] = "WaspKingdomOutside",
+    ["WaspKingdomPrison|WaspKingdom5|loadzoneright"] = "WaspKingdomPrison",
+    ["WaspKingdomPrison|WaspKingdomJayde|loadzone"] = "WaspKingdomPrison",
+    ["WaspKingdomQueen|WaspKingdomThrone|loadzonequeen"] = "WaspKingdomQueen",
+    ["WaspKingdomThrone|WaspKingdomMainHall|loadzonethrone"] = "WaspKingdomThrone",
+    ["WaspKingdomThrone|WaspKingdomQueen|loadzone"] = "WaspKingdomThrone (Top)",
+    ["WizardTowerAttic|WizardTowerStairs|loadzoneattic"] = "WizardTowerAttic",
+    ["WizardTowerBasement|WizardTowerStairs|loadzonebasement"] = "WizardTowerBasement (Top Right)",
+    ["WizardTowerStairs|FarGrasslandsWizard|loadzonetower"] = "WizardTowerStairs",
+    ["WizardTowerStairs|WizardTowerAttic|loadzone"] = "WizardTowerStairs (Top)",
+    ["WizardTowerStairs|WizardTowerBasement|loadzone"] = "WizardTowerStairs",
   },
   ["partners"] = {
     ["NearSnakemouth|loadingzonefields"] = {
@@ -15080,12 +24720,12 @@ return {
       ["door"] = "loadzoneoutside",
     },
     ["DefiantRootWell|loadzonehideout"] = {
-      ["region"] = "HideoutGarden",
+      ["region"] = "HideoutGarden (Bottom Left)",
       ["map"] = "HideoutGarden",
       ["door"] = "loadzone well",
     },
     ["HideoutGarden|loadzone well"] = {
-      ["region"] = "DefiantRootWell",
+      ["region"] = "DefiantRootWell (Right)",
       ["map"] = "DefiantRootWell",
       ["door"] = "loadzonehideout",
     },
@@ -15105,7 +24745,7 @@ return {
       ["door"] = "loadzoneoutside - Duplicate - Duplicate",
     },
     ["BeehiveMainArea|loadzoneoutside - Duplicate - Duplicate"] = {
-      ["region"] = "BeehiveOutside",
+      ["region"] = "BeehiveOutside (Left)",
       ["map"] = "BeehiveOutside",
       ["door"] = "loadzone inside factory side",
     },
@@ -15115,7 +24755,7 @@ return {
       ["door"] = "loadzoneoutside",
     },
     ["HoneyFactoryEntrance|loadzoneoutside"] = {
-      ["region"] = "BeehiveOutside",
+      ["region"] = "BeehiveOutside (Left)",
       ["map"] = "BeehiveOutside",
       ["door"] = "loadzone factory",
     },
@@ -15175,17 +24815,17 @@ return {
       ["door"] = "loadzoneoffice",
     },
     ["HoneyFactoryWorkerRooms|loadzoneoffice"] = {
-      ["region"] = "HoneyFactoryEntrance",
+      ["region"] = "HoneyFactoryEntrance (Bottom)",
       ["map"] = "HoneyFactoryEntrance",
       ["door"] = "loadzoneoffice",
     },
     ["HoneyFactoryEntrance|loadzonesleep"] = {
-      ["region"] = "HoneyFactoryWorkerRooms",
+      ["region"] = "HoneyFactoryWorkerRooms (Sleeping Quarters)",
       ["map"] = "HoneyFactoryWorkerRooms",
       ["door"] = "loadzonebeds",
     },
     ["HoneyFactoryWorkerRooms|loadzonebeds"] = {
-      ["region"] = "HoneyFactoryEntrance",
+      ["region"] = "HoneyFactoryEntrance (Bottom)",
       ["map"] = "HoneyFactoryEntrance",
       ["door"] = "loadzonesleep",
     },
@@ -15205,7 +24845,7 @@ return {
       ["door"] = "loadzonemainarea",
     },
     ["FactoryProcessingFirstRoom|loadzonemainarea"] = {
-      ["region"] = "HoneyFactoryEntrance",
+      ["region"] = "HoneyFactoryEntrance (Processing Door)",
       ["map"] = "HoneyFactoryEntrance",
       ["door"] = "loadzone processing",
     },
@@ -15355,7 +24995,7 @@ return {
       ["door"] = "loadzoneback",
     },
     ["FactoryProcessing2|loadzoneback"] = {
-      ["region"] = "FactoryProcessingFirstRoom",
+      ["region"] = "FactoryProcessingFirstRoom (Left)",
       ["map"] = "FactoryProcessingFirstRoom",
       ["door"] = "loadzoneforward",
     },
@@ -15365,7 +25005,7 @@ return {
       ["door"] = "loadzoneright",
     },
     ["FactoryProcessingPump|loadzoneright"] = {
-      ["region"] = "FactoryProcessing2",
+      ["region"] = "FactoryProcessing2 (Top Left)",
       ["map"] = "FactoryProcessing2",
       ["door"] = "loadzone pump",
     },
@@ -15375,7 +25015,7 @@ return {
       ["door"] = "loadzone",
     },
     ["FactoryProcessingPuzzle1|loadzone"] = {
-      ["region"] = "FactoryProcessingPump",
+      ["region"] = "FactoryProcessingPump (Bottom Top Left)",
       ["map"] = "FactoryProcessingPump",
       ["door"] = "loadzonepuzzle1",
     },
@@ -15385,7 +25025,7 @@ return {
       ["door"] = "loadzone",
     },
     ["FactoryProcessingPuzzle2|loadzone"] = {
-      ["region"] = "FactoryProcessingPump",
+      ["region"] = "FactoryProcessingPump (Upper Right)",
       ["map"] = "FactoryProcessingPump",
       ["door"] = "loadzonepuzzle2",
     },
@@ -15395,7 +25035,7 @@ return {
       ["door"] = "loadzone",
     },
     ["FactoryProcessingPuzzle3|loadzone"] = {
-      ["region"] = "FactoryProcessingPump",
+      ["region"] = "FactoryProcessingPump (Upper Left)",
       ["map"] = "FactoryProcessingPump",
       ["door"] = "loadzonepuzzle3",
     },
@@ -15410,7 +25050,7 @@ return {
       ["door"] = "loadzonemalbee",
     },
     ["FactoryStorageMaze|loadzoneelevator"] = {
-      ["region"] = "FactoryStorageElevator",
+      ["region"] = "FactoryStorageElevator (Bottom)",
       ["map"] = "FactoryStorageElevator",
       ["door"] = "loadzonebottom",
     },
@@ -15425,7 +25065,7 @@ return {
       ["door"] = "loadzone",
     },
     ["FactoryStorageMiniboss|loadzone"] = {
-      ["region"] = "FactoryStorageMaze",
+      ["region"] = "FactoryStorageMaze (Bottom Left)",
       ["map"] = "FactoryStorageMaze",
       ["door"] = "loadzoneboss",
     },
@@ -15435,7 +25075,7 @@ return {
       ["door"] = "loadzone",
     },
     ["FactoryStorageOverseer|loadzone"] = {
-      ["region"] = "FactoryStorageMaze",
+      ["region"] = "FactoryStorageMaze (Overseer Door)",
       ["map"] = "FactoryStorageMaze",
       ["door"] = "loadzoneos",
     },
@@ -15490,7 +25130,7 @@ return {
       ["door"] = "loadzoneside",
     },
     ["DesertOasis|loadzone cave"] = {
-      ["region"] = "StreamMountain3",
+      ["region"] = "StreamMountain3 (Upper)",
       ["map"] = "StreamMountain3",
       ["door"] = "loadzone exit",
     },
@@ -15510,7 +25150,7 @@ return {
       ["door"] = "loadzonesouth",
     },
     ["HideoutEntrance|loadzone below"] = {
-      ["region"] = "HideoutStairsRoom",
+      ["region"] = "HideoutStairsRoom (Bottom)",
       ["map"] = "HideoutStairsRoom",
       ["door"] = "loadzoneup",
     },
@@ -15565,7 +25205,7 @@ return {
       ["door"] = "loadzone right",
     },
     ["HideoutGarden|loadzone right"] = {
-      ["region"] = "HideoutLeftA",
+      ["region"] = "HideoutLeftA (Upper Left)",
       ["map"] = "HideoutLeftA",
       ["door"] = "loadzone garden",
     },
@@ -15575,7 +25215,7 @@ return {
       ["door"] = "loadzone",
     },
     ["HideoutWestStorage|loadzone"] = {
-      ["region"] = "HideoutGarden",
+      ["region"] = "HideoutGarden (Upper)",
       ["map"] = "HideoutGarden",
       ["door"] = "loadzonestorage",
     },
@@ -15635,7 +25275,7 @@ return {
       ["door"] = "loadzoneentrance",
     },
     ["SandCastleMainRoom|loadzoneentrance"] = {
-      ["region"] = "SandCastleEntrance",
+      ["region"] = "SandCastleEntrance (Right)",
       ["map"] = "SandCastleEntrance",
       ["door"] = "loadzone right",
     },
@@ -15650,12 +25290,12 @@ return {
       ["door"] = "loadzoneleftbelow",
     },
     ["SandCastleSlidePuzzle|loadzoneleftup"] = {
-      ["region"] = "SandCastleMainRoom",
+      ["region"] = "SandCastleMainRoom (Middle Left)",
       ["map"] = "SandCastleMainRoom",
       ["door"] = "loadzoneslideup",
     },
     ["SandCastleMainRoom|loadzoneslideup"] = {
-      ["region"] = "SandCastleSlidePuzzle",
+      ["region"] = "SandCastleSlidePuzzle (Upper Right)",
       ["map"] = "SandCastleSlidePuzzle",
       ["door"] = "loadzoneleftup",
     },
@@ -15665,7 +25305,7 @@ return {
       ["door"] = "loadzoneslide",
     },
     ["SandCastlePressurePuzzle|loadzoneslide"] = {
-      ["region"] = "SandCastleSlidePuzzle",
+      ["region"] = "SandCastleSlidePuzzle (Upper Left)",
       ["map"] = "SandCastleSlidePuzzle",
       ["door"] = "loadzonepressure",
     },
@@ -15680,12 +25320,12 @@ return {
       ["door"] = "loadzoneleft",
     },
     ["SandCastleStatueRoom|loadzonerock"] = {
-      ["region"] = "SandCastleRockRoom",
+      ["region"] = "SandCastleRockRoom (Bottom Right)",
       ["map"] = "SandCastleRockRoom",
       ["door"] = "loadzonestatue",
     },
     ["SandCastleRockRoom|loadzonestatue"] = {
-      ["region"] = "SandCastleStatueRoom",
+      ["region"] = "SandCastleStatueRoom (Right)",
       ["map"] = "SandCastleStatueRoom",
       ["door"] = "loadzonerock",
     },
@@ -15700,7 +25340,7 @@ return {
       ["door"] = "loadzoneleft",
     },
     ["SandCastleRoof|loadzoneleft"] = {
-      ["region"] = "SandCastleMainRoom",
+      ["region"] = "SandCastleMainRoom (Top Left)",
       ["map"] = "SandCastleMainRoom",
       ["door"] = "loadzone roof left",
     },
@@ -15710,7 +25350,7 @@ return {
       ["door"] = "loadzoneleft",
     },
     ["SandCastleRoof|loadzoneright"] = {
-      ["region"] = "SandCastleMainRoom",
+      ["region"] = "SandCastleMainRoom (Top Right)",
       ["map"] = "SandCastleMainRoom",
       ["door"] = "loadzone roof right",
     },
@@ -15735,7 +25375,7 @@ return {
       ["door"] = "loadzone",
     },
     ["SandCastleBossKeyRoom|loadzone"] = {
-      ["region"] = "SandCastleMainRoom",
+      ["region"] = "SandCastleMainRoom (Top Right)",
       ["map"] = "SandCastleMainRoom",
       ["door"] = "loadzonebosskey",
     },
@@ -15745,7 +25385,7 @@ return {
       ["door"] = "loadzonemain",
     },
     ["SandCastlePressurePuzzle|loadzonemain"] = {
-      ["region"] = "SandCastleMainRoom",
+      ["region"] = "SandCastleMainRoom (Top Left)",
       ["map"] = "SandCastleMainRoom",
       ["door"] = "loadzonepressure",
     },
@@ -15755,7 +25395,7 @@ return {
       ["door"] = "loadzone main",
     },
     ["SandCastleRockRoom|loadzone main"] = {
-      ["region"] = "SandCastleMainRoom",
+      ["region"] = "SandCastleMainRoom (Middle Right)",
       ["map"] = "SandCastleMainRoom",
       ["door"] = "loadzone rock",
     },
@@ -15785,7 +25425,7 @@ return {
       ["door"] = "loadzoneright",
     },
     ["StreamMountain2|loadzoneright"] = {
-      ["region"] = "StreamMountain1",
+      ["region"] = "StreamMountain1 (Left)",
       ["map"] = "StreamMountain1",
       ["door"] = "loadzoneleft",
     },
@@ -15795,7 +25435,7 @@ return {
       ["door"] = "loadzone right",
     },
     ["StreamMountain3|loadzone right"] = {
-      ["region"] = "StreamMountain2",
+      ["region"] = "StreamMountain2 (Upper Left)",
       ["map"] = "StreamMountain2",
       ["door"] = "loadzoneleft",
     },
@@ -15805,7 +25445,7 @@ return {
       ["door"] = "loadzoneright",
     },
     ["StreamMountain4|loadzoneright"] = {
-      ["region"] = "StreamMountain2",
+      ["region"] = "StreamMountain2 (Bottom)",
       ["map"] = "StreamMountain2",
       ["door"] = "loadzonebottom",
     },
@@ -15820,7 +25460,7 @@ return {
       ["door"] = "loadzoneoutside",
     },
     ["FGCave|loadzone wasp"] = {
-      ["region"] = "WaspKingdomOutside",
+      ["region"] = "WaspKingdomOutside (Left)",
       ["map"] = "WaspKingdomOutside",
       ["door"] = "loadzonecave",
     },
@@ -15880,7 +25520,7 @@ return {
       ["door"] = "loadzonewizard",
     },
     ["FarGrasslandsOutsideCave|loadzone right"] = {
-      ["region"] = "FarGrasslands4",
+      ["region"] = "FarGrasslands4 (Left)",
       ["map"] = "FarGrasslands4",
       ["door"] = "loadzone left",
     },
@@ -15980,22 +25620,22 @@ return {
       ["door"] = "loadzoneswamp2",
     },
     ["WaspKingdomOutside|loadzoneinside#16"] = {
-      ["region"] = "WaspKingdomMainHall",
+      ["region"] = "WaspKingdomMainHall (Front Door)",
       ["map"] = "WaspKingdomMainHall",
       ["door"] = "loadzoneoutside",
     },
     ["WaspKingdomMainHall|loadzoneoutside"] = {
-      ["region"] = "WaspKingdomOutside",
+      ["region"] = "WaspKingdomOutside (Hive Door)",
       ["map"] = "WaspKingdomOutside",
       ["door"] = "loadzoneinside#16",
     },
     ["Swamplands2|loadzonenorth"] = {
-      ["region"] = "Swamplands3",
+      ["region"] = "Swamplands3 (Bottom)",
       ["map"] = "Swamplands3",
       ["door"] = "loadzone back",
     },
     ["Swamplands3|loadzone back"] = {
-      ["region"] = "Swamplands2",
+      ["region"] = "Swamplands2 (Top)",
       ["map"] = "Swamplands2",
       ["door"] = "loadzonenorth",
     },
@@ -16035,7 +25675,7 @@ return {
       ["door"] = "loadzoneleft",
     },
     ["SwamplandsBridge|loadzoneleft"] = {
-      ["region"] = "Swamplands3",
+      ["region"] = "Swamplands3 (Right)",
       ["map"] = "Swamplands3",
       ["door"] = "loadzoneright",
     },
@@ -16045,22 +25685,22 @@ return {
       ["door"] = "loadzonesouth",
     },
     ["SwamplandsBoss|loadzonesouth"] = {
-      ["region"] = "SwamplandsBridge",
+      ["region"] = "SwamplandsBridge (Top)",
       ["map"] = "SwamplandsBridge",
       ["door"] = "loadzone boss",
     },
     ["SwamplandsBridge|loadzonesouth"] = {
-      ["region"] = "Swamplands4",
+      ["region"] = "Swamplands4 (Left Door)",
       ["map"] = "Swamplands4",
       ["door"] = "loadzone left",
     },
     ["Swamplands4|loadzone left"] = {
-      ["region"] = "SwamplandsBridge",
+      ["region"] = "SwamplandsBridge (Bottom)",
       ["map"] = "SwamplandsBridge",
       ["door"] = "loadzonesouth",
     },
     ["SwamplandsBridge|loadzone right"] = {
-      ["region"] = "Swamplands7",
+      ["region"] = "Swamplands7 (Left)",
       ["map"] = "Swamplands7",
       ["door"] = "loadzone left",
     },
@@ -16075,7 +25715,7 @@ return {
       ["door"] = "loadzone",
     },
     ["FGClearing|loadzone"] = {
-      ["region"] = "FarGrasslands4",
+      ["region"] = "FarGrasslands4 (Clearing Door)",
       ["map"] = "FarGrasslands4",
       ["door"] = "loadzoneclearing",
     },
@@ -16090,12 +25730,12 @@ return {
       ["door"] = "loadzone low",
     },
     ["ChomperCave1|loadzone high"] = {
-      ["region"] = "ChomperCaves2",
+      ["region"] = "ChomperCaves2 (Upper)",
       ["map"] = "ChomperCaves2",
       ["door"] = "loadzonehigh",
     },
     ["ChomperCaves2|loadzonehigh"] = {
-      ["region"] = "ChomperCave1",
+      ["region"] = "ChomperCave1 (Upper)",
       ["map"] = "ChomperCave1",
       ["door"] = "loadzone high",
     },
@@ -16105,17 +25745,17 @@ return {
       ["door"] = "loadzone",
     },
     ["ChomperCaves3|loadzone"] = {
-      ["region"] = "ChomperCave1",
+      ["region"] = "ChomperCave1 (Upper)",
       ["map"] = "ChomperCave1",
       ["door"] = "loadzoneboss",
     },
     ["Swamplands4|loadzoneright"] = {
-      ["region"] = "Swamplands5",
+      ["region"] = "Swamplands5 (Left)",
       ["map"] = "Swamplands5",
       ["door"] = "loadzoneleft",
     },
     ["Swamplands5|loadzoneleft"] = {
-      ["region"] = "Swamplands4",
+      ["region"] = "Swamplands4 (Right Door)",
       ["map"] = "Swamplands4",
       ["door"] = "loadzoneright",
     },
@@ -16130,32 +25770,32 @@ return {
       ["door"] = "loadzonesouth",
     },
     ["Swamplands5|loadzone north"] = {
-      ["region"] = "Swamplands7",
+      ["region"] = "Swamplands7 (Bottom Right)",
       ["map"] = "Swamplands7",
       ["door"] = "loadzone south",
     },
     ["Swamplands7|loadzone south"] = {
-      ["region"] = "Swamplands5",
+      ["region"] = "Swamplands5 (Top Right)",
       ["map"] = "Swamplands5",
       ["door"] = "loadzone north",
     },
     ["Swamplands5|loadzoneright"] = {
-      ["region"] = "Swamplands8",
+      ["region"] = "Swamplands8 (Top)",
       ["map"] = "Swamplands8",
       ["door"] = "loadzonenorth",
     },
     ["Swamplands8|loadzonenorth"] = {
-      ["region"] = "Swamplands5",
+      ["region"] = "Swamplands5 (Top Right)",
       ["map"] = "Swamplands5",
       ["door"] = "loadzoneright",
     },
     ["Swamplands6|loadzone right"] = {
-      ["region"] = "Swamplands8",
+      ["region"] = "Swamplands8 (Bottom)",
       ["map"] = "Swamplands8",
       ["door"] = "loadzonesouth",
     },
     ["Swamplands8|loadzonesouth"] = {
-      ["region"] = "Swamplands6",
+      ["region"] = "Swamplands6 (Upper Right)",
       ["map"] = "Swamplands6",
       ["door"] = "loadzone right",
     },
@@ -16175,7 +25815,7 @@ return {
       ["door"] = "loadzone",
     },
     ["WaspKingdom3|loadzone"] = {
-      ["region"] = "WaspKingdom2",
+      ["region"] = "WaspKingdom2 (Top)",
       ["map"] = "WaspKingdom2",
       ["door"] = "loadzoneleft",
     },
@@ -16185,7 +25825,7 @@ return {
       ["door"] = "loadzoneback",
     },
     ["WaspKingdom4|loadzoneback"] = {
-      ["region"] = "WaspKingdom2",
+      ["region"] = "WaspKingdom2 (Right Door)",
       ["map"] = "WaspKingdom2",
       ["door"] = "loadzoneright",
     },
@@ -16205,7 +25845,7 @@ return {
       ["door"] = "loadzone left",
     },
     ["WaspKingdom5|loadzone left"] = {
-      ["region"] = "WaspKingdom4",
+      ["region"] = "WaspKingdom4 (Right)",
       ["map"] = "WaspKingdom4",
       ["door"] = "loadzonenext",
     },
@@ -16220,12 +25860,12 @@ return {
       ["door"] = "loadzoneright",
     },
     ["WaspKingdom5|loadzone vent"] = {
-      ["region"] = "WaspKingdomMainHall",
+      ["region"] = "WaspKingdomMainHall (Vent)",
       ["map"] = "WaspKingdomMainHall",
       ["door"] = "loadzonevent",
     },
     ["WaspKingdomMainHall|loadzonevent"] = {
-      ["region"] = "WaspKingdom5",
+      ["region"] = "WaspKingdom5 (Vent)",
       ["map"] = "WaspKingdom5",
       ["door"] = "loadzone vent",
     },
@@ -16245,7 +25885,7 @@ return {
       ["door"] = "loadzoneback",
     },
     ["WaspKingdomThrone|loadzoneback"] = {
-      ["region"] = "WaspKingdomMainHall",
+      ["region"] = "WaspKingdomMainHall (Top)",
       ["map"] = "WaspKingdomMainHall",
       ["door"] = "loadzonethrone",
     },
@@ -16255,7 +25895,7 @@ return {
       ["door"] = "loadzone",
     },
     ["WaspKingdomQueen|loadzone"] = {
-      ["region"] = "WaspKingdomThrone",
+      ["region"] = "WaspKingdomThrone (Top)",
       ["map"] = "WaspKingdomThrone",
       ["door"] = "loadzonequeen",
     },
@@ -16315,7 +25955,7 @@ return {
       ["door"] = "loadzoneoutside",
     },
     ["TermiteColiseum1|loadzoneoutside"] = {
-      ["region"] = "TermiteIndustrial",
+      ["region"] = "TermiteIndustrial (Outside the Colosseum)",
       ["map"] = "TermiteIndustrial",
       ["door"] = "NEARloadzonecoliseum",
     },
@@ -16355,7 +25995,7 @@ return {
       ["door"] = "loadzonebasement",
     },
     ["WizardTowerStairs|loadzonebasement"] = {
-      ["region"] = "WizardTowerBasement",
+      ["region"] = "WizardTowerBasement (Top Right)",
       ["map"] = "WizardTowerBasement",
       ["door"] = "loadzone",
     },
@@ -16365,7 +26005,7 @@ return {
       ["door"] = "loadzone",
     },
     ["WizardTowerAttic|loadzone"] = {
-      ["region"] = "WizardTowerStairs",
+      ["region"] = "WizardTowerStairs (Top)",
       ["map"] = "WizardTowerStairs",
       ["door"] = "loadzoneattic",
     },
@@ -16455,7 +26095,7 @@ return {
       ["door"] = "loadzone",
     },
     ["StreamMountain5|loadzone"] = {
-      ["region"] = "StreamMountain4",
+      ["region"] = "StreamMountain4 (Left)",
       ["map"] = "StreamMountain4",
       ["door"] = "loadzone boss",
     },
@@ -16485,7 +26125,7 @@ return {
       ["door"] = "loadzone",
     },
     ["MysteryIslandInside|loadzone"] = {
-      ["region"] = "MysteryIsland",
+      ["region"] = "MysteryIsland (Door)",
       ["map"] = "MysteryIsland",
       ["door"] = "loadzone",
     },
@@ -16500,17 +26140,17 @@ return {
       ["door"] = "door north",
     },
     ["UpperSnekTransition|loadzoneforward"] = {
-      ["region"] = "UpperSnekMiddleRoom",
+      ["region"] = "UpperSnekMiddleRoom (Right)",
       ["map"] = "UpperSnekMiddleRoom",
       ["door"] = "loadzoneentrance",
     },
     ["UpperSnekMiddleRoom|loadzoneentrance"] = {
-      ["region"] = "UpperSnekTransition",
+      ["region"] = "UpperSnekTransition (Left Door)",
       ["map"] = "UpperSnekTransition",
       ["door"] = "loadzoneforward",
     },
     ["UpperSnekSwitchPuzzle|loadzone"] = {
-      ["region"] = "UpperSnekMiddleRoom",
+      ["region"] = "UpperSnekMiddleRoom (Lower Top Left)",
       ["map"] = "UpperSnekMiddleRoom",
       ["door"] = "loadzone switch",
     },
@@ -16525,12 +26165,12 @@ return {
       ["door"] = "loadzone",
     },
     ["UpperSnekBossRoom|loadzone"] = {
-      ["region"] = "UpperSnekBeforeBoss",
+      ["region"] = "UpperSnekBeforeBoss (Left Door)",
       ["map"] = "UpperSnekBeforeBoss",
       ["door"] = "loadzoneboss",
     },
     ["UpperSnekBeforeBoss|loadzoneback"] = {
-      ["region"] = "UpperSnekMiddleRoom",
+      ["region"] = "UpperSnekMiddleRoom (Left)",
       ["map"] = "UpperSnekMiddleRoom",
       ["door"] = "loadzoneboss",
     },
@@ -16540,7 +26180,7 @@ return {
       ["door"] = "loadzoneback",
     },
     ["UpperSnekPressurePlateRoom|loadzone"] = {
-      ["region"] = "UpperSnekMiddleRoom",
+      ["region"] = "UpperSnekMiddleRoom (Upper Top Right Door)",
       ["map"] = "UpperSnekMiddleRoom",
       ["door"] = "loadzonepressure",
     },
@@ -16565,7 +26205,7 @@ return {
       ["door"] = "loadzone",
     },
     ["UpperSnekRiverPuzzle|loadzone"] = {
-      ["region"] = "UpperSnekMiddleRoom",
+      ["region"] = "UpperSnekMiddleRoom (Bottom Left)",
       ["map"] = "UpperSnekMiddleRoom",
       ["door"] = "loadzoneriverorom",
     },
@@ -16575,27 +26215,27 @@ return {
       ["door"] = "loadzone",
     },
     ["UpperSnekGeizerRoom|loadzone"] = {
-      ["region"] = "UpperSnekMiddleRoom",
+      ["region"] = "UpperSnekMiddleRoom (Upper Top Left Door)",
       ["map"] = "UpperSnekMiddleRoom",
       ["door"] = "loadzonegeizer",
     },
     ["RubberPrisonPier|loadzoneleft"] = {
-      ["region"] = "RubberPrisonCheckpointCorridor",
+      ["region"] = "RubberPrisonCheckpointCorridor (Right)",
       ["map"] = "RubberPrisonCheckpointCorridor",
       ["door"] = "loadzoneexit",
     },
     ["RubberPrisonCheckpointCorridor|loadzoneexit"] = {
-      ["region"] = "RubberPrisonPier",
+      ["region"] = "RubberPrisonPier (Ground Upper Left)",
       ["map"] = "RubberPrisonPier",
       ["door"] = "loadzoneleft",
     },
     ["RubberPrisonPier|loadzonecell2"] = {
-      ["region"] = "RubberPrisonCells2",
+      ["region"] = "RubberPrisonCells2 (Right Door)",
       ["map"] = "RubberPrisonCells2",
       ["door"] = "loadzoneright",
     },
     ["RubberPrisonCells2|loadzoneright"] = {
-      ["region"] = "RubberPrisonPier",
+      ["region"] = "RubberPrisonPier (Second Floor)",
       ["map"] = "RubberPrisonPier",
       ["door"] = "loadzonecell2",
     },
@@ -16605,7 +26245,7 @@ return {
       ["door"] = "loadzoneoutside",
     },
     ["RubberPrisonSecurity|loadzoneoutside"] = {
-      ["region"] = "RubberPrisonPier",
+      ["region"] = "RubberPrisonPier (Top Floor)",
       ["map"] = "RubberPrisonPier",
       ["door"] = "loadzonesecurity",
     },
@@ -16615,7 +26255,7 @@ return {
       ["door"] = "loadzone",
     },
     ["RubberPrisonLibrary|loadzone"] = {
-      ["region"] = "RubberPrisonPier",
+      ["region"] = "RubberPrisonPier (Top Floor)",
       ["map"] = "RubberPrisonPier",
       ["door"] = "loadzonelibrary",
     },
@@ -16625,7 +26265,7 @@ return {
       ["door"] = "loadzone",
     },
     ["RubberPrisonOffice|loadzone"] = {
-      ["region"] = "RubberPrisonPier",
+      ["region"] = "RubberPrisonPier (Third Floor)",
       ["map"] = "RubberPrisonPier",
       ["door"] = "loadzoneoffice",
     },
@@ -16635,17 +26275,17 @@ return {
       ["door"] = "loadzoneback",
     },
     ["RubberPrisonGiantLairBridge|loadzoneback"] = {
-      ["region"] = "RubberPrisonPier",
+      ["region"] = "RubberPrisonPier (Second Floor Right Door)",
       ["map"] = "RubberPrisonPier",
       ["door"] = "loadzoneboss",
     },
     ["RubberPrisonPier|bossshortcut"] = {
-      ["region"] = "RubberPrisonGiantLairBridge",
+      ["region"] = "RubberPrisonGiantLairBridge (Top Left Door)",
       ["map"] = "RubberPrisonGiantLairBridge",
       ["door"] = "loadzoneshortcut",
     },
     ["RubberPrisonGiantLairBridge|loadzoneshortcut"] = {
-      ["region"] = "RubberPrisonPier",
+      ["region"] = "RubberPrisonPier (Shortcut Door)",
       ["map"] = "RubberPrisonPier",
       ["door"] = "bossshortcut",
     },
@@ -16655,7 +26295,7 @@ return {
       ["door"] = "loadzonebridge",
     },
     ["RubberPrisonThirdFloor|loadzonebridge"] = {
-      ["region"] = "RubberPrisonPier",
+      ["region"] = "RubberPrisonPier (Third Floor)",
       ["map"] = "RubberPrisonPier",
       ["door"] = "loadzone3rdfloor",
     },
@@ -16665,7 +26305,7 @@ return {
       ["door"] = "loadzoneback",
     },
     ["RubberPrisonSpikeRoom|loadzoneback"] = {
-      ["region"] = "RubberPrisonCheckpointCorridor",
+      ["region"] = "RubberPrisonCheckpointCorridor (Top Left Door)",
       ["map"] = "RubberPrisonCheckpointCorridor",
       ["door"] = "loadzoneforward",
     },
@@ -16675,17 +26315,17 @@ return {
       ["door"] = "loadzonesouth",
     },
     ["RubberPrisonCells1|loadzonesouth"] = {
-      ["region"] = "RubberPrisonSpikeRoom",
+      ["region"] = "RubberPrisonSpikeRoom (Top Door)",
       ["map"] = "RubberPrisonSpikeRoom",
       ["door"] = "loadzonenorth",
     },
     ["RubberPrisonCells1|loadzoneright"] = {
-      ["region"] = "RubberPrisonCells2",
+      ["region"] = "RubberPrisonCells2 (Left Door)",
       ["map"] = "RubberPrisonCells2",
       ["door"] = "loadzoneleft",
     },
     ["RubberPrisonCells2|loadzoneleft"] = {
-      ["region"] = "RubberPrisonCells1",
+      ["region"] = "RubberPrisonCells1 (Right Door)",
       ["map"] = "RubberPrisonCells1",
       ["door"] = "loadzoneright",
     },
@@ -16695,17 +26335,17 @@ return {
       ["door"] = "loadzone",
     },
     ["RubberPrisonCafeteria|loadzone"] = {
-      ["region"] = "RubberPrisonCells1",
+      ["region"] = "RubberPrisonCells1 (Left Door)",
       ["map"] = "RubberPrisonCells1",
       ["door"] = "loadzoneleft",
     },
     ["RubberPrisonCells1|loadzone3rdfloor"] = {
-      ["region"] = "RubberPrisonThirdFloor",
+      ["region"] = "RubberPrisonThirdFloor (Bottom Left)",
       ["map"] = "RubberPrisonThirdFloor",
       ["door"] = "loadzonecells1",
     },
     ["RubberPrisonThirdFloor|loadzonecells1"] = {
-      ["region"] = "RubberPrisonCells1",
+      ["region"] = "RubberPrisonCells1 (Top Door)",
       ["map"] = "RubberPrisonCells1",
       ["door"] = "loadzone3rdfloor",
     },
@@ -16715,12 +26355,12 @@ return {
       ["door"] = "loadzonecells2",
     },
     ["RubberPrisonThirdFloor|loadzonecells2"] = {
-      ["region"] = "RubberPrisonCells2",
+      ["region"] = "RubberPrisonCells2 (Top Door)",
       ["map"] = "RubberPrisonCells2",
       ["door"] = "loadzone3rdfloor",
     },
     ["RubberPrisonGym|loadzone"] = {
-      ["region"] = "RubberPrisonThirdFloor",
+      ["region"] = "RubberPrisonThirdFloor (Gym Door)",
       ["map"] = "RubberPrisonThirdFloor",
       ["door"] = "loadzonegym",
     },
@@ -16730,12 +26370,12 @@ return {
       ["door"] = "loadzone",
     },
     ["RubberPrisonSecurity|loadzone3rdfloor"] = {
-      ["region"] = "RubberPrisonThirdFloor",
+      ["region"] = "RubberPrisonThirdFloor (Upper Right)",
       ["map"] = "RubberPrisonThirdFloor",
       ["door"] = "loadzonesecurity",
     },
     ["RubberPrisonThirdFloor|loadzonesecurity"] = {
-      ["region"] = "RubberPrisonSecurity",
+      ["region"] = "RubberPrisonSecurity (Bottom Right)",
       ["map"] = "RubberPrisonSecurity",
       ["door"] = "loadzone3rdfloor",
     },
@@ -16745,7 +26385,7 @@ return {
       ["door"] = "loadzoneoutside",
     },
     ["GiantLairEntrance|loadzoneoutside"] = {
-      ["region"] = "RubberPrisonGiantLairBridge",
+      ["region"] = "RubberPrisonGiantLairBridge (Right)",
       ["map"] = "RubberPrisonGiantLairBridge",
       ["door"] = "loadzonegl",
     },
@@ -16765,7 +26405,7 @@ return {
       ["door"] = "loadzoneback",
     },
     ["GiantLairDeadLands2|loadzoneback"] = {
-      ["region"] = "GiantLairDeadLands1",
+      ["region"] = "GiantLairDeadLands1 (Right Door)",
       ["map"] = "GiantLairDeadLands1",
       ["door"] = "loadzoneforward",
     },
@@ -16775,7 +26415,7 @@ return {
       ["door"] = "loadzoneback",
     },
     ["GiantLairFridgeOutside|loadzoneback"] = {
-      ["region"] = "GiantLairDeadLands2",
+      ["region"] = "GiantLairDeadLands2 (Right)",
       ["map"] = "GiantLairDeadLands2",
       ["door"] = "loadzonenext",
     },
@@ -16785,7 +26425,7 @@ return {
       ["door"] = "loadzone",
     },
     ["GiantLairFridgeInside|loadzone"] = {
-      ["region"] = "GiantLairFridgeOutside",
+      ["region"] = "GiantLairFridgeOutside (Right)",
       ["map"] = "GiantLairFridgeOutside",
       ["door"] = "fridgeloadzone",
     },
@@ -16795,12 +26435,12 @@ return {
       ["door"] = "loadzonevillage",
     },
     ["GiantLairBeforeBoss|loadzonevillage"] = {
-      ["region"] = "GiantLairRoachVillage",
+      ["region"] = "GiantLairRoachVillage (Left Door)",
       ["map"] = "GiantLairRoachVillage",
       ["door"] = "loadzoneplains",
     },
     ["GiantLairSaplingPlains|loadzonevillage"] = {
-      ["region"] = "GiantLairBeforeBoss",
+      ["region"] = "GiantLairBeforeBoss (Left)",
       ["map"] = "GiantLairBeforeBoss",
       ["door"] = "loadzonefinal",
     },
@@ -16809,23 +26449,13 @@ return {
       ["map"] = "GiantLairSaplingPlains",
       ["door"] = "loadzonevillage",
     },
-    ["BugariaEndPlaza|loadzone palace - Duplicate"] = {
-      ["region"] = "BugariaEndBridge",
-      ["map"] = "BugariaEndBridge",
-      ["door"] = "loadzoneplaza - Duplicate",
-    },
-    ["BugariaEndBridge|loadzoneplaza - Duplicate"] = {
-      ["region"] = "BugariaEndPlaza",
-      ["map"] = "BugariaEndPlaza",
-      ["door"] = "loadzone palace - Duplicate",
-    },
     ["GiantLairBeforeBoss|loadzoneup"] = {
       ["region"] = "GiantLairBeforeBoss2",
       ["map"] = "GiantLairBeforeBoss2",
       ["door"] = "loadzoneright",
     },
     ["GiantLairBeforeBoss2|loadzoneright"] = {
-      ["region"] = "GiantLairBeforeBoss",
+      ["region"] = "GiantLairBeforeBoss (Upper)",
       ["map"] = "GiantLairBeforeBoss",
       ["door"] = "loadzoneup",
     },
@@ -16840,7 +26470,7 @@ return {
       ["map"] = "WizardTowerBasement",
     },
     ["WaspKingdomOutside|loadzoneinside#14"] = {
-      ["region"] = "WaspKingdom1",
+      ["region"] = "WaspKingdom1 (Bottom)",
       ["map"] = "WaspKingdom1",
     },
     ["BarrenLandsEntrance|returnloadzoneright"] = {
@@ -16900,7 +26530,7 @@ return {
       ["map"] = "BarrenLandsCD",
     },
     ["GiantLairBeforeBoss2|loadzoneleft"] = {
-      ["region"] = "GiantLairBeforeBoss",
+      ["region"] = "GiantLairBeforeBoss (Middle Left)",
       ["map"] = "GiantLairBeforeBoss",
     },
   },
@@ -17004,7 +26634,170 @@ return {
     ["FarGrasslands3 (Bounce Pad)"] = "FarGrasslands3",
     ["FarGrasslands3 (Right)"] = "FarGrasslands3",
     ["FGOutsideSwamplands (Top)"] = "FGOutsideSwamplands",
+    ["FarGrasslands4 (Left)"] = "FarGrasslands4",
+    ["FarGrasslands4 (Top Right)"] = "FarGrasslands4",
+    ["FarGrasslands4 (Clearing Door)"] = "FarGrasslands4",
+    ["WizardTowerBasement (Top Right)"] = "WizardTowerBasement",
+    ["WizardTowerStairs (Top)"] = "WizardTowerStairs",
     ["SwamplandsBoss (Top)"] = "SwamplandsBoss",
+    ["Swamplands2 (Top)"] = "Swamplands2",
+    ["Swamplands3 (Bottom)"] = "Swamplands3",
+    ["Swamplands3 (Right)"] = "Swamplands3",
+    ["SwamplandsBridge (Top Right)"] = "SwamplandsBridge",
+    ["SwamplandsBridge (Top)"] = "SwamplandsBridge",
+    ["SwamplandsBridge (Red Bounce Pad)"] = "SwamplandsBridge",
+    ["SwamplandsBridge (Bottom)"] = "SwamplandsBridge",
+    ["Swamplands4 (West)"] = "Swamplands4",
+    ["Swamplands4 (Left Door)"] = "Swamplands4",
+    ["Swamplands4 (Right)"] = "Swamplands4",
+    ["Swamplands4 (Right Door)"] = "Swamplands4",
+    ["Swamplands5 (Left)"] = "Swamplands5",
+    ["Swamplands5 (Top Right)"] = "Swamplands5",
+    ["Swamplands6 (Middle)"] = "Swamplands6",
+    ["Swamplands6 (Lower Right)"] = "Swamplands6",
+    ["Swamplands6 (Upper Right)"] = "Swamplands6",
+    ["Swamplands7 (Bottom Middle)"] = "Swamplands7",
+    ["Swamplands7 (Bottom Right)"] = "Swamplands7",
+    ["Swamplands7 (Upper Middle)"] = "Swamplands7",
+    ["Swamplands7 (Upper Left)"] = "Swamplands7",
+    ["Swamplands7 (Left)"] = "Swamplands7",
+    ["Swamplands8 (Bottom)"] = "Swamplands8",
+    ["Swamplands8 (Upper Middle)"] = "Swamplands8",
+    ["Swamplands8 (Right)"] = "Swamplands8",
+    ["Swamplands8 (Top)"] = "Swamplands8",
+    ["DefiantRoot1 (Rooftops)"] = "DefiantRoot1",
+    ["DefiantRootWell (Right)"] = "DefiantRootWell",
+    ["DefiantRoot2 (Elevator)"] = "DefiantRoot2",
+    ["DefiantRoot2 (Upstairs)"] = "DefiantRoot2",
+    ["SandCastleEntrance (Right)"] = "SandCastleEntrance",
+    ["SandCastleSlidePuzzle (Bottom)"] = "SandCastleSlidePuzzle",
+    ["SandCastleSlidePuzzle (Upper Right)"] = "SandCastleSlidePuzzle",
+    ["SandCastleSlidePuzzle (Upper Left)"] = "SandCastleSlidePuzzle",
+    ["SandCastleStatueRoom (Right)"] = "SandCastleStatueRoom",
+    ["SandCastleBasement (Middle)"] = "SandCastleBasement",
+    ["SandCastleMainRoom (Middle Left)"] = "SandCastleMainRoom",
+    ["SandCastleMainRoom (Middle Right)"] = "SandCastleMainRoom",
+    ["SandCastleMainRoom (Top Right)"] = "SandCastleMainRoom",
+    ["SandCastleMainRoom (Top Left)"] = "SandCastleMainRoom",
+    ["SandCastleBossKeyRoom (Right)"] = "SandCastleBossKeyRoom",
+    ["SandCastleRockRoom (Bottom Right)"] = "SandCastleRockRoom",
+    ["SandCastleRockRoom (Top Left)"] = "SandCastleRockRoom",
+    ["SandCastleRockRoom (Top Right)"] = "SandCastleRockRoom",
+    ["BeehiveOutside (Left)"] = "BeehiveOutside",
+    ["HoneyFactoryEntrance (Bottom)"] = "HoneyFactoryEntrance",
+    ["HoneyFactoryEntrance (Processing Door)"] = "HoneyFactoryEntrance",
+    ["HoneyFactoryWorkerRooms (Sleeping Quarters)"] = "HoneyFactoryWorkerRooms",
+    ["FactoryProcessingFirstRoom (Left)"] = "FactoryProcessingFirstRoom",
+    ["FactoryProcessingFirstRoom (Bottom)"] = "FactoryProcessingFirstRoom",
+    ["FactoryProcessing2 (Top Left)"] = "FactoryProcessing2",
+    ["FactoryProcessingPump (Bottom Top Left)"] = "FactoryProcessingPump",
+    ["FactoryProcessingPump (Upper Left)"] = "FactoryProcessingPump",
+    ["FactoryProcessingPump (Upper Right)"] = "FactoryProcessingPump",
+    ["FactoryProcessingMalbee (Tram)"] = "FactoryProcessingMalbee",
+    ["FactoryStorageElevator (Bottom)"] = "FactoryStorageElevator",
+    ["FactoryStorageMaze (Upper Middle)"] = "FactoryStorageMaze",
+    ["FactoryStorageMaze (Bottom Left)"] = "FactoryStorageMaze",
+    ["FactoryStorageMaze (Overseer Door)"] = "FactoryStorageMaze",
+    ["RubberPrisonPier (Ground Upper Left)"] = "RubberPrisonPier",
+    ["RubberPrisonPier (Ground Lower Left)"] = "RubberPrisonPier",
+    ["RubberPrisonPier (Ground Lower Right)"] = "RubberPrisonPier",
+    ["RubberPrisonPier (Top Floor)"] = "RubberPrisonPier",
+    ["RubberPrisonPier (Third Floor)"] = "RubberPrisonPier",
+    ["RubberPrisonPier (Second Floor)"] = "RubberPrisonPier",
+    ["RubberPrisonPier (Second Floor Right Door)"] = "RubberPrisonPier",
+    ["RubberPrisonPier (Shortcut Door)"] = "RubberPrisonPier",
+    ["RubberPrisonCheckpointCorridor (Right)"] = "RubberPrisonCheckpointCorridor",
+    ["RubberPrisonCheckpointCorridor (Top Left Door)"] = "RubberPrisonCheckpointCorridor",
+    ["RubberPrisonSpikeRoom (Top)"] = "RubberPrisonSpikeRoom",
+    ["RubberPrisonSpikeRoom (Top Door)"] = "RubberPrisonSpikeRoom",
+    ["RubberPrisonCells1 (Upper)"] = "RubberPrisonCells1",
+    ["RubberPrisonCells1 (Top Door)"] = "RubberPrisonCells1",
+    ["RubberPrisonCells1 (Left Door)"] = "RubberPrisonCells1",
+    ["RubberPrisonCells1 (Right Door)"] = "RubberPrisonCells1",
+    ["RubberPrisonCells2 (Left Door)"] = "RubberPrisonCells2",
+    ["RubberPrisonCells2 (Right Door)"] = "RubberPrisonCells2",
+    ["RubberPrisonCells2 (Middle)"] = "RubberPrisonCells2",
+    ["RubberPrisonCells2 (Upper)"] = "RubberPrisonCells2",
+    ["RubberPrisonCells2 (Top Door)"] = "RubberPrisonCells2",
+    ["RubberPrisonLibrary (Upper)"] = "RubberPrisonLibrary",
+    ["RubberPrisonCafeteria (Left)"] = "RubberPrisonCafeteria",
+    ["RubberPrisonGym (Top Left)"] = "RubberPrisonGym",
+    ["RubberPrisonSecurity (Left)"] = "RubberPrisonSecurity",
+    ["RubberPrisonSecurity (Bottom Right)"] = "RubberPrisonSecurity",
+    ["RubberPrisonThirdFloor (Pocket)"] = "RubberPrisonThirdFloor",
+    ["RubberPrisonThirdFloor (Middle Left)"] = "RubberPrisonThirdFloor",
+    ["RubberPrisonThirdFloor (Bottom Left)"] = "RubberPrisonThirdFloor",
+    ["RubberPrisonThirdFloor (Gym Door)"] = "RubberPrisonThirdFloor",
+    ["RubberPrisonThirdFloor (Upper Right)"] = "RubberPrisonThirdFloor",
+    ["RubberPrisonGiantLairBridge (Top Left Door)"] = "RubberPrisonGiantLairBridge",
+    ["RubberPrisonGiantLairBridge (Middle)"] = "RubberPrisonGiantLairBridge",
+    ["RubberPrisonGiantLairBridge (Right)"] = "RubberPrisonGiantLairBridge",
+    ["GiantLairDeadLands1 (Right)"] = "GiantLairDeadLands1",
+    ["GiantLairDeadLands1 (Right Door)"] = "GiantLairDeadLands1",
+    ["GiantLairDeadLands2 (Silver Coins)"] = "GiantLairDeadLands2",
+    ["GiantLairDeadLands2 (Middle Right)"] = "GiantLairDeadLands2",
+    ["GiantLairDeadLands2 (Right)"] = "GiantLairDeadLands2",
+    ["GiantLairFridgeOutside (Right)"] = "GiantLairFridgeOutside",
+    ["GiantLairFridgeInside (Second Floor)"] = "GiantLairFridgeInside",
+    ["GiantLairFridgeInside (Top Floor)"] = "GiantLairFridgeInside",
+    ["GiantLairFridgeInside (Lift)"] = "GiantLairFridgeInside",
+    ["GiantLairRoachVillage (Left Door)"] = "GiantLairRoachVillage",
+    ["GiantLairRoachVillage (Fridge Lift)"] = "GiantLairRoachVillage",
+    ["GiantLairSaplingPlains (Last Fight)"] = "GiantLairSaplingPlains",
+    ["GiantLairBeforeBoss (Middle Right)"] = "GiantLairBeforeBoss",
+    ["GiantLairBeforeBoss (Middle Left)"] = "GiantLairBeforeBoss",
+    ["GiantLairBeforeBoss (Left)"] = "GiantLairBeforeBoss",
+    ["GiantLairBeforeBoss (Upper)"] = "GiantLairBeforeBoss",
+    ["GiantLairBeforeBoss2 (Left Right)"] = "GiantLairBeforeBoss2",
+    ["GiantLairBeforeBoss2 (Left Left)"] = "GiantLairBeforeBoss2",
+    ["MysteryIsland (Door)"] = "MysteryIsland",
+    ["MysteryIsland (Venus)"] = "MysteryIsland",
+    ["MysteryIsland (Back)"] = "MysteryIsland",
+    ["MysteryIslandInside (Top)"] = "MysteryIslandInside",
+    ["MetalIsland1 (Dock)"] = "MetalIsland1",
+    ["MetalIsland1 (Chef's House)"] = "MetalIsland1",
+    ["MetalIslandAuditorium (Top)"] = "MetalIslandAuditorium",
+    ["TermiteIndustrial (Outside the Colosseum)"] = "TermiteIndustrial",
+    ["TermitePier (Dock)"] = "TermitePier",
+    ["WaspKingdomOutside (Left)"] = "WaspKingdomOutside",
+    ["WaspKingdomOutside (Hive Door)"] = "WaspKingdomOutside",
+    ["WaspKingdomOutside (Grass Door)"] = "WaspKingdomOutside",
+    ["WaspKingdom1 (Bottom)"] = "WaspKingdom1",
+    ["WaspKingdom2 (Top)"] = "WaspKingdom2",
+    ["WaspKingdom4 (Top)"] = "WaspKingdom4",
+    ["WaspKingdom4 (Right)"] = "WaspKingdom4",
+    ["WaspKingdom5 (Top)"] = "WaspKingdom5",
+    ["WaspKingdom5 (Vent)"] = "WaspKingdom5",
+    ["WaspKingdomMainHall (Vent)"] = "WaspKingdomMainHall",
+    ["WaspKingdomMainHall (Front Door)"] = "WaspKingdomMainHall",
+    ["WaspKingdomMainHall (Top)"] = "WaspKingdomMainHall",
+    ["WaspKingdomThrone (Top)"] = "WaspKingdomThrone",
+    ["WaspKingdom2 (Right Door)"] = "WaspKingdom2",
+    ["HideoutLeftA (Upper Left)"] = "HideoutLeftA",
+    ["HideoutStairsRoom (Bottom)"] = "HideoutStairsRoom",
+    ["HideoutRightA (Kitchen)"] = "HideoutRightA",
+    ["HideoutGarden (Bottom Left)"] = "HideoutGarden",
+    ["HideoutGarden (Upper)"] = "HideoutGarden",
+    ["StreamMountain1 (Left)"] = "StreamMountain1",
+    ["StreamMountain3 (Upper)"] = "StreamMountain3",
+    ["StreamMountain4 (Middle)"] = "StreamMountain4",
+    ["StreamMountain4 (Left)"] = "StreamMountain4",
+    ["StreamMountain2 (Bottom)"] = "StreamMountain2",
+    ["StreamMountain2 (Upper Left)"] = "StreamMountain2",
+    ["ChomperCave1 (Upper)"] = "ChomperCave1",
+    ["ChomperCaves2 (Upper)"] = "ChomperCaves2",
+    ["UpperSnekTransition (Left Platform)"] = "UpperSnekTransition",
+    ["UpperSnekTransition (Left)"] = "UpperSnekTransition",
+    ["UpperSnekTransition (Left Door)"] = "UpperSnekTransition",
+    ["UpperSnekMiddleRoom (Right)"] = "UpperSnekMiddleRoom",
+    ["UpperSnekMiddleRoom (Bottom Left)"] = "UpperSnekMiddleRoom",
+    ["UpperSnekMiddleRoom (Left)"] = "UpperSnekMiddleRoom",
+    ["UpperSnekMiddleRoom (Lower Top Left)"] = "UpperSnekMiddleRoom",
+    ["UpperSnekMiddleRoom (Upper Top Left)"] = "UpperSnekMiddleRoom",
+    ["UpperSnekMiddleRoom (Upper Top Left Door)"] = "UpperSnekMiddleRoom",
+    ["UpperSnekMiddleRoom (Upper Top Right)"] = "UpperSnekMiddleRoom",
+    ["UpperSnekMiddleRoom (Upper Top Right Door)"] = "UpperSnekMiddleRoom",
+    ["UpperSnekBeforeBoss (Left Door)"] = "UpperSnekBeforeBoss",
   },
   ["one_way_copies"] = {
     ["BarrenLandsCD: returnloadzoneleft - Duplicate"] = "BarrenLandsCD: returnloadzoneleft",
@@ -17015,6 +26808,7 @@ return {
       ["name"] = "Outskirts: Maki and Eetl's Gift",
       ["region"] = "BugariaOutskirtsOutsideCity",
       ["map"] = "BugariaOutskirtsOutsideCity",
+      ["quiet"] = true,
     },
     {
       ["id"] = 7720002,
@@ -17842,7 +27636,7 @@ return {
       ["region"] = "BugariaResidential",
       ["map"] = "BugariaResidential",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Or",
         ["options"] = {},
         ["filtered_resolution"] = false,
         ["children"] = {
@@ -17870,18 +27664,11 @@ return {
             },
           },
           {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
             ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
+              ["ability"] = "Bee Fly",
             },
           },
         },
@@ -18145,6 +27932,7 @@ return {
       ["region"] = "BugariaOutskirtsOutsideCity",
       ["map"] = "BugariaOutskirtsOutsideCity",
       ["category"] = "party_member",
+      ["quiet"] = true,
     },
     {
       ["id"] = 7720067,
@@ -18288,6 +28076,30 @@ return {
                 },
               },
               {
+                ["rule"] = "CanReachRegion",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["region_name"] = "GoldenHillsDungeonBoss",
+                },
+              },
+              {
+                ["rule"] = "CanReachRegion",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["region_name"] = "AntPalace2",
+                },
+              },
+              {
+                ["rule"] = "CanReachRegion",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["region_name"] = "BugariaOutskirtsEast2",
+                },
+              },
+              {
                 ["rule"] = "CanUse",
                 ["options"] = {},
                 ["filtered_resolution"] = false,
@@ -18321,129 +28133,32 @@ return {
       ["region"] = "FactoryProcessingFirstRoom",
       ["map"] = "FactoryProcessingFirstRoom",
       ["rule"] = {
-        ["rule"] = "And",
+        ["rule"] = "Or",
         ["options"] = {},
         ["filtered_resolution"] = false,
         ["children"] = {
           {
-            ["rule"] = "And",
+            ["rule"] = "CanUse",
             ["options"] = {},
             ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Halt",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Dash",
-                },
-              },
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
             },
           },
           {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
             ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
             },
           },
         },
@@ -18451,100 +28166,25 @@ return {
     },
     {
       ["id"] = 7720071,
-      ["name"] = "Bandit Hideout: Cell",
-      ["region"] = "HideoutCell",
-      ["map"] = "HideoutCell",
+      ["name"] = "Bandit Hideout: Entrance, Altar",
+      ["region"] = "HideoutEntrance",
+      ["map"] = "HideoutEntrance",
       ["rule"] = {
         ["rule"] = "And",
         ["options"] = {},
         ["filtered_resolution"] = false,
         ["children"] = {
           {
-            ["rule"] = "And",
+            ["rule"] = "Or",
             ["options"] = {},
             ["filtered_resolution"] = false,
             ["children"] = {
               {
-                ["rule"] = "Has",
+                ["rule"] = "CanUse",
                 ["options"] = {},
                 ["filtered_resolution"] = false,
                 ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
+                  ["ability"] = "Jump",
                 },
               },
               {
@@ -18552,23 +28192,7 @@ return {
                 ["options"] = {},
                 ["filtered_resolution"] = false,
                 ["args"] = {
-                  ["ability"] = "Beemerang Halt",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Dash",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Shield",
+                  ["ability"] = "Bee Fly",
                 },
               },
             },
@@ -18594,152 +28218,8 @@ return {
     {
       ["id"] = 7720072,
       ["name"] = "Wild Swamplands: Bridge, Boulder",
-      ["region"] = "SwamplandsBridge",
+      ["region"] = "SwamplandsBridge (Bottom)",
       ["map"] = "SwamplandsBridge",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Halt",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Dash",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Shield",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beetle Dig",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
     },
     {
       ["id"] = 7720073,
@@ -18901,183 +28381,16 @@ return {
     },
     {
       ["id"] = 7720074,
-      ["name"] = "Upper Snakemouth: Entrance",
+      ["name"] = "Upper Snakemouth: Icicle Pond, Fight",
       ["region"] = "UpperSnekTransition",
       ["map"] = "UpperSnekTransition",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Halt",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Dash",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Shield",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beetle Dig",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Dash",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Bee Fly",
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 2,
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
     },
     {
       ["id"] = 7720075,
       ["name"] = "Outskirts: Outside the City, Tutorial Battle",
       ["region"] = "BugariaOutskirtsOutsideCity",
       ["map"] = "BugariaOutskirtsOutsideCity",
+      ["quiet"] = true,
     },
     {
       ["id"] = 7720076,
@@ -19090,141 +28403,11 @@ return {
         ["filtered_resolution"] = false,
         ["children"] = {
           {
-            ["rule"] = "And",
+            ["rule"] = "CanReachRegion",
             ["options"] = {},
             ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Halt",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Dash",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Shield",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beetle Dig",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Dash",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Bee Fly",
-                },
-              },
+            ["args"] = {
+              ["region_name"] = "TermiteColiseum2",
             },
           },
           {
@@ -19286,118 +28469,6 @@ return {
       ["name"] = "Bee Kingdom Hive: Balcony, Beette's Sale",
       ["region"] = "BeehiveBalcony",
       ["map"] = "BeehiveBalcony",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
     },
     {
       ["id"] = 7720079,
@@ -20279,11 +29350,26 @@ return {
                 },
               },
               {
-                ["rule"] = "CanUse",
+                ["rule"] = "Or",
                 ["options"] = {},
                 ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Bee Fly",
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Bee Fly",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beemerang Toss",
+                    },
+                  },
                 },
               },
             },
@@ -20330,11 +29416,49 @@ return {
                 },
               },
               {
-                ["rule"] = "CanUse",
+                ["rule"] = "Or",
                 ["options"] = {},
                 ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beemerang Toss",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Bee Fly",
+                    },
+                  },
+                  {
+                    ["rule"] = "And",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["children"] = {
+                      {
+                        ["rule"] = "CanUse",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["args"] = {
+                          ["ability"] = "Freeze",
+                        },
+                      },
+                      {
+                        ["rule"] = "CanUse",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["args"] = {
+                          ["ability"] = "Horn Slash",
+                        },
+                      },
+                    },
+                  },
                 },
               },
             },
@@ -21685,6 +30809,342 @@ return {
                       ["region_name"] = "GoldenSettlement1",
                     },
                   },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "HoneyFactoryEntrance (Bottom)",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "HoneyFactoryEntrance (Bottom)",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "HoneyFactoryEntrance (Bottom)",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "HoneyFactoryEntrance (Bottom)",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "HoneyFactoryEntrance (Bottom)",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "DefiantRoot3",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "DefiantRoot3",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "DefiantRoot3",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "DefiantRoot3",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "DefiantRoot3",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "DefiantRoot3",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "DefiantRoot3",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "DefiantRoot3",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "DefiantRoot3",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "DefiantRoot3",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "DefiantRoot3",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "DefiantRoot3",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "GiantLairRoachVillage",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "GiantLairRoachVillage",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "GiantLairRoachVillage",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "GiantLairRoachVillage",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "MetalIsland1",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "MetalIsland1",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteMainPlaza",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteMainPlaza",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteMainPlaza",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteMainPlaza",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteIndustrial",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteIndustrial",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteIndustrial",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteIndustrial",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteIndustrial",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteIndustrial",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteIndustrial",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteColiseum1",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteColiseum1",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteColiseum1",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteColiseum1",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "TermiteColiseum1",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "WaspKingdomJayde",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "WaspKingdomJayde",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "WaspKingdomJayde",
+                    },
+                  },
                 },
               },
             },
@@ -21886,6 +31346,14 @@ return {
                   ["region_name"] = "WizardTowerStairs",
                 },
               },
+              {
+                ["rule"] = "CanReachRegion",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["region_name"] = "WizardTowerStairs (Top)",
+                },
+              },
             },
           },
           {
@@ -21965,6 +31433,3102 @@ return {
             ["filtered_resolution"] = false,
             ["args"] = {
               ["ability"] = "Beetle Dig",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720176,
+      ["name"] = "Bugaria City: Residential District, Banker",
+      ["region"] = "BugariaResidential",
+      ["map"] = "BugariaResidential",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720177,
+      ["name"] = "Far Grasslands: Wizard's Tower Basement, Behind the Stairs",
+      ["region"] = "WizardTowerBasement",
+      ["map"] = "WizardTowerBasement",
+    },
+    {
+      ["id"] = 7720178,
+      ["name"] = "Far Grasslands: Wizard's Tower Basement, On the Bookshelf",
+      ["region"] = "WizardTowerBasement (Top Right)",
+      ["map"] = "WizardTowerBasement",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "Or",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Bee Fly",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Beemerang Toss",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720179,
+      ["name"] = "Far Grasslands: Wizard's Tower Attic, Beside the Cauldron",
+      ["region"] = "WizardTowerAttic",
+      ["map"] = "WizardTowerAttic",
+    },
+    {
+      ["id"] = 7720180,
+      ["name"] = "Far Grasslands: Clearing, Behind the Small Bush",
+      ["region"] = "FGClearing",
+      ["map"] = "FGClearing",
+    },
+    {
+      ["id"] = 7720181,
+      ["name"] = "Wild Swamplands: Lily Pad Pond, Dig Spot",
+      ["region"] = "Swamplands2 (Top)",
+      ["map"] = "Swamplands2",
+      ["category"] = "dig_spot",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["id"] = 7720182,
+      ["name"] = "Wild Swamplands: Lily Pad Pond, Grass in the Bottom Right",
+      ["region"] = "Swamplands2",
+      ["map"] = "Swamplands2",
+      ["category"] = "hidden_item",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Horn Slash",
+        },
+      },
+    },
+    {
+      ["id"] = 7720183,
+      ["name"] = "Wild Swamplands: Junction, Dig Spot",
+      ["region"] = "Swamplands5",
+      ["map"] = "Swamplands5",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Dash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beetle Dig",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720184,
+      ["name"] = "Wild Swamplands: Junction, Vine above the Platform",
+      ["region"] = "Swamplands5",
+      ["map"] = "Swamplands5",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Halt",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720185,
+      ["name"] = "Wild Swamplands: Crank Pond, Behind the Tree",
+      ["region"] = "Swamplands6 (Upper Right)",
+      ["map"] = "Swamplands6",
+    },
+    {
+      ["id"] = 7720186,
+      ["name"] = "Wild Swamplands: Crank Pond, Grass in the Bottom Left",
+      ["region"] = "Swamplands6",
+      ["map"] = "Swamplands6",
+      ["category"] = "hidden_item",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Horn Slash",
+        },
+      },
+    },
+    {
+      ["id"] = 7720187,
+      ["name"] = "Wild Swamplands: Ice Block Climb, On Top of the Stump",
+      ["region"] = "Swamplands7 (Upper Left)",
+      ["map"] = "Swamplands7",
+    },
+    {
+      ["id"] = 7720188,
+      ["name"] = "Wild Swamplands: Fenced Pond, Dig Spot",
+      ["region"] = "Swamplands8 (Right)",
+      ["map"] = "Swamplands8",
+      ["category"] = "dig_spot",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["id"] = 7720189,
+      ["name"] = "Defiant Root: Square, Behind the Box",
+      ["region"] = "DefiantRoot1",
+      ["map"] = "DefiantRoot1",
+    },
+    {
+      ["id"] = 7720190,
+      ["name"] = "Defiant Root: Square, Morty's Gift",
+      ["region"] = "DefiantRoot1",
+      ["map"] = "DefiantRoot1",
+    },
+    {
+      ["id"] = 7720191,
+      ["name"] = "Defiant Root: Square, Right Rooftop",
+      ["region"] = "DefiantRoot1 (Rooftops)",
+      ["map"] = "DefiantRoot1",
+    },
+    {
+      ["id"] = 7720192,
+      ["name"] = "Defiant Root: Square, Left Rooftop",
+      ["region"] = "DefiantRoot1 (Rooftops)",
+      ["map"] = "DefiantRoot1",
+      ["category"] = "crystal_berry",
+    },
+    {
+      ["id"] = 7720195,
+      ["name"] = "Defiant Root: Well, By the Boxes",
+      ["region"] = "DefiantRootWell (Right)",
+      ["map"] = "DefiantRootWell",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720196,
+      ["name"] = "Defiant Root: Beehive Lift, Above the Inn",
+      ["region"] = "DefiantRoot2 (Upstairs)",
+      ["map"] = "DefiantRoot2",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720197,
+      ["name"] = "Defiant Root: Beehive Lift, Inn Rooftop",
+      ["region"] = "DefiantRoot2 (Upstairs)",
+      ["map"] = "DefiantRoot2",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Bee Fly",
+        },
+      },
+    },
+    {
+      ["id"] = 7720198,
+      ["name"] = "Ancient Castle: Slide Puzzle, Behind the Cracked Wall",
+      ["region"] = "SandCastleSlidePuzzle (Bottom)",
+      ["map"] = "SandCastleSlidePuzzle",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["id"] = 7720199,
+      ["name"] = "Ancient Castle: Basement, Switch Puzzle",
+      ["region"] = "SandCastleBasement (Middle)",
+      ["map"] = "SandCastleBasement",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720200,
+      ["name"] = "Ancient Castle: Basement, Tiny Platform",
+      ["region"] = "SandCastleBasement (Middle)",
+      ["map"] = "SandCastleBasement",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720201,
+      ["name"] = "Ancient Castle: Basement, Behind the Barrier",
+      ["region"] = "SandCastleBasement (Middle)",
+      ["map"] = "SandCastleBasement",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Halt",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720202,
+      ["name"] = "Ancient Castle: Roof, Behind the Left Statue",
+      ["region"] = "SandCastleRoof",
+      ["map"] = "SandCastleRoof",
+    },
+    {
+      ["id"] = 7720203,
+      ["name"] = "Ancient Castle: Boss Key Room, Behind the Block",
+      ["region"] = "SandCastleBossKeyRoom",
+      ["map"] = "SandCastleBossKeyRoom",
+    },
+    {
+      ["id"] = 7720204,
+      ["name"] = "Ancient Castle: Boss Key Room, By the Three Statues",
+      ["region"] = "SandCastleBossKeyRoom (Right)",
+      ["map"] = "SandCastleBossKeyRoom",
+      ["rule"] = {
+        ["rule"] = "Member",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["name"] = "Vi",
+        },
+      },
+    },
+    {
+      ["id"] = 7720205,
+      ["name"] = "Ancient Castle: Pressure Puzzle, By the Statue",
+      ["region"] = "SandCastlePressurePuzzle",
+      ["map"] = "SandCastlePressurePuzzle",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "Or",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Jump",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Bee Fly",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720206,
+      ["name"] = "Ancient Castle: Rock Room, Alcove between the Rocks",
+      ["region"] = "SandCastleRockRoom (Top Right)",
+      ["map"] = "SandCastleRockRoom",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720207,
+      ["name"] = "Bee Kingdom Hive: Jaune's Gallery, Behind the Paintings",
+      ["region"] = "JaunesGallery",
+      ["map"] = "JaunesGallery",
+    },
+    {
+      ["id"] = 7720208,
+      ["name"] = "Bee Kingdom Hive: Scanner Room, Scan",
+      ["region"] = "BeehiveScannerRoom",
+      ["map"] = "BeehiveScannerRoom",
+    },
+    {
+      ["id"] = 7720209,
+      ["name"] = "Bee Kingdom Hive: Main Area, Clothing Stall 1",
+      ["region"] = "BeehiveMainArea",
+      ["map"] = "BeehiveMainArea",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Mothiva's Show Seen",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["id"] = 7720210,
+      ["name"] = "Bee Kingdom Hive: Main Area, Clothing Stall 2",
+      ["region"] = "BeehiveMainArea",
+      ["map"] = "BeehiveMainArea",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Mothiva's Show Seen",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["id"] = 7720212,
+      ["name"] = "Honey Factory: Lobby, Shop 1",
+      ["region"] = "HoneyFactoryEntrance (Bottom)",
+      ["map"] = "HoneyFactoryEntrance",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720213,
+      ["name"] = "Honey Factory: Lobby, Shop 2",
+      ["region"] = "HoneyFactoryEntrance (Bottom)",
+      ["map"] = "HoneyFactoryEntrance",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720214,
+      ["name"] = "Honey Factory: Lobby, Shop 3",
+      ["region"] = "HoneyFactoryEntrance (Bottom)",
+      ["map"] = "HoneyFactoryEntrance",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720215,
+      ["name"] = "Honey Factory: Lobby, Shop 4",
+      ["region"] = "HoneyFactoryEntrance (Bottom)",
+      ["map"] = "HoneyFactoryEntrance",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720216,
+      ["name"] = "Honey Factory: Lobby, Shop 5",
+      ["region"] = "HoneyFactoryEntrance (Bottom)",
+      ["map"] = "HoneyFactoryEntrance",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720217,
+      ["name"] = "Defiant Root: Market, Item Shop 1",
+      ["region"] = "DefiantRoot3",
+      ["map"] = "DefiantRoot3",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720218,
+      ["name"] = "Defiant Root: Market, Item Shop 2",
+      ["region"] = "DefiantRoot3",
+      ["map"] = "DefiantRoot3",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720219,
+      ["name"] = "Defiant Root: Market, Item Shop 3",
+      ["region"] = "DefiantRoot3",
+      ["map"] = "DefiantRoot3",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720220,
+      ["name"] = "Defiant Root: Market, Item Shop 4",
+      ["region"] = "DefiantRoot3",
+      ["map"] = "DefiantRoot3",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720221,
+      ["name"] = "Defiant Root: Market, Item Shop 5",
+      ["region"] = "DefiantRoot3",
+      ["map"] = "DefiantRoot3",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720222,
+      ["name"] = "Defiant Root: Market, Poison Shop 1",
+      ["region"] = "DefiantRoot3",
+      ["map"] = "DefiantRoot3",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720223,
+      ["name"] = "Defiant Root: Market, Poison Shop 2",
+      ["region"] = "DefiantRoot3",
+      ["map"] = "DefiantRoot3",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720224,
+      ["name"] = "Defiant Root: Market, Poison Shop 3",
+      ["region"] = "DefiantRoot3",
+      ["map"] = "DefiantRoot3",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720225,
+      ["name"] = "Defiant Root: Market, Poison Shop 4",
+      ["region"] = "DefiantRoot3",
+      ["map"] = "DefiantRoot3",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720226,
+      ["name"] = "Defiant Root: Market, Bakery Shop 1",
+      ["region"] = "DefiantRoot3",
+      ["map"] = "DefiantRoot3",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720227,
+      ["name"] = "Defiant Root: Market, Bakery Shop 2",
+      ["region"] = "DefiantRoot3",
+      ["map"] = "DefiantRoot3",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720228,
+      ["name"] = "Defiant Root: Market, Bakery Shop 3",
+      ["region"] = "DefiantRoot3",
+      ["map"] = "DefiantRoot3",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720229,
+      ["name"] = "Honey Factory: Worker Rooms, On the Desk",
+      ["region"] = "HoneyFactoryWorkerRooms",
+      ["map"] = "HoneyFactoryWorkerRooms",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720230,
+      ["name"] = "Honey Factory: Pump Room, Behind the Boxes",
+      ["region"] = "FactoryProcessingPump (Upper Right)",
+      ["map"] = "FactoryProcessingPump",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720231,
+      ["name"] = "Honey Factory: Pressure Plate Room, Behind the Pipe",
+      ["region"] = "FactoryProcessingPuzzle3",
+      ["map"] = "FactoryProcessingPuzzle3",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720232,
+      ["name"] = "Honey Factory: Storage Maze, Hole in the Boxes",
+      ["region"] = "FactoryStorageMaze (Upper Middle)",
+      ["map"] = "FactoryStorageMaze",
+    },
+    {
+      ["id"] = 7720233,
+      ["name"] = "Honey Factory: Storage Maze, Lever Puzzle",
+      ["region"] = "FactoryStorageMaze (Upper Middle)",
+      ["map"] = "FactoryStorageMaze",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Halt",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720234,
+      ["name"] = "Honey Factory: Storage Mini-boss Room, On Top of the Boxes",
+      ["region"] = "FactoryStorageMiniboss",
+      ["map"] = "FactoryStorageMiniboss",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720235,
+      ["name"] = "Honey Factory: Worker Rooms, On Top of the Bookshelf",
+      ["region"] = "HoneyFactoryWorkerRooms",
+      ["map"] = "HoneyFactoryWorkerRooms",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720237,
+      ["name"] = "Honey Factory: Training Grounds, Behind the Gate",
+      ["region"] = "FactoryProcessingPuzzle2",
+      ["map"] = "FactoryProcessingPuzzle2",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Halt",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Shield",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720238,
+      ["name"] = "Honey Factory: Pressure Plate Room, Behind the Gate",
+      ["region"] = "FactoryProcessingPuzzle3",
+      ["map"] = "FactoryProcessingPuzzle3",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720239,
+      ["name"] = "Honey Factory: Storage Mini-boss Room, Mini-boss Fight",
+      ["region"] = "FactoryStorageMiniboss",
+      ["map"] = "FactoryStorageMiniboss",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Halt",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720240,
+      ["name"] = "Rubber Prison: Pier, Second Floor Fight",
+      ["region"] = "RubberPrisonPier (Second Floor)",
+      ["map"] = "RubberPrisonPier",
+      ["rule"] = {
+        ["rule"] = "Member",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["name"] = "Kabbu",
+        },
+      },
+    },
+    {
+      ["id"] = 7720241,
+      ["name"] = "Rubber Prison: Spike Room, In the Cage",
+      ["region"] = "RubberPrisonSpikeRoom",
+      ["map"] = "RubberPrisonSpikeRoom",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720242,
+      ["name"] = "Rubber Prison: Electric Cells, Middle Right Cell",
+      ["region"] = "RubberPrisonCells2 (Middle)",
+      ["map"] = "RubberPrisonCells2",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720243,
+      ["name"] = "Rubber Prison: Electric Cells, Bottom Right Cell",
+      ["region"] = "RubberPrisonCells2",
+      ["map"] = "RubberPrisonCells2",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beetle Dig",
+                },
+              },
+              {
+                ["rule"] = "And",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanReachRegion",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["region_name"] = "RubberPrisonCells2 (Upper)",
+                    },
+                  },
+                  {
+                    ["rule"] = "WayBack",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["child"] = {
+                      ["rule"] = "CanUse",
+                      ["options"] = {},
+                      ["filtered_resolution"] = false,
+                      ["args"] = {
+                        ["ability"] = "Shield",
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720244,
+      ["name"] = "Rubber Prison: Gym, Crank Puzzle",
+      ["region"] = "RubberPrisonGym (Top Left)",
+      ["map"] = "RubberPrisonGym",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beemerang Halt",
+        },
+      },
+    },
+    {
+      ["id"] = 7720245,
+      ["name"] = "Snakemouth Den: Treasure Room, Treasure Pedestal",
+      ["region"] = "SnakemouthTreasureRoom",
+      ["map"] = "SnakemouthTreasureRoom",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Member",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["name"] = "Vi",
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720246,
+      ["name"] = "Rubber Prison: Giant's Lair Bridge, Queen's Gift",
+      ["region"] = "RubberPrisonGiantLairBridge (Right)",
+      ["map"] = "RubberPrisonGiantLairBridge",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["item_name"] = "Giant's Lair Bridge Fight Won",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["id"] = 7720247,
+      ["name"] = "Giant's Lair: Giant's Hand, Dig Spot",
+      ["region"] = "GiantLairDeadLands1",
+      ["map"] = "GiantLairDeadLands1",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["id"] = 7720248,
+      ["name"] = "Giant's Lair: Crane Crossing, By the Spear",
+      ["region"] = "GiantLairDeadLands2 (Middle Right)",
+      ["map"] = "GiantLairDeadLands2",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720249,
+      ["name"] = "Giant's Lair: Crane Crossing, Ledge by the Crossing",
+      ["region"] = "GiantLairDeadLands2 (Middle Right)",
+      ["map"] = "GiantLairDeadLands2",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Bee Fly",
+        },
+      },
+    },
+    {
+      ["id"] = 7720250,
+      ["name"] = "Giant's Lair: Inside the Fridge, Behind the Milk",
+      ["region"] = "GiantLairFridgeInside (Second Floor)",
+      ["map"] = "GiantLairFridgeInside",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720251,
+      ["name"] = "Giant's Lair: Roach Village, Item Shop 1",
+      ["region"] = "GiantLairRoachVillage",
+      ["map"] = "GiantLairRoachVillage",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720252,
+      ["name"] = "Giant's Lair: Roach Village, Item Shop 2",
+      ["region"] = "GiantLairRoachVillage",
+      ["map"] = "GiantLairRoachVillage",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720253,
+      ["name"] = "Giant's Lair: Roach Village, Item Shop 3",
+      ["region"] = "GiantLairRoachVillage",
+      ["map"] = "GiantLairRoachVillage",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720254,
+      ["name"] = "Giant's Lair: Roach Village, Item Shop 4",
+      ["region"] = "GiantLairRoachVillage",
+      ["map"] = "GiantLairRoachVillage",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720255,
+      ["name"] = "Giant's Lair: Kitchen Stove, Dig Spot",
+      ["region"] = "GiantLairBeforeBoss",
+      ["map"] = "GiantLairBeforeBoss",
+      ["category"] = "dig_spot",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720256,
+      ["name"] = "Metal Lake: Peacock Island, Dig Spot",
+      ["region"] = "MysteryIsland (Back)",
+      ["map"] = "MysteryIsland",
+      ["category"] = "dig_spot",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720257,
+      ["name"] = "Metal Lake: Peacock Island, Camp Sign",
+      ["region"] = "MysteryIsland (Back)",
+      ["map"] = "MysteryIsland",
+      ["category"] = "discovery",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Jump",
+        },
+      },
+    },
+    {
+      ["id"] = 7720258,
+      ["name"] = "Metal Island: Town, Chef's Roof",
+      ["region"] = "MetalIsland1",
+      ["map"] = "MetalIsland1",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720259,
+      ["name"] = "Metal Island: Town, Mothington X Statue",
+      ["region"] = "MetalIsland1",
+      ["map"] = "MetalIsland1",
+      ["category"] = "discovery",
+    },
+    {
+      ["id"] = 7720260,
+      ["name"] = "Metal Island: Town, Tea Shop 1",
+      ["region"] = "MetalIsland1",
+      ["map"] = "MetalIsland1",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720261,
+      ["name"] = "Metal Island: Town, Tea Shop 2",
+      ["region"] = "MetalIsland1",
+      ["map"] = "MetalIsland1",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720262,
+      ["name"] = "Termite Capitol: Main Plaza, Shop 1",
+      ["region"] = "TermiteMainPlaza",
+      ["map"] = "TermiteMainPlaza",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720263,
+      ["name"] = "Termite Capitol: Main Plaza, Shop 2",
+      ["region"] = "TermiteMainPlaza",
+      ["map"] = "TermiteMainPlaza",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720264,
+      ["name"] = "Termite Capitol: Main Plaza, Shop 3",
+      ["region"] = "TermiteMainPlaza",
+      ["map"] = "TermiteMainPlaza",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720265,
+      ["name"] = "Termite Capitol: Main Plaza, Shop 4",
+      ["region"] = "TermiteMainPlaza",
+      ["map"] = "TermiteMainPlaza",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720266,
+      ["name"] = "Termite Capitol: Royal Chamber, Termite Statue",
+      ["region"] = "TermiteRoyalChamber",
+      ["map"] = "TermiteRoyalChamber",
+      ["category"] = "discovery",
+    },
+    {
+      ["id"] = 7720267,
+      ["name"] = "Termite Capitol: Royal Chamber, Behind the Thrones",
+      ["region"] = "TermiteRoyalChamber",
+      ["map"] = "TermiteRoyalChamber",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720268,
+      ["name"] = "Termite Capitol: Outside the Colosseum, Between the Boxes",
+      ["region"] = "TermiteIndustrial (Outside the Colosseum)",
+      ["map"] = "TermiteIndustrial",
+    },
+    {
+      ["id"] = 7720269,
+      ["name"] = "Termite Capitol: Industrial District, Rooftop Vista",
+      ["region"] = "TermiteIndustrial",
+      ["map"] = "TermiteIndustrial",
+      ["category"] = "discovery",
+    },
+    {
+      ["id"] = 7720270,
+      ["name"] = "Termite Capitol: Industrial District, Apartment Balcony",
+      ["region"] = "TermiteIndustrial",
+      ["map"] = "TermiteIndustrial",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Bee Fly",
+        },
+      },
+    },
+    {
+      ["id"] = 7720271,
+      ["name"] = "Termite Capitol: Industrial District, Bomb Shop 1",
+      ["region"] = "TermiteIndustrial",
+      ["map"] = "TermiteIndustrial",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720272,
+      ["name"] = "Termite Capitol: Industrial District, Bomb Shop 2",
+      ["region"] = "TermiteIndustrial",
+      ["map"] = "TermiteIndustrial",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720273,
+      ["name"] = "Termite Capitol: Industrial District, Bomb Shop 3",
+      ["region"] = "TermiteIndustrial",
+      ["map"] = "TermiteIndustrial",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720274,
+      ["name"] = "Termite Capitol: Industrial District, Bomb Shop 4",
+      ["region"] = "TermiteIndustrial",
+      ["map"] = "TermiteIndustrial",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720275,
+      ["name"] = "Termite Capitol: Industrial District, Bomb Shop 5",
+      ["region"] = "TermiteIndustrial",
+      ["map"] = "TermiteIndustrial",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720276,
+      ["name"] = "Termite Capitol: Industrial District, Bomb Shop 6",
+      ["region"] = "TermiteIndustrial",
+      ["map"] = "TermiteIndustrial",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720277,
+      ["name"] = "Termite Capitol: Industrial District, Bomb Shop 7",
+      ["region"] = "TermiteIndustrial",
+      ["map"] = "TermiteIndustrial",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720278,
+      ["name"] = "Termite Capitol: Industrial District, Bomb Shop Medal",
+      ["region"] = "TermiteIndustrial",
+      ["map"] = "TermiteIndustrial",
+    },
+    {
+      ["id"] = 7720279,
+      ["name"] = "Termite Capitol: Outside the Colosseum, Plushie for Terrie",
+      ["region"] = "TermiteIndustrial (Outside the Colosseum)",
+      ["map"] = "TermiteIndustrial",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanReachRegion",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["region_name"] = "TermiteColiseum2",
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "G-Bug Ranger Plushie",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720280,
+      ["name"] = "Termite Capitol: Pier, Isolated Pillar by the Dock",
+      ["region"] = "TermitePier",
+      ["map"] = "TermitePier",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Bee Fly",
+        },
+      },
+    },
+    {
+      ["id"] = 7720281,
+      ["name"] = "Termite Capitol: Colosseum Lobby, Caravan Shop 1",
+      ["region"] = "TermiteColiseum1",
+      ["map"] = "TermiteColiseum1",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720282,
+      ["name"] = "Termite Capitol: Colosseum Lobby, Caravan Shop 2",
+      ["region"] = "TermiteColiseum1",
+      ["map"] = "TermiteColiseum1",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720283,
+      ["name"] = "Termite Capitol: Colosseum Lobby, Caravan Shop 3",
+      ["region"] = "TermiteColiseum1",
+      ["map"] = "TermiteColiseum1",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720284,
+      ["name"] = "Termite Capitol: Colosseum Lobby, Caravan Shop 4",
+      ["region"] = "TermiteColiseum1",
+      ["map"] = "TermiteColiseum1",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720285,
+      ["name"] = "Termite Capitol: Colosseum Lobby, Caravan Shop 5",
+      ["region"] = "TermiteColiseum1",
+      ["map"] = "TermiteColiseum1",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720286,
+      ["name"] = "Wasp Kingdom Hive: Fountain Room, On the Roof",
+      ["region"] = "WaspKingdom3",
+      ["map"] = "WaspKingdom3",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Halt",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720287,
+      ["name"] = "Wasp Kingdom Hive: Prison, Dig Spot",
+      ["region"] = "WaspKingdomPrison",
+      ["map"] = "WaspKingdomPrison",
+      ["category"] = "dig_spot",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Dash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720288,
+      ["name"] = "Wasp Kingdom Hive: Jayde's Room, Shop 1",
+      ["region"] = "WaspKingdomJayde",
+      ["map"] = "WaspKingdomJayde",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720289,
+      ["name"] = "Wasp Kingdom Hive: Jayde's Room, Shop 2",
+      ["region"] = "WaspKingdomJayde",
+      ["map"] = "WaspKingdomJayde",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720290,
+      ["name"] = "Wasp Kingdom Hive: Jayde's Room, Shop 3",
+      ["region"] = "WaspKingdomJayde",
+      ["map"] = "WaspKingdomJayde",
+      ["category"] = "item_shop",
+    },
+    {
+      ["id"] = 7720291,
+      ["name"] = "Wasp Kingdom Hive: Jayde's Room, Arrival",
+      ["region"] = "WaspKingdomJayde",
+      ["map"] = "WaspKingdomJayde",
+    },
+    {
+      ["id"] = 7720292,
+      ["name"] = "Wasp Kingdom Hive: Drill Room, Dig Spot",
+      ["region"] = "WaspKingdomDrillRoom",
+      ["map"] = "WaspKingdomDrillRoom",
+      ["category"] = "dig_spot",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["id"] = 7720293,
+      ["name"] = "Bandit Hideout: Cell, Dig Spot",
+      ["region"] = "HideoutCell",
+      ["map"] = "HideoutCell",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["id"] = 7720294,
+      ["name"] = "Bandit Hideout: Garden, By the Box",
+      ["region"] = "HideoutGarden (Upper)",
+      ["map"] = "HideoutGarden",
+    },
+    {
+      ["id"] = 7720295,
+      ["name"] = "Bandit Hideout: Treasury, By the Chest",
+      ["region"] = "HideoutWestStorage",
+      ["map"] = "HideoutWestStorage",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beetle Dig",
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720296,
+      ["name"] = "Bandit Hideout: Dining Hall, Dig Spot",
+      ["region"] = "HideoutRightA (Kitchen)",
+      ["map"] = "HideoutRightA",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["id"] = 7720297,
+      ["name"] = "Bandit Hideout: Dining Hall, By the Cauldron",
+      ["region"] = "HideoutRightA (Kitchen)",
+      ["map"] = "HideoutRightA",
+    },
+    {
+      ["id"] = 7720298,
+      ["name"] = "Bandit Hideout: Dining Hall, On Top of the Table",
+      ["region"] = "HideoutRightA",
+      ["map"] = "HideoutRightA",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720299,
+      ["name"] = "Stream Mountain: Climb, Above the Geysers",
+      ["region"] = "StreamMountain3 (Upper)",
+      ["map"] = "StreamMountain3",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720300,
+      ["name"] = "Stream Mountain: Bridge Puzzle, Among the Logs",
+      ["region"] = "StreamMountain4 (Middle)",
+      ["map"] = "StreamMountain4",
+    },
+    {
+      ["id"] = 7720301,
+      ["name"] = "Stream Mountain: Wyrm's Den, Bounty Fight",
+      ["region"] = "StreamMountain5",
+      ["map"] = "StreamMountain5",
+    },
+    {
+      ["id"] = 7720302,
+      ["name"] = "Chomper Caves: Droplet Room, Behind the Crack",
+      ["region"] = "ChomperCaves2",
+      ["map"] = "ChomperCaves2",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Beetle Dig",
+        },
+      },
+    },
+    {
+      ["id"] = 7720303,
+      ["name"] = "Chomper Caves: Chomper Nest, Fight",
+      ["region"] = "ChomperCaves3",
+      ["map"] = "ChomperCaves3",
+    },
+    {
+      ["id"] = 7720304,
+      ["name"] = "Fishing Village: Behind the Plant",
+      ["region"] = "FishingVillage",
+      ["map"] = "FishingVillage",
+    },
+    {
+      ["id"] = 7720305,
+      ["name"] = "Upper Snakemouth: Flooded Hall, Behind the Waterfall",
+      ["region"] = "UpperSnekMiddleRoom",
+      ["map"] = "UpperSnekMiddleRoom",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720306,
+      ["name"] = "Upper Snakemouth: Pipe Puzzle, Puzzle Reward",
+      ["region"] = "UpperSnekSwitchPuzzle",
+      ["map"] = "UpperSnekSwitchPuzzle",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720307,
+      ["name"] = "Upper Snakemouth: Gear Machine, On Top of the Machine",
+      ["region"] = "UpperSnekBeforeBoss",
+      ["map"] = "UpperSnekBeforeBoss",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720308,
+      ["name"] = "Upper Snakemouth: Piano Puzzle, Broken Test Tube",
+      ["region"] = "UpperSnekPressurePlateRoom",
+      ["map"] = "UpperSnekPressurePlateRoom",
+    },
+    {
+      ["id"] = 7720309,
+      ["name"] = "Upper Snakemouth: Piano Puzzle, Pressure Plate Door",
+      ["region"] = "UpperSnekPressurePlateRoom",
+      ["map"] = "UpperSnekPressurePlateRoom",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "Has",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["item_name"] = "Extra Freeze",
+                  ["count"] = 1,
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720310,
+      ["name"] = "Upper Snakemouth: Piano Puzzle, By the Wind Pipe",
+      ["region"] = "UpperSnekPressurePlateRoom",
+      ["map"] = "UpperSnekPressurePlateRoom",
+      ["category"] = "crystal_berry",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "Has",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["item_name"] = "Extra Freeze",
+                  ["count"] = 1,
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720311,
+      ["name"] = "Upper Snakemouth: Icicle Climb, Broken Test Tube",
+      ["region"] = "UpperSnekPlatformRoom",
+      ["map"] = "UpperSnekPlatformRoom",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "Or",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Jump",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Bee Fly",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720312,
+      ["name"] = "Upper Snakemouth: River Puzzle, Fight Behind the Barrier",
+      ["region"] = "UpperSnekRiverPuzzle",
+      ["map"] = "UpperSnekRiverPuzzle",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Icicle",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Halt",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beetle Dig",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720313,
+      ["name"] = "Upper Snakemouth: Geyser Room, Below the Pump",
+      ["region"] = "UpperSnekGeizerRoom",
+      ["map"] = "UpperSnekGeizerRoom",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+              {
+                ["rule"] = "And",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Icicle",
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Jump",
+                    },
+                  },
+                  {
+                    ["rule"] = "Or",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["children"] = {
+                      {
+                        ["rule"] = "CanUse",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["args"] = {
+                          ["ability"] = "Beemerang Toss",
+                        },
+                      },
+                      {
+                        ["rule"] = "CanUse",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["args"] = {
+                          ["ability"] = "Horn Slash",
+                        },
+                      },
+                      {
+                        ["rule"] = "CanUse",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["args"] = {
+                          ["ability"] = "Freeze",
+                        },
+                      },
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Freeze",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720314,
+      ["name"] = "Golden Hills: Summit, Boss Fight",
+      ["region"] = "GoldenHillsDungeonBoss",
+      ["map"] = "GoldenHillsDungeonBoss",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720315,
+      ["name"] = "Honey Factory: Core, Boss Fight",
+      ["region"] = "HoneyFactoryCore",
+      ["map"] = "HoneyFactoryCore",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "And",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanReachRegion",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["region_name"] = "FactoryStorageOverseer",
+                },
+              },
+              {
+                ["rule"] = "Or",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["children"] = {
+                  {
+                    ["rule"] = "And",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["children"] = {
+                      {
+                        ["rule"] = "CanUse",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["args"] = {
+                          ["ability"] = "Jump",
+                        },
+                      },
+                      {
+                        ["rule"] = "CanUse",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["args"] = {
+                          ["ability"] = "Beemerang Halt",
+                        },
+                      },
+                      {
+                        ["rule"] = "CanUse",
+                        ["options"] = {},
+                        ["filtered_resolution"] = false,
+                        ["args"] = {
+                          ["ability"] = "Freeze",
+                        },
+                      },
+                    },
+                  },
+                  {
+                    ["rule"] = "CanUse",
+                    ["options"] = {},
+                    ["filtered_resolution"] = false,
+                    ["args"] = {
+                      ["ability"] = "Bee Fly",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720316,
+      ["name"] = "Lost Sands: Roach Village, Hawk's Gift",
+      ["region"] = "DesertRoachVillage",
+      ["map"] = "DesertRoachVillage",
+    },
+    {
+      ["id"] = 7720317,
+      ["name"] = "Bandit Hideout: Entrance, Astotheles' Fight",
+      ["region"] = "HideoutEntrance",
+      ["map"] = "HideoutEntrance",
+    },
+    {
+      ["id"] = 7720318,
+      ["name"] = "Bugaria City: Throne Room, Queen's Audience",
+      ["region"] = "AntPalace1",
+      ["map"] = "AntPalace1",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanReachRegion",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["region_name"] = "WaspKingdomThrone (Top)",
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720319,
+      ["name"] = "Giant's Lair: Sapling Plains, Final Fight",
+      ["region"] = "GiantLairSaplingPlains (Last Fight)",
+      ["map"] = "GiantLairSaplingPlains",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "HasFromListUnique",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_names"] = {
+                "Ancient Half",
+                "Ancient Key",
+                "Ancient Mask",
+                "Ancient Tablet",
+                "Flame Brooch",
+                "Queen's Mask",
+                "Wasp King's Crown",
+              },
+              ["count"] = {
+                ["resolver"] = "FromWorldAttr",
+                ["name"] = "artifacts_required",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["id"] = 7720320,
+      ["name"] = "Ancient Castle: Boss Room, Boss Fight",
+      ["region"] = "SandCastleBossRoom",
+      ["map"] = "SandCastleBossRoom",
+    },
+    {
+      ["id"] = 7720321,
+      ["name"] = "Ancient Castle: Treasure Room, Treasure Pedestal",
+      ["region"] = "SandCastleTreasureRoom",
+      ["map"] = "SandCastleTreasureRoom",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
             },
           },
         },
@@ -32682,7 +45246,7 @@ return {
     },
     {
       ["id"] = 7721090,
-      ["name"] = "Honey Factory: FactoryProcessingPump, Bee-Boop 1",
+      ["name"] = "Honey Factory: Pump Room, Bee-Boop 1",
       ["region"] = "FactoryProcessingPump",
       ["map"] = "FactoryProcessingPump",
       ["category"] = "enemy",
@@ -32801,7 +45365,7 @@ return {
     },
     {
       ["id"] = 7721091,
-      ["name"] = "Honey Factory: FactoryProcessingPump, Denmuki 1",
+      ["name"] = "Honey Factory: Pump Room, Denmuki 1",
       ["region"] = "FactoryProcessingPump",
       ["map"] = "FactoryProcessingPump",
       ["category"] = "enemy",
@@ -32920,7 +45484,7 @@ return {
     },
     {
       ["id"] = 7721092,
-      ["name"] = "Honey Factory: FactoryProcessingPump, Security Turret 1",
+      ["name"] = "Honey Factory: Pump Room, Security Turret 1",
       ["region"] = "FactoryProcessingPump",
       ["map"] = "FactoryProcessingPump",
       ["category"] = "enemy",
@@ -33039,7 +45603,7 @@ return {
     },
     {
       ["id"] = 7721093,
-      ["name"] = "Honey Factory: FactoryProcessingPuzzle2, Bee-Boop 1",
+      ["name"] = "Honey Factory: Training Grounds, Bee-Boop 1",
       ["region"] = "FactoryProcessingPuzzle2",
       ["map"] = "FactoryProcessingPuzzle2",
       ["category"] = "enemy",
@@ -33158,7 +45722,7 @@ return {
     },
     {
       ["id"] = 7721094,
-      ["name"] = "Honey Factory: FactoryProcessingPuzzle2, Bee-Boop 2",
+      ["name"] = "Honey Factory: Training Grounds, Bee-Boop 2",
       ["region"] = "FactoryProcessingPuzzle2",
       ["map"] = "FactoryProcessingPuzzle2",
       ["category"] = "enemy",
@@ -33277,7 +45841,7 @@ return {
     },
     {
       ["id"] = 7721095,
-      ["name"] = "Honey Factory: FactoryProcessingPuzzle3, Security Turret 1",
+      ["name"] = "Honey Factory: Pressure Plate Room, Security Turret 1",
       ["region"] = "FactoryProcessingPuzzle3",
       ["map"] = "FactoryProcessingPuzzle3",
       ["category"] = "enemy",
@@ -33396,7 +45960,7 @@ return {
     },
     {
       ["id"] = 7721096,
-      ["name"] = "Honey Factory: FactoryProcessingPuzzle3, Denmuki 1",
+      ["name"] = "Honey Factory: Pressure Plate Room, Denmuki 1",
       ["region"] = "FactoryProcessingPuzzle3",
       ["map"] = "FactoryProcessingPuzzle3",
       ["category"] = "enemy",
@@ -33515,7 +46079,7 @@ return {
     },
     {
       ["id"] = 7721097,
-      ["name"] = "Honey Factory: FactoryStorageMaze, Denmuki 1",
+      ["name"] = "Honey Factory: Storage Maze, Denmuki 1",
       ["region"] = "FactoryStorageMaze",
       ["map"] = "FactoryStorageMaze",
       ["category"] = "enemy",
@@ -33634,7 +46198,7 @@ return {
     },
     {
       ["id"] = 7721098,
-      ["name"] = "Honey Factory: FactoryStorageMaze, Security Turret 1",
+      ["name"] = "Honey Factory: Storage Maze, Security Turret 1",
       ["region"] = "FactoryStorageMaze",
       ["map"] = "FactoryStorageMaze",
       ["category"] = "enemy",
@@ -33753,7 +46317,7 @@ return {
     },
     {
       ["id"] = 7721099,
-      ["name"] = "Honey Factory: FactoryStorageMiniboss, Bee-Boop 1",
+      ["name"] = "Honey Factory: Storage Mini-boss Room, Bee-Boop 1",
       ["region"] = "FactoryStorageMiniboss",
       ["map"] = "FactoryStorageMiniboss",
       ["category"] = "enemy",
@@ -36251,958 +48815,6 @@ return {
       },
     },
     {
-      ["id"] = 7721120,
-      ["name"] = "Bandit Hideout: HideoutCentralRoom, Bandit 1",
-      ["region"] = "HideoutCentralRoom",
-      ["map"] = "HideoutCentralRoom",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721121,
-      ["name"] = "Bandit Hideout: HideoutCentralRoom, Thief 1",
-      ["region"] = "HideoutCentralRoom",
-      ["map"] = "HideoutCentralRoom",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721122,
-      ["name"] = "Bandit Hideout: HideoutLeftA, Burglar 1",
-      ["region"] = "HideoutLeftA",
-      ["map"] = "HideoutLeftA",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721123,
-      ["name"] = "Bandit Hideout: HideoutGarden, Burglar 1",
-      ["region"] = "HideoutGarden",
-      ["map"] = "HideoutGarden",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721124,
-      ["name"] = "Bandit Hideout: HideoutGarden, Bandit 1",
-      ["region"] = "HideoutGarden",
-      ["map"] = "HideoutGarden",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721125,
-      ["name"] = "Bandit Hideout: HideoutGarden, Thief 1",
-      ["region"] = "HideoutGarden",
-      ["map"] = "HideoutGarden",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721126,
-      ["name"] = "Bandit Hideout: HideoutRightA, Thief 1",
-      ["region"] = "HideoutRightA",
-      ["map"] = "HideoutRightA",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721127,
-      ["name"] = "Bandit Hideout: HideoutRightA, Burglar 1",
-      ["region"] = "HideoutRightA",
-      ["map"] = "HideoutRightA",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
       ["id"] = 7721128,
       ["name"] = "Lost Sands: DesertTrenchMiddle, Underling 1",
       ["region"] = "DesertTrenchMiddle",
@@ -38155,1315 +49767,6 @@ return {
       },
     },
     {
-      ["id"] = 7721136,
-      ["name"] = "Ancient Castle: SandCastleEntrance, Krawler 1",
-      ["region"] = "SandCastleEntrance",
-      ["map"] = "SandCastleEntrance",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721137,
-      ["name"] = "Ancient Castle: SandCastleSlidePuzzle, Krawler 1",
-      ["region"] = "SandCastleSlidePuzzle",
-      ["map"] = "SandCastleSlidePuzzle",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721138,
-      ["name"] = "Ancient Castle: SandCastleStatueRoom, Warden 1",
-      ["region"] = "SandCastleStatueRoom",
-      ["map"] = "SandCastleStatueRoom",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721139,
-      ["name"] = "Ancient Castle: SandCastleStatueRoom, Warden 2",
-      ["region"] = "SandCastleStatueRoom",
-      ["map"] = "SandCastleStatueRoom",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721140,
-      ["name"] = "Ancient Castle: SandCastleStatueRoom, Haunted Cloth 1",
-      ["region"] = "SandCastleStatueRoom",
-      ["map"] = "SandCastleStatueRoom",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721141,
-      ["name"] = "Ancient Castle: SandCastleBasement, Arrow Worm 1",
-      ["region"] = "SandCastleBasement",
-      ["map"] = "SandCastleBasement",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721142,
-      ["name"] = "Ancient Castle: SandCastleBasement, Haunted Cloth 1",
-      ["region"] = "SandCastleBasement",
-      ["map"] = "SandCastleBasement",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721143,
-      ["name"] = "Ancient Castle: SandCastleRoof, Haunted Cloth 1",
-      ["region"] = "SandCastleRoof",
-      ["map"] = "SandCastleRoof",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721144,
-      ["name"] = "Ancient Castle: SandCastleRoof, Krawler 1",
-      ["region"] = "SandCastleRoof",
-      ["map"] = "SandCastleRoof",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721145,
-      ["name"] = "Ancient Castle: SandCastleMainRoom, Psicorp 1",
-      ["region"] = "SandCastleMainRoom",
-      ["map"] = "SandCastleMainRoom",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721146,
-      ["name"] = "Ancient Castle: SandCastleMainRoom, Warden 1",
-      ["region"] = "SandCastleMainRoom",
-      ["map"] = "SandCastleMainRoom",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
       ["id"] = 7721147,
       ["name"] = "Snakemouth Den: BugariaPlazaAttack, Wasp Trooper 1",
       ["region"] = "BugariaPlazaAttack",
@@ -40178,839 +50481,6 @@ return {
       },
     },
     {
-      ["id"] = 7721153,
-      ["name"] = "Ancient Castle: SandCastlePressurePuzzle, Krawler 1",
-      ["region"] = "SandCastlePressurePuzzle",
-      ["map"] = "SandCastlePressurePuzzle",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721154,
-      ["name"] = "Ancient Castle: SandCastlePressurePuzzle, Krawler 2",
-      ["region"] = "SandCastlePressurePuzzle",
-      ["map"] = "SandCastlePressurePuzzle",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721155,
-      ["name"] = "Ancient Castle: SandCastlePressurePuzzle, Warden 1",
-      ["region"] = "SandCastlePressurePuzzle",
-      ["map"] = "SandCastlePressurePuzzle",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721156,
-      ["name"] = "Ancient Castle: SandCastleRockRoom, Arrow Worm 1",
-      ["region"] = "SandCastleRockRoom",
-      ["map"] = "SandCastleRockRoom",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721157,
-      ["name"] = "Ancient Castle: SandCastleRockRoom, Haunted Cloth 1",
-      ["region"] = "SandCastleRockRoom",
-      ["map"] = "SandCastleRockRoom",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721158,
-      ["name"] = "Ancient Castle: SandCastleRockRoom, Psicorp 1",
-      ["region"] = "SandCastleRockRoom",
-      ["map"] = "SandCastleRockRoom",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
-      ["id"] = 7721159,
-      ["name"] = "Ancient Castle: SandCastleRockRoom, Warden 1",
-      ["region"] = "SandCastleRockRoom",
-      ["map"] = "SandCastleRockRoom",
-      ["category"] = "enemy",
-      ["rule"] = {
-        ["rule"] = "And",
-        ["options"] = {},
-        ["filtered_resolution"] = false,
-        ["children"] = {
-          {
-            ["rule"] = "And",
-            ["options"] = {},
-            ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
-                },
-              },
-            },
-          },
-          {
-            ["rule"] = "Has",
-            ["options"] = {
-              {
-                ["option"] = "worlds.bug_fables.options.ShuffleJump",
-                ["value"] = 1,
-                ["operator"] = "eq",
-              },
-            },
-            ["filtered_resolution"] = true,
-            ["args"] = {
-              ["item_name"] = "Jump",
-              ["count"] = 1,
-            },
-          },
-        },
-      },
-    },
-    {
       ["id"] = 7721160,
       ["name"] = "Stream Mountain: StreamMountain1, Belostoss 1",
       ["region"] = "StreamMountain1",
@@ -41369,7 +50839,7 @@ return {
     },
     {
       ["id"] = 7721163,
-      ["name"] = "Stream Mountain: StreamMountain3, Water Strider 1",
+      ["name"] = "Stream Mountain: Climb, Water Strider 1",
       ["region"] = "StreamMountain3",
       ["map"] = "StreamMountain3",
       ["category"] = "enemy",
@@ -41488,7 +50958,7 @@ return {
     },
     {
       ["id"] = 7721164,
-      ["name"] = "Stream Mountain: StreamMountain3, Belostoss 1",
+      ["name"] = "Stream Mountain: Climb, Belostoss 1",
       ["region"] = "StreamMountain3",
       ["map"] = "StreamMountain3",
       ["category"] = "enemy",
@@ -41607,7 +51077,7 @@ return {
     },
     {
       ["id"] = 7721165,
-      ["name"] = "Stream Mountain: StreamMountain3, Diving Spider 1",
+      ["name"] = "Stream Mountain: Climb, Diving Spider 1",
       ["region"] = "StreamMountain3",
       ["map"] = "StreamMountain3",
       ["category"] = "enemy",
@@ -44225,7 +53695,7 @@ return {
     },
     {
       ["id"] = 7721187,
-      ["name"] = "Wild Swamplands: Swamplands2, Madesphy 1",
+      ["name"] = "Wild Swamplands: Lily Pad Pond, Madesphy 1",
       ["region"] = "Swamplands2",
       ["map"] = "Swamplands2",
       ["category"] = "enemy",
@@ -44344,7 +53814,7 @@ return {
     },
     {
       ["id"] = 7721188,
-      ["name"] = "Wild Swamplands: Swamplands2, Wild Chomper 1",
+      ["name"] = "Wild Swamplands: Lily Pad Pond, Wild Chomper 1",
       ["region"] = "Swamplands2",
       ["map"] = "Swamplands2",
       ["category"] = "enemy",
@@ -44463,7 +53933,7 @@ return {
     },
     {
       ["id"] = 7721189,
-      ["name"] = "Wild Swamplands: Swamplands2, Mantidfly 1",
+      ["name"] = "Wild Swamplands: Lily Pad Pond, Mantidfly 1",
       ["region"] = "Swamplands2",
       ["map"] = "Swamplands2",
       ["category"] = "enemy",
@@ -45772,7 +55242,7 @@ return {
     },
     {
       ["id"] = 7721200,
-      ["name"] = "Chomper Caves: ChomperCaves2, Chomper 1",
+      ["name"] = "Chomper Caves: Droplet Room, Chomper 1",
       ["region"] = "ChomperCaves2",
       ["map"] = "ChomperCaves2",
       ["category"] = "enemy",
@@ -45891,7 +55361,7 @@ return {
     },
     {
       ["id"] = 7721201,
-      ["name"] = "Chomper Caves: ChomperCaves2, Chomper Brute 1",
+      ["name"] = "Chomper Caves: Droplet Room, Chomper Brute 1",
       ["region"] = "ChomperCaves2",
       ["map"] = "ChomperCaves2",
       ["category"] = "enemy",
@@ -46010,7 +55480,7 @@ return {
     },
     {
       ["id"] = 7721202,
-      ["name"] = "Chomper Caves: ChomperCaves2, Chomper 2",
+      ["name"] = "Chomper Caves: Droplet Room, Chomper 2",
       ["region"] = "ChomperCaves2",
       ["map"] = "ChomperCaves2",
       ["category"] = "enemy",
@@ -46129,7 +55599,7 @@ return {
     },
     {
       ["id"] = 7721203,
-      ["name"] = "Chomper Caves: ChomperCaves2, Chomper 3",
+      ["name"] = "Chomper Caves: Droplet Room, Chomper 3",
       ["region"] = "ChomperCaves2",
       ["map"] = "ChomperCaves2",
       ["category"] = "enemy",
@@ -46248,7 +55718,7 @@ return {
     },
     {
       ["id"] = 7721204,
-      ["name"] = "Chomper Caves: ChomperCaves2, Chomper 4",
+      ["name"] = "Chomper Caves: Droplet Room, Chomper 4",
       ["region"] = "ChomperCaves2",
       ["map"] = "ChomperCaves2",
       ["category"] = "enemy",
@@ -46724,7 +56194,7 @@ return {
     },
     {
       ["id"] = 7721208,
-      ["name"] = "Wild Swamplands: Swamplands5, Leafbug Clubber 1",
+      ["name"] = "Wild Swamplands: Junction, Leafbug Clubber 1",
       ["region"] = "Swamplands5",
       ["map"] = "Swamplands5",
       ["category"] = "enemy",
@@ -46843,7 +56313,7 @@ return {
     },
     {
       ["id"] = 7721209,
-      ["name"] = "Wild Swamplands: Swamplands5, Madesphy 1",
+      ["name"] = "Wild Swamplands: Junction, Madesphy 1",
       ["region"] = "Swamplands5",
       ["map"] = "Swamplands5",
       ["category"] = "enemy",
@@ -46962,7 +56432,7 @@ return {
     },
     {
       ["id"] = 7721210,
-      ["name"] = "Wild Swamplands: Swamplands5, Wild Chomper 1",
+      ["name"] = "Wild Swamplands: Junction, Wild Chomper 1",
       ["region"] = "Swamplands5",
       ["map"] = "Swamplands5",
       ["category"] = "enemy",
@@ -47081,7 +56551,7 @@ return {
     },
     {
       ["id"] = 7721211,
-      ["name"] = "Wild Swamplands: Swamplands5, Wild Chomper 2",
+      ["name"] = "Wild Swamplands: Junction, Wild Chomper 2",
       ["region"] = "Swamplands5",
       ["map"] = "Swamplands5",
       ["category"] = "enemy",
@@ -47200,7 +56670,7 @@ return {
     },
     {
       ["id"] = 7721212,
-      ["name"] = "Wild Swamplands: Swamplands6, Leafbug Archer 1",
+      ["name"] = "Wild Swamplands: Crank Pond, Leafbug Archer 1",
       ["region"] = "Swamplands6",
       ["map"] = "Swamplands6",
       ["category"] = "enemy",
@@ -47319,7 +56789,7 @@ return {
     },
     {
       ["id"] = 7721213,
-      ["name"] = "Wild Swamplands: Swamplands6, Madesphy 1",
+      ["name"] = "Wild Swamplands: Crank Pond, Madesphy 1",
       ["region"] = "Swamplands6",
       ["map"] = "Swamplands6",
       ["category"] = "enemy",
@@ -47438,7 +56908,7 @@ return {
     },
     {
       ["id"] = 7721214,
-      ["name"] = "Wild Swamplands: Swamplands6, Wild Chomper 1",
+      ["name"] = "Wild Swamplands: Crank Pond, Wild Chomper 1",
       ["region"] = "Swamplands6",
       ["map"] = "Swamplands6",
       ["category"] = "enemy",
@@ -47557,7 +57027,7 @@ return {
     },
     {
       ["id"] = 7721215,
-      ["name"] = "Wild Swamplands: Swamplands7, Flowerling 1",
+      ["name"] = "Wild Swamplands: Ice Block Climb, Flowerling 1",
       ["region"] = "Swamplands7",
       ["map"] = "Swamplands7",
       ["category"] = "enemy",
@@ -47676,7 +57146,7 @@ return {
     },
     {
       ["id"] = 7721216,
-      ["name"] = "Wild Swamplands: Swamplands7, Leafbug Archer 1",
+      ["name"] = "Wild Swamplands: Ice Block Climb, Leafbug Archer 1",
       ["region"] = "Swamplands7",
       ["map"] = "Swamplands7",
       ["category"] = "enemy",
@@ -47795,7 +57265,7 @@ return {
     },
     {
       ["id"] = 7721217,
-      ["name"] = "Wild Swamplands: Swamplands7, Madesphy 1",
+      ["name"] = "Wild Swamplands: Ice Block Climb, Madesphy 1",
       ["region"] = "Swamplands7",
       ["map"] = "Swamplands7",
       ["category"] = "enemy",
@@ -47914,7 +57384,7 @@ return {
     },
     {
       ["id"] = 7721218,
-      ["name"] = "Wild Swamplands: Swamplands7, Leafbug Archer 2",
+      ["name"] = "Wild Swamplands: Ice Block Climb, Leafbug Archer 2",
       ["region"] = "Swamplands7",
       ["map"] = "Swamplands7",
       ["category"] = "enemy",
@@ -48033,7 +57503,7 @@ return {
     },
     {
       ["id"] = 7721219,
-      ["name"] = "Wild Swamplands: Swamplands7, Leafbug Clubber 1",
+      ["name"] = "Wild Swamplands: Ice Block Climb, Leafbug Clubber 1",
       ["region"] = "Swamplands7",
       ["map"] = "Swamplands7",
       ["category"] = "enemy",
@@ -48152,7 +57622,7 @@ return {
     },
     {
       ["id"] = 7721220,
-      ["name"] = "Wild Swamplands: Swamplands8, Leafbug Clubber 1",
+      ["name"] = "Wild Swamplands: Fenced Pond, Leafbug Clubber 1",
       ["region"] = "Swamplands8",
       ["map"] = "Swamplands8",
       ["category"] = "enemy",
@@ -48271,7 +57741,7 @@ return {
     },
     {
       ["id"] = 7721221,
-      ["name"] = "Wild Swamplands: Swamplands8, Madesphy 1",
+      ["name"] = "Wild Swamplands: Fenced Pond, Madesphy 1",
       ["region"] = "Swamplands8",
       ["map"] = "Swamplands8",
       ["category"] = "enemy",
@@ -48390,7 +57860,7 @@ return {
     },
     {
       ["id"] = 7721222,
-      ["name"] = "Wild Swamplands: Swamplands8, Leafbug Ninja 1",
+      ["name"] = "Wild Swamplands: Fenced Pond, Leafbug Ninja 1",
       ["region"] = "Swamplands8",
       ["map"] = "Swamplands8",
       ["category"] = "enemy",
@@ -48509,7 +57979,7 @@ return {
     },
     {
       ["id"] = 7721223,
-      ["name"] = "Wild Swamplands: Swamplands8, Mantidfly 1",
+      ["name"] = "Wild Swamplands: Fenced Pond, Mantidfly 1",
       ["region"] = "Swamplands8",
       ["map"] = "Swamplands8",
       ["category"] = "enemy",
@@ -48747,7 +58217,7 @@ return {
     },
     {
       ["id"] = 7721225,
-      ["name"] = "Wasp Kingdom Hive: WaspKingdomPrison, Wasp Trooper 1",
+      ["name"] = "Wasp Kingdom Hive: Prison, Wasp Trooper 1",
       ["region"] = "WaspKingdomPrison",
       ["map"] = "WaspKingdomPrison",
       ["category"] = "enemy",
@@ -48866,7 +58336,7 @@ return {
     },
     {
       ["id"] = 7721226,
-      ["name"] = "Wasp Kingdom Hive: WaspKingdomPrison, Wasp Scout 1",
+      ["name"] = "Wasp Kingdom Hive: Prison, Wasp Scout 1",
       ["region"] = "WaspKingdomPrison",
       ["map"] = "WaspKingdomPrison",
       ["category"] = "enemy",
@@ -51960,7 +61430,7 @@ return {
     },
     {
       ["id"] = 7721252,
-      ["name"] = "Stream Mountain: StreamMountain4, Psicorp 1",
+      ["name"] = "Stream Mountain: Bridge Puzzle, Psicorp 1",
       ["region"] = "StreamMountain4",
       ["map"] = "StreamMountain4",
       ["category"] = "enemy",
@@ -52079,7 +61549,7 @@ return {
     },
     {
       ["id"] = 7721253,
-      ["name"] = "Stream Mountain: StreamMountain4, Water Strider 1",
+      ["name"] = "Stream Mountain: Bridge Puzzle, Water Strider 1",
       ["region"] = "StreamMountain4",
       ["map"] = "StreamMountain4",
       ["category"] = "enemy",
@@ -52198,7 +61668,7 @@ return {
     },
     {
       ["id"] = 7721254,
-      ["name"] = "Stream Mountain: StreamMountain4, Water Strider 2",
+      ["name"] = "Stream Mountain: Bridge Puzzle, Water Strider 2",
       ["region"] = "StreamMountain4",
       ["map"] = "StreamMountain4",
       ["category"] = "enemy",
@@ -53388,7 +62858,7 @@ return {
     },
     {
       ["id"] = 7721264,
-      ["name"] = "Upper Snakemouth: UpperSnekTransition, Bloatshroom 1",
+      ["name"] = "Upper Snakemouth: Icicle Pond, Bloatshroom 1",
       ["region"] = "UpperSnekTransition",
       ["map"] = "UpperSnekTransition",
       ["category"] = "enemy",
@@ -53507,7 +62977,7 @@ return {
     },
     {
       ["id"] = 7721265,
-      ["name"] = "Upper Snakemouth: UpperSnekSwitchPuzzle, Zombeetle 1",
+      ["name"] = "Upper Snakemouth: Pipe Puzzle, Zombeetle 1",
       ["region"] = "UpperSnekSwitchPuzzle",
       ["map"] = "UpperSnekSwitchPuzzle",
       ["category"] = "enemy",
@@ -53626,7 +63096,7 @@ return {
     },
     {
       ["id"] = 7721266,
-      ["name"] = "Upper Snakemouth: UpperSnekBeforeBoss, Bloatshroom 1",
+      ["name"] = "Upper Snakemouth: Gear Machine, Bloatshroom 1",
       ["region"] = "UpperSnekBeforeBoss",
       ["map"] = "UpperSnekBeforeBoss",
       ["category"] = "enemy",
@@ -53745,7 +63215,7 @@ return {
     },
     {
       ["id"] = 7721267,
-      ["name"] = "Upper Snakemouth: UpperSnekPressurePlateRoom, Zombiant 1",
+      ["name"] = "Upper Snakemouth: Piano Puzzle, Zombiant 1",
       ["region"] = "UpperSnekPressurePlateRoom",
       ["map"] = "UpperSnekPressurePlateRoom",
       ["category"] = "enemy",
@@ -53864,7 +63334,7 @@ return {
     },
     {
       ["id"] = 7721268,
-      ["name"] = "Upper Snakemouth: UpperSnekPressurePlateRoom, Zombiant 2",
+      ["name"] = "Upper Snakemouth: Piano Puzzle, Zombiant 2",
       ["region"] = "UpperSnekPressurePlateRoom",
       ["map"] = "UpperSnekPressurePlateRoom",
       ["category"] = "enemy",
@@ -53983,7 +63453,7 @@ return {
     },
     {
       ["id"] = 7721269,
-      ["name"] = "Upper Snakemouth: UpperSnekMiddleRoom, Bloatshroom 1",
+      ["name"] = "Upper Snakemouth: Flooded Hall, Bloatshroom 1",
       ["region"] = "UpperSnekMiddleRoom",
       ["map"] = "UpperSnekMiddleRoom",
       ["category"] = "enemy",
@@ -54102,7 +63572,7 @@ return {
     },
     {
       ["id"] = 7721270,
-      ["name"] = "Upper Snakemouth: UpperSnekMiddleRoom, Zombee 1",
+      ["name"] = "Upper Snakemouth: Flooded Hall, Zombee 1",
       ["region"] = "UpperSnekMiddleRoom",
       ["map"] = "UpperSnekMiddleRoom",
       ["category"] = "enemy",
@@ -54221,7 +63691,7 @@ return {
     },
     {
       ["id"] = 7721271,
-      ["name"] = "Upper Snakemouth: UpperSnekPlatformRoom, Zombee 1",
+      ["name"] = "Upper Snakemouth: Icicle Climb, Zombee 1",
       ["region"] = "UpperSnekPlatformRoom",
       ["map"] = "UpperSnekPlatformRoom",
       ["category"] = "enemy",
@@ -54340,7 +63810,7 @@ return {
     },
     {
       ["id"] = 7721272,
-      ["name"] = "Upper Snakemouth: UpperSnekPlatformRoom, Zombee 2",
+      ["name"] = "Upper Snakemouth: Icicle Climb, Zombee 2",
       ["region"] = "UpperSnekPlatformRoom",
       ["map"] = "UpperSnekPlatformRoom",
       ["category"] = "enemy",
@@ -54459,7 +63929,7 @@ return {
     },
     {
       ["id"] = 7721273,
-      ["name"] = "Upper Snakemouth: UpperSnekPlatformRoom, Zombeetle 1",
+      ["name"] = "Upper Snakemouth: Icicle Climb, Zombeetle 1",
       ["region"] = "UpperSnekPlatformRoom",
       ["map"] = "UpperSnekPlatformRoom",
       ["category"] = "enemy",
@@ -54578,7 +64048,7 @@ return {
     },
     {
       ["id"] = 7721274,
-      ["name"] = "Upper Snakemouth: UpperSnekPlatformRoom, Zombee 3",
+      ["name"] = "Upper Snakemouth: Icicle Climb, Zombee 3",
       ["region"] = "UpperSnekPlatformRoom",
       ["map"] = "UpperSnekPlatformRoom",
       ["category"] = "enemy",
@@ -54697,7 +64167,7 @@ return {
     },
     {
       ["id"] = 7721275,
-      ["name"] = "Upper Snakemouth: UpperSnekRiverPuzzle, Bloatshroom 1",
+      ["name"] = "Upper Snakemouth: River Puzzle, Bloatshroom 1",
       ["region"] = "UpperSnekRiverPuzzle",
       ["map"] = "UpperSnekRiverPuzzle",
       ["category"] = "enemy",
@@ -54816,7 +64286,7 @@ return {
     },
     {
       ["id"] = 7721276,
-      ["name"] = "Upper Snakemouth: UpperSnekRiverPuzzle, Zombeetle 1",
+      ["name"] = "Upper Snakemouth: River Puzzle, Zombeetle 1",
       ["region"] = "UpperSnekRiverPuzzle",
       ["map"] = "UpperSnekRiverPuzzle",
       ["category"] = "enemy",
@@ -54935,7 +64405,7 @@ return {
     },
     {
       ["id"] = 7721277,
-      ["name"] = "Upper Snakemouth: UpperSnekRiverPuzzle, Zombiant 1",
+      ["name"] = "Upper Snakemouth: River Puzzle, Zombiant 1",
       ["region"] = "UpperSnekRiverPuzzle",
       ["map"] = "UpperSnekRiverPuzzle",
       ["category"] = "enemy",
@@ -55054,7 +64524,7 @@ return {
     },
     {
       ["id"] = 7721278,
-      ["name"] = "Upper Snakemouth: UpperSnekGeizerRoom, Bloatshroom 1",
+      ["name"] = "Upper Snakemouth: Geyser Room, Bloatshroom 1",
       ["region"] = "UpperSnekGeizerRoom",
       ["map"] = "UpperSnekGeizerRoom",
       ["category"] = "enemy",
@@ -55173,7 +64643,7 @@ return {
     },
     {
       ["id"] = 7721279,
-      ["name"] = "Upper Snakemouth: UpperSnekGeizerRoom, Zombee 1",
+      ["name"] = "Upper Snakemouth: Geyser Room, Zombee 1",
       ["region"] = "UpperSnekGeizerRoom",
       ["map"] = "UpperSnekGeizerRoom",
       ["category"] = "enemy",
@@ -55292,7 +64762,7 @@ return {
     },
     {
       ["id"] = 7721280,
-      ["name"] = "Rubber Prison: RubberPrisonPier, Wasp Driller 1",
+      ["name"] = "Rubber Prison: Pier, Wasp Driller 1",
       ["region"] = "RubberPrisonPier",
       ["map"] = "RubberPrisonPier",
       ["category"] = "enemy",
@@ -55411,7 +64881,7 @@ return {
     },
     {
       ["id"] = 7721281,
-      ["name"] = "Rubber Prison: RubberPrisonPier, Wasp Trooper 1",
+      ["name"] = "Rubber Prison: Pier, Wasp Trooper 1",
       ["region"] = "RubberPrisonPier",
       ["map"] = "RubberPrisonPier",
       ["category"] = "enemy",
@@ -55530,7 +65000,7 @@ return {
     },
     {
       ["id"] = 7721282,
-      ["name"] = "Rubber Prison: RubberPrisonPier, Wasp Scout 1",
+      ["name"] = "Rubber Prison: Pier, Wasp Scout 1",
       ["region"] = "RubberPrisonPier",
       ["map"] = "RubberPrisonPier",
       ["category"] = "enemy",
@@ -55649,7 +65119,7 @@ return {
     },
     {
       ["id"] = 7721283,
-      ["name"] = "Rubber Prison: RubberPrisonPier, Ruffian 1",
+      ["name"] = "Rubber Prison: Pier, Ruffian 1",
       ["region"] = "RubberPrisonPier",
       ["map"] = "RubberPrisonPier",
       ["category"] = "enemy",
@@ -55768,7 +65238,7 @@ return {
     },
     {
       ["id"] = 7721284,
-      ["name"] = "Rubber Prison: RubberPrisonPier, Wasp Scout 2",
+      ["name"] = "Rubber Prison: Pier, Wasp Scout 2",
       ["region"] = "RubberPrisonPier",
       ["map"] = "RubberPrisonPier",
       ["category"] = "enemy",
@@ -56006,7 +65476,7 @@ return {
     },
     {
       ["id"] = 7721286,
-      ["name"] = "Rubber Prison: RubberPrisonSpikeRoom, Wasp Bomber 1",
+      ["name"] = "Rubber Prison: Spike Room, Wasp Bomber 1",
       ["region"] = "RubberPrisonSpikeRoom",
       ["map"] = "RubberPrisonSpikeRoom",
       ["category"] = "enemy",
@@ -56482,7 +65952,7 @@ return {
     },
     {
       ["id"] = 7721290,
-      ["name"] = "Rubber Prison: RubberPrisonCells2, Ruffian 1",
+      ["name"] = "Rubber Prison: Electric Cells, Ruffian 1",
       ["region"] = "RubberPrisonCells2",
       ["map"] = "RubberPrisonCells2",
       ["category"] = "enemy",
@@ -56958,7 +66428,7 @@ return {
     },
     {
       ["id"] = 7721294,
-      ["name"] = "Rubber Prison: RubberPrisonGym, Wasp Driller 1",
+      ["name"] = "Rubber Prison: Gym, Wasp Driller 1",
       ["region"] = "RubberPrisonGym",
       ["map"] = "RubberPrisonGym",
       ["category"] = "enemy",
@@ -57077,7 +66547,7 @@ return {
     },
     {
       ["id"] = 7721295,
-      ["name"] = "Rubber Prison: RubberPrisonGym, Wasp Trooper 1",
+      ["name"] = "Rubber Prison: Gym, Wasp Trooper 1",
       ["region"] = "RubberPrisonGym",
       ["map"] = "RubberPrisonGym",
       ["category"] = "enemy",
@@ -57791,7 +67261,7 @@ return {
     },
     {
       ["id"] = 7721301,
-      ["name"] = "Giant's Lair: GiantLairDeadLands1, Dead Lander γ 1",
+      ["name"] = "Giant's Lair: Giant's Hand, Dead Lander γ 1",
       ["region"] = "GiantLairDeadLands1",
       ["map"] = "GiantLairDeadLands1",
       ["category"] = "enemy",
@@ -57910,7 +67380,7 @@ return {
     },
     {
       ["id"] = 7721302,
-      ["name"] = "Giant's Lair: GiantLairDeadLands1, Dead Lander α 1",
+      ["name"] = "Giant's Lair: Giant's Hand, Dead Lander α 1",
       ["region"] = "GiantLairDeadLands1",
       ["map"] = "GiantLairDeadLands1",
       ["category"] = "enemy",
@@ -58029,7 +67499,7 @@ return {
     },
     {
       ["id"] = 7721303,
-      ["name"] = "Giant's Lair: GiantLairDeadLands1, Dead Lander β 1",
+      ["name"] = "Giant's Lair: Giant's Hand, Dead Lander β 1",
       ["region"] = "GiantLairDeadLands1",
       ["map"] = "GiantLairDeadLands1",
       ["category"] = "enemy",
@@ -58148,7 +67618,7 @@ return {
     },
     {
       ["id"] = 7721304,
-      ["name"] = "Giant's Lair: GiantLairDeadLands1, Dead Lander α 2",
+      ["name"] = "Giant's Lair: Giant's Hand, Dead Lander α 2",
       ["region"] = "GiantLairDeadLands1",
       ["map"] = "GiantLairDeadLands1",
       ["category"] = "enemy",
@@ -58267,7 +67737,7 @@ return {
     },
     {
       ["id"] = 7721305,
-      ["name"] = "Giant's Lair: GiantLairDeadLands2, Dead Lander γ 1",
+      ["name"] = "Giant's Lair: Crane Crossing, Dead Lander γ 1",
       ["region"] = "GiantLairDeadLands2",
       ["map"] = "GiantLairDeadLands2",
       ["category"] = "enemy",
@@ -58386,7 +67856,7 @@ return {
     },
     {
       ["id"] = 7721306,
-      ["name"] = "Giant's Lair: GiantLairDeadLands2, Dead Lander α 1",
+      ["name"] = "Giant's Lair: Crane Crossing, Dead Lander α 1",
       ["region"] = "GiantLairDeadLands2",
       ["map"] = "GiantLairDeadLands2",
       ["category"] = "enemy",
@@ -58505,7 +67975,7 @@ return {
     },
     {
       ["id"] = 7721307,
-      ["name"] = "Giant's Lair: GiantLairDeadLands2, Dead Lander β 1",
+      ["name"] = "Giant's Lair: Crane Crossing, Dead Lander β 1",
       ["region"] = "GiantLairDeadLands2",
       ["map"] = "GiantLairDeadLands2",
       ["category"] = "enemy",
@@ -58624,7 +68094,7 @@ return {
     },
     {
       ["id"] = 7721308,
-      ["name"] = "Giant's Lair: GiantLairDeadLands2, Dead Lander β 2",
+      ["name"] = "Giant's Lair: Crane Crossing, Dead Lander β 2",
       ["region"] = "GiantLairDeadLands2",
       ["map"] = "GiantLairDeadLands2",
       ["category"] = "enemy",
@@ -58743,7 +68213,7 @@ return {
     },
     {
       ["id"] = 7721309,
-      ["name"] = "Giant's Lair: GiantLairFridgeInside, Warden 1",
+      ["name"] = "Giant's Lair: Inside the Fridge, Warden 1",
       ["region"] = "GiantLairFridgeInside",
       ["map"] = "GiantLairFridgeInside",
       ["category"] = "enemy",
@@ -58862,7 +68332,7 @@ return {
     },
     {
       ["id"] = 7721310,
-      ["name"] = "Giant's Lair: GiantLairFridgeInside, Krawler 1",
+      ["name"] = "Giant's Lair: Inside the Fridge, Krawler 1",
       ["region"] = "GiantLairFridgeInside",
       ["map"] = "GiantLairFridgeInside",
       ["category"] = "enemy",
@@ -58981,7 +68451,7 @@ return {
     },
     {
       ["id"] = 7721311,
-      ["name"] = "Giant's Lair: GiantLairFridgeInside, Krawler 2",
+      ["name"] = "Giant's Lair: Inside the Fridge, Krawler 2",
       ["region"] = "GiantLairFridgeInside",
       ["map"] = "GiantLairFridgeInside",
       ["category"] = "enemy",
@@ -59100,7 +68570,7 @@ return {
     },
     {
       ["id"] = 7721312,
-      ["name"] = "Giant's Lair: GiantLairBeforeBoss, Krawler 1",
+      ["name"] = "Giant's Lair: Kitchen Stove, Krawler 1",
       ["region"] = "GiantLairBeforeBoss",
       ["map"] = "GiantLairBeforeBoss",
       ["category"] = "enemy",
@@ -59219,7 +68689,7 @@ return {
     },
     {
       ["id"] = 7721313,
-      ["name"] = "Giant's Lair: GiantLairBeforeBoss, Warden 1",
+      ["name"] = "Giant's Lair: Kitchen Stove, Warden 1",
       ["region"] = "GiantLairBeforeBoss",
       ["map"] = "GiantLairBeforeBoss",
       ["category"] = "enemy",
@@ -59338,7 +68808,7 @@ return {
     },
     {
       ["id"] = 7721314,
-      ["name"] = "Giant's Lair: GiantLairBeforeBoss, Krawler 2",
+      ["name"] = "Giant's Lair: Kitchen Stove, Krawler 2",
       ["region"] = "GiantLairBeforeBoss",
       ["map"] = "GiantLairBeforeBoss",
       ["category"] = "enemy",
@@ -59457,7 +68927,7 @@ return {
     },
     {
       ["id"] = 7721315,
-      ["name"] = "Giant's Lair: GiantLairBeforeBoss, Haunted Cloth 1",
+      ["name"] = "Giant's Lair: Kitchen Stove, Haunted Cloth 1",
       ["region"] = "GiantLairBeforeBoss",
       ["map"] = "GiantLairBeforeBoss",
       ["category"] = "enemy",
@@ -59576,7 +69046,7 @@ return {
     },
     {
       ["id"] = 7721316,
-      ["name"] = "Giant's Lair: GiantLairBeforeBoss, Haunted Cloth 2",
+      ["name"] = "Giant's Lair: Kitchen Stove, Haunted Cloth 2",
       ["region"] = "GiantLairBeforeBoss",
       ["map"] = "GiantLairBeforeBoss",
       ["category"] = "enemy",
@@ -59695,7 +69165,7 @@ return {
     },
     {
       ["id"] = 7721317,
-      ["name"] = "Giant's Lair: GiantLairBeforeBoss, Warden 2",
+      ["name"] = "Giant's Lair: Kitchen Stove, Warden 2",
       ["region"] = "GiantLairBeforeBoss",
       ["map"] = "GiantLairBeforeBoss",
       ["category"] = "enemy",
@@ -59814,7 +69284,7 @@ return {
     },
     {
       ["id"] = 7721318,
-      ["name"] = "Giant's Lair: GiantLairBeforeBoss, Krawler 3",
+      ["name"] = "Giant's Lair: Kitchen Stove, Krawler 3",
       ["region"] = "GiantLairBeforeBoss",
       ["map"] = "GiantLairBeforeBoss",
       ["category"] = "enemy",
@@ -60918,82 +70388,8 @@ return {
                 ["options"] = {},
                 ["filtered_resolution"] = false,
                 ["args"] = {
-                  ["item_name"] = "Chapter 2 Started",
+                  ["item_name"] = "Peculiar Gem",
                   ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Explorer Permit",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Boat",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["level"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Has",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["item_name"] = "Snakemouth Den Cleared",
-                  ["count"] = 1,
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Vi",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Kabbu",
-                },
-              },
-              {
-                ["rule"] = "Member",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["name"] = "Leif",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Beemerang Toss",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "MoveItem",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Freeze",
                 },
               },
             },
@@ -61855,26 +71251,11 @@ return {
         ["filtered_resolution"] = false,
         ["children"] = {
           {
-            ["rule"] = "Or",
+            ["rule"] = "CanUse",
             ["options"] = {},
             ["filtered_resolution"] = false,
-            ["children"] = {
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Slash",
-                },
-              },
-              {
-                ["rule"] = "CanUse",
-                ["options"] = {},
-                ["filtered_resolution"] = false,
-                ["args"] = {
-                  ["ability"] = "Horn Dash",
-                },
-              },
+            ["args"] = {
+              ["ability"] = "Horn Slash",
             },
           },
           {
@@ -62014,42 +71395,21 @@ return {
       },
     },
     {
-      ["name"] = "Far Grasslands: Wizard's Tower, Door Unlocked",
-      ["item"] = "Wizard Tower Door Unlocked",
-      ["region"] = "WizardTowerAttic",
-      ["map"] = "WizardTowerAttic",
-      ["rule"] = {
-        ["rule"] = "Has",
-        ["options"] = {
-          {
-            ["option"] = "worlds.bug_fables.options.ShuffleJump",
-            ["value"] = 1,
-            ["operator"] = "eq",
-          },
-        },
-        ["filtered_resolution"] = true,
-        ["args"] = {
-          ["item_name"] = "Jump",
-          ["count"] = 1,
-        },
-      },
-    },
-    {
-      ["name"] = "Artifact 1",
-      ["item"] = "Artifact",
-      ["region"] = "SnakemouthTreasureRoom",
-      ["map"] = "SnakemouthTreasureRoom",
+      ["name"] = "Wild Swamplands: Leafbug Crossing, Tree Knocked Down",
+      ["item"] = "Swamp Tree Knocked Down",
+      ["region"] = "Swamplands3",
+      ["map"] = "Swamplands3",
       ["rule"] = {
         ["rule"] = "And",
         ["options"] = {},
         ["filtered_resolution"] = false,
         ["children"] = {
           {
-            ["rule"] = "Member",
+            ["rule"] = "CanUse",
             ["options"] = {},
             ["filtered_resolution"] = false,
             ["args"] = {
-              ["name"] = "Vi",
+              ["ability"] = "Horn Slash",
             },
           },
           {
@@ -62070,8 +71430,834 @@ return {
         },
       },
     },
+    {
+      ["name"] = "Wild Swamplands: Bridge, Lower Bridge Knocked Down",
+      ["item"] = "Swamp Lower Bridge Knocked Down",
+      ["region"] = "SwamplandsBridge (Top Right)",
+      ["map"] = "SwamplandsBridge",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Wild Swamplands: Junction, Lift Lever Hit",
+      ["item"] = "Swamp Lift Running",
+      ["region"] = "Swamplands5 (Top Right)",
+      ["map"] = "Swamplands5",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Wild Swamplands: Fenced Pond, Fence Lever Hit",
+      ["item"] = "Swamp Fence Down",
+      ["region"] = "Swamplands8 (Upper Middle)",
+      ["map"] = "Swamplands8",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Ancient Castle: Slide Puzzle, Block Knocked into Place",
+      ["item"] = "Sand Castle Slide Puzzle Solved",
+      ["region"] = "SandCastleSlidePuzzle (Bottom)",
+      ["map"] = "SandCastleSlidePuzzle",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Horn Slash",
+        },
+      },
+    },
+    {
+      ["name"] = "Ancient Castle: Main Room, Lower Lift Switch Hit",
+      ["item"] = "Sand Castle Lower Lift Running",
+      ["region"] = "SandCastleMainRoom (Middle Right)",
+      ["map"] = "SandCastleMainRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Ancient Castle: Main Room, Upper Lift Switch Hit",
+      ["item"] = "Sand Castle Upper Lift Running",
+      ["region"] = "SandCastleMainRoom (Top Right)",
+      ["map"] = "SandCastleMainRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Ancient Castle: Pressure Puzzle, Door Puzzle Solved",
+      ["item"] = "Sand Castle Pressure Puzzle Door Open",
+      ["region"] = "SandCastlePressurePuzzle",
+      ["map"] = "SandCastlePressurePuzzle",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Ancient Castle: Rock Room, Platform Switch Hit",
+      ["item"] = "Sand Castle Rock Room Platform Running",
+      ["region"] = "SandCastleRockRoom",
+      ["map"] = "SandCastleRockRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Ancient Castle: Rock Room, Boulder Broken with Horn Dash",
+      ["item"] = "Sand Castle Rock Room Boulder Broken",
+      ["region"] = "SandCastleRockRoom (Top Left)",
+      ["map"] = "SandCastleRockRoom",
+      ["rule"] = {
+        ["rule"] = "CanUse",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["ability"] = "Horn Dash",
+        },
+      },
+    },
+    {
+      ["name"] = "Ancient Castle: Rock Room, Boulder Crushed by the Rolling Rock",
+      ["item"] = "Sand Castle Rock Room Boulder Broken",
+      ["region"] = "SandCastleRockRoom (Top Right)",
+      ["map"] = "SandCastleRockRoom",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Jump",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Bee Kingdom Hive: Main Area, Mothiva's Show",
+      ["item"] = "Mothiva's Show Seen",
+      ["region"] = "BeehiveMainArea",
+      ["map"] = "BeehiveMainArea",
+      ["rule"] = {
+        ["rule"] = "Has",
+        ["options"] = {
+          {
+            ["option"] = "worlds.bug_fables.options.ShuffleJump",
+            ["value"] = 1,
+            ["operator"] = "eq",
+          },
+        },
+        ["filtered_resolution"] = true,
+        ["args"] = {
+          ["item_name"] = "Jump",
+          ["count"] = 1,
+        },
+      },
+    },
+    {
+      ["name"] = "Bee Kingdom Hive: HB's Lab, Explorer Permit Shown",
+      ["item"] = "B.O.S.S. Unlocked",
+      ["region"] = "HBsLab",
+      ["map"] = "HBsLab",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Explorer Permit",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {
+              {
+                ["option"] = "worlds.bug_fables.options.ShuffleJump",
+                ["value"] = 1,
+                ["operator"] = "eq",
+              },
+            },
+            ["filtered_resolution"] = true,
+            ["args"] = {
+              ["item_name"] = "Jump",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Honey Factory: Malbee's Room, Malbee's Fight",
+      ["item"] = "Malbee's Fight Done",
+      ["region"] = "FactoryProcessingMalbee",
+      ["map"] = "FactoryProcessingMalbee",
+    },
+    {
+      ["name"] = "Honey Factory: First Room, Platforms Running",
+      ["item"] = "First Room Platforms Running",
+      ["region"] = "FactoryProcessingFirstRoom",
+      ["map"] = "FactoryProcessingFirstRoom",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Rubber Prison: Pier, Lift Lever Hit",
+      ["item"] = "Pier Lift Running",
+      ["region"] = "RubberPrisonPier",
+      ["map"] = "RubberPrisonPier",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Rubber Prison: Cell Block Crossroads, Right Wood Lever Hit",
+      ["item"] = "Crossroads Right Gate Open",
+      ["region"] = "RubberPrisonCells1 (Upper)",
+      ["map"] = "RubberPrisonCells1",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Bee Fly",
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Beemerang Toss",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Horn Slash",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Freeze",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Rubber Prison: Cell Block Crossroads, Barrier Lever Hit",
+      ["item"] = "Crossroads Barrier Lowered",
+      ["region"] = "RubberPrisonCells1 (Top Door)",
+      ["map"] = "RubberPrisonCells1",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Rubber Prison: Warden's Office, Crank Turned",
+      ["item"] = "Warden's Office Crank Turned",
+      ["region"] = "RubberPrisonOffice",
+      ["map"] = "RubberPrisonOffice",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Chapter 2 Started",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Explorer Permit",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "Boat",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["level"] = 1,
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Snakemouth Den Cleared",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "Member",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["name"] = "Vi",
+            },
+          },
+          {
+            ["rule"] = "Member",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["name"] = "Kabbu",
+            },
+          },
+          {
+            ["rule"] = "Member",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["name"] = "Leif",
+            },
+          },
+          {
+            ["rule"] = "MoveItem",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Toss",
+            },
+          },
+          {
+            ["rule"] = "MoveItem",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "MoveItem",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Freeze",
+            },
+          },
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Beemerang Halt",
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Rubber Prison: Giant's Lair Bridge, Bridge Fight",
+      ["item"] = "Giant's Lair Bridge Fight Won",
+      ["region"] = "RubberPrisonGiantLairBridge",
+      ["map"] = "RubberPrisonGiantLairBridge",
+      ["rule"] = {
+        ["rule"] = "Member",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["name"] = "Vi",
+        },
+      },
+    },
+    {
+      ["name"] = "Rubber Prison: Giant's Lair Bridge, Bridge Fight from the Right",
+      ["item"] = "Giant's Lair Bridge Fight Won",
+      ["region"] = "RubberPrisonGiantLairBridge (Middle)",
+      ["map"] = "RubberPrisonGiantLairBridge",
+      ["rule"] = {
+        ["rule"] = "Member",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["name"] = "Vi",
+        },
+      },
+    },
+    {
+      ["name"] = "Rubber Prison: Giant's Lair Bridge, Shortcut Opened",
+      ["item"] = "Giant's Lair Bridge Shortcut Open",
+      ["region"] = "RubberPrisonGiantLairBridge",
+      ["map"] = "RubberPrisonGiantLairBridge",
+      ["rule"] = {
+        ["rule"] = "Or",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Prison Key",
+              ["count"] = 1,
+            },
+          },
+          {
+            ["rule"] = "Has",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["item_name"] = "Giant's Lair Bridge Fight Won",
+              ["count"] = 1,
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Giant's Lair: Outside the Fridge, Dead Lander Fight",
+      ["item"] = "Outside the Fridge Fight Won",
+      ["region"] = "GiantLairFridgeOutside",
+      ["map"] = "GiantLairFridgeOutside",
+      ["rule"] = {
+        ["rule"] = "Member",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["name"] = "Vi",
+        },
+      },
+    },
+    {
+      ["name"] = "Giant's Lair: Outside the Fridge, Dead Lander Fight from the Right",
+      ["item"] = "Outside the Fridge Fight Won",
+      ["region"] = "GiantLairFridgeOutside (Right)",
+      ["map"] = "GiantLairFridgeOutside",
+      ["rule"] = {
+        ["rule"] = "Member",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["args"] = {
+          ["name"] = "Vi",
+        },
+      },
+    },
+    {
+      ["name"] = "Giant's Lair: Kitchen Stove, Bottom Left Levers",
+      ["item"] = "Kitchen Stove Levers Hit",
+      ["region"] = "GiantLairBeforeBoss (Middle Left)",
+      ["map"] = "GiantLairBeforeBoss",
+      ["rule"] = {
+        ["rule"] = "And",
+        ["options"] = {},
+        ["filtered_resolution"] = false,
+        ["children"] = {
+          {
+            ["rule"] = "CanUse",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["args"] = {
+              ["ability"] = "Horn Slash",
+            },
+          },
+          {
+            ["rule"] = "Or",
+            ["options"] = {},
+            ["filtered_resolution"] = false,
+            ["children"] = {
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Jump",
+                },
+              },
+              {
+                ["rule"] = "CanUse",
+                ["options"] = {},
+                ["filtered_resolution"] = false,
+                ["args"] = {
+                  ["ability"] = "Bee Fly",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      ["name"] = "Giant's Lair: Roach Village, Arrival Scene",
+      ["item"] = "Roach Village Scene Seen",
+      ["region"] = "GiantLairRoachVillage",
+      ["map"] = "GiantLairRoachVillage",
+    },
   },
   ["items"] = {
+    {
+      ["name"] = "G-Bug Ranger Plushie",
+      ["code"] = "g_bug_ranger_plushie",
+      ["id"] = 7710025,
+      ["kind"] = 1,
+      ["max"] = 1,
+    },
     {
       ["name"] = "Explorer Permit",
       ["code"] = "explorer_permit",
@@ -62108,6 +72294,83 @@ return {
       ["max"] = 1,
     },
     {
+      ["name"] = "Factory Pass",
+      ["code"] = "factory_pass",
+      ["id"] = 7710095,
+      ["kind"] = 1,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Sand Castle Key",
+      ["code"] = "sand_castle_key",
+      ["id"] = 7710113,
+      ["kind"] = 1,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Small Ancient Key",
+      ["code"] = "small_ancient_key",
+      ["id"] = 7710114,
+      ["kind"] = 1,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Big Ancient Key",
+      ["code"] = "big_ancient_key",
+      ["id"] = 7710115,
+      ["kind"] = 1,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Peculiar Gem",
+      ["code"] = "peculiar_gem",
+      ["id"] = 7710116,
+      ["kind"] = 1,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Wasp Key",
+      ["code"] = "wasp_key",
+      ["id"] = 7710119,
+      ["kind"] = 1,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Small Gear",
+      ["code"] = "small_gear",
+      ["id"] = 7710157,
+      ["kind"] = 1,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Medium Gear",
+      ["code"] = "medium_gear",
+      ["id"] = 7710158,
+      ["kind"] = 1,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Big Gear",
+      ["code"] = "big_gear",
+      ["id"] = 7710159,
+      ["kind"] = 1,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Lab Card",
+      ["code"] = "lab_card",
+      ["id"] = 7710160,
+      ["kind"] = 1,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Prison Key",
+      ["code"] = "prison_key",
+      ["id"] = 7710161,
+      ["kind"] = 1,
+      ["max"] = 1,
+    },
+    {
       ["name"] = "Boat Ticket",
       ["code"] = "boat_ticket",
       ["id"] = 7710200,
@@ -62127,6 +72390,13 @@ return {
       ["id"] = 7710213,
       ["kind"] = 1,
       ["max"] = 2,
+    },
+    {
+      ["name"] = "Extra Freeze",
+      ["code"] = "extra_freeze",
+      ["id"] = 7711059,
+      ["kind"] = 2,
+      ["max"] = 1,
     },
     {
       ["name"] = "Vi",
@@ -62203,6 +72473,55 @@ return {
       ["code"] = "shield",
       ["id"] = 7715007,
       ["kind"] = 6,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Ancient Mask",
+      ["code"] = "ancient_mask",
+      ["id"] = 7717001,
+      ["kind"] = 8,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Ancient Tablet",
+      ["code"] = "ancient_tablet",
+      ["id"] = 7717002,
+      ["kind"] = 8,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Ancient Key",
+      ["code"] = "ancient_key",
+      ["id"] = 7717003,
+      ["kind"] = 8,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Ancient Half",
+      ["code"] = "ancient_half",
+      ["id"] = 7717004,
+      ["kind"] = 8,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Queen's Mask",
+      ["code"] = "queen_s_mask",
+      ["id"] = 7717005,
+      ["kind"] = 8,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Flame Brooch",
+      ["code"] = "flame_brooch",
+      ["id"] = 7717006,
+      ["kind"] = 8,
+      ["max"] = 1,
+    },
+    {
+      ["name"] = "Wasp King's Crown",
+      ["code"] = "wasp_king_s_crown",
+      ["id"] = 7717007,
+      ["kind"] = 8,
       ["max"] = 1,
     },
   },
@@ -62302,6 +72621,7 @@ return {
     ["Options.ItemLinks"] = "item_links",
     ["Options.PlandoItems"] = "plando_items",
     ["worlds.bug_fables.options.ArtifactsRequired"] = "artifacts_required",
+    ["worlds.bug_fables.options.ArtifactShuffle"] = "artifact_shuffle",
     ["worlds.bug_fables.options.ShuffleQuests"] = "shuffle_quests",
     ["worlds.bug_fables.options.ShuffleCrystalBerries"] = "shuffle_crystal_berries",
     ["worlds.bug_fables.options.ShuffleDiscoveries"] = "shuffle_discoveries",
@@ -62326,9 +72646,15 @@ return {
     ["worlds.bug_fables.options.ProgressiveBoat"] = "progressive_boat",
     ["worlds.bug_fables.roadblock_options.ExtraRoadblocks"] = "extra_roadblocks",
     ["worlds.bug_fables.options.MusicShuffle"] = "music_shuffle",
+    ["Options.StartInventoryPool"] = "start_inventory_from_pool",
+    ["worlds.bug_fables.options.BugFablesDeathLink"] = "death_link",
+  },
+  ["world_attrs"] = {
+    ["artifacts_required"] = "artifacts_required",
   },
   ["option_defaults"] = {
-    ["artifacts_required"] = 1,
+    ["artifacts_required"] = 6,
+    ["artifact_shuffle"] = 0,
     ["shuffle_quests"] = true,
     ["shuffle_crystal_berries"] = true,
     ["shuffle_discoveries"] = false,
@@ -62347,9 +72673,10 @@ return {
     ["progressive_boat"] = true,
     ["extra_roadblocks"] = {},
     ["exclude_locations"] = {},
+    ["death_link"] = false,
   },
   ["starting_member_default"] = 3,
-  ["randomizer_commit"] = "31c1ad9bed24fcef92a3feb836b0e64d15e48ee7",
+  ["randomizer_commit"] = "ed192623b410828e755a4bf9100bcc39739a8a33",
   ["section_paths"] = {
     [7720087] = "@BOGoldenPath/Outskirts: Golden Path, Dig Spot",
     [7721043] = "@BOGoldenPath/Outskirts: Golden Path, Flying Seedling 1",
@@ -62410,6 +72737,7 @@ return {
     [7721167] = "@SeedlingHaven/Outskirts: SeedlingHaven, Seedling 2",
     [7721168] = "@SeedlingHaven/Outskirts: SeedlingHaven, Seedling 3",
     [7720113] = "@AntMinesBreakRoom/Bugaria City: Ant Tunnels, Break Room Dig Spot",
+    [7720318] = "@AntPalace1/Bugaria City: Throne Room, Queen's Audience",
     [7720015] = "@AntPalaceLibrary/Ant Palace: Library, Behind the Bookshelf",
     [7720077] = "@AntPalaceWarRoom/Ant Palace: War Room, Table",
     [7721149] = "@BugariaBridgeAttack/Snakemouth Den: BugariaBridgeAttack, Wasp Scout 1",
@@ -62461,6 +72789,7 @@ return {
     [7720095] = "@BugariaMainPlaza/Bugaria City: Main Plaza, Red House Rooftop",
     [7721147] = "@BugariaPlazaAttack/Snakemouth Den: BugariaPlazaAttack, Wasp Trooper 1",
     [7721148] = "@BugariaPlazaAttack/Snakemouth Den: BugariaPlazaAttack, Wasp Trooper 2",
+    [7720176] = "@BugariaResidential/Bugaria City: Residential District, Banker",
     [7720033] = "@BugariaResidential/Bugaria City: Residential District, Fountain Rooftop",
     [7720016] = "@BugariaResidential/Bugaria City: Residential District, Old Book Delivery Reward 1",
     [7720018] = "@BugariaResidential/Bugaria City: Residential District, Old Book Delivery Reward 2",
@@ -62490,6 +72819,7 @@ return {
     [7721027] = "@SnakemouthMushroomPit/Snakemouth Den: Mushroom Pit, Jellyshroom 2",
     [7720009] = "@SnakemouthMushroomPit/Snakemouth Den: Mushroom Pit, Mushroom by the Droplets",
     [7720008] = "@SnakemouthMushroomPit/Snakemouth Den: Mushroom Pit, Mushroom by the Ledge",
+    [7720245] = "@SnakemouthTreasureRoom/Snakemouth Den: Treasure Room, Treasure Pedestal",
     [7720005] = "@SnakemouthUndergrondDoor/Snakemouth Den: Underground Door Room, Behind the Wall",
     [7721023] = "@SnakemouthUndergrondDoor/Snakemouth Den: Underground Door Room, Inichas 1",
     [7721025] = "@SnakemouthUndergrondDoor/Snakemouth Den: Underground Door Room, Jellyshroom 1",
@@ -62536,6 +72866,7 @@ return {
     [7721114] = "@DesertOasisEntrance/Lost Sands: DesertOasisEntrance, Psicorp 1",
     [7721116] = "@DesertOasisEntrance/Lost Sands: DesertOasisEntrance, Thief 1",
     [7720124] = "@DesertRoachVillage/Lost Sands: Roach Village, Dig Spot",
+    [7720316] = "@DesertRoachVillage/Lost Sands: Roach Village, Hawk's Gift",
     [7721006] = "@DesertRockFormation/Lost Sands: Rock Formation, Cactiling 1",
     [7720117] = "@DesertRockFormation/Lost Sands: Rock Formation, Tardigrade Idol",
     [7721081] = "@DesertSandPitArea/Lost Sands: DesertSandPitArea, Bandit 1",
@@ -62553,6 +72884,7 @@ return {
     [7721119] = "@DesertWestDunes/Lost Sands: DesertWestDunes, Burglar 1",
     [7721117] = "@DesertWestDunes/Lost Sands: DesertWestDunes, Midge 1",
     [7721118] = "@DesertWestDunes/Lost Sands: DesertWestDunes, Psicorp 1",
+    [7720314] = "@GoldenHillsDungeonBoss/Golden Hills: Summit, Boss Fight",
     [7721056] = "@GoldenHillsDungeonCrankLeft/Golden Hills: Left Crank Room, Acornling 1",
     [7721057] = "@GoldenHillsDungeonCrankLeft/Golden Hills: Left Crank Room, Chomper 1",
     [7720131] = "@GoldenHillsDungeonCrankLeft/Golden Hills: Left Crank Room, Grass by the Crank",
@@ -62647,6 +72979,7 @@ return {
     [7721249] = "@BarrenLandsSideGPT/Forsaken Lands: Tunnel Side, Ironnail 1",
     [7721238] = "@BarrenLandsTanks/Forsaken Lands: BarrenLandsTanks, Mothfly 1",
     [7721237] = "@BarrenLandsTanks/Forsaken Lands: BarrenLandsTanks, Mothfly Cluster 1",
+    [7720180] = "@FGClearing/Far Grasslands: Clearing, Behind the Small Bush",
     [7720170] = "@FarGrasslands1/Far Grasslands: Crossroads, Dig Spot",
     [7721169] = "@FarGrasslands1/Far Grasslands: Crossroads, Jumping Spider 1",
     [7721170] = "@FarGrasslands1/Far Grasslands: Crossroads, Wild Chomper 1",
@@ -62673,51 +73006,78 @@ return {
     [7721180] = "@FarGrasslandsOutsideVillage/Far Grasslands: FarGrasslandsOutsideVillage, Jumping Spider 1",
     [7721182] = "@FarGrasslandsOutsideVillage/Far Grasslands: FarGrasslandsOutsideVillage, Mantidfly 1",
     [7720171] = "@FarGrasslandsWizard/Far Grasslands: Wizard's Tower, Lookout Rock",
-    [7721187] = "@Swamplands2/Wild Swamplands: Swamplands2, Madesphy 1",
-    [7721189] = "@Swamplands2/Wild Swamplands: Swamplands2, Mantidfly 1",
-    [7721188] = "@Swamplands2/Wild Swamplands: Swamplands2, Wild Chomper 1",
+    [7720179] = "@WizardTowerAttic/Far Grasslands: Wizard's Tower Attic, Beside the Cauldron",
+    [7720177] = "@WizardTowerBasement/Far Grasslands: Wizard's Tower Basement, Behind the Stairs",
+    [7720178] = "@WizardTowerBasement/Far Grasslands: Wizard's Tower Basement, On the Bookshelf",
+    [7720181] = "@Swamplands2/Wild Swamplands: Lily Pad Pond, Dig Spot",
+    [7720182] = "@Swamplands2/Wild Swamplands: Lily Pad Pond, Grass in the Bottom Right",
+    [7721187] = "@Swamplands2/Wild Swamplands: Lily Pad Pond, Madesphy 1",
+    [7721189] = "@Swamplands2/Wild Swamplands: Lily Pad Pond, Mantidfly 1",
+    [7721188] = "@Swamplands2/Wild Swamplands: Lily Pad Pond, Wild Chomper 1",
     [7721192] = "@Swamplands3/Wild Swamplands: Swamplands3, Leafbug Clubber 1",
     [7721193] = "@Swamplands3/Wild Swamplands: Swamplands3, Leafbug Ninja 1",
     [7721205] = "@Swamplands4/Wild Swamplands: Swamplands4, Flowerling 1",
     [7721206] = "@Swamplands4/Wild Swamplands: Swamplands4, Leafbug Archer 1",
     [7721207] = "@Swamplands4/Wild Swamplands: Swamplands4, Leafbug Ninja 1",
-    [7721208] = "@Swamplands5/Wild Swamplands: Swamplands5, Leafbug Clubber 1",
-    [7721209] = "@Swamplands5/Wild Swamplands: Swamplands5, Madesphy 1",
-    [7721210] = "@Swamplands5/Wild Swamplands: Swamplands5, Wild Chomper 1",
-    [7721211] = "@Swamplands5/Wild Swamplands: Swamplands5, Wild Chomper 2",
-    [7721212] = "@Swamplands6/Wild Swamplands: Swamplands6, Leafbug Archer 1",
-    [7721213] = "@Swamplands6/Wild Swamplands: Swamplands6, Madesphy 1",
-    [7721214] = "@Swamplands6/Wild Swamplands: Swamplands6, Wild Chomper 1",
-    [7721215] = "@Swamplands7/Wild Swamplands: Swamplands7, Flowerling 1",
-    [7721216] = "@Swamplands7/Wild Swamplands: Swamplands7, Leafbug Archer 1",
-    [7721218] = "@Swamplands7/Wild Swamplands: Swamplands7, Leafbug Archer 2",
-    [7721219] = "@Swamplands7/Wild Swamplands: Swamplands7, Leafbug Clubber 1",
-    [7721217] = "@Swamplands7/Wild Swamplands: Swamplands7, Madesphy 1",
-    [7721220] = "@Swamplands8/Wild Swamplands: Swamplands8, Leafbug Clubber 1",
-    [7721222] = "@Swamplands8/Wild Swamplands: Swamplands8, Leafbug Ninja 1",
-    [7721221] = "@Swamplands8/Wild Swamplands: Swamplands8, Madesphy 1",
-    [7721223] = "@Swamplands8/Wild Swamplands: Swamplands8, Mantidfly 1",
+    [7720183] = "@Swamplands5/Wild Swamplands: Junction, Dig Spot",
+    [7721208] = "@Swamplands5/Wild Swamplands: Junction, Leafbug Clubber 1",
+    [7721209] = "@Swamplands5/Wild Swamplands: Junction, Madesphy 1",
+    [7720184] = "@Swamplands5/Wild Swamplands: Junction, Vine above the Platform",
+    [7721210] = "@Swamplands5/Wild Swamplands: Junction, Wild Chomper 1",
+    [7721211] = "@Swamplands5/Wild Swamplands: Junction, Wild Chomper 2",
+    [7720185] = "@Swamplands6/Wild Swamplands: Crank Pond, Behind the Tree",
+    [7720186] = "@Swamplands6/Wild Swamplands: Crank Pond, Grass in the Bottom Left",
+    [7721212] = "@Swamplands6/Wild Swamplands: Crank Pond, Leafbug Archer 1",
+    [7721213] = "@Swamplands6/Wild Swamplands: Crank Pond, Madesphy 1",
+    [7721214] = "@Swamplands6/Wild Swamplands: Crank Pond, Wild Chomper 1",
+    [7721215] = "@Swamplands7/Wild Swamplands: Ice Block Climb, Flowerling 1",
+    [7721216] = "@Swamplands7/Wild Swamplands: Ice Block Climb, Leafbug Archer 1",
+    [7721218] = "@Swamplands7/Wild Swamplands: Ice Block Climb, Leafbug Archer 2",
+    [7721219] = "@Swamplands7/Wild Swamplands: Ice Block Climb, Leafbug Clubber 1",
+    [7721217] = "@Swamplands7/Wild Swamplands: Ice Block Climb, Madesphy 1",
+    [7720187] = "@Swamplands7/Wild Swamplands: Ice Block Climb, On Top of the Stump",
+    [7720188] = "@Swamplands8/Wild Swamplands: Fenced Pond, Dig Spot",
+    [7721220] = "@Swamplands8/Wild Swamplands: Fenced Pond, Leafbug Clubber 1",
+    [7721222] = "@Swamplands8/Wild Swamplands: Fenced Pond, Leafbug Ninja 1",
+    [7721221] = "@Swamplands8/Wild Swamplands: Fenced Pond, Madesphy 1",
+    [7721223] = "@Swamplands8/Wild Swamplands: Fenced Pond, Mantidfly 1",
     [7720072] = "@SwamplandsBridge/Wild Swamplands: Bridge, Boulder",
     [7721186] = "@SwamplandsEntrance/Wild Swamplands: SwamplandsEntrance, Madesphy 1",
-    [7721141] = "@SandCastleBasement/Ancient Castle: SandCastleBasement, Arrow Worm 1",
-    [7721142] = "@SandCastleBasement/Ancient Castle: SandCastleBasement, Haunted Cloth 1",
-    [7721136] = "@SandCastleEntrance/Ancient Castle: SandCastleEntrance, Krawler 1",
-    [7721145] = "@SandCastleMainRoom/Ancient Castle: SandCastleMainRoom, Psicorp 1",
-    [7721146] = "@SandCastleMainRoom/Ancient Castle: SandCastleMainRoom, Warden 1",
-    [7721153] = "@SandCastlePressurePuzzle/Ancient Castle: SandCastlePressurePuzzle, Krawler 1",
-    [7721154] = "@SandCastlePressurePuzzle/Ancient Castle: SandCastlePressurePuzzle, Krawler 2",
-    [7721155] = "@SandCastlePressurePuzzle/Ancient Castle: SandCastlePressurePuzzle, Warden 1",
-    [7721156] = "@SandCastleRockRoom/Ancient Castle: SandCastleRockRoom, Arrow Worm 1",
-    [7721157] = "@SandCastleRockRoom/Ancient Castle: SandCastleRockRoom, Haunted Cloth 1",
-    [7721158] = "@SandCastleRockRoom/Ancient Castle: SandCastleRockRoom, Psicorp 1",
-    [7721159] = "@SandCastleRockRoom/Ancient Castle: SandCastleRockRoom, Warden 1",
-    [7721143] = "@SandCastleRoof/Ancient Castle: SandCastleRoof, Haunted Cloth 1",
-    [7721144] = "@SandCastleRoof/Ancient Castle: SandCastleRoof, Krawler 1",
-    [7721137] = "@SandCastleSlidePuzzle/Ancient Castle: SandCastleSlidePuzzle, Krawler 1",
-    [7721140] = "@SandCastleStatueRoom/Ancient Castle: SandCastleStatueRoom, Haunted Cloth 1",
-    [7721138] = "@SandCastleStatueRoom/Ancient Castle: SandCastleStatueRoom, Warden 1",
-    [7721139] = "@SandCastleStatueRoom/Ancient Castle: SandCastleStatueRoom, Warden 2",
+    [7720189] = "@DefiantRoot1/Defiant Root: Square, Behind the Box",
+    [7720192] = "@DefiantRoot1/Defiant Root: Square, Left Rooftop",
+    [7720190] = "@DefiantRoot1/Defiant Root: Square, Morty's Gift",
+    [7720191] = "@DefiantRoot1/Defiant Root: Square, Right Rooftop",
+    [7720196] = "@DefiantRoot2/Defiant Root: Beehive Lift, Above the Inn",
+    [7720197] = "@DefiantRoot2/Defiant Root: Beehive Lift, Inn Rooftop",
+    [7720226] = "@DefiantRoot3/Defiant Root: Market, Bakery Shop 1",
+    [7720227] = "@DefiantRoot3/Defiant Root: Market, Bakery Shop 2",
+    [7720228] = "@DefiantRoot3/Defiant Root: Market, Bakery Shop 3",
+    [7720217] = "@DefiantRoot3/Defiant Root: Market, Item Shop 1",
+    [7720218] = "@DefiantRoot3/Defiant Root: Market, Item Shop 2",
+    [7720219] = "@DefiantRoot3/Defiant Root: Market, Item Shop 3",
+    [7720220] = "@DefiantRoot3/Defiant Root: Market, Item Shop 4",
+    [7720221] = "@DefiantRoot3/Defiant Root: Market, Item Shop 5",
+    [7720222] = "@DefiantRoot3/Defiant Root: Market, Poison Shop 1",
+    [7720223] = "@DefiantRoot3/Defiant Root: Market, Poison Shop 2",
+    [7720224] = "@DefiantRoot3/Defiant Root: Market, Poison Shop 3",
+    [7720225] = "@DefiantRoot3/Defiant Root: Market, Poison Shop 4",
+    [7720195] = "@DefiantRootWell/Defiant Root: Well, By the Boxes",
+    [7720201] = "@SandCastleBasement/Ancient Castle: Basement, Behind the Barrier",
+    [7720199] = "@SandCastleBasement/Ancient Castle: Basement, Switch Puzzle",
+    [7720200] = "@SandCastleBasement/Ancient Castle: Basement, Tiny Platform",
+    [7720203] = "@SandCastleBossKeyRoom/Ancient Castle: Boss Key Room, Behind the Block",
+    [7720204] = "@SandCastleBossKeyRoom/Ancient Castle: Boss Key Room, By the Three Statues",
+    [7720320] = "@SandCastleBossRoom/Ancient Castle: Boss Room, Boss Fight",
+    [7720205] = "@SandCastlePressurePuzzle/Ancient Castle: Pressure Puzzle, By the Statue",
+    [7720206] = "@SandCastleRockRoom/Ancient Castle: Rock Room, Alcove between the Rocks",
+    [7720202] = "@SandCastleRoof/Ancient Castle: Roof, Behind the Left Statue",
+    [7720198] = "@SandCastleSlidePuzzle/Ancient Castle: Slide Puzzle, Behind the Cracked Wall",
+    [7720321] = "@SandCastleTreasureRoom/Ancient Castle: Treasure Room, Treasure Pedestal",
     [7720078] = "@BeehiveBalcony/Bee Kingdom Hive: Balcony, Beette's Sale",
+    [7720209] = "@BeehiveMainArea/Bee Kingdom Hive: Main Area, Clothing Stall 1",
+    [7720210] = "@BeehiveMainArea/Bee Kingdom Hive: Main Area, Clothing Stall 2",
+    [7720208] = "@BeehiveScannerRoom/Bee Kingdom Hive: Scanner Room, Scan",
+    [7720207] = "@JaunesGallery/Bee Kingdom Hive: Jaune's Gallery, Behind the Paintings",
     [7721087] = "@FactoryProcessing2/Honey Factory: FactoryProcessing2, Bee-Boop 1",
     [7721088] = "@FactoryProcessing2/Honey Factory: FactoryProcessing2, Denmuki 1",
     [7721089] = "@FactoryProcessing2/Honey Factory: FactoryProcessing2, Security Turret 1",
@@ -62725,16 +73085,24 @@ return {
     [7721085] = "@FactoryProcessingFirstRoom/Honey Factory: First Room, Denmuki 1",
     [7721084] = "@FactoryProcessingFirstRoom/Honey Factory: First Room, Security Turret 1",
     [7720070] = "@FactoryProcessingFirstRoom/Honey Factory: First Room, Switch",
-    [7721090] = "@FactoryProcessingPump/Honey Factory: FactoryProcessingPump, Bee-Boop 1",
-    [7721091] = "@FactoryProcessingPump/Honey Factory: FactoryProcessingPump, Denmuki 1",
-    [7721092] = "@FactoryProcessingPump/Honey Factory: FactoryProcessingPump, Security Turret 1",
-    [7721093] = "@FactoryProcessingPuzzle2/Honey Factory: FactoryProcessingPuzzle2, Bee-Boop 1",
-    [7721094] = "@FactoryProcessingPuzzle2/Honey Factory: FactoryProcessingPuzzle2, Bee-Boop 2",
-    [7721096] = "@FactoryProcessingPuzzle3/Honey Factory: FactoryProcessingPuzzle3, Denmuki 1",
-    [7721095] = "@FactoryProcessingPuzzle3/Honey Factory: FactoryProcessingPuzzle3, Security Turret 1",
-    [7721097] = "@FactoryStorageMaze/Honey Factory: FactoryStorageMaze, Denmuki 1",
-    [7721098] = "@FactoryStorageMaze/Honey Factory: FactoryStorageMaze, Security Turret 1",
-    [7721099] = "@FactoryStorageMiniboss/Honey Factory: FactoryStorageMiniboss, Bee-Boop 1",
+    [7721090] = "@FactoryProcessingPump/Honey Factory: Pump Room, Bee-Boop 1",
+    [7720230] = "@FactoryProcessingPump/Honey Factory: Pump Room, Behind the Boxes",
+    [7721091] = "@FactoryProcessingPump/Honey Factory: Pump Room, Denmuki 1",
+    [7721092] = "@FactoryProcessingPump/Honey Factory: Pump Room, Security Turret 1",
+    [7721093] = "@FactoryProcessingPuzzle2/Honey Factory: Training Grounds, Bee-Boop 1",
+    [7721094] = "@FactoryProcessingPuzzle2/Honey Factory: Training Grounds, Bee-Boop 2",
+    [7720237] = "@FactoryProcessingPuzzle2/Honey Factory: Training Grounds, Behind the Gate",
+    [7720238] = "@FactoryProcessingPuzzle3/Honey Factory: Pressure Plate Room, Behind the Gate",
+    [7720231] = "@FactoryProcessingPuzzle3/Honey Factory: Pressure Plate Room, Behind the Pipe",
+    [7721096] = "@FactoryProcessingPuzzle3/Honey Factory: Pressure Plate Room, Denmuki 1",
+    [7721095] = "@FactoryProcessingPuzzle3/Honey Factory: Pressure Plate Room, Security Turret 1",
+    [7721097] = "@FactoryStorageMaze/Honey Factory: Storage Maze, Denmuki 1",
+    [7720232] = "@FactoryStorageMaze/Honey Factory: Storage Maze, Hole in the Boxes",
+    [7720233] = "@FactoryStorageMaze/Honey Factory: Storage Maze, Lever Puzzle",
+    [7721098] = "@FactoryStorageMaze/Honey Factory: Storage Maze, Security Turret 1",
+    [7721099] = "@FactoryStorageMiniboss/Honey Factory: Storage Mini-boss Room, Bee-Boop 1",
+    [7720239] = "@FactoryStorageMiniboss/Honey Factory: Storage Mini-boss Room, Mini-boss Fight",
+    [7720234] = "@FactoryStorageMiniboss/Honey Factory: Storage Mini-boss Room, On Top of the Boxes",
     [7721100] = "@FactoryStorageOverseer/Honey Factory: FactoryStorageOverseer, Abomihoney 1",
     [7721109] = "@FactoryStorageOverseer/Honey Factory: FactoryStorageOverseer, Abomihoney 10",
     [7721110] = "@FactoryStorageOverseer/Honey Factory: FactoryStorageOverseer, Abomihoney 11",
@@ -62749,51 +73117,75 @@ return {
     [7721106] = "@FactoryStorageOverseer/Honey Factory: FactoryStorageOverseer, Abomihoney 7",
     [7721107] = "@FactoryStorageOverseer/Honey Factory: FactoryStorageOverseer, Abomihoney 8",
     [7721108] = "@FactoryStorageOverseer/Honey Factory: FactoryStorageOverseer, Abomihoney 9",
+    [7720315] = "@HoneyFactoryCore/Honey Factory: Core, Boss Fight",
+    [7720212] = "@HoneyFactoryEntrance/Honey Factory: Lobby, Shop 1",
+    [7720213] = "@HoneyFactoryEntrance/Honey Factory: Lobby, Shop 2",
+    [7720214] = "@HoneyFactoryEntrance/Honey Factory: Lobby, Shop 3",
+    [7720215] = "@HoneyFactoryEntrance/Honey Factory: Lobby, Shop 4",
+    [7720216] = "@HoneyFactoryEntrance/Honey Factory: Lobby, Shop 5",
+    [7720235] = "@HoneyFactoryWorkerRooms/Honey Factory: Worker Rooms, On Top of the Bookshelf",
+    [7720229] = "@HoneyFactoryWorkerRooms/Honey Factory: Worker Rooms, On the Desk",
     [7721293] = "@RubberPrisonCafeteria/Rubber Prison: RubberPrisonCafeteria, Wasp Bomber 1",
     [7721287] = "@RubberPrisonCells1/Rubber Prison: RubberPrisonCells1, Ruffian 1",
     [7721288] = "@RubberPrisonCells1/Rubber Prison: RubberPrisonCells1, Wasp Scout 1",
     [7721289] = "@RubberPrisonCells1/Rubber Prison: RubberPrisonCells1, Wasp Trooper 1",
-    [7721290] = "@RubberPrisonCells2/Rubber Prison: RubberPrisonCells2, Ruffian 1",
+    [7720243] = "@RubberPrisonCells2/Rubber Prison: Electric Cells, Bottom Right Cell",
+    [7720242] = "@RubberPrisonCells2/Rubber Prison: Electric Cells, Middle Right Cell",
+    [7721290] = "@RubberPrisonCells2/Rubber Prison: Electric Cells, Ruffian 1",
     [7721285] = "@RubberPrisonCheckpointCorridor/Rubber Prison: RubberPrisonCheckpointCorridor, Wasp Driller 1",
-    [7721294] = "@RubberPrisonGym/Rubber Prison: RubberPrisonGym, Wasp Driller 1",
-    [7721295] = "@RubberPrisonGym/Rubber Prison: RubberPrisonGym, Wasp Trooper 1",
+    [7720246] = "@RubberPrisonGiantLairBridge/Rubber Prison: Giant's Lair Bridge, Queen's Gift",
+    [7720244] = "@RubberPrisonGym/Rubber Prison: Gym, Crank Puzzle",
+    [7721294] = "@RubberPrisonGym/Rubber Prison: Gym, Wasp Driller 1",
+    [7721295] = "@RubberPrisonGym/Rubber Prison: Gym, Wasp Trooper 1",
     [7721291] = "@RubberPrisonLibrary/Rubber Prison: RubberPrisonLibrary, Ruffian 1",
     [7721292] = "@RubberPrisonLibrary/Rubber Prison: RubberPrisonLibrary, Wasp Trooper 1",
     [7721297] = "@RubberPrisonOffice/Rubber Prison: RubberPrisonOffice, Wasp Driller 1",
-    [7721283] = "@RubberPrisonPier/Rubber Prison: RubberPrisonPier, Ruffian 1",
-    [7721280] = "@RubberPrisonPier/Rubber Prison: RubberPrisonPier, Wasp Driller 1",
-    [7721282] = "@RubberPrisonPier/Rubber Prison: RubberPrisonPier, Wasp Scout 1",
-    [7721284] = "@RubberPrisonPier/Rubber Prison: RubberPrisonPier, Wasp Scout 2",
-    [7721281] = "@RubberPrisonPier/Rubber Prison: RubberPrisonPier, Wasp Trooper 1",
+    [7721283] = "@RubberPrisonPier/Rubber Prison: Pier, Ruffian 1",
+    [7720240] = "@RubberPrisonPier/Rubber Prison: Pier, Second Floor Fight",
+    [7721280] = "@RubberPrisonPier/Rubber Prison: Pier, Wasp Driller 1",
+    [7721282] = "@RubberPrisonPier/Rubber Prison: Pier, Wasp Scout 1",
+    [7721284] = "@RubberPrisonPier/Rubber Prison: Pier, Wasp Scout 2",
+    [7721281] = "@RubberPrisonPier/Rubber Prison: Pier, Wasp Trooper 1",
     [7721296] = "@RubberPrisonSecurity/Rubber Prison: RubberPrisonSecurity, Wasp Trooper 1",
-    [7721286] = "@RubberPrisonSpikeRoom/Rubber Prison: RubberPrisonSpikeRoom, Wasp Bomber 1",
+    [7720241] = "@RubberPrisonSpikeRoom/Rubber Prison: Spike Room, In the Cage",
+    [7721286] = "@RubberPrisonSpikeRoom/Rubber Prison: Spike Room, Wasp Bomber 1",
     [7721300] = "@RubberPrisonThirdFloor/Rubber Prison: RubberPrisonThirdFloor, Burglar 1",
     [7721299] = "@RubberPrisonThirdFloor/Rubber Prison: RubberPrisonThirdFloor, Ruffian 1",
     [7721298] = "@RubberPrisonThirdFloor/Rubber Prison: RubberPrisonThirdFloor, Wasp Bomber 1",
-    [7721315] = "@GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Haunted Cloth 1",
-    [7721316] = "@GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Haunted Cloth 2",
-    [7721312] = "@GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Krawler 1",
-    [7721314] = "@GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Krawler 2",
-    [7721318] = "@GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Krawler 3",
-    [7721313] = "@GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Warden 1",
-    [7721317] = "@GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Warden 2",
+    [7720255] = "@GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Dig Spot",
+    [7721315] = "@GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Haunted Cloth 1",
+    [7721316] = "@GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Haunted Cloth 2",
+    [7721312] = "@GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Krawler 1",
+    [7721314] = "@GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Krawler 2",
+    [7721318] = "@GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Krawler 3",
+    [7721313] = "@GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Warden 1",
+    [7721317] = "@GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Warden 2",
     [7721321] = "@GiantLairBeforeBoss2/Giant's Lair: GiantLairBeforeBoss2, Dead Lander α 1",
     [7721323] = "@GiantLairBeforeBoss2/Giant's Lair: GiantLairBeforeBoss2, Dead Lander α 2",
     [7721320] = "@GiantLairBeforeBoss2/Giant's Lair: GiantLairBeforeBoss2, Haunted Cloth 1",
     [7721319] = "@GiantLairBeforeBoss2/Giant's Lair: GiantLairBeforeBoss2, Krawler 1",
     [7721322] = "@GiantLairBeforeBoss2/Giant's Lair: GiantLairBeforeBoss2, Warden 1",
     [7721324] = "@GiantLairBeforeBoss2/Giant's Lair: GiantLairBeforeBoss2, Warden 2",
-    [7721302] = "@GiantLairDeadLands1/Giant's Lair: GiantLairDeadLands1, Dead Lander α 1",
-    [7721304] = "@GiantLairDeadLands1/Giant's Lair: GiantLairDeadLands1, Dead Lander α 2",
-    [7721303] = "@GiantLairDeadLands1/Giant's Lair: GiantLairDeadLands1, Dead Lander β 1",
-    [7721301] = "@GiantLairDeadLands1/Giant's Lair: GiantLairDeadLands1, Dead Lander γ 1",
-    [7721306] = "@GiantLairDeadLands2/Giant's Lair: GiantLairDeadLands2, Dead Lander α 1",
-    [7721307] = "@GiantLairDeadLands2/Giant's Lair: GiantLairDeadLands2, Dead Lander β 1",
-    [7721308] = "@GiantLairDeadLands2/Giant's Lair: GiantLairDeadLands2, Dead Lander β 2",
-    [7721305] = "@GiantLairDeadLands2/Giant's Lair: GiantLairDeadLands2, Dead Lander γ 1",
-    [7721310] = "@GiantLairFridgeInside/Giant's Lair: GiantLairFridgeInside, Krawler 1",
-    [7721311] = "@GiantLairFridgeInside/Giant's Lair: GiantLairFridgeInside, Krawler 2",
-    [7721309] = "@GiantLairFridgeInside/Giant's Lair: GiantLairFridgeInside, Warden 1",
+    [7721302] = "@GiantLairDeadLands1/Giant's Lair: Giant's Hand, Dead Lander α 1",
+    [7721304] = "@GiantLairDeadLands1/Giant's Lair: Giant's Hand, Dead Lander α 2",
+    [7721303] = "@GiantLairDeadLands1/Giant's Lair: Giant's Hand, Dead Lander β 1",
+    [7721301] = "@GiantLairDeadLands1/Giant's Lair: Giant's Hand, Dead Lander γ 1",
+    [7720247] = "@GiantLairDeadLands1/Giant's Lair: Giant's Hand, Dig Spot",
+    [7720248] = "@GiantLairDeadLands2/Giant's Lair: Crane Crossing, By the Spear",
+    [7721306] = "@GiantLairDeadLands2/Giant's Lair: Crane Crossing, Dead Lander α 1",
+    [7721307] = "@GiantLairDeadLands2/Giant's Lair: Crane Crossing, Dead Lander β 1",
+    [7721308] = "@GiantLairDeadLands2/Giant's Lair: Crane Crossing, Dead Lander β 2",
+    [7721305] = "@GiantLairDeadLands2/Giant's Lair: Crane Crossing, Dead Lander γ 1",
+    [7720249] = "@GiantLairDeadLands2/Giant's Lair: Crane Crossing, Ledge by the Crossing",
+    [7720250] = "@GiantLairFridgeInside/Giant's Lair: Inside the Fridge, Behind the Milk",
+    [7721310] = "@GiantLairFridgeInside/Giant's Lair: Inside the Fridge, Krawler 1",
+    [7721311] = "@GiantLairFridgeInside/Giant's Lair: Inside the Fridge, Krawler 2",
+    [7721309] = "@GiantLairFridgeInside/Giant's Lair: Inside the Fridge, Warden 1",
+    [7720251] = "@GiantLairRoachVillage/Giant's Lair: Roach Village, Item Shop 1",
+    [7720252] = "@GiantLairRoachVillage/Giant's Lair: Roach Village, Item Shop 2",
+    [7720253] = "@GiantLairRoachVillage/Giant's Lair: Roach Village, Item Shop 3",
+    [7720254] = "@GiantLairRoachVillage/Giant's Lair: Roach Village, Item Shop 4",
+    [7720319] = "@GiantLairSaplingPlains/Giant's Lair: Sapling Plains, Final Fight",
     [7721232] = "@MetalLake/Metal Lake: MetalLake, Diving Spider 1",
     [7721233] = "@MetalLake/Metal Lake: MetalLake, Diving Spider 2",
     [7721229] = "@MetalLake/Metal Lake: MetalLake, Wasp Scout 1",
@@ -62802,71 +73194,125 @@ return {
     [7721234] = "@MetalLake/Metal Lake: MetalLake, Water Strider 2",
     [7721235] = "@MetalLake/Metal Lake: MetalLake, Water Strider 3",
     [7721236] = "@MetalLake/Metal Lake: MetalLake, Water Strider 4",
+    [7720257] = "@MysteryIsland/Metal Lake: Peacock Island, Camp Sign",
+    [7720256] = "@MysteryIsland/Metal Lake: Peacock Island, Dig Spot",
+    [7720258] = "@MetalIsland1/Metal Island: Town, Chef's Roof",
+    [7720259] = "@MetalIsland1/Metal Island: Town, Mothington X Statue",
+    [7720260] = "@MetalIsland1/Metal Island: Town, Tea Shop 1",
+    [7720261] = "@MetalIsland1/Metal Island: Town, Tea Shop 2",
+    [7720281] = "@TermiteColiseum1/Termite Capitol: Colosseum Lobby, Caravan Shop 1",
+    [7720282] = "@TermiteColiseum1/Termite Capitol: Colosseum Lobby, Caravan Shop 2",
+    [7720283] = "@TermiteColiseum1/Termite Capitol: Colosseum Lobby, Caravan Shop 3",
+    [7720284] = "@TermiteColiseum1/Termite Capitol: Colosseum Lobby, Caravan Shop 4",
+    [7720285] = "@TermiteColiseum1/Termite Capitol: Colosseum Lobby, Caravan Shop 5",
+    [7720270] = "@TermiteIndustrial/Termite Capitol: Industrial District, Apartment Balcony",
+    [7720271] = "@TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 1",
+    [7720272] = "@TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 2",
+    [7720273] = "@TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 3",
+    [7720274] = "@TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 4",
+    [7720275] = "@TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 5",
+    [7720276] = "@TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 6",
+    [7720277] = "@TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 7",
+    [7720278] = "@TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop Medal",
+    [7720269] = "@TermiteIndustrial/Termite Capitol: Industrial District, Rooftop Vista",
+    [7720268] = "@TermiteIndustrial/Termite Capitol: Outside the Colosseum, Between the Boxes",
+    [7720279] = "@TermiteIndustrial/Termite Capitol: Outside the Colosseum, Plushie for Terrie",
+    [7720262] = "@TermiteMainPlaza/Termite Capitol: Main Plaza, Shop 1",
+    [7720263] = "@TermiteMainPlaza/Termite Capitol: Main Plaza, Shop 2",
+    [7720264] = "@TermiteMainPlaza/Termite Capitol: Main Plaza, Shop 3",
+    [7720265] = "@TermiteMainPlaza/Termite Capitol: Main Plaza, Shop 4",
+    [7720280] = "@TermitePier/Termite Capitol: Pier, Isolated Pillar by the Dock",
+    [7720267] = "@TermiteRoyalChamber/Termite Capitol: Royal Chamber, Behind the Thrones",
+    [7720266] = "@TermiteRoyalChamber/Termite Capitol: Royal Chamber, Termite Statue",
     [7720076] = "@TermiteRoyalChamber/Termite Capitol: Termite King's Reward",
+    [7720286] = "@WaspKingdom3/Wasp Kingdom Hive: Fountain Room, On the Roof",
     [7721224] = "@WaspKingdom5/Wasp Kingdom Hive: WaspKingdom5, Wasp Trooper 1",
-    [7721226] = "@WaspKingdomPrison/Wasp Kingdom Hive: WaspKingdomPrison, Wasp Scout 1",
-    [7721225] = "@WaspKingdomPrison/Wasp Kingdom Hive: WaspKingdomPrison, Wasp Trooper 1",
-    [7720071] = "@HideoutCell/Bandit Hideout: Cell",
-    [7721120] = "@HideoutCentralRoom/Bandit Hideout: HideoutCentralRoom, Bandit 1",
-    [7721121] = "@HideoutCentralRoom/Bandit Hideout: HideoutCentralRoom, Thief 1",
-    [7721124] = "@HideoutGarden/Bandit Hideout: HideoutGarden, Bandit 1",
-    [7721123] = "@HideoutGarden/Bandit Hideout: HideoutGarden, Burglar 1",
-    [7721125] = "@HideoutGarden/Bandit Hideout: HideoutGarden, Thief 1",
-    [7721122] = "@HideoutLeftA/Bandit Hideout: HideoutLeftA, Burglar 1",
-    [7721127] = "@HideoutRightA/Bandit Hideout: HideoutRightA, Burglar 1",
-    [7721126] = "@HideoutRightA/Bandit Hideout: HideoutRightA, Thief 1",
+    [7720292] = "@WaspKingdomDrillRoom/Wasp Kingdom Hive: Drill Room, Dig Spot",
+    [7720291] = "@WaspKingdomJayde/Wasp Kingdom Hive: Jayde's Room, Arrival",
+    [7720288] = "@WaspKingdomJayde/Wasp Kingdom Hive: Jayde's Room, Shop 1",
+    [7720289] = "@WaspKingdomJayde/Wasp Kingdom Hive: Jayde's Room, Shop 2",
+    [7720290] = "@WaspKingdomJayde/Wasp Kingdom Hive: Jayde's Room, Shop 3",
+    [7720287] = "@WaspKingdomPrison/Wasp Kingdom Hive: Prison, Dig Spot",
+    [7721226] = "@WaspKingdomPrison/Wasp Kingdom Hive: Prison, Wasp Scout 1",
+    [7721225] = "@WaspKingdomPrison/Wasp Kingdom Hive: Prison, Wasp Trooper 1",
+    [7720293] = "@HideoutCell/Bandit Hideout: Cell, Dig Spot",
+    [7720071] = "@HideoutEntrance/Bandit Hideout: Entrance, Altar",
+    [7720317] = "@HideoutEntrance/Bandit Hideout: Entrance, Astotheles' Fight",
+    [7720294] = "@HideoutGarden/Bandit Hideout: Garden, By the Box",
+    [7720297] = "@HideoutRightA/Bandit Hideout: Dining Hall, By the Cauldron",
+    [7720296] = "@HideoutRightA/Bandit Hideout: Dining Hall, Dig Spot",
+    [7720298] = "@HideoutRightA/Bandit Hideout: Dining Hall, On Top of the Table",
+    [7720295] = "@HideoutWestStorage/Bandit Hideout: Treasury, By the Chest",
     [7721160] = "@StreamMountain1/Stream Mountain: StreamMountain1, Belostoss 1",
     [7721162] = "@StreamMountain2/Stream Mountain: StreamMountain2, Diving Spider 1",
     [7721161] = "@StreamMountain2/Stream Mountain: StreamMountain2, Water Strider 1",
-    [7721164] = "@StreamMountain3/Stream Mountain: StreamMountain3, Belostoss 1",
-    [7721165] = "@StreamMountain3/Stream Mountain: StreamMountain3, Diving Spider 1",
-    [7721163] = "@StreamMountain3/Stream Mountain: StreamMountain3, Water Strider 1",
-    [7721252] = "@StreamMountain4/Stream Mountain: StreamMountain4, Psicorp 1",
-    [7721253] = "@StreamMountain4/Stream Mountain: StreamMountain4, Water Strider 1",
-    [7721254] = "@StreamMountain4/Stream Mountain: StreamMountain4, Water Strider 2",
+    [7720299] = "@StreamMountain3/Stream Mountain: Climb, Above the Geysers",
+    [7721164] = "@StreamMountain3/Stream Mountain: Climb, Belostoss 1",
+    [7721165] = "@StreamMountain3/Stream Mountain: Climb, Diving Spider 1",
+    [7721163] = "@StreamMountain3/Stream Mountain: Climb, Water Strider 1",
+    [7720300] = "@StreamMountain4/Stream Mountain: Bridge Puzzle, Among the Logs",
+    [7721252] = "@StreamMountain4/Stream Mountain: Bridge Puzzle, Psicorp 1",
+    [7721253] = "@StreamMountain4/Stream Mountain: Bridge Puzzle, Water Strider 1",
+    [7721254] = "@StreamMountain4/Stream Mountain: Bridge Puzzle, Water Strider 2",
+    [7720301] = "@StreamMountain5/Stream Mountain: Wyrm's Den, Bounty Fight",
     [7721198] = "@ChomperCave1/Chomper Caves: ChomperCave1, Chomper 1",
     [7721199] = "@ChomperCave1/Chomper Caves: ChomperCave1, Chomper 2",
     [7721197] = "@ChomperCave1/Chomper Caves: ChomperCave1, Chomper Brute 1",
-    [7721200] = "@ChomperCaves2/Chomper Caves: ChomperCaves2, Chomper 1",
-    [7721202] = "@ChomperCaves2/Chomper Caves: ChomperCaves2, Chomper 2",
-    [7721203] = "@ChomperCaves2/Chomper Caves: ChomperCaves2, Chomper 3",
-    [7721204] = "@ChomperCaves2/Chomper Caves: ChomperCaves2, Chomper 4",
-    [7721201] = "@ChomperCaves2/Chomper Caves: ChomperCaves2, Chomper Brute 1",
-    [7721266] = "@UpperSnekBeforeBoss/Upper Snakemouth: UpperSnekBeforeBoss, Bloatshroom 1",
-    [7721278] = "@UpperSnekGeizerRoom/Upper Snakemouth: UpperSnekGeizerRoom, Bloatshroom 1",
-    [7721279] = "@UpperSnekGeizerRoom/Upper Snakemouth: UpperSnekGeizerRoom, Zombee 1",
-    [7721269] = "@UpperSnekMiddleRoom/Upper Snakemouth: UpperSnekMiddleRoom, Bloatshroom 1",
-    [7721270] = "@UpperSnekMiddleRoom/Upper Snakemouth: UpperSnekMiddleRoom, Zombee 1",
-    [7721271] = "@UpperSnekPlatformRoom/Upper Snakemouth: UpperSnekPlatformRoom, Zombee 1",
-    [7721272] = "@UpperSnekPlatformRoom/Upper Snakemouth: UpperSnekPlatformRoom, Zombee 2",
-    [7721274] = "@UpperSnekPlatformRoom/Upper Snakemouth: UpperSnekPlatformRoom, Zombee 3",
-    [7721273] = "@UpperSnekPlatformRoom/Upper Snakemouth: UpperSnekPlatformRoom, Zombeetle 1",
-    [7721267] = "@UpperSnekPressurePlateRoom/Upper Snakemouth: UpperSnekPressurePlateRoom, Zombiant 1",
-    [7721268] = "@UpperSnekPressurePlateRoom/Upper Snakemouth: UpperSnekPressurePlateRoom, Zombiant 2",
-    [7721275] = "@UpperSnekRiverPuzzle/Upper Snakemouth: UpperSnekRiverPuzzle, Bloatshroom 1",
-    [7721276] = "@UpperSnekRiverPuzzle/Upper Snakemouth: UpperSnekRiverPuzzle, Zombeetle 1",
-    [7721277] = "@UpperSnekRiverPuzzle/Upper Snakemouth: UpperSnekRiverPuzzle, Zombiant 1",
-    [7721265] = "@UpperSnekSwitchPuzzle/Upper Snakemouth: UpperSnekSwitchPuzzle, Zombeetle 1",
-    [7720074] = "@UpperSnekTransition/Upper Snakemouth: Entrance",
-    [7721264] = "@UpperSnekTransition/Upper Snakemouth: UpperSnekTransition, Bloatshroom 1",
+    [7720302] = "@ChomperCaves2/Chomper Caves: Droplet Room, Behind the Crack",
+    [7721200] = "@ChomperCaves2/Chomper Caves: Droplet Room, Chomper 1",
+    [7721202] = "@ChomperCaves2/Chomper Caves: Droplet Room, Chomper 2",
+    [7721203] = "@ChomperCaves2/Chomper Caves: Droplet Room, Chomper 3",
+    [7721204] = "@ChomperCaves2/Chomper Caves: Droplet Room, Chomper 4",
+    [7721201] = "@ChomperCaves2/Chomper Caves: Droplet Room, Chomper Brute 1",
+    [7720303] = "@ChomperCaves3/Chomper Caves: Chomper Nest, Fight",
+    [7720304] = "@FishingVillage/Fishing Village: Behind the Plant",
+    [7721266] = "@UpperSnekBeforeBoss/Upper Snakemouth: Gear Machine, Bloatshroom 1",
+    [7720307] = "@UpperSnekBeforeBoss/Upper Snakemouth: Gear Machine, On Top of the Machine",
+    [7720313] = "@UpperSnekGeizerRoom/Upper Snakemouth: Geyser Room, Below the Pump",
+    [7721278] = "@UpperSnekGeizerRoom/Upper Snakemouth: Geyser Room, Bloatshroom 1",
+    [7721279] = "@UpperSnekGeizerRoom/Upper Snakemouth: Geyser Room, Zombee 1",
+    [7720305] = "@UpperSnekMiddleRoom/Upper Snakemouth: Flooded Hall, Behind the Waterfall",
+    [7721269] = "@UpperSnekMiddleRoom/Upper Snakemouth: Flooded Hall, Bloatshroom 1",
+    [7721270] = "@UpperSnekMiddleRoom/Upper Snakemouth: Flooded Hall, Zombee 1",
+    [7720311] = "@UpperSnekPlatformRoom/Upper Snakemouth: Icicle Climb, Broken Test Tube",
+    [7721271] = "@UpperSnekPlatformRoom/Upper Snakemouth: Icicle Climb, Zombee 1",
+    [7721272] = "@UpperSnekPlatformRoom/Upper Snakemouth: Icicle Climb, Zombee 2",
+    [7721274] = "@UpperSnekPlatformRoom/Upper Snakemouth: Icicle Climb, Zombee 3",
+    [7721273] = "@UpperSnekPlatformRoom/Upper Snakemouth: Icicle Climb, Zombeetle 1",
+    [7720308] = "@UpperSnekPressurePlateRoom/Upper Snakemouth: Piano Puzzle, Broken Test Tube",
+    [7720310] = "@UpperSnekPressurePlateRoom/Upper Snakemouth: Piano Puzzle, By the Wind Pipe",
+    [7720309] = "@UpperSnekPressurePlateRoom/Upper Snakemouth: Piano Puzzle, Pressure Plate Door",
+    [7721267] = "@UpperSnekPressurePlateRoom/Upper Snakemouth: Piano Puzzle, Zombiant 1",
+    [7721268] = "@UpperSnekPressurePlateRoom/Upper Snakemouth: Piano Puzzle, Zombiant 2",
+    [7721275] = "@UpperSnekRiverPuzzle/Upper Snakemouth: River Puzzle, Bloatshroom 1",
+    [7720312] = "@UpperSnekRiverPuzzle/Upper Snakemouth: River Puzzle, Fight Behind the Barrier",
+    [7721276] = "@UpperSnekRiverPuzzle/Upper Snakemouth: River Puzzle, Zombeetle 1",
+    [7721277] = "@UpperSnekRiverPuzzle/Upper Snakemouth: River Puzzle, Zombiant 1",
+    [7720306] = "@UpperSnekSwitchPuzzle/Upper Snakemouth: Pipe Puzzle, Puzzle Reward",
+    [7721265] = "@UpperSnekSwitchPuzzle/Upper Snakemouth: Pipe Puzzle, Zombeetle 1",
+    [7721264] = "@UpperSnekTransition/Upper Snakemouth: Icicle Pond, Bloatshroom 1",
+    [7720074] = "@UpperSnekTransition/Upper Snakemouth: Icicle Pond, Fight",
   },
   ["room_areas"] = {
     ["SandCastleBasement"] = "SandCastle",
-    ["SandCastleEntrance"] = "SandCastle",
-    ["SandCastleMainRoom"] = "SandCastle",
+    ["SandCastleBossKeyRoom"] = "SandCastle",
+    ["SandCastleBossRoom"] = "SandCastle",
     ["SandCastlePressurePuzzle"] = "SandCastle",
     ["SandCastleRockRoom"] = "SandCastle",
     ["SandCastleRoof"] = "SandCastle",
     ["SandCastleSlidePuzzle"] = "SandCastle",
-    ["SandCastleStatueRoom"] = "SandCastle",
+    ["SandCastleTreasureRoom"] = "SandCastle",
     ["AntPalaceLibrary"] = "BugariaCity",
     ["AntPalaceWarRoom"] = "BugariaCity",
     ["HideoutCell"] = "BanditHideout",
-    ["HideoutCentralRoom"] = "BanditHideout",
-    ["HideoutGarden"] = "BanditHideout",
-    ["HideoutLeftA"] = "BanditHideout",
     ["HideoutRightA"] = "BanditHideout",
+    ["HideoutEntrance"] = "BanditHideout",
+    ["HideoutGarden"] = "BanditHideout",
+    ["HideoutWestStorage"] = "BanditHideout",
     ["BeehiveBalcony"] = "Beehive",
+    ["JaunesGallery"] = "Beehive",
+    ["BeehiveMainArea"] = "Beehive",
+    ["BeehiveScannerRoom"] = "Beehive",
     ["AntMinesBreakRoom"] = "BugariaCity",
     ["BugariaCommercial"] = "BugariaCity",
     ["BugariaMainPlaza"] = "BugariaCity",
@@ -62875,8 +73321,15 @@ return {
     ["SnakemouthUndergroundLeftB"] = "Snakemouth",
     ["SnakemouthUndergroundRightA"] = "Snakemouth",
     ["BugariaTheater"] = "BugariaCity",
+    ["AntPalace1"] = "BugariaCity",
+    ["ChomperCaves3"] = "ChomperCaves",
     ["ChomperCave1"] = "ChomperCaves",
     ["ChomperCaves2"] = "ChomperCaves",
+    ["DefiantRoot2"] = "DefiantRoot",
+    ["DefiantRoot3"] = "DefiantRoot",
+    ["DefiantRoot1"] = "DefiantRoot",
+    ["DefiantRootWell"] = "DefiantRoot",
+    ["FGClearing"] = "FarGrasslands",
     ["FarGrasslands1"] = "FarGrasslands",
     ["FarGrasslands3"] = "FarGrasslands",
     ["FarGrasslands4"] = "FarGrasslands",
@@ -62884,7 +73337,10 @@ return {
     ["FarGrasslandsOutsideVillage"] = "FarGrasslands",
     ["FarGrasslandsLake"] = "FarGrasslands",
     ["FarGrasslands2"] = "FarGrasslands",
+    ["WizardTowerAttic"] = "FarGrasslands",
+    ["WizardTowerBasement"] = "FarGrasslands",
     ["FarGrasslandsWizard"] = "FarGrasslands",
+    ["FishingVillage"] = "FishingVillage",
     ["AbandonedCity"] = "BarrenLands",
     ["BarrenLandsAntTunnel"] = "BarrenLands",
     ["BarrenLandsBeefly"] = "BarrenLands",
@@ -62895,11 +73351,13 @@ return {
     ["BarrenLandsPumpkins"] = "BarrenLands",
     ["BarrenLandsSideGPT"] = "BarrenLands",
     ["BarrenLandsCloud"] = "BarrenLands",
-    ["GiantLairBeforeBoss"] = "GiantLair",
-    ["GiantLairBeforeBoss2"] = "GiantLair",
-    ["GiantLairDeadLands1"] = "GiantLair",
     ["GiantLairDeadLands2"] = "GiantLair",
+    ["GiantLairDeadLands1"] = "GiantLair",
+    ["GiantLairBeforeBoss2"] = "GiantLair",
     ["GiantLairFridgeInside"] = "GiantLair",
+    ["GiantLairBeforeBoss"] = "GiantLair",
+    ["GiantLairRoachVillage"] = "GiantLair",
+    ["GiantLairSaplingPlains"] = "GiantLair",
     ["GoldenHillsDungeonUpperSide"] = "GoldenHills",
     ["GoldenHillsLowerRightCrank"] = "GoldenHills",
     ["GoldenHillsDungeonLeftCrankHalf"] = "GoldenHills",
@@ -62907,6 +73365,7 @@ return {
     ["GoldenHillsDungeonLeftMain"] = "GoldenHills",
     ["GoldenPitcher1"] = "GoldenHills",
     ["GoldenHillsDungeonRightCrank"] = "GoldenHills",
+    ["GoldenHillsDungeonBoss"] = "GoldenHills",
     ["GoldenPitcher2"] = "GoldenHills",
     ["GoldenHillsCableCar"] = "GoldenWay",
     ["GoldenHillsPath3"] = "GoldenWay",
@@ -62916,14 +73375,17 @@ return {
     ["GoldenSettlement2"] = "GoldenSettlement",
     ["PowerPlant"] = "GoldenSettlement",
     ["GoldenSettlement1"] = "GoldenSettlement",
+    ["HoneyFactoryCore"] = "HoneyFactory",
     ["FactoryProcessing2"] = "HoneyFactory",
-    ["FactoryProcessingPump"] = "HoneyFactory",
-    ["FactoryProcessingPuzzle2"] = "HoneyFactory",
-    ["FactoryProcessingPuzzle3"] = "HoneyFactory",
-    ["FactoryStorageMaze"] = "HoneyFactory",
-    ["FactoryStorageMiniboss"] = "HoneyFactory",
     ["FactoryStorageOverseer"] = "HoneyFactory",
     ["FactoryProcessingFirstRoom"] = "HoneyFactory",
+    ["HoneyFactoryEntrance"] = "HoneyFactory",
+    ["FactoryProcessingPuzzle3"] = "HoneyFactory",
+    ["FactoryProcessingPump"] = "HoneyFactory",
+    ["FactoryStorageMaze"] = "HoneyFactory",
+    ["FactoryStorageMiniboss"] = "HoneyFactory",
+    ["FactoryProcessingPuzzle2"] = "HoneyFactory",
+    ["HoneyFactoryWorkerRooms"] = "HoneyFactory",
     ["DesertBadgeAlcove"] = "Desert",
     ["DesertBadlands"] = "Desert",
     ["DesertBookArea"] = "Desert",
@@ -62943,7 +73405,9 @@ return {
     ["DesertRoachVillage"] = "Desert",
     ["DesertRockFormation"] = "Desert",
     ["DesertTrenchSouth"] = "Desert",
+    ["MetalIsland1"] = "MetalIsland",
     ["MetalLake"] = "MetalLake",
+    ["MysteryIsland"] = "MetalLake",
     ["BugariaOutskirtsOutsideCity"] = "BugariaOutskirts",
     ["BugariaOutskitsSnakemouthCorridor1"] = "BugariaOutskirts",
     ["ChucksAbode"] = "BugariaOutskirts",
@@ -62957,17 +73421,18 @@ return {
     ["SeedlingHaven"] = "BugariaOutskirts",
     ["OutsideSnakemouth"] = "BugariaOutskirts",
     ["BugariaOutskirtsSnakemouthCorridor2"] = "BugariaOutskirts",
+    ["RubberPrisonCells2"] = "RubberPrison",
+    ["RubberPrisonGiantLairBridge"] = "RubberPrison",
+    ["RubberPrisonGym"] = "RubberPrison",
+    ["RubberPrisonPier"] = "RubberPrison",
     ["RubberPrisonCafeteria"] = "RubberPrison",
     ["RubberPrisonCells1"] = "RubberPrison",
-    ["RubberPrisonCells2"] = "RubberPrison",
     ["RubberPrisonCheckpointCorridor"] = "RubberPrison",
-    ["RubberPrisonGym"] = "RubberPrison",
     ["RubberPrisonLibrary"] = "RubberPrison",
     ["RubberPrisonOffice"] = "RubberPrison",
-    ["RubberPrisonPier"] = "RubberPrison",
     ["RubberPrisonSecurity"] = "RubberPrison",
-    ["RubberPrisonSpikeRoom"] = "RubberPrison",
     ["RubberPrisonThirdFloor"] = "RubberPrison",
+    ["RubberPrisonSpikeRoom"] = "RubberPrison",
     ["SnakemouthBridgeRoom"] = "Snakemouth",
     ["BugariaBridgeAttack"] = "BugariaCity",
     ["BugariaCastleAttack"] = "BugariaCity",
@@ -62976,42 +73441,64 @@ return {
     ["SnakemouthFallRoom"] = "Snakemouth",
     ["SnakemouthLake"] = "Snakemouth",
     ["SnakemouthMushroomPit"] = "Snakemouth",
+    ["SnakemouthTreasureRoom"] = "Snakemouth",
     ["SnakemouthUndergroundRightB"] = "Snakemouth",
     ["SnakemouthUndergrondDoor"] = "Snakemouth",
+    ["StreamMountain4"] = "StreamMountain",
+    ["StreamMountain3"] = "StreamMountain",
     ["StreamMountain1"] = "StreamMountain",
     ["StreamMountain2"] = "StreamMountain",
-    ["StreamMountain3"] = "StreamMountain",
-    ["StreamMountain4"] = "StreamMountain",
+    ["StreamMountain5"] = "StreamMountain",
+    ["TermiteColiseum1"] = "TermiteCity",
+    ["TermiteIndustrial"] = "TermiteCity",
+    ["TermiteMainPlaza"] = "TermiteCity",
+    ["TermitePier"] = "TermiteCity",
     ["TermiteRoyalChamber"] = "TermiteCity",
-    ["UpperSnekTransition"] = "UpperSnakemouth",
+    ["UpperSnekMiddleRoom"] = "UpperSnakemouth",
     ["UpperSnekBeforeBoss"] = "UpperSnakemouth",
     ["UpperSnekGeizerRoom"] = "UpperSnakemouth",
-    ["UpperSnekMiddleRoom"] = "UpperSnakemouth",
     ["UpperSnekPlatformRoom"] = "UpperSnakemouth",
+    ["UpperSnekTransition"] = "UpperSnakemouth",
     ["UpperSnekPressurePlateRoom"] = "UpperSnakemouth",
-    ["UpperSnekRiverPuzzle"] = "UpperSnakemouth",
     ["UpperSnekSwitchPuzzle"] = "UpperSnakemouth",
-    ["WaspKingdom5"] = "WaspKingdom",
+    ["UpperSnekRiverPuzzle"] = "UpperSnakemouth",
+    ["WaspKingdomDrillRoom"] = "WaspKingdom",
+    ["WaspKingdom3"] = "WaspKingdom",
+    ["WaspKingdomJayde"] = "WaspKingdom",
     ["WaspKingdomPrison"] = "WaspKingdom",
+    ["WaspKingdom5"] = "WaspKingdom",
     ["SwamplandsBridge"] = "WildGrasslands",
+    ["Swamplands6"] = "WildGrasslands",
+    ["Swamplands8"] = "WildGrasslands",
+    ["Swamplands7"] = "WildGrasslands",
+    ["Swamplands5"] = "WildGrasslands",
     ["Swamplands2"] = "WildGrasslands",
     ["Swamplands3"] = "WildGrasslands",
     ["Swamplands4"] = "WildGrasslands",
-    ["Swamplands5"] = "WildGrasslands",
-    ["Swamplands6"] = "WildGrasslands",
-    ["Swamplands7"] = "WildGrasslands",
-    ["Swamplands8"] = "WildGrasslands",
     ["SwamplandsEntrance"] = "WildGrasslands",
   },
   ["item_codes_by_id"] = {
+    [7710025] = "g_bug_ranger_plushie",
     [7710027] = "explorer_permit",
     [7710054] = "flower_key",
     [7710055] = "sun_offering",
     [7710056] = "moon_offering",
     [7710093] = "quest_book",
+    [7710095] = "factory_pass",
+    [7710113] = "sand_castle_key",
+    [7710114] = "small_ancient_key",
+    [7710115] = "big_ancient_key",
+    [7710116] = "peculiar_gem",
+    [7710119] = "wasp_key",
+    [7710157] = "small_gear",
+    [7710158] = "medium_gear",
+    [7710159] = "big_gear",
+    [7710160] = "lab_card",
+    [7710161] = "prison_key",
     [7710200] = "boat_ticket",
     [7710212] = "subaquatic_maritime_neotransport",
     [7710213] = "progressive_boat",
+    [7711059] = "extra_freeze",
     [7714000] = "vi",
     [7714001] = "kabbu",
     [7714002] = "leif",
@@ -63023,5 +73510,12 @@ return {
     [7715005] = "bee_fly",
     [7715006] = "beetle_dig",
     [7715007] = "shield",
+    [7717001] = "ancient_mask",
+    [7717002] = "ancient_tablet",
+    [7717003] = "ancient_key",
+    [7717004] = "ancient_half",
+    [7717005] = "queen_s_mask",
+    [7717006] = "flame_brooch",
+    [7717007] = "wasp_king_s_crown",
   },
 }

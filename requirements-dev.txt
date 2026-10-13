@@ -1,3 +1,5 @@
-# The pack's checks only (tools/test.ps1); nothing here ships with the pack.
+# The pack's checks (tools/test.ps1) and tools; nothing here ships with the pack.
 lupa==2.8
 pack-checker==1.6.0
+# The game's pictures: tools/world_map.py, and the room pictures.
+pillow==12.3.0

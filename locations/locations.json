@@ -769,8 +769,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 424,
-        "y": 379
+        "x": 880,
+        "y": 830
       }
     ],
     "sections": [
@@ -972,6 +972,32 @@
         ],
         "visibility_rules": [
           "$bf_in_seed|7720113"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AntPalace1",
+    "visibility_rules": [
+      "$bf_room_in_seed|AntPalace1"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "BugariaCity",
+        "x": 422,
+        "y": 92
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bugaria City: Throne Room, Queen's Audience",
+        "access_rules": [
+          "$bf_location|7720318"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720318"
         ]
       }
     ]
@@ -1570,6 +1596,15 @@
     ],
     "sections": [
       {
+        "name": "Bugaria City: Residential District, Banker",
+        "access_rules": [
+          "$bf_location|7720176"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720176"
+        ]
+      },
+      {
         "name": "Bugaria City: Residential District, Fountain Rooftop",
         "access_rules": [
           "$bf_location|7720033"
@@ -1661,13 +1696,16 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 295,
-        "y": 316
+        "x": 622,
+        "y": 706
       }
     ],
     "sections": [
       {
         "ref": "AntMinesBreakRoom/Bugaria City: Ant Tunnels, Break Room Dig Spot"
+      },
+      {
+        "ref": "AntPalace1/Bugaria City: Throne Room, Queen's Audience"
       },
       {
         "ref": "AntPalaceLibrary/Ant Palace: Library, Behind the Bookshelf"
@@ -1821,6 +1859,9 @@
       },
       {
         "ref": "BugariaPlazaAttack/Snakemouth Den: BugariaPlazaAttack, Wasp Trooper 2"
+      },
+      {
+        "ref": "BugariaResidential/Bugaria City: Residential District, Banker"
       },
       {
         "ref": "BugariaResidential/Bugaria City: Residential District, Fountain Rooftop"
@@ -2129,6 +2170,32 @@
     ]
   },
   {
+    "name": "SnakemouthTreasureRoom",
+    "visibility_rules": [
+      "$bf_room_in_seed|SnakemouthTreasureRoom"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "Snakemouth",
+        "x": 578,
+        "y": 75
+      }
+    ],
+    "sections": [
+      {
+        "name": "Snakemouth Den: Treasure Room, Treasure Pedestal",
+        "access_rules": [
+          "$bf_location|7720245"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720245"
+        ]
+      }
+    ]
+  },
+  {
     "name": "SnakemouthUndergrondDoor",
     "visibility_rules": [
       "$bf_room_in_seed|SnakemouthUndergrondDoor"
@@ -2367,8 +2434,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 96,
-        "y": 325
+        "x": 224,
+        "y": 722
       }
     ],
     "sections": [
@@ -2437,6 +2504,9 @@
       },
       {
         "ref": "SnakemouthMushroomPit/Snakemouth Den: Mushroom Pit, Mushroom by the Ledge"
+      },
+      {
+        "ref": "SnakemouthTreasureRoom/Snakemouth Den: Treasure Room, Treasure Pedestal"
       },
       {
         "ref": "SnakemouthUndergrondDoor/Snakemouth Den: Underground Door Room, Behind the Wall"
@@ -2959,6 +3029,15 @@
         "visibility_rules": [
           "$bf_in_seed|7720124"
         ]
+      },
+      {
+        "name": "Lost Sands: Roach Village, Hawk's Gift",
+        "access_rules": [
+          "$bf_location|7720316"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720316"
+        ]
       }
     ]
   },
@@ -3227,8 +3306,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 390,
-        "y": 238
+        "x": 813,
+        "y": 549
       }
     ],
     "sections": [
@@ -3323,6 +3402,9 @@
         "ref": "DesertRoachVillage/Lost Sands: Roach Village, Dig Spot"
       },
       {
+        "ref": "DesertRoachVillage/Lost Sands: Roach Village, Hawk's Gift"
+      },
+      {
         "ref": "DesertRockFormation/Lost Sands: Rock Formation, Cactiling 1"
       },
       {
@@ -3372,6 +3454,32 @@
       },
       {
         "ref": "DesertWestDunes/Lost Sands: DesertWestDunes, Psicorp 1"
+      }
+    ]
+  },
+  {
+    "name": "GoldenHillsDungeonBoss",
+    "visibility_rules": [
+      "$bf_room_in_seed|GoldenHillsDungeonBoss"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "GoldenHills",
+        "x": 159,
+        "y": 747
+      }
+    ],
+    "sections": [
+      {
+        "name": "Golden Hills: Summit, Boss Fight",
+        "access_rules": [
+          "$bf_location|7720314"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720314"
+        ]
       }
     ]
   },
@@ -3791,11 +3899,14 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 99,
-        "y": 145
+        "x": 230,
+        "y": 362
       }
     ],
     "sections": [
+      {
+        "ref": "GoldenHillsDungeonBoss/Golden Hills: Summit, Boss Fight"
+      },
       {
         "ref": "GoldenHillsDungeonCrankLeft/Golden Hills: Left Crank Room, Acornling 1"
       },
@@ -4154,8 +4265,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 196,
-        "y": 231
+        "x": 424,
+        "y": 534
       }
     ],
     "sections": [
@@ -4423,8 +4534,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 40,
-        "y": 223
+        "x": 112,
+        "y": 519
       }
     ],
     "sections": [
@@ -4919,8 +5030,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 194,
-        "y": 438
+        "x": 420,
+        "y": 948
       }
     ],
     "sections": [
@@ -5010,6 +5121,32 @@
       },
       {
         "ref": "BarrenLandsTanks/Forsaken Lands: BarrenLandsTanks, Mothfly Cluster 1"
+      }
+    ]
+  },
+  {
+    "name": "FGClearing",
+    "visibility_rules": [
+      "$bf_room_in_seed|FGClearing"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "FarGrasslands",
+        "x": 618,
+        "y": 112
+      }
+    ],
+    "sections": [
+      {
+        "name": "Far Grasslands: Clearing, Behind the Small Bush",
+        "access_rules": [
+          "$bf_location|7720180"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720180"
+        ]
       }
     ]
   },
@@ -5384,6 +5521,67 @@
     ]
   },
   {
+    "name": "WizardTowerAttic",
+    "visibility_rules": [
+      "$bf_room_in_seed|WizardTowerAttic"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "FarGrasslands",
+        "x": 439,
+        "y": 451
+      }
+    ],
+    "sections": [
+      {
+        "name": "Far Grasslands: Wizard's Tower Attic, Beside the Cauldron",
+        "access_rules": [
+          "$bf_location|7720179"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720179"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "WizardTowerBasement",
+    "visibility_rules": [
+      "$bf_room_in_seed|WizardTowerBasement"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "FarGrasslands",
+        "x": 299,
+        "y": 531
+      }
+    ],
+    "sections": [
+      {
+        "name": "Far Grasslands: Wizard's Tower Basement, Behind the Stairs",
+        "access_rules": [
+          "$bf_location|7720177"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720177"
+        ]
+      },
+      {
+        "name": "Far Grasslands: Wizard's Tower Basement, On the Bookshelf",
+        "access_rules": [
+          "$bf_location|7720178"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720178"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Far Grasslands",
     "visibility_rules": [
       "$bf_area_in_seed|FarGrasslands"
@@ -5393,11 +5591,14 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 516,
-        "y": 135
+        "x": 1065,
+        "y": 342
       }
     ],
     "sections": [
+      {
+        "ref": "FGClearing/Far Grasslands: Clearing, Behind the Small Bush"
+      },
       {
         "ref": "FarGrasslands1/Far Grasslands: Crossroads, Dig Spot"
       },
@@ -5475,6 +5676,15 @@
       },
       {
         "ref": "FarGrasslandsWizard/Far Grasslands: Wizard's Tower, Lookout Rock"
+      },
+      {
+        "ref": "WizardTowerAttic/Far Grasslands: Wizard's Tower Attic, Beside the Cauldron"
+      },
+      {
+        "ref": "WizardTowerBasement/Far Grasslands: Wizard's Tower Basement, Behind the Stairs"
+      },
+      {
+        "ref": "WizardTowerBasement/Far Grasslands: Wizard's Tower Basement, On the Bookshelf"
       }
     ]
   },
@@ -5494,7 +5704,25 @@
     ],
     "sections": [
       {
-        "name": "Wild Swamplands: Swamplands2, Madesphy 1",
+        "name": "Wild Swamplands: Lily Pad Pond, Dig Spot",
+        "access_rules": [
+          "$bf_location|7720181"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720181"
+        ]
+      },
+      {
+        "name": "Wild Swamplands: Lily Pad Pond, Grass in the Bottom Right",
+        "access_rules": [
+          "$bf_location|7720182"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720182"
+        ]
+      },
+      {
+        "name": "Wild Swamplands: Lily Pad Pond, Madesphy 1",
         "access_rules": [
           "$bf_location|7721187"
         ],
@@ -5503,7 +5731,7 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands2, Mantidfly 1",
+        "name": "Wild Swamplands: Lily Pad Pond, Mantidfly 1",
         "access_rules": [
           "$bf_location|7721189"
         ],
@@ -5512,7 +5740,7 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands2, Wild Chomper 1",
+        "name": "Wild Swamplands: Lily Pad Pond, Wild Chomper 1",
         "access_rules": [
           "$bf_location|7721188"
         ],
@@ -5617,7 +5845,16 @@
     ],
     "sections": [
       {
-        "name": "Wild Swamplands: Swamplands5, Leafbug Clubber 1",
+        "name": "Wild Swamplands: Junction, Dig Spot",
+        "access_rules": [
+          "$bf_location|7720183"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720183"
+        ]
+      },
+      {
+        "name": "Wild Swamplands: Junction, Leafbug Clubber 1",
         "access_rules": [
           "$bf_location|7721208"
         ],
@@ -5626,7 +5863,7 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands5, Madesphy 1",
+        "name": "Wild Swamplands: Junction, Madesphy 1",
         "access_rules": [
           "$bf_location|7721209"
         ],
@@ -5635,7 +5872,16 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands5, Wild Chomper 1",
+        "name": "Wild Swamplands: Junction, Vine above the Platform",
+        "access_rules": [
+          "$bf_location|7720184"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720184"
+        ]
+      },
+      {
+        "name": "Wild Swamplands: Junction, Wild Chomper 1",
         "access_rules": [
           "$bf_location|7721210"
         ],
@@ -5644,7 +5890,7 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands5, Wild Chomper 2",
+        "name": "Wild Swamplands: Junction, Wild Chomper 2",
         "access_rules": [
           "$bf_location|7721211"
         ],
@@ -5670,7 +5916,25 @@
     ],
     "sections": [
       {
-        "name": "Wild Swamplands: Swamplands6, Leafbug Archer 1",
+        "name": "Wild Swamplands: Crank Pond, Behind the Tree",
+        "access_rules": [
+          "$bf_location|7720185"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720185"
+        ]
+      },
+      {
+        "name": "Wild Swamplands: Crank Pond, Grass in the Bottom Left",
+        "access_rules": [
+          "$bf_location|7720186"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720186"
+        ]
+      },
+      {
+        "name": "Wild Swamplands: Crank Pond, Leafbug Archer 1",
         "access_rules": [
           "$bf_location|7721212"
         ],
@@ -5679,7 +5943,7 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands6, Madesphy 1",
+        "name": "Wild Swamplands: Crank Pond, Madesphy 1",
         "access_rules": [
           "$bf_location|7721213"
         ],
@@ -5688,7 +5952,7 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands6, Wild Chomper 1",
+        "name": "Wild Swamplands: Crank Pond, Wild Chomper 1",
         "access_rules": [
           "$bf_location|7721214"
         ],
@@ -5714,7 +5978,7 @@
     ],
     "sections": [
       {
-        "name": "Wild Swamplands: Swamplands7, Flowerling 1",
+        "name": "Wild Swamplands: Ice Block Climb, Flowerling 1",
         "access_rules": [
           "$bf_location|7721215"
         ],
@@ -5723,7 +5987,7 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands7, Leafbug Archer 1",
+        "name": "Wild Swamplands: Ice Block Climb, Leafbug Archer 1",
         "access_rules": [
           "$bf_location|7721216"
         ],
@@ -5732,7 +5996,7 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands7, Leafbug Archer 2",
+        "name": "Wild Swamplands: Ice Block Climb, Leafbug Archer 2",
         "access_rules": [
           "$bf_location|7721218"
         ],
@@ -5741,7 +6005,7 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands7, Leafbug Clubber 1",
+        "name": "Wild Swamplands: Ice Block Climb, Leafbug Clubber 1",
         "access_rules": [
           "$bf_location|7721219"
         ],
@@ -5750,12 +6014,21 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands7, Madesphy 1",
+        "name": "Wild Swamplands: Ice Block Climb, Madesphy 1",
         "access_rules": [
           "$bf_location|7721217"
         ],
         "visibility_rules": [
           "$bf_in_seed|7721217"
+        ]
+      },
+      {
+        "name": "Wild Swamplands: Ice Block Climb, On Top of the Stump",
+        "access_rules": [
+          "$bf_location|7720187"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720187"
         ]
       }
     ]
@@ -5776,7 +6049,16 @@
     ],
     "sections": [
       {
-        "name": "Wild Swamplands: Swamplands8, Leafbug Clubber 1",
+        "name": "Wild Swamplands: Fenced Pond, Dig Spot",
+        "access_rules": [
+          "$bf_location|7720188"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720188"
+        ]
+      },
+      {
+        "name": "Wild Swamplands: Fenced Pond, Leafbug Clubber 1",
         "access_rules": [
           "$bf_location|7721220"
         ],
@@ -5785,7 +6067,7 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands8, Leafbug Ninja 1",
+        "name": "Wild Swamplands: Fenced Pond, Leafbug Ninja 1",
         "access_rules": [
           "$bf_location|7721222"
         ],
@@ -5794,7 +6076,7 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands8, Madesphy 1",
+        "name": "Wild Swamplands: Fenced Pond, Madesphy 1",
         "access_rules": [
           "$bf_location|7721221"
         ],
@@ -5803,7 +6085,7 @@
         ]
       },
       {
-        "name": "Wild Swamplands: Swamplands8, Mantidfly 1",
+        "name": "Wild Swamplands: Fenced Pond, Mantidfly 1",
         "access_rules": [
           "$bf_location|7721223"
         ],
@@ -5875,19 +6157,25 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 820,
-        "y": 74
+        "x": 1675,
+        "y": 219
       }
     ],
     "sections": [
       {
-        "ref": "Swamplands2/Wild Swamplands: Swamplands2, Madesphy 1"
+        "ref": "Swamplands2/Wild Swamplands: Lily Pad Pond, Dig Spot"
       },
       {
-        "ref": "Swamplands2/Wild Swamplands: Swamplands2, Mantidfly 1"
+        "ref": "Swamplands2/Wild Swamplands: Lily Pad Pond, Grass in the Bottom Right"
       },
       {
-        "ref": "Swamplands2/Wild Swamplands: Swamplands2, Wild Chomper 1"
+        "ref": "Swamplands2/Wild Swamplands: Lily Pad Pond, Madesphy 1"
+      },
+      {
+        "ref": "Swamplands2/Wild Swamplands: Lily Pad Pond, Mantidfly 1"
+      },
+      {
+        "ref": "Swamplands2/Wild Swamplands: Lily Pad Pond, Wild Chomper 1"
       },
       {
         "ref": "Swamplands3/Wild Swamplands: Swamplands3, Leafbug Clubber 1"
@@ -5905,58 +6193,389 @@
         "ref": "Swamplands4/Wild Swamplands: Swamplands4, Leafbug Ninja 1"
       },
       {
-        "ref": "Swamplands5/Wild Swamplands: Swamplands5, Leafbug Clubber 1"
+        "ref": "Swamplands5/Wild Swamplands: Junction, Dig Spot"
       },
       {
-        "ref": "Swamplands5/Wild Swamplands: Swamplands5, Madesphy 1"
+        "ref": "Swamplands5/Wild Swamplands: Junction, Leafbug Clubber 1"
       },
       {
-        "ref": "Swamplands5/Wild Swamplands: Swamplands5, Wild Chomper 1"
+        "ref": "Swamplands5/Wild Swamplands: Junction, Madesphy 1"
       },
       {
-        "ref": "Swamplands5/Wild Swamplands: Swamplands5, Wild Chomper 2"
+        "ref": "Swamplands5/Wild Swamplands: Junction, Vine above the Platform"
       },
       {
-        "ref": "Swamplands6/Wild Swamplands: Swamplands6, Leafbug Archer 1"
+        "ref": "Swamplands5/Wild Swamplands: Junction, Wild Chomper 1"
       },
       {
-        "ref": "Swamplands6/Wild Swamplands: Swamplands6, Madesphy 1"
+        "ref": "Swamplands5/Wild Swamplands: Junction, Wild Chomper 2"
       },
       {
-        "ref": "Swamplands6/Wild Swamplands: Swamplands6, Wild Chomper 1"
+        "ref": "Swamplands6/Wild Swamplands: Crank Pond, Behind the Tree"
       },
       {
-        "ref": "Swamplands7/Wild Swamplands: Swamplands7, Flowerling 1"
+        "ref": "Swamplands6/Wild Swamplands: Crank Pond, Grass in the Bottom Left"
       },
       {
-        "ref": "Swamplands7/Wild Swamplands: Swamplands7, Leafbug Archer 1"
+        "ref": "Swamplands6/Wild Swamplands: Crank Pond, Leafbug Archer 1"
       },
       {
-        "ref": "Swamplands7/Wild Swamplands: Swamplands7, Leafbug Archer 2"
+        "ref": "Swamplands6/Wild Swamplands: Crank Pond, Madesphy 1"
       },
       {
-        "ref": "Swamplands7/Wild Swamplands: Swamplands7, Leafbug Clubber 1"
+        "ref": "Swamplands6/Wild Swamplands: Crank Pond, Wild Chomper 1"
       },
       {
-        "ref": "Swamplands7/Wild Swamplands: Swamplands7, Madesphy 1"
+        "ref": "Swamplands7/Wild Swamplands: Ice Block Climb, Flowerling 1"
       },
       {
-        "ref": "Swamplands8/Wild Swamplands: Swamplands8, Leafbug Clubber 1"
+        "ref": "Swamplands7/Wild Swamplands: Ice Block Climb, Leafbug Archer 1"
       },
       {
-        "ref": "Swamplands8/Wild Swamplands: Swamplands8, Leafbug Ninja 1"
+        "ref": "Swamplands7/Wild Swamplands: Ice Block Climb, Leafbug Archer 2"
       },
       {
-        "ref": "Swamplands8/Wild Swamplands: Swamplands8, Madesphy 1"
+        "ref": "Swamplands7/Wild Swamplands: Ice Block Climb, Leafbug Clubber 1"
       },
       {
-        "ref": "Swamplands8/Wild Swamplands: Swamplands8, Mantidfly 1"
+        "ref": "Swamplands7/Wild Swamplands: Ice Block Climb, Madesphy 1"
+      },
+      {
+        "ref": "Swamplands7/Wild Swamplands: Ice Block Climb, On Top of the Stump"
+      },
+      {
+        "ref": "Swamplands8/Wild Swamplands: Fenced Pond, Dig Spot"
+      },
+      {
+        "ref": "Swamplands8/Wild Swamplands: Fenced Pond, Leafbug Clubber 1"
+      },
+      {
+        "ref": "Swamplands8/Wild Swamplands: Fenced Pond, Leafbug Ninja 1"
+      },
+      {
+        "ref": "Swamplands8/Wild Swamplands: Fenced Pond, Madesphy 1"
+      },
+      {
+        "ref": "Swamplands8/Wild Swamplands: Fenced Pond, Mantidfly 1"
       },
       {
         "ref": "SwamplandsBridge/Wild Swamplands: Bridge, Boulder"
       },
       {
         "ref": "SwamplandsEntrance/Wild Swamplands: SwamplandsEntrance, Madesphy 1"
+      }
+    ]
+  },
+  {
+    "name": "DefiantRoot1",
+    "visibility_rules": [
+      "$bf_room_in_seed|DefiantRoot1"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "DefiantRoot",
+        "x": 1090,
+        "y": 579
+      }
+    ],
+    "sections": [
+      {
+        "name": "Defiant Root: Square, Behind the Box",
+        "access_rules": [
+          "$bf_location|7720189"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720189"
+        ]
+      },
+      {
+        "name": "Defiant Root: Square, Left Rooftop",
+        "access_rules": [
+          "$bf_location|7720192"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720192"
+        ]
+      },
+      {
+        "name": "Defiant Root: Square, Morty's Gift",
+        "access_rules": [
+          "$bf_location|7720190"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720190"
+        ]
+      },
+      {
+        "name": "Defiant Root: Square, Right Rooftop",
+        "access_rules": [
+          "$bf_location|7720191"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720191"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "DefiantRoot2",
+    "visibility_rules": [
+      "$bf_room_in_seed|DefiantRoot2"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "DefiantRoot",
+        "x": 290,
+        "y": 564
+      }
+    ],
+    "sections": [
+      {
+        "name": "Defiant Root: Beehive Lift, Above the Inn",
+        "access_rules": [
+          "$bf_location|7720196"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720196"
+        ]
+      },
+      {
+        "name": "Defiant Root: Beehive Lift, Inn Rooftop",
+        "access_rules": [
+          "$bf_location|7720197"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720197"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "DefiantRoot3",
+    "visibility_rules": [
+      "$bf_room_in_seed|DefiantRoot3"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "DefiantRoot",
+        "x": 1167,
+        "y": 217
+      }
+    ],
+    "sections": [
+      {
+        "name": "Defiant Root: Market, Bakery Shop 1",
+        "access_rules": [
+          "$bf_location|7720226"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720226"
+        ]
+      },
+      {
+        "name": "Defiant Root: Market, Bakery Shop 2",
+        "access_rules": [
+          "$bf_location|7720227"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720227"
+        ]
+      },
+      {
+        "name": "Defiant Root: Market, Bakery Shop 3",
+        "access_rules": [
+          "$bf_location|7720228"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720228"
+        ]
+      },
+      {
+        "name": "Defiant Root: Market, Item Shop 1",
+        "access_rules": [
+          "$bf_location|7720217"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720217"
+        ]
+      },
+      {
+        "name": "Defiant Root: Market, Item Shop 2",
+        "access_rules": [
+          "$bf_location|7720218"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720218"
+        ]
+      },
+      {
+        "name": "Defiant Root: Market, Item Shop 3",
+        "access_rules": [
+          "$bf_location|7720219"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720219"
+        ]
+      },
+      {
+        "name": "Defiant Root: Market, Item Shop 4",
+        "access_rules": [
+          "$bf_location|7720220"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720220"
+        ]
+      },
+      {
+        "name": "Defiant Root: Market, Item Shop 5",
+        "access_rules": [
+          "$bf_location|7720221"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720221"
+        ]
+      },
+      {
+        "name": "Defiant Root: Market, Poison Shop 1",
+        "access_rules": [
+          "$bf_location|7720222"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720222"
+        ]
+      },
+      {
+        "name": "Defiant Root: Market, Poison Shop 2",
+        "access_rules": [
+          "$bf_location|7720223"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720223"
+        ]
+      },
+      {
+        "name": "Defiant Root: Market, Poison Shop 3",
+        "access_rules": [
+          "$bf_location|7720224"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720224"
+        ]
+      },
+      {
+        "name": "Defiant Root: Market, Poison Shop 4",
+        "access_rules": [
+          "$bf_location|7720225"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720225"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "DefiantRootWell",
+    "visibility_rules": [
+      "$bf_room_in_seed|DefiantRootWell"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "DefiantRoot",
+        "x": 1249,
+        "y": 658
+      }
+    ],
+    "sections": [
+      {
+        "name": "Defiant Root: Well, By the Boxes",
+        "access_rules": [
+          "$bf_location|7720195"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720195"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Defiant Root",
+    "visibility_rules": [
+      "$bf_area_in_seed|DefiantRoot"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "World",
+        "x": 621,
+        "y": 420
+      }
+    ],
+    "sections": [
+      {
+        "ref": "DefiantRoot1/Defiant Root: Square, Behind the Box"
+      },
+      {
+        "ref": "DefiantRoot1/Defiant Root: Square, Left Rooftop"
+      },
+      {
+        "ref": "DefiantRoot1/Defiant Root: Square, Morty's Gift"
+      },
+      {
+        "ref": "DefiantRoot1/Defiant Root: Square, Right Rooftop"
+      },
+      {
+        "ref": "DefiantRoot2/Defiant Root: Beehive Lift, Above the Inn"
+      },
+      {
+        "ref": "DefiantRoot2/Defiant Root: Beehive Lift, Inn Rooftop"
+      },
+      {
+        "ref": "DefiantRoot3/Defiant Root: Market, Bakery Shop 1"
+      },
+      {
+        "ref": "DefiantRoot3/Defiant Root: Market, Bakery Shop 2"
+      },
+      {
+        "ref": "DefiantRoot3/Defiant Root: Market, Bakery Shop 3"
+      },
+      {
+        "ref": "DefiantRoot3/Defiant Root: Market, Item Shop 1"
+      },
+      {
+        "ref": "DefiantRoot3/Defiant Root: Market, Item Shop 2"
+      },
+      {
+        "ref": "DefiantRoot3/Defiant Root: Market, Item Shop 3"
+      },
+      {
+        "ref": "DefiantRoot3/Defiant Root: Market, Item Shop 4"
+      },
+      {
+        "ref": "DefiantRoot3/Defiant Root: Market, Item Shop 5"
+      },
+      {
+        "ref": "DefiantRoot3/Defiant Root: Market, Poison Shop 1"
+      },
+      {
+        "ref": "DefiantRoot3/Defiant Root: Market, Poison Shop 2"
+      },
+      {
+        "ref": "DefiantRoot3/Defiant Root: Market, Poison Shop 3"
+      },
+      {
+        "ref": "DefiantRoot3/Defiant Root: Market, Poison Shop 4"
+      },
+      {
+        "ref": "DefiantRootWell/Defiant Root: Well, By the Boxes"
       }
     ]
   },
@@ -5976,82 +6595,91 @@
     ],
     "sections": [
       {
-        "name": "Ancient Castle: SandCastleBasement, Arrow Worm 1",
+        "name": "Ancient Castle: Basement, Behind the Barrier",
         "access_rules": [
-          "$bf_location|7721141"
+          "$bf_location|7720201"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721141"
+          "$bf_in_seed|7720201"
         ]
       },
       {
-        "name": "Ancient Castle: SandCastleBasement, Haunted Cloth 1",
+        "name": "Ancient Castle: Basement, Switch Puzzle",
         "access_rules": [
-          "$bf_location|7721142"
+          "$bf_location|7720199"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721142"
+          "$bf_in_seed|7720199"
+        ]
+      },
+      {
+        "name": "Ancient Castle: Basement, Tiny Platform",
+        "access_rules": [
+          "$bf_location|7720200"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720200"
         ]
       }
     ]
   },
   {
-    "name": "SandCastleEntrance",
+    "name": "SandCastleBossKeyRoom",
     "visibility_rules": [
-      "$bf_room_in_seed|SandCastleEntrance"
+      "$bf_room_in_seed|SandCastleBossKeyRoom"
     ],
     "chest_unopened_img": "images/chest_closed.png",
     "chest_opened_img": "images/chest_open.png",
     "map_locations": [
       {
         "map": "SandCastle",
-        "x": 514,
-        "y": 621
+        "x": 925,
+        "y": 504
       }
     ],
     "sections": [
       {
-        "name": "Ancient Castle: SandCastleEntrance, Krawler 1",
+        "name": "Ancient Castle: Boss Key Room, Behind the Block",
         "access_rules": [
-          "$bf_location|7721136"
+          "$bf_location|7720203"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721136"
+          "$bf_in_seed|7720203"
+        ]
+      },
+      {
+        "name": "Ancient Castle: Boss Key Room, By the Three Statues",
+        "access_rules": [
+          "$bf_location|7720204"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720204"
         ]
       }
     ]
   },
   {
-    "name": "SandCastleMainRoom",
+    "name": "SandCastleBossRoom",
     "visibility_rules": [
-      "$bf_room_in_seed|SandCastleMainRoom"
+      "$bf_room_in_seed|SandCastleBossRoom"
     ],
     "chest_unopened_img": "images/chest_closed.png",
     "chest_opened_img": "images/chest_open.png",
     "map_locations": [
       {
         "map": "SandCastle",
-        "x": 514,
-        "y": 551
+        "x": 639,
+        "y": 97
       }
     ],
     "sections": [
       {
-        "name": "Ancient Castle: SandCastleMainRoom, Psicorp 1",
+        "name": "Ancient Castle: Boss Room, Boss Fight",
         "access_rules": [
-          "$bf_location|7721145"
+          "$bf_location|7720320"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721145"
-        ]
-      },
-      {
-        "name": "Ancient Castle: SandCastleMainRoom, Warden 1",
-        "access_rules": [
-          "$bf_location|7721146"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721146"
+          "$bf_in_seed|7720320"
         ]
       }
     ]
@@ -6072,30 +6700,12 @@
     ],
     "sections": [
       {
-        "name": "Ancient Castle: SandCastlePressurePuzzle, Krawler 1",
+        "name": "Ancient Castle: Pressure Puzzle, By the Statue",
         "access_rules": [
-          "$bf_location|7721153"
+          "$bf_location|7720205"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721153"
-        ]
-      },
-      {
-        "name": "Ancient Castle: SandCastlePressurePuzzle, Krawler 2",
-        "access_rules": [
-          "$bf_location|7721154"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721154"
-        ]
-      },
-      {
-        "name": "Ancient Castle: SandCastlePressurePuzzle, Warden 1",
-        "access_rules": [
-          "$bf_location|7721155"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721155"
+          "$bf_in_seed|7720205"
         ]
       }
     ]
@@ -6116,39 +6726,12 @@
     ],
     "sections": [
       {
-        "name": "Ancient Castle: SandCastleRockRoom, Arrow Worm 1",
+        "name": "Ancient Castle: Rock Room, Alcove between the Rocks",
         "access_rules": [
-          "$bf_location|7721156"
+          "$bf_location|7720206"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721156"
-        ]
-      },
-      {
-        "name": "Ancient Castle: SandCastleRockRoom, Haunted Cloth 1",
-        "access_rules": [
-          "$bf_location|7721157"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721157"
-        ]
-      },
-      {
-        "name": "Ancient Castle: SandCastleRockRoom, Psicorp 1",
-        "access_rules": [
-          "$bf_location|7721158"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721158"
-        ]
-      },
-      {
-        "name": "Ancient Castle: SandCastleRockRoom, Warden 1",
-        "access_rules": [
-          "$bf_location|7721159"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721159"
+          "$bf_in_seed|7720206"
         ]
       }
     ]
@@ -6169,21 +6752,12 @@
     ],
     "sections": [
       {
-        "name": "Ancient Castle: SandCastleRoof, Haunted Cloth 1",
+        "name": "Ancient Castle: Roof, Behind the Left Statue",
         "access_rules": [
-          "$bf_location|7721143"
+          "$bf_location|7720202"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721143"
-        ]
-      },
-      {
-        "name": "Ancient Castle: SandCastleRoof, Krawler 1",
-        "access_rules": [
-          "$bf_location|7721144"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721144"
+          "$bf_in_seed|7720202"
         ]
       }
     ]
@@ -6204,56 +6778,38 @@
     ],
     "sections": [
       {
-        "name": "Ancient Castle: SandCastleSlidePuzzle, Krawler 1",
+        "name": "Ancient Castle: Slide Puzzle, Behind the Cracked Wall",
         "access_rules": [
-          "$bf_location|7721137"
+          "$bf_location|7720198"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721137"
+          "$bf_in_seed|7720198"
         ]
       }
     ]
   },
   {
-    "name": "SandCastleStatueRoom",
+    "name": "SandCastleTreasureRoom",
     "visibility_rules": [
-      "$bf_room_in_seed|SandCastleStatueRoom"
+      "$bf_room_in_seed|SandCastleTreasureRoom"
     ],
     "chest_unopened_img": "images/chest_closed.png",
     "chest_opened_img": "images/chest_open.png",
     "map_locations": [
       {
         "map": "SandCastle",
-        "x": 866,
-        "y": 680
+        "x": 779,
+        "y": 193
       }
     ],
     "sections": [
       {
-        "name": "Ancient Castle: SandCastleStatueRoom, Haunted Cloth 1",
+        "name": "Ancient Castle: Treasure Room, Treasure Pedestal",
         "access_rules": [
-          "$bf_location|7721140"
+          "$bf_location|7720321"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721140"
-        ]
-      },
-      {
-        "name": "Ancient Castle: SandCastleStatueRoom, Warden 1",
-        "access_rules": [
-          "$bf_location|7721138"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721138"
-        ]
-      },
-      {
-        "name": "Ancient Castle: SandCastleStatueRoom, Warden 2",
-        "access_rules": [
-          "$bf_location|7721139"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721139"
+          "$bf_in_seed|7720321"
         ]
       }
     ]
@@ -6268,64 +6824,43 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 705,
-        "y": 182
+        "x": 1444,
+        "y": 436
       }
     ],
     "sections": [
       {
-        "ref": "SandCastleBasement/Ancient Castle: SandCastleBasement, Arrow Worm 1"
+        "ref": "SandCastleBasement/Ancient Castle: Basement, Behind the Barrier"
       },
       {
-        "ref": "SandCastleBasement/Ancient Castle: SandCastleBasement, Haunted Cloth 1"
+        "ref": "SandCastleBasement/Ancient Castle: Basement, Switch Puzzle"
       },
       {
-        "ref": "SandCastleEntrance/Ancient Castle: SandCastleEntrance, Krawler 1"
+        "ref": "SandCastleBasement/Ancient Castle: Basement, Tiny Platform"
       },
       {
-        "ref": "SandCastleMainRoom/Ancient Castle: SandCastleMainRoom, Psicorp 1"
+        "ref": "SandCastleBossKeyRoom/Ancient Castle: Boss Key Room, Behind the Block"
       },
       {
-        "ref": "SandCastleMainRoom/Ancient Castle: SandCastleMainRoom, Warden 1"
+        "ref": "SandCastleBossKeyRoom/Ancient Castle: Boss Key Room, By the Three Statues"
       },
       {
-        "ref": "SandCastlePressurePuzzle/Ancient Castle: SandCastlePressurePuzzle, Krawler 1"
+        "ref": "SandCastleBossRoom/Ancient Castle: Boss Room, Boss Fight"
       },
       {
-        "ref": "SandCastlePressurePuzzle/Ancient Castle: SandCastlePressurePuzzle, Krawler 2"
+        "ref": "SandCastlePressurePuzzle/Ancient Castle: Pressure Puzzle, By the Statue"
       },
       {
-        "ref": "SandCastlePressurePuzzle/Ancient Castle: SandCastlePressurePuzzle, Warden 1"
+        "ref": "SandCastleRockRoom/Ancient Castle: Rock Room, Alcove between the Rocks"
       },
       {
-        "ref": "SandCastleRockRoom/Ancient Castle: SandCastleRockRoom, Arrow Worm 1"
+        "ref": "SandCastleRoof/Ancient Castle: Roof, Behind the Left Statue"
       },
       {
-        "ref": "SandCastleRockRoom/Ancient Castle: SandCastleRockRoom, Haunted Cloth 1"
+        "ref": "SandCastleSlidePuzzle/Ancient Castle: Slide Puzzle, Behind the Cracked Wall"
       },
       {
-        "ref": "SandCastleRockRoom/Ancient Castle: SandCastleRockRoom, Psicorp 1"
-      },
-      {
-        "ref": "SandCastleRockRoom/Ancient Castle: SandCastleRockRoom, Warden 1"
-      },
-      {
-        "ref": "SandCastleRoof/Ancient Castle: SandCastleRoof, Haunted Cloth 1"
-      },
-      {
-        "ref": "SandCastleRoof/Ancient Castle: SandCastleRoof, Krawler 1"
-      },
-      {
-        "ref": "SandCastleSlidePuzzle/Ancient Castle: SandCastleSlidePuzzle, Krawler 1"
-      },
-      {
-        "ref": "SandCastleStatueRoom/Ancient Castle: SandCastleStatueRoom, Haunted Cloth 1"
-      },
-      {
-        "ref": "SandCastleStatueRoom/Ancient Castle: SandCastleStatueRoom, Warden 1"
-      },
-      {
-        "ref": "SandCastleStatueRoom/Ancient Castle: SandCastleStatueRoom, Warden 2"
+        "ref": "SandCastleTreasureRoom/Ancient Castle: Treasure Room, Treasure Pedestal"
       }
     ]
   },
@@ -6356,6 +6891,93 @@
     ]
   },
   {
+    "name": "BeehiveMainArea",
+    "visibility_rules": [
+      "$bf_room_in_seed|BeehiveMainArea"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "Beehive",
+        "x": 933,
+        "y": 500
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bee Kingdom Hive: Main Area, Clothing Stall 1",
+        "access_rules": [
+          "$bf_location|7720209"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720209"
+        ]
+      },
+      {
+        "name": "Bee Kingdom Hive: Main Area, Clothing Stall 2",
+        "access_rules": [
+          "$bf_location|7720210"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720210"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BeehiveScannerRoom",
+    "visibility_rules": [
+      "$bf_room_in_seed|BeehiveScannerRoom"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "Beehive",
+        "x": 732,
+        "y": 125
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bee Kingdom Hive: Scanner Room, Scan",
+        "access_rules": [
+          "$bf_location|7720208"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720208"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "JaunesGallery",
+    "visibility_rules": [
+      "$bf_room_in_seed|JaunesGallery"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "Beehive",
+        "x": 778,
+        "y": 637
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bee Kingdom Hive: Jaune's Gallery, Behind the Paintings",
+        "access_rules": [
+          "$bf_location|7720207"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720207"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Beehive",
     "visibility_rules": [
       "$bf_area_in_seed|Beehive"
@@ -6365,13 +6987,25 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 251,
-        "y": 68
+        "x": 534,
+        "y": 208
       }
     ],
     "sections": [
       {
         "ref": "BeehiveBalcony/Bee Kingdom Hive: Balcony, Beette's Sale"
+      },
+      {
+        "ref": "BeehiveMainArea/Bee Kingdom Hive: Main Area, Clothing Stall 1"
+      },
+      {
+        "ref": "BeehiveMainArea/Bee Kingdom Hive: Main Area, Clothing Stall 2"
+      },
+      {
+        "ref": "BeehiveScannerRoom/Bee Kingdom Hive: Scanner Room, Scan"
+      },
+      {
+        "ref": "JaunesGallery/Bee Kingdom Hive: Jaune's Gallery, Behind the Paintings"
       }
     ]
   },
@@ -6488,7 +7122,7 @@
     ],
     "sections": [
       {
-        "name": "Honey Factory: FactoryProcessingPump, Bee-Boop 1",
+        "name": "Honey Factory: Pump Room, Bee-Boop 1",
         "access_rules": [
           "$bf_location|7721090"
         ],
@@ -6497,7 +7131,16 @@
         ]
       },
       {
-        "name": "Honey Factory: FactoryProcessingPump, Denmuki 1",
+        "name": "Honey Factory: Pump Room, Behind the Boxes",
+        "access_rules": [
+          "$bf_location|7720230"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720230"
+        ]
+      },
+      {
+        "name": "Honey Factory: Pump Room, Denmuki 1",
         "access_rules": [
           "$bf_location|7721091"
         ],
@@ -6506,7 +7149,7 @@
         ]
       },
       {
-        "name": "Honey Factory: FactoryProcessingPump, Security Turret 1",
+        "name": "Honey Factory: Pump Room, Security Turret 1",
         "access_rules": [
           "$bf_location|7721092"
         ],
@@ -6532,7 +7175,7 @@
     ],
     "sections": [
       {
-        "name": "Honey Factory: FactoryProcessingPuzzle2, Bee-Boop 1",
+        "name": "Honey Factory: Training Grounds, Bee-Boop 1",
         "access_rules": [
           "$bf_location|7721093"
         ],
@@ -6541,12 +7184,21 @@
         ]
       },
       {
-        "name": "Honey Factory: FactoryProcessingPuzzle2, Bee-Boop 2",
+        "name": "Honey Factory: Training Grounds, Bee-Boop 2",
         "access_rules": [
           "$bf_location|7721094"
         ],
         "visibility_rules": [
           "$bf_in_seed|7721094"
+        ]
+      },
+      {
+        "name": "Honey Factory: Training Grounds, Behind the Gate",
+        "access_rules": [
+          "$bf_location|7720237"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720237"
         ]
       }
     ]
@@ -6567,7 +7219,25 @@
     ],
     "sections": [
       {
-        "name": "Honey Factory: FactoryProcessingPuzzle3, Denmuki 1",
+        "name": "Honey Factory: Pressure Plate Room, Behind the Gate",
+        "access_rules": [
+          "$bf_location|7720238"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720238"
+        ]
+      },
+      {
+        "name": "Honey Factory: Pressure Plate Room, Behind the Pipe",
+        "access_rules": [
+          "$bf_location|7720231"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720231"
+        ]
+      },
+      {
+        "name": "Honey Factory: Pressure Plate Room, Denmuki 1",
         "access_rules": [
           "$bf_location|7721096"
         ],
@@ -6576,7 +7246,7 @@
         ]
       },
       {
-        "name": "Honey Factory: FactoryProcessingPuzzle3, Security Turret 1",
+        "name": "Honey Factory: Pressure Plate Room, Security Turret 1",
         "access_rules": [
           "$bf_location|7721095"
         ],
@@ -6602,7 +7272,7 @@
     ],
     "sections": [
       {
-        "name": "Honey Factory: FactoryStorageMaze, Denmuki 1",
+        "name": "Honey Factory: Storage Maze, Denmuki 1",
         "access_rules": [
           "$bf_location|7721097"
         ],
@@ -6611,7 +7281,25 @@
         ]
       },
       {
-        "name": "Honey Factory: FactoryStorageMaze, Security Turret 1",
+        "name": "Honey Factory: Storage Maze, Hole in the Boxes",
+        "access_rules": [
+          "$bf_location|7720232"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720232"
+        ]
+      },
+      {
+        "name": "Honey Factory: Storage Maze, Lever Puzzle",
+        "access_rules": [
+          "$bf_location|7720233"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720233"
+        ]
+      },
+      {
+        "name": "Honey Factory: Storage Maze, Security Turret 1",
         "access_rules": [
           "$bf_location|7721098"
         ],
@@ -6637,12 +7325,30 @@
     ],
     "sections": [
       {
-        "name": "Honey Factory: FactoryStorageMiniboss, Bee-Boop 1",
+        "name": "Honey Factory: Storage Mini-boss Room, Bee-Boop 1",
         "access_rules": [
           "$bf_location|7721099"
         ],
         "visibility_rules": [
           "$bf_in_seed|7721099"
+        ]
+      },
+      {
+        "name": "Honey Factory: Storage Mini-boss Room, Mini-boss Fight",
+        "access_rules": [
+          "$bf_location|7720239"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720239"
+        ]
+      },
+      {
+        "name": "Honey Factory: Storage Mini-boss Room, On Top of the Boxes",
+        "access_rules": [
+          "$bf_location|7720234"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720234"
         ]
       }
     ]
@@ -6791,6 +7497,129 @@
     ]
   },
   {
+    "name": "HoneyFactoryCore",
+    "visibility_rules": [
+      "$bf_room_in_seed|HoneyFactoryCore"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "HoneyFactory",
+        "x": 1476,
+        "y": 374
+      }
+    ],
+    "sections": [
+      {
+        "name": "Honey Factory: Core, Boss Fight",
+        "access_rules": [
+          "$bf_location|7720315"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720315"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "HoneyFactoryEntrance",
+    "visibility_rules": [
+      "$bf_room_in_seed|HoneyFactoryEntrance"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "HoneyFactory",
+        "x": 1458,
+        "y": 691
+      }
+    ],
+    "sections": [
+      {
+        "name": "Honey Factory: Lobby, Shop 1",
+        "access_rules": [
+          "$bf_location|7720212"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720212"
+        ]
+      },
+      {
+        "name": "Honey Factory: Lobby, Shop 2",
+        "access_rules": [
+          "$bf_location|7720213"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720213"
+        ]
+      },
+      {
+        "name": "Honey Factory: Lobby, Shop 3",
+        "access_rules": [
+          "$bf_location|7720214"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720214"
+        ]
+      },
+      {
+        "name": "Honey Factory: Lobby, Shop 4",
+        "access_rules": [
+          "$bf_location|7720215"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720215"
+        ]
+      },
+      {
+        "name": "Honey Factory: Lobby, Shop 5",
+        "access_rules": [
+          "$bf_location|7720216"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720216"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "HoneyFactoryWorkerRooms",
+    "visibility_rules": [
+      "$bf_room_in_seed|HoneyFactoryWorkerRooms"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "HoneyFactory",
+        "x": 1356,
+        "y": 892
+      }
+    ],
+    "sections": [
+      {
+        "name": "Honey Factory: Worker Rooms, On Top of the Bookshelf",
+        "access_rules": [
+          "$bf_location|7720235"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720235"
+        ]
+      },
+      {
+        "name": "Honey Factory: Worker Rooms, On the Desk",
+        "access_rules": [
+          "$bf_location|7720229"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720229"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Honey Factory",
     "visibility_rules": [
       "$bf_area_in_seed|HoneyFactory"
@@ -6800,8 +7629,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 116,
-        "y": 40
+        "x": 263,
+        "y": 152
       }
     ],
     "sections": [
@@ -6827,34 +7656,58 @@
         "ref": "FactoryProcessingFirstRoom/Honey Factory: First Room, Switch"
       },
       {
-        "ref": "FactoryProcessingPump/Honey Factory: FactoryProcessingPump, Bee-Boop 1"
+        "ref": "FactoryProcessingPump/Honey Factory: Pump Room, Bee-Boop 1"
       },
       {
-        "ref": "FactoryProcessingPump/Honey Factory: FactoryProcessingPump, Denmuki 1"
+        "ref": "FactoryProcessingPump/Honey Factory: Pump Room, Behind the Boxes"
       },
       {
-        "ref": "FactoryProcessingPump/Honey Factory: FactoryProcessingPump, Security Turret 1"
+        "ref": "FactoryProcessingPump/Honey Factory: Pump Room, Denmuki 1"
       },
       {
-        "ref": "FactoryProcessingPuzzle2/Honey Factory: FactoryProcessingPuzzle2, Bee-Boop 1"
+        "ref": "FactoryProcessingPump/Honey Factory: Pump Room, Security Turret 1"
       },
       {
-        "ref": "FactoryProcessingPuzzle2/Honey Factory: FactoryProcessingPuzzle2, Bee-Boop 2"
+        "ref": "FactoryProcessingPuzzle2/Honey Factory: Training Grounds, Bee-Boop 1"
       },
       {
-        "ref": "FactoryProcessingPuzzle3/Honey Factory: FactoryProcessingPuzzle3, Denmuki 1"
+        "ref": "FactoryProcessingPuzzle2/Honey Factory: Training Grounds, Bee-Boop 2"
       },
       {
-        "ref": "FactoryProcessingPuzzle3/Honey Factory: FactoryProcessingPuzzle3, Security Turret 1"
+        "ref": "FactoryProcessingPuzzle2/Honey Factory: Training Grounds, Behind the Gate"
       },
       {
-        "ref": "FactoryStorageMaze/Honey Factory: FactoryStorageMaze, Denmuki 1"
+        "ref": "FactoryProcessingPuzzle3/Honey Factory: Pressure Plate Room, Behind the Gate"
       },
       {
-        "ref": "FactoryStorageMaze/Honey Factory: FactoryStorageMaze, Security Turret 1"
+        "ref": "FactoryProcessingPuzzle3/Honey Factory: Pressure Plate Room, Behind the Pipe"
       },
       {
-        "ref": "FactoryStorageMiniboss/Honey Factory: FactoryStorageMiniboss, Bee-Boop 1"
+        "ref": "FactoryProcessingPuzzle3/Honey Factory: Pressure Plate Room, Denmuki 1"
+      },
+      {
+        "ref": "FactoryProcessingPuzzle3/Honey Factory: Pressure Plate Room, Security Turret 1"
+      },
+      {
+        "ref": "FactoryStorageMaze/Honey Factory: Storage Maze, Denmuki 1"
+      },
+      {
+        "ref": "FactoryStorageMaze/Honey Factory: Storage Maze, Hole in the Boxes"
+      },
+      {
+        "ref": "FactoryStorageMaze/Honey Factory: Storage Maze, Lever Puzzle"
+      },
+      {
+        "ref": "FactoryStorageMaze/Honey Factory: Storage Maze, Security Turret 1"
+      },
+      {
+        "ref": "FactoryStorageMiniboss/Honey Factory: Storage Mini-boss Room, Bee-Boop 1"
+      },
+      {
+        "ref": "FactoryStorageMiniboss/Honey Factory: Storage Mini-boss Room, Mini-boss Fight"
+      },
+      {
+        "ref": "FactoryStorageMiniboss/Honey Factory: Storage Mini-boss Room, On Top of the Boxes"
       },
       {
         "ref": "FactoryStorageOverseer/Honey Factory: FactoryStorageOverseer, Abomihoney 1"
@@ -6897,6 +7750,30 @@
       },
       {
         "ref": "FactoryStorageOverseer/Honey Factory: FactoryStorageOverseer, Abomihoney 9"
+      },
+      {
+        "ref": "HoneyFactoryCore/Honey Factory: Core, Boss Fight"
+      },
+      {
+        "ref": "HoneyFactoryEntrance/Honey Factory: Lobby, Shop 1"
+      },
+      {
+        "ref": "HoneyFactoryEntrance/Honey Factory: Lobby, Shop 2"
+      },
+      {
+        "ref": "HoneyFactoryEntrance/Honey Factory: Lobby, Shop 3"
+      },
+      {
+        "ref": "HoneyFactoryEntrance/Honey Factory: Lobby, Shop 4"
+      },
+      {
+        "ref": "HoneyFactoryEntrance/Honey Factory: Lobby, Shop 5"
+      },
+      {
+        "ref": "HoneyFactoryWorkerRooms/Honey Factory: Worker Rooms, On Top of the Bookshelf"
+      },
+      {
+        "ref": "HoneyFactoryWorkerRooms/Honey Factory: Worker Rooms, On the Desk"
       }
     ]
   },
@@ -6986,7 +7863,25 @@
     ],
     "sections": [
       {
-        "name": "Rubber Prison: RubberPrisonCells2, Ruffian 1",
+        "name": "Rubber Prison: Electric Cells, Bottom Right Cell",
+        "access_rules": [
+          "$bf_location|7720243"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720243"
+        ]
+      },
+      {
+        "name": "Rubber Prison: Electric Cells, Middle Right Cell",
+        "access_rules": [
+          "$bf_location|7720242"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720242"
+        ]
+      },
+      {
+        "name": "Rubber Prison: Electric Cells, Ruffian 1",
         "access_rules": [
           "$bf_location|7721290"
         ],
@@ -7023,6 +7918,32 @@
     ]
   },
   {
+    "name": "RubberPrisonGiantLairBridge",
+    "visibility_rules": [
+      "$bf_room_in_seed|RubberPrisonGiantLairBridge"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "RubberPrison",
+        "x": 1411,
+        "y": 412
+      }
+    ],
+    "sections": [
+      {
+        "name": "Rubber Prison: Giant's Lair Bridge, Queen's Gift",
+        "access_rules": [
+          "$bf_location|7720246"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720246"
+        ]
+      }
+    ]
+  },
+  {
     "name": "RubberPrisonGym",
     "visibility_rules": [
       "$bf_room_in_seed|RubberPrisonGym"
@@ -7038,7 +7959,16 @@
     ],
     "sections": [
       {
-        "name": "Rubber Prison: RubberPrisonGym, Wasp Driller 1",
+        "name": "Rubber Prison: Gym, Crank Puzzle",
+        "access_rules": [
+          "$bf_location|7720244"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720244"
+        ]
+      },
+      {
+        "name": "Rubber Prison: Gym, Wasp Driller 1",
         "access_rules": [
           "$bf_location|7721294"
         ],
@@ -7047,7 +7977,7 @@
         ]
       },
       {
-        "name": "Rubber Prison: RubberPrisonGym, Wasp Trooper 1",
+        "name": "Rubber Prison: Gym, Wasp Trooper 1",
         "access_rules": [
           "$bf_location|7721295"
         ],
@@ -7134,7 +8064,7 @@
     ],
     "sections": [
       {
-        "name": "Rubber Prison: RubberPrisonPier, Ruffian 1",
+        "name": "Rubber Prison: Pier, Ruffian 1",
         "access_rules": [
           "$bf_location|7721283"
         ],
@@ -7143,7 +8073,16 @@
         ]
       },
       {
-        "name": "Rubber Prison: RubberPrisonPier, Wasp Driller 1",
+        "name": "Rubber Prison: Pier, Second Floor Fight",
+        "access_rules": [
+          "$bf_location|7720240"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720240"
+        ]
+      },
+      {
+        "name": "Rubber Prison: Pier, Wasp Driller 1",
         "access_rules": [
           "$bf_location|7721280"
         ],
@@ -7152,7 +8091,7 @@
         ]
       },
       {
-        "name": "Rubber Prison: RubberPrisonPier, Wasp Scout 1",
+        "name": "Rubber Prison: Pier, Wasp Scout 1",
         "access_rules": [
           "$bf_location|7721282"
         ],
@@ -7161,7 +8100,7 @@
         ]
       },
       {
-        "name": "Rubber Prison: RubberPrisonPier, Wasp Scout 2",
+        "name": "Rubber Prison: Pier, Wasp Scout 2",
         "access_rules": [
           "$bf_location|7721284"
         ],
@@ -7170,7 +8109,7 @@
         ]
       },
       {
-        "name": "Rubber Prison: RubberPrisonPier, Wasp Trooper 1",
+        "name": "Rubber Prison: Pier, Wasp Trooper 1",
         "access_rules": [
           "$bf_location|7721281"
         ],
@@ -7222,7 +8161,16 @@
     ],
     "sections": [
       {
-        "name": "Rubber Prison: RubberPrisonSpikeRoom, Wasp Bomber 1",
+        "name": "Rubber Prison: Spike Room, In the Cage",
+        "access_rules": [
+          "$bf_location|7720241"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720241"
+        ]
+      },
+      {
+        "name": "Rubber Prison: Spike Room, Wasp Bomber 1",
         "access_rules": [
           "$bf_location|7721286"
         ],
@@ -7286,8 +8234,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 813,
-        "y": 218
+        "x": 1659,
+        "y": 508
       }
     ],
     "sections": [
@@ -7304,16 +8252,28 @@
         "ref": "RubberPrisonCells1/Rubber Prison: RubberPrisonCells1, Wasp Trooper 1"
       },
       {
-        "ref": "RubberPrisonCells2/Rubber Prison: RubberPrisonCells2, Ruffian 1"
+        "ref": "RubberPrisonCells2/Rubber Prison: Electric Cells, Bottom Right Cell"
+      },
+      {
+        "ref": "RubberPrisonCells2/Rubber Prison: Electric Cells, Middle Right Cell"
+      },
+      {
+        "ref": "RubberPrisonCells2/Rubber Prison: Electric Cells, Ruffian 1"
       },
       {
         "ref": "RubberPrisonCheckpointCorridor/Rubber Prison: RubberPrisonCheckpointCorridor, Wasp Driller 1"
       },
       {
-        "ref": "RubberPrisonGym/Rubber Prison: RubberPrisonGym, Wasp Driller 1"
+        "ref": "RubberPrisonGiantLairBridge/Rubber Prison: Giant's Lair Bridge, Queen's Gift"
       },
       {
-        "ref": "RubberPrisonGym/Rubber Prison: RubberPrisonGym, Wasp Trooper 1"
+        "ref": "RubberPrisonGym/Rubber Prison: Gym, Crank Puzzle"
+      },
+      {
+        "ref": "RubberPrisonGym/Rubber Prison: Gym, Wasp Driller 1"
+      },
+      {
+        "ref": "RubberPrisonGym/Rubber Prison: Gym, Wasp Trooper 1"
       },
       {
         "ref": "RubberPrisonLibrary/Rubber Prison: RubberPrisonLibrary, Ruffian 1"
@@ -7325,25 +8285,31 @@
         "ref": "RubberPrisonOffice/Rubber Prison: RubberPrisonOffice, Wasp Driller 1"
       },
       {
-        "ref": "RubberPrisonPier/Rubber Prison: RubberPrisonPier, Ruffian 1"
+        "ref": "RubberPrisonPier/Rubber Prison: Pier, Ruffian 1"
       },
       {
-        "ref": "RubberPrisonPier/Rubber Prison: RubberPrisonPier, Wasp Driller 1"
+        "ref": "RubberPrisonPier/Rubber Prison: Pier, Second Floor Fight"
       },
       {
-        "ref": "RubberPrisonPier/Rubber Prison: RubberPrisonPier, Wasp Scout 1"
+        "ref": "RubberPrisonPier/Rubber Prison: Pier, Wasp Driller 1"
       },
       {
-        "ref": "RubberPrisonPier/Rubber Prison: RubberPrisonPier, Wasp Scout 2"
+        "ref": "RubberPrisonPier/Rubber Prison: Pier, Wasp Scout 1"
       },
       {
-        "ref": "RubberPrisonPier/Rubber Prison: RubberPrisonPier, Wasp Trooper 1"
+        "ref": "RubberPrisonPier/Rubber Prison: Pier, Wasp Scout 2"
+      },
+      {
+        "ref": "RubberPrisonPier/Rubber Prison: Pier, Wasp Trooper 1"
       },
       {
         "ref": "RubberPrisonSecurity/Rubber Prison: RubberPrisonSecurity, Wasp Trooper 1"
       },
       {
-        "ref": "RubberPrisonSpikeRoom/Rubber Prison: RubberPrisonSpikeRoom, Wasp Bomber 1"
+        "ref": "RubberPrisonSpikeRoom/Rubber Prison: Spike Room, In the Cage"
+      },
+      {
+        "ref": "RubberPrisonSpikeRoom/Rubber Prison: Spike Room, Wasp Bomber 1"
       },
       {
         "ref": "RubberPrisonThirdFloor/Rubber Prison: RubberPrisonThirdFloor, Burglar 1"
@@ -7372,7 +8338,16 @@
     ],
     "sections": [
       {
-        "name": "Giant's Lair: GiantLairBeforeBoss, Haunted Cloth 1",
+        "name": "Giant's Lair: Kitchen Stove, Dig Spot",
+        "access_rules": [
+          "$bf_location|7720255"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720255"
+        ]
+      },
+      {
+        "name": "Giant's Lair: Kitchen Stove, Haunted Cloth 1",
         "access_rules": [
           "$bf_location|7721315"
         ],
@@ -7381,7 +8356,7 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairBeforeBoss, Haunted Cloth 2",
+        "name": "Giant's Lair: Kitchen Stove, Haunted Cloth 2",
         "access_rules": [
           "$bf_location|7721316"
         ],
@@ -7390,7 +8365,7 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairBeforeBoss, Krawler 1",
+        "name": "Giant's Lair: Kitchen Stove, Krawler 1",
         "access_rules": [
           "$bf_location|7721312"
         ],
@@ -7399,7 +8374,7 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairBeforeBoss, Krawler 2",
+        "name": "Giant's Lair: Kitchen Stove, Krawler 2",
         "access_rules": [
           "$bf_location|7721314"
         ],
@@ -7408,7 +8383,7 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairBeforeBoss, Krawler 3",
+        "name": "Giant's Lair: Kitchen Stove, Krawler 3",
         "access_rules": [
           "$bf_location|7721318"
         ],
@@ -7417,7 +8392,7 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairBeforeBoss, Warden 1",
+        "name": "Giant's Lair: Kitchen Stove, Warden 1",
         "access_rules": [
           "$bf_location|7721313"
         ],
@@ -7426,7 +8401,7 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairBeforeBoss, Warden 2",
+        "name": "Giant's Lair: Kitchen Stove, Warden 2",
         "access_rules": [
           "$bf_location|7721317"
         ],
@@ -7523,7 +8498,7 @@
     ],
     "sections": [
       {
-        "name": "Giant's Lair: GiantLairDeadLands1, Dead Lander α 1",
+        "name": "Giant's Lair: Giant's Hand, Dead Lander α 1",
         "access_rules": [
           "$bf_location|7721302"
         ],
@@ -7532,7 +8507,7 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairDeadLands1, Dead Lander α 2",
+        "name": "Giant's Lair: Giant's Hand, Dead Lander α 2",
         "access_rules": [
           "$bf_location|7721304"
         ],
@@ -7541,7 +8516,7 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairDeadLands1, Dead Lander β 1",
+        "name": "Giant's Lair: Giant's Hand, Dead Lander β 1",
         "access_rules": [
           "$bf_location|7721303"
         ],
@@ -7550,12 +8525,21 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairDeadLands1, Dead Lander γ 1",
+        "name": "Giant's Lair: Giant's Hand, Dead Lander γ 1",
         "access_rules": [
           "$bf_location|7721301"
         ],
         "visibility_rules": [
           "$bf_in_seed|7721301"
+        ]
+      },
+      {
+        "name": "Giant's Lair: Giant's Hand, Dig Spot",
+        "access_rules": [
+          "$bf_location|7720247"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720247"
         ]
       }
     ]
@@ -7576,7 +8560,16 @@
     ],
     "sections": [
       {
-        "name": "Giant's Lair: GiantLairDeadLands2, Dead Lander α 1",
+        "name": "Giant's Lair: Crane Crossing, By the Spear",
+        "access_rules": [
+          "$bf_location|7720248"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720248"
+        ]
+      },
+      {
+        "name": "Giant's Lair: Crane Crossing, Dead Lander α 1",
         "access_rules": [
           "$bf_location|7721306"
         ],
@@ -7585,7 +8578,7 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairDeadLands2, Dead Lander β 1",
+        "name": "Giant's Lair: Crane Crossing, Dead Lander β 1",
         "access_rules": [
           "$bf_location|7721307"
         ],
@@ -7594,7 +8587,7 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairDeadLands2, Dead Lander β 2",
+        "name": "Giant's Lair: Crane Crossing, Dead Lander β 2",
         "access_rules": [
           "$bf_location|7721308"
         ],
@@ -7603,12 +8596,21 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairDeadLands2, Dead Lander γ 1",
+        "name": "Giant's Lair: Crane Crossing, Dead Lander γ 1",
         "access_rules": [
           "$bf_location|7721305"
         ],
         "visibility_rules": [
           "$bf_in_seed|7721305"
+        ]
+      },
+      {
+        "name": "Giant's Lair: Crane Crossing, Ledge by the Crossing",
+        "access_rules": [
+          "$bf_location|7720249"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720249"
         ]
       }
     ]
@@ -7629,7 +8631,16 @@
     ],
     "sections": [
       {
-        "name": "Giant's Lair: GiantLairFridgeInside, Krawler 1",
+        "name": "Giant's Lair: Inside the Fridge, Behind the Milk",
+        "access_rules": [
+          "$bf_location|7720250"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720250"
+        ]
+      },
+      {
+        "name": "Giant's Lair: Inside the Fridge, Krawler 1",
         "access_rules": [
           "$bf_location|7721310"
         ],
@@ -7638,7 +8649,7 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairFridgeInside, Krawler 2",
+        "name": "Giant's Lair: Inside the Fridge, Krawler 2",
         "access_rules": [
           "$bf_location|7721311"
         ],
@@ -7647,12 +8658,91 @@
         ]
       },
       {
-        "name": "Giant's Lair: GiantLairFridgeInside, Warden 1",
+        "name": "Giant's Lair: Inside the Fridge, Warden 1",
         "access_rules": [
           "$bf_location|7721309"
         ],
         "visibility_rules": [
           "$bf_in_seed|7721309"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GiantLairRoachVillage",
+    "visibility_rules": [
+      "$bf_room_in_seed|GiantLairRoachVillage"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "GiantLair",
+        "x": 659,
+        "y": 635
+      }
+    ],
+    "sections": [
+      {
+        "name": "Giant's Lair: Roach Village, Item Shop 1",
+        "access_rules": [
+          "$bf_location|7720251"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720251"
+        ]
+      },
+      {
+        "name": "Giant's Lair: Roach Village, Item Shop 2",
+        "access_rules": [
+          "$bf_location|7720252"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720252"
+        ]
+      },
+      {
+        "name": "Giant's Lair: Roach Village, Item Shop 3",
+        "access_rules": [
+          "$bf_location|7720253"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720253"
+        ]
+      },
+      {
+        "name": "Giant's Lair: Roach Village, Item Shop 4",
+        "access_rules": [
+          "$bf_location|7720254"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720254"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GiantLairSaplingPlains",
+    "visibility_rules": [
+      "$bf_room_in_seed|GiantLairSaplingPlains"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "GiantLair",
+        "x": 125,
+        "y": 711
+      }
+    ],
+    "sections": [
+      {
+        "name": "Giant's Lair: Sapling Plains, Final Fight",
+        "access_rules": [
+          "$bf_location|7720319"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720319"
         ]
       }
     ]
@@ -7667,31 +8757,34 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 925,
-        "y": 213
+        "x": 1884,
+        "y": 498
       }
     ],
     "sections": [
       {
-        "ref": "GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Haunted Cloth 1"
+        "ref": "GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Dig Spot"
       },
       {
-        "ref": "GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Haunted Cloth 2"
+        "ref": "GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Haunted Cloth 1"
       },
       {
-        "ref": "GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Krawler 1"
+        "ref": "GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Haunted Cloth 2"
       },
       {
-        "ref": "GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Krawler 2"
+        "ref": "GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Krawler 1"
       },
       {
-        "ref": "GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Krawler 3"
+        "ref": "GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Krawler 2"
       },
       {
-        "ref": "GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Warden 1"
+        "ref": "GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Krawler 3"
       },
       {
-        "ref": "GiantLairBeforeBoss/Giant's Lair: GiantLairBeforeBoss, Warden 2"
+        "ref": "GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Warden 1"
+      },
+      {
+        "ref": "GiantLairBeforeBoss/Giant's Lair: Kitchen Stove, Warden 2"
       },
       {
         "ref": "GiantLairBeforeBoss2/Giant's Lair: GiantLairBeforeBoss2, Dead Lander α 1"
@@ -7712,37 +8805,64 @@
         "ref": "GiantLairBeforeBoss2/Giant's Lair: GiantLairBeforeBoss2, Warden 2"
       },
       {
-        "ref": "GiantLairDeadLands1/Giant's Lair: GiantLairDeadLands1, Dead Lander α 1"
+        "ref": "GiantLairDeadLands1/Giant's Lair: Giant's Hand, Dead Lander α 1"
       },
       {
-        "ref": "GiantLairDeadLands1/Giant's Lair: GiantLairDeadLands1, Dead Lander α 2"
+        "ref": "GiantLairDeadLands1/Giant's Lair: Giant's Hand, Dead Lander α 2"
       },
       {
-        "ref": "GiantLairDeadLands1/Giant's Lair: GiantLairDeadLands1, Dead Lander β 1"
+        "ref": "GiantLairDeadLands1/Giant's Lair: Giant's Hand, Dead Lander β 1"
       },
       {
-        "ref": "GiantLairDeadLands1/Giant's Lair: GiantLairDeadLands1, Dead Lander γ 1"
+        "ref": "GiantLairDeadLands1/Giant's Lair: Giant's Hand, Dead Lander γ 1"
       },
       {
-        "ref": "GiantLairDeadLands2/Giant's Lair: GiantLairDeadLands2, Dead Lander α 1"
+        "ref": "GiantLairDeadLands1/Giant's Lair: Giant's Hand, Dig Spot"
       },
       {
-        "ref": "GiantLairDeadLands2/Giant's Lair: GiantLairDeadLands2, Dead Lander β 1"
+        "ref": "GiantLairDeadLands2/Giant's Lair: Crane Crossing, By the Spear"
       },
       {
-        "ref": "GiantLairDeadLands2/Giant's Lair: GiantLairDeadLands2, Dead Lander β 2"
+        "ref": "GiantLairDeadLands2/Giant's Lair: Crane Crossing, Dead Lander α 1"
       },
       {
-        "ref": "GiantLairDeadLands2/Giant's Lair: GiantLairDeadLands2, Dead Lander γ 1"
+        "ref": "GiantLairDeadLands2/Giant's Lair: Crane Crossing, Dead Lander β 1"
       },
       {
-        "ref": "GiantLairFridgeInside/Giant's Lair: GiantLairFridgeInside, Krawler 1"
+        "ref": "GiantLairDeadLands2/Giant's Lair: Crane Crossing, Dead Lander β 2"
       },
       {
-        "ref": "GiantLairFridgeInside/Giant's Lair: GiantLairFridgeInside, Krawler 2"
+        "ref": "GiantLairDeadLands2/Giant's Lair: Crane Crossing, Dead Lander γ 1"
       },
       {
-        "ref": "GiantLairFridgeInside/Giant's Lair: GiantLairFridgeInside, Warden 1"
+        "ref": "GiantLairDeadLands2/Giant's Lair: Crane Crossing, Ledge by the Crossing"
+      },
+      {
+        "ref": "GiantLairFridgeInside/Giant's Lair: Inside the Fridge, Behind the Milk"
+      },
+      {
+        "ref": "GiantLairFridgeInside/Giant's Lair: Inside the Fridge, Krawler 1"
+      },
+      {
+        "ref": "GiantLairFridgeInside/Giant's Lair: Inside the Fridge, Krawler 2"
+      },
+      {
+        "ref": "GiantLairFridgeInside/Giant's Lair: Inside the Fridge, Warden 1"
+      },
+      {
+        "ref": "GiantLairRoachVillage/Giant's Lair: Roach Village, Item Shop 1"
+      },
+      {
+        "ref": "GiantLairRoachVillage/Giant's Lair: Roach Village, Item Shop 2"
+      },
+      {
+        "ref": "GiantLairRoachVillage/Giant's Lair: Roach Village, Item Shop 3"
+      },
+      {
+        "ref": "GiantLairRoachVillage/Giant's Lair: Roach Village, Item Shop 4"
+      },
+      {
+        "ref": "GiantLairSaplingPlains/Giant's Lair: Sapling Plains, Final Fight"
       }
     ]
   },
@@ -7836,6 +8956,41 @@
     ]
   },
   {
+    "name": "MysteryIsland",
+    "visibility_rules": [
+      "$bf_room_in_seed|MysteryIsland"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "MetalLake",
+        "x": 1258,
+        "y": 853
+      }
+    ],
+    "sections": [
+      {
+        "name": "Metal Lake: Peacock Island, Camp Sign",
+        "access_rules": [
+          "$bf_location|7720257"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720257"
+        ]
+      },
+      {
+        "name": "Metal Lake: Peacock Island, Dig Spot",
+        "access_rules": [
+          "$bf_location|7720256"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720256"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Metal Lake",
     "visibility_rules": [
       "$bf_area_in_seed|MetalLake"
@@ -7845,8 +9000,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 649,
-        "y": 277
+        "x": 1331,
+        "y": 627
       }
     ],
     "sections": [
@@ -7873,6 +9028,360 @@
       },
       {
         "ref": "MetalLake/Metal Lake: MetalLake, Water Strider 4"
+      },
+      {
+        "ref": "MysteryIsland/Metal Lake: Peacock Island, Camp Sign"
+      },
+      {
+        "ref": "MysteryIsland/Metal Lake: Peacock Island, Dig Spot"
+      }
+    ]
+  },
+  {
+    "name": "MetalIsland1",
+    "visibility_rules": [
+      "$bf_room_in_seed|MetalIsland1"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "MetalIsland",
+        "x": 406,
+        "y": 1176
+      }
+    ],
+    "sections": [
+      {
+        "name": "Metal Island: Town, Chef's Roof",
+        "access_rules": [
+          "$bf_location|7720258"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720258"
+        ]
+      },
+      {
+        "name": "Metal Island: Town, Mothington X Statue",
+        "access_rules": [
+          "$bf_location|7720259"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720259"
+        ]
+      },
+      {
+        "name": "Metal Island: Town, Tea Shop 1",
+        "access_rules": [
+          "$bf_location|7720260"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720260"
+        ]
+      },
+      {
+        "name": "Metal Island: Town, Tea Shop 2",
+        "access_rules": [
+          "$bf_location|7720261"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720261"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Metal Island",
+    "visibility_rules": [
+      "$bf_area_in_seed|MetalIsland"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "World",
+        "x": 1467,
+        "y": 679
+      }
+    ],
+    "sections": [
+      {
+        "ref": "MetalIsland1/Metal Island: Town, Chef's Roof"
+      },
+      {
+        "ref": "MetalIsland1/Metal Island: Town, Mothington X Statue"
+      },
+      {
+        "ref": "MetalIsland1/Metal Island: Town, Tea Shop 1"
+      },
+      {
+        "ref": "MetalIsland1/Metal Island: Town, Tea Shop 2"
+      }
+    ]
+  },
+  {
+    "name": "TermiteColiseum1",
+    "visibility_rules": [
+      "$bf_room_in_seed|TermiteColiseum1"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "TermiteCity",
+        "x": 933,
+        "y": 88
+      }
+    ],
+    "sections": [
+      {
+        "name": "Termite Capitol: Colosseum Lobby, Caravan Shop 1",
+        "access_rules": [
+          "$bf_location|7720281"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720281"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Colosseum Lobby, Caravan Shop 2",
+        "access_rules": [
+          "$bf_location|7720282"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720282"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Colosseum Lobby, Caravan Shop 3",
+        "access_rules": [
+          "$bf_location|7720283"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720283"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Colosseum Lobby, Caravan Shop 4",
+        "access_rules": [
+          "$bf_location|7720284"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720284"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Colosseum Lobby, Caravan Shop 5",
+        "access_rules": [
+          "$bf_location|7720285"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720285"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TermiteIndustrial",
+    "visibility_rules": [
+      "$bf_room_in_seed|TermiteIndustrial"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "TermiteCity",
+        "x": 880,
+        "y": 453
+      }
+    ],
+    "sections": [
+      {
+        "name": "Termite Capitol: Industrial District, Apartment Balcony",
+        "access_rules": [
+          "$bf_location|7720270"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720270"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Industrial District, Bomb Shop 1",
+        "access_rules": [
+          "$bf_location|7720271"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720271"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Industrial District, Bomb Shop 2",
+        "access_rules": [
+          "$bf_location|7720272"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720272"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Industrial District, Bomb Shop 3",
+        "access_rules": [
+          "$bf_location|7720273"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720273"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Industrial District, Bomb Shop 4",
+        "access_rules": [
+          "$bf_location|7720274"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720274"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Industrial District, Bomb Shop 5",
+        "access_rules": [
+          "$bf_location|7720275"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720275"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Industrial District, Bomb Shop 6",
+        "access_rules": [
+          "$bf_location|7720276"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720276"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Industrial District, Bomb Shop 7",
+        "access_rules": [
+          "$bf_location|7720277"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720277"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Industrial District, Bomb Shop Medal",
+        "access_rules": [
+          "$bf_location|7720278"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720278"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Industrial District, Rooftop Vista",
+        "access_rules": [
+          "$bf_location|7720269"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720269"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Outside the Colosseum, Between the Boxes",
+        "access_rules": [
+          "$bf_location|7720268"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720268"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Outside the Colosseum, Plushie for Terrie",
+        "access_rules": [
+          "$bf_location|7720279"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720279"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TermiteMainPlaza",
+    "visibility_rules": [
+      "$bf_room_in_seed|TermiteMainPlaza"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "TermiteCity",
+        "x": 277,
+        "y": 640
+      }
+    ],
+    "sections": [
+      {
+        "name": "Termite Capitol: Main Plaza, Shop 1",
+        "access_rules": [
+          "$bf_location|7720262"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720262"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Main Plaza, Shop 2",
+        "access_rules": [
+          "$bf_location|7720263"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720263"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Main Plaza, Shop 3",
+        "access_rules": [
+          "$bf_location|7720264"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720264"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Main Plaza, Shop 4",
+        "access_rules": [
+          "$bf_location|7720265"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720265"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TermitePier",
+    "visibility_rules": [
+      "$bf_room_in_seed|TermitePier"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "TermiteCity",
+        "x": 1402,
+        "y": 668
+      }
+    ],
+    "sections": [
+      {
+        "name": "Termite Capitol: Pier, Isolated Pillar by the Dock",
+        "access_rules": [
+          "$bf_location|7720280"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720280"
+        ]
       }
     ]
   },
@@ -7891,6 +9400,24 @@
       }
     ],
     "sections": [
+      {
+        "name": "Termite Capitol: Royal Chamber, Behind the Thrones",
+        "access_rules": [
+          "$bf_location|7720267"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720267"
+        ]
+      },
+      {
+        "name": "Termite Capitol: Royal Chamber, Termite Statue",
+        "access_rules": [
+          "$bf_location|7720266"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720266"
+        ]
+      },
       {
         "name": "Termite Capitol: Termite King's Reward",
         "access_rules": [
@@ -7912,13 +9439,111 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 719,
-        "y": 436
+        "x": 1472,
+        "y": 944
       }
     ],
     "sections": [
       {
+        "ref": "TermiteColiseum1/Termite Capitol: Colosseum Lobby, Caravan Shop 1"
+      },
+      {
+        "ref": "TermiteColiseum1/Termite Capitol: Colosseum Lobby, Caravan Shop 2"
+      },
+      {
+        "ref": "TermiteColiseum1/Termite Capitol: Colosseum Lobby, Caravan Shop 3"
+      },
+      {
+        "ref": "TermiteColiseum1/Termite Capitol: Colosseum Lobby, Caravan Shop 4"
+      },
+      {
+        "ref": "TermiteColiseum1/Termite Capitol: Colosseum Lobby, Caravan Shop 5"
+      },
+      {
+        "ref": "TermiteIndustrial/Termite Capitol: Industrial District, Apartment Balcony"
+      },
+      {
+        "ref": "TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 1"
+      },
+      {
+        "ref": "TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 2"
+      },
+      {
+        "ref": "TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 3"
+      },
+      {
+        "ref": "TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 4"
+      },
+      {
+        "ref": "TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 5"
+      },
+      {
+        "ref": "TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 6"
+      },
+      {
+        "ref": "TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop 7"
+      },
+      {
+        "ref": "TermiteIndustrial/Termite Capitol: Industrial District, Bomb Shop Medal"
+      },
+      {
+        "ref": "TermiteIndustrial/Termite Capitol: Industrial District, Rooftop Vista"
+      },
+      {
+        "ref": "TermiteIndustrial/Termite Capitol: Outside the Colosseum, Between the Boxes"
+      },
+      {
+        "ref": "TermiteIndustrial/Termite Capitol: Outside the Colosseum, Plushie for Terrie"
+      },
+      {
+        "ref": "TermiteMainPlaza/Termite Capitol: Main Plaza, Shop 1"
+      },
+      {
+        "ref": "TermiteMainPlaza/Termite Capitol: Main Plaza, Shop 2"
+      },
+      {
+        "ref": "TermiteMainPlaza/Termite Capitol: Main Plaza, Shop 3"
+      },
+      {
+        "ref": "TermiteMainPlaza/Termite Capitol: Main Plaza, Shop 4"
+      },
+      {
+        "ref": "TermitePier/Termite Capitol: Pier, Isolated Pillar by the Dock"
+      },
+      {
+        "ref": "TermiteRoyalChamber/Termite Capitol: Royal Chamber, Behind the Thrones"
+      },
+      {
+        "ref": "TermiteRoyalChamber/Termite Capitol: Royal Chamber, Termite Statue"
+      },
+      {
         "ref": "TermiteRoyalChamber/Termite Capitol: Termite King's Reward"
+      }
+    ]
+  },
+  {
+    "name": "WaspKingdom3",
+    "visibility_rules": [
+      "$bf_room_in_seed|WaspKingdom3"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "WaspKingdom",
+        "x": 144,
+        "y": 764
+      }
+    ],
+    "sections": [
+      {
+        "name": "Wasp Kingdom Hive: Fountain Room, On the Roof",
+        "access_rules": [
+          "$bf_location|7720286"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720286"
+        ]
       }
     ]
   },
@@ -7949,6 +9574,85 @@
     ]
   },
   {
+    "name": "WaspKingdomDrillRoom",
+    "visibility_rules": [
+      "$bf_room_in_seed|WaspKingdomDrillRoom"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "WaspKingdom",
+        "x": 201,
+        "y": 958
+      }
+    ],
+    "sections": [
+      {
+        "name": "Wasp Kingdom Hive: Drill Room, Dig Spot",
+        "access_rules": [
+          "$bf_location|7720292"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720292"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "WaspKingdomJayde",
+    "visibility_rules": [
+      "$bf_room_in_seed|WaspKingdomJayde"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "WaspKingdom",
+        "x": 1559,
+        "y": 573
+      }
+    ],
+    "sections": [
+      {
+        "name": "Wasp Kingdom Hive: Jayde's Room, Arrival",
+        "access_rules": [
+          "$bf_location|7720291"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720291"
+        ]
+      },
+      {
+        "name": "Wasp Kingdom Hive: Jayde's Room, Shop 1",
+        "access_rules": [
+          "$bf_location|7720288"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720288"
+        ]
+      },
+      {
+        "name": "Wasp Kingdom Hive: Jayde's Room, Shop 2",
+        "access_rules": [
+          "$bf_location|7720289"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720289"
+        ]
+      },
+      {
+        "name": "Wasp Kingdom Hive: Jayde's Room, Shop 3",
+        "access_rules": [
+          "$bf_location|7720290"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720290"
+        ]
+      }
+    ]
+  },
+  {
     "name": "WaspKingdomPrison",
     "visibility_rules": [
       "$bf_room_in_seed|WaspKingdomPrison"
@@ -7964,7 +9668,16 @@
     ],
     "sections": [
       {
-        "name": "Wasp Kingdom Hive: WaspKingdomPrison, Wasp Scout 1",
+        "name": "Wasp Kingdom Hive: Prison, Dig Spot",
+        "access_rules": [
+          "$bf_location|7720287"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720287"
+        ]
+      },
+      {
+        "name": "Wasp Kingdom Hive: Prison, Wasp Scout 1",
         "access_rules": [
           "$bf_location|7721226"
         ],
@@ -7973,7 +9686,7 @@
         ]
       },
       {
-        "name": "Wasp Kingdom Hive: WaspKingdomPrison, Wasp Trooper 1",
+        "name": "Wasp Kingdom Hive: Prison, Wasp Trooper 1",
         "access_rules": [
           "$bf_location|7721225"
         ],
@@ -7993,19 +9706,40 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 511,
-        "y": 46
+        "x": 1055,
+        "y": 163
       }
     ],
     "sections": [
       {
+        "ref": "WaspKingdom3/Wasp Kingdom Hive: Fountain Room, On the Roof"
+      },
+      {
         "ref": "WaspKingdom5/Wasp Kingdom Hive: WaspKingdom5, Wasp Trooper 1"
       },
       {
-        "ref": "WaspKingdomPrison/Wasp Kingdom Hive: WaspKingdomPrison, Wasp Scout 1"
+        "ref": "WaspKingdomDrillRoom/Wasp Kingdom Hive: Drill Room, Dig Spot"
       },
       {
-        "ref": "WaspKingdomPrison/Wasp Kingdom Hive: WaspKingdomPrison, Wasp Trooper 1"
+        "ref": "WaspKingdomJayde/Wasp Kingdom Hive: Jayde's Room, Arrival"
+      },
+      {
+        "ref": "WaspKingdomJayde/Wasp Kingdom Hive: Jayde's Room, Shop 1"
+      },
+      {
+        "ref": "WaspKingdomJayde/Wasp Kingdom Hive: Jayde's Room, Shop 2"
+      },
+      {
+        "ref": "WaspKingdomJayde/Wasp Kingdom Hive: Jayde's Room, Shop 3"
+      },
+      {
+        "ref": "WaspKingdomPrison/Wasp Kingdom Hive: Prison, Dig Spot"
+      },
+      {
+        "ref": "WaspKingdomPrison/Wasp Kingdom Hive: Prison, Wasp Scout 1"
+      },
+      {
+        "ref": "WaspKingdomPrison/Wasp Kingdom Hive: Prison, Wasp Trooper 1"
       }
     ]
   },
@@ -8025,47 +9759,47 @@
     ],
     "sections": [
       {
-        "name": "Bandit Hideout: Cell",
+        "name": "Bandit Hideout: Cell, Dig Spot",
         "access_rules": [
-          "$bf_location|7720071"
+          "$bf_location|7720293"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7720071"
+          "$bf_in_seed|7720293"
         ]
       }
     ]
   },
   {
-    "name": "HideoutCentralRoom",
+    "name": "HideoutEntrance",
     "visibility_rules": [
-      "$bf_room_in_seed|HideoutCentralRoom"
+      "$bf_room_in_seed|HideoutEntrance"
     ],
     "chest_unopened_img": "images/chest_closed.png",
     "chest_opened_img": "images/chest_open.png",
     "map_locations": [
       {
         "map": "BanditHideout",
-        "x": 1076,
-        "y": 506
+        "x": 1014,
+        "y": 1088
       }
     ],
     "sections": [
       {
-        "name": "Bandit Hideout: HideoutCentralRoom, Bandit 1",
+        "name": "Bandit Hideout: Entrance, Altar",
         "access_rules": [
-          "$bf_location|7721120"
+          "$bf_location|7720071"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721120"
+          "$bf_in_seed|7720071"
         ]
       },
       {
-        "name": "Bandit Hideout: HideoutCentralRoom, Thief 1",
+        "name": "Bandit Hideout: Entrance, Astotheles' Fight",
         "access_rules": [
-          "$bf_location|7721121"
+          "$bf_location|7720317"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721121"
+          "$bf_in_seed|7720317"
         ]
       }
     ]
@@ -8086,56 +9820,12 @@
     ],
     "sections": [
       {
-        "name": "Bandit Hideout: HideoutGarden, Bandit 1",
+        "name": "Bandit Hideout: Garden, By the Box",
         "access_rules": [
-          "$bf_location|7721124"
+          "$bf_location|7720294"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721124"
-        ]
-      },
-      {
-        "name": "Bandit Hideout: HideoutGarden, Burglar 1",
-        "access_rules": [
-          "$bf_location|7721123"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721123"
-        ]
-      },
-      {
-        "name": "Bandit Hideout: HideoutGarden, Thief 1",
-        "access_rules": [
-          "$bf_location|7721125"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721125"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "HideoutLeftA",
-    "visibility_rules": [
-      "$bf_room_in_seed|HideoutLeftA"
-    ],
-    "chest_unopened_img": "images/chest_closed.png",
-    "chest_opened_img": "images/chest_open.png",
-    "map_locations": [
-      {
-        "map": "BanditHideout",
-        "x": 785,
-        "y": 408
-      }
-    ],
-    "sections": [
-      {
-        "name": "Bandit Hideout: HideoutLeftA, Burglar 1",
-        "access_rules": [
-          "$bf_location|7721122"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7721122"
+          "$bf_in_seed|7720294"
         ]
       }
     ]
@@ -8156,21 +9846,56 @@
     ],
     "sections": [
       {
-        "name": "Bandit Hideout: HideoutRightA, Burglar 1",
+        "name": "Bandit Hideout: Dining Hall, By the Cauldron",
         "access_rules": [
-          "$bf_location|7721127"
+          "$bf_location|7720297"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721127"
+          "$bf_in_seed|7720297"
         ]
       },
       {
-        "name": "Bandit Hideout: HideoutRightA, Thief 1",
+        "name": "Bandit Hideout: Dining Hall, Dig Spot",
         "access_rules": [
-          "$bf_location|7721126"
+          "$bf_location|7720296"
         ],
         "visibility_rules": [
-          "$bf_in_seed|7721126"
+          "$bf_in_seed|7720296"
+        ]
+      },
+      {
+        "name": "Bandit Hideout: Dining Hall, On Top of the Table",
+        "access_rules": [
+          "$bf_location|7720298"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720298"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "HideoutWestStorage",
+    "visibility_rules": [
+      "$bf_room_in_seed|HideoutWestStorage"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "BanditHideout",
+        "x": 126,
+        "y": 99
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bandit Hideout: Treasury, By the Chest",
+        "access_rules": [
+          "$bf_location|7720295"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720295"
         ]
       }
     ]
@@ -8185,37 +9910,34 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 526,
-        "y": 241
+        "x": 1086,
+        "y": 554
       }
     ],
     "sections": [
       {
-        "ref": "HideoutCell/Bandit Hideout: Cell"
+        "ref": "HideoutCell/Bandit Hideout: Cell, Dig Spot"
       },
       {
-        "ref": "HideoutCentralRoom/Bandit Hideout: HideoutCentralRoom, Bandit 1"
+        "ref": "HideoutEntrance/Bandit Hideout: Entrance, Altar"
       },
       {
-        "ref": "HideoutCentralRoom/Bandit Hideout: HideoutCentralRoom, Thief 1"
+        "ref": "HideoutEntrance/Bandit Hideout: Entrance, Astotheles' Fight"
       },
       {
-        "ref": "HideoutGarden/Bandit Hideout: HideoutGarden, Bandit 1"
+        "ref": "HideoutGarden/Bandit Hideout: Garden, By the Box"
       },
       {
-        "ref": "HideoutGarden/Bandit Hideout: HideoutGarden, Burglar 1"
+        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, By the Cauldron"
       },
       {
-        "ref": "HideoutGarden/Bandit Hideout: HideoutGarden, Thief 1"
+        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, Dig Spot"
       },
       {
-        "ref": "HideoutLeftA/Bandit Hideout: HideoutLeftA, Burglar 1"
+        "ref": "HideoutRightA/Bandit Hideout: Dining Hall, On Top of the Table"
       },
       {
-        "ref": "HideoutRightA/Bandit Hideout: HideoutRightA, Burglar 1"
-      },
-      {
-        "ref": "HideoutRightA/Bandit Hideout: HideoutRightA, Thief 1"
+        "ref": "HideoutWestStorage/Bandit Hideout: Treasury, By the Chest"
       }
     ]
   },
@@ -8296,7 +10018,16 @@
     ],
     "sections": [
       {
-        "name": "Stream Mountain: StreamMountain3, Belostoss 1",
+        "name": "Stream Mountain: Climb, Above the Geysers",
+        "access_rules": [
+          "$bf_location|7720299"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720299"
+        ]
+      },
+      {
+        "name": "Stream Mountain: Climb, Belostoss 1",
         "access_rules": [
           "$bf_location|7721164"
         ],
@@ -8305,7 +10036,7 @@
         ]
       },
       {
-        "name": "Stream Mountain: StreamMountain3, Diving Spider 1",
+        "name": "Stream Mountain: Climb, Diving Spider 1",
         "access_rules": [
           "$bf_location|7721165"
         ],
@@ -8314,7 +10045,7 @@
         ]
       },
       {
-        "name": "Stream Mountain: StreamMountain3, Water Strider 1",
+        "name": "Stream Mountain: Climb, Water Strider 1",
         "access_rules": [
           "$bf_location|7721163"
         ],
@@ -8340,7 +10071,16 @@
     ],
     "sections": [
       {
-        "name": "Stream Mountain: StreamMountain4, Psicorp 1",
+        "name": "Stream Mountain: Bridge Puzzle, Among the Logs",
+        "access_rules": [
+          "$bf_location|7720300"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720300"
+        ]
+      },
+      {
+        "name": "Stream Mountain: Bridge Puzzle, Psicorp 1",
         "access_rules": [
           "$bf_location|7721252"
         ],
@@ -8349,7 +10089,7 @@
         ]
       },
       {
-        "name": "Stream Mountain: StreamMountain4, Water Strider 1",
+        "name": "Stream Mountain: Bridge Puzzle, Water Strider 1",
         "access_rules": [
           "$bf_location|7721253"
         ],
@@ -8358,12 +10098,38 @@
         ]
       },
       {
-        "name": "Stream Mountain: StreamMountain4, Water Strider 2",
+        "name": "Stream Mountain: Bridge Puzzle, Water Strider 2",
         "access_rules": [
           "$bf_location|7721254"
         ],
         "visibility_rules": [
           "$bf_in_seed|7721254"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "StreamMountain5",
+    "visibility_rules": [
+      "$bf_room_in_seed|StreamMountain5"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "StreamMountain",
+        "x": 126,
+        "y": 379
+      }
+    ],
+    "sections": [
+      {
+        "name": "Stream Mountain: Wyrm's Den, Bounty Fight",
+        "access_rules": [
+          "$bf_location|7720301"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720301"
         ]
       }
     ]
@@ -8378,8 +10144,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 488,
-        "y": 188
+        "x": 1009,
+        "y": 448
       }
     ],
     "sections": [
@@ -8393,22 +10159,31 @@
         "ref": "StreamMountain2/Stream Mountain: StreamMountain2, Water Strider 1"
       },
       {
-        "ref": "StreamMountain3/Stream Mountain: StreamMountain3, Belostoss 1"
+        "ref": "StreamMountain3/Stream Mountain: Climb, Above the Geysers"
       },
       {
-        "ref": "StreamMountain3/Stream Mountain: StreamMountain3, Diving Spider 1"
+        "ref": "StreamMountain3/Stream Mountain: Climb, Belostoss 1"
       },
       {
-        "ref": "StreamMountain3/Stream Mountain: StreamMountain3, Water Strider 1"
+        "ref": "StreamMountain3/Stream Mountain: Climb, Diving Spider 1"
       },
       {
-        "ref": "StreamMountain4/Stream Mountain: StreamMountain4, Psicorp 1"
+        "ref": "StreamMountain3/Stream Mountain: Climb, Water Strider 1"
       },
       {
-        "ref": "StreamMountain4/Stream Mountain: StreamMountain4, Water Strider 1"
+        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Among the Logs"
       },
       {
-        "ref": "StreamMountain4/Stream Mountain: StreamMountain4, Water Strider 2"
+        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Psicorp 1"
+      },
+      {
+        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Water Strider 1"
+      },
+      {
+        "ref": "StreamMountain4/Stream Mountain: Bridge Puzzle, Water Strider 2"
+      },
+      {
+        "ref": "StreamMountain5/Stream Mountain: Wyrm's Den, Bounty Fight"
       }
     ]
   },
@@ -8472,7 +10247,16 @@
     ],
     "sections": [
       {
-        "name": "Chomper Caves: ChomperCaves2, Chomper 1",
+        "name": "Chomper Caves: Droplet Room, Behind the Crack",
+        "access_rules": [
+          "$bf_location|7720302"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720302"
+        ]
+      },
+      {
+        "name": "Chomper Caves: Droplet Room, Chomper 1",
         "access_rules": [
           "$bf_location|7721200"
         ],
@@ -8481,7 +10265,7 @@
         ]
       },
       {
-        "name": "Chomper Caves: ChomperCaves2, Chomper 2",
+        "name": "Chomper Caves: Droplet Room, Chomper 2",
         "access_rules": [
           "$bf_location|7721202"
         ],
@@ -8490,7 +10274,7 @@
         ]
       },
       {
-        "name": "Chomper Caves: ChomperCaves2, Chomper 3",
+        "name": "Chomper Caves: Droplet Room, Chomper 3",
         "access_rules": [
           "$bf_location|7721203"
         ],
@@ -8499,7 +10283,7 @@
         ]
       },
       {
-        "name": "Chomper Caves: ChomperCaves2, Chomper 4",
+        "name": "Chomper Caves: Droplet Room, Chomper 4",
         "access_rules": [
           "$bf_location|7721204"
         ],
@@ -8508,12 +10292,38 @@
         ]
       },
       {
-        "name": "Chomper Caves: ChomperCaves2, Chomper Brute 1",
+        "name": "Chomper Caves: Droplet Room, Chomper Brute 1",
         "access_rules": [
           "$bf_location|7721201"
         ],
         "visibility_rules": [
           "$bf_in_seed|7721201"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ChomperCaves3",
+    "visibility_rules": [
+      "$bf_room_in_seed|ChomperCaves3"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "ChomperCaves",
+        "x": 1479,
+        "y": 207
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chomper Caves: Chomper Nest, Fight",
+        "access_rules": [
+          "$bf_location|7720303"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720303"
         ]
       }
     ]
@@ -8528,8 +10338,8 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 162,
-        "y": 196
+        "x": 357,
+        "y": 464
       }
     ],
     "sections": [
@@ -8543,19 +10353,71 @@
         "ref": "ChomperCave1/Chomper Caves: ChomperCave1, Chomper Brute 1"
       },
       {
-        "ref": "ChomperCaves2/Chomper Caves: ChomperCaves2, Chomper 1"
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Behind the Crack"
       },
       {
-        "ref": "ChomperCaves2/Chomper Caves: ChomperCaves2, Chomper 2"
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 1"
       },
       {
-        "ref": "ChomperCaves2/Chomper Caves: ChomperCaves2, Chomper 3"
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 2"
       },
       {
-        "ref": "ChomperCaves2/Chomper Caves: ChomperCaves2, Chomper 4"
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 3"
       },
       {
-        "ref": "ChomperCaves2/Chomper Caves: ChomperCaves2, Chomper Brute 1"
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper 4"
+      },
+      {
+        "ref": "ChomperCaves2/Chomper Caves: Droplet Room, Chomper Brute 1"
+      },
+      {
+        "ref": "ChomperCaves3/Chomper Caves: Chomper Nest, Fight"
+      }
+    ]
+  },
+  {
+    "name": "FishingVillage",
+    "visibility_rules": [
+      "$bf_room_in_seed|FishingVillage"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "FishingVillage",
+        "x": 800,
+        "y": 744
+      }
+    ],
+    "sections": [
+      {
+        "name": "Fishing Village: Behind the Plant",
+        "access_rules": [
+          "$bf_location|7720304"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720304"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fishing Village",
+    "visibility_rules": [
+      "$bf_area_in_seed|FishingVillage"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "World",
+        "x": 1816,
+        "y": 324
+      }
+    ],
+    "sections": [
+      {
+        "ref": "FishingVillage/Fishing Village: Behind the Plant"
       }
     ]
   },
@@ -8575,12 +10437,21 @@
     ],
     "sections": [
       {
-        "name": "Upper Snakemouth: UpperSnekBeforeBoss, Bloatshroom 1",
+        "name": "Upper Snakemouth: Gear Machine, Bloatshroom 1",
         "access_rules": [
           "$bf_location|7721266"
         ],
         "visibility_rules": [
           "$bf_in_seed|7721266"
+        ]
+      },
+      {
+        "name": "Upper Snakemouth: Gear Machine, On Top of the Machine",
+        "access_rules": [
+          "$bf_location|7720307"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720307"
         ]
       }
     ]
@@ -8601,7 +10472,16 @@
     ],
     "sections": [
       {
-        "name": "Upper Snakemouth: UpperSnekGeizerRoom, Bloatshroom 1",
+        "name": "Upper Snakemouth: Geyser Room, Below the Pump",
+        "access_rules": [
+          "$bf_location|7720313"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720313"
+        ]
+      },
+      {
+        "name": "Upper Snakemouth: Geyser Room, Bloatshroom 1",
         "access_rules": [
           "$bf_location|7721278"
         ],
@@ -8610,7 +10490,7 @@
         ]
       },
       {
-        "name": "Upper Snakemouth: UpperSnekGeizerRoom, Zombee 1",
+        "name": "Upper Snakemouth: Geyser Room, Zombee 1",
         "access_rules": [
           "$bf_location|7721279"
         ],
@@ -8636,7 +10516,16 @@
     ],
     "sections": [
       {
-        "name": "Upper Snakemouth: UpperSnekMiddleRoom, Bloatshroom 1",
+        "name": "Upper Snakemouth: Flooded Hall, Behind the Waterfall",
+        "access_rules": [
+          "$bf_location|7720305"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720305"
+        ]
+      },
+      {
+        "name": "Upper Snakemouth: Flooded Hall, Bloatshroom 1",
         "access_rules": [
           "$bf_location|7721269"
         ],
@@ -8645,7 +10534,7 @@
         ]
       },
       {
-        "name": "Upper Snakemouth: UpperSnekMiddleRoom, Zombee 1",
+        "name": "Upper Snakemouth: Flooded Hall, Zombee 1",
         "access_rules": [
           "$bf_location|7721270"
         ],
@@ -8671,7 +10560,16 @@
     ],
     "sections": [
       {
-        "name": "Upper Snakemouth: UpperSnekPlatformRoom, Zombee 1",
+        "name": "Upper Snakemouth: Icicle Climb, Broken Test Tube",
+        "access_rules": [
+          "$bf_location|7720311"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720311"
+        ]
+      },
+      {
+        "name": "Upper Snakemouth: Icicle Climb, Zombee 1",
         "access_rules": [
           "$bf_location|7721271"
         ],
@@ -8680,7 +10578,7 @@
         ]
       },
       {
-        "name": "Upper Snakemouth: UpperSnekPlatformRoom, Zombee 2",
+        "name": "Upper Snakemouth: Icicle Climb, Zombee 2",
         "access_rules": [
           "$bf_location|7721272"
         ],
@@ -8689,7 +10587,7 @@
         ]
       },
       {
-        "name": "Upper Snakemouth: UpperSnekPlatformRoom, Zombee 3",
+        "name": "Upper Snakemouth: Icicle Climb, Zombee 3",
         "access_rules": [
           "$bf_location|7721274"
         ],
@@ -8698,7 +10596,7 @@
         ]
       },
       {
-        "name": "Upper Snakemouth: UpperSnekPlatformRoom, Zombeetle 1",
+        "name": "Upper Snakemouth: Icicle Climb, Zombeetle 1",
         "access_rules": [
           "$bf_location|7721273"
         ],
@@ -8724,7 +10622,34 @@
     ],
     "sections": [
       {
-        "name": "Upper Snakemouth: UpperSnekPressurePlateRoom, Zombiant 1",
+        "name": "Upper Snakemouth: Piano Puzzle, Broken Test Tube",
+        "access_rules": [
+          "$bf_location|7720308"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720308"
+        ]
+      },
+      {
+        "name": "Upper Snakemouth: Piano Puzzle, By the Wind Pipe",
+        "access_rules": [
+          "$bf_location|7720310"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720310"
+        ]
+      },
+      {
+        "name": "Upper Snakemouth: Piano Puzzle, Pressure Plate Door",
+        "access_rules": [
+          "$bf_location|7720309"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720309"
+        ]
+      },
+      {
+        "name": "Upper Snakemouth: Piano Puzzle, Zombiant 1",
         "access_rules": [
           "$bf_location|7721267"
         ],
@@ -8733,7 +10658,7 @@
         ]
       },
       {
-        "name": "Upper Snakemouth: UpperSnekPressurePlateRoom, Zombiant 2",
+        "name": "Upper Snakemouth: Piano Puzzle, Zombiant 2",
         "access_rules": [
           "$bf_location|7721268"
         ],
@@ -8759,7 +10684,7 @@
     ],
     "sections": [
       {
-        "name": "Upper Snakemouth: UpperSnekRiverPuzzle, Bloatshroom 1",
+        "name": "Upper Snakemouth: River Puzzle, Bloatshroom 1",
         "access_rules": [
           "$bf_location|7721275"
         ],
@@ -8768,7 +10693,16 @@
         ]
       },
       {
-        "name": "Upper Snakemouth: UpperSnekRiverPuzzle, Zombeetle 1",
+        "name": "Upper Snakemouth: River Puzzle, Fight Behind the Barrier",
+        "access_rules": [
+          "$bf_location|7720312"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720312"
+        ]
+      },
+      {
+        "name": "Upper Snakemouth: River Puzzle, Zombeetle 1",
         "access_rules": [
           "$bf_location|7721276"
         ],
@@ -8777,7 +10711,7 @@
         ]
       },
       {
-        "name": "Upper Snakemouth: UpperSnekRiverPuzzle, Zombiant 1",
+        "name": "Upper Snakemouth: River Puzzle, Zombiant 1",
         "access_rules": [
           "$bf_location|7721277"
         ],
@@ -8803,7 +10737,16 @@
     ],
     "sections": [
       {
-        "name": "Upper Snakemouth: UpperSnekSwitchPuzzle, Zombeetle 1",
+        "name": "Upper Snakemouth: Pipe Puzzle, Puzzle Reward",
+        "access_rules": [
+          "$bf_location|7720306"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720306"
+        ]
+      },
+      {
+        "name": "Upper Snakemouth: Pipe Puzzle, Zombeetle 1",
         "access_rules": [
           "$bf_location|7721265"
         ],
@@ -8829,21 +10772,21 @@
     ],
     "sections": [
       {
-        "name": "Upper Snakemouth: Entrance",
-        "access_rules": [
-          "$bf_location|7720074"
-        ],
-        "visibility_rules": [
-          "$bf_in_seed|7720074"
-        ]
-      },
-      {
-        "name": "Upper Snakemouth: UpperSnekTransition, Bloatshroom 1",
+        "name": "Upper Snakemouth: Icicle Pond, Bloatshroom 1",
         "access_rules": [
           "$bf_location|7721264"
         ],
         "visibility_rules": [
           "$bf_in_seed|7721264"
+        ]
+      },
+      {
+        "name": "Upper Snakemouth: Icicle Pond, Fight",
+        "access_rules": [
+          "$bf_location|7720074"
+        ],
+        "visibility_rules": [
+          "$bf_in_seed|7720074"
         ]
       }
     ]
@@ -8858,61 +10801,88 @@
     "map_locations": [
       {
         "map": "World",
-        "x": 68,
-        "y": 261
+        "x": 168,
+        "y": 595
       }
     ],
     "sections": [
       {
-        "ref": "UpperSnekBeforeBoss/Upper Snakemouth: UpperSnekBeforeBoss, Bloatshroom 1"
+        "ref": "UpperSnekBeforeBoss/Upper Snakemouth: Gear Machine, Bloatshroom 1"
       },
       {
-        "ref": "UpperSnekGeizerRoom/Upper Snakemouth: UpperSnekGeizerRoom, Bloatshroom 1"
+        "ref": "UpperSnekBeforeBoss/Upper Snakemouth: Gear Machine, On Top of the Machine"
       },
       {
-        "ref": "UpperSnekGeizerRoom/Upper Snakemouth: UpperSnekGeizerRoom, Zombee 1"
+        "ref": "UpperSnekGeizerRoom/Upper Snakemouth: Geyser Room, Below the Pump"
       },
       {
-        "ref": "UpperSnekMiddleRoom/Upper Snakemouth: UpperSnekMiddleRoom, Bloatshroom 1"
+        "ref": "UpperSnekGeizerRoom/Upper Snakemouth: Geyser Room, Bloatshroom 1"
       },
       {
-        "ref": "UpperSnekMiddleRoom/Upper Snakemouth: UpperSnekMiddleRoom, Zombee 1"
+        "ref": "UpperSnekGeizerRoom/Upper Snakemouth: Geyser Room, Zombee 1"
       },
       {
-        "ref": "UpperSnekPlatformRoom/Upper Snakemouth: UpperSnekPlatformRoom, Zombee 1"
+        "ref": "UpperSnekMiddleRoom/Upper Snakemouth: Flooded Hall, Behind the Waterfall"
       },
       {
-        "ref": "UpperSnekPlatformRoom/Upper Snakemouth: UpperSnekPlatformRoom, Zombee 2"
+        "ref": "UpperSnekMiddleRoom/Upper Snakemouth: Flooded Hall, Bloatshroom 1"
       },
       {
-        "ref": "UpperSnekPlatformRoom/Upper Snakemouth: UpperSnekPlatformRoom, Zombee 3"
+        "ref": "UpperSnekMiddleRoom/Upper Snakemouth: Flooded Hall, Zombee 1"
       },
       {
-        "ref": "UpperSnekPlatformRoom/Upper Snakemouth: UpperSnekPlatformRoom, Zombeetle 1"
+        "ref": "UpperSnekPlatformRoom/Upper Snakemouth: Icicle Climb, Broken Test Tube"
       },
       {
-        "ref": "UpperSnekPressurePlateRoom/Upper Snakemouth: UpperSnekPressurePlateRoom, Zombiant 1"
+        "ref": "UpperSnekPlatformRoom/Upper Snakemouth: Icicle Climb, Zombee 1"
       },
       {
-        "ref": "UpperSnekPressurePlateRoom/Upper Snakemouth: UpperSnekPressurePlateRoom, Zombiant 2"
+        "ref": "UpperSnekPlatformRoom/Upper Snakemouth: Icicle Climb, Zombee 2"
       },
       {
-        "ref": "UpperSnekRiverPuzzle/Upper Snakemouth: UpperSnekRiverPuzzle, Bloatshroom 1"
+        "ref": "UpperSnekPlatformRoom/Upper Snakemouth: Icicle Climb, Zombee 3"
       },
       {
-        "ref": "UpperSnekRiverPuzzle/Upper Snakemouth: UpperSnekRiverPuzzle, Zombeetle 1"
+        "ref": "UpperSnekPlatformRoom/Upper Snakemouth: Icicle Climb, Zombeetle 1"
       },
       {
-        "ref": "UpperSnekRiverPuzzle/Upper Snakemouth: UpperSnekRiverPuzzle, Zombiant 1"
+        "ref": "UpperSnekPressurePlateRoom/Upper Snakemouth: Piano Puzzle, Broken Test Tube"
       },
       {
-        "ref": "UpperSnekSwitchPuzzle/Upper Snakemouth: UpperSnekSwitchPuzzle, Zombeetle 1"
+        "ref": "UpperSnekPressurePlateRoom/Upper Snakemouth: Piano Puzzle, By the Wind Pipe"
       },
       {
-        "ref": "UpperSnekTransition/Upper Snakemouth: Entrance"
+        "ref": "UpperSnekPressurePlateRoom/Upper Snakemouth: Piano Puzzle, Pressure Plate Door"
       },
       {
-        "ref": "UpperSnekTransition/Upper Snakemouth: UpperSnekTransition, Bloatshroom 1"
+        "ref": "UpperSnekPressurePlateRoom/Upper Snakemouth: Piano Puzzle, Zombiant 1"
+      },
+      {
+        "ref": "UpperSnekPressurePlateRoom/Upper Snakemouth: Piano Puzzle, Zombiant 2"
+      },
+      {
+        "ref": "UpperSnekRiverPuzzle/Upper Snakemouth: River Puzzle, Bloatshroom 1"
+      },
+      {
+        "ref": "UpperSnekRiverPuzzle/Upper Snakemouth: River Puzzle, Fight Behind the Barrier"
+      },
+      {
+        "ref": "UpperSnekRiverPuzzle/Upper Snakemouth: River Puzzle, Zombeetle 1"
+      },
+      {
+        "ref": "UpperSnekRiverPuzzle/Upper Snakemouth: River Puzzle, Zombiant 1"
+      },
+      {
+        "ref": "UpperSnekSwitchPuzzle/Upper Snakemouth: Pipe Puzzle, Puzzle Reward"
+      },
+      {
+        "ref": "UpperSnekSwitchPuzzle/Upper Snakemouth: Pipe Puzzle, Zombeetle 1"
+      },
+      {
+        "ref": "UpperSnekTransition/Upper Snakemouth: Icicle Pond, Bloatshroom 1"
+      },
+      {
+        "ref": "UpperSnekTransition/Upper Snakemouth: Icicle Pond, Fight"
       }
     ]
   }

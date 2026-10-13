@@ -50,23 +50,26 @@ local function category_on(category)
 end
 
 -- Each door's destination in this seed: door_targets sends a door where like_door leads in the game (a two-way door
--- to the region like_door's partner stands in, a one-way to the region like_door lands in).
-local function seed_entrances(door_targets)
+-- to the region like_door's partner stands in, a one-way to the region like_door lands in). A seed's own start
+-- (start_region, nil for the game's) is where Menu leads.
+local function seed_entrances(door_targets, start_region)
     local like = {}
     for _, target in ipairs(door_targets or {}) do
         like[target.map .. "|" .. target.door] = target.like_map .. "|" .. target.like_door
     end
     local entrances = {}
     for _, entrance in ipairs(DATA.entrances) do
-        local to = entrance.to
-        if entrance.door then
+        local name, to = entrance.name, entrance.to
+        if entrance.start then
+            if start_region then name, to = DATA.start_entrance, start_region end
+        elseif entrance.door then
             local key = entrance.door.map .. "|" .. entrance.door.door
             to = DATA.partners[like[key] or key].region
         elseif entrance.one_way then
             local target = like[entrance.one_way.map .. "|" .. entrance.one_way.door]
             if target then to = DATA.one_way_to[target].region end
         end
-        entrances[#entrances + 1] = { name = entrance.name, from = entrance.from, to = to, rule = entrance.rule }
+        entrances[#entrances + 1] = { name = name, from = entrance.from, to = to, rule = entrance.rule }
     end
     return entrances
 end
@@ -81,10 +84,19 @@ function bf_set_seed(slot_data, location_ids)
     for name, value in pairs(DATA.option_defaults) do SEED.options[name] = value end
     SEED.starting_member = DATA.starting_member_default
     SEED.door_targets = {}
+    SEED.start_region = nil
     if slot_data then
         for name, value in pairs(slot_data.options or {}) do SEED.options[name] = value end
         if slot_data.starting_member ~= nil then SEED.starting_member = slot_data.starting_member end
         SEED.door_targets = slot_data.door_targets or {}
+        local start = slot_data.start
+        if type(start) == "table" and start.map then
+            local key = string.format("%s|%s|%s", tostring(start.map), tostring(start.from), tostring(start.door))
+            SEED.start_region = DATA.start_regions[key]
+            if SEED.start_region == nil then
+                print("Bug Fables: this seed's start " .. key .. " is no room start the pack knows")
+            end
+        end
         if slot_data.world_version ~= DATA.world_version then
             print(string.format("Bug Fables: this seed is world %s, the pack was made from %s",
                 tostring(slot_data.world_version), DATA.world_version))
@@ -95,7 +107,7 @@ function bf_set_seed(slot_data, location_ids)
         SEED.locations = {}
         for _, id in ipairs(location_ids) do SEED.locations[id] = true end
     end
-    SEED.entrances = seed_entrances(SEED.door_targets)
+    SEED.entrances = seed_entrances(SEED.door_targets, SEED.start_region)
     -- With a starting member, the starting members are start inventory.
     SEED.precollected = {}
     for number, name in ipairs(DATA.members) do
@@ -118,6 +130,14 @@ local function item_count(ability)
     local data = DATA.abilities[ability]
     if data.base_option and not truthy(SEED.options[data.base_option]) then return data.level - 1 end
     return data.level
+end
+
+-- A field a resolver fills from the world: FromWorldAttr names a world attribute slot_data sends among its options.
+local function field(value)
+    if type(value) == "table" and value.resolver == "FromWorldAttr" then
+        return option_number(SEED.options[DATA.world_attrs[value.name]])
+    end
+    return value
 end
 
 local eval
@@ -143,6 +163,14 @@ local RULES = {
             if count(name) < needed then return false end
         end
         return true
+    end,
+    HasFromListUnique = function(rule)
+        local needed = field(rule.args.count)
+        local held = 0
+        for _, name in ipairs(rule.args.item_names) do
+            if count(name) >= 1 then held = held + 1 end
+        end
+        return held >= needed
     end,
     True_ = function() return true end,
     False_ = function() return false end,
@@ -232,7 +260,9 @@ local function sweep(without_events)
     end
     local locations = {}
     for _, loc in ipairs(DATA.locations) do
-        locations[loc.id] = reached[loc.region] == true and eval(loc.rule)
+        -- The opening's checks are sent as a new file begins, wherever the seed starts.
+        local region = (loc.quiet and SEED.start_region) and DATA.origin or loc.region
+        locations[loc.id] = reached[region] == true and eval(loc.rule)
     end
     return { reached = reached, locations = locations }
 end

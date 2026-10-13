@@ -102,6 +102,15 @@
         }
       },
       {
+        "title": "Defiant Root",
+        "content": {
+          "type": "map",
+          "maps": [
+            "DefiantRoot"
+          ]
+        }
+      },
+      {
         "title": "Sand Castle",
         "content": {
           "type": "map",
@@ -156,6 +165,15 @@
         }
       },
       {
+        "title": "Metal Island",
+        "content": {
+          "type": "map",
+          "maps": [
+            "MetalIsland"
+          ]
+        }
+      },
+      {
         "title": "Termite City",
         "content": {
           "type": "map",
@@ -197,6 +215,15 @@
           "type": "map",
           "maps": [
             "ChomperCaves"
+          ]
+        }
+      },
+      {
+        "title": "Fishing Village",
+        "content": {
+          "type": "map",
+          "maps": [
+            "FishingVillage"
           ]
         }
       },

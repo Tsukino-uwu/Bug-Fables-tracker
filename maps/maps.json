@@ -1,8 +1,8 @@
 [
   {
     "name": "World",
-    "location_size": 30,
-    "location_border_thickness": 2,
+    "location_size": 56,
+    "location_border_thickness": 3,
     "img": "images/maps/World.png"
   },
   {
@@ -66,6 +66,12 @@
     "img": "images/maps/WildGrasslands.png"
   },
   {
+    "name": "DefiantRoot",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/DefiantRoot.png"
+  },
+  {
     "name": "SandCastle",
     "location_size": 28,
     "location_border_thickness": 2,
@@ -102,6 +108,12 @@
     "img": "images/maps/MetalLake.png"
   },
   {
+    "name": "MetalIsland",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/MetalIsland.png"
+  },
+  {
     "name": "TermiteCity",
     "location_size": 28,
     "location_border_thickness": 2,
@@ -130,6 +142,12 @@
     "location_size": 28,
     "location_border_thickness": 2,
     "img": "images/maps/ChomperCaves.png"
+  },
+  {
+    "name": "FishingVillage",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/FishingVillage.png"
   },
   {
     "name": "UpperSnakemouth",

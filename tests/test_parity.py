@@ -92,7 +92,7 @@ def every_custom_rule() -> list:
     return [*(rules.CanUse(name) for name in abilities), *(rules.MoveItem(name) for name in abilities),
             *(rules.Member(name) for name in WORLD["items"].MEMBERS), rules.Boat(1), rules.Boat(2),
             rules.WayBack(Has("Jump")), rules.one_way(Has("Explorer Permit"), Has("Jump")),
-            rules.WHOLE_PARTY, rules.ALL_ATTACKS, WORLD["rules"].JUMP, rules.ItemOnHand(),
+            rules.WHOLE_PARTY, rules.ALL_ATTACKS, WORLD["rules"].JUMP, WORLD["rules"].ARTIFACT_GATE, rules.ItemOnHand(),
             *(CanReachRegion(region) for region in sorted(shops)), CanReachRegion(data.MAP_AREAS[0].region),
             *filtered]
 
@@ -111,7 +111,7 @@ class TestParity(unittest.TestCase):
                 call_all(multiworld, step)
             world = multiworld.worlds[1]
             lua.set_seed({"options": WORLD["slot_data"].options_for_slot(world), "door_targets": [],
-                          "starting_member": world.starting_member,
+                          "starting_member": world.starting_member, "start": world.start,
                           "world_version": BugFablesWorld.world_version.as_simple_string()}, None)
             for k in range(STATES_PER_SEED):
                 held = {name: rng.randint(0, 2) for name in codes if rng.random() < 0.6}

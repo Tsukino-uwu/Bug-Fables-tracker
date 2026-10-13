@@ -9,7 +9,10 @@ step in the randomizer's `agent_docs/apimplementation.md` (the user, 2026-10-03)
 - **Full** PopTracker support (the user, 2026-10-01): every feature PopTracker's docs offer that applies, none
   left optional. Anything that doesn't apply is recorded under "Not applicable" with its reason.
 - A PopTracker pack that tracks a Bug Fables Archipelago seed: items, checks, and which checks are in logic.
-- A map **drawn by code** (no AI art, no game art), its look picked by the user on screen.
+- A map from the game itself: the World tab is the game's own pause map, and each room a render of the room from
+  above (the user, 2026-10-13: "use the game's world map", then the rooms as pictures), both made by the mod's dev
+  console; what the game has no picture of (an area's layout, doors, lines) is drawn by code. No AI art; the user
+  picks every look on screen.
 - Normal seeds: a fixed layout, since the rooms never move.
 - Room Swap seeds: each room appears in the slot it now sits in.
 - Coupled/Decoupled door shuffle: rooms stay at their normal place, with no connections drawn.
@@ -37,7 +40,9 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
   - `world_version`: the pack warns when it differs from the apworld version it was built from.
   - `door_targets`: a list of {map, door, like_map, like_door}. A door now leads where like_door leads in vanilla,
     so its destination is like_door's vanilla partner's map. Unchanged doors are left out.
-  - `start`: {map, from}, or {} for the game's own start.
+  - `start`: {map, from, door}, or {} for the game's own start. Since the randomizer's build step 96 the logic
+    begins beside that door, and the opening's quiet checks sit in Menu; the pack follows it since 2026-10-13
+    (`start_regions` in the export, `seed_entrances` in the Lua).
   - `starting_member` (top level): 0 Vi, 1 Kabbu, 2 Leif alone, 3 all three, -1 the story's party.
   - `options` (since the randomizer's build step 39, 2026-10-03): the options as the seed applied them, toggles as
     JSON booleans: `shuffle_field_moves`, `shuffle_jump`, `points_of_no_return`, `artifacts_required` (capped),
@@ -102,11 +107,22 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
    - night and story versions of a room (their own maps in the logic) get no tab until one holds a check;
    - still to come: a hand-editable nudge table, room and area names from the game's text, a door-less image for
      Coupled/Decoupled seeds, Lua picking the tab from slot_data.
+   - **2026-10-13, the game's own pictures** (the user's ask): the World tab is the pause map's art, opened and
+     rendered from above by the mod's dev command `worldmap`, each area pin where the game puts its pip
+     (`tools/world_map.py`, `data/world_map.json`; the lines aren't drawn on it). Every room is rendered from above by
+     `roomshot all` (245 rooms), each with where the game's (x, z) land in it, so checks can sit at their own spots.
+     Indoors and caves show their ceilings from above: the view is to be cut above the highest spot the party
+     stands. Then: the tabs as World, then each area (its layout with the room pictures in it), then each of its
+     rooms, a pin per check at its entity's spot (the user, 2026-10-13, like Crystal's tracker; nested tabs and
+     `ActivateTab` read in PopTracker's `src/ui/trackerview.cpp` and `src/uilib/tabs.cpp` at `19f0b1f`: every tab set
+     switches only if it has a tab of that name). Auto tabbing a setting: off stays on World, on opens the room's tab
+     (the user, 2026-10-13). Images are fixed per map, so door-shuffled seeds want plain overviews, a variant.
 5. **Room Swap:** one pin per slot. Its sections are the checks of every area that can land there (same world part
    and door count), each visible only when the seed put that area there, derived from `door_targets`. If that
    proves unreliable, ask the randomizer for a slot_data key.
 6. **Fog of war:** a pin shows only when its room is in the visited list, unless the toggle item "Show unvisited
-   rooms" is on (off by default).
+   rooms" is on (off by default). Only with the doors shuffled (the user, 2026-10-13): with the game's own doors
+   every room shows.
 7. **Doors:** with the door shuffle on, each door taken (the doors key) shows where it led, as far as PopTracker
    can show it: a badge or section on the room's pin, never a drawn line. Find the best fit in the docs then.
    Built 2026-10-08: the key read (item 21) and each taken door's destination worked out in Lua (`bf_door_led_to`,
@@ -169,7 +185,9 @@ The rest of PopTracker's Archipelago interface (`doc/AUTOTRACKING.md`, `d2af7f1`
 
 1. The logic export, the item grid, and the checks as pins on a placeholder map drawn by code (built 2026-10-03:
    `tools/export.py`, `scripts/logic.lua`, `tests/test_parity.py`); exported again at world 0.3.0 (2026-10-08: map
-   areas, `CanReachRegion`, `ItemOnHand`, the new options; the randomizer's build step 56).
+   areas, `CanReachRegion`, `ItemOnHand`, the new options; the randomizer's build step 56). Exported again
+   2026-10-13 with every room mapped: 614 locations in 182 rooms of 25 areas; the start from slot_data; the last
+   fight's artifact gate (`HasFromListUnique` with Rule Builder's `FromWorldAttr`, the randomizer's build step 94).
 2. The map (its first version built 2026-10-04, see item 4), following the player, and hints.
 3. Fog of war and doors: the randomizer writes their data storage keys since 2026-10-08 (its build steps 55 and 57).
 4. Updates and the pack list, once the repo goes public with a release.
@@ -178,7 +196,8 @@ The rest of PopTracker's Archipelago interface (`doc/AUTOTRACKING.md`, `d2af7f1`
 
 ## Rules carried over from the randomizer
 
-- No AI art and no game art: code-drawn only, and the user picks every look on screen.
+- No AI art; game art only as the game itself shows it, rendered by the mod's dev console (the user, 2026-10-13),
+  and the user picks every look on screen.
 - A project's licence before anything else of it, and the user's yes before reading it at all. PopTracker is
   GPL-3.0; the pack is its own data and Lua, with no PopTracker code copied. This repo is MIT (the user, 2026-10-03).
 - Facts about PopTracker, Archipelago and the game come from their docs and source, never from memory.
@@ -196,7 +215,9 @@ The rest of PopTracker's Archipelago interface (`doc/AUTOTRACKING.md`, `d2af7f1`
   none: it checks with pack-checker only, its logic hand-ported. Ours is generated, so a Python test can run the
   pack's Lua (Lua 5.4 through lupa) beside the apworld's own logic and prove they agree.
 - **MIT**, like the randomizer. lupa (MIT, its Lua MIT) is a test dependency only; pack-checker (GPL-3.0) is run,
-  never copied or shipped.
+  never copied or shipped. Pillow (MIT-CMU) is a tools dependency since 2026-10-13, for the game's pictures (the
+  randomizer's `licensing.md`). The game's pictures in the pack are the game's, not MIT: to be said in the README
+  and the release.
 
 ## Verification
 
