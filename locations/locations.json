@@ -865,8 +865,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsOutsideCity",
-        "x": 434,
-        "y": 68,
+        "x": 482,
+        "y": 141,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsOutsideCity"
         ]
@@ -881,15 +881,15 @@
   {
     "name": "Outside the City: elsewhere in the room",
     "visibility_rules": [
-      "$bf_any_in_seed|7720013|7720001|7720091|7720066|7720075"
+      "$bf_any_in_seed|7720013|7720001|7720066|7720075"
     ],
     "chest_unopened_img": "images/chest_closed.png",
     "chest_opened_img": "images/chest_open.png",
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsOutsideCity",
-        "x": 584,
-        "y": 358,
+        "x": 632,
+        "y": 367,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsOutsideCity"
         ]
@@ -901,9 +901,6 @@
       },
       {
         "ref": "BugariaOutskirtsOutsideCity/Outskirts: Maki and Eetl's Gift"
-      },
-      {
-        "ref": "BugariaOutskirtsOutsideCity/Outskirts: Outside the City, Dig Spot"
       },
       {
         "ref": "BugariaOutskirtsOutsideCity/Outskirts: Outside the City, Opening"
@@ -923,8 +920,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsOutsideCity",
-        "x": 710,
-        "y": 303,
+        "x": 757,
+        "y": 339,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsOutsideCity"
         ]
@@ -952,8 +949,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsOutsideCity",
-        "x": 1071,
-        "y": 290,
+        "x": 1119,
+        "y": 325,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsOutsideCity"
         ]
@@ -975,8 +972,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsOutsideCity",
-        "x": 926,
-        "y": 69,
+        "x": 974,
+        "y": 167,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsOutsideCity"
         ]
@@ -998,8 +995,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsOutsideCity",
-        "x": 954,
-        "y": 69,
+        "x": 1002,
+        "y": 167,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsOutsideCity"
         ]
@@ -1008,6 +1005,29 @@
     "sections": [
       {
         "ref": "BugariaOutskirtsOutsideCity/Outskirts: Madeleine's House, Table Right"
+      }
+    ]
+  },
+  {
+    "name": "Outside the City: Dig Spot",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720091"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_BugariaOutskirtsOutsideCity",
+        "x": 837,
+        "y": 171,
+        "restrict_visibility_rules": [
+          "$bf_seen|BugariaOutskirtsOutsideCity"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "ref": "BugariaOutskirtsOutsideCity/Outskirts: Outside the City, Dig Spot"
       }
     ]
   },
@@ -1021,8 +1041,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsOutsideCity",
-        "x": 745,
-        "y": 651,
+        "x": 793,
+        "y": 513,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsOutsideCity"
         ]
@@ -1044,8 +1064,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsOutsideCity",
-        "x": 264,
-        "y": 240,
+        "x": 312,
+        "y": 308,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsOutsideCity"
         ]
@@ -1064,8 +1084,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsOutsideCity",
-        "x": 24,
-        "y": 480,
+        "x": 72,
+        "y": 428,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsOutsideCity"
         ]
@@ -1090,8 +1110,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskitsSnakemouthCorridor1",
-        "x": 848,
-        "y": 413,
+        "x": 872,
+        "y": 331,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskitsSnakemouthCorridor1"
         ]
@@ -1113,8 +1133,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskitsSnakemouthCorridor1",
-        "x": 237,
-        "y": 339,
+        "x": 261,
+        "y": 294,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskitsSnakemouthCorridor1"
         ]
@@ -1136,8 +1156,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskitsSnakemouthCorridor1",
-        "x": 497,
-        "y": 418,
+        "x": 522,
+        "y": 334,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskitsSnakemouthCorridor1"
         ]
@@ -1159,8 +1179,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskitsSnakemouthCorridor1",
-        "x": 1076,
-        "y": 396,
+        "x": 1100,
+        "y": 323,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskitsSnakemouthCorridor1"
         ]
@@ -1173,7 +1193,7 @@
     ]
   },
   {
-    "name": "Golden Path: elsewhere in the room",
+    "name": "Golden Path: Dig Spot",
     "visibility_rules": [
       "$bf_any_in_seed|7720087"
     ],
@@ -1182,8 +1202,8 @@
     "map_locations": [
       {
         "map": "room_BOGoldenPath",
-        "x": 626,
-        "y": 92,
+        "x": 810,
+        "y": 143,
         "restrict_visibility_rules": [
           "$bf_seen|BOGoldenPath"
         ]
@@ -1205,8 +1225,8 @@
     "map_locations": [
       {
         "map": "room_BOGoldenPath",
-        "x": 844,
-        "y": 156,
+        "x": 858,
+        "y": 244,
         "restrict_visibility_rules": [
           "$bf_seen|BOGoldenPath"
         ]
@@ -1228,8 +1248,8 @@
     "map_locations": [
       {
         "map": "room_BOGoldenPath",
-        "x": 448,
-        "y": 144,
+        "x": 462,
+        "y": 269,
         "restrict_visibility_rules": [
           "$bf_seen|BOGoldenPath"
         ]
@@ -1251,8 +1271,8 @@
     "map_locations": [
       {
         "map": "room_BOGoldenPath",
-        "x": 854,
-        "y": 48,
+        "x": 869,
+        "y": 190,
         "restrict_visibility_rules": [
           "$bf_seen|BOGoldenPath"
         ]
@@ -1274,8 +1294,8 @@
     "map_locations": [
       {
         "map": "room_BOGoldenPath",
-        "x": 1145,
-        "y": 156,
+        "x": 1159,
+        "y": 182,
         "restrict_visibility_rules": [
           "$bf_seen|BOGoldenPath"
         ]
@@ -1297,8 +1317,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsEast1",
-        "x": 558,
-        "y": 516,
+        "x": 611,
+        "y": 362,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsEast1"
         ]
@@ -1320,8 +1340,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsEast1",
-        "x": 665,
-        "y": 24,
+        "x": 717,
+        "y": 145,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsEast1"
         ]
@@ -1343,8 +1363,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsEast1",
-        "x": 568,
-        "y": 657,
+        "x": 620,
+        "y": 534,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsEast1"
         ]
@@ -1366,8 +1386,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsEast1",
-        "x": 490,
-        "y": 467,
+        "x": 543,
+        "y": 439,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsEast1"
         ]
@@ -1389,8 +1409,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsEast1",
-        "x": 219,
-        "y": 460,
+        "x": 272,
+        "y": 363,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsEast1"
         ]
@@ -1412,8 +1432,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsEast1",
-        "x": 715,
-        "y": 418,
+        "x": 767,
+        "y": 342,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsEast1"
         ]
@@ -1432,8 +1452,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsEast1",
-        "x": 651,
-        "y": 547,
+        "x": 703,
+        "y": 479,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsEast1"
         ]
@@ -1458,8 +1478,8 @@
     "map_locations": [
       {
         "map": "room_NearSnakemouth",
-        "x": 498,
-        "y": 221,
+        "x": 510,
+        "y": 222,
         "restrict_visibility_rules": [
           "$bf_seen|NearSnakemouth"
         ]
@@ -1481,8 +1501,8 @@
     "map_locations": [
       {
         "map": "room_NearSnakemouth",
-        "x": 24,
-        "y": 110,
+        "x": 36,
+        "y": 167,
         "restrict_visibility_rules": [
           "$bf_seen|NearSnakemouth"
         ]
@@ -1504,8 +1524,8 @@
     "map_locations": [
       {
         "map": "room_NearSnakemouth",
-        "x": 408,
-        "y": 182,
+        "x": 419,
+        "y": 202,
         "restrict_visibility_rules": [
           "$bf_seen|NearSnakemouth"
         ]
@@ -1527,8 +1547,8 @@
     "map_locations": [
       {
         "map": "room_SeedlingHaven",
-        "x": 148,
-        "y": 103,
+        "x": 196,
+        "y": 163,
         "restrict_visibility_rules": [
           "$bf_seen|SeedlingHaven"
         ]
@@ -1550,8 +1570,8 @@
     "map_locations": [
       {
         "map": "room_SeedlingHaven",
-        "x": 102,
-        "y": 161,
+        "x": 150,
+        "y": 192,
         "restrict_visibility_rules": [
           "$bf_seen|SeedlingHaven"
         ]
@@ -1573,8 +1593,8 @@
     "map_locations": [
       {
         "map": "room_SeedlingHaven",
-        "x": 61,
-        "y": 105,
+        "x": 110,
+        "y": 164,
         "restrict_visibility_rules": [
           "$bf_seen|SeedlingHaven"
         ]
@@ -1596,8 +1616,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPathTunnel",
-        "x": 770,
-        "y": 244,
+        "x": 781,
+        "y": 381,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPathTunnel"
         ]
@@ -1619,8 +1639,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPathTunnel",
-        "x": 262,
-        "y": 354,
+        "x": 273,
+        "y": 436,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPathTunnel"
         ]
@@ -1642,8 +1662,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPathTunnel",
-        "x": 1169,
-        "y": 392,
+        "x": 1179,
+        "y": 445,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPathTunnel"
         ]
@@ -1665,8 +1685,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPathTunnel",
-        "x": 132,
-        "y": 383,
+        "x": 143,
+        "y": 451,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPathTunnel"
         ]
@@ -1688,8 +1708,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPathTunnel",
-        "x": 727,
-        "y": 357,
+        "x": 738,
+        "y": 438,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPathTunnel"
         ]
@@ -1711,8 +1731,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPathTunnel",
-        "x": 691,
-        "y": 201,
+        "x": 702,
+        "y": 360,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPathTunnel"
         ]
@@ -1734,8 +1754,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPathTunnel",
-        "x": 619,
-        "y": 417,
+        "x": 630,
+        "y": 468,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPathTunnel"
         ]
@@ -1757,8 +1777,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPathTunnel",
-        "x": 711,
-        "y": 236,
+        "x": 722,
+        "y": 340,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPathTunnel"
         ]
@@ -1780,8 +1800,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPathTunnel",
-        "x": 83,
-        "y": 313,
+        "x": 93,
+        "y": 260,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPathTunnel"
         ]
@@ -1800,8 +1820,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPathTunnel",
-        "x": 163,
-        "y": 497,
+        "x": 174,
+        "y": 508,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPathTunnel"
         ]
@@ -1826,8 +1846,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsEast2",
-        "x": 642,
-        "y": 233,
+        "x": 672,
+        "y": 220,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsEast2"
         ]
@@ -1849,8 +1869,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsEast2",
-        "x": 547,
-        "y": 480,
+        "x": 578,
+        "y": 344,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsEast2"
         ]
@@ -1872,8 +1892,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsEast2",
-        "x": 235,
-        "y": 408,
+        "x": 266,
+        "y": 308,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsEast2"
         ]
@@ -1895,8 +1915,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsSnakemouthCorridor2",
-        "x": 186,
-        "y": 62,
+        "x": 192,
+        "y": 152,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsSnakemouthCorridor2"
         ]
@@ -1918,8 +1938,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsSnakemouthCorridor2",
-        "x": 288,
-        "y": 149,
+        "x": 294,
+        "y": 195,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsSnakemouthCorridor2"
         ]
@@ -1938,8 +1958,8 @@
     "map_locations": [
       {
         "map": "room_BugariaOutskirtsSnakemouthCorridor2",
-        "x": 24,
-        "y": 62,
+        "x": 31,
+        "y": 152,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaOutskirtsSnakemouthCorridor2"
         ]
@@ -1964,8 +1984,8 @@
     "map_locations": [
       {
         "map": "room_ChucksAbode",
-        "x": 213,
-        "y": 24,
+        "x": 222,
+        "y": 116,
         "restrict_visibility_rules": [
           "$bf_seen|ChucksAbode"
         ]
@@ -1987,8 +2007,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPathTunnel2",
-        "x": 302,
-        "y": 180,
+        "x": 346,
+        "y": 381,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPathTunnel2"
         ]
@@ -2010,8 +2030,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPathTunnel2",
-        "x": 62,
-        "y": 84,
+        "x": 106,
+        "y": 286,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPathTunnel2"
         ]
@@ -2033,8 +2053,8 @@
     "map_locations": [
       {
         "map": "room_BugariaPier",
-        "x": 527,
-        "y": 28,
+        "x": 535,
+        "y": 125,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaPier"
         ]
@@ -2056,8 +2076,8 @@
     "map_locations": [
       {
         "map": "room_BugariaPier",
-        "x": 322,
-        "y": 118,
+        "x": 329,
+        "y": 184,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaPier"
         ]
@@ -2079,8 +2099,8 @@
     "map_locations": [
       {
         "map": "room_BOLostSandsEntrance",
-        "x": 129,
-        "y": 150,
+        "x": 250,
+        "y": 178,
         "restrict_visibility_rules": [
           "$bf_seen|BOLostSandsEntrance"
         ]
@@ -2102,8 +2122,8 @@
     "map_locations": [
       {
         "map": "room_OutsideSnakemouth",
-        "x": 227,
-        "y": 122,
+        "x": 333,
+        "y": 180,
         "restrict_visibility_rules": [
           "$bf_seen|OutsideSnakemouth"
         ]
@@ -2125,8 +2145,8 @@
     "map_locations": [
       {
         "map": "room_OutsideSnakemouth",
-        "x": 24,
-        "y": 202,
+        "x": 130,
+        "y": 220,
         "restrict_visibility_rules": [
           "$bf_seen|OutsideSnakemouth"
         ]
@@ -2148,8 +2168,8 @@
     "map_locations": [
       {
         "map": "room_OutsideSnakemouth",
-        "x": 196,
-        "y": 71,
+        "x": 302,
+        "y": 154,
         "restrict_visibility_rules": [
           "$bf_seen|OutsideSnakemouth"
         ]
@@ -2168,8 +2188,8 @@
     "map_locations": [
       {
         "map": "room_OutsideSnakemouth",
-        "x": 430,
-        "y": 221,
+        "x": 536,
+        "y": 229,
         "restrict_visibility_rules": [
           "$bf_seen|OutsideSnakemouth"
         ]
@@ -2269,7 +2289,7 @@
     "chest_opened_img": "images/chest_open.png",
     "sections": [
       {
-        "name": "Snakemouth Den: BugariaBridgeAttack, Wasp Scout 1",
+        "name": "Bugaria City: BugariaBridgeAttack, Wasp Scout 1",
         "access_rules": [
           "$bf_location|7721149"
         ],
@@ -2278,7 +2298,7 @@
         ]
       },
       {
-        "name": "Snakemouth Den: BugariaBridgeAttack, Wasp Trooper 1",
+        "name": "Bugaria City: BugariaBridgeAttack, Wasp Trooper 1",
         "access_rules": [
           "$bf_location|7721150"
         ],
@@ -2297,7 +2317,7 @@
     "chest_opened_img": "images/chest_open.png",
     "sections": [
       {
-        "name": "Snakemouth Den: BugariaCastleAttack, Wasp Scout 1",
+        "name": "Bugaria City: BugariaCastleAttack, Wasp Scout 1",
         "access_rules": [
           "$bf_location|7721152"
         ],
@@ -2306,7 +2326,7 @@
         ]
       },
       {
-        "name": "Snakemouth Den: BugariaCastleAttack, Wasp Trooper 1",
+        "name": "Bugaria City: BugariaCastleAttack, Wasp Trooper 1",
         "access_rules": [
           "$bf_location|7721151"
         ],
@@ -2732,7 +2752,7 @@
     "chest_opened_img": "images/chest_open.png",
     "sections": [
       {
-        "name": "Snakemouth Den: BugariaPlazaAttack, Wasp Trooper 1",
+        "name": "Bugaria City: BugariaPlazaAttack, Wasp Trooper 1",
         "access_rules": [
           "$bf_location|7721147"
         ],
@@ -2741,7 +2761,7 @@
         ]
       },
       {
-        "name": "Snakemouth Den: BugariaPlazaAttack, Wasp Trooper 2",
+        "name": "Bugaria City: BugariaPlazaAttack, Wasp Trooper 2",
         "access_rules": [
           "$bf_location|7721148"
         ],
@@ -2874,16 +2894,16 @@
         "ref": "AntPalaceWarRoom/Ant Palace: War Room, Table"
       },
       {
-        "ref": "BugariaBridgeAttack/Snakemouth Den: BugariaBridgeAttack, Wasp Scout 1"
+        "ref": "BugariaBridgeAttack/Bugaria City: BugariaBridgeAttack, Wasp Scout 1"
       },
       {
-        "ref": "BugariaBridgeAttack/Snakemouth Den: BugariaBridgeAttack, Wasp Trooper 1"
+        "ref": "BugariaBridgeAttack/Bugaria City: BugariaBridgeAttack, Wasp Trooper 1"
       },
       {
-        "ref": "BugariaCastleAttack/Snakemouth Den: BugariaCastleAttack, Wasp Scout 1"
+        "ref": "BugariaCastleAttack/Bugaria City: BugariaCastleAttack, Wasp Scout 1"
       },
       {
-        "ref": "BugariaCastleAttack/Snakemouth Den: BugariaCastleAttack, Wasp Trooper 1"
+        "ref": "BugariaCastleAttack/Bugaria City: BugariaCastleAttack, Wasp Trooper 1"
       },
       {
         "ref": "BugariaCommercial/Bugaria City: Commercial District, Item Shop 1"
@@ -3015,10 +3035,10 @@
         "ref": "BugariaMainPlaza/Bugaria City: Main Plaza, Red House Rooftop"
       },
       {
-        "ref": "BugariaPlazaAttack/Snakemouth Den: BugariaPlazaAttack, Wasp Trooper 1"
+        "ref": "BugariaPlazaAttack/Bugaria City: BugariaPlazaAttack, Wasp Trooper 1"
       },
       {
-        "ref": "BugariaPlazaAttack/Snakemouth Den: BugariaPlazaAttack, Wasp Trooper 2"
+        "ref": "BugariaPlazaAttack/Bugaria City: BugariaPlazaAttack, Wasp Trooper 2"
       },
       {
         "ref": "BugariaResidential/Bugaria City: Residential District, Banker"
@@ -3047,7 +3067,7 @@
     ]
   },
   {
-    "name": "Main Plaza: elsewhere in the room",
+    "name": "Main Plaza: Dig Spot",
     "visibility_rules": [
       "$bf_any_in_seed|7720096"
     ],
@@ -3056,7 +3076,7 @@
     "map_locations": [
       {
         "map": "room_BugariaMainPlaza",
-        "x": 288,
+        "x": 380,
         "y": 283,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaMainPlaza"
@@ -3079,8 +3099,8 @@
     "map_locations": [
       {
         "map": "room_BugariaMainPlaza",
-        "x": 154,
-        "y": 158,
+        "x": 172,
+        "y": 183,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaMainPlaza"
         ]
@@ -3102,8 +3122,8 @@
     "map_locations": [
       {
         "map": "room_BugariaCommercial",
-        "x": 415,
-        "y": 149,
+        "x": 457,
+        "y": 179,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaCommercial"
         ]
@@ -3137,8 +3157,8 @@
     "map_locations": [
       {
         "map": "room_BugariaCommercial",
-        "x": 396,
-        "y": 282,
+        "x": 438,
+        "y": 245,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaCommercial"
         ]
@@ -3262,8 +3282,8 @@
     "map_locations": [
       {
         "map": "room_BugariaCommercial",
-        "x": 312,
-        "y": 233,
+        "x": 354,
+        "y": 220,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaCommercial"
         ]
@@ -3285,8 +3305,8 @@
     "map_locations": [
       {
         "map": "room_BugariaTheater",
-        "x": 102,
-        "y": 124,
+        "x": 128,
+        "y": 176,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaTheater"
         ]
@@ -3311,8 +3331,8 @@
     "map_locations": [
       {
         "map": "room_BugariaResidential",
-        "x": 310,
-        "y": 250,
+        "x": 342,
+        "y": 358,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaResidential"
         ]
@@ -3343,8 +3363,8 @@
     "map_locations": [
       {
         "map": "room_BugariaResidential",
-        "x": 464,
-        "y": 291,
+        "x": 496,
+        "y": 374,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaResidential"
         ]
@@ -3366,8 +3386,8 @@
     "map_locations": [
       {
         "map": "room_BugariaResidential",
-        "x": 407,
-        "y": 28,
+        "x": 439,
+        "y": 118,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaResidential"
         ]
@@ -3389,8 +3409,8 @@
     "map_locations": [
       {
         "map": "room_AntPalace1",
-        "x": 204,
-        "y": 240,
+        "x": 213,
+        "y": 234,
         "restrict_visibility_rules": [
           "$bf_seen|AntPalace1"
         ]
@@ -3412,8 +3432,8 @@
     "map_locations": [
       {
         "map": "room_AntPalaceLibrary",
-        "x": 298,
-        "y": 46,
+        "x": 300,
+        "y": 136,
         "restrict_visibility_rules": [
           "$bf_seen|AntPalaceLibrary"
         ]
@@ -3435,8 +3455,8 @@
     "map_locations": [
       {
         "map": "room_AntPalaceWarRoom",
-        "x": 120,
-        "y": 168,
+        "x": 128,
+        "y": 138,
         "restrict_visibility_rules": [
           "$bf_seen|AntPalaceWarRoom"
         ]
@@ -3449,7 +3469,7 @@
     ]
   },
   {
-    "name": "Ant Tunnels (2): elsewhere in the room",
+    "name": "Ant Tunnels (2): Break Room Dig Spot",
     "visibility_rules": [
       "$bf_any_in_seed|7720113"
     ],
@@ -3458,8 +3478,8 @@
     "map_locations": [
       {
         "map": "room_AntMinesBreakRoom",
-        "x": 128,
-        "y": 58,
+        "x": 238,
+        "y": 96,
         "restrict_visibility_rules": [
           "$bf_seen|AntMinesBreakRoom"
         ]
@@ -3481,8 +3501,8 @@
     "map_locations": [
       {
         "map": "room_BugariaPlazaAttack",
-        "x": 24,
-        "y": 346,
+        "x": 239,
+        "y": 277,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaPlazaAttack"
         ]
@@ -3490,7 +3510,7 @@
     ],
     "sections": [
       {
-        "ref": "BugariaPlazaAttack/Snakemouth Den: BugariaPlazaAttack, Wasp Trooper 1"
+        "ref": "BugariaPlazaAttack/Bugaria City: BugariaPlazaAttack, Wasp Trooper 1"
       }
     ]
   },
@@ -3504,8 +3524,8 @@
     "map_locations": [
       {
         "map": "room_BugariaPlazaAttack",
-        "x": 67,
-        "y": 131,
+        "x": 282,
+        "y": 169,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaPlazaAttack"
         ]
@@ -3513,7 +3533,7 @@
     ],
     "sections": [
       {
-        "ref": "BugariaPlazaAttack/Snakemouth Den: BugariaPlazaAttack, Wasp Trooper 2"
+        "ref": "BugariaPlazaAttack/Bugaria City: BugariaPlazaAttack, Wasp Trooper 2"
       }
     ]
   },
@@ -3527,8 +3547,8 @@
     "map_locations": [
       {
         "map": "room_BugariaBridgeAttack",
-        "x": 24,
-        "y": 271,
+        "x": 139,
+        "y": 239,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaBridgeAttack"
         ]
@@ -3536,7 +3556,7 @@
     ],
     "sections": [
       {
-        "ref": "BugariaBridgeAttack/Snakemouth Den: BugariaBridgeAttack, Wasp Scout 1"
+        "ref": "BugariaBridgeAttack/Bugaria City: BugariaBridgeAttack, Wasp Scout 1"
       }
     ]
   },
@@ -3550,8 +3570,8 @@
     "map_locations": [
       {
         "map": "room_BugariaBridgeAttack",
-        "x": 100,
-        "y": 106,
+        "x": 214,
+        "y": 156,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaBridgeAttack"
         ]
@@ -3559,7 +3579,7 @@
     ],
     "sections": [
       {
-        "ref": "BugariaBridgeAttack/Snakemouth Den: BugariaBridgeAttack, Wasp Trooper 1"
+        "ref": "BugariaBridgeAttack/Bugaria City: BugariaBridgeAttack, Wasp Trooper 1"
       }
     ]
   },
@@ -3573,8 +3593,8 @@
     "map_locations": [
       {
         "map": "room_BugariaCastleAttack",
-        "x": 49,
-        "y": 277,
+        "x": 121,
+        "y": 242,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaCastleAttack"
         ]
@@ -3582,7 +3602,7 @@
     ],
     "sections": [
       {
-        "ref": "BugariaCastleAttack/Snakemouth Den: BugariaCastleAttack, Wasp Scout 1"
+        "ref": "BugariaCastleAttack/Bugaria City: BugariaCastleAttack, Wasp Scout 1"
       }
     ]
   },
@@ -3596,8 +3616,8 @@
     "map_locations": [
       {
         "map": "room_BugariaCastleAttack",
-        "x": 203,
-        "y": 195,
+        "x": 275,
+        "y": 201,
         "restrict_visibility_rules": [
           "$bf_seen|BugariaCastleAttack"
         ]
@@ -3605,7 +3625,7 @@
     ],
     "sections": [
       {
-        "ref": "BugariaCastleAttack/Snakemouth Den: BugariaCastleAttack, Wasp Trooper 1"
+        "ref": "BugariaCastleAttack/Bugaria City: BugariaCastleAttack, Wasp Trooper 1"
       }
     ]
   },
@@ -3967,7 +3987,7 @@
     "chest_opened_img": "images/chest_open.png",
     "sections": [
       {
-        "name": "Bugaria City: SnakemouthUndergroundLeftA, Zombiant 1",
+        "name": "Snakemouth Den: SnakemouthUndergroundLeftA, Zombiant 1",
         "access_rules": [
           "$bf_location|7721033"
         ],
@@ -3986,7 +4006,7 @@
     "chest_opened_img": "images/chest_open.png",
     "sections": [
       {
-        "name": "Bugaria City: SnakemouthUndergroundLeftB, Zombiant 1",
+        "name": "Snakemouth Den: SnakemouthUndergroundLeftB, Zombiant 1",
         "access_rules": [
           "$bf_location|7721034"
         ],
@@ -3995,7 +4015,7 @@
         ]
       },
       {
-        "name": "Bugaria City: SnakemouthUndergroundLeftB, Zombiant 2",
+        "name": "Snakemouth Den: SnakemouthUndergroundLeftB, Zombiant 2",
         "access_rules": [
           "$bf_location|7721035"
         ],
@@ -4014,7 +4034,7 @@
     "chest_opened_img": "images/chest_open.png",
     "sections": [
       {
-        "name": "Bugaria City: SnakemouthUndergroundRightA, Inichas 1",
+        "name": "Snakemouth Den: SnakemouthUndergroundRightA, Inichas 1",
         "access_rules": [
           "$bf_location|7721029"
         ],
@@ -4023,7 +4043,7 @@
         ]
       },
       {
-        "name": "Bugaria City: SnakemouthUndergroundRightA, Jellyshroom 1",
+        "name": "Snakemouth Den: SnakemouthUndergroundRightA, Jellyshroom 1",
         "access_rules": [
           "$bf_location|7721030"
         ],
@@ -4182,19 +4202,19 @@
         "ref": "SnakemouthUndergrondDoor/Snakemouth Den: Underground Door Room, Zombiant 1"
       },
       {
-        "ref": "SnakemouthUndergroundLeftA/Bugaria City: SnakemouthUndergroundLeftA, Zombiant 1"
+        "ref": "SnakemouthUndergroundLeftA/Snakemouth Den: SnakemouthUndergroundLeftA, Zombiant 1"
       },
       {
-        "ref": "SnakemouthUndergroundLeftB/Bugaria City: SnakemouthUndergroundLeftB, Zombiant 1"
+        "ref": "SnakemouthUndergroundLeftB/Snakemouth Den: SnakemouthUndergroundLeftB, Zombiant 1"
       },
       {
-        "ref": "SnakemouthUndergroundLeftB/Bugaria City: SnakemouthUndergroundLeftB, Zombiant 2"
+        "ref": "SnakemouthUndergroundLeftB/Snakemouth Den: SnakemouthUndergroundLeftB, Zombiant 2"
       },
       {
-        "ref": "SnakemouthUndergroundRightA/Bugaria City: SnakemouthUndergroundRightA, Inichas 1"
+        "ref": "SnakemouthUndergroundRightA/Snakemouth Den: SnakemouthUndergroundRightA, Inichas 1"
       },
       {
-        "ref": "SnakemouthUndergroundRightA/Bugaria City: SnakemouthUndergroundRightA, Jellyshroom 1"
+        "ref": "SnakemouthUndergroundRightA/Snakemouth Den: SnakemouthUndergroundRightA, Jellyshroom 1"
       },
       {
         "ref": "SnakemouthUndergroundRightB/Snakemouth Den: Underground Bridge Room, Behind Pillar"
@@ -4217,8 +4237,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthBridgeRoom",
-        "x": 876,
-        "y": 210,
+        "x": 889,
+        "y": 426,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthBridgeRoom"
         ]
@@ -4240,8 +4260,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthBridgeRoom",
-        "x": 886,
-        "y": 288,
+        "x": 899,
+        "y": 391,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthBridgeRoom"
         ]
@@ -4263,8 +4283,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthBridgeRoom",
-        "x": 150,
-        "y": 150,
+        "x": 163,
+        "y": 396,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthBridgeRoom"
         ]
@@ -4286,8 +4306,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthBridgeRoom",
-        "x": 642,
-        "y": 156,
+        "x": 655,
+        "y": 399,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthBridgeRoom"
         ]
@@ -4309,8 +4329,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthBridgeRoom",
-        "x": 1017,
-        "y": 259,
+        "x": 1030,
+        "y": 383,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthBridgeRoom"
         ]
@@ -4329,8 +4349,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthBridgeRoom",
-        "x": 24,
-        "y": 186,
+        "x": 37,
+        "y": 414,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthBridgeRoom"
         ]
@@ -4355,8 +4375,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthDoorRoom",
-        "x": 406,
-        "y": 168,
+        "x": 407,
+        "y": 393,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthDoorRoom"
         ]
@@ -4379,7 +4399,7 @@
       {
         "map": "room_SnakemouthDoorRoom",
         "x": 282,
-        "y": 135,
+        "y": 377,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthDoorRoom"
         ]
@@ -4399,7 +4419,7 @@
       {
         "map": "room_SnakemouthDoorRoom",
         "x": 143,
-        "y": 173,
+        "y": 460,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthDoorRoom"
         ]
@@ -4421,8 +4441,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekEntrance",
-        "x": 24,
-        "y": 24,
+        "x": 150,
+        "y": 127,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekEntrance"
         ]
@@ -4447,8 +4467,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthFallRoom",
-        "x": 424,
-        "y": 68,
+        "x": 430,
+        "y": 387,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthFallRoom"
         ]
@@ -4473,8 +4493,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthLake",
-        "x": 414,
-        "y": 420,
+        "x": 438,
+        "y": 376,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthLake"
         ]
@@ -4496,8 +4516,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthLake",
-        "x": 711,
-        "y": 302,
+        "x": 735,
+        "y": 317,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthLake"
         ]
@@ -4519,8 +4539,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthLake",
-        "x": 87,
-        "y": 751,
+        "x": 112,
+        "y": 542,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthLake"
         ]
@@ -4542,8 +4562,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthLake",
-        "x": 240,
-        "y": 71,
+        "x": 264,
+        "y": 139,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthLake"
         ]
@@ -4565,8 +4585,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthLake",
-        "x": 143,
-        "y": 373,
+        "x": 167,
+        "y": 340,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthLake"
         ]
@@ -4588,8 +4608,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthLake",
-        "x": 308,
-        "y": 363,
+        "x": 332,
+        "y": 338,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthLake"
         ]
@@ -4611,8 +4631,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthLake",
-        "x": 212,
-        "y": 798,
+        "x": 237,
+        "y": 565,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthLake"
         ]
@@ -4634,8 +4654,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthLake",
-        "x": 556,
-        "y": 785,
+        "x": 580,
+        "y": 548,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthLake"
         ]
@@ -4657,8 +4677,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergrondDoor",
-        "x": 622,
-        "y": 100,
+        "x": 630,
+        "y": 386,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergrondDoor"
         ]
@@ -4680,8 +4700,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergrondDoor",
-        "x": 504,
-        "y": 790,
+        "x": 512,
+        "y": 806,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergrondDoor"
         ]
@@ -4703,8 +4723,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergrondDoor",
-        "x": 130,
-        "y": 148,
+        "x": 138,
+        "y": 343,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergrondDoor"
         ]
@@ -4726,8 +4746,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergrondDoor",
-        "x": 67,
-        "y": 54,
+        "x": 76,
+        "y": 303,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergrondDoor"
         ]
@@ -4749,8 +4769,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergrondDoor",
-        "x": 251,
-        "y": 711,
+        "x": 259,
+        "y": 724,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergrondDoor"
         ]
@@ -4772,8 +4792,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergrondDoor",
-        "x": 160,
-        "y": 56,
+        "x": 168,
+        "y": 304,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergrondDoor"
         ]
@@ -4795,8 +4815,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergrondDoor",
-        "x": 347,
-        "y": 438,
+        "x": 355,
+        "y": 555,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergrondDoor"
         ]
@@ -4818,8 +4838,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergrondDoor",
-        "x": 526,
-        "y": 280,
+        "x": 534,
+        "y": 475,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergrondDoor"
         ]
@@ -4838,8 +4858,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergrondDoor",
-        "x": 334,
-        "y": 269,
+        "x": 342,
+        "y": 473,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergrondDoor"
         ]
@@ -4864,8 +4884,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthMushroomPit",
-        "x": 24,
-        "y": 203,
+        "x": 110,
+        "y": 309,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthMushroomPit"
         ]
@@ -4887,8 +4907,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthMushroomPit",
-        "x": 126,
-        "y": 780,
+        "x": 212,
+        "y": 716,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthMushroomPit"
         ]
@@ -4910,8 +4930,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthMushroomPit",
-        "x": 305,
-        "y": 432,
+        "x": 390,
+        "y": 469,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthMushroomPit"
         ]
@@ -4933,8 +4953,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthMushroomPit",
-        "x": 38,
-        "y": 128,
+        "x": 124,
+        "y": 252,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthMushroomPit"
         ]
@@ -4956,8 +4976,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthMushroomPit",
-        "x": 418,
-        "y": 702,
+        "x": 503,
+        "y": 646,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthMushroomPit"
         ]
@@ -4979,8 +4999,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergroundRightA",
-        "x": 871,
-        "y": 200,
+        "x": 879,
+        "y": 214,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergroundRightA"
         ]
@@ -4988,7 +5008,7 @@
     ],
     "sections": [
       {
-        "ref": "SnakemouthUndergroundRightA/Bugaria City: SnakemouthUndergroundRightA, Inichas 1"
+        "ref": "SnakemouthUndergroundRightA/Snakemouth Den: SnakemouthUndergroundRightA, Inichas 1"
       }
     ]
   },
@@ -5002,8 +5022,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergroundRightA",
-        "x": 1303,
-        "y": 229,
+        "x": 1311,
+        "y": 219,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergroundRightA"
         ]
@@ -5011,7 +5031,7 @@
     ],
     "sections": [
       {
-        "ref": "SnakemouthUndergroundRightA/Bugaria City: SnakemouthUndergroundRightA, Jellyshroom 1"
+        "ref": "SnakemouthUndergroundRightA/Snakemouth Den: SnakemouthUndergroundRightA, Jellyshroom 1"
       }
     ]
   },
@@ -5025,8 +5045,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergroundRightB",
-        "x": 618,
-        "y": 127,
+        "x": 638,
+        "y": 366,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergroundRightB"
         ]
@@ -5048,8 +5068,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergroundRightB",
-        "x": 436,
-        "y": 288,
+        "x": 457,
+        "y": 446,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergroundRightB"
         ]
@@ -5071,8 +5091,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergroundRightB",
-        "x": 259,
-        "y": 30,
+        "x": 279,
+        "y": 151,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergroundRightB"
         ]
@@ -5091,8 +5111,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergroundRightB",
-        "x": 24,
-        "y": 39,
+        "x": 44,
+        "y": 166,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergroundRightB"
         ]
@@ -5117,8 +5137,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergroundLeftA",
-        "x": 247,
-        "y": 159,
+        "x": 258,
+        "y": 327,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergroundLeftA"
         ]
@@ -5126,7 +5146,7 @@
     ],
     "sections": [
       {
-        "ref": "SnakemouthUndergroundLeftA/Bugaria City: SnakemouthUndergroundLeftA, Zombiant 1"
+        "ref": "SnakemouthUndergroundLeftA/Snakemouth Den: SnakemouthUndergroundLeftA, Zombiant 1"
       }
     ]
   },
@@ -5140,8 +5160,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergroundLeftB",
-        "x": 588,
-        "y": 147,
+        "x": 270,
+        "y": 557,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergroundLeftB"
         ]
@@ -5149,7 +5169,7 @@
     ],
     "sections": [
       {
-        "ref": "SnakemouthUndergroundLeftB/Bugaria City: SnakemouthUndergroundLeftB, Zombiant 1"
+        "ref": "SnakemouthUndergroundLeftB/Snakemouth Den: SnakemouthUndergroundLeftB, Zombiant 1"
       }
     ]
   },
@@ -5163,8 +5183,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergroundLeftB",
-        "x": 487,
-        "y": 54,
+        "x": 169,
+        "y": 323,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergroundLeftB"
         ]
@@ -5172,7 +5192,7 @@
     ],
     "sections": [
       {
-        "ref": "SnakemouthUndergroundLeftB/Bugaria City: SnakemouthUndergroundLeftB, Zombiant 2"
+        "ref": "SnakemouthUndergroundLeftB/Snakemouth Den: SnakemouthUndergroundLeftB, Zombiant 2"
       }
     ]
   },
@@ -5183,8 +5203,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthUndergroundLeftB",
-        "x": 767,
-        "y": 38,
+        "x": 449,
+        "y": 253,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthUndergroundLeftB"
         ]
@@ -5209,8 +5229,8 @@
     "map_locations": [
       {
         "map": "room_SnakemouthTreasureRoom",
-        "x": 24,
-        "y": 255,
+        "x": 120,
+        "y": 231,
         "restrict_visibility_rules": [
           "$bf_seen|SnakemouthTreasureRoom"
         ]
@@ -5645,7 +5665,7 @@
       {
         "map": "room_UpperSnekTransition",
         "x": 284,
-        "y": 24,
+        "y": 108,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekTransition"
         ]
@@ -5668,7 +5688,7 @@
       {
         "map": "room_UpperSnekTransition",
         "x": 433,
-        "y": 72,
+        "y": 132,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekTransition"
         ]
@@ -5690,8 +5710,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekMiddleRoom",
-        "x": 787,
-        "y": 204,
+        "x": 791,
+        "y": 263,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekMiddleRoom"
         ]
@@ -5713,8 +5733,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekMiddleRoom",
-        "x": 242,
-        "y": 50,
+        "x": 246,
+        "y": 191,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekMiddleRoom"
         ]
@@ -5736,8 +5756,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekMiddleRoom",
-        "x": 374,
-        "y": 639,
+        "x": 378,
+        "y": 485,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekMiddleRoom"
         ]
@@ -5756,8 +5776,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekMiddleRoom",
-        "x": 110,
-        "y": 24,
+        "x": 114,
+        "y": 116,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekMiddleRoom"
         ]
@@ -5779,8 +5799,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekMiddleRoom",
-        "x": 650,
-        "y": 82,
+        "x": 654,
+        "y": 145,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekMiddleRoom"
         ]
@@ -5806,7 +5826,7 @@
       {
         "map": "room_UpperSnekBeforeBoss",
         "x": 224,
-        "y": 176,
+        "y": 194,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekBeforeBoss"
         ]
@@ -5829,7 +5849,7 @@
       {
         "map": "room_UpperSnekBeforeBoss",
         "x": 126,
-        "y": 149,
+        "y": 118,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekBeforeBoss"
         ]
@@ -5849,7 +5869,7 @@
       {
         "map": "room_UpperSnekBeforeBoss",
         "x": 24,
-        "y": 206,
+        "y": 209,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekBeforeBoss"
         ]
@@ -5874,8 +5894,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekPressurePlateRoom",
-        "x": 24,
-        "y": 167,
+        "x": 22,
+        "y": 250,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekPressurePlateRoom"
         ]
@@ -5897,8 +5917,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekPressurePlateRoom",
-        "x": 90,
-        "y": 28,
+        "x": 87,
+        "y": 134,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekPressurePlateRoom"
         ]
@@ -5920,8 +5940,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekPressurePlateRoom",
-        "x": 380,
-        "y": 52,
+        "x": 378,
+        "y": 198,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekPressurePlateRoom"
         ]
@@ -5943,8 +5963,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekPressurePlateRoom",
-        "x": 294,
-        "y": 108,
+        "x": 291,
+        "y": 139,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekPressurePlateRoom"
         ]
@@ -5966,8 +5986,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekPressurePlateRoom",
-        "x": 400,
-        "y": 71,
+        "x": 398,
+        "y": 105,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekPressurePlateRoom"
         ]
@@ -5989,8 +6009,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekSwitchPuzzle",
-        "x": 84,
-        "y": 106,
+        "x": 87,
+        "y": 158,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekSwitchPuzzle"
         ]
@@ -6012,8 +6032,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekSwitchPuzzle",
-        "x": 273,
-        "y": 72,
+        "x": 276,
+        "y": 141,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekSwitchPuzzle"
         ]
@@ -6035,8 +6055,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekPlatformRoom",
-        "x": 489,
-        "y": 24,
+        "x": 500,
+        "y": 116,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekPlatformRoom"
         ]
@@ -6058,8 +6078,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekPlatformRoom",
-        "x": 42,
-        "y": 196,
+        "x": 53,
+        "y": 339,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekPlatformRoom"
         ]
@@ -6081,8 +6101,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekPlatformRoom",
-        "x": 408,
-        "y": 64,
+        "x": 419,
+        "y": 138,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekPlatformRoom"
         ]
@@ -6104,8 +6124,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekPlatformRoom",
-        "x": 331,
-        "y": 232,
+        "x": 342,
+        "y": 440,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekPlatformRoom"
         ]
@@ -6127,8 +6147,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekPlatformRoom",
-        "x": 504,
-        "y": 148,
+        "x": 515,
+        "y": 336,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekPlatformRoom"
         ]
@@ -6150,8 +6170,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekRiverPuzzle",
-        "x": 42,
-        "y": 347,
+        "x": 222,
+        "y": 329,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekRiverPuzzle"
         ]
@@ -6173,8 +6193,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekRiverPuzzle",
-        "x": 210,
-        "y": 46,
+        "x": 390,
+        "y": 179,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekRiverPuzzle"
         ]
@@ -6199,8 +6219,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekRiverPuzzle",
-        "x": 219,
-        "y": 408,
+        "x": 399,
+        "y": 360,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekRiverPuzzle"
         ]
@@ -6222,8 +6242,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekGeizerRoom",
-        "x": 24,
-        "y": 206,
+        "x": 118,
+        "y": 217,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekGeizerRoom"
         ]
@@ -6245,8 +6265,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekGeizerRoom",
-        "x": 620,
-        "y": 85,
+        "x": 714,
+        "y": 146,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekGeizerRoom"
         ]
@@ -6268,8 +6288,8 @@
     "map_locations": [
       {
         "map": "room_UpperSnekGeizerRoom",
-        "x": 81,
-        "y": 205,
+        "x": 174,
+        "y": 216,
         "restrict_visibility_rules": [
           "$bf_seen|UpperSnekGeizerRoom"
         ]
@@ -6590,7 +6610,7 @@
       {
         "map": "room_GoldenHillsCableCar",
         "x": 575,
-        "y": 173,
+        "y": 460,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsCableCar"
         ]
@@ -6613,7 +6633,7 @@
       {
         "map": "room_GoldenHillsCableCar",
         "x": 112,
-        "y": 193,
+        "y": 470,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsCableCar"
         ]
@@ -6635,8 +6655,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsCableCar",
-        "x": 671,
-        "y": 150,
+        "x": 672,
+        "y": 445,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsCableCar"
         ]
@@ -6659,7 +6679,7 @@
       {
         "map": "room_GoldenHillsCableCar",
         "x": 295,
-        "y": 42,
+        "y": 394,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsCableCar"
         ]
@@ -6682,7 +6702,7 @@
       {
         "map": "room_GoldenHillsCableCar",
         "x": 917,
-        "y": 72,
+        "y": 316,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsCableCar"
         ]
@@ -6704,8 +6724,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsPath2",
-        "x": 1114,
-        "y": 185,
+        "x": 1134,
+        "y": 301,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsPath2"
         ]
@@ -6727,8 +6747,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsPath2",
-        "x": 300,
-        "y": 127,
+        "x": 321,
+        "y": 248,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsPath2"
         ]
@@ -6750,8 +6770,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsPath2",
-        "x": 1303,
-        "y": 313,
+        "x": 1324,
+        "y": 448,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsPath2"
         ]
@@ -6773,8 +6793,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsPath2",
-        "x": 96,
-        "y": 152,
+        "x": 117,
+        "y": 284,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsPath2"
         ]
@@ -6796,8 +6816,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsPath3",
-        "x": 150,
-        "y": 133,
+        "x": 174,
+        "y": 170,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsPath3"
         ]
@@ -6819,8 +6839,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsPath3",
-        "x": 130,
-        "y": 24,
+        "x": 153,
+        "y": 116,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsPath3"
         ]
@@ -6842,8 +6862,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsPath3",
-        "x": 606,
-        "y": 241,
+        "x": 630,
+        "y": 316,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsPath3"
         ]
@@ -6865,8 +6885,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsPath3",
-        "x": 795,
-        "y": 124,
+        "x": 819,
+        "y": 165,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsPath3"
         ]
@@ -6888,8 +6908,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsPath3",
-        "x": 302,
-        "y": 158,
+        "x": 326,
+        "y": 183,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsPath3"
         ]
@@ -6911,8 +6931,8 @@
     "map_locations": [
       {
         "map": "room_GoldenSettlementEntrance",
-        "x": 196,
-        "y": 195,
+        "x": 245,
+        "y": 209,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenSettlementEntrance"
         ]
@@ -6931,7 +6951,7 @@
     ]
   },
   {
-    "name": "Settlement Entrance: elsewhere in the room",
+    "name": "Settlement Entrance: Dig Spot",
     "visibility_rules": [
       "$bf_any_in_seed|7720141"
     ],
@@ -6940,8 +6960,8 @@
     "map_locations": [
       {
         "map": "room_GoldenSettlementEntrance",
-        "x": 244,
-        "y": 204,
+        "x": 300,
+        "y": 304,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenSettlementEntrance"
         ]
@@ -6960,8 +6980,8 @@
     "map_locations": [
       {
         "map": "room_GoldenSettlementEntrance",
-        "x": 52,
-        "y": 380,
+        "x": 102,
+        "y": 302,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenSettlementEntrance"
         ]
@@ -6983,8 +7003,8 @@
     "map_locations": [
       {
         "map": "room_GoldenSettlementEntrance",
-        "x": 385,
-        "y": 24,
+        "x": 434,
+        "y": 124,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenSettlementEntrance"
         ]
@@ -7009,8 +7029,8 @@
     "map_locations": [
       {
         "map": "room_GoldenSMinigame",
-        "x": 117,
-        "y": 86,
+        "x": 409,
+        "y": 147,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenSMinigame"
         ]
@@ -7274,8 +7294,8 @@
     "map_locations": [
       {
         "map": "room_GoldenSettlement1",
-        "x": 173,
-        "y": 156,
+        "x": 199,
+        "y": 249,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenSettlement1"
         ]
@@ -7297,8 +7317,8 @@
     "map_locations": [
       {
         "map": "room_GoldenSettlement1",
-        "x": 715,
-        "y": 205,
+        "x": 742,
+        "y": 274,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenSettlement1"
         ]
@@ -7332,8 +7352,8 @@
     "map_locations": [
       {
         "map": "room_GoldenSettlement1",
-        "x": 352,
-        "y": 193,
+        "x": 378,
+        "y": 266,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenSettlement1"
         ]
@@ -7355,8 +7375,8 @@
     "map_locations": [
       {
         "map": "room_GoldenSettlement2",
-        "x": 200,
-        "y": 375,
+        "x": 219,
+        "y": 302,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenSettlement2"
         ]
@@ -7369,17 +7389,17 @@
     ]
   },
   {
-    "name": "Farm: elsewhere in the room",
+    "name": "Farm: Dig Spot (Day)",
     "visibility_rules": [
-      "$bf_any_in_seed|7720157|7720153|7720151|7720068|7720152"
+      "$bf_any_in_seed|7720157"
     ],
     "chest_unopened_img": "images/chest_closed.png",
     "chest_opened_img": "images/chest_open.png",
     "map_locations": [
       {
         "map": "room_GoldenSettlement2",
-        "x": 432,
-        "y": 233,
+        "x": 703,
+        "y": 296,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenSettlement2"
         ]
@@ -7388,7 +7408,27 @@
     "sections": [
       {
         "ref": "GoldenSettlement2/Golden Settlement: Farm, Dig Spot (Day)"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Farm: elsewhere in the room",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720153|7720151|7720068|7720152"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_GoldenSettlement2",
+        "x": 451,
+        "y": 231,
+        "restrict_visibility_rules": [
+          "$bf_seen|GoldenSettlement2"
+        ]
+      }
+    ],
+    "sections": [
       {
         "ref": "GoldenSettlement2/Golden Settlement: Farm, Eating Contest (Night)"
       },
@@ -7413,8 +7453,8 @@
     "map_locations": [
       {
         "map": "room_GoldenSettlement2",
-        "x": 586,
-        "y": 122,
+        "x": 605,
+        "y": 175,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenSettlement2"
         ]
@@ -7436,8 +7476,8 @@
     "map_locations": [
       {
         "map": "room_GoldenSettlement2",
-        "x": 651,
-        "y": 70,
+        "x": 670,
+        "y": 149,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenSettlement2"
         ]
@@ -7459,7 +7499,7 @@
     "map_locations": [
       {
         "map": "room_PowerPlant",
-        "x": 226,
+        "x": 239,
         "y": 176,
         "restrict_visibility_rules": [
           "$bf_seen|PowerPlant"
@@ -7479,7 +7519,7 @@
     "map_locations": [
       {
         "map": "room_PowerPlant",
-        "x": 215,
+        "x": 228,
         "y": 24,
         "restrict_visibility_rules": [
           "$bf_seen|PowerPlant"
@@ -7987,8 +8027,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPitcher1",
-        "x": 42,
-        "y": 261,
+        "x": 90,
+        "y": 253,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPitcher1"
         ]
@@ -8010,8 +8050,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPitcher1",
-        "x": 162,
-        "y": 76,
+        "x": 210,
+        "y": 160,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPitcher1"
         ]
@@ -8033,8 +8073,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPitcher1",
-        "x": 414,
-        "y": 238,
+        "x": 462,
+        "y": 241,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPitcher1"
         ]
@@ -8056,8 +8096,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPitcher1",
-        "x": 135,
-        "y": 268,
+        "x": 183,
+        "y": 256,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPitcher1"
         ]
@@ -8079,8 +8119,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPitcher2",
-        "x": 483,
-        "y": 132,
+        "x": 498,
+        "y": 212,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPitcher2"
         ]
@@ -8102,8 +8142,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPitcher2",
-        "x": 290,
-        "y": 264,
+        "x": 306,
+        "y": 278,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPitcher2"
         ]
@@ -8125,8 +8165,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPitcher2",
-        "x": 236,
-        "y": 192,
+        "x": 252,
+        "y": 242,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPitcher2"
         ]
@@ -8148,8 +8188,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPitcher2",
-        "x": 444,
-        "y": 60,
+        "x": 460,
+        "y": 176,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPitcher2"
         ]
@@ -8171,8 +8211,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPitcher2",
-        "x": 170,
-        "y": 132,
+        "x": 186,
+        "y": 212,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPitcher2"
         ]
@@ -8194,8 +8234,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPitcher2",
-        "x": 694,
-        "y": 24,
+        "x": 710,
+        "y": 116,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPitcher2"
         ]
@@ -8217,8 +8257,8 @@
     "map_locations": [
       {
         "map": "room_GoldenPitcher2",
-        "x": 495,
-        "y": 216,
+        "x": 510,
+        "y": 254,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenPitcher2"
         ]
@@ -8237,8 +8277,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonEntrance",
-        "x": 598,
-        "y": 251,
+        "x": 614,
+        "y": 229,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonEntrance"
         ]
@@ -8263,7 +8303,7 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonLeftMain",
-        "x": 871,
+        "x": 897,
         "y": 402,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonLeftMain"
@@ -8286,8 +8326,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonLeftMain",
-        "x": 91,
-        "y": 306,
+        "x": 117,
+        "y": 365,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonLeftMain"
         ]
@@ -8309,8 +8349,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonLeftMain",
-        "x": 997,
-        "y": 242,
+        "x": 1023,
+        "y": 208,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonLeftMain"
         ]
@@ -8329,8 +8369,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonLeftMain",
-        "x": 70,
-        "y": 24,
+        "x": 96,
+        "y": 141,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonLeftMain"
         ]
@@ -8355,8 +8395,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonRightCrank",
-        "x": 585,
-        "y": 297,
+        "x": 591,
+        "y": 309,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonRightCrank"
         ]
@@ -8378,8 +8418,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonRightCrank",
-        "x": 179,
-        "y": 333,
+        "x": 185,
+        "y": 327,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonRightCrank"
         ]
@@ -8401,8 +8441,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonRightCrank",
-        "x": 376,
-        "y": 333,
+        "x": 382,
+        "y": 327,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonRightCrank"
         ]
@@ -8424,7 +8464,7 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonRightCrank",
-        "x": 509,
+        "x": 515,
         "y": 306,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonRightCrank"
@@ -8447,8 +8487,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsLowerRightCrank",
-        "x": 283,
-        "y": 24,
+        "x": 324,
+        "y": 179,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsLowerRightCrank"
         ]
@@ -8470,8 +8510,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonCrankLeft",
-        "x": 408,
-        "y": 58,
+        "x": 413,
+        "y": 239,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonCrankLeft"
         ]
@@ -8493,8 +8533,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonCrankLeft",
-        "x": 168,
-        "y": 26,
+        "x": 174,
+        "y": 119,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonCrankLeft"
         ]
@@ -8516,8 +8556,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonCrankLeft",
-        "x": 384,
-        "y": 60,
+        "x": 389,
+        "y": 240,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonCrankLeft"
         ]
@@ -8539,8 +8579,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonCrankLeft",
-        "x": 116,
-        "y": 337,
+        "x": 121,
+        "y": 441,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonCrankLeft"
         ]
@@ -8563,7 +8603,7 @@
       {
         "map": "room_GoldenHillsDungeonLeftCrankHalf",
         "x": 366,
-        "y": 512,
+        "y": 553,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonLeftCrankHalf"
         ]
@@ -8585,8 +8625,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonLeftCrankHalf",
-        "x": 68,
-        "y": 296,
+        "x": 69,
+        "y": 445,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonLeftCrankHalf"
         ]
@@ -8609,7 +8649,7 @@
       {
         "map": "room_GoldenHillsDungeonLeftCrankHalf",
         "x": 792,
-        "y": 440,
+        "y": 475,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonLeftCrankHalf"
         ]
@@ -8632,7 +8672,7 @@
       {
         "map": "room_GoldenHillsDungeonLeftCrankHalf",
         "x": 72,
-        "y": 332,
+        "y": 463,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonLeftCrankHalf"
         ]
@@ -8655,7 +8695,7 @@
       {
         "map": "room_GoldenHillsDungeonLeftCrankHalf",
         "x": 497,
-        "y": 167,
+        "y": 234,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonLeftCrankHalf"
         ]
@@ -8677,8 +8717,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonBoss",
-        "x": 131,
-        "y": 192,
+        "x": 281,
+        "y": 200,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonBoss"
         ]
@@ -8697,8 +8737,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonUpperMain",
-        "x": 588,
-        "y": 169,
+        "x": 594,
+        "y": 197,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonUpperMain"
         ]
@@ -8720,8 +8760,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonUpperMain",
-        "x": 256,
-        "y": 37,
+        "x": 262,
+        "y": 183,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonUpperMain"
         ]
@@ -8746,8 +8786,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonUpperSide",
-        "x": 210,
-        "y": 528,
+        "x": 232,
+        "y": 410,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonUpperSide"
         ]
@@ -8769,8 +8809,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonUpperSide",
-        "x": 678,
-        "y": 540,
+        "x": 700,
+        "y": 416,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonUpperSide"
         ]
@@ -8789,8 +8829,8 @@
     "map_locations": [
       {
         "map": "room_GoldenHillsDungeonUpperSide",
-        "x": 24,
-        "y": 420,
+        "x": 46,
+        "y": 304,
         "restrict_visibility_rules": [
           "$bf_seen|GoldenHillsDungeonUpperSide"
         ]
@@ -8986,7 +9026,7 @@
       {
         "map": "room_ChomperCave1",
         "x": 294,
-        "y": 147,
+        "y": 146,
         "restrict_visibility_rules": [
           "$bf_seen|ChomperCave1"
         ]
@@ -9008,8 +9048,8 @@
     "map_locations": [
       {
         "map": "room_ChomperCave1",
-        "x": 137,
-        "y": 224,
+        "x": 136,
+        "y": 226,
         "restrict_visibility_rules": [
           "$bf_seen|ChomperCave1"
         ]
@@ -9031,8 +9071,8 @@
     "map_locations": [
       {
         "map": "room_ChomperCave1",
-        "x": 137,
-        "y": 72,
+        "x": 136,
+        "y": 109,
         "restrict_visibility_rules": [
           "$bf_seen|ChomperCave1"
         ]
@@ -9054,8 +9094,8 @@
     "map_locations": [
       {
         "map": "room_ChomperCaves2",
-        "x": 24,
-        "y": 26,
+        "x": 0,
+        "y": 215,
         "restrict_visibility_rules": [
           "$bf_seen|ChomperCaves2"
         ]
@@ -9077,8 +9117,8 @@
     "map_locations": [
       {
         "map": "room_ChomperCaves2",
-        "x": 660,
-        "y": 144,
+        "x": 443,
+        "y": 274,
         "restrict_visibility_rules": [
           "$bf_seen|ChomperCaves2"
         ]
@@ -9100,8 +9140,8 @@
     "map_locations": [
       {
         "map": "room_ChomperCaves2",
-        "x": 332,
-        "y": 140,
+        "x": 115,
+        "y": 272,
         "restrict_visibility_rules": [
           "$bf_seen|ChomperCaves2"
         ]
@@ -9123,8 +9163,8 @@
     "map_locations": [
       {
         "map": "room_ChomperCaves2",
-        "x": 439,
-        "y": 59,
+        "x": 222,
+        "y": 231,
         "restrict_visibility_rules": [
           "$bf_seen|ChomperCaves2"
         ]
@@ -9146,8 +9186,8 @@
     "map_locations": [
       {
         "map": "room_ChomperCaves2",
-        "x": 505,
-        "y": 187,
+        "x": 289,
+        "y": 296,
         "restrict_visibility_rules": [
           "$bf_seen|ChomperCaves2"
         ]
@@ -9169,8 +9209,8 @@
     "map_locations": [
       {
         "map": "room_ChomperCaves2",
-        "x": 646,
-        "y": 25,
+        "x": 430,
+        "y": 173,
         "restrict_visibility_rules": [
           "$bf_seen|ChomperCaves2"
         ]
@@ -9192,8 +9232,8 @@
     "map_locations": [
       {
         "map": "room_ChomperCaves3",
-        "x": 84,
-        "y": 71,
+        "x": 126,
+        "y": 101,
         "restrict_visibility_rules": [
           "$bf_seen|ChomperCaves3"
         ]
@@ -9991,8 +10031,8 @@
     "map_locations": [
       {
         "map": "room_DesertEntrance",
-        "x": 236,
-        "y": 263,
+        "x": 247,
+        "y": 206,
         "restrict_visibility_rules": [
           "$bf_seen|DesertEntrance"
         ]
@@ -10014,8 +10054,8 @@
     "map_locations": [
       {
         "map": "room_DesertEntrance",
-        "x": 124,
-        "y": 185,
+        "x": 135,
+        "y": 167,
         "restrict_visibility_rules": [
           "$bf_seen|DesertEntrance"
         ]
@@ -10037,8 +10077,8 @@
     "map_locations": [
       {
         "map": "room_DesertBookArea",
-        "x": 213,
-        "y": 260,
+        "x": 222,
+        "y": 178,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBookArea"
         ]
@@ -10060,8 +10100,8 @@
     "map_locations": [
       {
         "map": "room_DesertBookArea",
-        "x": 78,
-        "y": 92,
+        "x": 87,
+        "y": 87,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBookArea"
         ]
@@ -10083,8 +10123,8 @@
     "map_locations": [
       {
         "map": "room_DesertBadlands",
-        "x": 211,
-        "y": 257,
+        "x": 256,
+        "y": 300,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBadlands"
         ]
@@ -10106,8 +10146,8 @@
     "map_locations": [
       {
         "map": "room_DesertBadlands",
-        "x": 140,
-        "y": 227,
+        "x": 171,
+        "y": 241,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBadlands"
         ]
@@ -10129,8 +10169,8 @@
     "map_locations": [
       {
         "map": "room_DesertBadlands",
-        "x": 138,
-        "y": 57,
+        "x": 168,
+        "y": 180,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBadlands"
         ]
@@ -10152,8 +10192,8 @@
     "map_locations": [
       {
         "map": "room_DesertBadlands",
-        "x": 85,
-        "y": 73,
+        "x": 105,
+        "y": 161,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBadlands"
         ]
@@ -10172,8 +10212,8 @@
     "map_locations": [
       {
         "map": "room_DesertBadlands",
-        "x": 327,
-        "y": 232,
+        "x": 396,
+        "y": 264,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBadlands"
         ]
@@ -10198,8 +10238,8 @@
     "map_locations": [
       {
         "map": "room_DesertTrenchSouth",
-        "x": 151,
-        "y": 105,
+        "x": 156,
+        "y": 116,
         "restrict_visibility_rules": [
           "$bf_seen|DesertTrenchSouth"
         ]
@@ -10221,8 +10261,8 @@
     "map_locations": [
       {
         "map": "room_DesertTrenchSouth",
-        "x": 115,
-        "y": 57,
+        "x": 120,
+        "y": 50,
         "restrict_visibility_rules": [
           "$bf_seen|DesertTrenchSouth"
         ]
@@ -10244,8 +10284,8 @@
     "map_locations": [
       {
         "map": "room_DesertTrenchSouth",
-        "x": 403,
-        "y": 69,
+        "x": 408,
+        "y": 98,
         "restrict_visibility_rules": [
           "$bf_seen|DesertTrenchSouth"
         ]
@@ -10264,8 +10304,8 @@
     "map_locations": [
       {
         "map": "room_DesertTrenchSouth",
-        "x": 24,
-        "y": 189,
+        "x": 29,
+        "y": 158,
         "restrict_visibility_rules": [
           "$bf_seen|DesertTrenchSouth"
         ]
@@ -10290,8 +10330,8 @@
     "map_locations": [
       {
         "map": "room_DesertTrenchMiddle",
-        "x": 624,
-        "y": 244,
+        "x": 648,
+        "y": 206,
         "restrict_visibility_rules": [
           "$bf_seen|DesertTrenchMiddle"
         ]
@@ -10313,8 +10353,8 @@
     "map_locations": [
       {
         "map": "room_DesertTrenchMiddle",
-        "x": 510,
-        "y": 93,
+        "x": 534,
+        "y": 130,
         "restrict_visibility_rules": [
           "$bf_seen|DesertTrenchMiddle"
         ]
@@ -10336,8 +10376,8 @@
     "map_locations": [
       {
         "map": "room_DesertTrenchMiddle",
-        "x": 540,
-        "y": 321,
+        "x": 564,
+        "y": 244,
         "restrict_visibility_rules": [
           "$bf_seen|DesertTrenchMiddle"
         ]
@@ -10356,8 +10396,8 @@
     "map_locations": [
       {
         "map": "room_DesertTrenchMiddle",
-        "x": 450,
-        "y": 24,
+        "x": 474,
+        "y": 96,
         "restrict_visibility_rules": [
           "$bf_seen|DesertTrenchMiddle"
         ]
@@ -10382,8 +10422,8 @@
     "map_locations": [
       {
         "map": "room_DesertRockFormation",
-        "x": 148,
-        "y": 157,
+        "x": 182,
+        "y": 349,
         "restrict_visibility_rules": [
           "$bf_seen|DesertRockFormation"
         ]
@@ -10405,8 +10445,8 @@
     "map_locations": [
       {
         "map": "room_DesertRockFormation",
-        "x": 165,
-        "y": 65,
+        "x": 203,
+        "y": 143,
         "restrict_visibility_rules": [
           "$bf_seen|DesertRockFormation"
         ]
@@ -10428,8 +10468,8 @@
     "map_locations": [
       {
         "map": "room_DesertSandPitArea",
-        "x": 735,
-        "y": 649,
+        "x": 770,
+        "y": 382,
         "restrict_visibility_rules": [
           "$bf_seen|DesertSandPitArea"
         ]
@@ -10451,8 +10491,8 @@
     "map_locations": [
       {
         "map": "room_DesertSandPitArea",
-        "x": 718,
-        "y": 438,
+        "x": 753,
+        "y": 276,
         "restrict_visibility_rules": [
           "$bf_seen|DesertSandPitArea"
         ]
@@ -10474,8 +10514,8 @@
     "map_locations": [
       {
         "map": "room_DesertSandPitArea",
-        "x": 394,
-        "y": 678,
+        "x": 429,
+        "y": 396,
         "restrict_visibility_rules": [
           "$bf_seen|DesertSandPitArea"
         ]
@@ -10497,8 +10537,8 @@
     "map_locations": [
       {
         "map": "room_DesertSandPitArea",
-        "x": 310,
-        "y": 378,
+        "x": 345,
+        "y": 246,
         "restrict_visibility_rules": [
           "$bf_seen|DesertSandPitArea"
         ]
@@ -10520,8 +10560,8 @@
     "map_locations": [
       {
         "map": "room_DesertSandPitArea",
-        "x": 381,
-        "y": 162,
+        "x": 417,
+        "y": 138,
         "restrict_visibility_rules": [
           "$bf_seen|DesertSandPitArea"
         ]
@@ -10540,8 +10580,8 @@
     "map_locations": [
       {
         "map": "room_DesertSandPitArea",
-        "x": 514,
-        "y": 978,
+        "x": 549,
+        "y": 546,
         "restrict_visibility_rules": [
           "$bf_seen|DesertSandPitArea"
         ]
@@ -10563,8 +10603,8 @@
     "map_locations": [
       {
         "map": "room_DesertSandPitArea",
-        "x": 24,
-        "y": 516,
+        "x": 60,
+        "y": 315,
         "restrict_visibility_rules": [
           "$bf_seen|DesertSandPitArea"
         ]
@@ -10586,8 +10626,8 @@
     "map_locations": [
       {
         "map": "room_DesertSandPitArea",
-        "x": 456,
-        "y": 24,
+        "x": 492,
+        "y": 69,
         "restrict_visibility_rules": [
           "$bf_seen|DesertSandPitArea"
         ]
@@ -10609,8 +10649,8 @@
     "map_locations": [
       {
         "map": "room_DesertSandPitArea",
-        "x": 805,
-        "y": 122,
+        "x": 841,
+        "y": 118,
         "restrict_visibility_rules": [
           "$bf_seen|DesertSandPitArea"
         ]
@@ -10632,8 +10672,8 @@
     "map_locations": [
       {
         "map": "room_DesertSandPitArea",
-        "x": 982,
-        "y": 522,
+        "x": 1018,
+        "y": 318,
         "restrict_visibility_rules": [
           "$bf_seen|DesertSandPitArea"
         ]
@@ -10658,8 +10698,8 @@
     "map_locations": [
       {
         "map": "room_DesertSouthern",
-        "x": 153,
-        "y": 156,
+        "x": 190,
+        "y": 224,
         "restrict_visibility_rules": [
           "$bf_seen|DesertSouthern"
         ]
@@ -10672,17 +10712,17 @@
     ]
   },
   {
-    "name": "Roach Village: elsewhere in the room",
+    "name": "Roach Village: Dig Spot",
     "visibility_rules": [
-      "$bf_any_in_seed|7720124|7720316"
+      "$bf_any_in_seed|7720124"
     ],
     "chest_unopened_img": "images/chest_closed.png",
     "chest_opened_img": "images/chest_open.png",
     "map_locations": [
       {
         "map": "room_DesertRoachVillage",
-        "x": 182,
-        "y": 190,
+        "x": 87,
+        "y": 186,
         "restrict_visibility_rules": [
           "$bf_seen|DesertRoachVillage"
         ]
@@ -10691,7 +10731,27 @@
     "sections": [
       {
         "ref": "DesertRoachVillage/Lost Sands: Roach Village, Dig Spot"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Roach Village: elsewhere in the room",
+    "visibility_rules": [
+      "$bf_any_in_seed|7720316"
+    ],
+    "chest_unopened_img": "images/chest_closed.png",
+    "chest_opened_img": "images/chest_open.png",
+    "map_locations": [
+      {
+        "map": "room_DesertRoachVillage",
+        "x": 245,
+        "y": 191,
+        "restrict_visibility_rules": [
+          "$bf_seen|DesertRoachVillage"
+        ]
+      }
+    ],
+    "sections": [
       {
         "ref": "DesertRoachVillage/Lost Sands: Roach Village, Hawk's Gift"
       }
@@ -10707,8 +10767,8 @@
     "map_locations": [
       {
         "map": "room_DesertEastmost",
-        "x": 211,
-        "y": 146,
+        "x": 283,
+        "y": 192,
         "restrict_visibility_rules": [
           "$bf_seen|DesertEastmost"
         ]
@@ -10730,8 +10790,8 @@
     "map_locations": [
       {
         "map": "room_DesertEastmost",
-        "x": 72,
-        "y": 176,
+        "x": 115,
+        "y": 210,
         "restrict_visibility_rules": [
           "$bf_seen|DesertEastmost"
         ]
@@ -10753,8 +10813,8 @@
     "map_locations": [
       {
         "map": "room_DesertCaravanMap",
-        "x": 174,
-        "y": 183,
+        "x": 196,
+        "y": 175,
         "restrict_visibility_rules": [
           "$bf_seen|DesertCaravanMap"
         ]
@@ -10776,8 +10836,8 @@
     "map_locations": [
       {
         "map": "room_DesertCaravanMap",
-        "x": 325,
-        "y": 183,
+        "x": 348,
+        "y": 175,
         "restrict_visibility_rules": [
           "$bf_seen|DesertCaravanMap"
         ]
@@ -10790,7 +10850,7 @@
     ]
   },
   {
-    "name": "Caravan Camp: elsewhere in the room",
+    "name": "Caravan Camp: Dig Spot",
     "visibility_rules": [
       "$bf_any_in_seed|7720122"
     ],
@@ -10799,8 +10859,8 @@
     "map_locations": [
       {
         "map": "room_DesertCaravanMap",
-        "x": 282,
-        "y": 164,
+        "x": 243,
+        "y": 41,
         "restrict_visibility_rules": [
           "$bf_seen|DesertCaravanMap"
         ]
@@ -10822,8 +10882,8 @@
     "map_locations": [
       {
         "map": "room_DesertBeforeGH",
-        "x": 323,
-        "y": 95,
+        "x": 413,
+        "y": 255,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBeforeGH"
         ]
@@ -10845,8 +10905,8 @@
     "map_locations": [
       {
         "map": "room_DesertBeforeGH",
-        "x": 132,
-        "y": 95,
+        "x": 183,
+        "y": 255,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBeforeGH"
         ]
@@ -10868,8 +10928,8 @@
     "map_locations": [
       {
         "map": "room_DesertBeforeGH",
-        "x": 20,
-        "y": 118,
+        "x": 48,
+        "y": 202,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBeforeGH"
         ]
@@ -10891,8 +10951,8 @@
     "map_locations": [
       {
         "map": "room_DesertOasis",
-        "x": 476,
-        "y": 24,
+        "x": 499,
+        "y": 116,
         "restrict_visibility_rules": [
           "$bf_seen|DesertOasis"
         ]
@@ -10914,8 +10974,8 @@
     "map_locations": [
       {
         "map": "room_DesertOasis",
-        "x": 516,
-        "y": 242,
+        "x": 540,
+        "y": 312,
         "restrict_visibility_rules": [
           "$bf_seen|DesertOasis"
         ]
@@ -10934,8 +10994,8 @@
     "map_locations": [
       {
         "map": "room_DesertOasis",
-        "x": 210,
-        "y": 509,
+        "x": 234,
+        "y": 517,
         "restrict_visibility_rules": [
           "$bf_seen|DesertOasis"
         ]
@@ -10957,8 +11017,8 @@
     "map_locations": [
       {
         "map": "room_DesertOasis",
-        "x": 519,
-        "y": 122,
+        "x": 542,
+        "y": 198,
         "restrict_visibility_rules": [
           "$bf_seen|DesertOasis"
         ]
@@ -10983,8 +11043,8 @@
     "map_locations": [
       {
         "map": "room_DesertBadgeAlcove",
-        "x": 366,
-        "y": 127,
+        "x": 390,
+        "y": 137,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBadgeAlcove"
         ]
@@ -11006,8 +11066,8 @@
     "map_locations": [
       {
         "map": "room_DesertBadgeAlcove",
-        "x": 353,
-        "y": 221,
+        "x": 376,
+        "y": 184,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBadgeAlcove"
         ]
@@ -11029,8 +11089,8 @@
     "map_locations": [
       {
         "map": "room_DesertBadgeAlcove",
-        "x": 190,
-        "y": 173,
+        "x": 214,
+        "y": 88,
         "restrict_visibility_rules": [
           "$bf_seen|DesertBadgeAlcove"
         ]
@@ -11049,8 +11109,8 @@
     "map_locations": [
       {
         "map": "room_DesertSandCastle",
-        "x": 81,
-        "y": 188,
+        "x": 238,
+        "y": 231,
         "restrict_visibility_rules": [
           "$bf_seen|DesertSandCastle"
         ]
@@ -11075,8 +11135,8 @@
     "map_locations": [
       {
         "map": "room_DesertWestDunes",
-        "x": 174,
-        "y": 154,
+        "x": 300,
+        "y": 207,
         "restrict_visibility_rules": [
           "$bf_seen|DesertWestDunes"
         ]
@@ -11098,8 +11158,8 @@
     "map_locations": [
       {
         "map": "room_DesertWestDunes",
-        "x": 20,
-        "y": 114,
+        "x": 114,
+        "y": 183,
         "restrict_visibility_rules": [
           "$bf_seen|DesertWestDunes"
         ]
@@ -11121,8 +11181,8 @@
     "map_locations": [
       {
         "map": "room_DesertWestDunes",
-        "x": 63,
-        "y": 241,
+        "x": 165,
+        "y": 268,
         "restrict_visibility_rules": [
           "$bf_seen|DesertWestDunes"
         ]
@@ -11144,8 +11204,8 @@
     "map_locations": [
       {
         "map": "room_DesertOasisEntrance",
-        "x": 405,
-        "y": 104,
+        "x": 540,
+        "y": 198,
         "restrict_visibility_rules": [
           "$bf_seen|DesertOasisEntrance"
         ]
@@ -11167,8 +11227,8 @@
     "map_locations": [
       {
         "map": "room_DesertOasisEntrance",
-        "x": 106,
-        "y": 154,
+        "x": 180,
+        "y": 228,
         "restrict_visibility_rules": [
           "$bf_seen|DesertOasisEntrance"
         ]
@@ -11190,8 +11250,8 @@
     "map_locations": [
       {
         "map": "room_DesertOasisEntrance",
-        "x": 20,
-        "y": 145,
+        "x": 76,
+        "y": 223,
         "restrict_visibility_rules": [
           "$bf_seen|DesertOasisEntrance"
         ]
@@ -11213,8 +11273,8 @@
     "map_locations": [
       {
         "map": "room_DesertDREastEntrance",
-        "x": 190,
-        "y": 52,
+        "x": 209,
+        "y": 130,
         "restrict_visibility_rules": [
           "$bf_seen|DesertDREastEntrance"
         ]
@@ -11236,8 +11296,8 @@
     "map_locations": [
       {
         "map": "room_DesertDREastEntrance",
-        "x": 108,
-        "y": 24,
+        "x": 128,
+        "y": 116,
         "restrict_visibility_rules": [
           "$bf_seen|DesertDREastEntrance"
         ]
@@ -11259,8 +11319,8 @@
     "map_locations": [
       {
         "map": "room_DesertDREastEntrance",
-        "x": 490,
-        "y": 64,
+        "x": 509,
+        "y": 136,
         "restrict_visibility_rules": [
           "$bf_seen|DesertDREastEntrance"
         ]
@@ -11279,8 +11339,8 @@
     "map_locations": [
       {
         "map": "room_DesertDREastEntrance",
-        "x": 66,
-        "y": 68,
+        "x": 86,
+        "y": 138,
         "restrict_visibility_rules": [
           "$bf_seen|DesertDREastEntrance"
         ]
@@ -11305,8 +11365,8 @@
     "map_locations": [
       {
         "map": "room_DesertJumpPuzzle",
-        "x": 344,
-        "y": 36,
+        "x": 378,
+        "y": 84,
         "restrict_visibility_rules": [
           "$bf_seen|DesertJumpPuzzle"
         ]
@@ -11328,8 +11388,8 @@
     "map_locations": [
       {
         "map": "room_DesertJumpPuzzle",
-        "x": 141,
-        "y": 166,
+        "x": 175,
+        "y": 218,
         "restrict_visibility_rules": [
           "$bf_seen|DesertJumpPuzzle"
         ]
@@ -11348,8 +11408,8 @@
     "map_locations": [
       {
         "map": "room_DesertJumpPuzzle",
-        "x": 506,
-        "y": 24,
+        "x": 540,
+        "y": 74,
         "restrict_visibility_rules": [
           "$bf_seen|DesertJumpPuzzle"
         ]
@@ -11603,8 +11663,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleMainRoom",
-        "x": 543,
-        "y": 90,
+        "x": 553,
+        "y": 269,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleMainRoom"
         ]
@@ -11626,8 +11686,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleMainRoom",
-        "x": 511,
-        "y": 93,
+        "x": 520,
+        "y": 125,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleMainRoom"
         ]
@@ -11649,8 +11709,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleMainRoom",
-        "x": 545,
-        "y": 210,
+        "x": 555,
+        "y": 412,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleMainRoom"
         ]
@@ -11672,8 +11732,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleMainRoom",
-        "x": 545,
-        "y": 138,
+        "x": 555,
+        "y": 147,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleMainRoom"
         ]
@@ -11698,8 +11758,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleSlidePuzzle",
-        "x": 24,
-        "y": 50,
+        "x": 6,
+        "y": 33,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleSlidePuzzle"
         ]
@@ -11718,8 +11778,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleSlidePuzzle",
-        "x": 61,
-        "y": 24,
+        "x": 43,
+        "y": 0,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleSlidePuzzle"
         ]
@@ -11741,8 +11801,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleSlidePuzzle",
-        "x": 61,
-        "y": 24,
+        "x": 43,
+        "y": 0,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleSlidePuzzle"
         ]
@@ -11767,8 +11827,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleRoof",
-        "x": 185,
-        "y": 44,
+        "x": 189,
+        "y": 126,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleRoof"
         ]
@@ -11787,8 +11847,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleRoof",
-        "x": 278,
-        "y": 48,
+        "x": 282,
+        "y": 128,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleRoof"
         ]
@@ -11813,8 +11873,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleBasement",
-        "x": 220,
-        "y": 24,
+        "x": 235,
+        "y": 121,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleBasement"
         ]
@@ -11836,8 +11896,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleBasement",
-        "x": 675,
-        "y": 386,
+        "x": 690,
+        "y": 297,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleBasement"
         ]
@@ -11859,8 +11919,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleBasement",
-        "x": 24,
-        "y": 237,
+        "x": 39,
+        "y": 228,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleBasement"
         ]
@@ -11882,8 +11942,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleBossKeyRoom",
-        "x": 488,
-        "y": 24,
+        "x": 457,
+        "y": 183,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleBossKeyRoom"
         ]
@@ -11905,8 +11965,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleBossKeyRoom",
-        "x": 643,
-        "y": 116,
+        "x": 612,
+        "y": 219,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleBossKeyRoom"
         ]
@@ -11928,8 +11988,8 @@
     "map_locations": [
       {
         "map": "room_SandCastlePressurePuzzle",
-        "x": 378,
-        "y": 43,
+        "x": 401,
+        "y": 128,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastlePressurePuzzle"
         ]
@@ -11948,8 +12008,8 @@
     "map_locations": [
       {
         "map": "room_SandCastlePressurePuzzle",
-        "x": 430,
-        "y": 146,
+        "x": 453,
+        "y": 232,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastlePressurePuzzle"
         ]
@@ -11974,8 +12034,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleRockRoom",
-        "x": 1101,
-        "y": 187,
+        "x": 965,
+        "y": 280,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleRockRoom"
         ]
@@ -11994,8 +12054,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleRockRoom",
-        "x": 837,
-        "y": 614,
+        "x": 846,
+        "y": 504,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleRockRoom"
         ]
@@ -12020,8 +12080,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleBossRoom",
-        "x": 344,
-        "y": 72,
+        "x": 354,
+        "y": 144,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleBossRoom"
         ]
@@ -12043,8 +12103,8 @@
     "map_locations": [
       {
         "map": "room_SandCastleTreasureRoom",
-        "x": 82,
-        "y": 24,
+        "x": 46,
+        "y": 74,
         "restrict_visibility_rules": [
           "$bf_seen|SandCastleTreasureRoom"
         ]
@@ -12232,8 +12292,8 @@
     "map_locations": [
       {
         "map": "room_HideoutEntrance",
-        "x": 364,
-        "y": 76,
+        "x": 388,
+        "y": 105,
         "restrict_visibility_rules": [
           "$bf_seen|HideoutEntrance"
         ]
@@ -12258,8 +12318,8 @@
     "map_locations": [
       {
         "map": "room_HideoutCell",
-        "x": 159,
-        "y": 122,
+        "x": 160,
+        "y": 114,
         "restrict_visibility_rules": [
           "$bf_seen|HideoutCell"
         ]
@@ -12281,8 +12341,8 @@
     "map_locations": [
       {
         "map": "room_HideoutRightA",
-        "x": 437,
-        "y": 167,
+        "x": 460,
+        "y": 225,
         "restrict_visibility_rules": [
           "$bf_seen|HideoutRightA"
         ]
@@ -12295,7 +12355,7 @@
     ]
   },
   {
-    "name": "Dining Hall: elsewhere in the room",
+    "name": "Dining Hall: Dig Spot",
     "visibility_rules": [
       "$bf_any_in_seed|7720296"
     ],
@@ -12304,8 +12364,8 @@
     "map_locations": [
       {
         "map": "room_HideoutRightA",
-        "x": 260,
-        "y": 96,
+        "x": 469,
+        "y": 169,
         "restrict_visibility_rules": [
           "$bf_seen|HideoutRightA"
         ]
@@ -12327,8 +12387,8 @@
     "map_locations": [
       {
         "map": "room_HideoutRightA",
-        "x": 289,
-        "y": 62,
+        "x": 312,
+        "y": 155,
         "restrict_visibility_rules": [
           "$bf_seen|HideoutRightA"
         ]
@@ -12350,8 +12410,8 @@
     "map_locations": [
       {
         "map": "room_HideoutGarden",
-        "x": 634,
-        "y": 61,
+        "x": 650,
+        "y": 101,
         "restrict_visibility_rules": [
           "$bf_seen|HideoutGarden"
         ]
@@ -12370,8 +12430,8 @@
     "map_locations": [
       {
         "map": "room_HideoutGarden",
-        "x": 24,
-        "y": 238,
+        "x": 40,
+        "y": 221,
         "restrict_visibility_rules": [
           "$bf_seen|HideoutGarden"
         ]
@@ -12396,8 +12456,8 @@
     "map_locations": [
       {
         "map": "room_HideoutWestStorage",
-        "x": 24,
-        "y": 118,
+        "x": 14,
+        "y": 172,
         "restrict_visibility_rules": [
           "$bf_seen|HideoutWestStorage"
         ]
@@ -12633,8 +12693,8 @@
     "map_locations": [
       {
         "map": "room_StreamMountain1",
-        "x": 122,
-        "y": 24,
+        "x": 143,
+        "y": 154,
         "restrict_visibility_rules": [
           "$bf_seen|StreamMountain1"
         ]
@@ -12656,8 +12716,8 @@
     "map_locations": [
       {
         "map": "room_StreamMountain2",
-        "x": 104,
-        "y": 39,
+        "x": 126,
+        "y": 124,
         "restrict_visibility_rules": [
           "$bf_seen|StreamMountain2"
         ]
@@ -12679,8 +12739,8 @@
     "map_locations": [
       {
         "map": "room_StreamMountain2",
-        "x": 308,
-        "y": 75,
+        "x": 330,
+        "y": 246,
         "restrict_visibility_rules": [
           "$bf_seen|StreamMountain2"
         ]
@@ -12702,8 +12762,8 @@
     "map_locations": [
       {
         "map": "room_StreamMountain3",
-        "x": 328,
-        "y": 24,
+        "x": 351,
+        "y": 116,
         "restrict_visibility_rules": [
           "$bf_seen|StreamMountain3"
         ]
@@ -12725,8 +12785,8 @@
     "map_locations": [
       {
         "map": "room_StreamMountain3",
-        "x": 337,
-        "y": 313,
+        "x": 360,
+        "y": 510,
         "restrict_visibility_rules": [
           "$bf_seen|StreamMountain3"
         ]
@@ -12748,8 +12808,8 @@
     "map_locations": [
       {
         "map": "room_StreamMountain3",
-        "x": 379,
-        "y": 289,
+        "x": 402,
+        "y": 394,
         "restrict_visibility_rules": [
           "$bf_seen|StreamMountain3"
         ]
@@ -12771,8 +12831,8 @@
     "map_locations": [
       {
         "map": "room_StreamMountain3",
-        "x": 242,
-        "y": 152,
+        "x": 265,
+        "y": 263,
         "restrict_visibility_rules": [
           "$bf_seen|StreamMountain3"
         ]
@@ -12795,7 +12855,7 @@
       {
         "map": "room_StreamMountain4",
         "x": 81,
-        "y": 38,
+        "y": 227,
         "restrict_visibility_rules": [
           "$bf_seen|StreamMountain4"
         ]
@@ -12817,8 +12877,8 @@
     "map_locations": [
       {
         "map": "room_StreamMountain4",
-        "x": 577,
-        "y": 87,
+        "x": 578,
+        "y": 148,
         "restrict_visibility_rules": [
           "$bf_seen|StreamMountain4"
         ]
@@ -12840,8 +12900,8 @@
     "map_locations": [
       {
         "map": "room_StreamMountain4",
-        "x": 375,
-        "y": 221,
+        "x": 376,
+        "y": 318,
         "restrict_visibility_rules": [
           "$bf_seen|StreamMountain4"
         ]
@@ -12863,8 +12923,8 @@
     "map_locations": [
       {
         "map": "room_StreamMountain4",
-        "x": 111,
-        "y": 27,
+        "x": 112,
+        "y": 222,
         "restrict_visibility_rules": [
           "$bf_seen|StreamMountain4"
         ]
@@ -12886,8 +12946,8 @@
     "map_locations": [
       {
         "map": "room_StreamMountain5",
-        "x": 156,
-        "y": 89,
+        "x": 365,
+        "y": 148,
         "restrict_visibility_rules": [
           "$bf_seen|StreamMountain5"
         ]
@@ -13197,8 +13257,8 @@
     "map_locations": [
       {
         "map": "room_DefiantRoot1",
-        "x": 162,
-        "y": 98,
+        "x": 194,
+        "y": 220,
         "restrict_visibility_rules": [
           "$bf_seen|DefiantRoot1"
         ]
@@ -13220,8 +13280,8 @@
     "map_locations": [
       {
         "map": "room_DefiantRoot1",
-        "x": 267,
-        "y": 119,
+        "x": 299,
+        "y": 164,
         "restrict_visibility_rules": [
           "$bf_seen|DefiantRoot1"
         ]
@@ -13243,8 +13303,8 @@
     "map_locations": [
       {
         "map": "room_DefiantRoot1",
-        "x": 613,
-        "y": 79,
+        "x": 646,
+        "y": 211,
         "restrict_visibility_rules": [
           "$bf_seen|DefiantRoot1"
         ]
@@ -13266,8 +13326,8 @@
     "map_locations": [
       {
         "map": "room_DefiantRoot1",
-        "x": 625,
-        "y": 86,
+        "x": 657,
+        "y": 166,
         "restrict_visibility_rules": [
           "$bf_seen|DefiantRoot1"
         ]
@@ -13289,8 +13349,8 @@
     "map_locations": [
       {
         "map": "room_DefiantRootWell",
-        "x": 384,
-        "y": 140,
+        "x": 474,
+        "y": 266,
         "restrict_visibility_rules": [
           "$bf_seen|DefiantRootWell"
         ]
@@ -13309,8 +13369,8 @@
     "map_locations": [
       {
         "map": "room_DefiantRootWell",
-        "x": 364,
-        "y": 82,
+        "x": 454,
+        "y": 248,
         "restrict_visibility_rules": [
           "$bf_seen|DefiantRootWell"
         ]
@@ -13335,8 +13395,8 @@
     "map_locations": [
       {
         "map": "room_DefiantRoot2",
-        "x": 395,
-        "y": 45,
+        "x": 450,
+        "y": 126,
         "restrict_visibility_rules": [
           "$bf_seen|DefiantRoot2"
         ]
@@ -13358,8 +13418,8 @@
     "map_locations": [
       {
         "map": "room_DefiantRoot2",
-        "x": 355,
-        "y": 24,
+        "x": 411,
+        "y": 127,
         "restrict_visibility_rules": [
           "$bf_seen|DefiantRoot2"
         ]
@@ -13381,8 +13441,8 @@
     "map_locations": [
       {
         "map": "room_DefiantRoot3",
-        "x": 24,
-        "y": 327,
+        "x": 0,
+        "y": 267,
         "restrict_visibility_rules": [
           "$bf_seen|DefiantRoot3"
         ]
@@ -13410,8 +13470,8 @@
     "map_locations": [
       {
         "map": "room_DefiantRoot3",
-        "x": 158,
-        "y": 307,
+        "x": 58,
+        "y": 257,
         "restrict_visibility_rules": [
           "$bf_seen|DefiantRoot3"
         ]
@@ -13445,8 +13505,8 @@
     "map_locations": [
       {
         "map": "room_DefiantRoot3",
-        "x": 578,
-        "y": 159,
+        "x": 478,
+        "y": 183,
         "restrict_visibility_rules": [
           "$bf_seen|DefiantRoot3"
         ]
@@ -13597,8 +13657,8 @@
     "map_locations": [
       {
         "map": "room_BeehiveBalcony",
-        "x": 234,
-        "y": 68,
+        "x": 256,
+        "y": 157,
         "restrict_visibility_rules": [
           "$bf_seen|BeehiveBalcony"
         ]
@@ -13621,7 +13681,7 @@
       {
         "map": "room_BeehiveMainArea",
         "x": 344,
-        "y": 319,
+        "y": 311,
         "restrict_visibility_rules": [
           "$bf_seen|BeehiveMainArea"
         ]
@@ -13646,8 +13706,8 @@
     "map_locations": [
       {
         "map": "room_JaunesGallery",
-        "x": 24,
-        "y": 36,
+        "x": 54,
+        "y": 152,
         "restrict_visibility_rules": [
           "$bf_seen|JaunesGallery"
         ]
@@ -13669,7 +13729,7 @@
     "map_locations": [
       {
         "map": "room_BeehiveScannerRoom",
-        "x": 59,
+        "x": 102,
         "y": 144,
         "restrict_visibility_rules": [
           "$bf_seen|BeehiveScannerRoom"
@@ -14386,8 +14446,8 @@
     "map_locations": [
       {
         "map": "room_HoneyFactoryEntrance",
-        "x": 130,
-        "y": 327,
+        "x": 135,
+        "y": 320,
         "restrict_visibility_rules": [
           "$bf_seen|HoneyFactoryEntrance"
         ]
@@ -14418,8 +14478,8 @@
     "map_locations": [
       {
         "map": "room_HoneyFactoryEntrance",
-        "x": 72,
-        "y": 89,
+        "x": 76,
+        "y": 149,
         "restrict_visibility_rules": [
           "$bf_seen|HoneyFactoryEntrance"
         ]
@@ -14445,7 +14505,7 @@
       {
         "map": "room_HoneyFactoryWorkerRooms",
         "x": 790,
-        "y": 24,
+        "y": 6,
         "restrict_visibility_rules": [
           "$bf_seen|HoneyFactoryWorkerRooms"
         ]
@@ -14468,7 +14528,7 @@
       {
         "map": "room_HoneyFactoryWorkerRooms",
         "x": 794,
-        "y": 126,
+        "y": 96,
         "restrict_visibility_rules": [
           "$bf_seen|HoneyFactoryWorkerRooms"
         ]
@@ -14490,8 +14550,8 @@
     "map_locations": [
       {
         "map": "room_HoneyFactoryCore",
-        "x": 72,
-        "y": 316,
+        "x": 118,
+        "y": 149,
         "restrict_visibility_rules": [
           "$bf_seen|HoneyFactoryCore"
         ]
@@ -14513,8 +14573,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingFirstRoom",
-        "x": 185,
-        "y": 101,
+        "x": 204,
+        "y": 278,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingFirstRoom"
         ]
@@ -14536,8 +14596,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingFirstRoom",
-        "x": 288,
-        "y": 101,
+        "x": 306,
+        "y": 278,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingFirstRoom"
         ]
@@ -14559,8 +14619,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingFirstRoom",
-        "x": 78,
-        "y": 59,
+        "x": 96,
+        "y": 194,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingFirstRoom"
         ]
@@ -14582,8 +14642,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingFirstRoom",
-        "x": 255,
-        "y": 64,
+        "x": 273,
+        "y": 197,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingFirstRoom"
         ]
@@ -14602,8 +14662,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingFirstRoom",
-        "x": 24,
-        "y": 103,
+        "x": 42,
+        "y": 216,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingFirstRoom"
         ]
@@ -14628,8 +14688,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessing2",
-        "x": 332,
-        "y": 417,
+        "x": 354,
+        "y": 384,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessing2"
         ]
@@ -14651,8 +14711,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessing2",
-        "x": 440,
-        "y": 78,
+        "x": 462,
+        "y": 143,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessing2"
         ]
@@ -14674,8 +14734,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessing2",
-        "x": 75,
-        "y": 73,
+        "x": 97,
+        "y": 140,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessing2"
         ]
@@ -14697,8 +14757,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageMaze",
-        "x": 592,
-        "y": 190,
+        "x": 683,
+        "y": 315,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageMaze"
         ]
@@ -14720,8 +14780,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageMaze",
-        "x": 426,
-        "y": 62,
+        "x": 517,
+        "y": 251,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageMaze"
         ]
@@ -14743,8 +14803,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageMaze",
-        "x": 791,
-        "y": 76,
+        "x": 882,
+        "y": 141,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageMaze"
         ]
@@ -14766,8 +14826,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageMaze",
-        "x": 155,
-        "y": 53,
+        "x": 246,
+        "y": 246,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageMaze"
         ]
@@ -14786,8 +14846,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageMaze",
-        "x": 911,
-        "y": 24,
+        "x": 1002,
+        "y": 232,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageMaze"
         ]
@@ -14812,8 +14872,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingPump",
-        "x": 397,
-        "y": 549,
+        "x": 414,
+        "y": 384,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingPump"
         ]
@@ -14835,8 +14895,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingPump",
-        "x": 392,
-        "y": 43,
+        "x": 409,
+        "y": 126,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingPump"
         ]
@@ -14858,8 +14918,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingPump",
-        "x": 155,
-        "y": 345,
+        "x": 171,
+        "y": 417,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingPump"
         ]
@@ -14881,8 +14941,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingPump",
-        "x": 344,
-        "y": 96,
+        "x": 361,
+        "y": 155,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingPump"
         ]
@@ -14901,8 +14961,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingPump",
-        "x": 24,
-        "y": 345,
+        "x": 41,
+        "y": 417,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingPump"
         ]
@@ -14927,8 +14987,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageMiniboss",
-        "x": 325,
-        "y": 235,
+        "x": 408,
+        "y": 181,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageMiniboss"
         ]
@@ -14950,8 +15010,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageMiniboss",
-        "x": 282,
-        "y": 144,
+        "x": 366,
+        "y": 135,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageMiniboss"
         ]
@@ -14973,8 +15033,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageMiniboss",
-        "x": 541,
-        "y": 176,
+        "x": 624,
+        "y": 100,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageMiniboss"
         ]
@@ -14996,8 +15056,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 778,
-        "y": 24,
+        "x": 777,
+        "y": 50,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15019,8 +15079,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 651,
-        "y": 24,
+        "x": 649,
+        "y": 50,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15042,8 +15102,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 806,
-        "y": 24,
+        "x": 804,
+        "y": 50,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15065,8 +15125,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 503,
-        "y": 234,
+        "x": 502,
+        "y": 207,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15088,8 +15148,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 265,
-        "y": 234,
+        "x": 263,
+        "y": 155,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15111,8 +15171,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 630,
-        "y": 246,
+        "x": 629,
+        "y": 161,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15134,8 +15194,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 824,
-        "y": 24,
+        "x": 822,
+        "y": 50,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15157,8 +15217,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 758,
-        "y": 24,
+        "x": 757,
+        "y": 50,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15180,8 +15240,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 742,
-        "y": 24,
+        "x": 741,
+        "y": 50,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15203,8 +15263,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 727,
-        "y": 24,
+        "x": 725,
+        "y": 50,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15226,8 +15286,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 713,
-        "y": 24,
+        "x": 711,
+        "y": 50,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15249,8 +15309,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 696,
-        "y": 24,
+        "x": 695,
+        "y": 50,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15272,8 +15332,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 681,
-        "y": 24,
+        "x": 679,
+        "y": 50,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15295,8 +15355,8 @@
     "map_locations": [
       {
         "map": "room_FactoryStorageOverseer",
-        "x": 664,
-        "y": 24,
+        "x": 663,
+        "y": 50,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryStorageOverseer"
         ]
@@ -15318,8 +15378,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingPuzzle2",
-        "x": 842,
-        "y": 100,
+        "x": 839,
+        "y": 219,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingPuzzle2"
         ]
@@ -15341,8 +15401,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingPuzzle2",
-        "x": 676,
-        "y": 91,
+        "x": 672,
+        "y": 214,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingPuzzle2"
         ]
@@ -15364,8 +15424,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingPuzzle2",
-        "x": 1001,
-        "y": 24,
+        "x": 997,
+        "y": 118,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingPuzzle2"
         ]
@@ -15387,8 +15447,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingPuzzle3",
-        "x": 36,
-        "y": 24,
+        "x": 62,
+        "y": 111,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingPuzzle3"
         ]
@@ -15410,8 +15470,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingPuzzle3",
-        "x": 319,
-        "y": 108,
+        "x": 345,
+        "y": 121,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingPuzzle3"
         ]
@@ -15433,8 +15493,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingPuzzle3",
-        "x": 124,
-        "y": 197,
+        "x": 151,
+        "y": 312,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingPuzzle3"
         ]
@@ -15456,8 +15516,8 @@
     "map_locations": [
       {
         "map": "room_FactoryProcessingPuzzle3",
-        "x": 55,
-        "y": 110,
+        "x": 81,
+        "y": 185,
         "restrict_visibility_rules": [
           "$bf_seen|FactoryProcessingPuzzle3"
         ]
@@ -15966,8 +16026,8 @@
     "map_locations": [
       {
         "map": "room_FGCave",
-        "x": 24,
-        "y": 288,
+        "x": 48,
+        "y": 116,
         "restrict_visibility_rules": [
           "$bf_seen|FGCave"
         ]
@@ -15989,8 +16049,8 @@
     "map_locations": [
       {
         "map": "room_FGCave",
-        "x": 594,
-        "y": 288,
+        "x": 618,
+        "y": 116,
         "restrict_visibility_rules": [
           "$bf_seen|FGCave"
         ]
@@ -16015,8 +16075,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsOutsideCave",
-        "x": 117,
-        "y": 406,
+        "x": 152,
+        "y": 307,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsOutsideCave"
         ]
@@ -16038,8 +16098,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsOutsideCave",
-        "x": 215,
-        "y": 204,
+        "x": 250,
+        "y": 206,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsOutsideCave"
         ]
@@ -16058,8 +16118,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsOutsideCave",
-        "x": 419,
-        "y": 165,
+        "x": 454,
+        "y": 187,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsOutsideCave"
         ]
@@ -16081,8 +16141,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsOutsideCave",
-        "x": 87,
-        "y": 546,
+        "x": 122,
+        "y": 378,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsOutsideCave"
         ]
@@ -16107,8 +16167,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsWizard",
-        "x": 301,
-        "y": 196,
+        "x": 342,
+        "y": 223,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsWizard"
         ]
@@ -16127,8 +16187,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsWizard",
-        "x": 385,
-        "y": 90,
+        "x": 426,
+        "y": 211,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsWizard"
         ]
@@ -16153,8 +16213,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands4",
-        "x": 108,
-        "y": 162,
+        "x": 125,
+        "y": 186,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands4"
         ]
@@ -16176,8 +16236,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands4",
-        "x": 446,
-        "y": 149,
+        "x": 464,
+        "y": 226,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands4"
         ]
@@ -16199,8 +16259,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands4",
-        "x": 657,
-        "y": 278,
+        "x": 675,
+        "y": 290,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands4"
         ]
@@ -16219,8 +16279,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands4",
-        "x": 691,
-        "y": 24,
+        "x": 708,
+        "y": 173,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands4"
         ]
@@ -16245,8 +16305,8 @@
     "map_locations": [
       {
         "map": "room_WizardTowerBasement",
-        "x": 313,
-        "y": 56,
+        "x": 333,
+        "y": 215,
         "restrict_visibility_rules": [
           "$bf_seen|WizardTowerBasement"
         ]
@@ -16268,8 +16328,8 @@
     "map_locations": [
       {
         "map": "room_WizardTowerBasement",
-        "x": 24,
-        "y": 64,
+        "x": 43,
+        "y": 141,
         "restrict_visibility_rules": [
           "$bf_seen|WizardTowerBasement"
         ]
@@ -16291,8 +16351,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands2",
-        "x": 293,
-        "y": 167,
+        "x": 355,
+        "y": 207,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands2"
         ]
@@ -16314,8 +16374,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands2",
-        "x": 52,
-        "y": 295,
+        "x": 114,
+        "y": 272,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands2"
         ]
@@ -16337,8 +16397,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands2",
-        "x": 220,
-        "y": 187,
+        "x": 282,
+        "y": 259,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands2"
         ]
@@ -16360,8 +16420,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands2",
-        "x": 25,
-        "y": 291,
+        "x": 87,
+        "y": 269,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands2"
         ]
@@ -16383,8 +16443,8 @@
     "map_locations": [
       {
         "map": "room_FGClearing",
-        "x": 207,
-        "y": 24,
+        "x": 363,
+        "y": 158,
         "restrict_visibility_rules": [
           "$bf_seen|FGClearing"
         ]
@@ -16406,8 +16466,8 @@
     "map_locations": [
       {
         "map": "room_WizardTowerAttic",
-        "x": 24,
-        "y": 108,
+        "x": 36,
+        "y": 151,
         "restrict_visibility_rules": [
           "$bf_seen|WizardTowerAttic"
         ]
@@ -16420,7 +16480,7 @@
     ]
   },
   {
-    "name": "Crossroads: elsewhere in the room",
+    "name": "Crossroads: Dig Spot",
     "visibility_rules": [
       "$bf_any_in_seed|7720170"
     ],
@@ -16429,8 +16489,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands1",
-        "x": 304,
-        "y": 170,
+        "x": 217,
+        "y": 249,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands1"
         ]
@@ -16452,8 +16512,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands1",
-        "x": 505,
-        "y": 235,
+        "x": 521,
+        "y": 222,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands1"
         ]
@@ -16475,8 +16535,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands1",
-        "x": 143,
-        "y": 165,
+        "x": 159,
+        "y": 187,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands1"
         ]
@@ -16498,8 +16558,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsLake",
-        "x": 456,
-        "y": 685,
+        "x": 500,
+        "y": 446,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsLake"
         ]
@@ -16521,8 +16581,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsLake",
-        "x": 465,
-        "y": 350,
+        "x": 510,
+        "y": 279,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsLake"
         ]
@@ -16544,8 +16604,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsLake",
-        "x": 291,
-        "y": 501,
+        "x": 336,
+        "y": 354,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsLake"
         ]
@@ -16567,8 +16627,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsLake",
-        "x": 109,
-        "y": 692,
+        "x": 154,
+        "y": 450,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsLake"
         ]
@@ -16590,8 +16650,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsLake",
-        "x": 57,
-        "y": 481,
+        "x": 102,
+        "y": 344,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsLake"
         ]
@@ -16613,8 +16673,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsLake",
-        "x": 249,
-        "y": 169,
+        "x": 294,
+        "y": 188,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsLake"
         ]
@@ -16636,8 +16696,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsLake",
-        "x": 408,
-        "y": 676,
+        "x": 453,
+        "y": 442,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsLake"
         ]
@@ -16659,8 +16719,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands3",
-        "x": 441,
-        "y": 119,
+        "x": 468,
+        "y": 163,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands3"
         ]
@@ -16682,8 +16742,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands3",
-        "x": 237,
-        "y": 131,
+        "x": 264,
+        "y": 268,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands3"
         ]
@@ -16705,8 +16765,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslands3",
-        "x": 396,
-        "y": 200,
+        "x": 424,
+        "y": 303,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslands3"
         ]
@@ -16728,8 +16788,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsOutsideVillage",
-        "x": 452,
-        "y": 125,
+        "x": 486,
+        "y": 166,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsOutsideVillage"
         ]
@@ -16751,8 +16811,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsOutsideVillage",
-        "x": 296,
-        "y": 408,
+        "x": 330,
+        "y": 308,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsOutsideVillage"
         ]
@@ -16774,8 +16834,8 @@
     "map_locations": [
       {
         "map": "room_FarGrasslandsOutsideVillage",
-        "x": 704,
-        "y": 77,
+        "x": 739,
+        "y": 142,
         "restrict_visibility_rules": [
           "$bf_seen|FarGrasslandsOutsideVillage"
         ]
@@ -17315,8 +17375,8 @@
     "map_locations": [
       {
         "map": "room_SwamplandsBridge",
-        "x": 402,
-        "y": 250,
+        "x": 430,
+        "y": 281,
         "restrict_visibility_rules": [
           "$bf_seen|SwamplandsBridge"
         ]
@@ -17335,8 +17395,8 @@
     "map_locations": [
       {
         "map": "room_SwamplandsBridge",
-        "x": 341,
-        "y": 24,
+        "x": 370,
+        "y": 189,
         "restrict_visibility_rules": [
           "$bf_seen|SwamplandsBridge"
         ]
@@ -17361,8 +17421,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands3",
-        "x": 244,
-        "y": 211,
+        "x": 281,
+        "y": 241,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands3"
         ]
@@ -17384,8 +17444,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands3",
-        "x": 124,
-        "y": 73,
+        "x": 161,
+        "y": 172,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands3"
         ]
@@ -17404,8 +17464,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands3",
-        "x": 934,
-        "y": 121,
+        "x": 971,
+        "y": 165,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands3"
         ]
@@ -17430,8 +17490,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands4",
-        "x": 316,
-        "y": 24,
+        "x": 338,
+        "y": 141,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands4"
         ]
@@ -17453,8 +17513,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands4",
-        "x": 953,
-        "y": 206,
+        "x": 975,
+        "y": 207,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands4"
         ]
@@ -17476,8 +17536,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands4",
-        "x": 1133,
-        "y": 62,
+        "x": 1155,
+        "y": 160,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands4"
         ]
@@ -17496,8 +17556,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands4",
-        "x": 24,
-        "y": 79,
+        "x": 46,
+        "y": 168,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands4"
         ]
@@ -17522,8 +17582,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands7",
-        "x": 652,
-        "y": 331,
+        "x": 673,
+        "y": 508,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands7"
         ]
@@ -17545,8 +17605,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands7",
-        "x": 1148,
-        "y": 287,
+        "x": 1170,
+        "y": 486,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands7"
         ]
@@ -17568,8 +17628,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands7",
-        "x": 525,
-        "y": 47,
+        "x": 547,
+        "y": 135,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands7"
         ]
@@ -17591,8 +17651,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands7",
-        "x": 541,
-        "y": 290,
+        "x": 563,
+        "y": 487,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands7"
         ]
@@ -17614,8 +17674,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands7",
-        "x": 176,
-        "y": 227,
+        "x": 198,
+        "y": 331,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands7"
         ]
@@ -17637,8 +17697,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands7",
-        "x": 117,
-        "y": 46,
+        "x": 139,
+        "y": 126,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands7"
         ]
@@ -17660,8 +17720,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands2",
-        "x": 317,
-        "y": 504,
+        "x": 30,
+        "y": 318,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands2"
         ]
@@ -17683,8 +17743,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands2",
-        "x": 641,
-        "y": 816,
+        "x": 354,
+        "y": 588,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands2"
         ]
@@ -17706,8 +17766,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands2",
-        "x": 509,
-        "y": 228,
+        "x": 222,
+        "y": 232,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands2"
         ]
@@ -17729,8 +17789,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands2",
-        "x": 535,
-        "y": 678,
+        "x": 248,
+        "y": 457,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands2"
         ]
@@ -17752,8 +17812,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands2",
-        "x": 603,
-        "y": 801,
+        "x": 317,
+        "y": 581,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands2"
         ]
@@ -17766,7 +17826,7 @@
     ]
   },
   {
-    "name": "Junction: elsewhere in the room",
+    "name": "Junction: Dig Spot",
     "visibility_rules": [
       "$bf_any_in_seed|7720183"
     ],
@@ -17775,8 +17835,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands5",
-        "x": 506,
-        "y": 284,
+        "x": 610,
+        "y": 373,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands5"
         ]
@@ -17798,8 +17858,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands5",
-        "x": 886,
-        "y": 427,
+        "x": 735,
+        "y": 561,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands5"
         ]
@@ -17821,8 +17881,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands5",
-        "x": 415,
-        "y": 207,
+        "x": 265,
+        "y": 472,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands5"
         ]
@@ -17844,8 +17904,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands5",
-        "x": 506,
-        "y": 304,
+        "x": 355,
+        "y": 520,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands5"
         ]
@@ -17867,8 +17927,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands5",
-        "x": 318,
-        "y": 278,
+        "x": 168,
+        "y": 507,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands5"
         ]
@@ -17890,8 +17950,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands5",
-        "x": 878,
-        "y": 118,
+        "x": 727,
+        "y": 344,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands5"
         ]
@@ -17910,8 +17970,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands5",
-        "x": 938,
-        "y": 94,
+        "x": 788,
+        "y": 332,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands5"
         ]
@@ -17936,8 +17996,8 @@
     "map_locations": [
       {
         "map": "room_SwamplandsEntrance",
-        "x": 267,
-        "y": 157,
+        "x": 302,
+        "y": 182,
         "restrict_visibility_rules": [
           "$bf_seen|SwamplandsEntrance"
         ]
@@ -17959,8 +18019,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands6",
-        "x": 1098,
-        "y": 255,
+        "x": 1146,
+        "y": 231,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands6"
         ]
@@ -17982,8 +18042,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands6",
-        "x": 77,
-        "y": 262,
+        "x": 124,
+        "y": 297,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands6"
         ]
@@ -18005,8 +18065,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands6",
-        "x": 729,
-        "y": 166,
+        "x": 777,
+        "y": 260,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands6"
         ]
@@ -18028,8 +18088,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands6",
-        "x": 145,
-        "y": 237,
+        "x": 193,
+        "y": 295,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands6"
         ]
@@ -18051,8 +18111,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands6",
-        "x": 1001,
-        "y": 251,
+        "x": 1049,
+        "y": 230,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands6"
         ]
@@ -18074,8 +18134,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands8",
-        "x": 676,
-        "y": 672,
+        "x": 723,
+        "y": 502,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands8"
         ]
@@ -18097,8 +18157,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands8",
-        "x": 35,
-        "y": 302,
+        "x": 83,
+        "y": 255,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands8"
         ]
@@ -18120,8 +18180,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands8",
-        "x": 403,
-        "y": 24,
+        "x": 450,
+        "y": 178,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands8"
         ]
@@ -18143,8 +18203,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands8",
-        "x": 715,
-        "y": 684,
+        "x": 762,
+        "y": 508,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands8"
         ]
@@ -18166,8 +18226,8 @@
     "map_locations": [
       {
         "map": "room_Swamplands8",
-        "x": 208,
-        "y": 683,
+        "x": 256,
+        "y": 507,
         "restrict_visibility_rules": [
           "$bf_seen|Swamplands8"
         ]
@@ -18231,8 +18291,8 @@
     "map_locations": [
       {
         "map": "room_FishingVillage",
-        "x": 24,
-        "y": 139,
+        "x": 46,
+        "y": 183,
         "restrict_visibility_rules": [
           "$bf_seen|FishingVillage"
         ]
@@ -18441,8 +18501,8 @@
     "map_locations": [
       {
         "map": "room_WaspKingdomOutside",
-        "x": 24,
-        "y": 237,
+        "x": 31,
+        "y": 222,
         "restrict_visibility_rules": [
           "$bf_seen|WaspKingdomOutside"
         ]
@@ -18464,8 +18524,8 @@
     "map_locations": [
       {
         "map": "room_WaspKingdomOutside",
-        "x": 198,
-        "y": 185,
+        "x": 205,
+        "y": 196,
         "restrict_visibility_rules": [
           "$bf_seen|WaspKingdomOutside"
         ]
@@ -18488,7 +18548,7 @@
       {
         "map": "room_WaspKingdom2",
         "x": 413,
-        "y": 40,
+        "y": 124,
         "restrict_visibility_rules": [
           "$bf_seen|WaspKingdom2"
         ]
@@ -18513,8 +18573,8 @@
     "map_locations": [
       {
         "map": "room_WaspKingdom5",
-        "x": 345,
-        "y": 253,
+        "x": 326,
+        "y": 216,
         "restrict_visibility_rules": [
           "$bf_seen|WaspKingdom5"
         ]
@@ -18536,8 +18596,8 @@
     "map_locations": [
       {
         "map": "room_WaspKingdom3",
-        "x": 97,
-        "y": 24,
+        "x": 102,
+        "y": 167,
         "restrict_visibility_rules": [
           "$bf_seen|WaspKingdom3"
         ]
@@ -18559,8 +18619,8 @@
     "map_locations": [
       {
         "map": "room_WaspKingdomDrillRoom",
-        "x": 24,
-        "y": 95,
+        "x": 83,
+        "y": 181,
         "restrict_visibility_rules": [
           "$bf_seen|WaspKingdomDrillRoom"
         ]
@@ -18582,8 +18642,8 @@
     "map_locations": [
       {
         "map": "room_WaspKingdomPrison",
-        "x": 603,
-        "y": 59,
+        "x": 613,
+        "y": 128,
         "restrict_visibility_rules": [
           "$bf_seen|WaspKingdomPrison"
         ]
@@ -18605,8 +18665,8 @@
     "map_locations": [
       {
         "map": "room_WaspKingdomPrison",
-        "x": 462,
-        "y": 170,
+        "x": 473,
+        "y": 183,
         "restrict_visibility_rules": [
           "$bf_seen|WaspKingdomPrison"
         ]
@@ -18628,8 +18688,8 @@
     "map_locations": [
       {
         "map": "room_WaspKingdomPrison",
-        "x": 184,
-        "y": 165,
+        "x": 195,
+        "y": 181,
         "restrict_visibility_rules": [
           "$bf_seen|WaspKingdomPrison"
         ]
@@ -18651,8 +18711,8 @@
     "map_locations": [
       {
         "map": "room_WaspKingdomJayde",
-        "x": 58,
-        "y": 88,
+        "x": 106,
+        "y": 126,
         "restrict_visibility_rules": [
           "$bf_seen|WaspKingdomJayde"
         ]
@@ -18674,8 +18734,8 @@
     "map_locations": [
       {
         "map": "room_WaspKingdomJayde",
-        "x": 24,
-        "y": 24,
+        "x": 72,
+        "y": 94,
         "restrict_visibility_rules": [
           "$bf_seen|WaspKingdomJayde"
         ]
@@ -19171,8 +19231,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsCD",
-        "x": 285,
-        "y": 214,
+        "x": 318,
+        "y": 211,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsCD"
         ]
@@ -19197,8 +19257,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsSideGPT",
-        "x": 75,
-        "y": 160,
+        "x": 97,
+        "y": 269,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsSideGPT"
         ]
@@ -19220,8 +19280,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsSideGPT",
-        "x": 175,
-        "y": 299,
+        "x": 197,
+        "y": 339,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsSideGPT"
         ]
@@ -19243,8 +19303,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsSideGPT",
-        "x": 86,
-        "y": 77,
+        "x": 107,
+        "y": 228,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsSideGPT"
         ]
@@ -19266,8 +19326,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsSideGPT",
-        "x": 298,
-        "y": 148,
+        "x": 320,
+        "y": 264,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsSideGPT"
         ]
@@ -19289,8 +19349,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsBeefly",
-        "x": 654,
-        "y": 257,
+        "x": 688,
+        "y": 315,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsBeefly"
         ]
@@ -19312,8 +19372,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsBeefly",
-        "x": 646,
-        "y": 157,
+        "x": 680,
+        "y": 266,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsBeefly"
         ]
@@ -19335,8 +19395,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsBeefly",
-        "x": 382,
-        "y": 204,
+        "x": 417,
+        "y": 278,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsBeefly"
         ]
@@ -19355,8 +19415,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsBeefly",
-        "x": 24,
-        "y": 289,
+        "x": 58,
+        "y": 332,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsBeefly"
         ]
@@ -19378,8 +19438,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsBeefly",
-        "x": 742,
-        "y": 241,
+        "x": 775,
+        "y": 230,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsBeefly"
         ]
@@ -19404,8 +19464,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsCloud",
-        "x": 605,
-        "y": 400,
+        "x": 1008,
+        "y": 510,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsCloud"
         ]
@@ -19427,8 +19487,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsCloud",
-        "x": 179,
-        "y": 379,
+        "x": 298,
+        "y": 492,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsCloud"
         ]
@@ -19450,8 +19510,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsCloud",
-        "x": 770,
-        "y": 217,
+        "x": 1284,
+        "y": 357,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsCloud"
         ]
@@ -19473,8 +19533,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsCloud",
-        "x": 56,
-        "y": 53,
+        "x": 93,
+        "y": 220,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsCloud"
         ]
@@ -19496,8 +19556,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsCloud",
-        "x": 311,
-        "y": 380,
+        "x": 519,
+        "y": 493,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsCloud"
         ]
@@ -19519,8 +19579,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsPumpkins",
-        "x": 694,
-        "y": 75,
+        "x": 714,
+        "y": 225,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsPumpkins"
         ]
@@ -19542,8 +19602,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsPumpkins",
-        "x": 142,
-        "y": 242,
+        "x": 162,
+        "y": 350,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsPumpkins"
         ]
@@ -19565,8 +19625,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsPumpkins",
-        "x": 516,
-        "y": 249,
+        "x": 536,
+        "y": 312,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsPumpkins"
         ]
@@ -19588,8 +19648,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsPumpkins",
-        "x": 550,
-        "y": 171,
+        "x": 570,
+        "y": 273,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsPumpkins"
         ]
@@ -19611,8 +19671,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsPumpkins",
-        "x": 66,
-        "y": 111,
+        "x": 86,
+        "y": 284,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsPumpkins"
         ]
@@ -19634,8 +19694,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsTanks",
-        "x": 464,
-        "y": 164,
+        "x": 494,
+        "y": 229,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsTanks"
         ]
@@ -19657,8 +19717,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsTanks",
-        "x": 235,
-        "y": 236,
+        "x": 266,
+        "y": 265,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsTanks"
         ]
@@ -19677,8 +19737,8 @@
     "map_locations": [
       {
         "map": "room_TermiteOutside",
-        "x": 21,
-        "y": 49,
+        "x": 77,
+        "y": 120,
         "restrict_visibility_rules": [
           "$bf_seen|TermiteOutside"
         ]
@@ -19703,8 +19763,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsRock",
-        "x": 512,
-        "y": 260,
+        "x": 547,
+        "y": 349,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsRock"
         ]
@@ -19726,8 +19786,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsRock",
-        "x": 188,
-        "y": 188,
+        "x": 222,
+        "y": 313,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsRock"
         ]
@@ -19749,8 +19809,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsRock",
-        "x": 488,
-        "y": 164,
+        "x": 523,
+        "y": 301,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsRock"
         ]
@@ -19772,8 +19832,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsRock",
-        "x": 296,
-        "y": 164,
+        "x": 331,
+        "y": 301,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsRock"
         ]
@@ -19792,8 +19852,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsMushrooms",
-        "x": 24,
-        "y": 156,
+        "x": 45,
+        "y": 185,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsMushrooms"
         ]
@@ -19818,8 +19878,8 @@
     "map_locations": [
       {
         "map": "room_AbandonedCity",
-        "x": 436,
-        "y": 317,
+        "x": 447,
+        "y": 335,
         "restrict_visibility_rules": [
           "$bf_seen|AbandonedCity"
         ]
@@ -19841,8 +19901,8 @@
     "map_locations": [
       {
         "map": "room_AbandonedCity",
-        "x": 24,
-        "y": 172,
+        "x": 35,
+        "y": 190,
         "restrict_visibility_rules": [
           "$bf_seen|AbandonedCity"
         ]
@@ -19864,8 +19924,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsAntTunnel",
-        "x": 157,
-        "y": 24,
+        "x": 160,
+        "y": 33,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsAntTunnel"
         ]
@@ -19887,8 +19947,8 @@
     "map_locations": [
       {
         "map": "room_BarrenLandsPinkSpider",
-        "x": 204,
-        "y": 110,
+        "x": 198,
+        "y": 169,
         "restrict_visibility_rules": [
           "$bf_seen|BarrenLandsPinkSpider"
         ]
@@ -20280,8 +20340,8 @@
     "map_locations": [
       {
         "map": "room_TermiteColiseum1",
-        "x": 92,
-        "y": 52,
+        "x": 81,
+        "y": 81,
         "restrict_visibility_rules": [
           "$bf_seen|TermiteColiseum1"
         ]
@@ -20315,8 +20375,8 @@
     "map_locations": [
       {
         "map": "room_TermiteIndustrial",
-        "x": 413,
-        "y": 805,
+        "x": 434,
+        "y": 514,
         "restrict_visibility_rules": [
           "$bf_seen|TermiteIndustrial"
         ]
@@ -20338,8 +20398,8 @@
     "map_locations": [
       {
         "map": "room_TermiteIndustrial",
-        "x": 1098,
-        "y": 800,
+        "x": 1119,
+        "y": 701,
         "restrict_visibility_rules": [
           "$bf_seen|TermiteIndustrial"
         ]
@@ -20379,8 +20439,8 @@
     "map_locations": [
       {
         "map": "room_TermiteIndustrial",
-        "x": 596,
-        "y": 504,
+        "x": 618,
+        "y": 553,
         "restrict_visibility_rules": [
           "$bf_seen|TermiteIndustrial"
         ]
@@ -20408,8 +20468,8 @@
     "map_locations": [
       {
         "map": "room_TermiteIndustrial",
-        "x": 848,
-        "y": 84,
+        "x": 870,
+        "y": 343,
         "restrict_visibility_rules": [
           "$bf_seen|TermiteIndustrial"
         ]
@@ -20431,8 +20491,8 @@
     "map_locations": [
       {
         "map": "room_TermitePier",
-        "x": 472,
-        "y": 176,
+        "x": 570,
+        "y": 188,
         "restrict_visibility_rules": [
           "$bf_seen|TermitePier"
         ]
@@ -20454,8 +20514,8 @@
     "map_locations": [
       {
         "map": "room_TermiteMainPlaza",
-        "x": 374,
-        "y": 142,
+        "x": 402,
+        "y": 175,
         "restrict_visibility_rules": [
           "$bf_seen|TermiteMainPlaza"
         ]
@@ -20486,8 +20546,8 @@
     "map_locations": [
       {
         "map": "room_TermiteRoyalChamber",
-        "x": 793,
-        "y": 24,
+        "x": 801,
+        "y": 184,
         "restrict_visibility_rules": [
           "$bf_seen|TermiteRoyalChamber"
         ]
@@ -20509,8 +20569,8 @@
     "map_locations": [
       {
         "map": "room_TermiteRoyalChamber",
-        "x": 430,
-        "y": 106,
+        "x": 438,
+        "y": 225,
         "restrict_visibility_rules": [
           "$bf_seen|TermiteRoyalChamber"
         ]
@@ -20695,8 +20755,8 @@
     "map_locations": [
       {
         "map": "room_MetalLake",
-        "x": 116,
-        "y": 256,
+        "x": 210,
+        "y": 232,
         "restrict_visibility_rules": [
           "$bf_seen|MetalLake"
         ]
@@ -20718,8 +20778,8 @@
     "map_locations": [
       {
         "map": "room_MetalLake",
-        "x": 80,
-        "y": 448,
+        "x": 174,
+        "y": 328,
         "restrict_visibility_rules": [
           "$bf_seen|MetalLake"
         ]
@@ -20741,7 +20801,7 @@
     "map_locations": [
       {
         "map": "room_MetalLake",
-        "x": 344,
+        "x": 438,
         "y": 208,
         "restrict_visibility_rules": [
           "$bf_seen|MetalLake"
@@ -20764,8 +20824,8 @@
     "map_locations": [
       {
         "map": "room_MetalLake",
-        "x": 284,
-        "y": 124,
+        "x": 378,
+        "y": 166,
         "restrict_visibility_rules": [
           "$bf_seen|MetalLake"
         ]
@@ -20787,8 +20847,8 @@
     "map_locations": [
       {
         "map": "room_MetalLake",
-        "x": 92,
-        "y": 124,
+        "x": 186,
+        "y": 166,
         "restrict_visibility_rules": [
           "$bf_seen|MetalLake"
         ]
@@ -20810,8 +20870,8 @@
     "map_locations": [
       {
         "map": "room_MetalLake",
-        "x": 368,
-        "y": 472,
+        "x": 462,
+        "y": 340,
         "restrict_visibility_rules": [
           "$bf_seen|MetalLake"
         ]
@@ -20833,8 +20893,8 @@
     "map_locations": [
       {
         "map": "room_MetalLake",
-        "x": 236,
-        "y": 462,
+        "x": 330,
+        "y": 335,
         "restrict_visibility_rules": [
           "$bf_seen|MetalLake"
         ]
@@ -20856,8 +20916,8 @@
     "map_locations": [
       {
         "map": "room_MetalLake",
-        "x": 152,
-        "y": 364,
+        "x": 246,
+        "y": 286,
         "restrict_visibility_rules": [
           "$bf_seen|MetalLake"
         ]
@@ -20880,7 +20940,7 @@
       {
         "map": "room_MysteryIsland",
         "x": 354,
-        "y": 276,
+        "y": 275,
         "restrict_visibility_rules": [
           "$bf_seen|MysteryIsland"
         ]
@@ -21003,8 +21063,8 @@
     "map_locations": [
       {
         "map": "room_MetalIsland1",
-        "x": 643,
-        "y": 204,
+        "x": 676,
+        "y": 206,
         "restrict_visibility_rules": [
           "$bf_seen|MetalIsland1"
         ]
@@ -21026,8 +21086,8 @@
     "map_locations": [
       {
         "map": "room_MetalIsland1",
-        "x": 356,
-        "y": 372,
+        "x": 389,
+        "y": 373,
         "restrict_visibility_rules": [
           "$bf_seen|MetalIsland1"
         ]
@@ -21049,8 +21109,8 @@
     "map_locations": [
       {
         "map": "room_MetalIsland1",
-        "x": 458,
-        "y": 479,
+        "x": 491,
+        "y": 426,
         "restrict_visibility_rules": [
           "$bf_seen|MetalIsland1"
         ]
@@ -21539,8 +21599,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCafeteria",
-        "x": 103,
-        "y": 83,
+        "x": 122,
+        "y": 182,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCafeteria"
         ]
@@ -21562,8 +21622,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCells1",
-        "x": 358,
-        "y": 143,
+        "x": 368,
+        "y": 248,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCells1"
         ]
@@ -21585,8 +21645,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCells1",
-        "x": 188,
-        "y": 187,
+        "x": 198,
+        "y": 270,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCells1"
         ]
@@ -21608,8 +21668,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCells1",
-        "x": 614,
-        "y": 176,
+        "x": 624,
+        "y": 264,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCells1"
         ]
@@ -21628,8 +21688,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCells1",
-        "x": 380,
-        "y": 24,
+        "x": 390,
+        "y": 142,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCells1"
         ]
@@ -21651,8 +21711,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCells1",
-        "x": 24,
-        "y": 212,
+        "x": 34,
+        "y": 282,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCells1"
         ]
@@ -21674,8 +21734,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCells1",
-        "x": 746,
-        "y": 212,
+        "x": 738,
+        "y": 282,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCells1"
         ]
@@ -21700,8 +21760,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonSpikeRoom",
-        "x": 24,
-        "y": 203,
+        "x": 41,
+        "y": 241,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonSpikeRoom"
         ]
@@ -21723,8 +21783,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonSpikeRoom",
-        "x": 184,
-        "y": 66,
+        "x": 202,
+        "y": 137,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonSpikeRoom"
         ]
@@ -21743,8 +21803,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonSpikeRoom",
-        "x": 226,
-        "y": 24,
+        "x": 244,
+        "y": 115,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonSpikeRoom"
         ]
@@ -21769,8 +21829,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCells2",
-        "x": 478,
-        "y": 107,
+        "x": 486,
+        "y": 303,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCells2"
         ]
@@ -21792,8 +21852,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCells2",
-        "x": 488,
-        "y": 103,
+        "x": 496,
+        "y": 218,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCells2"
         ]
@@ -21815,8 +21875,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCells2",
-        "x": 466,
-        "y": 179,
+        "x": 474,
+        "y": 339,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCells2"
         ]
@@ -21835,8 +21895,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCells2",
-        "x": 298,
-        "y": 69,
+        "x": 306,
+        "y": 138,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCells2"
         ]
@@ -21861,8 +21921,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonThirdFloor",
-        "x": 325,
-        "y": 131,
+        "x": 335,
+        "y": 242,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonThirdFloor"
         ]
@@ -21884,8 +21944,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonThirdFloor",
-        "x": 152,
-        "y": 128,
+        "x": 162,
+        "y": 188,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonThirdFloor"
         ]
@@ -21907,8 +21967,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonThirdFloor",
-        "x": 338,
-        "y": 47,
+        "x": 348,
+        "y": 128,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonThirdFloor"
         ]
@@ -21930,8 +21990,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCheckpointCorridor",
-        "x": 60,
-        "y": 101,
+        "x": 50,
+        "y": 113,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCheckpointCorridor"
         ]
@@ -21950,8 +22010,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonCheckpointCorridor",
-        "x": 60,
-        "y": 24,
+        "x": 50,
+        "y": 75,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonCheckpointCorridor"
         ]
@@ -21976,8 +22036,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonPier",
-        "x": 377,
-        "y": 49,
+        "x": 421,
+        "y": 258,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonPier"
         ]
@@ -21999,8 +22059,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonPier",
-        "x": 492,
-        "y": 59,
+        "x": 548,
+        "y": 263,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonPier"
         ]
@@ -22025,8 +22085,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonPier",
-        "x": 223,
-        "y": 69,
+        "x": 249,
+        "y": 269,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonPier"
         ]
@@ -22048,8 +22108,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonPier",
-        "x": 154,
-        "y": 49,
+        "x": 172,
+        "y": 123,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonPier"
         ]
@@ -22071,8 +22131,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonPier",
-        "x": 144,
-        "y": 59,
+        "x": 160,
+        "y": 397,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonPier"
         ]
@@ -22091,8 +22151,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonPier",
-        "x": 570,
-        "y": 59,
+        "x": 636,
+        "y": 263,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonPier"
         ]
@@ -22114,8 +22174,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonPier",
-        "x": 539,
-        "y": 59,
+        "x": 601,
+        "y": 397,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonPier"
         ]
@@ -22140,8 +22200,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonSecurity",
-        "x": 501,
-        "y": 97,
+        "x": 210,
+        "y": 152,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonSecurity"
         ]
@@ -22163,8 +22223,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonGym",
-        "x": 33,
-        "y": 90,
+        "x": 29,
+        "y": 156,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonGym"
         ]
@@ -22186,8 +22246,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonGym",
-        "x": 65,
-        "y": 91,
+        "x": 60,
+        "y": 157,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonGym"
         ]
@@ -22209,8 +22269,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonGym",
-        "x": 391,
-        "y": 168,
+        "x": 386,
+        "y": 258,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonGym"
         ]
@@ -22232,8 +22292,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonLibrary",
-        "x": 142,
-        "y": 24,
+        "x": 147,
+        "y": 105,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonLibrary"
         ]
@@ -22255,8 +22315,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonLibrary",
-        "x": 213,
-        "y": 165,
+        "x": 218,
+        "y": 238,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonLibrary"
         ]
@@ -22278,8 +22338,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonOffice",
-        "x": 250,
-        "y": 64,
+        "x": 261,
+        "y": 154,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonOffice"
         ]
@@ -22301,8 +22361,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonGiantLairBridge",
-        "x": 285,
-        "y": 69,
+        "x": 442,
+        "y": 310,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonGiantLairBridge"
         ]
@@ -22321,8 +22381,8 @@
     "map_locations": [
       {
         "map": "room_RubberPrisonGiantLairBridge",
-        "x": 66,
-        "y": 48,
+        "x": 120,
+        "y": 295,
         "restrict_visibility_rules": [
           "$bf_seen|RubberPrisonGiantLairBridge"
         ]
@@ -22845,8 +22905,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairDeadLands1",
-        "x": 404,
-        "y": 451,
+        "x": 400,
+        "y": 532,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairDeadLands1"
         ]
@@ -22868,8 +22928,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairDeadLands1",
-        "x": 1565,
-        "y": 427,
+        "x": 1547,
+        "y": 520,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairDeadLands1"
         ]
@@ -22891,8 +22951,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairDeadLands1",
-        "x": 1484,
-        "y": 304,
+        "x": 1467,
+        "y": 459,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairDeadLands1"
         ]
@@ -22915,7 +22975,7 @@
       {
         "map": "room_GiantLairDeadLands1",
         "x": 44,
-        "y": 318,
+        "y": 569,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairDeadLands1"
         ]
@@ -22928,7 +22988,7 @@
     ]
   },
   {
-    "name": "Giant's Hand: elsewhere in the room",
+    "name": "Giant's Hand: Dig Spot",
     "visibility_rules": [
       "$bf_any_in_seed|7720247"
     ],
@@ -22937,8 +22997,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairDeadLands1",
-        "x": 884,
-        "y": 238,
+        "x": 97,
+        "y": 528,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairDeadLands1"
         ]
@@ -22960,8 +23020,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairDeadLands2",
-        "x": 1079,
-        "y": 566,
+        "x": 730,
+        "y": 444,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairDeadLands2"
         ]
@@ -22983,8 +23043,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairDeadLands2",
-        "x": 1209,
-        "y": 332,
+        "x": 860,
+        "y": 328,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairDeadLands2"
         ]
@@ -23006,8 +23066,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairDeadLands2",
-        "x": 1632,
-        "y": 378,
+        "x": 1283,
+        "y": 328,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairDeadLands2"
         ]
@@ -23029,8 +23089,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairDeadLands2",
-        "x": 2364,
-        "y": 330,
+        "x": 2015,
+        "y": 327,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairDeadLands2"
         ]
@@ -23052,8 +23112,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairDeadLands2",
-        "x": 24,
-        "y": 426,
+        "x": 0,
+        "y": 479,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairDeadLands2"
         ]
@@ -23075,8 +23135,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairDeadLands2",
-        "x": 2196,
-        "y": 507,
+        "x": 1847,
+        "y": 415,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairDeadLands2"
         ]
@@ -23095,8 +23155,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairFridgeOutside",
-        "x": 1071,
-        "y": 21,
+        "x": 569,
+        "y": 100,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairFridgeOutside"
         ]
@@ -23121,8 +23181,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairFridgeInside",
-        "x": 24,
-        "y": 24,
+        "x": 43,
+        "y": 369,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairFridgeInside"
         ]
@@ -23144,8 +23204,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairFridgeInside",
-        "x": 221,
-        "y": 36,
+        "x": 240,
+        "y": 126,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairFridgeInside"
         ]
@@ -23167,8 +23227,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairFridgeInside",
-        "x": 415,
-        "y": 161,
+        "x": 434,
+        "y": 604,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairFridgeInside"
         ]
@@ -23190,8 +23250,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairFridgeInside",
-        "x": 377,
-        "y": 168,
+        "x": 396,
+        "y": 233,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairFridgeInside"
         ]
@@ -23213,8 +23273,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairBeforeBoss",
-        "x": 1300,
-        "y": 44,
+        "x": 1299,
+        "y": 212,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss"
         ]
@@ -23237,7 +23297,7 @@
       {
         "map": "room_GiantLairBeforeBoss",
         "x": 1288,
-        "y": 42,
+        "y": 211,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss"
         ]
@@ -23260,7 +23320,7 @@
       {
         "map": "room_GiantLairBeforeBoss",
         "x": 1103,
-        "y": 24,
+        "y": 228,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss"
         ]
@@ -23283,7 +23343,7 @@
       {
         "map": "room_GiantLairBeforeBoss",
         "x": 762,
-        "y": 217,
+        "y": 314,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss"
         ]
@@ -23306,7 +23366,7 @@
       {
         "map": "room_GiantLairBeforeBoss",
         "x": 1200,
-        "y": 256,
+        "y": 344,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss"
         ]
@@ -23329,7 +23389,7 @@
       {
         "map": "room_GiantLairBeforeBoss",
         "x": 426,
-        "y": 217,
+        "y": 314,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss"
         ]
@@ -23351,8 +23411,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairBeforeBoss",
-        "x": 841,
-        "y": 158,
+        "x": 840,
+        "y": 227,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss"
         ]
@@ -23375,7 +23435,7 @@
       {
         "map": "room_GiantLairBeforeBoss",
         "x": 1038,
-        "y": 229,
+        "y": 331,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss"
         ]
@@ -23397,8 +23457,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairRoachVillage",
-        "x": 219,
-        "y": 174,
+        "x": 244,
+        "y": 275,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairRoachVillage"
         ]
@@ -23429,8 +23489,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairSaplingPlains",
-        "x": 460,
-        "y": 340,
+        "x": 494,
+        "y": 333,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairSaplingPlains"
         ]
@@ -23453,7 +23513,7 @@
       {
         "map": "room_GiantLairBeforeBoss2",
         "x": 1150,
-        "y": 36,
+        "y": 246,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss2"
         ]
@@ -23476,7 +23536,7 @@
       {
         "map": "room_GiantLairBeforeBoss2",
         "x": 78,
-        "y": 143,
+        "y": 299,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss2"
         ]
@@ -23499,7 +23559,7 @@
       {
         "map": "room_GiantLairBeforeBoss2",
         "x": 916,
-        "y": 121,
+        "y": 283,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss2"
         ]
@@ -23522,7 +23582,7 @@
       {
         "map": "room_GiantLairBeforeBoss2",
         "x": 1302,
-        "y": 230,
+        "y": 338,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss2"
         ]
@@ -23544,8 +23604,8 @@
     "map_locations": [
       {
         "map": "room_GiantLairBeforeBoss2",
-        "x": 539,
-        "y": 190,
+        "x": 540,
+        "y": 318,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss2"
         ]
@@ -23568,7 +23628,7 @@
       {
         "map": "room_GiantLairBeforeBoss2",
         "x": 356,
-        "y": 35,
+        "y": 225,
         "restrict_visibility_rules": [
           "$bf_seen|GiantLairBeforeBoss2"
         ]

@@ -386,9 +386,10 @@ def rule_text(rule: dict[str, Any] | None) -> str:
 
 
 def door_spot(rooms: dict[str, dict], room: str, door: str) -> list[float] | None:
-    """A door's spot in its room, by its name as doors.json gives it ("name#row" for one of two alike)."""
+    """A door's spot in its room (x, z, height), by its name as doors.json gives it ("name#row" for one of two
+    alike)."""
     name, _, row = door.partition("#")
-    return next((d["at"] for d in rooms.get(room, {}).get("doors", ())
+    return next(([*d["at"], d["y"]] for d in rooms.get(room, {}).get("doors", ())
                  if d["name"] == name and (not row or d["index"] == int(row))), None)
 
 
@@ -425,11 +426,12 @@ def spot_name(loc: dict[str, Any]) -> str:
 
 
 def check_spot(source: Any, room: str, rooms: dict[str, dict]) -> list[float] | None:
-    """Where a check's own entity stands in its room, as the apworld names it (its Source): an enemy by its index, an
-    item on the ground by its activation flag, a respawning pickup by its regional flag, a crystal berry by its number
-    (its pickup's data: type 3, the number last), a shop's goods by their keeper, a character by its name."""
+    """Where a check's own entity stands in its room (x, z, height), as the apworld names it (its Source): an enemy by
+    its index, an item on the ground by its activation flag, a respawning pickup by its regional flag, a crystal berry
+    by its number (its pickup's data: type 3, the number last), a shop's goods by their keeper, a character by its
+    name."""
     def first(test) -> list[float] | None:
-        return next((e["at"] for e in rooms.get(room, {}).get("entities", ()) if test(e)), None)
+        return next(([*e["at"], e["y"]] for e in rooms.get(room, {}).get("entities", ()) if test(e)), None)
     if source.enemy:
         enemy_map, index = source.enemy.split(":")
         return first(lambda e: e["index"] == int(index)) if enemy_map == room else None
@@ -438,13 +440,30 @@ def check_spot(source: Any, room: str, rooms: dict[str, dict]) -> list[float] | 
     if source.regional is not None:
         return first(lambda e: e["regional"] == source.regional)
     if source.berry is not None:
+        # A dig spot holding one: data 1, then the berry's number (NPCControl's crystalbflags[data[1]]).
         return first(lambda e: len(e["data"].split()) >= 4 and e["data"].split()[0] == "3"
-                     and e["data"].split()[-1] == str(source.berry))
+                     and e["data"].split()[-1] == str(source.berry)) \
+            or first(lambda e: e["type"] == "DigSpot" and e["data"].split()[:2] == ["1", str(source.berry)])
     if source.item_shop is not None:
         return first(lambda e: e["name"] == source.item_shop.keeper) if source.item_shop.map == room else None
     if source.npc:
         return first(lambda e: e["name"] == source.npc)
     return None
+
+
+def room_middle(room: dict[str, Any]) -> list[float]:
+    """The middle of a room's floor (x, z, height): its entities' extent's middle, at their middle height."""
+    b = room["bounds"]
+    heights = sorted(e["y"] for e in room["entities"])
+    return [(b[0] + b[2]) / 2, (b[1] + b[3]) / 2, heights[len(heights) // 2]]
+
+
+def pixel(picture: dict[str, Any], at: list[float]) -> tuple[float, float]:
+    """Where a spot (x, z, height) lands in its room's picture (data/room_pictures.json); one the camera never shows,
+    at the picture's edge."""
+    x = (at[0] - picture["left"]) * picture["x_scale"]
+    y = (picture["top"] - at[1]) * picture["z_scale"] - at[2] * picture["y_scale"]
+    return min(max(x, 0), picture["size"][0]), min(max(y, 0), picture["size"][1])
 
 
 def write(path: Path, content: bytes | str) -> None:
@@ -595,13 +614,10 @@ def main() -> None:
                 at_spot = check_spot(sources[loc["id"]], room, raw_rooms)
                 groups.setdefault(at_spot and (round(at_spot[0]), round(at_spot[1])), []).append((at_spot, loc))
             for key, checks in groups.items():
+                x, y = pixel(picture, checks[0][0] or room_middle(raw_rooms[room]))
                 if key is None:
-                    x, y = picture["size"][0] / 2, picture["size"][1] / 2
                     name = base = f"{title}: elsewhere in the room"
                 else:
-                    first = checks[0][0]
-                    x = (first[0] - picture["left"]) * picture["x_scale"]
-                    y = (picture["top"] - first[1]) * picture["z_scale"]
                     name = base = f"{title}: {spot_name(checks[0][1])}"
                     placed += len(checks)
                 n = 1
@@ -632,7 +648,7 @@ def main() -> None:
                 found += [check_spot(sources[loc["id"]], room, raw_rooms) for loc in rooms.get(room, ())
                           if loc["region"] == part.region]
                 found = [s for s in found if s]
-                at = [sum(s[0] for s in found) / len(found), sum(s[1] for s in found) / len(found)] if found else None
+                at = [sum(s[i] for s in found) / len(found) for i in range(3)] if found else None
                 blockers.append((part.name, rule_dict(part.rule), f"$bf_region|{part.region}", at))
             for gate in gates_of.get(room, ()):
                 # A door kept shut for good isn't a door of the logic: nothing to show.
@@ -642,8 +658,7 @@ def main() -> None:
                                  f"$bf_entrance_open|{w['data'].door_name(gate.map, gate.door)}",
                                  door_spot(raw_rooms, room, gate.door)))
             for what, rule, access, at in blockers:
-                x, y = ((at[0] - picture["left"]) * picture["x_scale"], (picture["top"] - at[1]) * picture["z_scale"]) \
-                    if at else (picture["size"][0] / 2, picture["size"][1] / 2)
+                x, y = pixel(picture, at or room_middle(raw_rooms[room]))
                 name = base = f"{title}: {what}"
                 n = 1
                 while name in location_names:

@@ -115,13 +115,18 @@ v0.35.4); `AUTOTRACKING.md`'s Archipelago interface and `PACKS.md`'s Tracker sec
        by its game name, then a tab for every room, checks or not (`data/area_pips.json`'s `regions` and `names`;
        Crystal gives every room its own tab too). Rooms in walking order from the game's start or from where an
        earlier area leads in. The area overviews and their door lines are gone;
-     - each room's tab is the room seen from above as a seed shows it (`roomshot all`, its scenery as a new file has
-       it with a seed's `scenery_hidden` and `scenery_present` on top; ceilings and outline shells left out; water in
-       its own colour; `tools/room_pictures.py`), a pin at each check's own entity (508 of 614) and the rest in the
-       room's middle. Nested tabs and `ActivateTab` read in PopTracker's `src/ui/trackerview.cpp` and
+     - each room's tab is the room as a seed shows it (`roomshot all`, its scenery as a new file has it with a seed's
+       `scenery_hidden` and `scenery_present` on top; outline shells and builders' placeholder cubes left out; water in
+       its own colour; `tools/room_pictures.py`), seen from the front at 30° (the user's pick over straight down and
+       the game's own 10°), the view starting just before the entity nearest the camera so a dome, a front wall or a
+       trunk before them is cut; a few rooms straight down by look (Beehive Main Area, Mystery Island, Power Plant,
+       Honey Factory Core, Beehive Scanner Room); nine more fixed one by one, the user picking each from renders side
+       by side (2026-10-13: five cut above a height, three without the view's cut, Barren Lands Cloud without its
+       cloud floor; the mod's `Dev/MapShots.cs`). A pin at each check's own entity, its height counted (520 of 614),
+       the rest in the room's middle. Nested tabs and `ActivateTab` read in PopTracker's `src/ui/trackerview.cpp` and
        `src/uilib/tabs.cpp` at `19f0b1f`: every tab set switches only if it has a tab of that name;
-     - still to come: Metal Lake's lake and a few stray white blocks in the pictures; room names for the rooms only
-       Enemysanity names (the apworld's to give, the user's yes for each).
+     - still to come: room names for the rooms only Enemysanity names (the apworld's to give, the user's yes for
+       each).
      Pictures are fixed per map; with the doors shuffled the rooms stay at home and their doors tell where they lead
      (item 7), as Crystal does.
 5. **Room Swap:** superseded 2026-10-13: with a tab and a picture per room, each room keeps its own checks wherever
