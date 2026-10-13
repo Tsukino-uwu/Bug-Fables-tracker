@@ -1,245 +1,245 @@
 [
   {
     "name": "G-Bug Ranger Plushie",
-    "img": "images/items/g_bug_ranger_plushie.png",
+    "img": "images/items/game/g_bug_ranger_plushie.png",
     "codes": "g_bug_ranger_plushie",
     "type": "toggle"
   },
   {
     "name": "Explorer Permit",
-    "img": "images/items/explorer_permit.png",
+    "img": "images/items/game/explorer_permit.png",
     "codes": "explorer_permit",
     "type": "toggle"
   },
   {
     "name": "Flower Key",
-    "img": "images/items/flower_key.png",
+    "img": "images/items/game/flower_key.png",
     "codes": "flower_key",
     "type": "toggle"
   },
   {
     "name": "Sun Offering",
-    "img": "images/items/sun_offering.png",
+    "img": "images/items/game/sun_offering.png",
     "codes": "sun_offering",
     "type": "toggle"
   },
   {
     "name": "Moon Offering",
-    "img": "images/items/moon_offering.png",
+    "img": "images/items/game/moon_offering.png",
     "codes": "moon_offering",
     "type": "toggle"
   },
   {
     "name": "Quest Book",
-    "img": "images/items/quest_book.png",
+    "img": "images/items/game/quest_book.png",
     "codes": "quest_book",
     "type": "toggle"
   },
   {
     "name": "Factory Pass",
-    "img": "images/items/factory_pass.png",
+    "img": "images/items/game/factory_pass.png",
     "codes": "factory_pass",
     "type": "toggle"
   },
   {
     "name": "Sand Castle Key",
-    "img": "images/items/sand_castle_key.png",
+    "img": "images/items/game/sand_castle_key.png",
     "codes": "sand_castle_key",
     "type": "toggle"
   },
   {
     "name": "Small Ancient Key",
-    "img": "images/items/small_ancient_key.png",
+    "img": "images/items/game/small_ancient_key.png",
     "codes": "small_ancient_key",
     "type": "toggle"
   },
   {
     "name": "Big Ancient Key",
-    "img": "images/items/big_ancient_key.png",
+    "img": "images/items/game/big_ancient_key.png",
     "codes": "big_ancient_key",
     "type": "toggle"
   },
   {
     "name": "Peculiar Gem",
-    "img": "images/items/peculiar_gem.png",
+    "img": "images/items/game/peculiar_gem.png",
     "codes": "peculiar_gem",
     "type": "toggle"
   },
   {
     "name": "Wasp Key",
-    "img": "images/items/wasp_key.png",
+    "img": "images/items/game/wasp_key.png",
     "codes": "wasp_key",
     "type": "toggle"
   },
   {
     "name": "Small Gear",
-    "img": "images/items/small_gear.png",
+    "img": "images/items/game/small_gear.png",
     "codes": "small_gear",
     "type": "toggle"
   },
   {
     "name": "Medium Gear",
-    "img": "images/items/medium_gear.png",
+    "img": "images/items/game/medium_gear.png",
     "codes": "medium_gear",
     "type": "toggle"
   },
   {
     "name": "Big Gear",
-    "img": "images/items/big_gear.png",
+    "img": "images/items/game/big_gear.png",
     "codes": "big_gear",
     "type": "toggle"
   },
   {
     "name": "Lab Card",
-    "img": "images/items/lab_card.png",
+    "img": "images/items/game/lab_card.png",
     "codes": "lab_card",
     "type": "toggle"
   },
   {
     "name": "Prison Key",
-    "img": "images/items/prison_key.png",
+    "img": "images/items/game/prison_key.png",
     "codes": "prison_key",
     "type": "toggle"
   },
   {
     "name": "Boat Ticket",
-    "img": "images/items/boat_ticket.png",
+    "img": "images/items/game/boat_ticket.png",
     "codes": "boat_ticket",
     "type": "toggle"
   },
   {
     "name": "Subaquatic Maritime Neotransport",
-    "img": "images/items/subaquatic_maritime_neotransport.png",
+    "img": "images/items/game/subaquatic_maritime_neotransport.png",
     "codes": "subaquatic_maritime_neotransport",
     "type": "toggle"
   },
   {
     "name": "Progressive Boat",
-    "img": "images/items/progressive_boat.png",
+    "img": "images/items/game/progressive_boat.png",
     "codes": "progressive_boat",
     "type": "consumable",
     "max_quantity": 2
   },
   {
     "name": "Extra Freeze",
-    "img": "images/items/extra_freeze.png",
+    "img": "images/items/game/extra_freeze.png",
     "codes": "extra_freeze",
     "type": "toggle"
   },
   {
     "name": "Vi",
-    "img": "images/items/vi.png",
+    "img": "images/items/game/vi.png",
     "codes": "vi",
     "type": "toggle"
   },
   {
     "name": "Kabbu",
-    "img": "images/items/kabbu.png",
+    "img": "images/items/game/kabbu.png",
     "codes": "kabbu",
     "type": "toggle"
   },
   {
     "name": "Leif",
-    "img": "images/items/leif.png",
+    "img": "images/items/game/leif.png",
     "codes": "leif",
     "type": "toggle"
   },
   {
     "name": "Progressive Beemerang",
-    "img": "images/items/progressive_beemerang.png",
+    "img": "images/items/game/progressive_beemerang.png",
     "codes": "progressive_beemerang",
     "type": "consumable",
     "max_quantity": 2
   },
   {
     "name": "Horn Slash",
-    "img": "images/items/horn_slash.png",
+    "img": "images/items/game/horn_slash.png",
     "codes": "horn_slash",
     "type": "toggle"
   },
   {
     "name": "Progressive Freeze",
-    "img": "images/items/progressive_freeze.png",
+    "img": "images/items/game/progressive_freeze.png",
     "codes": "progressive_freeze",
     "type": "consumable",
     "max_quantity": 2
   },
   {
     "name": "Jump",
-    "img": "images/items/jump.png",
+    "img": "images/items/game/jump.png",
     "codes": "jump",
     "type": "toggle"
   },
   {
     "name": "Progressive Dash",
-    "img": "images/items/progressive_dash.png",
+    "img": "images/items/game/progressive_dash.png",
     "codes": "progressive_dash",
     "type": "consumable",
     "max_quantity": 2
   },
   {
     "name": "Bee Fly",
-    "img": "images/items/bee_fly.png",
+    "img": "images/items/game/bee_fly.png",
     "codes": "bee_fly",
     "type": "toggle"
   },
   {
     "name": "Beetle Dig",
-    "img": "images/items/beetle_dig.png",
+    "img": "images/items/game/beetle_dig.png",
     "codes": "beetle_dig",
     "type": "toggle"
   },
   {
     "name": "Shield",
-    "img": "images/items/shield.png",
+    "img": "images/items/game/shield.png",
     "codes": "shield",
     "type": "toggle"
   },
   {
     "name": "Ancient Mask",
-    "img": "images/items/ancient_mask.png",
+    "img": "images/items/game/ancient_mask.png",
     "codes": "ancient_mask",
     "type": "toggle"
   },
   {
     "name": "Ancient Tablet",
-    "img": "images/items/ancient_tablet.png",
+    "img": "images/items/game/ancient_tablet.png",
     "codes": "ancient_tablet",
     "type": "toggle"
   },
   {
     "name": "Ancient Key",
-    "img": "images/items/ancient_key.png",
+    "img": "images/items/game/ancient_key.png",
     "codes": "ancient_key",
     "type": "toggle"
   },
   {
     "name": "Ancient Half",
-    "img": "images/items/ancient_half.png",
+    "img": "images/items/game/ancient_half.png",
     "codes": "ancient_half",
     "type": "toggle"
   },
   {
     "name": "Queen's Mask",
-    "img": "images/items/queen_s_mask.png",
+    "img": "images/items/game/queen_s_mask.png",
     "codes": "queen_s_mask",
     "type": "toggle"
   },
   {
     "name": "Flame Brooch",
-    "img": "images/items/flame_brooch.png",
+    "img": "images/items/game/flame_brooch.png",
     "codes": "flame_brooch",
     "type": "toggle"
   },
   {
     "name": "Wasp King's Crown",
-    "img": "images/items/wasp_king_s_crown.png",
+    "img": "images/items/game/wasp_king_s_crown.png",
     "codes": "wasp_king_s_crown",
     "type": "toggle"
   },
   {
     "name": "Goal",
-    "img": "images/items/goal.png",
+    "img": "images/items/game/wasp_king_s_crown.png",
     "codes": "goal",
     "type": "toggle"
   },
